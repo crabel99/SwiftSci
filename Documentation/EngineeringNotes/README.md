@@ -6,6 +6,8 @@ The branch starts at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`.
 
 ## Start here
 
+- [Benchmark contribution boundary](benchmarks/2026-09-26-standardized.md) retains the current benchmark decisions and local validation evidence.
+
 - [September 26 discussion and decisions](discussions/2026-09-26.md) records our needs, contribution approach, compiler fix, coverage work and branch decision.
 - [Decision record format](DECISION-RECORDS.md) describes what to retain when choosing an engineering approach.
 - [Retained files](RETAINED-FILES.md) indexes 73 original notes and supporting artifacts captured from the existing SwiftSci research and this chat's verification work.
@@ -24,7 +26,7 @@ The initial collection includes the retained Markdown notes under the local Swif
 
 Keep this branch on our fork. Push its commits to `origin/codex/engineering-notes`; do not open an upstream PR from it. The fork is public, so this branch is public too.
 
-Start implementation branches from the appropriate upstream revision or agreed dependency branch. Carry only the relevant explanation, tests and evidence into each PR. Avoid merging this archive branch into them. Upstream remains the owner of its API and architectural decisions; our working proposals do not imply maintainer approval.
+Start implementation branches from the appropriate upstream revision or agreed dependency branch. Keep our internal research, engineering decisions, discussion summaries and local reports on this branch. Contribution branches may contain implementation, tests, fixture attribution and public usage instructions. Do not copy internal records into a PR; summarize the relevant verified facts for reviewers. Avoid merging this archive branch into them. Upstream remains the owner of its API and architectural decisions; our working proposals do not imply maintainer approval.
 
 Bring upstream changes into this branch when useful, preserving the dated records. A newer codebase does not retroactively validate an older result.
 
