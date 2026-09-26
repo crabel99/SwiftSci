@@ -1,0 +1,35 @@
+# SwiftSci engineering working record
+
+This record belongs to `crabel99/SwiftSci`, on branch `codex/engineering-notes`. Cal requested a continuing branch for documentation and discussion that will stay in our fork without an upstream PR.
+
+The branch starts at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`. PR #39 has merged. Production implementation and contribution work continue on their own branches.
+
+## Start here
+
+- [September 26 discussion and decisions](discussions/2026-09-26.md) records our needs, contribution approach, compiler fix, coverage work and branch decision.
+- [Decision record format](DECISION-RECORDS.md) describes what to retain when choosing an engineering approach.
+- [Retained files](RETAINED-FILES.md) indexes 73 original notes and supporting artifacts captured from the existing SwiftSci research and this chat's verification work.
+- [PR #39 snapshot](archive/2026-09-26/pr39.json) preserves the description, public discussion and check results observed when this record was created.
+- [Draft reply to the maintainer](drafts/maintainer-reply.md) preserves the proposed response from this chat. It has not been posted by this chat.
+
+## Keeping the record
+
+Commit new discussion summaries, research findings, alternatives and evidence to this branch. Date each entry and identify the relevant source revision. Mark proposals, measured results, source observations and unresolved questions separately. Record why a decision changed instead of rewriting an old experiment as if it had reached the new conclusion.
+
+The archived source notes are unchanged originals. Their wording, local paths and historical claims remain as recorded. The index and manifest identify retained copies. New summaries and decisions should use plain language and the unslop self-audit.
+
+The initial collection includes the retained Markdown notes under the local SwiftSci research directory, three uncommitted workspace proposals, the storage research's small supporting artifacts, and the compiler verification snippets. Build caches, binaries, generated datasets and a duplicate source checkout are excluded. Large raw outputs remain in their existing locations or committed benchmark evidence. This is not an export of other chats or every local run artifact.
+
+## Relationship to upstream contributions
+
+Keep this branch on our fork. Push its commits to `origin/codex/engineering-notes`; do not open an upstream PR from it. The fork is public, so this branch is public too.
+
+Start implementation branches from the appropriate upstream revision or agreed dependency branch. Carry only the relevant explanation, tests and evidence into each PR. Avoid merging this archive branch into them. Upstream remains the owner of its API and architectural decisions; our working proposals do not imply maintainer approval.
+
+Bring upstream changes into this branch when useful, preserving the dated records. A newer codebase does not retroactively validate an older result.
+
+## How we explain a contribution
+
+Explain the observed problem, the alternatives, the chosen tradeoff, the behavior that must remain correct, and the evidence supporting the choice. State limitations and the conditions that would justify revisiting it. Invite the maintainer to challenge assumptions.
+
+The PR should contain enough reasoning to review the change. Lasting design decisions belong in maintained documentation. Code comments should explain constraints that a future maintainer cannot readily infer from the code.

@@ -1,0 +1,104 @@
+{
+  "captured_at_utc": "2026-09-26T21:27:15.466Z",
+  "pull_request": {
+    "url": "https://github.com/Nodibell/SwiftSci/pull/39",
+    "title": "Codex/dataframe pipeline optimization",
+    "body": "# Optimize dataframe CSV, filtering, sorting and grouped reductions\n---\n\nSwiftDataFrame repeatedly performs dynamic type checks, formats grouping keys as strings, rescans nulls and allocates intermediate CSV indexes. This change moves type dispatch outside row loops, reuses known column metadata, and reduces allocation and data movement across complete dataframe operations.\n\nThe branch also fixes numeric comparison and grouping edge cases encountered during optimization. It preserves the public optional-array column representation. Compact storage and its downstream scientific/AI integration are separate work.\n\nCurrent PR revision: `89b8ff7cedac19fa23cc2d7903627b036f0042e7`.\n\n## Changes\n\n- Typed numeric filtering and gathering, exact integer/floating comparisons, cached null predicates, and parallel gathering based on estimated output work.\n- Stable typed sorting with adaptive Double radix/comparison paths and existing NaN fallback behavior.\n- Flat first-seen group IDs, bounded integer lookup/refinement, and typed composite-key identity. Nulls, literal sentinel strings and delimiter-containing tuples remain distinct.\n- Compensated grouped sums and means, plus opt-in `sumChecked()` for exact integer totals with explicit overflow errors.\n- Flat CSV field storage, lifetime-scoped mapped bytes, parallel scanning for eligible unquoted files, exact final index allocation, fused null counting, and corrected decimal rounding.\n- Regression tests, API notes, raw benchmark evidence and comparison workers. The Metal CSV experiment remains an opt-in benchmark because it did not outperform the CPU path.\n\n## Measured improvements\n\nApple M4 Max, 128 GiB unified memory, native arm64 Release. These are separate matched before/after experiments at one million rows. Do not multiply the stage ratios into a cumulative speedup.\n\n| Change | Before | After | Improvement |\n|---|---:|---:|---:|\n| Initial cached typed sorting | 213.743 ms | 68.419 ms | 3.12x |\n| Typed integer group keys | 249.548 ms | 22.548 ms | 11.07x |\n| Later bounded two-key grouping | 49.536 ms | 11.375 ms | 4.35x |\n| Later adaptive Double sorting | 65.674 ms | 36.288 ms | 1.81x |\n| CSV scan/allocation stage | 38.947 ms | 13.565 ms | 2.87x |\n| Final Float64 filtering stage | 3.237 ms | 1.944 ms | 1.66x |\n| Final native Int filtering stage | 3.737 ms | 1.951 ms | 1.92x |\n\nThe CSV scan/allocation stage reduced whole-process peak RSS from 310.1 to 186.4 MiB, about 40%. Final filtering gains had essentially unchanged peak RSS. These are measured process peaks, including fixtures and retained results, rather than isolated column-allocation measurements.\n\n## Comparison with other libraries\n\nBenchmark source `4c5bb953547ba5d84c7fd86bf868b1680c5f1811`, one million rows, median of 15 timed samples across three fresh processes per library. Each process has two warmups; library order rotates and workloads run serially.\n\n| Operation | SwiftSci | pandas / Python | Kiraa |\n|---|---:|---:|---:|\n| CSV read | 13.560 ms | 67.064 ms | 9.171 ms |\n| Float64 filter | 1.940 ms | 2.121 ms | 2.830 ms |\n| Native Int / Int64 filter | 1.971 ms | 1.846 ms | INVALID |\n| Stable descending sort | 31.367 ms | 29.229 ms | 58.971 ms |\n| Single-key group sum | 4.663 ms | 4.896 ms | 9.361 ms |\n| Two-key group sum | 11.336 ms | 10.599 ms | 36.498 ms |\n| Filter → sort → group | 17.012 ms | 20.118 ms | 41.025 ms |\n\nAll 24 SwiftSci workload/size combinations passed output comparison. Kiraa's native-integer filter failed parity at both sizes and its timings are excluded. Kiraa remains faster on this CSV fixture; pandas remains faster on sorting, two-key grouping and million-row integer filtering. At 100,000 rows, two-key grouping takes 4.107 ms for SwiftSci versus 1.658 ms for pandas and 3.977 ms for Kiraa.\n\nThe [committed evidence report](https://github.com/crabel99/SwiftSci/blob/codex/dataframe-pipeline-optimization/Benchmarks/Results/DataFrameOptimization/README.md) includes both sizes, all operations, memory, timing spread, baseline/binary hashes, raw samples, reproduction instructions and rejected alternatives. It also distinguishes unmodified numerical comparison workloads from gains attributable to this PR.\n\n## Validation\n\n- Full Debug suite: 891 passed, zero failed or skipped.\n- Full Release suite: 891 passed, zero failed or skipped.\n- Both include MLX-dependent tests and 978 device-level executions after parameter expansion.\n- Independent filter checks cover 96 tuning layouts, 24 holdout layouts and 96 operator cases, with exact row/value/schema/null-count checks.\n- Parser AddressSanitizer and ThreadSanitizer checks each passed 764 cases over 87,060,376 input bytes at the CSV-stage revision. Later commits did not change parser source.\n- Regression coverage includes stable ties/null placement, large integers, fractional thresholds, NaNs/infinities, composite-key collisions, compensated/exact sums, CSV quoting, mapped-buffer lifetime and decimal rounding.\n\nThe full Debug and Release suites were rerun after merging upstream `main` through `f6320c1e9f`. Both passed on merge commit `a2853b1a918a005dd95ac8649d6cedc030b902de`. Commit `d0b0cf915c34fb4ab78ce8ae898605d95f8b87e8` records that validation. Commit `7899179048defad4190469706c5e5d9da02dee5b` simplifies three test-data expressions with explicit closure types and intermediate values to address CI's Swift type-checking limit. Current PR head `89b8ff7cedac19fa23cc2d7903627b036f0042e7` adds coverage for CSV String and Date columns, Float keys in generic columns, and group counts without numeric value columns. These follow-up commits change tests and validation records only. [Post-merge validation results](https://github.com/crabel99/SwiftSci/blob/d0b0cf915c34fb4ab78ce8ae898605d95f8b87e8/Benchmarks/Results/DataFrameOptimization/tests/upstream-sync/README.md).\n\nAt compiler-fix commit `7899179048defad4190469706c5e5d9da02dee5b`, all 25 tests in the three affected suites passed with coverage. The full CI safe-mode test command also passed locally on Swift 6.4. All 2,370 generated fixture values match the original formulas. With a compiler scope limit of 1,000, all three original expressions reproduce the type-checking error and the updated expressions compile. The [GitHub CI run for the compiler fix](https://github.com/Nodibell/SwiftSci/actions/runs/36264865437) passed.\n\nAt current PR head `89b8ff7cedac19fa23cc2d7903627b036f0042e7`, the full CI safe-mode command passed locally with coverage on Swift 6.4. Four new test functions cover the five reported paths, including explicit and inferred dates, quoted strings, custom null markers, missing fields, invalid dates under an override, Float signed-zero/NaN grouping, and first-seen group counts. Local LLVM coverage records hits on all 11 lines flagged by Codecov, with no uncovered changed lines remaining in `CSVReader.swift` or `GroupedDataFrame.swift`. Remote CI and Codecov confirmation for this commit are pending in the [new workflow run](https://github.com/Nodibell/SwiftSci/actions/runs/36265838562).\n\nThe benchmark measurements remain attributed to their original source commit; benchmarks were not rerun after the merge. The relocated comparison runner was smoke-tested separately against the recorded binaries. GitHub check results are reported separately from these local test results.\n\n## Compatibility and limitations\n\n`sumChecked()` is additive. Group output keys remain String columns in first-appearance order, while identity now avoids earlier string/sentinel collisions. Existing `sum()` retains Double results. Numeric filtering corrects precision-boundary and NaN behavior; the included API notes describe those changes.\n\nThe benchmark machine was shared with other applications. The CSV speed claim covers a warm-cache, three-numeric-column fixture without quotes. Libraries differ in inferred CSV types and internal parallelism. Peak RSS includes runtime/import/setup costs. Small timing differences should not be treated as stable universal rankings.\n\nExisting CSV integer-parser overflow, sampled type inference, trailing-delimiter behavior and NaN-sort fallback remain outside this patch. Cross-library floating comparisons use explicit tolerances; exact boundary regression tests complement them. No compact-storage replacement, production GPU CSV path or AI inference speedup is claimed.\n\n",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-09-26T19:44:24Z",
+    "head": "89b8ff7cedac19fa23cc2d7903627b036f0042e7",
+    "base": "f6320c1e9f852e49c44569119e362b00b4d550b9",
+    "merge_commit": "bb4f8bfa2fbff287d99bfedd47b3ab8bb201b53e"
+  },
+  "comments": [
+    {
+      "url": "https://github.com/Nodibell/SwiftSci/pull/39#issuecomment-5849049510",
+      "author": "codecov[bot]",
+      "created_at": "2026-09-26T19:10:49Z",
+      "updated_at": "2026-09-26T19:29:23Z",
+      "body": "## [Codecov](https://app.codecov.io/gh/Nodibell/SwiftSci/pull/39?dropdown=coverage&src=pr&el=h1&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Oleksii+Chumak) Report\n:white_check_mark: All modified and coverable lines are covered by tests.\n\n:loudspeaker: Thoughts on this report? [Let us know!](https://github.com/codecov/feedback/issues/255)"
+    },
+    {
+      "url": "https://github.com/Nodibell/SwiftSci/pull/39#issuecomment-5849305421",
+      "author": "Nodibell",
+      "created_at": "2026-09-26T19:44:17Z",
+      "updated_at": "2026-09-26T19:44:17Z",
+      "body": "Thanks for the thorough work on this. The optimization, correctness coverage, and benchmark methodology all look solid. Everything is green on my side, so I’m happy to merge this. Great work! Also, I am really glad that someone got interested in this project. Thank you so much!"
+    }
+  ],
+  "checks": [
+    {
+      "name": "CodeQL",
+      "url": "https://github.com/Nodibell/SwiftSci/runs/108475069461",
+      "status": "completed",
+      "conclusion": "neutral",
+      "title": "1 configuration not found",
+      "summary": "**Warning**: Code scanning cannot determine the alerts introduced by this pull request, because 1 configuration present on `refs/heads/main` was not found:\n\n### Actions workflow (`codeql.yml`)\n\n* :question:&nbsp;&nbsp;`.github/workflows/codeql.yml:analyze/build-mode:none/language:python`\n\n\n[View all branch alerts](/Nodibell/SwiftSci/security/code-scanning?query=pr%3A39+tool%3ACodeQL+is%3Aopen)."
+    },
+    {
+      "name": "codecov/patch",
+      "url": "https://app.codecov.io/gh/Nodibell/SwiftSci/pull/39",
+      "status": "completed",
+      "conclusion": "success",
+      "title": "100.00% of diff hit (target 82.82%)",
+      "summary": "[View this Pull Request on Codecov](https://app.codecov.io/gh/Nodibell/SwiftSci/pull/39?dropdown=coverage&src=pr&el=h1&utm_medium=referral&utm_source=github&utm_content=checks&utm_campaign=pr+comments&utm_term=Oleksii+Chumak)\n\n100.00% of diff hit (target 82.82%)"
+    },
+    {
+      "name": "Deploy to GitHub Pages",
+      "url": "https://github.com/Nodibell/SwiftSci/actions/runs/36265838562/job/108470999080",
+      "status": "completed",
+      "conclusion": "skipped",
+      "title": null,
+      "summary": null
+    },
+    {
+      "name": "Unit Tests (Safe Mode)",
+      "url": "https://github.com/Nodibell/SwiftSci/actions/runs/36265838562/job/108470474429",
+      "status": "completed",
+      "conclusion": "success",
+      "title": null,
+      "summary": null
+    },
+    {
+      "name": "DocC Documentation Coverage Check",
+      "url": "https://github.com/Nodibell/SwiftSci/actions/runs/36265838562/job/108470474419",
+      "status": "completed",
+      "conclusion": "success",
+      "title": null,
+      "summary": null
+    },
+    {
+      "name": "Performance Regression Check (Disabled in CI)",
+      "url": "https://github.com/Nodibell/SwiftSci/actions/runs/36265838562/job/108470212018",
+      "status": "completed",
+      "conclusion": "success",
+      "title": null,
+      "summary": null
+    },
+    {
+      "name": "Build (Debug)",
+      "url": "https://github.com/Nodibell/SwiftSci/actions/runs/36265838562/job/108470212008",
+      "status": "completed",
+      "conclusion": "success",
+      "title": null,
+      "summary": null
+    },
+    {
+      "name": "Analyze (swift)",
+      "url": "https://github.com/Nodibell/SwiftSci/actions/runs/36265838589/job/108470211909",
+      "status": "completed",
+      "conclusion": "success",
+      "title": null,
+      "summary": null
+    },
+    {
+      "name": "Build (Release)",
+      "url": "https://github.com/Nodibell/SwiftSci/actions/runs/36265838562/job/108470211791",
+      "status": "completed",
+      "conclusion": "success",
+      "title": null,
+      "summary": null
+    }
+  ]
+}

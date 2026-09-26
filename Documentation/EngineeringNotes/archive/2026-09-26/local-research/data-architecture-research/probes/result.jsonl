@@ -1,0 +1,6 @@
+{"actual":0.92857142857142827,"expected_pairwise":1,"input_x":["1","nil","3","4"],"input_y":["2","4","nil","8"],"joint_rows":[0,3],"matches_pairwise":false,"probe":"correlation_row_alignment"}
+{"actual_rows":[[1,4,2],[5,3,6]],"descriptor":"<f8","expected_rows":[[1,2,3],[4,5,6]],"fortran_order":true,"matches":false,"payload":[1,4,2,5,3,6],"probe":"npy_fortran_order","shape":[2,3]}
+{"dataframe_as_integer_strings":["9007199254740992","9007199254740992","9007199254740994"],"dataframe_dtype":"Double","descriptor":"<i8","input":["9007199254740992","9007199254740993","9007199254740994"],"matches_exact":false,"probe":"npy_int64_precision","raw_to_int64":["9007199254740992","9007199254740993","9007199254740994"]}
+{"accepted":false,"error":"Cannot cast column 'v' to Double.","probe":"matrix_numeric_type","swift_type":"TypedColumn<Float>"}
+{"accepted":false,"error":"Cannot cast column 'v' to Double.","probe":"matrix_numeric_type","swift_type":"TypedColumn<Int32>"}
+{"accepted":false,"error":"Cannot cast column 'v' to Double.","probe":"matrix_numeric_type","swift_type":"TypedColumn<Int>"}

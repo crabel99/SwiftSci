@@ -1,0 +1,191 @@
+Review only the supplied Swift code. We are researching data structures for SwiftSci on Apple Silicon. Identify concrete allocations/concatenations, copy or materialization risks, mutation/lifetime constraints, and how a compact column buffer should or should not interface with these language-model caches. Cite exact supplied file and line numbers. Separate observed source behavior from hypotheses requiring profiling. Do not claim that MLX concatenation necessarily copies immediately; distinguish a lazy operation from materialization. Do not claim that unified memory makes arbitrary Swift arrays zero-copy Metal buffers. Give up to six findings and three engineering requirements. Do not write code or invent other source files.
+
+Sources/SwiftLLM/Core/KVCache.swift
+1: #if os(macOS)
+2: import Foundation
+3: import MLX
+4: 
+5: /// Key-Value cache storing previous Attention Keys and Values per layer for O(N) generation.
+6: public final class KVCache: @unchecked Sendable {
+7:     public private(set) var keys: MLXArray?
+8:     public private(set) var values: MLXArray?
+9:     
+10:     /// Number of cached token steps along the sequence dimension.
+11:     public var count: Int {
+12:         guard let k = keys else { return 0 }
+13:         let seqAxis = k.ndim == 4 ? 2 : (k.ndim > 1 ? 1 : 0)
+14:         return k.dim(seqAxis)
+15:     }
+16: 
+17:     /// Creates an empty key-value attention cache instance for an autoregressive decoder layer.
+18:     public init() {}
+19:     
+20:     /// Updates the cache with new Keys and Values for the current step.
+21:     /// - Parameters:
+22:     ///   - newKeys: New Key tensor.
+23:     ///   - newValues: New Value tensor.
+24:     ///   - axis: Optional explicit concatenation axis (defaults to 2 for 4D attention tensors, 1 for 2D).
+25:     /// - Returns: Accumulated (Key, Value) tensors over all past steps.
+26:     public func update(
+27:         keys newKeys: MLXArray,
+28:         values newValues: MLXArray,
+29:         axis: Int? = nil
+30:     ) -> (keys: MLXArray, values: MLXArray) {
+31:         let concatAxis = axis ?? (newKeys.ndim == 4 ? 2 : 1)
+32:         if let existingK = keys, let existingV = values {
+33:             let updatedK = concatenated([existingK, newKeys], axis: concatAxis)
+34:             let updatedV = concatenated([existingV, newValues], axis: concatAxis)
+35:             self.keys = updatedK
+36:             self.values = updatedV
+37:             return (updatedK, updatedV)
+38:         } else {
+39:             self.keys = newKeys
+40:             self.values = newValues
+41:             return (newKeys, newValues)
+42:         }
+43:     }
+44:     
+45:     /// Resets the cache state for new prompt generation.
+46:     public func reset() {
+47:         self.keys = nil
+48:         self.values = nil
+49:     }
+50: }
+51: #endif
+
+Sources/SwiftLLM/Core/PagedKVCache.swift
+1: #if os(macOS)
+2: import Foundation
+3: import MLX
+4: 
+5: /// A dynamic paged Key-Value attention cache allocator for high-throughput batch and stream inference.
+6: ///
+7: /// `PagedKVCache` organizes Key-Value tensor storage into fixed-size physical memory pages (blocks),
+8: /// eliminating frequent buffer re-allocations and memory fragmentation in unified memory.
+9: public final class PagedKVCache: @unchecked Sendable {
+10:     /// Number of token slots per page block.
+11:     public let pageSize: Int
+12:     /// Dimensionality of each attention head.
+13:     public let headDim: Int
+14:     /// Number of attention heads.
+15:     public let numHeads: Int
+16:     /// Number of transformer layers.
+17:     public let numLayers: Int
+18: 
+19:     private var physicalKeyPages: [[[MLXArray]]] // [layer][pageIdx][slotIdx]
+20:     private var physicalValuePages: [[[MLXArray]]] // [layer][pageIdx][slotIdx]
+21:     private var sequenceBlockTables: [Int: [Int]] // sequenceId -> [pageIdx]
+22:     private var sequenceLengths: [Int: Int] // sequenceId -> length
+23: 
+24:     /// Initializes a paged KV-cache allocator.
+25:     ///
+26:     /// - Parameters:
+27:     ///   - pageSize: Number of tokens per page block (default: 16).
+28:     ///   - numHeads: Number of attention heads.
+29:     ///   - headDim: Dimension of each attention head.
+30:     ///   - numLayers: Number of transformer layers.
+31:     public init(
+32:         pageSize: Int = 16,
+33:         numHeads: Int = 4,
+34:         headDim: Int = 32,
+35:         numLayers: Int = 1
+36:     ) {
+37:         self.pageSize = pageSize
+38:         self.numHeads = numHeads
+39:         self.headDim = headDim
+40:         self.numLayers = numLayers
+41: 
+42:         self.physicalKeyPages = Array(repeating: [], count: numLayers)
+43:         self.physicalValuePages = Array(repeating: [], count: numLayers)
+44:         self.sequenceBlockTables = [:]
+45:         self.sequenceLengths = [:]
+46:     }
+47: 
+48:     /// Appends single-step Key and Value tokens for a sequence and layer into the paged memory pool.
+49:     ///
+50:     /// - Parameters:
+51:     ///   - sequenceId: Identifier of the sequence.
+52:     ///   - layer: The layer index.
+53:     ///   - key: New Key tensor of shape `[1, 1, numHeads, headDim]` or `[numHeads, headDim]`.
+54:     ///   - value: New Value tensor of shape `[1, 1, numHeads, headDim]` or `[numHeads, headDim]`.
+55:     public func append(sequenceId: Int, layer: Int, key: MLXArray, value: MLXArray) {
+56:         let currentLen = sequenceLengths[sequenceId, default: 0]
+57:         var blockTable = sequenceBlockTables[sequenceId, default: []]
+58: 
+59:         let pageIndexInSeq = currentLen / pageSize
+60:         let offsetInPage = currentLen % pageSize
+61: 
+62:         if pageIndexInSeq >= blockTable.count {
+63:             // Allocate new physical page for all layers
+64:             let newPageIdx = physicalKeyPages[layer].count
+65:             let emptyPageK = (0..<pageSize).map { _ in MLX.zeros([numHeads, headDim]) }
+66:             let emptyPageV = (0..<pageSize).map { _ in MLX.zeros([numHeads, headDim]) }
+67:             physicalKeyPages[layer].append(emptyPageK)
+68:             physicalValuePages[layer].append(emptyPageV)
+69:             blockTable.append(newPageIdx)
+70:             sequenceBlockTables[sequenceId] = blockTable
+71:         }
+72: 
+73:         let physicalPageIdx = blockTable[pageIndexInSeq]
+74:         let reshapedK = key.reshaped([numHeads, headDim])
+75:         let reshapedV = value.reshaped([numHeads, headDim])
+76: 
+77:         physicalKeyPages[layer][physicalPageIdx][offsetInPage] = reshapedK
+78:         physicalValuePages[layer][physicalPageIdx][offsetInPage] = reshapedV
+79: 
+80:         if layer == numLayers - 1 {
+81:             sequenceLengths[sequenceId] = currentLen + 1
+82:         }
+83:     }
+84: 
+85:     /// Retrieves concatenated Keys and Values for all past tokens of a sequence at a specified layer.
+86:     ///
+87:     /// - Parameters:
+88:     ///   - sequenceId: Identifier of the sequence.
+89:     ///   - layer: The layer index.
+90:     /// - Returns: Accumulated (Keys, Values) of shape `[1, seqLen, numHeads, headDim]`.
+91:     public func getKeysAndValues(sequenceId: Int, layer: Int) -> (keys: MLXArray, values: MLXArray) {
+92:         let totalLen = sequenceLengths[sequenceId, default: 0]
+93:         guard totalLen > 0 else {
+94:             let empty = MLX.zeros([1, 0, numHeads, headDim])
+95:             return (empty, empty)
+96:         }
+97: 
+98:         guard let blockTable = sequenceBlockTables[sequenceId], !blockTable.isEmpty else {
+99:             let empty = MLX.zeros([1, 0, numHeads, headDim])
+100:             return (empty, empty)
+101:         }
+102: 
+103:         var keySlots: [MLXArray] = []
+104:         var valSlots: [MLXArray] = []
+105: 
+106:         var remaining = totalLen
+107:         for physIdx in blockTable {
+108:             let countInThisPage = min(remaining, pageSize)
+109:             for slot in 0..<countInThisPage {
+110:                 keySlots.append(physicalKeyPages[layer][physIdx][slot])
+111:                 valSlots.append(physicalValuePages[layer][physIdx][slot])
+112:             }
+113:             remaining -= countInThisPage
+114:             if remaining <= 0 { break }
+115:         }
+116: 
+117:         let keys = MLX.stacked(keySlots, axis: 0).expandedDimensions(axis: 0)
+118:         let vals = MLX.stacked(valSlots, axis: 0).expandedDimensions(axis: 0)
+119:         return (keys, vals)
+120:     }
+121: 
+122:     /// Resets the memory allocation table for a sequence.
+123:     ///
+124:     /// - Parameter sequenceId: Identifier of the sequence to free.
+125:     public func reset(sequenceId: Int) {
+126:         sequenceBlockTables.removeValue(forKey: sequenceId)
+127:         sequenceLengths.removeValue(forKey: sequenceId)
+128:     }
+129: 
+130:     /// Total number of physical page blocks allocated across all layers.
+131:     public var totalAllocatedPages: Int {
+132:         physicalKeyPages.reduce(0) { $0 + $1.count }
+133:     }
+134: }
+135: #endif
