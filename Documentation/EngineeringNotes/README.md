@@ -6,6 +6,8 @@ The branch starts at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`.
 
 ## Start here
 
+- [NIST univariate coverage](benchmarks/2026-09-26-nist-univariate.md) records the nine-dataset increment, fixed numerical policy, timing correction and final validation.
+
 - [Benchmark contribution boundary](benchmarks/2026-09-26-standardized.md) retains the current benchmark decisions and local validation evidence.
 
 - [September 26 discussion and decisions](discussions/2026-09-26.md) records our needs, contribution approach, compiler fix, coverage work and branch decision.

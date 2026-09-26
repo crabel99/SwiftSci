@@ -1,0 +1,29 @@
+test_all_profiles_resolve (test_contracts.Contracts.test_all_profiles_resolve) ... ok
+test_comparison_refuses_failed_or_different_contract (test_contracts.Contracts.test_comparison_refuses_failed_or_different_contract) ... ok
+test_corruption_never_regenerates (test_contracts.Contracts.test_corruption_never_regenerates) ... ok
+test_duplicate_and_nonfinite_json_rejected (test_contracts.Contracts.test_duplicate_and_nonfinite_json_rejected) ... ok
+test_failed_zero_and_unvalidated_worker_rejected (test_contracts.Contracts.test_failed_zero_and_unvalidated_worker_rejected) ... ok
+test_manifest_matches_generated_bytes (test_contracts.Contracts.test_manifest_matches_generated_bytes) ... ok
+test_nist_values_and_input (test_contracts.Contracts.test_nist_values_and_input) ... ok
+test_path_cannot_escape_repository (test_contracts.Contracts.test_path_cannot_escape_repository) ... ok
+test_reference_known_by_hand (test_contracts.Contracts.test_reference_known_by_hand) ... ok
+test_validating_values (test_contracts.Contracts.test_validating_values) ... ok
+test_all_nine_original_files_and_decimal_reference_answers (test_nist.NISTTests.test_all_nine_original_files_and_decimal_reference_answers) ... ok
+test_manifest_rejects_missing_or_invalid_reference_metadata (test_nist.NISTTests.test_manifest_rejects_missing_or_invalid_reference_metadata) ... ok
+test_only_declared_statistics_can_use_nist_inputs (test_nist.NISTTests.test_only_declared_statistics_can_use_nist_inputs) ... ok
+test_profiles_cover_every_dataset_and_statistic_once (test_nist.NISTTests.test_profiles_cover_every_dataset_and_statistic_once) ... ok
+test_truncated_extra_nonfinite_invalid_and_bad_metadata_are_rejected (test_nist.NISTTests.test_truncated_extra_nonfinite_invalid_and_bad_metadata_are_rejected) ... ok
+test_variable_header_length_crlf_and_scientific_notation (test_nist.NISTTests.test_variable_header_length_crlf_and_scientific_notation) ... ok
+test_complete_run_compares_but_missing_duplicate_or_mismatched_cases_fail (test_runner.AuditTests.test_complete_run_compares_but_missing_duplicate_or_mismatched_cases_fail) ... ok
+test_environment_changes_refuse_comparison (test_runner.AuditTests.test_environment_changes_refuse_comparison) ... ok
+test_explicit_unresolved_zero_is_accurate_but_never_a_speedup (test_runner.AuditTests.test_explicit_unresolved_zero_is_accurate_but_never_a_speedup) ... ok
+test_summary_retains_worst_measured_absolute_error (test_runner.AuditTests.test_summary_retains_worst_measured_absolute_error) ... ok
+test_unresolved_sample_cannot_hide_behind_resolved_median (test_runner.AuditTests.test_unresolved_sample_cannot_hide_behind_resolved_median) ... ok
+test_unresolved_timing_has_no_speedup (test_runner.AuditTests.test_unresolved_timing_has_no_speedup) ... ok
+test_crash_timeout_missing_and_wrong_response_cannot_certify (test_runner.RunnerTests.test_crash_timeout_missing_and_wrong_response_cannot_certify) ... ok
+test_incomplete_batches_are_not_passed (test_runner.RunnerTests.test_incomplete_batches_are_not_passed) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.800s
+
+OK
