@@ -8,7 +8,7 @@ INTERNAL = (
     "Documentation/EngineeringNotes/",
     "Documentation/Research/",
     "Benchmarks/ARCHITECTURE.md",
-    "Benchmarks/Results/StandardizedValidation/",
+    "Benchmarks/Results/",
 )
 FORK_URLS = {
     "https://github.com/crabel99/SwiftSci",
@@ -26,7 +26,7 @@ def check(revision):
     tip = git("rev-parse", "--verify", "--end-of-options", revision + "^{commit}")
     base = git("rev-parse", "--verify", "upstream/main^{commit}")
     paths = git("log", "--format=", "--name-only", base + ".." + tip).splitlines()
-    blocked = sorted({p for p in paths if any(
+    blocked = sorted({p for p in paths if p != "Benchmarks/Results/README.md" and any(
         p.startswith(rule) if rule.endswith("/") else p == rule for rule in INTERNAL
     )})
     if blocked:
