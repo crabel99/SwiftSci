@@ -1,0 +1,386 @@
+[
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "wrong-probability",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 0.5 versus 0.75"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "wrong-probability",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 1228: 0.5 != 0.75"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "wrong-label",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 0.0 versus 1.0"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "wrong-label",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 1797: 0.0 != 1.0"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "wrong-score",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 0.2412183790827457 versus 0.49121837908274557"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "wrong-score",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 1842: 0.24121837908274557 != 0.49121837908274557"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "bad-training",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid classifier controls or binary class coverage"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "bad-training",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Learning rate must be exactly representable as Float32"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "single-class",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid classifier controls or binary class coverage"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "single-class",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Both classes required in every partition"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "leaked-answer",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unexpected classifier training fields"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "leaked-answer",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unknown fields: {'expected_weights'}"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "heldout-labels",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs0",
+    "variant": "heldout-labels",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "wrong-probability",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 0.8714551874510276 versus 1.1214551874510275"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "wrong-probability",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 1228: 0.8714551874510273 != 1.1214551874510275"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "wrong-label",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 1.0 versus 0.0"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "wrong-label",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 1797: 1.0 != 0.0"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "wrong-score",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 0.2412183790827457 versus 0.49121837908274557"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "wrong-score",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 1842: 0.24121837908274557 != 0.49121837908274557"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "bad-training",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid classifier controls or binary class coverage"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "bad-training",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Learning rate must be exactly representable as Float32"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "single-class",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid classifier controls or binary class coverage"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "single-class",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Both classes required in every partition"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "leaked-answer",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unexpected classifier training fields"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "leaked-answer",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unknown fields: {'expected_weights'}"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "heldout-labels",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs1",
+    "variant": "heldout-labels",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "wrong-probability",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 0.9999789909083977 versus 1.2499789909083976"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "wrong-probability",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 1228: 0.9999789909083977 != 1.2499789909083976"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "wrong-label",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 1.0 versus 0.0"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "wrong-label",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 1797: 1.0 != 0.0"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "wrong-score",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 0.2412183790827457 versus 0.49121837908274557"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "wrong-score",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 1842: 0.24121837908274557 != 0.49121837908274557"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "bad-training",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid classifier controls or binary class coverage"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "bad-training",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Learning rate must be exactly representable as Float32"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "single-class",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid classifier controls or binary class coverage"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "single-class",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Both classes required in every partition"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "leaked-answer",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unexpected classifier training fields"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "leaked-answer",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unknown fields: {'expected_weights'}"
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "heldout-labels",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-logistic-cpu-epochs32",
+    "variant": "heldout-labels",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  }
+]

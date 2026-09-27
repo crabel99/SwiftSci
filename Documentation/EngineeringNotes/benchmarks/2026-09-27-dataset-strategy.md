@@ -104,4 +104,7 @@ Every fixture manifest should carry source URL, source revision, license and att
 ## Supervised implementation checkpoint
 
 Local commit `72a20129d4` now provides licensed WDBC and wine sources, frozen duplicate-safe training/validation/test partitions, train-only scaling and complete held-out wine OLS conformance. All 83 controller tests, 6 supervised engine cases and 28 smoke engine cases passed. See [the supervised-suite report](2026-09-27-supervised-suite.md). Stage 4 remains incomplete until controlled classifier training and probability/quality contracts are added. Diabetes is deferred because its original-data redistribution license was not established. Continue suite coverage before production repairs and the formal performance baseline.
+## Controlled classification checkpoint
+
+Local commit `31b3cff290` adds WDBC zero-, one- and 32-update CPU logistic checks with complete parameters, probabilities, labels and held-out metrics. All 89 controller tests, 12 supervised engine cases and 28 smoke engine cases passed. See [the classifier report](2026-09-27-classification-suite.md). The initial supervised pack now covers regression and controlled classification. Continue dataframe semantics and layout coverage next. General predictive-quality certification and the formal performance baseline are not claimed. The suite-first, then separate one-commit-per-error repair order is unchanged.
 

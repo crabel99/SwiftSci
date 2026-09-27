@@ -1,0 +1,85 @@
+{
+  "suite-classification-01": {
+    "status": "passed",
+    "processes": 12,
+    "passed": 12,
+    "validated_samples": 24,
+    "contract_hash": "8e2b53910cbee80884376cb13aba1729c5cb2c75593e665b4f6acdf62a60dcce",
+    "source_tree": "b3c83bcef03ea0602a26dfe0868cf5f0a03b6ba133cd26b9aba863e74480db82"
+  },
+  "suite-classification-smoke-01": {
+    "status": "passed",
+    "processes": 28,
+    "passed": 28,
+    "validated_samples": 28,
+    "contract_hash": "4297cfe11180d3de5d63ee35c70e841385afce0032855f0fb519de8e112ee23c",
+    "source_tree": "b3c83bcef03ea0602a26dfe0868cf5f0a03b6ba133cd26b9aba863e74480db82"
+  },
+  "wdbc_32_updates": {
+    "metric_order": [
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "accuracy",
+      "precision",
+      "recall",
+      "F1",
+      "log_loss",
+      "ROC_AUC",
+      "Brier"
+    ],
+    "validation_model": [
+      65.0,
+      4.0,
+      3.0,
+      43.0,
+      0.9391304347826087,
+      0.9148936170212766,
+      0.9347826086956522,
+      0.9247311827956989,
+      0.1681143289774259,
+      0.9820415879017014,
+      0.04435677306256244
+    ],
+    "validation_constant": [
+      69.0,
+      0.0,
+      46.0,
+      0.0,
+      0.6,
+      0.0,
+      0.0,
+      0.0,
+      0.6776257671383904,
+      0.5,
+      0.24214753123140986
+    ],
+    "test_model": [
+      75.0,
+      1.0,
+      2.0,
+      48.0,
+      0.9761904761904762,
+      0.9795918367346939,
+      0.96,
+      0.9696969696969697,
+      0.14351113018105313,
+      0.9936842105263158,
+      0.037248870020873175
+    ],
+    "test_constant": [
+      76.0,
+      0.0,
+      50.0,
+      0.0,
+      0.6031746031746031,
+      0.0,
+      0.0,
+      0.0,
+      0.6757114938572296,
+      0.5,
+      0.24121837908274554
+    ]
+  }
+}

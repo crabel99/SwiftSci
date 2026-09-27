@@ -63,3 +63,7 @@ Kiraa remains an unofficial research reference and is not used as an accuracy or
 The gpt-5.6-sol review found no blocking issue and independently checked raw mappings, split identities, reference reconstruction, public API use and runtime evidence. A final appended log row records the 83-test count after the higher-precision test. No full transcript was available; review used saved artifacts and staged code.
 
 Evidence is under `Documentation/EngineeringNotes/archive/2026-09-27/suite-supervised/` on the private notes branch. It includes a content manifest, source research, API review, run plans and responses, certificate audits, all worker rejection requests, test/build identities, the commit verification and decision trail. The committed benchmark profiles and generators are the portable rerun interface. Archived requests retain original local paths for provenance.
+## Controlled classification checkpoint
+
+Local commit `31b3cff290` adds WDBC zero-, one- and 32-update CPU logistic checks with complete parameters, probabilities, labels and held-out metrics. All 89 controller tests, 12 supervised engine cases and 28 smoke engine cases passed. See [the classifier report](2026-09-27-classification-suite.md). The initial supervised pack now covers regression and controlled classification. Continue dataframe semantics and layout coverage next. General predictive-quality certification and the formal performance baseline are not claimed. The suite-first, then separate one-commit-per-error repair order is unchanged.
+
