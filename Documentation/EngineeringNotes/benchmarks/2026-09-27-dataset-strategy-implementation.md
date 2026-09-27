@@ -52,8 +52,8 @@ The final Release build passed, and the final controller test run passed all 67 
 
 ## Remaining strategy
 
-1. Diagnose and repair the exposed ANOVA and PCA behavior on focused production-fix branches, using these fixtures unchanged. Study conditioning and backward error before setting any alternate OLS acceptance contract.
-2. Add controlled clustering initialization, fixed inference, forecasting, vector search and explanation cases. Shared seeds alone do not guarantee shared starting states. KMeans currently lacks explicit initial centroids and differs in stopping rules across CPU and GPU paths.
+1. Finish the testing and certification suite before production repairs. The user corrected the order on September 27. After suite completion, use a separate repair branch with one commit per error. Establish the formal performance baseline after those repairs pass. Study conditioning and backward error before setting any alternate OLS acceptance contract.
+2. The selected controlled inference, one-cluster KMeans, Kalman, cosine and two-feature KernelSHAP cases are now implemented in local commit 279c01433d. See [the controlled-suite report](2026-09-27-controlled-suite.md). Shared multi-cluster initialization and broader forecast/explanation contracts remain open. A shared seed does not guarantee shared starting states.
 3. Add versioned raw supervised datasets, frozen split IDs, training-only preprocessing and held-out quality metrics. The existing target-filtered wine pipeline is descriptive preprocessing, not predictive evaluation.
 4. Expand dataframe semantic, missing-value, mutation, layout and interoperability cases, then size/memory sweeps. Use pandas test patterns while retaining independent mathematical and semantic answers.
 5. Add pinned neural weights and logits/cache/vision contracts, explicit precision/device reporting, synchronized MLX evaluation and separate checkpoint-quality datasets.

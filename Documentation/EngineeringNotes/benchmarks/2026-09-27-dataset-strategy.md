@@ -1,5 +1,11 @@
 # SwiftSci benchmark datasets and ML/AI validation
 
+## Current implementation order, September 27
+
+Finish `codex/standardized-benchmarks` before production repairs. The first numerical, exact-model and controlled API fixture packs are implemented. Next are raw supervised splits and training-only preprocessing, dataframe semantics and layout cases, fixed neural inference, and CI/profile integration. Capability gaps must remain explicit. Then create a separate repair branch with one commit per error. Establish the formal performance baseline only after repairs pass the completed suite.
+
+See [the controlled-suite implementation report](2026-09-27-controlled-suite.md) for current results and remaining scope. Earlier suggestions to repair failures before completing the suite are superseded.
+
 Research notes, 2026-09-27. Planning only. No SwiftSci source files changed.
 
 ## Recommendation

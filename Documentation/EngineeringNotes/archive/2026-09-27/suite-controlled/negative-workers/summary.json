@@ -1,0 +1,258 @@
+[
+  {
+    "case": "controlled-kalman-scalar",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "controlled-kalman-scalar",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "controlled-kalman-scalar",
+    "variant": "wrong-output",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 1.619047619047619 versus 2.619047619047619"
+  },
+  {
+    "case": "controlled-kalman-scalar",
+    "variant": "wrong-output",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 7: 1.619047619047619 != 2.619047619047619"
+  },
+  {
+    "case": "controlled-kalman-scalar",
+    "variant": "malformed-input",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid controlled Kalman covariance"
+  },
+  {
+    "case": "controlled-kalman-scalar",
+    "variant": "malformed-input",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Negative covariance diagonal"
+  },
+  {
+    "case": "controlled-kalman-scalar",
+    "variant": "leaked-answer",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unexpected controlled numerical input fields"
+  },
+  {
+    "case": "controlled-kalman-scalar",
+    "variant": "leaked-answer",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unknown fields: {'expected'}"
+  },
+  {
+    "case": "controlled-kmeans-one-mean",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "controlled-kmeans-one-mean",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "controlled-kmeans-one-mean",
+    "variant": "wrong-output",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 20.0 versus 21.0"
+  },
+  {
+    "case": "controlled-kmeans-one-mean",
+    "variant": "wrong-output",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 8: 20.0 != 21.0"
+  },
+  {
+    "case": "controlled-kmeans-one-mean",
+    "variant": "malformed-input",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid one-cluster KMeans dimensions or controls"
+  },
+  {
+    "case": "controlled-kmeans-one-mean",
+    "variant": "malformed-input",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Only one-cluster conformance is supported"
+  },
+  {
+    "case": "controlled-kmeans-one-mean",
+    "variant": "leaked-answer",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unexpected controlled numerical input fields"
+  },
+  {
+    "case": "controlled-kmeans-one-mean",
+    "variant": "leaked-answer",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unknown fields: {'expected'}"
+  },
+  {
+    "case": "controlled-cosine-distinct",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "controlled-cosine-distinct",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "controlled-cosine-distinct",
+    "variant": "wrong-output",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 0.0 versus 999.0"
+  },
+  {
+    "case": "controlled-cosine-distinct",
+    "variant": "wrong-output",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 0: 0.0 != 999.0"
+  },
+  {
+    "case": "controlled-cosine-distinct",
+    "variant": "malformed-input",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid vector cosine fixture dimensions or values"
+  },
+  {
+    "case": "controlled-cosine-distinct",
+    "variant": "malformed-input",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Zero-norm cosine policy is not certified"
+  },
+  {
+    "case": "controlled-cosine-distinct",
+    "variant": "leaked-answer",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unexpected vector cosine fixture fields"
+  },
+  {
+    "case": "controlled-cosine-distinct",
+    "variant": "leaked-answer",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unknown fields: {'expected'}"
+  },
+  {
+    "case": "controlled-kernel-interaction",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "controlled-kernel-interaction",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "controlled-kernel-interaction",
+    "variant": "wrong-output",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 7.0 versus 8.0"
+  },
+  {
+    "case": "controlled-kernel-interaction",
+    "variant": "wrong-output",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 1: 7.0 != 8.0"
+  },
+  {
+    "case": "controlled-kernel-interaction",
+    "variant": "malformed-input",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid KernelSHAP fixture dimensions or values"
+  },
+  {
+    "case": "controlled-kernel-interaction",
+    "variant": "malformed-input",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Vector width mismatch"
+  },
+  {
+    "case": "controlled-kernel-interaction",
+    "variant": "leaked-answer",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unexpected KernelSHAP fixture fields"
+  },
+  {
+    "case": "controlled-kernel-interaction",
+    "variant": "leaked-answer",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unknown fields: {'expected'}"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "suite-controlled-01": {
+    "status": "failed",
+    "validated_samples": 34,
+    "processes": 20,
+    "passed": 17,
+    "failures": [
+      {
+        "case": "controlled-cosine-small-norm-swiftsci-0.response.json",
+        "error": "Output mismatch: 0.0 versus 1.0"
+      },
+      {
+        "case": "controlled-linear-fixed-affine-swiftsci-0.response.json",
+        "error": "Model must be fitted before calling predict or transform."
+      },
+      {
+        "case": "controlled-logistic-fixed-mixed-logits-swiftsci-0.response.json",
+        "error": "Model must be fitted before calling predict or transform."
+      }
+    ],
+    "contract_hash": "8c8fef38e22c72432961b448f995046f4c504d4ba3875ff46863aaa20b5cfa55",
+    "source_tree": "dd49877297a7997dee9541f5b100e1ea6f6d4b5b84e1fa2e21cbbfa61085f388"
+  },
+  "suite-stage3-smoke-01": {
+    "status": "passed",
+    "validated_samples": 28,
+    "processes": 28,
+    "passed": 28,
+    "failures": [],
+    "contract_hash": "ceecc5a8fe2fa25a04dc5e074b5808f6ef10ab8fb36ae784dc0148a34e807149",
+    "source_tree": "dd49877297a7997dee9541f5b100e1ea6f6d4b5b84e1fa2e21cbbfa61085f388"
+  }
+}
