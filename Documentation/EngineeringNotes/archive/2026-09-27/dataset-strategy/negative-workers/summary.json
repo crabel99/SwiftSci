@@ -1,0 +1,72 @@
+[
+  {
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "variant": "wrong-final-prediction",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 0.23873533523624396 versus 100.2387353352362"
+  },
+  {
+    "variant": "wrong-final-prediction",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 38: 0.23873533523624396 != 100.2387353352362"
+  },
+  {
+    "variant": "ragged",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid OLS dimensions or values"
+  },
+  {
+    "variant": "ragged",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Ragged OLS features"
+  },
+  {
+    "variant": "boolean",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "DecodingError.typeMismatch: Expected value of type Double. Path: features[0][0]. Debug description: Expected to decode Double but found bool instead."
+  },
+  {
+    "variant": "boolean",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Nonfinite features"
+  },
+  {
+    "variant": "extra-field",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unexpected numerical input fields"
+  },
+  {
+    "variant": "extra-field",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unknown fields: {'expected_values'}"
+  }
+]

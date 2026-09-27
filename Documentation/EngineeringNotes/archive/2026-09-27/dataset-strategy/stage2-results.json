@@ -1,0 +1,128 @@
+{
+  "events": [
+    {
+      "batch": 0,
+      "case_id": "pca-oblique-k2",
+      "case_key": "75737c62d2931d6c2aea3a7921d2be5dc56e26b276f92809460d908d20185d20",
+      "engine": "swiftsci",
+      "result": {
+        "case_key": "75737c62d2931d6c2aea3a7921d2be5dc56e26b276f92809460d908d20185d20",
+        "engine_version": "SwiftSci standardized worker protocol 1",
+        "peak_rss_bytes": 10584064,
+        "samples": [
+          {
+            "elapsed_ns": 341666,
+            "maximum_absolute_error": 1.4210854715202004e-14,
+            "output_sha256": "b573d65fe621f7ce53170d3762cbb3bb1498e10a9677ecac103331eda6340c23",
+            "timing_resolved": true,
+            "validated": true
+          }
+        ],
+        "schema_version": 1,
+        "status": "passed"
+      },
+      "status": "passed"
+    },
+    {
+      "batch": 0,
+      "case_id": "pca-oblique-k2",
+      "case_key": "75737c62d2931d6c2aea3a7921d2be5dc56e26b276f92809460d908d20185d20",
+      "engine": "pandas",
+      "result": {
+        "case_key": "75737c62d2931d6c2aea3a7921d2be5dc56e26b276f92809460d908d20185d20",
+        "engine_version": "pandas 3.0.6; numpy 2.5.3; python 3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+        "peak_rss_bytes": 163332096,
+        "samples": [
+          {
+            "elapsed_ns": 130917,
+            "maximum_absolute_error": 1.4210854715202004e-14,
+            "output_sha256": "a0e35e2126983c49be9b8e25167b71a4d732cbae951b0696d4f488d747b02c49",
+            "timing_resolved": true,
+            "validated": true
+          }
+        ],
+        "schema_version": 1,
+        "status": "passed"
+      },
+      "status": "passed"
+    },
+    {
+      "batch": 0,
+      "case_id": "pca-oblique-k1",
+      "case_key": "1a35cc21c950cfb443b0db5b6da3884a448898604a58afd47e28d7830ebecca3",
+      "engine": "swiftsci",
+      "error": "Worker exited 1; see pca-oblique-k1-swiftsci-0.log",
+      "status": "failed"
+    },
+    {
+      "batch": 0,
+      "case_id": "pca-oblique-k1",
+      "case_key": "1a35cc21c950cfb443b0db5b6da3884a448898604a58afd47e28d7830ebecca3",
+      "engine": "pandas",
+      "result": {
+        "case_key": "1a35cc21c950cfb443b0db5b6da3884a448898604a58afd47e28d7830ebecca3",
+        "engine_version": "pandas 3.0.6; numpy 2.5.3; python 3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+        "peak_rss_bytes": 162660352,
+        "samples": [
+          {
+            "elapsed_ns": 105750,
+            "maximum_absolute_error": 1.4210854715202004e-14,
+            "output_sha256": "e17ef5b372c17ef26e18226b2228e2657aa5a3f63fcdde9d45ee191523eaa978",
+            "timing_resolved": true,
+            "validated": true
+          }
+        ],
+        "schema_version": 1,
+        "status": "passed"
+      },
+      "status": "passed"
+    },
+    {
+      "batch": 0,
+      "case_id": "multinomial-nb-noncontiguous",
+      "case_key": "02220dfec9dfaf0a3c2ef3fe769aa3ff18cd9871dae23c6def8b12185bd584f7",
+      "engine": "swiftsci",
+      "result": {
+        "case_key": "02220dfec9dfaf0a3c2ef3fe769aa3ff18cd9871dae23c6def8b12185bd584f7",
+        "engine_version": "SwiftSci standardized worker protocol 1",
+        "peak_rss_bytes": 10452992,
+        "samples": [
+          {
+            "elapsed_ns": 214542,
+            "maximum_absolute_error": 1.1102230246251565e-16,
+            "output_sha256": "890f536a0b52453c5d88b8dbc1326371720cb11476a8f9dd6173fb9d73805c2f",
+            "timing_resolved": true,
+            "validated": true
+          }
+        ],
+        "schema_version": 1,
+        "status": "passed"
+      },
+      "status": "passed"
+    },
+    {
+      "batch": 0,
+      "case_id": "multinomial-nb-noncontiguous",
+      "case_key": "02220dfec9dfaf0a3c2ef3fe769aa3ff18cd9871dae23c6def8b12185bd584f7",
+      "engine": "pandas",
+      "result": {
+        "case_key": "02220dfec9dfaf0a3c2ef3fe769aa3ff18cd9871dae23c6def8b12185bd584f7",
+        "engine_version": "pandas 3.0.6; numpy 2.5.3; python 3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+        "peak_rss_bytes": 162742272,
+        "samples": [
+          {
+            "elapsed_ns": 297000,
+            "maximum_absolute_error": 1.1102230246251565e-16,
+            "output_sha256": "4104f3f5b3726c7075ef1023bbbbdadadc67f6732010d98c94b7b3bf6eea9ee5",
+            "timing_resolved": true,
+            "validated": true
+          }
+        ],
+        "schema_version": 1,
+        "status": "passed"
+      },
+      "status": "passed"
+    }
+  ],
+  "audit_rejected_failed_profile": true
+}

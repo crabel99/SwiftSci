@@ -1,0 +1,98 @@
+[
+  {
+    "case": "pca-oblique-k2",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "pca-oblique-k2",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "pca-oblique-k2",
+    "variant": "wrong-output",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 50.0 versus -50.0"
+  },
+  {
+    "case": "pca-oblique-k2",
+    "variant": "wrong-output",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 39: 50.0 != -50.0"
+  },
+  {
+    "case": "pca-oblique-k2",
+    "variant": "malformed-input",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid PCA input dimensions or values"
+  },
+  {
+    "case": "pca-oblique-k2",
+    "variant": "malformed-input",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Ragged model matrix"
+  },
+  {
+    "case": "multinomial-nb-noncontiguous",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "multinomial-nb-noncontiguous",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "multinomial-nb-noncontiguous",
+    "variant": "wrong-output",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 0.0 versus 1.0"
+  },
+  {
+    "case": "multinomial-nb-noncontiguous",
+    "variant": "wrong-output",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 16: 0.0 != 1.0"
+  },
+  {
+    "case": "multinomial-nb-noncontiguous",
+    "variant": "malformed-input",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Invalid multinomial Naive Bayes input dimensions or values"
+  },
+  {
+    "case": "multinomial-nb-noncontiguous",
+    "variant": "malformed-input",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Negative multinomial feature"
+  }
+]

@@ -1,0 +1,2278 @@
+{
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/build-2.log": {
+    "bytes": 117,
+    "sha256": "8f34450798b18f075796255fa09657974146df5f3b4c8de3e9b789bfecb5be50"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/check-model-workers.py": {
+    "bytes": 2223,
+    "sha256": "d60b71ecd39b76501fbae7ddda623b5f466df61833faee924c8f125090879d56"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/check-workers.py": {
+    "bytes": 2068,
+    "sha256": "d33a070bbe9636b88471979fb6e3534e811a33da05ba72c4c796c2d1141e38a6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/commit-verification.json": {
+    "bytes": 104,
+    "sha256": "cba6b072e75f5cce954c3b1680dab746bd60610ffb0d4779bb859358b1068fda"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/decisions.tsv": {
+    "bytes": 4734,
+    "sha256": "8ff91d7212ae470599bc5845527fae76a5cdc558427df0cf2ece5602b44e138f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/final-python-tests.log": {
+    "bytes": 166,
+    "sha256": "71e98e551a0371ba909bd923ead0d0010ce0cbbd14946b3ebeb3067c92b3dda9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/final-source.json": {
+    "bytes": 40733,
+    "sha256": "c6b4861c07e047bbe63aa0902f4b834e7e296af4f70f1c99984c785f7e520396"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-control-pandas.request.json": {
+    "bytes": 723,
+    "sha256": "182dbff3170acda3f5236a1e5e2a1276d2401c25d67becb3e0888e6a199d74f6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-control-pandas.request.response.json": {
+    "bytes": 555,
+    "sha256": "19df9ede21d4a6c85fd4ca52ed53e2deb3f9df5b949ae16e3ec16b8a9948c267"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-control-swiftsci.request.json": {
+    "bytes": 723,
+    "sha256": "182dbff3170acda3f5236a1e5e2a1276d2401c25d67becb3e0888e6a199d74f6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-control-swiftsci.request.response.json": {
+    "bytes": 406,
+    "sha256": "e80a8f838122b5c16e10e629a49e4e152551edaccc3544fefe0a4ff781825346"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-malformed-input-pandas.request.json": {
+    "bytes": 691,
+    "sha256": "b83d61697ccc51004787ef1f95d67306708f1f26b7ed2b981dd23758edad4aff"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-malformed-input-pandas.request.response.json": {
+    "bytes": 262,
+    "sha256": "fdacd9fd609355a61c5e3ce18ca727d9c39d8d6884a7fd083ab23729ab7f5341"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-malformed-input-swiftsci.request.json": {
+    "bytes": 691,
+    "sha256": "b83d61697ccc51004787ef1f95d67306708f1f26b7ed2b981dd23758edad4aff"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-malformed-input-swiftsci.request.response.json": {
+    "bytes": 283,
+    "sha256": "e5c6da6214e3cff49bdce0255ab622997e947dbd8e76de7caa88356b17c7cc83"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-malformed-input.json": {
+    "bytes": 163,
+    "sha256": "966e3278add8cc5da51d5388a421a82ce2d53cbdf47e2358c98a8e395d707c75"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-wrong-output-pandas.request.json": {
+    "bytes": 709,
+    "sha256": "a5850bb07da684ac3bd9f2cc6b5cdba6cd8c66c0c4cb86fa2440bd808e1e31c4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-wrong-output-pandas.request.response.json": {
+    "bytes": 267,
+    "sha256": "b355604187b1e3fa62d4ce7d76e2e9acb96e728839e92deef076b9ed65da3c1f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-wrong-output-swiftsci.request.json": {
+    "bytes": 709,
+    "sha256": "a5850bb07da684ac3bd9f2cc6b5cdba6cd8c66c0c4cb86fa2440bd808e1e31c4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-wrong-output-swiftsci.request.response.json": {
+    "bytes": 256,
+    "sha256": "a3ebf4f61957dd786b2d9dd4fb4b9b5f6bfd9143b941d10e629232f6a2389d2e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/multinomial-nb-noncontiguous-wrong-output.f64": {
+    "bytes": 136,
+    "sha256": "34fb113d9cc7f5f284bca3bc6d94e828cb0af78756c5631967297dae290ec8ba"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-control-pandas.request.json": {
+    "bytes": 698,
+    "sha256": "7535a559f885095ab65477e9d4ef09e7da6889dd1715b71adb7abd8fb31b04d9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-control-pandas.request.response.json": {
+    "bytes": 555,
+    "sha256": "e21946a0bd94041883f2c05c30be4204368fbf31758a617e7d1c30d590849f7e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-control-swiftsci.request.json": {
+    "bytes": 698,
+    "sha256": "7535a559f885095ab65477e9d4ef09e7da6889dd1715b71adb7abd8fb31b04d9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-control-swiftsci.request.response.json": {
+    "bytes": 406,
+    "sha256": "6f2d9e82fe71d00e537ef64a16be5f519491a5e8ffc4679c15246a67c050c8bb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-malformed-input-pandas.request.json": {
+    "bytes": 652,
+    "sha256": "fa316f4cc2d7e69abdfe97df4cc0ca24dab3017d0b3fc57cd5604569f29aaec2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-malformed-input-pandas.request.response.json": {
+    "bytes": 253,
+    "sha256": "e2c675c4330772d59b844d25810c4feef505268ee31c1e2853a26647170b7840"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-malformed-input-swiftsci.request.json": {
+    "bytes": 652,
+    "sha256": "fa316f4cc2d7e69abdfe97df4cc0ca24dab3017d0b3fc57cd5604569f29aaec2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-malformed-input-swiftsci.request.response.json": {
+    "bytes": 263,
+    "sha256": "a8332a737b3cd50676d9b5fbb537e41e4eefb184610e50c3a6301c0df5b941f7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-malformed-input.json": {
+    "bytes": 138,
+    "sha256": "a832f0373e3e81922175ed4195a65f3a18b22d6dbcd7c78ff683db092959fc29"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-wrong-output-pandas.request.json": {
+    "bytes": 684,
+    "sha256": "ade1c4b182e1662dfdcbcaaa4f193cd9fab1583ca8f940f16d6e753fa65c54f2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-wrong-output-pandas.request.response.json": {
+    "bytes": 270,
+    "sha256": "abd0adbc5358a62554faa88b02525cee31dc65ab6134fa907f177855456c59f0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-wrong-output-swiftsci.request.json": {
+    "bytes": 684,
+    "sha256": "ade1c4b182e1662dfdcbcaaa4f193cd9fab1583ca8f940f16d6e753fa65c54f2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-wrong-output-swiftsci.request.response.json": {
+    "bytes": 259,
+    "sha256": "d97710bb46fb00f2ce9d2bf2f61c1ef5de83f3d137c35e8173ee4933b5050165"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/pca-oblique-k2-wrong-output.f64": {
+    "bytes": 408,
+    "sha256": "891d9cb3077347eb2dae28bf611994593523fc5a488810a35bba014f6625cfeb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/model-negative-workers/summary.json": {
+    "bytes": 2224,
+    "sha256": "2a859d54470d439074b20021377a3768ac19a45213a66bd7f9bfbea91c3bc159"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/boolean-pandas.request.json": {
+    "bytes": 635,
+    "sha256": "60a6444d99829bc86f24ad883bf489958044562df1107f5ae1d853e1e7eee43c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/boolean-pandas.response.json": {
+    "bytes": 252,
+    "sha256": "5b91f624f30075a4f9506c54008a0db4d7325b4d5762daca181e53dd02b4bc54"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/boolean-swiftsci.request.json": {
+    "bytes": 635,
+    "sha256": "60a6444d99829bc86f24ad883bf489958044562df1107f5ae1d853e1e7eee43c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/boolean-swiftsci.response.json": {
+    "bytes": 374,
+    "sha256": "8c3839e56a0c76cee1f82593b930090fc294e801b4405479fbe0382a63c52e20"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/boolean.json": {
+    "bytes": 598,
+    "sha256": "0e03682c5383c0d34aa9bf8f632072903d521f759287d93753d799ab87d1d935"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/control-pandas.request.json": {
+    "bytes": 711,
+    "sha256": "fd842b3492e1868555fd41374d216fda07da35da5dbc26b1fdbe72dd7053ff95"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/control-pandas.response.json": {
+    "bytes": 554,
+    "sha256": "9591ba5bc6ac995131956b3d2ed2b0c63e48da0116a85a2abdb5967c9ad9b1ed"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/control-swiftsci.request.json": {
+    "bytes": 711,
+    "sha256": "fd842b3492e1868555fd41374d216fda07da35da5dbc26b1fdbe72dd7053ff95"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/control-swiftsci.response.json": {
+    "bytes": 407,
+    "sha256": "16e57b60b0590342c816a2773a858670d721acb3ed3dcdb5cf009506b6705c9b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/extra-field-pandas.request.json": {
+    "bytes": 639,
+    "sha256": "3bb25289569a448ea5b67b069d82d591d3f27b83209dcd0b567985e61e995e88"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/extra-field-pandas.response.json": {
+    "bytes": 269,
+    "sha256": "ac7651eab0743bca2b5ec4f9e2fbdee88aa7f3b66923c82b75bd30bbb695cdd5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/extra-field-swiftsci.request.json": {
+    "bytes": 639,
+    "sha256": "3bb25289569a448ea5b67b069d82d591d3f27b83209dcd0b567985e61e995e88"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/extra-field-swiftsci.response.json": {
+    "bytes": 258,
+    "sha256": "43323c761d09266e367537e9306d307bb3ef1357ad645135949c65eb3922ee0a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/extra-field.json": {
+    "bytes": 624,
+    "sha256": "cf485a9c421407ce9fd209d3a254b8b4bbef9540ca38c6dc9212adfa1f8f19ed"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/ragged-pandas.request.json": {
+    "bytes": 634,
+    "sha256": "21652b22f148dcbb2e80bdaa36ab4dec42caed791abcfa8b59fa4cc28e049eeb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/ragged-pandas.response.json": {
+    "bytes": 253,
+    "sha256": "4b143000426258aa513f65349141daf813c95db5f2137a616ee33d00eb236d05"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/ragged-swiftsci.request.json": {
+    "bytes": 634,
+    "sha256": "21652b22f148dcbb2e80bdaa36ab4dec42caed791abcfa8b59fa4cc28e049eeb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/ragged-swiftsci.response.json": {
+    "bytes": 257,
+    "sha256": "51710d46779c02fcce52c6b82935c8c3552d0b078c8c97ee28afda56009d5032"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/ragged.json": {
+    "bytes": 600,
+    "sha256": "b6466dd57a9025676866b085f3275aa92fcc14b74115883cfa120d88027b7c55"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/summary.json": {
+    "bytes": 1653,
+    "sha256": "3a841b4ab03ad8847abcaf5a5324d2bd3050c1cf39a9c948d1df23d09e0c6eff"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/wrong-final-prediction-pandas.request.json": {
+    "bytes": 675,
+    "sha256": "bb350ab58a1c364e730cbf1531a039ba7d690a4d680891787d66ec2b06e62f91"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/wrong-final-prediction-pandas.response.json": {
+    "bytes": 297,
+    "sha256": "049e7fca509e13582721f9611e661587ec9694a20958acc59acd0d8d1400ace2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/wrong-final-prediction-swiftsci.request.json": {
+    "bytes": 675,
+    "sha256": "bb350ab58a1c364e730cbf1531a039ba7d690a4d680891787d66ec2b06e62f91"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/wrong-final-prediction-swiftsci.response.json": {
+    "bytes": 286,
+    "sha256": "99ab850e70e2970eea3ace84d4b30dad5aeaa25be9910b88ad4e5de8351e0851"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/negative-workers/wrong-final-prediction.f64": {
+    "bytes": 312,
+    "sha256": "5b24ffecda57aaf533573d01613c0dffa66b1a324e144cbb71235fc3f5e3b52a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/plan.md": {
+    "bytes": 2268,
+    "sha256": "da70b053001482c18483d09b4d5e25fe3dab13382f465f0fe6775ee7a627d855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/python-tests.log": {
+    "bytes": 160,
+    "sha256": "6a05ddae56be27ef5b861b3db6d0a043405fe191c471ec027954a267f2a36a1a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/review.md": {
+    "bytes": 3076,
+    "sha256": "1d0c2af5ef08998f5b0463865e16270f1564fa14cc3040ce4e76efe1d72b6112"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/certificate.json": {
+    "bytes": 43445,
+    "sha256": "d58c20ca26f9661b8dc29ea0d7d7ed1e39362e3c1d0b6504df07166833cba631"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/events.jsonl": {
+    "bytes": 17320,
+    "sha256": "6891e947d1e290c19bfe00cb694425f058b469be651c11543b7188f030a3739a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-mean-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-mean-pandas-0.request.json": {
+    "bytes": 770,
+    "sha256": "a7c15827d777d18f4e9131e4b1302c9684801b9dc6346f5c93a20e8743208281"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-mean-pandas-0.response.json": {
+    "bytes": 553,
+    "sha256": "95a3a4bbe1a1cb4c4704e461050f34e1cb51004dab16ac6e794d8018fa1124c6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-mean-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-mean-swiftsci-0.request.json": {
+    "bytes": 770,
+    "sha256": "a7c15827d777d18f4e9131e4b1302c9684801b9dc6346f5c93a20e8743208281"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-mean-swiftsci-0.response.json": {
+    "bytes": 403,
+    "sha256": "2a215b1327093082b48f7727073533743b86f394f355684051aaf68c9c2c55a5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-mean.expected.f64": {
+    "bytes": 8,
+    "sha256": "f1b48b0b965a6e50664e82ddf9c4bd7677dc31ddef4860972cf3a3bb7e01384c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-stddev-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-stddev-pandas-0.request.json": {
+    "bytes": 774,
+    "sha256": "59d3c020dbb4a649eab4f6d452866f158afdda57043d31dec5ee981bfe9656df"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-stddev-pandas-0.response.json": {
+    "bytes": 552,
+    "sha256": "57042c82fb59e5c94899df1523233def7a3ec24c628b8db4662319a516242d10"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-stddev-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-stddev-swiftsci-0.request.json": {
+    "bytes": 774,
+    "sha256": "59d3c020dbb4a649eab4f6d452866f158afdda57043d31dec5ee981bfe9656df"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-stddev-swiftsci-0.response.json": {
+    "bytes": 403,
+    "sha256": "f9b24bb2f9d164c29ab8f3ef44721e994c66a493e0813edd133361e6b795d9f9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-stddev.expected.f64": {
+    "bytes": 8,
+    "sha256": "45d2b662d9d490ae9b932759c910b26b9a874065de620f4ac0a3a23a65e40b8c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-variance-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-variance-pandas-0.request.json": {
+    "bytes": 778,
+    "sha256": "f3c02abe95106d3f41a4185f55e23bc6bfb859e4ece3b7c7fb436c2b853a5855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-variance-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "19bc0faa12fc6c613c05fbff48f21fc0d4621a4fde74aaaf03de9ef4951a42aa"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-variance-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-variance-swiftsci-0.request.json": {
+    "bytes": 778,
+    "sha256": "f3c02abe95106d3f41a4185f55e23bc6bfb859e4ece3b7c7fb436c2b853a5855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-variance-swiftsci-0.response.json": {
+    "bytes": 404,
+    "sha256": "bb44f509e4288e6d7acb1d195e42ceca06325564f8e5606ef2f309ad7f410a73"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/nist-variance.expected.f64": {
+    "bytes": 8,
+    "sha256": "c738dd99fada954a0be83cb94069e65973256ed5a199cd293841c789ad3b0910"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/run.json": {
+    "bytes": 140134,
+    "sha256": "e4eac9e79aff463df6d57c9235835cd25cf11f700d1a3e113f3235490229837c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-csv-read-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-csv-read-pandas-0.request.json": {
+    "bytes": 717,
+    "sha256": "02ee90b2db6a82e78ae1b2ab5da6945440e87493ac8558ba4097ca98c4812f8e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-csv-read-pandas-0.response.json": {
+    "bytes": 537,
+    "sha256": "32207cb311d4ad0e39b29e132c5ac6ec4c22d45ac526591406c46c23983f73b5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-csv-read-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-csv-read-swiftsci-0.request.json": {
+    "bytes": 717,
+    "sha256": "02ee90b2db6a82e78ae1b2ab5da6945440e87493ac8558ba4097ca98c4812f8e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-csv-read-swiftsci-0.response.json": {
+    "bytes": 386,
+    "sha256": "fc3dfe75984c1275abc210524214ec4f114be118de309c8a431c0c722dd657ef"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-csv-read.expected.f64": {
+    "bytes": 4128,
+    "sha256": "efac62078d3b1c41cf49e32d0c322fddd5f9bb03d8cacd883985a86bdbacf37f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-filter-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-filter-pandas-0.request.json": {
+    "bytes": 713,
+    "sha256": "314906d8f5e40b9905f12bc90a0d834d85ae9fce914059a093c22fafbd15d16d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-filter-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "059e6de8419b8682229878e8d18cec6d188c69684c7ecd36b49ebb6eb719e15c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-filter-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-filter-swiftsci-0.request.json": {
+    "bytes": 713,
+    "sha256": "314906d8f5e40b9905f12bc90a0d834d85ae9fce914059a093c22fafbd15d16d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-filter-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "beb0c3947b7a29c1f6e241a47425f2d65927af9ee412513d3d4975a67d2c9361"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-filter.expected.f64": {
+    "bytes": 1952,
+    "sha256": "dc459fc86f8ddfb8da8ab37a1665162db9c21bae7d6dc02498e7f0c09e4d6a33"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-flat-matrix-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-flat-matrix-pandas-0.request.json": {
+    "bytes": 723,
+    "sha256": "c12976b6cef90ba7fe957f1ad607d765600f58a564c32084b7d1f836921d2ec6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-flat-matrix-pandas-0.response.json": {
+    "bytes": 537,
+    "sha256": "17f826f14f8d3e2ef15e1878f80eb79876183fe99765ffc526e2311435d322f4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-flat-matrix-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-flat-matrix-swiftsci-0.request.json": {
+    "bytes": 723,
+    "sha256": "c12976b6cef90ba7fe957f1ad607d765600f58a564c32084b7d1f836921d2ec6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-flat-matrix-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "89954eaf6d65da34f587a0c5935d3b7e7c2ed9176cb5ec1e3ee3a4fafa4e58a5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-flat-matrix.expected.f64": {
+    "bytes": 2064,
+    "sha256": "c18fc18efae8a32bde3d05ff185d0c8b90fbad80feaaa644d714df44fe5894d4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-group-sum-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-group-sum-pandas-0.request.json": {
+    "bytes": 719,
+    "sha256": "d73166827232e616b0c52225896ffeffc7f7c0e70854561dbc270f22fe6d4c51"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-group-sum-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "b88b83bbff7950b1d59830d6a4d495aec00f9e440408803f9fcc50df0049b2e9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-group-sum-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-group-sum-swiftsci-0.request.json": {
+    "bytes": 719,
+    "sha256": "d73166827232e616b0c52225896ffeffc7f7c0e70854561dbc270f22fe6d4c51"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-group-sum-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "0324059e0df556c79df2bc289b4a813dbf1ec600479988855d1ebf1017c247c6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-group-sum.expected.f64": {
+    "bytes": 112,
+    "sha256": "ace3f83ef64b76fa6cabe830bfe89ab3351f77810e2876e7aa7268fe146bb7c8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-mean-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-mean-pandas-0.request.json": {
+    "bytes": 713,
+    "sha256": "75860e11b3b220061bf2b7418c480741cb25f6bcc40205d184dd9e12491f1604"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-mean-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "926ec98f0f487711674abedab42e070de5349d7fe23641c691e4ddd804d0643d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-mean-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-mean-swiftsci-0.request.json": {
+    "bytes": 713,
+    "sha256": "75860e11b3b220061bf2b7418c480741cb25f6bcc40205d184dd9e12491f1604"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-mean-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "6731f88e2e18249d5f6ad009477cc595045ba82bf62fbbbdcfc075f6ff3f71aa"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-mean.expected.f64": {
+    "bytes": 8,
+    "sha256": "c284eeeeffc1eb15c7889a10f238c85e5308b90e8a78dd741219f969dde881e1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-minmax-scale-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-minmax-scale-pandas-0.request.json": {
+    "bytes": 733,
+    "sha256": "677bf8bae54f96576e0cf003cb136a66f29fda294d4826c52b22572e52b3729c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-minmax-scale-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "aff02a57aa8df25586d7fd4e2b3c8ec5b8f3885be5b1fa0f2afc0f708bc456c1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-minmax-scale-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-minmax-scale-swiftsci-0.request.json": {
+    "bytes": 733,
+    "sha256": "677bf8bae54f96576e0cf003cb136a66f29fda294d4826c52b22572e52b3729c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-minmax-scale-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "41cb5182746c1ff7d10c09779da69fb8cc756da45fd101cd44715a257684363c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-minmax-scale.expected.f64": {
+    "bytes": 2064,
+    "sha256": "727a62b21b8173cad20262e963e5b1138499f0f7c74960b8575b4dc19dad4b39"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-sort-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-sort-pandas-0.request.json": {
+    "bytes": 709,
+    "sha256": "941662f377496d9f0dac3b512edb27192ac509206c65e9dddcf7b4ab086f7482"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-sort-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "ba5f72f9095b8842c7ab9045440adf196650aa8e888efe0fe9acf0da922172d6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-sort-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-sort-swiftsci-0.request.json": {
+    "bytes": 709,
+    "sha256": "941662f377496d9f0dac3b512edb27192ac509206c65e9dddcf7b4ab086f7482"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-sort-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "9646e0983608b993e5949ac6d717466d2f0fcd6d3edd4b9d3de1dbeb0746c037"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-sort.expected.f64": {
+    "bytes": 4128,
+    "sha256": "2adb66207f2a3d19bb7b72ff749c241d3e0068c3a107d44333dbade722ba171d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-standard-scale-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-standard-scale-pandas-0.request.json": {
+    "bytes": 737,
+    "sha256": "742e48e6ed72748b8275fb2a0f82fa12aff620ca57eae14430155bffe525f499"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-standard-scale-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "c4aa60f76b52d2118ca7499dfc1ee9fdf38978a63306a149c02da7dd04b99160"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-standard-scale-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-standard-scale-swiftsci-0.request.json": {
+    "bytes": 737,
+    "sha256": "742e48e6ed72748b8275fb2a0f82fa12aff620ca57eae14430155bffe525f499"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-standard-scale-swiftsci-0.response.json": {
+    "bytes": 405,
+    "sha256": "77964ac5dac114f3b4d4c3b4828ce7968592a2cff47b94544c413f751d5ac82f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-standard-scale.expected.f64": {
+    "bytes": 2064,
+    "sha256": "3dd66892515eb0b2068a5527ef9c4fe785d5af2d0f2b4886c73b08969ac18988"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-stddev-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-stddev-pandas-0.request.json": {
+    "bytes": 717,
+    "sha256": "d383b214f3ea48cdf5477b70cf9053fdde788786122751529381e68dc503014f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-stddev-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "a8bc294266df5fe3a5d8cb309eca55e0666a1b694fa06eadfe410684ae98c5b2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-stddev-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-stddev-swiftsci-0.request.json": {
+    "bytes": 717,
+    "sha256": "d383b214f3ea48cdf5477b70cf9053fdde788786122751529381e68dc503014f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-stddev-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "f01aa44ca6d22c45b645669fb4e6a20c8963d13dc0c473b2f18e3ccdf0c4bd1b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-stddev.expected.f64": {
+    "bytes": 8,
+    "sha256": "13494b618c867a5a9ea9bbe13d24d42cbd930dddf627d6b3885bdf768ab1d68b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-target-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-target-pandas-0.request.json": {
+    "bytes": 713,
+    "sha256": "68c86d91fdc426139e3f18d19184a6a2eba176fb71e882bbb6532ac392eabd3b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-target-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "69fbdff309b8635c31793c43275f5ab0c1042148b71d237faa95406b91af3be1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-target-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-target-swiftsci-0.request.json": {
+    "bytes": 713,
+    "sha256": "68c86d91fdc426139e3f18d19184a6a2eba176fb71e882bbb6532ac392eabd3b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-target-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "cf9ba6fc516b0560d3fb37d48857c0d06de8475e945246bcf4401ae1fb24c7cf"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-target.expected.f64": {
+    "bytes": 1032,
+    "sha256": "7c8dfdec8fd454bdaadcbb798ece6f3e028e205bf8584ba519095c1452208979"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-variance-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-variance-pandas-0.request.json": {
+    "bytes": 721,
+    "sha256": "4b1c277989415cb6e5d18e6286c814c7fde9c9563e6da2a49aec1e576d57c1f3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-variance-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "6044e8ef6cac20d0db12e2458c6527ee8c506e0ab50a5be38dc68bddf01797c6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-variance-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-variance-swiftsci-0.request.json": {
+    "bytes": 721,
+    "sha256": "4b1c277989415cb6e5d18e6286c814c7fde9c9563e6da2a49aec1e576d57c1f3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-variance-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "c4fe43ff1afc657ae7bdc20778cf994e762d99748fd48d3e6b8606ab0262aa31"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-final-smoke-01/tiny-variance.expected.f64": {
+    "bytes": 8,
+    "sha256": "67ab9611c5c2899bb2bb024a8bfd0540b89e5f125320fa8e62917ce0c928adc8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/certificate.json": {
+    "bytes": 42125,
+    "sha256": "acb31f33293dfc9cfcc6749f51b5c0b501ea5014dc6c5f9b478ca7f7650068b6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/events.jsonl": {
+    "bytes": 3469,
+    "sha256": "b91ac7d414ad0b21295b00649b68de3a1360328818bdc40642566288fa94bf10"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/multinomial-nb-noncontiguous-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/multinomial-nb-noncontiguous-pandas-0.request.json": {
+    "bytes": 754,
+    "sha256": "3ef21864029d7a4ac14bd578d7d0698047b25022b396b9c2170ac037b6c4af40"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/multinomial-nb-noncontiguous-pandas-0.response.json": {
+    "bytes": 555,
+    "sha256": "13f987a0490c9cb9446c0040e3abe2435b9ede74c526b76caba12aada0755e41"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/multinomial-nb-noncontiguous-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/multinomial-nb-noncontiguous-swiftsci-0.request.json": {
+    "bytes": 754,
+    "sha256": "3ef21864029d7a4ac14bd578d7d0698047b25022b396b9c2170ac037b6c4af40"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/multinomial-nb-noncontiguous-swiftsci-0.response.json": {
+    "bytes": 406,
+    "sha256": "6e7fc4c482c1bea2e5169fa8a4ee6b90bc58291cdb527c084eb6ac2fe5e7d721"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/multinomial-nb-noncontiguous.expected.f64": {
+    "bytes": 136,
+    "sha256": "164dab18a694011f855e204660ac37f633d6e82287849c37a7e545d691a883dc"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k1-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k1-pandas-0.request.json": {
+    "bytes": 729,
+    "sha256": "618a9c688704edc089c57c8a943d8be7872143c5f896b33c01ab57c714931841"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k1-pandas-0.response.json": {
+    "bytes": 555,
+    "sha256": "06cd9f4e9a04b86dc22fb8a896134ec8e3a22e7ef0bfbfdcb1ef010990b02030"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k1-swiftsci-0.log": {
+    "bytes": 32,
+    "sha256": "fa54c0e44ef5d391cbc9f9dafc1aff9675e2e440f4e053af0323b62f08a9c396"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k1-swiftsci-0.request.json": {
+    "bytes": 729,
+    "sha256": "618a9c688704edc089c57c8a943d8be7872143c5f896b33c01ab57c714931841"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k1-swiftsci-0.response.json": {
+    "bytes": 256,
+    "sha256": "72d290ec09e79dc75ebc5cb85fbf379a3bdeabfb033484ff71bdd2087d930abd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k1.expected.f64": {
+    "bytes": 360,
+    "sha256": "a34595ef7c4cbc89b7f17e3f108be42e30c2d11c4729bc2822fcfbedde5327e1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k2-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k2-pandas-0.request.json": {
+    "bytes": 729,
+    "sha256": "c26d630e384fe539fc1ed3b00f6c63cbd3167a643218f4d312600aa2229a8a4a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k2-pandas-0.response.json": {
+    "bytes": 555,
+    "sha256": "cca5ddc4d6d77adbd04bc08d695d120661f89062d86546745e945cf20c10ac6b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k2-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k2-swiftsci-0.request.json": {
+    "bytes": 729,
+    "sha256": "c26d630e384fe539fc1ed3b00f6c63cbd3167a643218f4d312600aa2229a8a4a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k2-swiftsci-0.response.json": {
+    "bytes": 406,
+    "sha256": "b672494f4504c56055e52bb08c15c3be8ec9a6b3a8370af154d1ff14c3375679"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/pca-oblique-k2.expected.f64": {
+    "bytes": 408,
+    "sha256": "67f98378c9e4770463af0ead79805a118a15701ae47b2dc801c339c5790523c4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-models-01/run.json": {
+    "bytes": 104167,
+    "sha256": "9f57bcbca192682e4f45a2541c2be4ff95d2d7d6120bd0a93c5566e6f4778bb5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/certificate.json": {
+    "bytes": 43287,
+    "sha256": "6b7bec93c0783ee80af9f80da77ebd1c9c028ad1dafd8c7d85fe2db32703ee34"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/events.jsonl": {
+    "bytes": 20571,
+    "sha256": "0969d5f0095ae938fe4b6eaded268d9caae438b7298dcbaa78155dfbe239350b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-atmwtag-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-atmwtag-binary64-pandas-0.request.json": {
+    "bytes": 747,
+    "sha256": "7f565bd9f9da81e43d2146cb167de3d88b9a74e7c2a0f555e3eb843fdf50ea41"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-atmwtag-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "1025d35cadba8571e6a27f32588dd6c18726d2e4d3ea1a0d234fa1f294c28c4a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-atmwtag-binary64-swiftsci-0.log": {
+    "bytes": 62,
+    "sha256": "e95fffc87eb7d63ad4b9d6ca9dcf53bc12cbfe9aad21fa6d299167263ff1edeb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-atmwtag-binary64-swiftsci-0.request.json": {
+    "bytes": 747,
+    "sha256": "7f565bd9f9da81e43d2146cb167de3d88b9a74e7c2a0f555e3eb843fdf50ea41"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-atmwtag-binary64-swiftsci-0.response.json": {
+    "bytes": 286,
+    "sha256": "ecb076913aa150b8c0fa2efc7100f1d36f75b376d811059a5bfa4cfa72e1d045"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-atmwtag-binary64.expected.f64": {
+    "bytes": 24,
+    "sha256": "a5c02dfe0a9413830e8a9a97b82e668007c2e981ddb3a923af41efd9457c8227"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-longley-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-longley-binary64-pandas-0.request.json": {
+    "bytes": 745,
+    "sha256": "eee1a7dee52a00c17476248c79dd066dfcdbb43bda8aa7a328285aeabd6e5252"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-longley-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "1233dee590142d5f29c9b13a93389184c026910b57d147605c076660783333c5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-longley-binary64-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-longley-binary64-swiftsci-0.request.json": {
+    "bytes": 745,
+    "sha256": "eee1a7dee52a00c17476248c79dd066dfcdbb43bda8aa7a328285aeabd6e5252"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-longley-binary64-swiftsci-0.response.json": {
+    "bytes": 408,
+    "sha256": "450582428a098805413f8bbbe17531543c5b954ec5dd0a94ea9efb60f43bc360"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-longley-binary64.expected.f64": {
+    "bytes": 192,
+    "sha256": "efe97745dcad34885945e18de866c4de8335e97446f3cf960ac862ecbb892455"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-norris-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-norris-binary64-pandas-0.request.json": {
+    "bytes": 744,
+    "sha256": "1e897069eba57556c21f336275187f8c2b24d0725af4b27cf3e6dd18649ce99c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-norris-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "f824d305318abe8f6882318feb95c32a59b3a3400b07af4d35146e919b8b4bf8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-norris-binary64-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-norris-binary64-swiftsci-0.request.json": {
+    "bytes": 744,
+    "sha256": "1e897069eba57556c21f336275187f8c2b24d0725af4b27cf3e6dd18649ce99c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-norris-binary64-swiftsci-0.response.json": {
+    "bytes": 407,
+    "sha256": "371671585de883515135490019f688d131a601c3cb9c441fc7ee1ac537d975fc"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-norris-binary64.expected.f64": {
+    "bytes": 312,
+    "sha256": "7de70e9ef4de95493c093d2dd707f37b19db9cbb88ea382d303ab8aad4c1912e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-pontius-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-pontius-binary64-pandas-0.request.json": {
+    "bytes": 745,
+    "sha256": "467ed76a7a3d21b324a0621e4a2cf9f1f63c85b5a7eb2f23e5dc0ada238efe8c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-pontius-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "2e924c311ae6e917bf0d985df9ccf63771ef4c1976bb8206c812323742a3891a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-pontius-binary64-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-pontius-binary64-swiftsci-0.request.json": {
+    "bytes": 745,
+    "sha256": "467ed76a7a3d21b324a0621e4a2cf9f1f63c85b5a7eb2f23e5dc0ada238efe8c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-pontius-binary64-swiftsci-0.response.json": {
+    "bytes": 407,
+    "sha256": "856252dfb4d1e726f03c1326417c5d8afcce17bbfd586eadff44e5c2f2b09435"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-pontius-binary64.expected.f64": {
+    "bytes": 352,
+    "sha256": "19174378b23d11340f1d23ce79dd95b3717a492f0f998f0eb57b62369476843d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-sirstv-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-sirstv-binary64-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "4a9dbc594de9fac93448eb493cd3b26b167f1633cb976588d2a29f2231e19d78"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-sirstv-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "ffb3a7ad1e3bcc7bb0710acb93d5163dd02500fb65ac9f037ef3412756e866e0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-sirstv-binary64-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-sirstv-binary64-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "4a9dbc594de9fac93448eb493cd3b26b167f1633cb976588d2a29f2231e19d78"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-sirstv-binary64-swiftsci-0.response.json": {
+    "bytes": 406,
+    "sha256": "fb2ae21d233cbb0d9b57b3fa6a14028a2afc070cfe274ba319de78c86666bdd6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-sirstv-binary64.expected.f64": {
+    "bytes": 24,
+    "sha256": "5d44363dbde8994221f325676199126a5921fdb02689397703fb2ac49af0fca9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls01-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls01-binary64-pandas-0.request.json": {
+    "bytes": 748,
+    "sha256": "f9c2d19f4b83423df221186b30221eb6aae82b143c75676e3289fbeba3dde1de"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls01-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "9f0795d5081bf5734685683fed2de452a0e768cd8fc9dce7bfbc770dd530ff8e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls01-binary64-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls01-binary64-swiftsci-0.request.json": {
+    "bytes": 748,
+    "sha256": "f9c2d19f4b83423df221186b30221eb6aae82b143c75676e3289fbeba3dde1de"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls01-binary64-swiftsci-0.response.json": {
+    "bytes": 406,
+    "sha256": "cee1beaefa359dc94234d3ff8007d9dac55ac2de018c07901503262051acc46d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls01-binary64.expected.f64": {
+    "bytes": 24,
+    "sha256": "197fdf7fe0714fb9d2f7ad35a4c6b0a7aa10aec963d822e2c1833328d6707348"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls02-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls02-binary64-pandas-0.request.json": {
+    "bytes": 750,
+    "sha256": "ca9cf1a66bf6b034adb4b3f1bc1e078bcde74d234acea5cb86c95d62d7766b66"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls02-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "43ef5759aaf987e51fb8379a08ef89e43140927b32dc7967f34ceaef116af54a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls02-binary64-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls02-binary64-swiftsci-0.request.json": {
+    "bytes": 750,
+    "sha256": "ca9cf1a66bf6b034adb4b3f1bc1e078bcde74d234acea5cb86c95d62d7766b66"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls02-binary64-swiftsci-0.response.json": {
+    "bytes": 405,
+    "sha256": "b1a53677e89dc4e4ca4c35a95a60c33c75d32fae584b8d68ea6653ba2ec8a2c0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls02-binary64.expected.f64": {
+    "bytes": 24,
+    "sha256": "622f333f55c6519a8f9c3012cfe6a89a87fdb4aa0a4d933a1adfcf734005ba40"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls03-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls03-binary64-pandas-0.request.json": {
+    "bytes": 752,
+    "sha256": "81f2a327c9e486c35176ea52ed8596570790ed235741159880bbec37e5261079"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls03-binary64-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "7c4df94912afde7d30982266df4031111458c891fe0f7cc6ec631efac909754f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls03-binary64-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls03-binary64-swiftsci-0.request.json": {
+    "bytes": 752,
+    "sha256": "81f2a327c9e486c35176ea52ed8596570790ed235741159880bbec37e5261079"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls03-binary64-swiftsci-0.response.json": {
+    "bytes": 406,
+    "sha256": "d82ef1b534478fb7dd307b46aa393eaa86fbddb2382da04143f736e2d1389db6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls03-binary64.expected.f64": {
+    "bytes": 24,
+    "sha256": "35256fa77fbf6068f7537172add1f4192b3a371241eb72614bc065f34b3c3ff8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls04-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls04-binary64-pandas-0.request.json": {
+    "bytes": 748,
+    "sha256": "9240c5eeb4cc29851a7eb45bbf77c35043306424557ea5c141bc9e5a1b319504"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls04-binary64-pandas-0.response.json": {
+    "bytes": 555,
+    "sha256": "8dfd8ccfb70c8599fd007e69c231a3b8488dc379f551b0235fec2103ec5a3532"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls04-binary64-swiftsci-0.log": {
+    "bytes": 57,
+    "sha256": "13bcdcc6b250da17a6b36cb501a5522776e86a3f8112ade4358716ad722339fe"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls04-binary64-swiftsci-0.request.json": {
+    "bytes": 748,
+    "sha256": "9240c5eeb4cc29851a7eb45bbf77c35043306424557ea5c141bc9e5a1b319504"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls04-binary64-swiftsci-0.response.json": {
+    "bytes": 281,
+    "sha256": "3cf93cbbf318c53e1bdc10b33ec500dd8cb7ee695799ceb0572fda6383587d23"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls04-binary64.expected.f64": {
+    "bytes": 24,
+    "sha256": "255cf8f23c7828a9df5e188539c21080e49635d891438563b3aea9f4b7b9a04a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls05-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls05-binary64-pandas-0.request.json": {
+    "bytes": 750,
+    "sha256": "696f7a31a03ab1e058ecd468e9ef3cfa38da01bdff268778b19bbd44a12ee815"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls05-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "0d2370b3bf4e9104c8ae78004606a27bce40dcc258e0a6a75c351d52c68bb7ba"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls05-binary64-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls05-binary64-swiftsci-0.request.json": {
+    "bytes": 750,
+    "sha256": "696f7a31a03ab1e058ecd468e9ef3cfa38da01bdff268778b19bbd44a12ee815"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls05-binary64-swiftsci-0.response.json": {
+    "bytes": 406,
+    "sha256": "ff25be529c223c568f6236827b3a9b7be1a59adb22e423dfb20f4c09796576ec"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls05-binary64.expected.f64": {
+    "bytes": 24,
+    "sha256": "df8e59cf68de7d5a8998a60bd689362a3bda0fc94eaedfce2a4a0b2e12d9fd9e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls06-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls06-binary64-pandas-0.request.json": {
+    "bytes": 752,
+    "sha256": "05b935bf543590c5ce190286c4643355f143e82b33ca0f80bb2aa80dbf57ee97"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls06-binary64-pandas-0.response.json": {
+    "bytes": 555,
+    "sha256": "d817befa20836a0d6732fb5f5addd5c30b976f3100ea4a83bcf241216fa1ed76"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls06-binary64-swiftsci-0.log": {
+    "bytes": 62,
+    "sha256": "c62dde24a30058b52ce3b09558071fa62672d43fe07938e67a7796b4e7e1f30e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls06-binary64-swiftsci-0.request.json": {
+    "bytes": 752,
+    "sha256": "05b935bf543590c5ce190286c4643355f143e82b33ca0f80bb2aa80dbf57ee97"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls06-binary64-swiftsci-0.response.json": {
+    "bytes": 286,
+    "sha256": "9e35a037023bcea251ddc8072f8a9dfe95be4bdf05b6dae591bc8da03e7351f2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls06-binary64.expected.f64": {
+    "bytes": 24,
+    "sha256": "a607b22a4541d693075a7955a363ff3e56a60b61d30eac797fd1c5196122399d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls07-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls07-binary64-pandas-0.request.json": {
+    "bytes": 748,
+    "sha256": "cc3ef3a262e7654a76f99d73e9539cd79a9472ac675c24c2dd964f16fe345249"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls07-binary64-pandas-0.response.json": {
+    "bytes": 555,
+    "sha256": "914cbf8e6b540d472019c37fa7f26c177a7e26404e8595e76b756814117c96dd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls07-binary64-swiftsci-0.log": {
+    "bytes": 60,
+    "sha256": "b17d1e5794d371ac28a7e8585722a3de22cc50dc477b8c884648ac4ec84159de"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls07-binary64-swiftsci-0.request.json": {
+    "bytes": 748,
+    "sha256": "cc3ef3a262e7654a76f99d73e9539cd79a9472ac675c24c2dd964f16fe345249"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls07-binary64-swiftsci-0.response.json": {
+    "bytes": 284,
+    "sha256": "05a3449632067527e61a8f64f6fb4c14209f66ae4bce99687f7f358410655a9c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls07-binary64.expected.f64": {
+    "bytes": 24,
+    "sha256": "95c3ad589fa493bd2fd40a61f9c008acb832c185e9ce8f9e0b405a23515998a8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls08-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls08-binary64-pandas-0.request.json": {
+    "bytes": 750,
+    "sha256": "df78250b708de98e6b3f71378f00384692b32e5576296554410fd3ce96cc23d6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls08-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "0216f1264bee9118877d5e4dd793d0d70b7487338edf0ef83973fb2ce4585201"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls08-binary64-swiftsci-0.log": {
+    "bytes": 62,
+    "sha256": "fac977bde33294b5f5bcb31e4a1620aab16ebb55fdac3debdb4130bc725c0c66"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls08-binary64-swiftsci-0.request.json": {
+    "bytes": 750,
+    "sha256": "df78250b708de98e6b3f71378f00384692b32e5576296554410fd3ce96cc23d6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls08-binary64-swiftsci-0.response.json": {
+    "bytes": 286,
+    "sha256": "9882db2f9c8ebdcdddfbdb406e564e79739d6bc7ae1613d38eb2f9951b35d4cc"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls08-binary64.expected.f64": {
+    "bytes": 24,
+    "sha256": "916aac84032e06cad0eb3e7327c6a72ef66af90eb03eb483342d90c9a9ea732c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls09-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls09-binary64-pandas-0.request.json": {
+    "bytes": 752,
+    "sha256": "22836a95277922f80ea735ee00dd416e2ff0592740cdd3ca6761d487bc0c4d40"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls09-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "f4153ce0e8124387fbfb0ae1bb1829464f2e96c83910d725639fb729957bcc52"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls09-binary64-swiftsci-0.log": {
+    "bytes": 62,
+    "sha256": "a2b5643777c412c1cf58675676984d6c9dc87776b82b646b55830ccd5c1715f5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls09-binary64-swiftsci-0.request.json": {
+    "bytes": 752,
+    "sha256": "22836a95277922f80ea735ee00dd416e2ff0592740cdd3ca6761d487bc0c4d40"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls09-binary64-swiftsci-0.response.json": {
+    "bytes": 286,
+    "sha256": "6293f7e1d5e9637a961eac83ed57fbcb6493f8f16b1121093c7b50ae9dfc56df"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-smls09-binary64.expected.f64": {
+    "bytes": 24,
+    "sha256": "b7ebc48253899e7cb27e782e2b79ca66d9ad0cef4af657c7953ced3d19616bce"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler1-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler1-binary64-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "a1695d6c39f3716ecb689aa77a1cd05bfc187b7bd9f01382aa67609b734cf62e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler1-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "31433d9a2a14905a5500273d10fd3ab2d677219f6999ef1bc4c0ceb088085ec4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler1-binary64-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler1-binary64-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "a1695d6c39f3716ecb689aa77a1cd05bfc187b7bd9f01382aa67609b734cf62e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler1-binary64-swiftsci-0.response.json": {
+    "bytes": 407,
+    "sha256": "9a1b81e437da80ea054c300d1ba1e652dfc8f12fa199fcb660590bf3eaddcafb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler1-binary64.expected.f64": {
+    "bytes": 224,
+    "sha256": "f02fc7efb2440490699c1ad06384eb03deb31934a3effdb8cbe4764fd1e1846e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler2-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler2-binary64-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "c4c5a7e0d985befcf5efb274e379ea65e3131dc56dcac38ea525d8bf5119b1df"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler2-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "ceb108b0b541277d132df262c50d0a708b962b481a5ad1e4229d76a21cbd7c82"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler2-binary64-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler2-binary64-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "c4c5a7e0d985befcf5efb274e379ea65e3131dc56dcac38ea525d8bf5119b1df"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler2-binary64-swiftsci-0.response.json": {
+    "bytes": 407,
+    "sha256": "8ce34c33d9806cb7be177a6c26d2a49e0b8b0cab5c9dbdcb5c4f34b28ac09e7f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler2-binary64.expected.f64": {
+    "bytes": 224,
+    "sha256": "9d08421e4b0a55d8ab26f2de578fb84ddc4ab47a8b288f09f971d0032ae57d8d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler3-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler3-binary64-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "1f98ab63ea9e4ddbd5b4368112508a519e96e6724440c426ac334c7e4d3db02f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler3-binary64-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "504de69848483b5c2904763cf9bd50661cffdfa145f3bee0472320951fa8b0a5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler3-binary64-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler3-binary64-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "1f98ab63ea9e4ddbd5b4368112508a519e96e6724440c426ac334c7e4d3db02f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler3-binary64-swiftsci-0.response.json": {
+    "bytes": 407,
+    "sha256": "4d34f4956f5f5105164460f817acaf269cd0155a04acb002defab83afb037e19"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler3-binary64.expected.f64": {
+    "bytes": 224,
+    "sha256": "bc843399d949a42b34f63ebdaf414ef7e8cc017f29a197ccb1ccd0b3f123e754"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler4-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler4-binary64-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "9b2479ddb6e68868452c3108a8b4981999f0fc54a727badf346d39ea0a3091c6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler4-binary64-pandas-0.response.json": {
+    "bytes": 281,
+    "sha256": "0169beb16e57d7d70c6ef14e31aa9132270c3aceae46b0dabf94dc03663e6790"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler4-binary64-swiftsci-0.log": {
+    "bytes": 47,
+    "sha256": "de963b1d211e3d70a43f935a739c77e201b4343a9db9a35a4099a602beb5d333"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler4-binary64-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "9b2479ddb6e68868452c3108a8b4981999f0fc54a727badf346d39ea0a3091c6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler4-binary64-swiftsci-0.response.json": {
+    "bytes": 271,
+    "sha256": "6b0ff157266b5a5a0c2a058f50a55ed45d048fabc86b67336237fb7e203b472b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler4-binary64.expected.f64": {
+    "bytes": 224,
+    "sha256": "bf6a536379a4d6ed5f2d2b5cc745365b1009cd54bafd3f8e1bac994a89ef8ad6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler5-binary64-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler5-binary64-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "2694c6a32d13ce3d0af60afe075efb0aa259d28610a7961836b7c25bbb7bae09"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler5-binary64-pandas-0.response.json": {
+    "bytes": 281,
+    "sha256": "6e41d76289e652028a2064b148b34b0eb8dd01ebe823aafe7093b241bf7b5776"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler5-binary64-swiftsci-0.log": {
+    "bytes": 47,
+    "sha256": "ec95b30915d2a8350a627ebbd9edc6fbc946e954d137eeeedb1fb0922a9f4aef"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler5-binary64-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "2694c6a32d13ce3d0af60afe075efb0aa259d28610a7961836b7c25bbb7bae09"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler5-binary64-swiftsci-0.response.json": {
+    "bytes": 271,
+    "sha256": "5e25e19ba0c6fd485a7fb7d8749f48df8a0d3d80068c0908d2758eae1c397d59"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/nist-wampler5-binary64.expected.f64": {
+    "bytes": 224,
+    "sha256": "eda345075c5232ac57d8ef0e0186537986a8031aec7fdd29df78c4a7608d2d9b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-binary64-01/run.json": {
+    "bytes": 170502,
+    "sha256": "b36d50216fb7232d454c3866a2ad399d809e2d0a880627f475f285f0bf26988e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/certificate.json": {
+    "bytes": 43268,
+    "sha256": "bb2855e684248f79997ce2fb83a16baa3a9b4f69e0ce976774518d996eba99b5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/events.jsonl": {
+    "bytes": 19217,
+    "sha256": "44dd7f0569742a815d65861e18c779f7f711d23eda61afced6e6976158fe2ec6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-atmwtag-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-atmwtag-decimal-pandas-0.request.json": {
+    "bytes": 745,
+    "sha256": "467487bef4b6a59ca3431444eb4ef4b899a96c88b90cdcc7863de2a43c47009d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-atmwtag-decimal-pandas-0.response.json": {
+    "bytes": 555,
+    "sha256": "4b75dcc1e8a2105ae2fec8cd800645b719c4615e9e327bf55c0ea325579a3af9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-atmwtag-decimal-swiftsci-0.log": {
+    "bytes": 59,
+    "sha256": "acafbafe4d7a5ac49f67f2aa56ead2179d5857f429c4c7f01829d60be2b908fa"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-atmwtag-decimal-swiftsci-0.request.json": {
+    "bytes": 745,
+    "sha256": "467487bef4b6a59ca3431444eb4ef4b899a96c88b90cdcc7863de2a43c47009d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-atmwtag-decimal-swiftsci-0.response.json": {
+    "bytes": 283,
+    "sha256": "1b7369085bab722b20754442dadade188af4c2cc586c93d5401bc0428a72ae8c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-atmwtag-decimal.expected.f64": {
+    "bytes": 24,
+    "sha256": "49e0b095bb2786ed203d104d01b84f2f5d3376f628779c57cc34647bc9fea288"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-longley-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-longley-decimal-pandas-0.request.json": {
+    "bytes": 743,
+    "sha256": "1abf7aeed5be2f3530896417178d5650f0ddce6aca442ef3605550ab343939b2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-longley-decimal-pandas-0.response.json": {
+    "bytes": 555,
+    "sha256": "35b1c2c2456e0559b4a9be5af26d11927b8177cafd75aa8a1e069740347180fb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-longley-decimal-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-longley-decimal-swiftsci-0.request.json": {
+    "bytes": 743,
+    "sha256": "1abf7aeed5be2f3530896417178d5650f0ddce6aca442ef3605550ab343939b2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-longley-decimal-swiftsci-0.response.json": {
+    "bytes": 408,
+    "sha256": "f3d52ab2d9b00a81a1d9d768b23545514f65301b793f3a4edc8927f81c6a5918"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-longley-decimal.expected.f64": {
+    "bytes": 192,
+    "sha256": "6e404fe85274cc7ea74c846669cf86ed3d60ef5ea212e4759818af430f81696f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-norris-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-norris-decimal-pandas-0.request.json": {
+    "bytes": 742,
+    "sha256": "74e46dfb03b660744cb605b44ea7edaf3874251409cdffd469ee32b4e7d10ab7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-norris-decimal-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "d9a07c97f4ed3916892291f55ecd45272cdd2e6e9e5de6beca8ccc880c0e89af"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-norris-decimal-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-norris-decimal-swiftsci-0.request.json": {
+    "bytes": 742,
+    "sha256": "74e46dfb03b660744cb605b44ea7edaf3874251409cdffd469ee32b4e7d10ab7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-norris-decimal-swiftsci-0.response.json": {
+    "bytes": 407,
+    "sha256": "fc4cf8827beefe62651903e78549a7b62171ba4769c60a5544c5a629f20261b2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-norris-decimal.expected.f64": {
+    "bytes": 312,
+    "sha256": "7a2780dd47707aa27f1321eb6b8fae665140cf8942d49481e2101589deff41ff"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-pontius-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-pontius-decimal-pandas-0.request.json": {
+    "bytes": 743,
+    "sha256": "9eba8c2b7109e898865777dbaa41d0ab6e071faa62b9ddff59dd6e71df4aa4e5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-pontius-decimal-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "59f07e6c43772e46405c1e77173f631b8fdd497a82f770ce9be0d4d234d58dce"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-pontius-decimal-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-pontius-decimal-swiftsci-0.request.json": {
+    "bytes": 743,
+    "sha256": "9eba8c2b7109e898865777dbaa41d0ab6e071faa62b9ddff59dd6e71df4aa4e5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-pontius-decimal-swiftsci-0.response.json": {
+    "bytes": 407,
+    "sha256": "7bf2899502b7842b8fa5a1b93d72f48decefc6ca353db7f834a354e0c1c0454b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-pontius-decimal.expected.f64": {
+    "bytes": 352,
+    "sha256": "4a9f838f90f33d45ffd15aecc84f27277f050007b679c08a1b1abe7956b5fa4b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-sirstv-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-sirstv-decimal-pandas-0.request.json": {
+    "bytes": 744,
+    "sha256": "95574736a838aab4720780d639e610b03860095d63d2f451db96eb530d363861"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-sirstv-decimal-pandas-0.response.json": {
+    "bytes": 556,
+    "sha256": "3272185791b44a2cb4a3eec9d84043889abc5e340207ff2577b3174ffa29b374"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-sirstv-decimal-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-sirstv-decimal-swiftsci-0.request.json": {
+    "bytes": 744,
+    "sha256": "95574736a838aab4720780d639e610b03860095d63d2f451db96eb530d363861"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-sirstv-decimal-swiftsci-0.response.json": {
+    "bytes": 405,
+    "sha256": "385d0926f9c2187b35fc74d0b0f1d4fa8efe5d9a06b3c642c7dec50ea1defd41"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-sirstv-decimal.expected.f64": {
+    "bytes": 24,
+    "sha256": "72aa65f8bbb1237e1e9da09e159355536ab2d54eb969476378bcee0cbd6a359d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls01-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls01-decimal-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "af8c970ae62bd4bdae662e6b2c90bd1fe124fdc095915128ec95a31bfbe420f0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls01-decimal-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "83757ea0cf3ef022da8d32e2f296fc7e9301236da49419801a4085b034597181"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls01-decimal-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls01-decimal-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "af8c970ae62bd4bdae662e6b2c90bd1fe124fdc095915128ec95a31bfbe420f0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls01-decimal-swiftsci-0.response.json": {
+    "bytes": 406,
+    "sha256": "a1b64e03da8c20a6754445db3594fe6c7787349ab02d8e6978e23fd5e9ec4f9d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls01-decimal.expected.f64": {
+    "bytes": 24,
+    "sha256": "197fdf7fe0714fb9d2f7ad35a4c6b0a7aa10aec963d822e2c1833328d6707348"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls02-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls02-decimal-pandas-0.request.json": {
+    "bytes": 748,
+    "sha256": "0967c794cda9bd031268cd3d414c868c4f4054a121bd40a50802d2972f4ca487"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls02-decimal-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "cf62df8199582f9bfcbaa5b07e7ca2e68f735b8a39841486dcc59d13c029a3a7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls02-decimal-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls02-decimal-swiftsci-0.request.json": {
+    "bytes": 748,
+    "sha256": "0967c794cda9bd031268cd3d414c868c4f4054a121bd40a50802d2972f4ca487"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls02-decimal-swiftsci-0.response.json": {
+    "bytes": 405,
+    "sha256": "ef41e075ce3c54b5d45500e6bdf4a9f7a0c3718f3fc77e1d033eb83614af811b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls02-decimal.expected.f64": {
+    "bytes": 24,
+    "sha256": "c7e1bdbaf1e480a36c7e4b2851425187648414c22cdb2bad2887f2f4759b0a85"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls03-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls03-decimal-pandas-0.request.json": {
+    "bytes": 750,
+    "sha256": "a02855e7ea075b0ab626175d7e1cf3dfa79fe34dfed41307c00ed3b3510e0ac2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls03-decimal-pandas-0.response.json": {
+    "bytes": 555,
+    "sha256": "ce81ac408c49dc63436eb47b82fe6d2283ca8d94d65cf87330d58546e7d61d5c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls03-decimal-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls03-decimal-swiftsci-0.request.json": {
+    "bytes": 750,
+    "sha256": "a02855e7ea075b0ab626175d7e1cf3dfa79fe34dfed41307c00ed3b3510e0ac2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls03-decimal-swiftsci-0.response.json": {
+    "bytes": 403,
+    "sha256": "fa4e48326d2afa04d5722c79eed9136c8a31278eb395c88629169f2b0cd204e7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls03-decimal.expected.f64": {
+    "bytes": 24,
+    "sha256": "095f48cbc94ecf8bd906109d90773f0505be8015bc3d7f70979726c3114b1d49"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls04-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls04-decimal-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "5aac7eda8df062bc8a7e22e2b3d99e2e9e7580992e5deaefa1bf275cf3c7e084"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls04-decimal-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "ec879c83db78696cc6a7ccacd9829d914ebc0bcd38a75879a66b5d735ea136ac"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls04-decimal-swiftsci-0.log": {
+    "bytes": 45,
+    "sha256": "8cb4287d1c23c972a39fc73bc97c7892631fe9ca6a8c53ef645e679960863481"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls04-decimal-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "5aac7eda8df062bc8a7e22e2b3d99e2e9e7580992e5deaefa1bf275cf3c7e084"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls04-decimal-swiftsci-0.response.json": {
+    "bytes": 269,
+    "sha256": "53a613ace7168b368d5b21fc10ce07e7076f964ddbc8bcfe78606cf16f17c5ed"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls04-decimal.expected.f64": {
+    "bytes": 24,
+    "sha256": "197fdf7fe0714fb9d2f7ad35a4c6b0a7aa10aec963d822e2c1833328d6707348"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls05-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls05-decimal-pandas-0.request.json": {
+    "bytes": 748,
+    "sha256": "b990e4e385215b6a015e006484166ed0e42e917398c9ed10ecdb50ff914462c4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls05-decimal-pandas-0.response.json": {
+    "bytes": 555,
+    "sha256": "7ef9e64ff39281aae0cb11197bd9042fe272d29f86360157debfb3a00b4f8446"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls05-decimal-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls05-decimal-swiftsci-0.request.json": {
+    "bytes": 748,
+    "sha256": "b990e4e385215b6a015e006484166ed0e42e917398c9ed10ecdb50ff914462c4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls05-decimal-swiftsci-0.response.json": {
+    "bytes": 405,
+    "sha256": "c0665b7185b5706eecce69e545d8444de4686c94d9c26211799260f19e8be3c5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls05-decimal.expected.f64": {
+    "bytes": 24,
+    "sha256": "c7e1bdbaf1e480a36c7e4b2851425187648414c22cdb2bad2887f2f4759b0a85"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls06-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls06-decimal-pandas-0.request.json": {
+    "bytes": 750,
+    "sha256": "fc54ad37dbf874e1ada81a01987b841934023f53b6a911b64eb2ddd9a8a5f868"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls06-decimal-pandas-0.response.json": {
+    "bytes": 555,
+    "sha256": "862c6bdd6301a791261f2d28d3598943b300301e92a4107ab0b72d830e025daf"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls06-decimal-swiftsci-0.log": {
+    "bytes": 50,
+    "sha256": "1a7855a2c96c8ca0474dbfcbe1a63d7ec851e637afa6b1978087dba238b48148"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls06-decimal-swiftsci-0.request.json": {
+    "bytes": 750,
+    "sha256": "fc54ad37dbf874e1ada81a01987b841934023f53b6a911b64eb2ddd9a8a5f868"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls06-decimal-swiftsci-0.response.json": {
+    "bytes": 274,
+    "sha256": "9577c7d3de3e1e29b02645d642a9264195bde53a11f30e5f850ea4388b43ca1a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls06-decimal.expected.f64": {
+    "bytes": 24,
+    "sha256": "095f48cbc94ecf8bd906109d90773f0505be8015bc3d7f70979726c3114b1d49"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls07-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls07-decimal-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "2791a4141f4a2c08d381a4dc539ef8dfbe76cc7e96d4e970d4ecf80af70340b8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls07-decimal-pandas-0.response.json": {
+    "bytes": 282,
+    "sha256": "535a031ad05758ae60aecebbcd94436cc1d3d9aca41decf2364906424267105f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls07-decimal-swiftsci-0.log": {
+    "bytes": 47,
+    "sha256": "78d396b9133c4d325bc78f18370c375db4ae50fb4b5caba6dd2806c89a508d93"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls07-decimal-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "2791a4141f4a2c08d381a4dc539ef8dfbe76cc7e96d4e970d4ecf80af70340b8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls07-decimal-swiftsci-0.response.json": {
+    "bytes": 271,
+    "sha256": "8897c08cd653e278a30914c0ce64e78e1edda97c038fccf909d7f76f14c3d8ed"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls07-decimal.expected.f64": {
+    "bytes": 24,
+    "sha256": "197fdf7fe0714fb9d2f7ad35a4c6b0a7aa10aec963d822e2c1833328d6707348"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls08-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls08-decimal-pandas-0.request.json": {
+    "bytes": 748,
+    "sha256": "beac53099108fcf1e5cb4512d840ae8512db0157e93033a141b3693022bc2d26"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls08-decimal-pandas-0.response.json": {
+    "bytes": 283,
+    "sha256": "1327f0a7de97a3d81f8666272fc9e040917471df0bf714e910c8dc4917ee513b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls08-decimal-swiftsci-0.log": {
+    "bytes": 49,
+    "sha256": "b4380b4b854c2dcce7ba25ca0c3200bb235df33d97c1cb38cc02416cf316bb79"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls08-decimal-swiftsci-0.request.json": {
+    "bytes": 748,
+    "sha256": "beac53099108fcf1e5cb4512d840ae8512db0157e93033a141b3693022bc2d26"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls08-decimal-swiftsci-0.response.json": {
+    "bytes": 273,
+    "sha256": "a46c382b2ad3212766d8fc171ad64183305f0f768c4555c5e4d339d1fce5e7db"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls08-decimal.expected.f64": {
+    "bytes": 24,
+    "sha256": "c7e1bdbaf1e480a36c7e4b2851425187648414c22cdb2bad2887f2f4759b0a85"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls09-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls09-decimal-pandas-0.request.json": {
+    "bytes": 750,
+    "sha256": "30ac47cadb7b2cc66d1b0abbf928125e116d6cfd71ae7681694f6645a210131f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls09-decimal-pandas-0.response.json": {
+    "bytes": 283,
+    "sha256": "0e23bc96bd96ed6d6d6f68d42cde41b94b93d837e249291d80ccb2eeb8ba4123"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls09-decimal-swiftsci-0.log": {
+    "bytes": 50,
+    "sha256": "a2db93206ec00fe8756e50f007115ff4c459ac06769f84b9ba3b4b7ce94ca0f1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls09-decimal-swiftsci-0.request.json": {
+    "bytes": 750,
+    "sha256": "30ac47cadb7b2cc66d1b0abbf928125e116d6cfd71ae7681694f6645a210131f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls09-decimal-swiftsci-0.response.json": {
+    "bytes": 274,
+    "sha256": "043b31518bfc306d18ce8f5fd1d3bbd80bfbbaec41d7a842bd020c41382d7bf5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-smls09-decimal.expected.f64": {
+    "bytes": 24,
+    "sha256": "095f48cbc94ecf8bd906109d90773f0505be8015bc3d7f70979726c3114b1d49"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler1-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler1-decimal-pandas-0.request.json": {
+    "bytes": 744,
+    "sha256": "66811448e9494ed3711e0ca3a56b661e896ffc3305fc3fa782248391cfd3cfd0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler1-decimal-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "203ef82852fe2d5495f1a93ab33e83bf3848c68b25c4b351747cbef64012e6a9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler1-decimal-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler1-decimal-swiftsci-0.request.json": {
+    "bytes": 744,
+    "sha256": "66811448e9494ed3711e0ca3a56b661e896ffc3305fc3fa782248391cfd3cfd0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler1-decimal-swiftsci-0.response.json": {
+    "bytes": 407,
+    "sha256": "56db9dfd5aeb245d04aeb7df3308e283e255adea3f3c30412eaf4cb79fd5a382"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler1-decimal.expected.f64": {
+    "bytes": 224,
+    "sha256": "b25c5e7e43bd5ae3fb8eec27991b53c5d049ff66df30548239414c90996ef57c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler2-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler2-decimal-pandas-0.request.json": {
+    "bytes": 744,
+    "sha256": "71f2e333157f651953b5c3d35417293f06fb4fe8c9abc02010ca5e1e5306a1d0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler2-decimal-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "faa0703e7b98f3cba440c98d599bcb6eb8a94da941039da85c4b7dff204f3ba5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler2-decimal-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler2-decimal-swiftsci-0.request.json": {
+    "bytes": 744,
+    "sha256": "71f2e333157f651953b5c3d35417293f06fb4fe8c9abc02010ca5e1e5306a1d0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler2-decimal-swiftsci-0.response.json": {
+    "bytes": 407,
+    "sha256": "6d7a717201aa5e5279e270a39b5e2d33a999632c17a52560490bfda7a62f6564"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler2-decimal.expected.f64": {
+    "bytes": 224,
+    "sha256": "3a2e7e32d94b1b54c900d5e8a6757d0f357c0f6642ece8e31768d3c5d9f0b5b6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler3-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler3-decimal-pandas-0.request.json": {
+    "bytes": 744,
+    "sha256": "d0c2972f15a83e8892dc567283f174004d225cacaf3c498c2b6a7fc8bad6c64e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler3-decimal-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "d5828357c4860be700061df6677baef89cca86302a915a793d4e860aab0648e2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler3-decimal-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler3-decimal-swiftsci-0.request.json": {
+    "bytes": 744,
+    "sha256": "d0c2972f15a83e8892dc567283f174004d225cacaf3c498c2b6a7fc8bad6c64e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler3-decimal-swiftsci-0.response.json": {
+    "bytes": 407,
+    "sha256": "484921ac29c80c4b7bbb3be4e6eac74213d2096c7d502d3e38df9ab7a3ba08b1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler3-decimal.expected.f64": {
+    "bytes": 224,
+    "sha256": "bc843399d949a42b34f63ebdaf414ef7e8cc017f29a197ccb1ccd0b3f123e754"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler4-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler4-decimal-pandas-0.request.json": {
+    "bytes": 744,
+    "sha256": "b02ad7b3524b081ee78b6358a2333c95a17e1754c52ddd9061123d4a281c262b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler4-decimal-pandas-0.response.json": {
+    "bytes": 281,
+    "sha256": "3489b98f57e9ebf446393b2ec0f4873d9f78b0aed02f17005f8547263fd28781"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler4-decimal-swiftsci-0.log": {
+    "bytes": 47,
+    "sha256": "de963b1d211e3d70a43f935a739c77e201b4343a9db9a35a4099a602beb5d333"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler4-decimal-swiftsci-0.request.json": {
+    "bytes": 744,
+    "sha256": "b02ad7b3524b081ee78b6358a2333c95a17e1754c52ddd9061123d4a281c262b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler4-decimal-swiftsci-0.response.json": {
+    "bytes": 271,
+    "sha256": "6bd32e3004a9e429be4040828a5e8a90cd066e485152b6016c9ba601523d9c85"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler4-decimal.expected.f64": {
+    "bytes": 224,
+    "sha256": "bf6a536379a4d6ed5f2d2b5cc745365b1009cd54bafd3f8e1bac994a89ef8ad6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler5-decimal-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler5-decimal-pandas-0.request.json": {
+    "bytes": 744,
+    "sha256": "1e372b393b02df7facc74a76326c2d01ec2e42ccbc76357bf7c066ead029d51a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler5-decimal-pandas-0.response.json": {
+    "bytes": 281,
+    "sha256": "a3f12d9570afd62e7bb47df9fa3a3940e5edcc10fe9e6658a1c213742846d11d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler5-decimal-swiftsci-0.log": {
+    "bytes": 47,
+    "sha256": "ec95b30915d2a8350a627ebbd9edc6fbc946e954d137eeeedb1fb0922a9f4aef"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler5-decimal-swiftsci-0.request.json": {
+    "bytes": 744,
+    "sha256": "1e372b393b02df7facc74a76326c2d01ec2e42ccbc76357bf7c066ead029d51a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler5-decimal-swiftsci-0.response.json": {
+    "bytes": 271,
+    "sha256": "f4ffefd50ee251b7e3af24ea57bb91fb834be7b6c5e3fec3955fab7af5fe87c3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/nist-wampler5-decimal.expected.f64": {
+    "bytes": 224,
+    "sha256": "eda345075c5232ac57d8ef0e0186537986a8031aec7fdd29df78c4a7608d2d9b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-nist-decimal-01/run.json": {
+    "bytes": 168533,
+    "sha256": "2269224002c103495df0d22ae956b0386217121c6c00a53b427bb0c6c59cc621"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/certificate.json": {
+    "bytes": 42525,
+    "sha256": "a8d062a2f284b26c91e6999113cbd995464d6e1de9bf9848f19e1a7b650e14a8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/events.jsonl": {
+    "bytes": 17322,
+    "sha256": "c39f86970bc67af5c6a8943ee2c9734ffb9256be5493183bd62256ca3ef8822d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-mean-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-mean-pandas-0.request.json": {
+    "bytes": 764,
+    "sha256": "c8592dc97dcd50071f93e196f5563b599c0e88bae9d8f3220a7bfee655a955a1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-mean-pandas-0.response.json": {
+    "bytes": 553,
+    "sha256": "bbd137b8dfc0c532bf348ef72aba2e805cb1626ce63fc338a74e43f5d3548f84"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-mean-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-mean-swiftsci-0.request.json": {
+    "bytes": 764,
+    "sha256": "c8592dc97dcd50071f93e196f5563b599c0e88bae9d8f3220a7bfee655a955a1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-mean-swiftsci-0.response.json": {
+    "bytes": 403,
+    "sha256": "4a9ae27da82fa53d6a12009cd36d73e82f37d78ad450092e65d45736fc43b0f8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-mean.expected.f64": {
+    "bytes": 8,
+    "sha256": "f1b48b0b965a6e50664e82ddf9c4bd7677dc31ddef4860972cf3a3bb7e01384c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-stddev-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-stddev-pandas-0.request.json": {
+    "bytes": 768,
+    "sha256": "c5b33b833f029c54a56341b3d5752e320a8c9bd0e08e534c2837aaa3d8aa40e4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-stddev-pandas-0.response.json": {
+    "bytes": 552,
+    "sha256": "d42fe2c09a24547ede47591ccc4de5e3634191ab518fe76d6181782f256bc09e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-stddev-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-stddev-swiftsci-0.request.json": {
+    "bytes": 768,
+    "sha256": "c5b33b833f029c54a56341b3d5752e320a8c9bd0e08e534c2837aaa3d8aa40e4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-stddev-swiftsci-0.response.json": {
+    "bytes": 403,
+    "sha256": "375d9599dfa71759182344d166ac8c4431b762fd3e84823925e6f5c316982bb6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-stddev.expected.f64": {
+    "bytes": 8,
+    "sha256": "45d2b662d9d490ae9b932759c910b26b9a874065de620f4ac0a3a23a65e40b8c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-variance-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-variance-pandas-0.request.json": {
+    "bytes": 772,
+    "sha256": "15210076f19b865656bc333c1f58dda09f61b839b48bc5da624684e1fe4add61"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-variance-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "ee55d5632bbda12af45499d7ec6b69bd965990a9d451889b65a2b1b2a38c8d24"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-variance-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-variance-swiftsci-0.request.json": {
+    "bytes": 772,
+    "sha256": "15210076f19b865656bc333c1f58dda09f61b839b48bc5da624684e1fe4add61"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-variance-swiftsci-0.response.json": {
+    "bytes": 405,
+    "sha256": "6d72614f2fc5f1dc7cccc9c45b8443a286fa3be219793be40dfc4264e926c1f3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/nist-variance.expected.f64": {
+    "bytes": 8,
+    "sha256": "c738dd99fada954a0be83cb94069e65973256ed5a199cd293841c789ad3b0910"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/run.json": {
+    "bytes": 138214,
+    "sha256": "0f85d1c3f290e21f562db769dd46d53f8151749b8b4d8eb4b86c267ca30a490d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-csv-read-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-csv-read-pandas-0.request.json": {
+    "bytes": 711,
+    "sha256": "f8a0b1f1e4a38ecfd0329de734012eaca133c8baa71fd2b0cf3bb89f054651db"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-csv-read-pandas-0.response.json": {
+    "bytes": 537,
+    "sha256": "95c1dac9504bbfa638625e903eb926a2e6dc765651373c6a6d5dc233986db1e1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-csv-read-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-csv-read-swiftsci-0.request.json": {
+    "bytes": 711,
+    "sha256": "f8a0b1f1e4a38ecfd0329de734012eaca133c8baa71fd2b0cf3bb89f054651db"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-csv-read-swiftsci-0.response.json": {
+    "bytes": 387,
+    "sha256": "294f67e431e88a3a00dbeee3644dcf29fd030ac12f0b7f1177729d9cc901fe3d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-csv-read.expected.f64": {
+    "bytes": 4128,
+    "sha256": "efac62078d3b1c41cf49e32d0c322fddd5f9bb03d8cacd883985a86bdbacf37f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-filter-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-filter-pandas-0.request.json": {
+    "bytes": 707,
+    "sha256": "2537301fc74b4f1eaa8d1d691a6fd22520c81be45b978e519e769c625d34369d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-filter-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "7eade440de52c25df890e36be92d453a6549a7d617bc1a6d326dc6965e1dea88"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-filter-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-filter-swiftsci-0.request.json": {
+    "bytes": 707,
+    "sha256": "2537301fc74b4f1eaa8d1d691a6fd22520c81be45b978e519e769c625d34369d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-filter-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "051afdc01938cb2fa73d18bb70dd1ae48d554af5bfedcc5013dd1e5547ecf7ae"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-filter.expected.f64": {
+    "bytes": 1952,
+    "sha256": "dc459fc86f8ddfb8da8ab37a1665162db9c21bae7d6dc02498e7f0c09e4d6a33"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-flat-matrix-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-flat-matrix-pandas-0.request.json": {
+    "bytes": 717,
+    "sha256": "b27c40acce2ee6ff4cd116fd3245fa55bddc13102180524f9a61d329db1628e2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-flat-matrix-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "fc0501731a89b093caa97dbcb91935cc3d5e7b063846e8d99b5c6a3f4aaeffb1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-flat-matrix-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-flat-matrix-swiftsci-0.request.json": {
+    "bytes": 717,
+    "sha256": "b27c40acce2ee6ff4cd116fd3245fa55bddc13102180524f9a61d329db1628e2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-flat-matrix-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "9bb6c7c286fb5f6ceb2276176c56637b94d6064670ff322f140960a0c67e7a9c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-flat-matrix.expected.f64": {
+    "bytes": 2064,
+    "sha256": "c18fc18efae8a32bde3d05ff185d0c8b90fbad80feaaa644d714df44fe5894d4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-group-sum-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-group-sum-pandas-0.request.json": {
+    "bytes": 713,
+    "sha256": "79276f44721587301190c1b24b28ab7cd2222669e1996e8d7dd3598f4b401482"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-group-sum-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "d42b0267620f4b88b759ab0702733ad6a80e7cfdd3b9091a23a52df2f7ad115a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-group-sum-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-group-sum-swiftsci-0.request.json": {
+    "bytes": 713,
+    "sha256": "79276f44721587301190c1b24b28ab7cd2222669e1996e8d7dd3598f4b401482"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-group-sum-swiftsci-0.response.json": {
+    "bytes": 385,
+    "sha256": "3f510485fd8d9f117e5ac8a13181f3b49290227531a1776a552ca64cda7e4c67"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-group-sum.expected.f64": {
+    "bytes": 112,
+    "sha256": "ace3f83ef64b76fa6cabe830bfe89ab3351f77810e2876e7aa7268fe146bb7c8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-mean-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-mean-pandas-0.request.json": {
+    "bytes": 707,
+    "sha256": "2323f19adf66c6a93442aafa34f9f6942a140e3c82b3319244be6570c1cb66d7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-mean-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "102ab4c1ac5b86b258663b155b050fa9cb9bc010b316159fc07c499e092c10b1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-mean-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-mean-swiftsci-0.request.json": {
+    "bytes": 707,
+    "sha256": "2323f19adf66c6a93442aafa34f9f6942a140e3c82b3319244be6570c1cb66d7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-mean-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "cbbfb11948db3775ca1ff9af77e02cc36cba820fe6b3aed4ab2a12081a9e6a0d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-mean.expected.f64": {
+    "bytes": 8,
+    "sha256": "c284eeeeffc1eb15c7889a10f238c85e5308b90e8a78dd741219f969dde881e1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-minmax-scale-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-minmax-scale-pandas-0.request.json": {
+    "bytes": 727,
+    "sha256": "02d6b5ed9eaa3c247728856458bc88dbea515ab02990a9272c0927f1932d3271"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-minmax-scale-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "767ea27bf065ea9d511a223f95c667c68a65b548332750e2b88571020c93b3f7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-minmax-scale-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-minmax-scale-swiftsci-0.request.json": {
+    "bytes": 727,
+    "sha256": "02d6b5ed9eaa3c247728856458bc88dbea515ab02990a9272c0927f1932d3271"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-minmax-scale-swiftsci-0.response.json": {
+    "bytes": 385,
+    "sha256": "1d1152c5625e8cbac2d29a700285fd50d834e40d5c8196688f0aa408317f81cd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-minmax-scale.expected.f64": {
+    "bytes": 2064,
+    "sha256": "727a62b21b8173cad20262e963e5b1138499f0f7c74960b8575b4dc19dad4b39"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-sort-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-sort-pandas-0.request.json": {
+    "bytes": 703,
+    "sha256": "31054829db1b39afab0c3e842bac6d633ef4beede5ff74c884701436e20f3752"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-sort-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "5bf564d4ebf49a178efaf44bfaa6601f068ab2b25a8f6fb1ef84f2cd02f3a219"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-sort-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-sort-swiftsci-0.request.json": {
+    "bytes": 703,
+    "sha256": "31054829db1b39afab0c3e842bac6d633ef4beede5ff74c884701436e20f3752"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-sort-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "e5c30179cf741204d794148b685bbaace6c5b43883258697ebbbb73c3ac4db08"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-sort.expected.f64": {
+    "bytes": 4128,
+    "sha256": "2adb66207f2a3d19bb7b72ff749c241d3e0068c3a107d44333dbade722ba171d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-standard-scale-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-standard-scale-pandas-0.request.json": {
+    "bytes": 731,
+    "sha256": "4f705b0a26869db21627af9239e62dae0244ec16b8a3bfa9ec777031287afb23"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-standard-scale-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "4879b9e1fe64bd98f0d662ac4b72790fff12151838ffdc050aaacf32f51800bb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-standard-scale-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-standard-scale-swiftsci-0.request.json": {
+    "bytes": 731,
+    "sha256": "4f705b0a26869db21627af9239e62dae0244ec16b8a3bfa9ec777031287afb23"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-standard-scale-swiftsci-0.response.json": {
+    "bytes": 405,
+    "sha256": "906fdd49403299020eb4cbbb6914cee7fde3a378fed53a9f82205e561bf32855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-standard-scale.expected.f64": {
+    "bytes": 2064,
+    "sha256": "3dd66892515eb0b2068a5527ef9c4fe785d5af2d0f2b4886c73b08969ac18988"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-stddev-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-stddev-pandas-0.request.json": {
+    "bytes": 711,
+    "sha256": "b0190940043efd161a0162c5a2cb3e1a98c919c4ef1009b00c03753b7d0132cc"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-stddev-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "0a8df58dd9d732529dccb720ccf236a4103c1182219b355d0957b6cab3d46570"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-stddev-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-stddev-swiftsci-0.request.json": {
+    "bytes": 711,
+    "sha256": "b0190940043efd161a0162c5a2cb3e1a98c919c4ef1009b00c03753b7d0132cc"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-stddev-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "ccb65180c3b5e2fcf62efdcf1b6a2153ada07ceee7317fafa674b4fa33d01e20"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-stddev.expected.f64": {
+    "bytes": 8,
+    "sha256": "13494b618c867a5a9ea9bbe13d24d42cbd930dddf627d6b3885bdf768ab1d68b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-target-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-target-pandas-0.request.json": {
+    "bytes": 707,
+    "sha256": "48eb949d72b699807bb85c4f0485b8798020d82438cadd4fd3700b74730cc178"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-target-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "a40d61375b28ef4670c573a7eeaf28c92cc58ac961a52991355643e165608fdb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-target-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-target-swiftsci-0.request.json": {
+    "bytes": 707,
+    "sha256": "48eb949d72b699807bb85c4f0485b8798020d82438cadd4fd3700b74730cc178"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-target-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "9a4f45e5fc75a444a2a8f6d07ef81278d4ccb94e45085059b99af164b2a00407"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-target.expected.f64": {
+    "bytes": 1032,
+    "sha256": "7c8dfdec8fd454bdaadcbb798ece6f3e028e205bf8584ba519095c1452208979"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-variance-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-variance-pandas-0.request.json": {
+    "bytes": 715,
+    "sha256": "a526103ea0e98815ef7c3a505a76b310f5bba2e0684a75e2aef2cbf3d36de2e0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-variance-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "83231a924f8380c6d16919ee094095ed57db8a79d13e2a921ac542be13f6ce25"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-variance-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-variance-swiftsci-0.request.json": {
+    "bytes": 715,
+    "sha256": "a526103ea0e98815ef7c3a505a76b310f5bba2e0684a75e2aef2cbf3d36de2e0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-variance-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "5d56b9cfdfc9400ecd86946c225bfe7213794beae5a92763fb3727fcb836a435"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/runs/strategy-smoke-01/tiny-variance.expected.f64": {
+    "bytes": 8,
+    "sha256": "67ab9611c5c2899bb2bb024a8bfd0540b89e5f125320fa8e62917ce0c928adc8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/stage1-results.json": {
+    "bytes": 4091,
+    "sha256": "6591c2d347032122a4c68743f545e6e433e955c1bbf27e29782f752e880d84e4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/stage1-worker.build.json": {
+    "bytes": 42106,
+    "sha256": "328b65d02ba7254d068edf32919346e18db0c34f2fbdcbc124556c1578f647cc"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/stage2-build.log": {
+    "bytes": 117,
+    "sha256": "8f34450798b18f075796255fa09657974146df5f3b4c8de3e9b789bfecb5be50"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/stage2-python-tests.log": {
+    "bytes": 166,
+    "sha256": "888863faba6bdea5a1c6362b61341d89b1a7391531ebd87ce365d4d9f3759d1e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/stage2-results.json": {
+    "bytes": 4553,
+    "sha256": "f0b35688c4e3ebf0ecddd6c5eacbbad654d30fa8df9a7fd603b3347e246f9a97"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/dataset-strategy/stage2-worker.build.json": {
+    "bytes": 43026,
+    "sha256": "e792ee9a4310afcbe0524ff071ad8f404cfa7dab13a12f2ae07e9e86f13e81d9"
+  },
+  "Documentation/EngineeringNotes/benchmarks/2026-09-27-dataset-strategy-implementation.md": {
+    "bytes": 7086,
+    "sha256": "d1b1288c2037df20d8171a24ccf761623525330445d2dc1717d647b11f552e37"
+  }
+}

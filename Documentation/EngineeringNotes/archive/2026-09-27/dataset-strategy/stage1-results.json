@@ -1,0 +1,141 @@
+{
+  "decimal": {
+    "status": "failed",
+    "counts": {
+      "swiftsci:failed": 8,
+      "pandas:passed": 14,
+      "swiftsci:passed": 11,
+      "pandas:failed": 5
+    },
+    "failed_audit_rejected": true,
+    "errors": [
+      {
+        "case": "nist-atmwtag-decimal",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 15.946733593790675 versus 15.946733567793"
+      },
+      {
+        "case": "nist-smls04-decimal",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 21.000000038029 versus 21.0"
+      },
+      {
+        "case": "nist-smls06-decimal",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 2000.9999826583844 versus 2001.0"
+      },
+      {
+        "case": "nist-smls07-decimal",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 21.03988962187173 versus 21.0"
+      },
+      {
+        "case": "nist-smls07-decimal",
+        "engine": "pandas",
+        "error": "Output mismatch at 0: 21.000811887818774 != 21.0"
+      },
+      {
+        "case": "nist-smls08-decimal",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 200.89125346619366 versus 201.0"
+      },
+      {
+        "case": "nist-smls08-decimal",
+        "engine": "pandas",
+        "error": "Output mismatch at 0: 201.01300409594847 != 201.0"
+      },
+      {
+        "case": "nist-smls09-decimal",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 1983.9428610886403 versus 2001.0"
+      },
+      {
+        "case": "nist-smls09-decimal",
+        "engine": "pandas",
+        "error": "Output mismatch at 0: 2001.134926220951 != 2001.0"
+      },
+      {
+        "case": "nist-wampler4-decimal",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 0.9999999966334049 versus 1.0"
+      },
+      {
+        "case": "nist-wampler4-decimal",
+        "engine": "pandas",
+        "error": "Output mismatch at 0: 1.0000000028854616 != 1.0"
+      },
+      {
+        "case": "nist-wampler5-decimal",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 0.9999996723182715 versus 1.0"
+      },
+      {
+        "case": "nist-wampler5-decimal",
+        "engine": "pandas",
+        "error": "Output mismatch at 0: 1.0000003429656807 != 1.0"
+      }
+    ]
+  },
+  "binary64": {
+    "status": "failed",
+    "counts": {
+      "swiftsci:failed": 8,
+      "pandas:passed": 17,
+      "swiftsci:passed": 11,
+      "pandas:failed": 2
+    },
+    "failed_audit_rejected": true,
+    "errors": [
+      {
+        "case": "nist-atmwtag-binary64",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 15.946733593790675 versus 15.946733566676926"
+      },
+      {
+        "case": "nist-smls04-binary64",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 21.000000038029 versus 21.0000000007761"
+      },
+      {
+        "case": "nist-smls06-binary64",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 2000.9999826583844 versus 2001.0000001288329"
+      },
+      {
+        "case": "nist-smls07-binary64",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 21.03988962187173 versus 21.00081188781877"
+      },
+      {
+        "case": "nist-smls08-binary64",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 200.89125346619366 versus 201.01300409594845"
+      },
+      {
+        "case": "nist-smls09-binary64",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 1983.9428610886403 versus 2001.1349262209505"
+      },
+      {
+        "case": "nist-wampler4-binary64",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 0.9999999966334049 versus 1.0"
+      },
+      {
+        "case": "nist-wampler4-binary64",
+        "engine": "pandas",
+        "error": "Output mismatch at 0: 1.0000000028854616 != 1.0"
+      },
+      {
+        "case": "nist-wampler5-binary64",
+        "engine": "swiftsci",
+        "error": "Output mismatch: 0.9999996723182715 versus 1.0"
+      },
+      {
+        "case": "nist-wampler5-binary64",
+        "engine": "pandas",
+        "error": "Output mismatch at 0: 1.0000003429656807 != 1.0"
+      }
+    ]
+  }
+}
