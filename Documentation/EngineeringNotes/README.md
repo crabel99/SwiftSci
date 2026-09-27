@@ -6,6 +6,9 @@ The branch starts at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`.
 
 ## Start here
 
+- [Engineering charter](CHARTER.md) sets the objective and the criteria for planning, implementing and reviewing each step. Read it before proposing new work.
+- [September 27 objective](discussions/2026-09-27-objective.md) records Cal's adoption of this direction.
+
 - [Kiraa reference status](benchmarks/2026-09-26-kiraa-reference-status.md) limits our experimental build to optional, independently validated implementation comparisons.
 
 - [NIST univariate coverage](benchmarks/2026-09-26-nist-univariate.md) records the nine-dataset increment, fixed numerical policy, timing correction and final validation.

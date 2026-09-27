@@ -2,6 +2,8 @@
 
 For each substantial choice, create a dated Markdown entry with a descriptive filename. Link it from the working record. Keep the explanation proportional to the decision; a small compiler fix can fit in a few paragraphs.
 
+Apply the [engineering charter](CHARTER.md) first. State the scientific or local-model capability this choice supports, the requirement it addresses, and the evidence that will establish success. At completion, compare the result with that criterion and retain any unresolved gaps.
+
 Record the following:
 
 1. Problem and constraints. Name the affected workload, users, source revision, compatibility requirements and observed bottleneck or failure.
