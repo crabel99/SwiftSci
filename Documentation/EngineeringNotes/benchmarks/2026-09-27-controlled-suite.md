@@ -63,3 +63,7 @@ Kiraa remains an unofficial research reference with known bugs. It is not an ora
 Reviewer configuration was `gpt-5.6-sol`. The review found no blocking issue. Two missing evidence pointers in the decision trail were supplied in an appended row. No full transcript was available beyond the inherited summaries and saved artifacts.
 
 Evidence lives under `Documentation/EngineeringNotes/archive/2026-09-27/suite-controlled/` on `codex/engineering-notes`. It includes immutable run plans, requests, responses, failed and passing records, build identity, all adversarial requests and results, test logs, source reviews and the decision trail. A content manifest binds every archived file. Run requests retain their original local paths for provenance; the committed profiles and generators are the portable rerun interface.
+## Subsequent supervised checkpoint
+
+The first stage-4 increment is now implemented in local commit `72a20129d4`. See [the supervised-suite report](2026-09-27-supervised-suite.md) for fixed splits, train-only preprocessing and passing held-out OLS checks. Classifier training is still pending. The suite-first order is unchanged.
+

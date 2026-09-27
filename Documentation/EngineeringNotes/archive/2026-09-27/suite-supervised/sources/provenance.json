@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "retrieved_on": "2026-09-27",
+  "wdbc": {
+    "status": "ready_to_vendor",
+    "release": "UCI dataset 17, source files declare November 1995; no immutable release tag offered; content pinned by SHA-256",
+    "doi": "10.24432/C5DW2B",
+    "license": "CC-BY-4.0",
+    "license_evidence_url": "https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "rows": 569,
+    "feature_count": 30,
+    "class_counts": {
+      "B": 357,
+      "M": 212
+    },
+    "feature_units": "Not specified in UCI metadata; do not invent physical units.",
+    "all_feature_rows_unique": true,
+    "source_files": [
+      {
+        "file": "wdbc.data",
+        "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data",
+        "sha256": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+        "bytes": 124103
+      },
+      {
+        "file": "wdbc.names",
+        "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.names",
+        "sha256": "840e04e3f20f8a5b326892f3b9cbc01c4cd6f7e6c597630b701ef6c0ac79f5ef",
+        "bytes": 4708
+      }
+    ],
+    "sklearn_check": "All 569 feature rows equal pinned sklearn 1.7.2 numerically, original row order. sklearn uses M=0/B=1; the proposed suite explicitly maps M=1/B=0.",
+    "vendor_files": [
+      {
+        "file": "ATTRIBUTION.md",
+        "sha256": "36c3aa17c10cf58b29c2cdc7a58c963d813d84c35ac15dd9a4cc3411734277b8",
+        "bytes": 996
+      },
+      {
+        "file": "wdbc-schema-v1.json",
+        "sha256": "7cfc5ecdd6461b0fc4880ee1fd9d727c25e3ef96d02e2bca49e601855c247a11",
+        "bytes": 5492
+      },
+      {
+        "file": "wdbc.data",
+        "sha256": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+        "bytes": 124103
+      },
+      {
+        "file": "wdbc.names",
+        "sha256": "840e04e3f20f8a5b326892f3b9cbc01c4cd6f7e6c597630b701ef6c0ac79f5ef",
+        "bytes": 4708
+      }
+    ]
+  },
+  "diabetes": {
+    "status": "research_only_do_not_vendor",
+    "reason": "No explicit redistribution license for original diabetes data found in original hosting or dataset description. scikit-learn package BSD-3-Clause notice is not evidence of a separate grant from original dataset authors.",
+    "scikit_learn_version": "1.7.2",
+    "scikit_learn_commit": "25dee604bae18205b01548348388baf7a1cdfe0e",
+    "raw_numeric_values_equal_original": false,
+    "numeric_difference_count": 11,
+    "numeric_differences": [
+      {
+        "row_1based": 147,
+        "column_1based": 9,
+        "sklearn": 4.803999999999999,
+        "original": 4.804
+      },
+      {
+        "row_1based": 240,
+        "column_1based": 9,
+        "sklearn": 5.3660000000000005,
+        "original": 5.366
+      },
+      {
+        "row_1based": 266,
+        "column_1based": 9,
+        "sklearn": 4.803999999999999,
+        "original": 4.804
+      },
+      {
+        "row_1based": 304,
+        "column_1based": 9,
+        "sklearn": 5.4510000000000005,
+        "original": 5.451
+      },
+      {
+        "row_1based": 314,
+        "column_1based": 9,
+        "sklearn": 5.247000000000001,
+        "original": 5.247
+      },
+      {
+        "row_1based": 325,
+        "column_1based": 9,
+        "sklearn": 5.3660000000000005,
+        "original": 5.366
+      },
+      {
+        "row_1based": 360,
+        "column_1based": 9,
+        "sklearn": 4.803999999999999,
+        "original": 4.804
+      },
+      {
+        "row_1based": 365,
+        "column_1based": 9,
+        "sklearn": 4.803999999999999,
+        "original": 4.804
+      },
+      {
+        "row_1based": 411,
+        "column_1based": 9,
+        "sklearn": 5.3660000000000005,
+        "original": 5.366
+      },
+      {
+        "row_1based": 416,
+        "column_1based": 9,
+        "sklearn": 4.803999999999999,
+        "original": 4.804
+      },
+      {
+        "row_1based": 429,
+        "column_1based": 9,
+        "sklearn": 5.3660000000000005,
+        "original": 5.366
+      }
+    ],
+    "row_counts": {
+      "sklearn": 442,
+      "original": 442
+    },
+    "features": 10,
+    "target": "Original quantitative measure of disease progression one year after baseline, values 25 through 346. Units not specified.",
+    "sex": "Original codes 1 and 2. Do not infer their sex mapping.",
+    "s5": "Original numeric column preserved; scikit-learn calls it possibly log of serum triglycerides. Raw does not mean all clinical transforms undone.",
+    "source_files": [
+      {
+        "file": "diabetes_data_raw.csv.gz",
+        "url": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/25dee604bae18205b01548348388baf7a1cdfe0e/sklearn/datasets/data/diabetes_data_raw.csv.gz",
+        "sha256": "a3e94cc7cea00f8a84fa5f6345203913a68efa42df18f87ddf9bead721bfd503",
+        "bytes": 7105
+      },
+      {
+        "file": "diabetes_target.csv.gz",
+        "url": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/25dee604bae18205b01548348388baf7a1cdfe0e/sklearn/datasets/data/diabetes_target.csv.gz",
+        "sha256": "8e53f65eb811df43c206f3534bb3af0e5fed213bc37ed6ba36310157d6023803",
+        "bytes": 1050
+      },
+      {
+        "file": "diabetes.rst",
+        "url": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/25dee604bae18205b01548348388baf7a1cdfe0e/sklearn/datasets/descr/diabetes.rst",
+        "sha256": "07dcfc13957a82485bdfce44aecffba72e7977595966d118b81f162cb827e381",
+        "bytes": 1455
+      },
+      {
+        "file": "diabetes-original.tab.txt",
+        "url": "https://www4.stat.ncsu.edu/~boos/var.select/diabetes.tab.txt",
+        "sha256": "4733febee697862c22139cdac87478a300ce0d101593deb07ed6c0f3328a99cd",
+        "bytes": 18496
+      }
+    ],
+    "alternative": "Use existing CC-BY-4.0 wine-quality-red raw corpus for regression."
+  },
+  "validation": {
+    "wdbc_all_numeric_values_finite": true,
+    "wdbc_unique_source_ids": 569,
+    "wdbc_feature_rows_equal_sklearn": 569,
+    "wdbc_unique_feature_rows": 569
+  }
+}

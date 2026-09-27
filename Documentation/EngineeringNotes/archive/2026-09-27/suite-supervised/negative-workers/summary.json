@@ -1,0 +1,290 @@
+[
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "wrong-output",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 0.7942744873969763 versus 1.7942744873969771"
+  },
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "wrong-output",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 17610: 0.7942744873969894 != 1.7942744873969771"
+  },
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "overlap",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Supervised splits must be nonempty, disjoint, and exhaustive"
+  },
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "overlap",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Identical features cross split boundary"
+  },
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "duplicate-feature",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Identical feature rows cross supervised split boundaries"
+  },
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "duplicate-feature",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Identical features cross split boundary"
+  },
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "leaked-answer",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unexpected supervised input fields"
+  },
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "leaked-answer",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unknown fields: {'expected'}"
+  },
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "heldout-perturbation",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wine-red-supervised-scale",
+    "variant": "heldout-perturbation",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "wrong-output",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: -0.0027627469569719842 versus 0.9972372530430244"
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "wrong-output",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 1645: -0.002762746956975759 != 0.9972372530430244"
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "overlap",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Supervised splits must be nonempty, disjoint, and exhaustive"
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "overlap",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Identical features cross split boundary"
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "duplicate-feature",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Identical feature rows cross supervised split boundaries"
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "duplicate-feature",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Identical features cross split boundary"
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "leaked-answer",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unexpected supervised input fields"
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "leaked-answer",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unknown fields: {'expected'}"
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "heldout-perturbation",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wine-red-supervised-ols-cpu",
+    "variant": "heldout-perturbation",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "control",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "control",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "wrong-output",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch: 2.215964958604659 versus 3.2159649586046584"
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "wrong-output",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Output mismatch at 17129: 2.215964958604661 != 3.2159649586046584"
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "overlap",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Supervised splits must be nonempty, disjoint, and exhaustive"
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "overlap",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Identical features cross split boundary"
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "duplicate-feature",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Identical feature rows cross supervised split boundaries"
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "duplicate-feature",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Identical features cross split boundary"
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "leaked-answer",
+    "engine": "swiftsci",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unexpected supervised input fields"
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "leaked-answer",
+    "engine": "pandas",
+    "exit_code": 1,
+    "status": "failed",
+    "error": "Unknown fields: {'expected'}"
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "heldout-perturbation",
+    "engine": "swiftsci",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "wdbc-supervised-scale",
+    "variant": "heldout-perturbation",
+    "engine": "pandas",
+    "exit_code": 0,
+    "status": "passed",
+    "error": null
+  }
+]

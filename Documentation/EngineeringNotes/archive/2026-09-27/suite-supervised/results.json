@@ -1,0 +1,44 @@
+{
+  "suite-supervised-01": {
+    "status": "passed",
+    "processes": 6,
+    "passed": 6,
+    "validated_samples": 12,
+    "contract_hash": "9a8d6b298a5fd6d59ac0e41c73ad755de777cd27b2b7ccd7736085b28f689d28",
+    "source_tree": "435e54214f382288ed2f03867cbd30bb0c8d548872402a58283e0045ff345874"
+  },
+  "suite-stage4-smoke-01": {
+    "status": "passed",
+    "processes": 28,
+    "passed": 28,
+    "validated_samples": 28,
+    "contract_hash": "9f2c800561790d5c7a994d905e967bb8f3958221db7f39a8fa8399a0b12eda6a",
+    "source_tree": "435e54214f382288ed2f03867cbd30bb0c8d548872402a58283e0045ff345874"
+  },
+  "wine_heldout_metrics": {
+    "order": [
+      "model_RMSE",
+      "model_MAE",
+      "model_R2",
+      "constant_RMSE",
+      "constant_MAE",
+      "constant_R2"
+    ],
+    "validation": [
+      0.6525742468067297,
+      0.5036792425771845,
+      0.3659575334217572,
+      0.8200853827614536,
+      0.6824957485076037,
+      -0.0013286154719969036
+    ],
+    "test": [
+      0.6522871590405275,
+      0.4985594205539756,
+      0.34892365245447926,
+      0.8095095293084176,
+      0.6733561397410802,
+      -0.002762746956975695
+    ]
+  }
+}
