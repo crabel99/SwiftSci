@@ -1,0 +1,626 @@
+[
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "wrong-first-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 2.0 versus 3.0"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "wrong-first-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 0: 2.0 != 3.0"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "wrong-last-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 108.0 versus 109.0"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "wrong-last-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 131: 108.0 != 109.0"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "bad-input",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unexpected dataframe semantic fields"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "bad-input",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unknown fields: {'expected_answer'}"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "input-change",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 0.0 versus 2147483648.0"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "input-change",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 9: 0.0 != 2147483648.0"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "float-index",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Gather index outside source rows"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "float-index",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Gather index out of bounds"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "bool-index",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Gather index outside source rows"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "bool-index",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Gather index out of bounds"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "negative-index",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Gather index outside source rows"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "negative-index",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Gather index out of bounds"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "overflow-int",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Expected canonical decimal int64 string"
+  },
+  {
+    "case": "dataframe-gather-int64",
+    "variant": "overflow-int",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Noncanonical or overflowing Int64"
+  },
+  {
+    "case": "dataframe-select-order",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-select-order",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-select-order",
+    "variant": "wrong-first-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 2.0 versus 3.0"
+  },
+  {
+    "case": "dataframe-select-order",
+    "variant": "wrong-first-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 0: 2.0 != 3.0"
+  },
+  {
+    "case": "dataframe-select-order",
+    "variant": "wrong-last-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 1.0 versus 2.0"
+  },
+  {
+    "case": "dataframe-select-order",
+    "variant": "wrong-last-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 128: 1.0 != 2.0"
+  },
+  {
+    "case": "dataframe-select-order",
+    "variant": "bad-input",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unexpected dataframe semantic fields"
+  },
+  {
+    "case": "dataframe-select-order",
+    "variant": "bad-input",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unknown fields: {'expected_answer'}"
+  },
+  {
+    "case": "dataframe-select-order",
+    "variant": "input-change",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 0.0 versus 2147483648.0"
+  },
+  {
+    "case": "dataframe-select-order",
+    "variant": "input-change",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 9: 0.0 != 2147483648.0"
+  },
+  {
+    "case": "dataframe-sort-int64-desc",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-sort-int64-desc",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-sort-int64-desc",
+    "variant": "wrong-first-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 2.0 versus 3.0"
+  },
+  {
+    "case": "dataframe-sort-int64-desc",
+    "variant": "wrong-first-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 0: 2.0 != 3.0"
+  },
+  {
+    "case": "dataframe-sort-int64-desc",
+    "variant": "wrong-last-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 0.0 versus 1.0"
+  },
+  {
+    "case": "dataframe-sort-int64-desc",
+    "variant": "wrong-last-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 128: 0.0 != 1.0"
+  },
+  {
+    "case": "dataframe-sort-int64-desc",
+    "variant": "bad-input",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unexpected dataframe semantic fields"
+  },
+  {
+    "case": "dataframe-sort-int64-desc",
+    "variant": "bad-input",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unknown fields: {'expected_answer'}"
+  },
+  {
+    "case": "dataframe-sort-int64-desc",
+    "variant": "input-change",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 0.0 versus 2147483648.0"
+  },
+  {
+    "case": "dataframe-sort-int64-desc",
+    "variant": "input-change",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 9: 0.0 != 2147483648.0"
+  },
+  {
+    "case": "dataframe-filter-float-ne",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-filter-float-ne",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-filter-float-ne",
+    "variant": "wrong-first-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 2.0 versus 3.0"
+  },
+  {
+    "case": "dataframe-filter-float-ne",
+    "variant": "wrong-first-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 0: 2.0 != 3.0"
+  },
+  {
+    "case": "dataframe-filter-float-ne",
+    "variant": "wrong-last-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 6.0 versus 7.0"
+  },
+  {
+    "case": "dataframe-filter-float-ne",
+    "variant": "wrong-last-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 96: 6.0 != 7.0"
+  },
+  {
+    "case": "dataframe-filter-float-ne",
+    "variant": "bad-input",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unexpected dataframe semantic fields"
+  },
+  {
+    "case": "dataframe-filter-float-ne",
+    "variant": "bad-input",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unknown fields: {'expected_answer'}"
+  },
+  {
+    "case": "dataframe-filter-float-ne",
+    "variant": "input-change",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 123.0 versus 0.0"
+  },
+  {
+    "case": "dataframe-filter-float-ne",
+    "variant": "input-change",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 38: 123.0 != 0.0"
+  },
+  {
+    "case": "dataframe-matrix-nonsquare",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-matrix-nonsquare",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-matrix-nonsquare",
+    "variant": "wrong-first-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 1.0 versus 2.0"
+  },
+  {
+    "case": "dataframe-matrix-nonsquare",
+    "variant": "wrong-first-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 0: 1.0 != 2.0"
+  },
+  {
+    "case": "dataframe-matrix-nonsquare",
+    "variant": "wrong-last-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 0.0 versus 1.0"
+  },
+  {
+    "case": "dataframe-matrix-nonsquare",
+    "variant": "wrong-last-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 70: 0.0 != 1.0"
+  },
+  {
+    "case": "dataframe-matrix-nonsquare",
+    "variant": "bad-input",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unexpected dataframe semantic fields"
+  },
+  {
+    "case": "dataframe-matrix-nonsquare",
+    "variant": "bad-input",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unknown fields: {'expected_answer'}"
+  },
+  {
+    "case": "dataframe-matrix-nonsquare",
+    "variant": "input-change",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 0.0 versus 2097152.0"
+  },
+  {
+    "case": "dataframe-matrix-nonsquare",
+    "variant": "input-change",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 20: 0.0 != 2097152.0"
+  },
+  {
+    "case": "dataframe-replace-isolation",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-replace-isolation",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-replace-isolation",
+    "variant": "wrong-first-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 4.0 versus 5.0"
+  },
+  {
+    "case": "dataframe-replace-isolation",
+    "variant": "wrong-first-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 0: 4.0 != 5.0"
+  },
+  {
+    "case": "dataframe-replace-isolation",
+    "variant": "wrong-last-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 1.0 versus 2.0"
+  },
+  {
+    "case": "dataframe-replace-isolation",
+    "variant": "wrong-last-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 174: 1.0 != 2.0"
+  },
+  {
+    "case": "dataframe-replace-isolation",
+    "variant": "bad-input",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unexpected dataframe semantic fields"
+  },
+  {
+    "case": "dataframe-replace-isolation",
+    "variant": "bad-input",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unknown fields: {'expected_answer'}"
+  },
+  {
+    "case": "dataframe-replace-isolation",
+    "variant": "input-change",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 0.0 versus 2147483648.0"
+  },
+  {
+    "case": "dataframe-replace-isolation",
+    "variant": "input-change",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 9: 0.0 != 2147483648.0"
+  },
+  {
+    "case": "dataframe-group-string-components",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-group-string-components",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "dataframe-group-string-components",
+    "variant": "wrong-first-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 3.0 versus 4.0"
+  },
+  {
+    "case": "dataframe-group-string-components",
+    "variant": "wrong-first-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 0: 3.0 != 4.0"
+  },
+  {
+    "case": "dataframe-group-string-components",
+    "variant": "wrong-last-word",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 0.0 versus 1.0"
+  },
+  {
+    "case": "dataframe-group-string-components",
+    "variant": "wrong-last-word",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 238: 0.0 != 1.0"
+  },
+  {
+    "case": "dataframe-group-string-components",
+    "variant": "bad-input",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unexpected dataframe semantic fields"
+  },
+  {
+    "case": "dataframe-group-string-components",
+    "variant": "bad-input",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Unknown fields: {'expected_answer'}"
+  },
+  {
+    "case": "dataframe-group-string-components",
+    "variant": "input-change",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output length mismatch"
+  },
+  {
+    "case": "dataframe-group-string-components",
+    "variant": "input-change",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output length mismatch"
+  }
+]
