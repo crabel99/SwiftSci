@@ -1,13 +1,15 @@
 # SwiftSci engineering working record
 
-This record belongs to `crabel99/SwiftSci`, on branch `codex/engineering-notes`. Cal requested a continuing branch for documentation and discussion that will stay in our fork without an upstream PR.
+This record belongs to `crabel99/SwiftSci`, on branch `codex/engineering-notes`. crabel99 requested a continuing branch for documentation and discussion that will stay in our fork without an upstream PR.
+
+Refer to the project owner as `crabel99` in documentation and discussion records.
 
 The branch starts at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`. PR #39 has merged. Production implementation and contribution work continue on their own branches.
 
 ## Start here
 
 - [Engineering charter](CHARTER.md) sets the objective and the criteria for planning, implementing and reviewing each step. Read it before proposing new work.
-- [September 27 objective](discussions/2026-09-27-objective.md) records Cal's adoption of this direction.
+- [September 27 objective](discussions/2026-09-27-objective.md) records crabel99's adoption of this direction.
 
 - [Kiraa reference status](benchmarks/2026-09-26-kiraa-reference-status.md) limits our experimental build to optional, independently validated implementation comparisons.
 

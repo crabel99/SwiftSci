@@ -2,7 +2,7 @@
 
 ## User clarification
 
-On September 26, Cal clarified that the Kiraa version used in our investigations is not an official release. He reports serious bugs and regards it as experimental reference code, not production code. This records the status of our selected build; it is not a claim about every Kiraa version. This clarification did not include a new source audit or an enumeration of those bugs.
+On September 26, crabel99 clarified that the Kiraa version used in our investigations is not an official release. He reports serious bugs and regards it as experimental reference code, not production code. This records the status of our selected build; it is not a claim about every Kiraa version. This clarification did not include a new source audit or an enumeration of those bugs.
 
 ## Benchmark role
 

@@ -1,6 +1,6 @@
 # Scientific computing charter
 
-Adopted by Cal on September 27, 2026. Apply this charter when planning, implementing, validating or reviewing our SwiftSci work.
+Adopted by crabel99 on September 27, 2026. Apply this charter when planning, implementing, validating or reviewing our SwiftSci work.
 
 ## Objective
 
@@ -35,4 +35,4 @@ Apply the rows relevant to the change. Scale the work to its scope.
 
 ## Revisions
 
-Cal owns the objective. Record a dated rationale when it changes. Editorial revisions may clarify execution while preserving the adopted commitments.
+crabel99 owns the objective. Record a dated rationale when it changes. Editorial revisions may clarify execution while preserving the adopted commitments.
