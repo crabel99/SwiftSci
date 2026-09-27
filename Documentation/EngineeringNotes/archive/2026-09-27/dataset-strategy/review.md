@@ -1,6 +1,6 @@
 # Independent review
 
-reviewed by GPT-6
+Reviewer configuration: gpt-5.6-sol. This records the model requested when the review agent was created.
 
 No blocking error was found in the first two dataset-strategy stages. The committed contracts, generated fixtures, retained runtime failures, and private report agree with the available evidence.
 
