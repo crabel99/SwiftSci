@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Polars NumPy ownership",
+    "url": "https://raw.githubusercontent.com/pola-rs/polars/72f7d3b8aebfc5b2899d4418e8dbbf96d872a693/py-polars/tests/unit/interop/numpy/test_to_numpy_df.py",
+    "sha256": "8bfa020ac3133ffb2ebb9bdbb0bc8e710b49c743a33fbbe128a25a34d02c935c",
+    "checks": {
+      "allow_copy=False": true,
+      "writeable": true,
+      "buffers()": true
+    }
+  },
+  {
+    "title": "Arrow exported lifetime",
+    "url": "https://raw.githubusercontent.com/apache/arrow/a99c14ed5ee9dd183b60e66c0daa5301d75dcb4b/cpp/src/arrow/c/bridge_test.cc",
+    "sha256": "76979170a4d8809dd1042704cfc18c7ccbd235060deffba928b675fca9b54454",
+    "checks": {
+      "bytes_allocated": true,
+      "release": true
+    }
+  },
+  {
+    "title": "SciPy high precision",
+    "url": "https://raw.githubusercontent.com/scipy/scipy/v1.16.2/scipy/special/tests/test_mpmath.py",
+    "sha256": "8f1c6a35587385cd2bb913520044ba8c4071f92dffa51c08fa76fb008b46acb0",
+    "checks": {
+      "mpmath.mp.dps = 70": true,
+      "dps=400": true
+    }
+  }
+]
