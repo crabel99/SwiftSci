@@ -1,0 +1,26 @@
+....F...Acceptance: one
+Acceptance: two
+.Acceptance: one
+Acceptance: two
+Acceptance: one
+Acceptance: two
+...Acceptance: one
+Acceptance: two
+..Acceptance: one
+Acceptance: two
+Acceptance: one
+Acceptance: two
+..
+======================================================================
+FAIL: test_failed_response_accepts_unmeasured_rss_but_rejects_invalid_rss (test_acceptance.AcceptanceTests.test_failed_response_accepts_unmeasured_rss_but_rejects_invalid_rss) (rss=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crabel/Documents/src/SwiftSci/Benchmarks/Tests/test_acceptance.py", line 118, in test_failed_response_accepts_unmeasured_rss_but_rejects_invalid_rss
+    self.assertEqual(result['coverage_complete'], type(value) is int and value == 0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False != True
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.529s
+
+FAILED (failures=1)

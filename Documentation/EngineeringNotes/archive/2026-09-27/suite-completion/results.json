@@ -1,0 +1,404 @@
+{
+  "commit": "ab7aa2f1dab7256eed5de177fb5060a25740c643",
+  "source_tree_sha256": "dfdc1bc7facd9e1aea483897ddaa534991f44f1e32a9b4a25fd09e3a464b8146",
+  "contract_sha256": "7f4c969ba78bd6bf2c2068f5eadac2fa3fe0dd0ccf912a3b4893c114cf4ef0f8",
+  "acceptance_sha256": "42060e498758e4d82ded8ba39ebedb2223026c105fc2d6bee4369eaa867acb72",
+  "coverage_complete": true,
+  "profiles": [
+    {
+      "profile": "boundary-sweep",
+      "status": "passed",
+      "engine_cases": 108,
+      "passed": 108,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "vision-conformance",
+      "status": "passed",
+      "engine_cases": 16,
+      "passed": 16,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "boundary-conformance",
+      "status": "passed",
+      "engine_cases": 12,
+      "passed": 12,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "boundary-cpu-conformance",
+      "status": "passed",
+      "engine_cases": 8,
+      "passed": 8,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "certification",
+      "status": "passed",
+      "engine_cases": 54,
+      "passed": 54,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "controlled-conformance",
+      "status": "failed",
+      "engine_cases": 20,
+      "passed": 17,
+      "failed": 3,
+      "failures": [
+        {
+          "batch": 0,
+          "case": "controlled-linear-fixed-affine",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see controlled-linear-fixed-affine-swiftsci-0.log",
+          "worker_error": "Model must be fitted before calling predict or transform."
+        },
+        {
+          "batch": 0,
+          "case": "controlled-logistic-fixed-mixed-logits",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see controlled-logistic-fixed-mixed-logits-swiftsci-0.log",
+          "worker_error": "Model must be fitted before calling predict or transform."
+        },
+        {
+          "batch": 0,
+          "case": "controlled-cosine-small-norm",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see controlled-cosine-small-norm-swiftsci-0.log",
+          "worker_error": "Output mismatch: 0.0 versus 1.0"
+        }
+      ]
+    },
+    {
+      "profile": "dataframe-conformance",
+      "status": "passed",
+      "engine_cases": 48,
+      "passed": 48,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "extended",
+      "status": "passed",
+      "engine_cases": 84,
+      "passed": 84,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "migration-smoke",
+      "status": "passed",
+      "engine_cases": 72,
+      "passed": 72,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "migration",
+      "status": "passed",
+      "engine_cases": 216,
+      "passed": 216,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "model-conformance",
+      "status": "failed",
+      "engine_cases": 6,
+      "passed": 5,
+      "failed": 1,
+      "failures": [
+        {
+          "batch": 0,
+          "case": "pca-oblique-k1",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see pca-oblique-k1-swiftsci-0.log",
+          "worker_error": "Output mismatch: 1.0 versus 0.8"
+        }
+      ]
+    },
+    {
+      "profile": "neural-conformance",
+      "status": "failed",
+      "engine_cases": 24,
+      "passed": 23,
+      "failed": 1,
+      "failures": [
+        {
+          "batch": 0,
+          "case": "neural-gpu-rope-cached",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see neural-gpu-rope-cached-swiftsci-0.log",
+          "worker_error": "Output mismatch: -0.024063661694526672 versus 0.0425054856361493"
+        }
+      ]
+    },
+    {
+      "profile": "neural-cpu-conformance",
+      "status": "passed",
+      "engine_cases": 10,
+      "passed": 10,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "neural-loader-conformance",
+      "status": "failed",
+      "engine_cases": 4,
+      "passed": 2,
+      "failed": 2,
+      "failures": [
+        {
+          "batch": 0,
+          "case": "neural-cpu-public-loader",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see neural-cpu-public-loader-swiftsci-0.log",
+          "worker_error": "Decoder parameter was not replaced exactly: layers.0.attention.key_proj.weight"
+        },
+        {
+          "batch": 0,
+          "case": "neural-gpu-public-loader",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see neural-gpu-public-loader-swiftsci-0.log",
+          "worker_error": "Decoder parameter was not replaced exactly: layers.0.attention.key_proj.weight"
+        }
+      ]
+    },
+    {
+      "profile": "nist",
+      "status": "passed",
+      "engine_cases": 162,
+      "passed": 162,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "numerical-binary64",
+      "status": "failed",
+      "engine_cases": 38,
+      "passed": 28,
+      "failed": 10,
+      "failures": [
+        {
+          "batch": 0,
+          "case": "nist-atmwtag-binary64",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-atmwtag-binary64-swiftsci-0.log",
+          "worker_error": "Output mismatch: 15.946733593790675 versus 15.946733566676926"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls04-binary64",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-smls04-binary64-swiftsci-0.log",
+          "worker_error": "Output mismatch: 21.000000038029 versus 21.0000000007761"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls06-binary64",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-smls06-binary64-swiftsci-0.log",
+          "worker_error": "Output mismatch: 2000.9999826583844 versus 2001.0000001288329"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls07-binary64",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-smls07-binary64-swiftsci-0.log",
+          "worker_error": "Output mismatch: 21.03988962187173 versus 21.00081188781877"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls08-binary64",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-smls08-binary64-swiftsci-0.log",
+          "worker_error": "Output mismatch: 200.89125346619366 versus 201.01300409594845"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls09-binary64",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-smls09-binary64-swiftsci-0.log",
+          "worker_error": "Output mismatch: 1983.9428610886403 versus 2001.1349262209505"
+        },
+        {
+          "batch": 0,
+          "case": "nist-wampler4-binary64",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-wampler4-binary64-swiftsci-0.log",
+          "worker_error": "Output mismatch: 0.9999999966334049 versus 1.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-wampler4-binary64",
+          "engine": "pandas",
+          "error": "Worker exited 1; see nist-wampler4-binary64-pandas-0.log",
+          "worker_error": "Output mismatch at 0: 1.0000000028854616 != 1.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-wampler5-binary64",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-wampler5-binary64-swiftsci-0.log",
+          "worker_error": "Output mismatch: 0.9999996723182715 versus 1.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-wampler5-binary64",
+          "engine": "pandas",
+          "error": "Worker exited 1; see nist-wampler5-binary64-pandas-0.log",
+          "worker_error": "Output mismatch at 0: 1.0000003429656807 != 1.0"
+        }
+      ]
+    },
+    {
+      "profile": "numerical-conformance",
+      "status": "failed",
+      "engine_cases": 38,
+      "passed": 25,
+      "failed": 13,
+      "failures": [
+        {
+          "batch": 0,
+          "case": "nist-atmwtag-decimal",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-atmwtag-decimal-swiftsci-0.log",
+          "worker_error": "Output mismatch: 15.946733593790675 versus 15.946733567793"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls04-decimal",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-smls04-decimal-swiftsci-0.log",
+          "worker_error": "Output mismatch: 21.000000038029 versus 21.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls06-decimal",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-smls06-decimal-swiftsci-0.log",
+          "worker_error": "Output mismatch: 2000.9999826583844 versus 2001.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls07-decimal",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-smls07-decimal-swiftsci-0.log",
+          "worker_error": "Output mismatch: 21.03988962187173 versus 21.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls07-decimal",
+          "engine": "pandas",
+          "error": "Worker exited 1; see nist-smls07-decimal-pandas-0.log",
+          "worker_error": "Output mismatch at 0: 21.000811887818774 != 21.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls08-decimal",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-smls08-decimal-swiftsci-0.log",
+          "worker_error": "Output mismatch: 200.89125346619366 versus 201.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls08-decimal",
+          "engine": "pandas",
+          "error": "Worker exited 1; see nist-smls08-decimal-pandas-0.log",
+          "worker_error": "Output mismatch at 0: 201.01300409594847 != 201.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls09-decimal",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-smls09-decimal-swiftsci-0.log",
+          "worker_error": "Output mismatch: 1983.9428610886403 versus 2001.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-smls09-decimal",
+          "engine": "pandas",
+          "error": "Worker exited 1; see nist-smls09-decimal-pandas-0.log",
+          "worker_error": "Output mismatch at 0: 2001.134926220951 != 2001.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-wampler4-decimal",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-wampler4-decimal-swiftsci-0.log",
+          "worker_error": "Output mismatch: 0.9999999966334049 versus 1.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-wampler4-decimal",
+          "engine": "pandas",
+          "error": "Worker exited 1; see nist-wampler4-decimal-pandas-0.log",
+          "worker_error": "Output mismatch at 0: 1.0000000028854616 != 1.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-wampler5-decimal",
+          "engine": "swiftsci",
+          "error": "Worker exited 1; see nist-wampler5-decimal-swiftsci-0.log",
+          "worker_error": "Output mismatch: 0.9999996723182715 versus 1.0"
+        },
+        {
+          "batch": 0,
+          "case": "nist-wampler5-decimal",
+          "engine": "pandas",
+          "error": "Worker exited 1; see nist-wampler5-decimal-pandas-0.log",
+          "worker_error": "Output mismatch at 0: 1.0000003429656807 != 1.0"
+        }
+      ]
+    },
+    {
+      "profile": "public-data",
+      "status": "passed",
+      "engine_cases": 66,
+      "passed": 66,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "public-smoke",
+      "status": "passed",
+      "engine_cases": 22,
+      "passed": 22,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "smoke",
+      "status": "passed",
+      "engine_cases": 28,
+      "passed": 28,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "standard",
+      "status": "passed",
+      "engine_cases": 84,
+      "passed": 84,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "profile": "supervised-conformance",
+      "status": "passed",
+      "engine_cases": 12,
+      "passed": 12,
+      "failed": 0,
+      "failures": []
+    }
+  ],
+  "total_engine_cases": 1132,
+  "passed_engine_cases": 1102,
+  "failed_engine_cases": 30
+}

@@ -1,0 +1,590 @@
+[
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "wrong-first",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 1.0 versus 2.0"
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "wrong-first",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 0: 1.0 != 2.0"
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "wrong-middle",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 0.09375 versus 1.09375"
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "wrong-middle",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 24: 0.09375 != 1.09375"
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "wrong-last",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 0.59375 versus 1.59375"
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "wrong-last",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 48: 0.59375 != 1.59375"
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "embedded-answer",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid vision letterbox input contract"
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "embedded-answer",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Unknown fields: {'expected_values'}"
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "bad-device",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid vision letterbox input contract"
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "bad-device",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Vision requires explicit CPU"
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "bad-shape",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Vision dimensions must be bounded JSON integers"
+  },
+  {
+    "case": "vision-cpu-rgb-odd-identity",
+    "variant": "bad-shape",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Invalid bounded image dimension"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "wrong-first",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 1.0 versus 2.0"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "wrong-first",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 0: 1.0 != 2.0"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "wrong-middle",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 0.0625 versus 1.0625"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "wrong-middle",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 110: 0.0625 != 1.0625"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "wrong-last",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 0.0625 versus 1.0625"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "wrong-last",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 219: 0.0625 != 1.0625"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "embedded-answer",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid vision letterbox input contract"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "embedded-answer",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Unknown fields: {'expected_values'}"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "bad-device",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid vision letterbox input contract"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "bad-device",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Vision requires explicit CPU"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "bad-shape",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Vision dimensions must be bounded JSON integers"
+  },
+  {
+    "case": "vision-cpu-rgb-up-asymmetric",
+    "variant": "bad-shape",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Invalid bounded image dimension"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "wrong-first",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 4.0 versus 5.0"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "wrong-first",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 0: 4.0 != 5.0"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "wrong-middle",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 0.2500000046566129 versus 1.2500000046566129"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "wrong-middle",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 18: 0.2500000046566129 != 1.2500000046566129"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "wrong-last",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 1.0 versus 2.0"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "wrong-last",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 35: 1.0 != 2.0"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "embedded-answer",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Unexpected dataframe-model input fields or row IDs"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "embedded-answer",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Unknown fields: {'expected_values'}"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "bad-device",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid bounded dataframe-model contract"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "bad-device",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Invalid device or dtype"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "bad-shape",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid bounded dataframe-model contract"
+  },
+  {
+    "case": "boundary-cpu-float64-narrow",
+    "variant": "bad-shape",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Invalid bounded numeric vector"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "wrong-first",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 4.0 versus 5.0"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "wrong-first",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 0: 4.0 != 5.0"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "wrong-middle",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 0.0 versus 1.0"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "wrong-middle",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 30: 0.0 != 1.0"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "wrong-last",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 1.0 versus 2.0"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "wrong-last",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 59: 1.0 != 2.0"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "embedded-answer",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Unexpected dataframe-model input fields or row IDs"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "embedded-answer",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Unknown fields: {'expected_values'}"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "bad-device",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid bounded dataframe-model contract"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "bad-device",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Invalid device or dtype"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "bad-shape",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid bounded dataframe-model contract"
+  },
+  {
+    "case": "boundary-gpu-float32-wide",
+    "variant": "bad-shape",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Invalid bounded numeric vector"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "wrong-first",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 96.0 versus 97.0"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "wrong-first",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 0: 96.0 != 97.0"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "wrong-middle",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: -1.265625 versus -0.265625"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "wrong-middle",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 97: -1.265625 != -0.265625"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "wrong-last",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: -1.453125 versus -0.453125"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "wrong-last",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 194: -1.453125 != -0.453125"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "embedded-answer",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Unexpected boundary sweep descriptor fields"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "embedded-answer",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Unknown fields: {'expected_values'}"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "bad-device",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid bounded boundary sweep descriptor"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "bad-device",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Unsupported sweep device/dtype"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "bad-shape",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid bounded boundary sweep descriptor"
+  },
+  {
+    "case": "sweep-gpu-float32-128x8-prepared",
+    "variant": "bad-shape",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Invalid sweep width"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "error": null
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "wrong-first",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: 96.0 versus 97.0"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "wrong-first",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 0: 96.0 != 97.0"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "wrong-middle",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: -0.375 versus 0.625"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "wrong-middle",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 6241: -0.375 != 0.625"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "wrong-last",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Output mismatch: -0.75 versus 0.25"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "wrong-last",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Output mismatch at 12482: -0.75 != 0.25"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "embedded-answer",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Unexpected boundary sweep descriptor fields"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "embedded-answer",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Unknown fields: {'expected_values'}"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "bad-device",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid bounded boundary sweep descriptor"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "bad-device",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Unsupported sweep device/dtype"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "bad-shape",
+    "engine": "swiftsci",
+    "status": "failed",
+    "error": "Invalid bounded boundary sweep descriptor"
+  },
+  {
+    "case": "sweep-cpu-float64-128x64-conversion",
+    "variant": "bad-shape",
+    "engine": "pandas",
+    "status": "failed",
+    "error": "Invalid sweep width"
+  }
+]

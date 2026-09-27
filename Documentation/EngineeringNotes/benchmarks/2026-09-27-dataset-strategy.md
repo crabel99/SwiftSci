@@ -115,3 +115,7 @@ Local commit `e5995732c2` adds 24 bounded dataframe cases for exact integers, nu
 ## Fixed neural inference checkpoint
 
 Local commit `f8cec1f93b` adds fourteen fixed decoder fixture packs with independent logits and exact parameter readback. All 105 controller tests pass. Direct inference passes 23 of 24 engine cases; batched GPU cached RoPE fails, while both single-batch controls pass. Both Swift public-loader cases expose incomplete parameter replacement. CPU CI and smoke profiles pass and certify. Sixteen controls pass and all 56 deliberately invalid worker cases reject. See [the neural report](2026-09-27-neural-suite.md). No production fixes or formal performance baseline were included. Complete remaining integration coverage before the separate repair branch.
+
+## Suite completion checkpoint
+
+The four agreed remaining items now have implemented contracts and recorded outcomes: analytic vision preprocessing, dataframe-to-tensor integration, bounded stage/size sweeps and complete profile acceptance. See [the completion report](2026-09-27-suite-completion.md) for the exact revision, complete outcomes and remaining production failures. The contribution branch stays local. Proceed next to the separate repair branch, one commit per diagnosed error, then establish the formal performance baseline after the relevant suite passes. Trained checkpoint quality, unmatched algorithms and physical zero-copy claims remain outside this completed scope.
