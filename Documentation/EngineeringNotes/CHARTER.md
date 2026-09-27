@@ -1,36 +1,38 @@
 # Scientific computing charter
 
-Adopted by Cal on September 27, 2026. This is the guiding objective for our SwiftSci work. It states our contribution direction; upstream retains ownership of its roadmap and public architecture.
+Adopted by Cal on September 27, 2026. Apply this charter when planning, implementing, validating or reviewing our SwiftSci work.
 
 ## Objective
 
 Build a top-tier scientific and numerical library that can form the foundation for local models and demanding scientific computation on Apple Silicon.
 
-Judge progress by the engineering work the library makes possible, the correctness of its results, its memory and execution costs, and the ability of another engineer to understand and maintain it. Treat this objective as the standard for how we work, not a claim about the library's current maturity.
+Judge progress by supported engineering workflows, correct results, memory and execution costs, and maintainability. This objective describes the quality we intend to earn.
 
-## Engineering commitments
+Numerical correctness and safe ownership are acceptance conditions. Evaluate speed, memory use and API convenience within those conditions. Prefer coherent, dependable capabilities that another engineer can understand and maintain.
 
-- Preserve numerical meaning. Define precision, missing-value behavior, ordering, convergence and failure contracts. Retain row identity through transformations. Make any lossy conversion or reduced-precision execution explicit and justify its error against the workload's requirements.
-- Design storage and consumers together. Follow data through loading, selection, mutation, preprocessing, solver or model execution, and result access. Measure allocations, retained memory and conversions where they matter. Preserve ownership, lifetime and snapshot guarantees when reducing copies.
-- Choose execution from requirements and evidence. Account for dtype, layout, data residence, preparation, synchronization and result materialization. Use the CPU or GPU when that path satisfies the numerical contract and benefits the measured workload.
-- Make results independently checkable. Use analytical answers, trusted reference datasets, appropriate higher-precision calculations and independent implementations. Include adverse cases, malformed inputs and deliberate wrong-result checks. Preserve failures and distinguish implementation correctness, numerical accuracy, model quality and performance.
-- Keep scientific APIs familiar and maintainable. Familiar names help migration when their behavior is documented and tested. Prefer a coherent, dependable set of capabilities over breadth that hides inconsistent semantics or unsupported paths.
-- Explain the decisions. Retain the alternatives, evidence, costs, limitations and reasons for revisiting each substantial choice. Give the maintainer enough reasoning to challenge a proposal and maintain the result.
+## Workflow
 
-## Applying the charter to each step
+1. Define the step. Name the scientific or local-model workflow it supports, the requirement or failure it addresses, and the evidence that will establish success. For testing, certification, production repair or baseline work, first read the [required work order](benchmarks/2026-09-27-controlled-suite.md#required-work-order). Planning is complete when the affected behavior and acceptance checks are explicit and the scope follows that order.
 
-Before implementation, state which scientific or local-model capability the change supports, the requirement or failure it addresses, and the evidence that will establish success. Record substantial choices using the [decision format](DECISION-RECORDS.md). For a small change, a concise explanation in the work record is enough.
+2. Choose the approach. Apply every relevant row in the change guidance below. For substantial choices, use the [decision record format](DECISION-RECORDS.md) to explain alternatives and tradeoffs. For a small change, retain a concise explanation in the work record. The choice is ready when each affected contract has an explicit preservation rule or justified change, and the validation plan can detect a violation.
 
-At completion, report the actual result against that criterion, including regressions, unresolved cases and the tested configuration. Scale validation to the change. A documentation correction needs an accurate record and working references; a numerical algorithm change needs evidence about numerical behavior.
+3. Verify the result. Run the acceptance checks against the changed artifact. Retain failures and regressions. A tolerance or workload-contract revision needs independent justification and its own record. Verification is complete when every acceptance check has a recorded result; claim success only for criteria actually met and identify unmet criteria as unresolved.
 
-Follow the current [suite-first work order](benchmarks/2026-09-27-controlled-suite.md#required-work-order). A failed numerical check remains a failed check. Changes to tolerances or workload contracts require independent justification and an explicit record. Keep exploratory timings distinct from an accepted performance baseline.
+4. Report the decision and evidence. State the achieved scope, limitations and remaining work. Link the relevant record and identify the tested configuration for executable claims. Separate implementation correctness, numerical accuracy, model quality and performance conclusions. Before publishing a contribution, read the [upstream contribution boundary](README.md#relationship-to-upstream-contributions). Delivery is complete when each claim has supporting evidence and the recipient can distinguish verified behavior from a proposal or unresolved result.
 
-Demonstrate progress with complete, representative workflows as well as focused tests. Define the reference answer or quality target before comparing performance. Include preparation and result consumption where the workload requires them. Report precisely which operations and configurations pass; reserve certification claims for the defined scope and qualification process actually completed.
+## Change guidance
 
-When a proposal improves one property at the expense of another, state the tradeoff. Accuracy requirements and safe ownership are acceptance conditions. Performance, memory use, API convenience and maintenance cost are evaluated within those conditions.
+Apply the rows relevant to the change. Scale the work to its scope.
 
-## Contribution boundary
+| Changed area | Required reasoning and evidence |
+|---|---|
+| Numerical behavior | Define precision, missing values, ordering, convergence and failure behavior. Preserve row identity. Check results against analytical answers, trusted datasets, appropriate higher-precision calculations or independent implementations. Justify any lossy conversion or reduced precision against the workload's error requirements. |
+| Storage or mutation | Follow the affected data through loading, selection, preprocessing, computation and result access. Check ownership, lifetime and snapshot guarantees. Measure the allocations, retained memory and conversions relevant to the proposed benefit. |
+| CPU/GPU execution or performance | Account for dtype, layout, data residence, preparation, synchronization and materialization. Define the reference answer or quality target before comparing speed. Include a representative complete workflow for workflow-level claims; label isolated timings and exploratory runs with their narrower scope. |
+| Test or certification infrastructure | Establish independent expected results and prove that relevant wrong outputs and malformed inputs are rejected. Include adverse numerical cases. Bound any certificate to the operations, configurations and qualification process actually checked. |
+| Public API or architecture | Check promised behavior as well as familiar naming. State unsupported paths and maintenance costs. Discuss proposed public changes with the maintainer, who retains ownership of the upstream roadmap and architecture. |
+| Documentation | Verify factual claims, references and status labels. Preserve historical evidence and distinguish it from current instructions. |
 
-Keep this charter and internal decision history on our engineering-notes branch. Implementation branches carry the code, tests, public usage instructions and relevant verified explanations appropriate for upstream review. Discuss public API or architectural changes with the maintainer. Openness to contributions does not transfer project ownership.
+## Revisions
 
-Revise this charter when Cal changes the objective. Preserve the dated rationale for a revision so future work can distinguish a deliberate change in direction from an undocumented exception.
+Cal owns the objective. Record a dated rationale when it changes. Editorial revisions may clarify execution while preserving the adopted commitments.

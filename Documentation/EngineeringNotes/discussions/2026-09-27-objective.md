@@ -7,3 +7,5 @@ The accepted direction connects efficient storage to numerical and model consume
 Cal's experience with nuclear engineering codes motivates a rigorous approach to verification and qualification. The discussion distinguished floating-point representation from numerical accuracy, and successful tests from qualification for a particular application. The objective is aspirational; it does not assert that the current library has attained the assurance of an established nuclear code.
 
 We recorded the [engineering charter](../CHARTER.md) as the authoritative statement of that direction. The working-record entry points and decision format now link to it. The existing suite-first order remains in effect, and the internal record stays on our fork's documentation branch.
+
+At Cal's request, a writing-for-agents review reorganized the charter into an ordered workflow with explicit completion criteria, followed by guidance for each type of change. Shared policies remain with their existing owners through links. This editorial revision preserves the adopted objective and commitments.
