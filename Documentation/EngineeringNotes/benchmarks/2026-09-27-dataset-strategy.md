@@ -111,3 +111,7 @@ Local commit `31b3cff290` adds WDBC zero-, one- and 32-update CPU logistic check
 ## Dataframe conformance checkpoint
 
 Local commit `e5995732c2` adds 24 bounded dataframe cases for exact integers, nullable comparisons, stable ordering, typed grouping, functional replacement and logical matrix exports. All 97 controller tests, 48 dataframe engine cases and 28 smoke engine cases passed. Both certificate audits passed; 14 unchanged controls passed and 64 intentional wrong-output/input cases were rejected. See [the dataframe report](2026-09-27-dataframe-suite.md). This establishes logical behavior for the covered built-in types, not physical zero-copy layout or a performance baseline. Next, add fixed neural forward-pass fixtures and finish integration coverage before the separate one-commit-per-error production repair branch.
+
+## Fixed neural inference checkpoint
+
+Local commit `f8cec1f93b` adds fourteen fixed decoder fixture packs with independent logits and exact parameter readback. All 105 controller tests pass. Direct inference passes 23 of 24 engine cases; batched GPU cached RoPE fails, while both single-batch controls pass. Both Swift public-loader cases expose incomplete parameter replacement. CPU CI and smoke profiles pass and certify. Sixteen controls pass and all 56 deliberately invalid worker cases reject. See [the neural report](2026-09-27-neural-suite.md). No production fixes or formal performance baseline were included. Complete remaining integration coverage before the separate repair branch.

@@ -1,0 +1,88 @@
+{
+  "runs": [
+    {
+      "run": "suite-neural-03",
+      "profile": "neural-conformance",
+      "complete_case_coverage": true,
+      "cases": 24,
+      "passed": 23,
+      "failed": 1,
+      "validated_samples": 46,
+      "failures": [
+        {
+          "case_id": "neural-gpu-rope-cached",
+          "case_key": "ff21f5b416f9e494222aec2ccd5e4c7be1f5b6cf534c94a223a28ae7b588dcb1",
+          "engine": "swiftsci",
+          "batch": 0,
+          "status": "failed",
+          "error": "Worker exited 1; see neural-gpu-rope-cached-swiftsci-0.log",
+          "worker_error": "Output mismatch: -0.024063661694526672 versus 0.0425054856361493"
+        }
+      ],
+      "certificate": "failed",
+      "audit": "rejected failed certificate"
+    },
+    {
+      "run": "suite-neural-loader-02",
+      "profile": "neural-loader-conformance",
+      "complete_case_coverage": true,
+      "cases": 4,
+      "passed": 2,
+      "failed": 2,
+      "validated_samples": 4,
+      "failures": [
+        {
+          "case_id": "neural-cpu-public-loader",
+          "case_key": "9aca1da51c7a2304fe5648beb4ff7fcabc85b332d7bb4eff065256d54bb20fd1",
+          "engine": "swiftsci",
+          "batch": 0,
+          "status": "failed",
+          "error": "Worker exited 1; see neural-cpu-public-loader-swiftsci-0.log",
+          "worker_error": "Decoder parameter was not replaced exactly: layers.0.attention.key_proj.weight"
+        },
+        {
+          "case_id": "neural-gpu-public-loader",
+          "case_key": "477c8cecf2f47def65255c371e6a002c2fb72f824e782583d59d8d1797d11a74",
+          "engine": "swiftsci",
+          "batch": 0,
+          "status": "failed",
+          "error": "Worker exited 1; see neural-gpu-public-loader-swiftsci-0.log",
+          "worker_error": "Decoder parameter was not replaced exactly: layers.0.attention.key_proj.weight"
+        }
+      ],
+      "certificate": "failed",
+      "audit": "rejected failed certificate"
+    },
+    {
+      "run": "suite-neural-cpu-01",
+      "profile": "neural-cpu-conformance",
+      "complete_case_coverage": true,
+      "cases": 10,
+      "passed": 10,
+      "failed": 0,
+      "validated_samples": 20,
+      "failures": [],
+      "certificate": "passed",
+      "audit": "passed"
+    },
+    {
+      "run": "suite-neural-smoke-01",
+      "profile": "smoke",
+      "complete_case_coverage": true,
+      "cases": 28,
+      "passed": 28,
+      "failed": 0,
+      "validated_samples": 28,
+      "failures": [],
+      "certificate": "passed",
+      "audit": "passed"
+    }
+  ],
+  "negative_controls": {
+    "total": 72,
+    "passed": 16,
+    "rejected": 56
+  },
+  "controller_tests": 105,
+  "earlier_unprepared_run": "suite-neural-02 did not execute; excluded from coverage and runtime claims"
+}

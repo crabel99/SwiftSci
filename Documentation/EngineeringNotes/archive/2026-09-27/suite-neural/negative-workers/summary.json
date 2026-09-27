@@ -1,0 +1,578 @@
+[
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "wrong-first-logit",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: -0.4499880075454712 versus -0.4399879974225813"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "wrong-first-logit",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 3: -0.4499880075454712 != -0.4399879974225813"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "wrong-last-logit",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 0.4791628122329712 versus 0.4891629045315522"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "wrong-last-logit",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 58: 0.47916287183761597 != 0.4891629045315522"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "bad-token",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder dimensions and token IDs must be bounded integers"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "bad-token",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid token ID"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "float-token",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder dimensions and token IDs must be bounded integers"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "float-token",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid token ID"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "bad-weight-shape",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid decoder weight shape: lmHead.weight"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "bad-weight-shape",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Wrong weight shape"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "inexact-weight",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder weight is not bounded exact Float32: lmHead.weight"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "inexact-weight",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Weight is not exactly Float32"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "changed-weight",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: -0.3795163631439209 versus -0.44998799742258133"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "changed-weight",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 3: -0.3795163929462433 != -0.44998799742258133"
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "future-token",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-cpu-learned-full",
+    "variant": "future-token",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "wrong-first-logit",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: -0.2632696330547333 versus -0.25326955405482643"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "wrong-first-logit",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 3: -0.2632695734500885 != -0.25326955405482643"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "wrong-last-logit",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: -0.16112127900123596 versus -0.15112127371481945"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "wrong-last-logit",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 58: -0.16112130880355835 != -0.15112127371481945"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "bad-token",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder dimensions and token IDs must be bounded integers"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "bad-token",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid token ID"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "float-token",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder dimensions and token IDs must be bounded integers"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "float-token",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid token ID"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "bad-weight-shape",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid decoder weight shape: lmHead.weight"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "bad-weight-shape",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Wrong weight shape"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "inexact-weight",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder weight is not bounded exact Float32: lmHead.weight"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "inexact-weight",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Weight is not exactly Float32"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "changed-weight",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: -0.22438645362854004 versus -0.26326955405482644"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "changed-weight",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 3: -0.2243863344192505 != -0.26326955405482644"
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "future-token",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-cpu-rope-cached",
+    "variant": "future-token",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "wrong-first-logit",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: -0.4499879479408264 versus -0.4399879974225813"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "wrong-first-logit",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 3: -0.4499880075454712 != -0.4399879974225813"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "wrong-last-logit",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: 0.47916290163993835 versus 0.4891629045315522"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "wrong-last-logit",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 58: 0.47916290163993835 != 0.4891629045315522"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "bad-token",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder dimensions and token IDs must be bounded integers"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "bad-token",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid token ID"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "float-token",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder dimensions and token IDs must be bounded integers"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "float-token",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid token ID"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "bad-weight-shape",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid decoder weight shape: lmHead.weight"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "bad-weight-shape",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Wrong weight shape"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "inexact-weight",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder weight is not bounded exact Float32: lmHead.weight"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "inexact-weight",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Weight is not exactly Float32"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "changed-weight",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: -0.3795163333415985 versus -0.44998799742258133"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "changed-weight",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 3: -0.3795163929462433 != -0.44998799742258133"
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "future-token",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-gpu-learned-cached",
+    "variant": "future-token",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "control",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "control",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "wrong-first-logit",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: -0.2632695138454437 versus -0.25326955405482643"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "wrong-first-logit",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 3: -0.2632695734500885 != -0.25326955405482643"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "wrong-last-logit",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: -0.16112133860588074 versus -0.15112127371481945"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "wrong-last-logit",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 58: -0.16112130880355835 != -0.15112127371481945"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "bad-token",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder dimensions and token IDs must be bounded integers"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "bad-token",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid token ID"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "float-token",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder dimensions and token IDs must be bounded integers"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "float-token",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid token ID"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "bad-weight-shape",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Invalid decoder weight shape: lmHead.weight"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "bad-weight-shape",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Wrong weight shape"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "inexact-weight",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Decoder weight is not bounded exact Float32: lmHead.weight"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "inexact-weight",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Weight is not exactly Float32"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "changed-weight",
+    "engine": "swiftsci",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch: -0.22438625991344452 versus -0.26326955405482644"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "changed-weight",
+    "engine": "pandas",
+    "status": "failed",
+    "exit_code": 1,
+    "error": "Output mismatch at 3: -0.2243863344192505 != -0.26326955405482644"
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "future-token",
+    "engine": "swiftsci",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "case": "neural-gpu-rope-full",
+    "variant": "future-token",
+    "engine": "pandas",
+    "status": "passed",
+    "exit_code": 0,
+    "error": null
+  }
+]

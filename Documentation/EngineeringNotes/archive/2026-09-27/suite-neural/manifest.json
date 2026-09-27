@@ -1,0 +1,2398 @@
+{
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/api-review.md": {
+    "bytes": 12431,
+    "sha256": "dd03204073d90bd79fcc2b2d90cf62f8a5588374a48147f7b790884a115f79a0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/archive-notes.py": {
+    "bytes": 3187,
+    "sha256": "ea575f7dc4631f6053edce09faaeda78108f21a122d515619f6c43b5ee5f8d85"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/build-final.log": {
+    "bytes": 117,
+    "sha256": "8f34450798b18f075796255fa09657974146df5f3b4c8de3e9b789bfecb5be50"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/build.log": {
+    "bytes": 117,
+    "sha256": "8f34450798b18f075796255fa09657974146df5f3b4c8de3e9b789bfecb5be50"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/check-workers.py": {
+    "bytes": 3234,
+    "sha256": "46d03bee9743bc28fca0d8ebd2d3ba0937c6ddfbfca72544ba2a3f754344dc0e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/commit-verification.json": {
+    "bytes": 305,
+    "sha256": "8634a7711ab4aa83a32e40140c8362ccc5f7cd7db4bf101d4e00e709944e7936"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/contract.md": {
+    "bytes": 3557,
+    "sha256": "70da66c32a9ea201636fef566b3da4f96ed767ab32fb62607faed2cebbad8556"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/controller-final-fixed.log": {
+    "bytes": 206,
+    "sha256": "256222f4f6ef2f8639ecd8b6bea1f32563cdcb1257c0da8175473f58dc97f5bf"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/controller-final.log": {
+    "bytes": 1444,
+    "sha256": "5e04db7ea28a538978d6cdf7bb07dd6bf3cb0d1329304d45a93e54d5974f7240"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/controller.log": {
+    "bytes": 205,
+    "sha256": "a31196761feff3c15287639f6a26ffa3067a5f9aec54bd36dc34bdca983bdbe3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/decisions.tsv": {
+    "bytes": 2659,
+    "sha256": "7caa158fd5fbdc1cee0b21b860a457793b9d2699717cfc5be443b12b849c1301"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/gpu-rope-source-review.md": {
+    "bytes": 4755,
+    "sha256": "9658372b3b782cd1de5afb68d6fb5a7544443a0134189f39b363a8ebdd9bc3e2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/integrate.py": {
+    "bytes": 3661,
+    "sha256": "2db1abfc225c1867c898a0941c42b7767645047c53610c0df477ca0011d876a1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/isolate-rope.py": {
+    "bytes": 1903,
+    "sha256": "fc96f90305ef8cb9622b1d99856f364407f19812bfe955e5077e1ce4d859f2c3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/loader.log": {
+    "bytes": 192,
+    "sha256": "0bc7a2f946d343b14253cb8297ea816717830de8dcf26f6306ad02ee15437226"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers-final.log": {
+    "bytes": 87,
+    "sha256": "7ba07d946e42361ffa962f8e0fc9941f15f9914bba7ec6f236ab494b94c60d24"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers-unprepared.log": {
+    "bytes": 1053,
+    "sha256": "0ddd1fa02def4ad9da12c496c6e3709574bd0e5af1e2be005d2a8a5ad67e75e0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers.log": {
+    "bytes": 1053,
+    "sha256": "0ddd1fa02def4ad9da12c496c6e3709574bd0e5af1e2be005d2a8a5ad67e75e0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-bad-token-pandas.request.json": {
+    "bytes": 670,
+    "sha256": "4f28f0b43c716e41d1a31f074ee118e63fc622802b643e90a5d47fdc70893674"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-bad-token-pandas.request.response.json": {
+    "bytes": 250,
+    "sha256": "7838a5a2d11a64ba945f435a9754eb38db57b7eb2eb63681543982d22f317432"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-bad-token-swiftsci.request.json": {
+    "bytes": 670,
+    "sha256": "4f28f0b43c716e41d1a31f074ee118e63fc622802b643e90a5d47fdc70893674"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-bad-token-swiftsci.request.response.json": {
+    "bytes": 282,
+    "sha256": "b27077c5f11abb78f2f899b9275c259e8548ab3f50efbb7626cfea8e694a3d47"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-bad-token.json": {
+    "bytes": 5933,
+    "sha256": "47a6688c681eaf88dfb6753dbd4133336a19683e6c7523a93410b8b6d606e099"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-bad-weight-shape-pandas.request.json": {
+    "bytes": 677,
+    "sha256": "9e787d9da306dd42cc8b048db38cff7541b32656c21e67b07eda0cc5072403c3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-bad-weight-shape-pandas.request.response.json": {
+    "bytes": 252,
+    "sha256": "4bae02463a57e2be08935209ede003c6b26d47f9b6e6bbe7e58c78228f5e5a46"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-bad-weight-shape-swiftsci.request.json": {
+    "bytes": 677,
+    "sha256": "9e787d9da306dd42cc8b048db38cff7541b32656c21e67b07eda0cc5072403c3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-bad-weight-shape-swiftsci.request.response.json": {
+    "bytes": 268,
+    "sha256": "4161f0cb01f42d2967919d3e2b99e3144a4775dd7b8a49be0fe707702d5a779c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-bad-weight-shape.json": {
+    "bytes": 5933,
+    "sha256": "351955abfd551df4e3b9a5482d0daa93920eca8fbd0fa00c6416cfa3f7d1c424"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-changed-weight-pandas.request.json": {
+    "bytes": 675,
+    "sha256": "f9d3dd8c749857176384824ebf66696622db569e55a93087557eeb878df40de5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-changed-weight-pandas.request.response.json": {
+    "bytes": 299,
+    "sha256": "d3fd0398aead58ed46cfd298e19a50a4e5783a4dcbe2ad75428f4bc7b128db9f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-changed-weight-swiftsci.request.json": {
+    "bytes": 675,
+    "sha256": "f9d3dd8c749857176384824ebf66696622db569e55a93087557eeb878df40de5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-changed-weight-swiftsci.request.response.json": {
+    "bytes": 289,
+    "sha256": "4e6d4d0686c928eed86bfae9eaed672f21f824ed95feda24080a413f6ab94393"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-changed-weight.json": {
+    "bytes": 5915,
+    "sha256": "186a8c4d52577812f5ee5d3ffc2e745bff09ceeab4a8f19409e84a53209249cf"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-control-pandas.request.json": {
+    "bytes": 716,
+    "sha256": "626718208816891007f4829224d67d05b29493c7fc0f219c740c99b70103ff0d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-control-pandas.request.response.json": {
+    "bytes": 794,
+    "sha256": "96e8b73a23f6fa5d9acbe5931fec20a4d9b3eee574440ca9abee1ad1ca9f38d3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-control-swiftsci.request.json": {
+    "bytes": 716,
+    "sha256": "626718208816891007f4829224d67d05b29493c7fc0f219c740c99b70103ff0d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-control-swiftsci.request.response.json": {
+    "bytes": 595,
+    "sha256": "3f7abfb7296a7fb292ece0bc607dd213963df854044914ec334133dba24e18f3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-float-token-pandas.request.json": {
+    "bytes": 672,
+    "sha256": "00939396506c766a1c7ec78ec2008c5fbe59640431985162ae08d525f18868bd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-float-token-pandas.request.response.json": {
+    "bytes": 250,
+    "sha256": "7838a5a2d11a64ba945f435a9754eb38db57b7eb2eb63681543982d22f317432"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-float-token-swiftsci.request.json": {
+    "bytes": 672,
+    "sha256": "00939396506c766a1c7ec78ec2008c5fbe59640431985162ae08d525f18868bd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-float-token-swiftsci.request.response.json": {
+    "bytes": 282,
+    "sha256": "0d735605686e9a86ff29003d3fd0d4cd3a3f4ae09d303047f2dfed3122eee270"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-float-token.json": {
+    "bytes": 5935,
+    "sha256": "18fcb187b02af6c42f9428f222bbec5430be6150df19ca9c36dc34d5d440d1eb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-future-token-pandas.request.json": {
+    "bytes": 660,
+    "sha256": "2ad24862e14951fd9cc30cbf4a44bb0314aa49692ce1e49162b373259467f599"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-future-token-pandas.request.response.json": {
+    "bytes": 794,
+    "sha256": "de0938189692daddeaee882b8d4657a12543525224066eeaf8bcb11b38b09e20"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-future-token-swiftsci.request.json": {
+    "bytes": 660,
+    "sha256": "2ad24862e14951fd9cc30cbf4a44bb0314aa49692ce1e49162b373259467f599"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-future-token-swiftsci.request.response.json": {
+    "bytes": 597,
+    "sha256": "b8f0ab52fdc2bd556339991204f0fb662e9b62e8677ee0eb649d80bc65027df0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-future-token.f64": {
+    "bytes": 472,
+    "sha256": "996c8b89e67eb66146e8d06224e5760aa372916b3ef94c437e7cba8bec7abd4b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-future-token.json": {
+    "bytes": 5933,
+    "sha256": "fd01108481e1228b38e0d9c1d76283e8b268cf1dfbc106eef6adf34fa10df3e6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-inexact-weight-pandas.request.json": {
+    "bytes": 675,
+    "sha256": "31082039cfff53c37c12004507226d775d5a5cdd35ab6a81f5fc59e7bcdc5886"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-inexact-weight-pandas.request.response.json": {
+    "bytes": 263,
+    "sha256": "eb0e302a7cbcfeeb07fc45a52bb3c1601ebe9d55631e17fe38dabc1f68f0bc57"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-inexact-weight-swiftsci.request.json": {
+    "bytes": 675,
+    "sha256": "31082039cfff53c37c12004507226d775d5a5cdd35ab6a81f5fc59e7bcdc5886"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-inexact-weight-swiftsci.request.response.json": {
+    "bytes": 283,
+    "sha256": "d158d47bb6d56b7bff0d2e22451c2821c1a3b0518439338c741e7969c2ddd435"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-inexact-weight.json": {
+    "bytes": 5929,
+    "sha256": "34a81350bc968b1e197e1213244765909857ceca75d5a487e8a3e0d6186a8916"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-wrong-first-logit-pandas.request.json": {
+    "bytes": 708,
+    "sha256": "ba9c0614eef69d311eda277e0cb83c2a8510e1e20c6126ce490ec895b785c664"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-wrong-first-logit-pandas.request.response.json": {
+    "bytes": 298,
+    "sha256": "e398f12879c8f77197ed9e7d2046301beae6b0df7241b89bba7bd55a9e0dcbb0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-wrong-first-logit-swiftsci.request.json": {
+    "bytes": 708,
+    "sha256": "ba9c0614eef69d311eda277e0cb83c2a8510e1e20c6126ce490ec895b785c664"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-wrong-first-logit-swiftsci.request.response.json": {
+    "bytes": 288,
+    "sha256": "94d8cb3ed791a7eb3bb42af74bdd0139e1e27d7fe05c764dd627c26de90e52a7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-wrong-first-logit.f64": {
+    "bytes": 472,
+    "sha256": "0a4b6fc5fed3c9718d3c3f8465ed59210cdec3dd2ecb2d07dd947c8bb10d5135"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-wrong-last-logit-pandas.request.json": {
+    "bytes": 707,
+    "sha256": "764804bfda0afa6a4da7e51fc74750eb73b9ef5d12ec3dd4990ec072194f04ab"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-wrong-last-logit-pandas.request.response.json": {
+    "bytes": 298,
+    "sha256": "8d82182b8826efac7e88dd4768f453b4ca2a7c9aba1481b0801629fa594deb28"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-wrong-last-logit-swiftsci.request.json": {
+    "bytes": 707,
+    "sha256": "764804bfda0afa6a4da7e51fc74750eb73b9ef5d12ec3dd4990ec072194f04ab"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-wrong-last-logit-swiftsci.request.response.json": {
+    "bytes": 286,
+    "sha256": "7e9b41760c274e93a2b093b21068e2be3b75703abd5f06a7953fbacbbebab1bb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-learned-full-wrong-last-logit.f64": {
+    "bytes": 472,
+    "sha256": "950c726931c2cb18c7e0618ebec796f923a45255f94a9e832077a206478d0196"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-bad-token-pandas.request.json": {
+    "bytes": 668,
+    "sha256": "5c7e400697e71a6040e00ccc81c86e7d57dce0928eb72c686380a32503495218"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-bad-token-pandas.request.response.json": {
+    "bytes": 250,
+    "sha256": "31675323e539669faefd5c67410d9154cf0ed76f64f2fc20d4352f6117b8afe5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-bad-token-swiftsci.request.json": {
+    "bytes": 668,
+    "sha256": "5c7e400697e71a6040e00ccc81c86e7d57dce0928eb72c686380a32503495218"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-bad-token-swiftsci.request.response.json": {
+    "bytes": 282,
+    "sha256": "030ba90ac57e66caa6b30f823d7c0790898c4c9cc79ce901496f7fba0997f8d3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-bad-token.json": {
+    "bytes": 5932,
+    "sha256": "c70f3f49c602392ea9b014f059a1ee5c8bf440a814b5b8ae5ec70e4a85b5f409"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-bad-weight-shape-pandas.request.json": {
+    "bytes": 675,
+    "sha256": "db287ef38fe9449ea8e9359aef4bcfea9bceccc22c56025563f604d059f31407"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-bad-weight-shape-pandas.request.response.json": {
+    "bytes": 252,
+    "sha256": "75fb3297fbe2729fea408ac839f9e293c7b1de466a679f7c708845207b90cffb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-bad-weight-shape-swiftsci.request.json": {
+    "bytes": 675,
+    "sha256": "db287ef38fe9449ea8e9359aef4bcfea9bceccc22c56025563f604d059f31407"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-bad-weight-shape-swiftsci.request.response.json": {
+    "bytes": 268,
+    "sha256": "a9857808356f69539caa52ae148b92a23973d59604f3ce310e95903eb2e5df78"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-bad-weight-shape.json": {
+    "bytes": 5932,
+    "sha256": "7f2177d7f3bd55992c90b25727ad086347e4453d201d184c204a62e9ec2aed06"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-changed-weight-pandas.request.json": {
+    "bytes": 673,
+    "sha256": "9b7d162eb145470606e9c4ad5a7430a9340d5b5c5dbc348bd997317dee1c119d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-changed-weight-pandas.request.response.json": {
+    "bytes": 299,
+    "sha256": "b2f3093c70f522e567dfd17a45370075556ea9179027bfcfffad062f271ea41a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-changed-weight-swiftsci.request.json": {
+    "bytes": 673,
+    "sha256": "9b7d162eb145470606e9c4ad5a7430a9340d5b5c5dbc348bd997317dee1c119d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-changed-weight-swiftsci.request.response.json": {
+    "bytes": 290,
+    "sha256": "2e3f833811d902bf1f77b276d9eb5987c10196d4bbca438b929653498b0600f8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-changed-weight.json": {
+    "bytes": 5914,
+    "sha256": "5f19fe62c8683b0a98313bdc9747150211cd66b50ad4b4238d481727ff21bd66"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-control-pandas.request.json": {
+    "bytes": 715,
+    "sha256": "74212b0b1970e5f4864098c2a21f83a1a2092e561fc5c159c34a128ee135b433"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-control-pandas.request.response.json": {
+    "bytes": 798,
+    "sha256": "2b07f47d540dab95364dc148e404a913daf0b3d772db040102a2cd9032c3bc3b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-control-swiftsci.request.json": {
+    "bytes": 715,
+    "sha256": "74212b0b1970e5f4864098c2a21f83a1a2092e561fc5c159c34a128ee135b433"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-control-swiftsci.request.response.json": {
+    "bytes": 601,
+    "sha256": "4bb2b9ad2d61aeac390d93795a19a455296641d69175da431e8044d786e13fd2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-float-token-pandas.request.json": {
+    "bytes": 670,
+    "sha256": "562a99329ea1d204dd471a258abe01d1730544e7131217eeff2cede5fd04e749"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-float-token-pandas.request.response.json": {
+    "bytes": 250,
+    "sha256": "31675323e539669faefd5c67410d9154cf0ed76f64f2fc20d4352f6117b8afe5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-float-token-swiftsci.request.json": {
+    "bytes": 670,
+    "sha256": "562a99329ea1d204dd471a258abe01d1730544e7131217eeff2cede5fd04e749"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-float-token-swiftsci.request.response.json": {
+    "bytes": 282,
+    "sha256": "d594c91c5e7f87c6fd773c9bf36477a7e6923f98a8d4284caebcf042090b2417"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-float-token.json": {
+    "bytes": 5934,
+    "sha256": "83cbd95dd759cc487bed8d3defce3a6e5ac50d0f888df5212d62bb5c307fba06"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-future-token-pandas.request.json": {
+    "bytes": 658,
+    "sha256": "23c2c85ef7f547991d342e3e115956e6b38f49a1310875a0644e9f6743f3bc16"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-future-token-pandas.request.response.json": {
+    "bytes": 798,
+    "sha256": "f6f3b668498260da50871dd746ecec8c8276f7b4e5e496c89c7006507281996e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-future-token-swiftsci.request.json": {
+    "bytes": 658,
+    "sha256": "23c2c85ef7f547991d342e3e115956e6b38f49a1310875a0644e9f6743f3bc16"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-future-token-swiftsci.request.response.json": {
+    "bytes": 601,
+    "sha256": "90700ae8a8f16d28ddbe83e4e54f3de8fc320e48125b8f311523f5cff553da14"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-future-token.f64": {
+    "bytes": 504,
+    "sha256": "f21fbbe9635356ade1bbce812deab1079af943e2d9ff3daa7348994c0d82b4da"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-future-token.json": {
+    "bytes": 5932,
+    "sha256": "4871d9a12630db67a3cb6aeefbe324487d3e31d0cda0c3e3db29261b2949e029"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-inexact-weight-pandas.request.json": {
+    "bytes": 673,
+    "sha256": "3d09e2fd30d4a42ff4513fc1c148caab5e53cd4e7eeff9fe2596d3d06133f472"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-inexact-weight-pandas.request.response.json": {
+    "bytes": 263,
+    "sha256": "979762703e42d0654a186e8e799f9ca94ee2726e359fa45377338ced4f837890"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-inexact-weight-swiftsci.request.json": {
+    "bytes": 673,
+    "sha256": "3d09e2fd30d4a42ff4513fc1c148caab5e53cd4e7eeff9fe2596d3d06133f472"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-inexact-weight-swiftsci.request.response.json": {
+    "bytes": 283,
+    "sha256": "a7f401de91398fe05d5e34d20e44452105a79c79d7e926320cea4c96ad0339f5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-inexact-weight.json": {
+    "bytes": 5928,
+    "sha256": "9056ad98f6cd198cbc6920c2b1aba6ae6b30dd054f4179b20af33a8aad594e64"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-wrong-first-logit-pandas.request.json": {
+    "bytes": 707,
+    "sha256": "62adc96de80de2434a0a621dd447f7bb80e7c7e5e9ba4278c7c8b351828d253a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-wrong-first-logit-pandas.request.response.json": {
+    "bytes": 299,
+    "sha256": "f2ed796b21a15fbc2c6cfdb850bb11b5c45cb67c220ca1af3c77b64136850a3f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-wrong-first-logit-swiftsci.request.json": {
+    "bytes": 707,
+    "sha256": "62adc96de80de2434a0a621dd447f7bb80e7c7e5e9ba4278c7c8b351828d253a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-wrong-first-logit-swiftsci.request.response.json": {
+    "bytes": 289,
+    "sha256": "faf6e18f1a585b14e65888fc06307667f810e2e75f5b9e8a450be611eba0a740"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-wrong-first-logit.f64": {
+    "bytes": 504,
+    "sha256": "548bcf1944ce8edb73815a1b5250eb0d8f0ef6653436c6d152a1f19ab3f76845"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-wrong-last-logit-pandas.request.json": {
+    "bytes": 706,
+    "sha256": "474417aa6eddc8128e898a57ef88310914f73f673432708e9b167e712fcd4385"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-wrong-last-logit-pandas.request.response.json": {
+    "bytes": 301,
+    "sha256": "6899feba4aedfaff88d2507312dd8b52b6e9d9f339cae995f8b7a15ce4833048"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-wrong-last-logit-swiftsci.request.json": {
+    "bytes": 706,
+    "sha256": "474417aa6eddc8128e898a57ef88310914f73f673432708e9b167e712fcd4385"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-wrong-last-logit-swiftsci.request.response.json": {
+    "bytes": 290,
+    "sha256": "4bf05d13952cc4495d6c9574999241a275c377e77b5d66c2339bd85862feb3a4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-cpu-rope-cached-wrong-last-logit.f64": {
+    "bytes": 504,
+    "sha256": "dfa1d22d13ba70e5a64e2b430e57848cef7e1d4fe8f4598049cc80c2e2480a3a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-bad-token-pandas.request.json": {
+    "bytes": 674,
+    "sha256": "9fb91d9b11a0f534ed80700b9b90acdff25afc24ba95c728b59b06ecb9580749"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-bad-token-pandas.request.response.json": {
+    "bytes": 250,
+    "sha256": "7e91864ce182ca54d47d37b021166badf7b6e7b3d9841b0dc3f05fb0af9b5301"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-bad-token-swiftsci.request.json": {
+    "bytes": 674,
+    "sha256": "9fb91d9b11a0f534ed80700b9b90acdff25afc24ba95c728b59b06ecb9580749"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-bad-token-swiftsci.request.response.json": {
+    "bytes": 282,
+    "sha256": "a254289f0b6d2e717b22d3d11b8b49340ca01f1ecc5001a8c2d6dbecbdc694e9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-bad-token.json": {
+    "bytes": 5935,
+    "sha256": "16d9d1982398e433f889ca8afa143e0861efc9d8a868f8bc1d31c61bc5f6160f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-bad-weight-shape-pandas.request.json": {
+    "bytes": 681,
+    "sha256": "1fd629c0757029394578b193eafe413c17fccb20931719d17701eb20246dcda0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-bad-weight-shape-pandas.request.response.json": {
+    "bytes": 252,
+    "sha256": "ef378ba71a3c6657073da5ed8e92a895fc841b073258adc630929b84cb1dd91e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-bad-weight-shape-swiftsci.request.json": {
+    "bytes": 681,
+    "sha256": "1fd629c0757029394578b193eafe413c17fccb20931719d17701eb20246dcda0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-bad-weight-shape-swiftsci.request.response.json": {
+    "bytes": 268,
+    "sha256": "41bfa05b40a56fcc84592942f25c669a019bad6b3b81825f2c4d105cfc42e097"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-bad-weight-shape.json": {
+    "bytes": 5935,
+    "sha256": "1bb91be8dfb522f4b0dc82bedbdc5b3227dfd890bbdbc7d80636e7453b728b77"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-changed-weight-pandas.request.json": {
+    "bytes": 679,
+    "sha256": "2125af2ee7788480d966f230091741353e408ab110ea5fa7da2ea73da43b86f9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-changed-weight-pandas.request.response.json": {
+    "bytes": 299,
+    "sha256": "1b614d8058907b4cedb81fe54df18222895a8f7c5d8d5e3fb0510d0268856dfd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-changed-weight-swiftsci.request.json": {
+    "bytes": 679,
+    "sha256": "2125af2ee7788480d966f230091741353e408ab110ea5fa7da2ea73da43b86f9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-changed-weight-swiftsci.request.response.json": {
+    "bytes": 289,
+    "sha256": "4ade358647f2b73ca6bb066abdf89875a5ea64ebe47237c13a0ba1a61400afc2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-changed-weight.json": {
+    "bytes": 5917,
+    "sha256": "c1340fafc1127c5a5254838b8658935c33c4e13aa95b12e0bfcbb916213cd9df"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-control-pandas.request.json": {
+    "bytes": 718,
+    "sha256": "094dfa5daf39a4719c37d2ad09cb1a218cd3f3999ddf00e604e7d51b5f410c79"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-control-pandas.request.response.json": {
+    "bytes": 796,
+    "sha256": "a308434803d0c83691af8d2ea39fb22bb4a1193dad1102b75db0a1c9a10c021a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-control-swiftsci.request.json": {
+    "bytes": 718,
+    "sha256": "094dfa5daf39a4719c37d2ad09cb1a218cd3f3999ddf00e604e7d51b5f410c79"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-control-swiftsci.request.response.json": {
+    "bytes": 599,
+    "sha256": "5540f0a0903f810766c5da78739b201e23873c10e55ac9723d4cfa58c2425d1e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-float-token-pandas.request.json": {
+    "bytes": 676,
+    "sha256": "e6395da1de2b47e3ce6e220c955e8a6f593a534f3ca4f377d649a7101406d4df"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-float-token-pandas.request.response.json": {
+    "bytes": 250,
+    "sha256": "7e91864ce182ca54d47d37b021166badf7b6e7b3d9841b0dc3f05fb0af9b5301"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-float-token-swiftsci.request.json": {
+    "bytes": 676,
+    "sha256": "e6395da1de2b47e3ce6e220c955e8a6f593a534f3ca4f377d649a7101406d4df"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-float-token-swiftsci.request.response.json": {
+    "bytes": 282,
+    "sha256": "10f8564e537b0389aa55f247218ac5418edb94aed32412b40754ca483d0e697b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-float-token.json": {
+    "bytes": 5937,
+    "sha256": "9d8abb6ad567f531d2e36ca6d895ffa7609f847f519bac0a34bc9e84d5809c77"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-future-token-pandas.request.json": {
+    "bytes": 664,
+    "sha256": "6ad358f5f04877022b2313d3ac40eec98d20daa1d07e3317bafe35a4a83ca357"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-future-token-pandas.request.response.json": {
+    "bytes": 798,
+    "sha256": "39a3146806bebfafd3ea25fdb561ef28c369ea8ae35afce88d49c97bd3533f31"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-future-token-swiftsci.request.json": {
+    "bytes": 664,
+    "sha256": "6ad358f5f04877022b2313d3ac40eec98d20daa1d07e3317bafe35a4a83ca357"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-future-token-swiftsci.request.response.json": {
+    "bytes": 601,
+    "sha256": "1072044932af325429def0c0654de410bedc3297182a0efcfb804b55865d6927"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-future-token.f64": {
+    "bytes": 504,
+    "sha256": "96a6947c42539f299769c680949ed541cf69cfd2f4998c13491a5317f8ea170b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-future-token.json": {
+    "bytes": 5935,
+    "sha256": "5442cae59f846092443777ec6f84d7f22306f081b611d786411a88cd27019f8c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-inexact-weight-pandas.request.json": {
+    "bytes": 679,
+    "sha256": "bca25a04fdad1c9f8c553b6ccc3143d9df1b13867e7208222ac458ca73b27971"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-inexact-weight-pandas.request.response.json": {
+    "bytes": 263,
+    "sha256": "4798ba6e01bdb77b537ff37250de9ce7b7ad1a7ac22d39b604f9ad48062ead80"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-inexact-weight-swiftsci.request.json": {
+    "bytes": 679,
+    "sha256": "bca25a04fdad1c9f8c553b6ccc3143d9df1b13867e7208222ac458ca73b27971"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-inexact-weight-swiftsci.request.response.json": {
+    "bytes": 283,
+    "sha256": "b5c40297ef1e68e4fda595c2572e453a487bcf6905fb61628935e68b9a40445b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-inexact-weight.json": {
+    "bytes": 5931,
+    "sha256": "09289f72969af6634d81051fe572bf4c412c30a7f0ced7c4fd783857ae460d9f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-wrong-first-logit-pandas.request.json": {
+    "bytes": 710,
+    "sha256": "e745249a2bbc2bbed725505504ab733d074023e0ff9c0f8e97bc43b5a8cc164b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-wrong-first-logit-pandas.request.response.json": {
+    "bytes": 298,
+    "sha256": "29bd63a6ef42c93f1532b1a59701c70a41ae1844b6399361edc32e13ed899f45"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-wrong-first-logit-swiftsci.request.json": {
+    "bytes": 710,
+    "sha256": "e745249a2bbc2bbed725505504ab733d074023e0ff9c0f8e97bc43b5a8cc164b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-wrong-first-logit-swiftsci.request.response.json": {
+    "bytes": 288,
+    "sha256": "bd35e698023b4cf9baf5f67a50856434200cf55b4f078f7c3352f28bff4cfc6a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-wrong-first-logit.f64": {
+    "bytes": 504,
+    "sha256": "b8c35ad2262e35a7f14e594b4a5cf1320421a41baade6b90f3bd950acdeccba5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-wrong-last-logit-pandas.request.json": {
+    "bytes": 709,
+    "sha256": "f9f0ab351ee86164ca68aa4774e1522f19d6254bfbe5a8deeb32d8c2f423da2d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-wrong-last-logit-pandas.request.response.json": {
+    "bytes": 298,
+    "sha256": "820f9e5d08fdd373a456ea68eb27db118563c6d7e89a8ed5efd909a8d5cf629f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-wrong-last-logit-swiftsci.request.json": {
+    "bytes": 709,
+    "sha256": "f9f0ab351ee86164ca68aa4774e1522f19d6254bfbe5a8deeb32d8c2f423da2d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-wrong-last-logit-swiftsci.request.response.json": {
+    "bytes": 287,
+    "sha256": "eb95bf9a7ec37e269de44be8158be89e03c18d7a59801ff21927dd4e1793b251"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-learned-cached-wrong-last-logit.f64": {
+    "bytes": 504,
+    "sha256": "7178e5fe8e5b5c9c3320e05045fb230b8e00723a73b598fe4686b24373c9313c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-bad-token-pandas.request.json": {
+    "bytes": 664,
+    "sha256": "d9af203a85dc78d0b5868a5b68b9d48b01179b3446608cb1d129d7edeef1abbb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-bad-token-pandas.request.response.json": {
+    "bytes": 250,
+    "sha256": "e5361c118f377fe2c8bd4ff8e44fa44479bae52da01063e26a7bd6c391dfffdf"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-bad-token-swiftsci.request.json": {
+    "bytes": 664,
+    "sha256": "d9af203a85dc78d0b5868a5b68b9d48b01179b3446608cb1d129d7edeef1abbb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-bad-token-swiftsci.request.response.json": {
+    "bytes": 282,
+    "sha256": "fa27a89bc497d63f639c7d65c2ff76d47b9f67dfd64c28ea0d9b03537054b312"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-bad-token.json": {
+    "bytes": 5930,
+    "sha256": "c1751ccba84314f1ea2df1ced8c2bc7f158a0a93575134ff8160ff161a60304c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-bad-weight-shape-pandas.request.json": {
+    "bytes": 671,
+    "sha256": "df066b0b08a96be471a66e9bdfed7592837c51a81616d4d8591b46f4837c424d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-bad-weight-shape-pandas.request.response.json": {
+    "bytes": 252,
+    "sha256": "1a63817aef8de0ac72924309a614c921cf00e2a5cb458cac8d20397a1d881681"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-bad-weight-shape-swiftsci.request.json": {
+    "bytes": 671,
+    "sha256": "df066b0b08a96be471a66e9bdfed7592837c51a81616d4d8591b46f4837c424d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-bad-weight-shape-swiftsci.request.response.json": {
+    "bytes": 268,
+    "sha256": "dd40af821868e2f928c9da71adda78a07a35b081c13a03e1093ca23add73629f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-bad-weight-shape.json": {
+    "bytes": 5930,
+    "sha256": "a50d0343b4a7464966c8504eb6010d613b3b54c3ca1900c9ce272ed88e3ab21b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-changed-weight-pandas.request.json": {
+    "bytes": 669,
+    "sha256": "c80aab77c23468435bfc315ceb936e5abb36a0f3a7d7f378b71a852ef2b63698"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-changed-weight-pandas.request.response.json": {
+    "bytes": 299,
+    "sha256": "31232e7030b954bb5a63ef5105b9f1b8eec37f0ef4c3c5b51c254290ccf85754"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-changed-weight-swiftsci.request.json": {
+    "bytes": 669,
+    "sha256": "c80aab77c23468435bfc315ceb936e5abb36a0f3a7d7f378b71a852ef2b63698"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-changed-weight-swiftsci.request.response.json": {
+    "bytes": 290,
+    "sha256": "4cd491be7e13c4dd9f7b34092fc680044f6b4f3d8b26b50f38c958631793eedd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-changed-weight.json": {
+    "bytes": 5912,
+    "sha256": "eee0e5489d2653d8a0f3d6ba144cf20e708bb02a873bacb63c7d2189bd4185f5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-control-pandas.request.json": {
+    "bytes": 713,
+    "sha256": "957fc867b4bbfd4e5857b532f881accf9669270c3abf0e73d91aec212c795908"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-control-pandas.request.response.json": {
+    "bytes": 796,
+    "sha256": "4b90ad4ee296e1eb71a71ad26da73f8062c4c2e9df8ef79065e0a6df8722e06c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-control-swiftsci.request.json": {
+    "bytes": 713,
+    "sha256": "957fc867b4bbfd4e5857b532f881accf9669270c3abf0e73d91aec212c795908"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-control-swiftsci.request.response.json": {
+    "bytes": 597,
+    "sha256": "24b80c41f2afcff627b8fbd82ddb8342d7232a081b880284fcedbba06f929e6d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-float-token-pandas.request.json": {
+    "bytes": 666,
+    "sha256": "5792e9ce1866f78ea84bec70a7b726e305b10896094c3ab0854093fbd19792cd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-float-token-pandas.request.response.json": {
+    "bytes": 250,
+    "sha256": "e5361c118f377fe2c8bd4ff8e44fa44479bae52da01063e26a7bd6c391dfffdf"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-float-token-swiftsci.request.json": {
+    "bytes": 666,
+    "sha256": "5792e9ce1866f78ea84bec70a7b726e305b10896094c3ab0854093fbd19792cd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-float-token-swiftsci.request.response.json": {
+    "bytes": 282,
+    "sha256": "0c0abb12eccf5fcd3156157a59eb2cfba715902688a554f1dceced223c4a7b6b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-float-token.json": {
+    "bytes": 5932,
+    "sha256": "e65d3477aaa13ff8ab239ec6a430c92ac13f754b31cd0ba93d298763fcc39802"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-future-token-pandas.request.json": {
+    "bytes": 654,
+    "sha256": "7d6071fb650e0141d9921c2ea5ddcaeff232c54c98b271d6fe02ee549632d7e4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-future-token-pandas.request.response.json": {
+    "bytes": 796,
+    "sha256": "77c8ec4f0dd7b0c0828ce1e6c49d4c3f5a5be5ec650c18c8093d12bf1f1d2c71"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-future-token-swiftsci.request.json": {
+    "bytes": 654,
+    "sha256": "7d6071fb650e0141d9921c2ea5ddcaeff232c54c98b271d6fe02ee549632d7e4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-future-token-swiftsci.request.response.json": {
+    "bytes": 599,
+    "sha256": "f258721927270d4e2a0c6b4842abd80fac18b8cec066599282ab0f9197b238e1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-future-token.f64": {
+    "bytes": 472,
+    "sha256": "95dbcdeba3531e8961bbe81cdfc14a61f785e16f943231060f51ecb89d1b91a1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-future-token.json": {
+    "bytes": 5930,
+    "sha256": "ab4e83aa7868a7495677192a041855a3e7bcc5781271a110029a46df6e1a5df1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-inexact-weight-pandas.request.json": {
+    "bytes": 669,
+    "sha256": "c1cb79ee7968504e6b72a41bafdef2099780fcf3e05d3164a9e69e37f3e63462"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-inexact-weight-pandas.request.response.json": {
+    "bytes": 263,
+    "sha256": "311cc778306aa60fe4560bbc7a9a8b83a23ab8eb6d65b60469c2d0da70b0d519"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-inexact-weight-swiftsci.request.json": {
+    "bytes": 669,
+    "sha256": "c1cb79ee7968504e6b72a41bafdef2099780fcf3e05d3164a9e69e37f3e63462"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-inexact-weight-swiftsci.request.response.json": {
+    "bytes": 283,
+    "sha256": "540637d9ab4809bdfebd792fe92ea12c93da3631f108a7c09ad84518abf1b19d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-inexact-weight.json": {
+    "bytes": 5926,
+    "sha256": "e1d589bf37550895760a97e552a81d119e1f75951ccc2bf06c9815cbb762d970"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-wrong-first-logit-pandas.request.json": {
+    "bytes": 705,
+    "sha256": "01e1541e116f31270326307d8f31370d46d312f8fc5a7092395aaf3d5c7fedd9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-wrong-first-logit-pandas.request.response.json": {
+    "bytes": 299,
+    "sha256": "cae798f67d1b5d1e1ec430b302eac4935a2c2b3aa7733286f20f4aa5536d3c3e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-wrong-first-logit-swiftsci.request.json": {
+    "bytes": 705,
+    "sha256": "01e1541e116f31270326307d8f31370d46d312f8fc5a7092395aaf3d5c7fedd9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-wrong-first-logit-swiftsci.request.response.json": {
+    "bytes": 289,
+    "sha256": "ae805471e7209119b83093264819230fb2534b93bd146730903020dc5ee841b6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-wrong-first-logit.f64": {
+    "bytes": 472,
+    "sha256": "87568e930331c7377512e2f4ff0e5212fd63e106a3f98f4f8bc19594328976cd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-wrong-last-logit-pandas.request.json": {
+    "bytes": 704,
+    "sha256": "a046bc9dedf5e536ae3003512052f62cd7d75d0ffe190c0a9a479a3c09da483c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-wrong-last-logit-pandas.request.response.json": {
+    "bytes": 301,
+    "sha256": "f184e1aa9dd48a835010291748c1d3d23e41769a7719305322c96fc43883642f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-wrong-last-logit-swiftsci.request.json": {
+    "bytes": 704,
+    "sha256": "a046bc9dedf5e536ae3003512052f62cd7d75d0ffe190c0a9a479a3c09da483c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-wrong-last-logit-swiftsci.request.response.json": {
+    "bytes": 290,
+    "sha256": "94db6cf2ef854994dc3fa332897d7af7fe565b9cf831c07b62aabf6cd3673da5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/neural-gpu-rope-full-wrong-last-logit.f64": {
+    "bytes": 472,
+    "sha256": "71c12abc74103bd58e67c479cecb490a4e6e27076f9fa55d46ce60958164bea3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/negative-workers/summary.json": {
+    "bytes": 14592,
+    "sha256": "fbd66819f28097afd4c2eb809dfea44c55ec1d23e5677ba77a8d0c33afc75cd5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/plan.md": {
+    "bytes": 938,
+    "sha256": "0d18e3f18da24fb937f5051a42e3af45db986f346a8c09520e7a483f6850ab9c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/prepare-final.log": {
+    "bytes": 1632,
+    "sha256": "3e8a3a0503b5f3c84b01cf6e3347c450c31a68e365ecc99cf8b7f34a9984c1bc"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/prepare-loader.log": {
+    "bytes": 272,
+    "sha256": "669f62cf6679edde0a90cf751f36bd1693c5e79397d11dbc6f2f64b1b36179d3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/prepare.log": {
+    "bytes": 1360,
+    "sha256": "6fa38f524f2c70734ed389ec3c18ac98a38b09504b68b9705a5dd413665fd2b6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/repair-queue.md": {
+    "bytes": 1973,
+    "sha256": "7f6f7f4a3948e38a6eb2419c2cc50b819773cfb7afafffcfec4d82fad78c95d5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/report.md": {
+    "bytes": 4360,
+    "sha256": "6b825c1414bd228c739bcc2c24afb389bd1d5c0b5adadf2ba8435e3ea3cbb08b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/results.json": {
+    "bytes": 2738,
+    "sha256": "6f175db22e2472361a3f1d1170eb0b6cd8ef1661a287fe45fb91f4d1b7996749"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/review.md": {
+    "bytes": 11001,
+    "sha256": "2f4b32a47d1ff11e88916a6c198034817a36a28a01dba088102864e49f7a5480"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation.log": {
+    "bytes": 2031,
+    "sha256": "a0628154948cc611a809fcbcefd2229fc75c2516474efb33634e69501506a409"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/cpu-cached-batch2-0.request.json": {
+    "bytes": 633,
+    "sha256": "8b81e4fc90c5349796ec0a8569e77991f0118be943d210ef6c2409148f39ec60"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/cpu-cached-batch2-0.request.response.json": {
+    "bytes": 601,
+    "sha256": "34a1a36cef81afb9c951300d7f3c0c4c4aa0350b6b2671b4ba533d7c19663b69"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/cpu-cached-batch2-1.request.json": {
+    "bytes": 633,
+    "sha256": "8b81e4fc90c5349796ec0a8569e77991f0118be943d210ef6c2409148f39ec60"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/cpu-cached-batch2-1.request.response.json": {
+    "bytes": 601,
+    "sha256": "1e128b801b637bdc866bd32d082c4ba058574f4d59577a4092637f3141111b38"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/cpu-cached-batch2-2.request.json": {
+    "bytes": 633,
+    "sha256": "8b81e4fc90c5349796ec0a8569e77991f0118be943d210ef6c2409148f39ec60"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/cpu-cached-batch2-2.request.response.json": {
+    "bytes": 601,
+    "sha256": "d411e23972b9e12046fe26b73a3cd3dcd8ca0c837f4c820fd968cb822dbd7bc4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/cpu-cached-batch2.expected.f64": {
+    "bytes": 504,
+    "sha256": "bec74837da599fc6b25a9ce81766f69039d778c242bf19c7cf7c79453883cc8b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/cpu-cached-batch2.input.json": {
+    "bytes": 5932,
+    "sha256": "8f0a00596dc0f6fdcb7f1ef58f2023d4ff243c65635352ba25a844cf63323e93"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-batch2-0.request.json": {
+    "bytes": 633,
+    "sha256": "415b55fc940991c77d395ed85de1bcbc2ccfc85e5e146e1280a282c84e009979"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-batch2-0.request.response.json": {
+    "bytes": 289,
+    "sha256": "e5ce0e1b46f2f7a1a04ccd5b42a34e5571ce61b7aacf6092143f71f9b538fbe6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-batch2-1.request.json": {
+    "bytes": 633,
+    "sha256": "415b55fc940991c77d395ed85de1bcbc2ccfc85e5e146e1280a282c84e009979"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-batch2-1.request.response.json": {
+    "bytes": 289,
+    "sha256": "7ba4f2596b974b69daed83ccb9a2a87fe4a00c40736529560ef1785b212c266e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-batch2-2.request.json": {
+    "bytes": 633,
+    "sha256": "415b55fc940991c77d395ed85de1bcbc2ccfc85e5e146e1280a282c84e009979"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-batch2-2.request.response.json": {
+    "bytes": 289,
+    "sha256": "5ce957a0105b42b1ab30b2ec03f198a84afb5f7a533bb747607b2d6f3a97be56"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-batch2.expected.f64": {
+    "bytes": 504,
+    "sha256": "bec74837da599fc6b25a9ce81766f69039d778c242bf19c7cf7c79453883cc8b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-batch2.input.json": {
+    "bytes": 5932,
+    "sha256": "5651db78b5b454288ffc4439ed84a0109d845dcadb9ea5c214dc5894381ce4ae"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-first-batch-0.request.json": {
+    "bytes": 643,
+    "sha256": "bc40afe143953bad3ff63c72962083baff79fea8c2ddbb237a0d811a639dd51c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-first-batch-0.request.response.json": {
+    "bytes": 601,
+    "sha256": "34f3e9e38262851ca6208cd5c6abbea69503aa738b72aba135626996a4ca846c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-first-batch-1.request.json": {
+    "bytes": 643,
+    "sha256": "bc40afe143953bad3ff63c72962083baff79fea8c2ddbb237a0d811a639dd51c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-first-batch-1.request.response.json": {
+    "bytes": 601,
+    "sha256": "7dda87b53609b71d3917a19f418ad5d2e28bdd6fe49001b215772b09db4ca921"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-first-batch-2.request.json": {
+    "bytes": 643,
+    "sha256": "bc40afe143953bad3ff63c72962083baff79fea8c2ddbb237a0d811a639dd51c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-first-batch-2.request.response.json": {
+    "bytes": 601,
+    "sha256": "f0b1ca10a3e92c236da4ffd8cab083a6e619b41abbf8cf83b7aa86bd0c02409c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-first-batch.expected.f64": {
+    "bytes": 280,
+    "sha256": "cfbfb4bbf9e6308b544a9902984d76af5e7376d09ce767b878640cfc7a96d18a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-first-batch.input.json": {
+    "bytes": 5918,
+    "sha256": "e9f31db6583dcddfdea4e0e55c5dec459f82efe9bb1262aceb919c9a41ab6266"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-second-batch-0.request.json": {
+    "bytes": 645,
+    "sha256": "ae5e03c334c973d562a260262a9fde906c0ec5d4863a2276b65832af18558fdd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-second-batch-0.request.response.json": {
+    "bytes": 597,
+    "sha256": "bdc7d36cda3dfba05e6afd654b63809267c752b550c7d8302036448bc972f9b5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-second-batch-1.request.json": {
+    "bytes": 645,
+    "sha256": "ae5e03c334c973d562a260262a9fde906c0ec5d4863a2276b65832af18558fdd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-second-batch-1.request.response.json": {
+    "bytes": 597,
+    "sha256": "8cb1d57f31c82e8e4b39410f5fe8f51da913b0d0705f3fec10706ee8e1ea980b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-second-batch-2.request.json": {
+    "bytes": 645,
+    "sha256": "ae5e03c334c973d562a260262a9fde906c0ec5d4863a2276b65832af18558fdd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-second-batch-2.request.response.json": {
+    "bytes": 597,
+    "sha256": "728e20c80462cbe824c776e16180f7dc16a4ff8db017fff3bfd8d20a92cd875e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-second-batch.expected.f64": {
+    "bytes": 280,
+    "sha256": "9c88721f1eb6eda9d21797850f9840e47d2d82ed88976b7a87d4aa15533dc0e9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-cached-second-batch.input.json": {
+    "bytes": 5918,
+    "sha256": "263e2d8f17b9648f4096ca7526c630047d938f4b6b3190854650e4636d6328af"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-full-batch2-0.request.json": {
+    "bytes": 629,
+    "sha256": "29869f4d8c8163d4a5ac692681d28aaa66c7d5ed0a2768fe08b5c37275bbe589"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-full-batch2-0.request.response.json": {
+    "bytes": 597,
+    "sha256": "804516b3566801a34853fe72f84d3ae430f642bd5b998f41a9fef441b424016f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-full-batch2-1.request.json": {
+    "bytes": 629,
+    "sha256": "29869f4d8c8163d4a5ac692681d28aaa66c7d5ed0a2768fe08b5c37275bbe589"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-full-batch2-1.request.response.json": {
+    "bytes": 597,
+    "sha256": "a72eaf296acedb145479e0427fa6e72adff47d92a6a4502d201f2a0a80f8bb7a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-full-batch2-2.request.json": {
+    "bytes": 629,
+    "sha256": "29869f4d8c8163d4a5ac692681d28aaa66c7d5ed0a2768fe08b5c37275bbe589"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-full-batch2-2.request.response.json": {
+    "bytes": 597,
+    "sha256": "3110cdf2cc2a74b4b08d33a9da3c14f24c6df567f6bf885cec766e0afcfadf28"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-full-batch2.expected.f64": {
+    "bytes": 472,
+    "sha256": "d5a4d973077a4b6f16f2a5aeca6e4c0c64ab31af2ec3af3dcf10ede61f7f0c64"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/gpu-full-batch2.input.json": {
+    "bytes": 5930,
+    "sha256": "392f36be562fe183babd2aa16d226e74595a05299f785ece61c4a05244261287"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/rope-isolation/summary.json": {
+    "bytes": 2031,
+    "sha256": "a0628154948cc611a809fcbcefd2229fc75c2516474efb33634e69501506a409"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/run.log": {
+    "bytes": 868,
+    "sha256": "53a78aaada20dfbfc2f88df1e0bfb895ac09592921ab9c08aaf79b425f979374"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/certificate.json": {
+    "bytes": 45610,
+    "sha256": "1b35e2de5d35f5b7ab017ec106da465a19b35dbf6409b5ea5c02739396b4260f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/events.jsonl": {
+    "bytes": 16379,
+    "sha256": "900937486e3530088ea0695ded05ccb5f73c44992442d54b0064cc4ce79ff62a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-cached-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-cached-pandas-0.request.json": {
+    "bytes": 749,
+    "sha256": "7527e9514d5e964ab16e49a5a9dc90bffa85245d99a0c53c5f2eb2f6cee45fe0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-cached-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "4c7427c1722281afcd0d993e161671da85bca23ae1ad51838c217ec41e8ff461"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-cached-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-cached-swiftsci-0.request.json": {
+    "bytes": 749,
+    "sha256": "7527e9514d5e964ab16e49a5a9dc90bffa85245d99a0c53c5f2eb2f6cee45fe0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-cached-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "788d5d2c63ef9bde6a49df2725d6b6bbf2aefcdd4152c61796cd05e87b69cee0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-cached.expected.f64": {
+    "bytes": 504,
+    "sha256": "30e6301e1c1ccd281e796da92a64d1d288ae120bd5fabf1f4a38560b140032e9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-full-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-full-pandas-0.request.json": {
+    "bytes": 747,
+    "sha256": "2956fc341693e4f3f5153539759e3431c8092be8eddab9ad3e097b8d1b27bc77"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-full-pandas-0.response.json": {
+    "bytes": 794,
+    "sha256": "781da6e489675171a861405dfd9e7c36b951c237b0b45ce86c18bc7e96edd1e8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-full-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-full-swiftsci-0.request.json": {
+    "bytes": 747,
+    "sha256": "2956fc341693e4f3f5153539759e3431c8092be8eddab9ad3e097b8d1b27bc77"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-full-swiftsci-0.response.json": {
+    "bytes": 596,
+    "sha256": "ed3cfb11bd5e5aedcfa1c88b8c04c90a9c11978612f967dd0c057115cf8faacc"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-learned-full.expected.f64": {
+    "bytes": 472,
+    "sha256": "8584358fffddc1d37eab0a5b16a2e916cc506d5f9ad18785d898b830df1bdaa0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-cached-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-cached-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "355bc6b166a3e5aa9ddfd0c01efcd28112cb18f2cb3f64ae0f01732326762c46"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-cached-pandas-0.response.json": {
+    "bytes": 798,
+    "sha256": "bc097221cb62ab9550e2efac236acaa9a034f4ad2d673064895b392113e5b503"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-cached-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-cached-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "355bc6b166a3e5aa9ddfd0c01efcd28112cb18f2cb3f64ae0f01732326762c46"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-cached-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "3321b3a0d0119956d83631ee04ce5103da7afc2632aaa54e9f4d1abd71cbf020"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-cached.expected.f64": {
+    "bytes": 504,
+    "sha256": "bec74837da599fc6b25a9ce81766f69039d778c242bf19c7cf7c79453883cc8b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-full-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-full-pandas-0.request.json": {
+    "bytes": 744,
+    "sha256": "29a1c148c19a310644cd4463b7a1616b9b05ca434d2bc32d8d1ba45cf8721247"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-full-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "425d1d94bccfd7f5a8cc64f335418a5e4b0faa216393b6022a2ef39c485d28c7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-full-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-full-swiftsci-0.request.json": {
+    "bytes": 744,
+    "sha256": "29a1c148c19a310644cd4463b7a1616b9b05ca434d2bc32d8d1ba45cf8721247"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-full-swiftsci-0.response.json": {
+    "bytes": 599,
+    "sha256": "ce2d955f56ab2d9db40c4bb180f9f1559b33e937910ae46ad0f27b1e95c9eb66"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-rope-full.expected.f64": {
+    "bytes": 472,
+    "sha256": "d5a4d973077a4b6f16f2a5aeca6e4c0c64ab31af2ec3af3dcf10ede61f7f0c64"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-zero-projections-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-zero-projections-pandas-0.request.json": {
+    "bytes": 750,
+    "sha256": "8493e05e6c279e11e0d395e5b129bbee2ba3a9f51340e844e8267fb893fc6e6b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-zero-projections-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "9ab8ce6739427d2d4ce1b86cd8726d20690a57c30cc496e316cb93d05d4d9455"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-zero-projections-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-zero-projections-swiftsci-0.request.json": {
+    "bytes": 750,
+    "sha256": "8493e05e6c279e11e0d395e5b129bbee2ba3a9f51340e844e8267fb893fc6e6b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-zero-projections-swiftsci-0.response.json": {
+    "bytes": 599,
+    "sha256": "eecf1752d9db3378107ff9dbd6805f7f58e9fc820e91a8ed077803b7cd73d796"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-cpu-zero-projections.expected.f64": {
+    "bytes": 248,
+    "sha256": "2ca95ff343fc24c1fb0c972f58f11a0f66a0485424c06e8de11ee26f5b341c95"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-cached-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-cached-pandas-0.request.json": {
+    "bytes": 749,
+    "sha256": "4390943e6fe6fd604c56df26035a95fcedbeaed49a0f1d45b89ac0561e9bc047"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-cached-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "1225dd2249a3fb689eb7ff656af3b14ab624633b5a896339b0c3a1049210a704"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-cached-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-cached-swiftsci-0.request.json": {
+    "bytes": 749,
+    "sha256": "4390943e6fe6fd604c56df26035a95fcedbeaed49a0f1d45b89ac0561e9bc047"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-cached-swiftsci-0.response.json": {
+    "bytes": 599,
+    "sha256": "b51367d91adb331ce39c51b3ee734370e2bc41a72532e5544d02604fdac70c76"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-cached.expected.f64": {
+    "bytes": 504,
+    "sha256": "30e6301e1c1ccd281e796da92a64d1d288ae120bd5fabf1f4a38560b140032e9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-full-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-full-pandas-0.request.json": {
+    "bytes": 747,
+    "sha256": "e94addc39706965be7974521edb1b98a38bf02eda273b84454259c5c6e71821e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-full-pandas-0.response.json": {
+    "bytes": 794,
+    "sha256": "6bd246caece39eaab66f2cfdb952332e92d90a8d7f546d0befac7923bb9d5c93"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-full-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-full-swiftsci-0.request.json": {
+    "bytes": 747,
+    "sha256": "e94addc39706965be7974521edb1b98a38bf02eda273b84454259c5c6e71821e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-full-swiftsci-0.response.json": {
+    "bytes": 599,
+    "sha256": "77e81e61fdb3ab19802072c38f363b3b53d56c62209ddcfd24adb0852acefe85"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-learned-full.expected.f64": {
+    "bytes": 472,
+    "sha256": "8584358fffddc1d37eab0a5b16a2e916cc506d5f9ad18785d898b830df1bdaa0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-cached-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-cached-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "1cb8c9c90daeabd9a65989ecc29958519a2af29eca14a4155846fdb8ead7ac78"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-cached-pandas-0.response.json": {
+    "bytes": 798,
+    "sha256": "0f38c70df705bd65195e75e2873df2635b40e34ee8b6392958d05a3557f58e5d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-cached-swiftsci-0.log": {
+    "bytes": 65,
+    "sha256": "69c417e797c6dd72ec0baca4c3a96c95aa1fdda10f94180d530ef23937b4ccc2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-cached-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "1cb8c9c90daeabd9a65989ecc29958519a2af29eca14a4155846fdb8ead7ac78"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-cached-swiftsci-0.response.json": {
+    "bytes": 289,
+    "sha256": "6a3b058f90f190813821fb24ed60293db549b2ef28fb7444b0d2e7b48f4abd9c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-cached.expected.f64": {
+    "bytes": 504,
+    "sha256": "bec74837da599fc6b25a9ce81766f69039d778c242bf19c7cf7c79453883cc8b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-full-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-full-pandas-0.request.json": {
+    "bytes": 744,
+    "sha256": "8fa6094934cf696ab243c7272c853d07d4bca2d7a3f0f30abb6a4c7ab5e5c7c8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-full-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "7bf63638547f2ce29f889f75e2cdbc6e53d5f73aae0e315bbea6aa524bca25df"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-full-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-full-swiftsci-0.request.json": {
+    "bytes": 744,
+    "sha256": "8fa6094934cf696ab243c7272c853d07d4bca2d7a3f0f30abb6a4c7ab5e5c7c8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-full-swiftsci-0.response.json": {
+    "bytes": 597,
+    "sha256": "05f96d93146a01d1dbaac7a7691e0c5c8e288d0d8b96a2f7cd42f0d5be030ee1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-rope-full.expected.f64": {
+    "bytes": 472,
+    "sha256": "d5a4d973077a4b6f16f2a5aeca6e4c0c64ab31af2ec3af3dcf10ede61f7f0c64"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-zero-projections-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-zero-projections-pandas-0.request.json": {
+    "bytes": 750,
+    "sha256": "69feb5b35ff9bbe3b25799fb2279d99b7776b50b81499c7c344fa95814020109"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-zero-projections-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "434a5aa6349b20c087c41d3b81213d8bd3b9afb32480858f4f0b19ab1c89c684"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-zero-projections-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-zero-projections-swiftsci-0.request.json": {
+    "bytes": 750,
+    "sha256": "69feb5b35ff9bbe3b25799fb2279d99b7776b50b81499c7c344fa95814020109"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-zero-projections-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "5ffee87fc756e45311d87be22037997f9b08426b9686dd570d15eff93f7a0882"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/neural-gpu-zero-projections.expected.f64": {
+    "bytes": 248,
+    "sha256": "2ca95ff343fc24c1fb0c972f58f11a0f66a0485424c06e8de11ee26f5b341c95"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-01/run.json": {
+    "bytes": 151137,
+    "sha256": "ca53bd838e688ed78b75a7e8da3eab579ba38dd5a5d8910b605bf8f489850929"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/certificate.json": {
+    "bytes": 45888,
+    "sha256": "9a3c8e8a361aec813c6f85950f9538a07f1413f6599d4101846b6055a4fb2404"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/events.jsonl": {
+    "bytes": 19801,
+    "sha256": "9f07550f65e0dfff417075708925f382acbcb5e621f6f1710929c911fe6592ac"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-cached-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-cached-pandas-0.request.json": {
+    "bytes": 749,
+    "sha256": "93a983118d34234eadf5f38eafd05b029870c27b4fb685bf1abb3d114b868a2b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-cached-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "2c6d1e14ef5cefbf5d82b0baf974ccb0bdbe3d906b1febe2e2796a791a73520d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-cached-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-cached-swiftsci-0.request.json": {
+    "bytes": 749,
+    "sha256": "93a983118d34234eadf5f38eafd05b029870c27b4fb685bf1abb3d114b868a2b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-cached-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "334b65769edbdc3e11006cc43aeee3d949820776a1d8d9df934f5c0f73c7710f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-cached.expected.f64": {
+    "bytes": 504,
+    "sha256": "30e6301e1c1ccd281e796da92a64d1d288ae120bd5fabf1f4a38560b140032e9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-full-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-full-pandas-0.request.json": {
+    "bytes": 747,
+    "sha256": "4d2752dce586f9577ffb728e642d817b832f8a0221535d9b54ed8ff536b1feef"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-full-pandas-0.response.json": {
+    "bytes": 794,
+    "sha256": "347260d77bff869babfae5fab5fd22ccaf17e60f7f369c58bfe4ba520a95d66a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-full-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-full-swiftsci-0.request.json": {
+    "bytes": 747,
+    "sha256": "4d2752dce586f9577ffb728e642d817b832f8a0221535d9b54ed8ff536b1feef"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-full-swiftsci-0.response.json": {
+    "bytes": 596,
+    "sha256": "2e229933772892b0914f28550a916d1e926a58a66fc58d6b1d1d18374b13ad18"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-learned-full.expected.f64": {
+    "bytes": 472,
+    "sha256": "8584358fffddc1d37eab0a5b16a2e916cc506d5f9ad18785d898b830df1bdaa0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-cached-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-cached-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "7dcd8fc2e004a314cdc831d8db885fd22fcc7d58b5b241e51dffffebcdee45ad"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-cached-pandas-0.response.json": {
+    "bytes": 798,
+    "sha256": "0b067d0367dc1045d7ba29667d7b328cd03e708a862d3c4e4ff4bf472670a6ba"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-cached-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-cached-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "7dcd8fc2e004a314cdc831d8db885fd22fcc7d58b5b241e51dffffebcdee45ad"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-cached-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "8f7fcaa4a7c7a227523c3295210f21c086a9118b6863cce9059e9e7ce843e0b4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-cached.expected.f64": {
+    "bytes": 504,
+    "sha256": "bec74837da599fc6b25a9ce81766f69039d778c242bf19c7cf7c79453883cc8b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-full-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-full-pandas-0.request.json": {
+    "bytes": 744,
+    "sha256": "e60ebfec2f9f60f3fd833be0f3733d6a6787014bd15c25eea44ff8a6c054ae2e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-full-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "30f8ad61db7c0bdd27b6ea27db57d5e620be944760c1dbcbb124aa9f5ef0de9b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-full-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-full-swiftsci-0.request.json": {
+    "bytes": 744,
+    "sha256": "e60ebfec2f9f60f3fd833be0f3733d6a6787014bd15c25eea44ff8a6c054ae2e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-full-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "9243df9f3f58c0201393f2441d763200d9224b037deaf2040a259986972fdc41"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-rope-full.expected.f64": {
+    "bytes": 472,
+    "sha256": "d5a4d973077a4b6f16f2a5aeca6e4c0c64ab31af2ec3af3dcf10ede61f7f0c64"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-zero-projections-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-zero-projections-pandas-0.request.json": {
+    "bytes": 750,
+    "sha256": "50c7380771ef54c591aaf00c7857b654317edc8f7a86e9c10e24bdf54a998631"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-zero-projections-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "24b91bd02bc0fa7ea4a9ed8580a57603b16b0fec44e44e792b7ed7de6181e591"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-zero-projections-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-zero-projections-swiftsci-0.request.json": {
+    "bytes": 750,
+    "sha256": "50c7380771ef54c591aaf00c7857b654317edc8f7a86e9c10e24bdf54a998631"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-zero-projections-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "55da09b0f75aae851e9d547d163d567954798dbae0e42ff0c774e9edd9aa8e20"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-cpu-zero-projections.expected.f64": {
+    "bytes": 248,
+    "sha256": "2ca95ff343fc24c1fb0c972f58f11a0f66a0485424c06e8de11ee26f5b341c95"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-cached-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-cached-pandas-0.request.json": {
+    "bytes": 749,
+    "sha256": "0a51f61e13d8780c14e566268cfbf78c84c6ae8880e032d29ca3965dafc66dce"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-cached-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "e778b40a2bf79b8fa108122613a3e26fdde0ce76c9809163ccdca6bad9e55f71"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-cached-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-cached-swiftsci-0.request.json": {
+    "bytes": 749,
+    "sha256": "0a51f61e13d8780c14e566268cfbf78c84c6ae8880e032d29ca3965dafc66dce"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-cached-swiftsci-0.response.json": {
+    "bytes": 599,
+    "sha256": "3c42077655bb4728cee4a06ca0450dfb1bad7f754f892094f99fc7090b07143c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-cached.expected.f64": {
+    "bytes": 504,
+    "sha256": "30e6301e1c1ccd281e796da92a64d1d288ae120bd5fabf1f4a38560b140032e9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-full-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-full-pandas-0.request.json": {
+    "bytes": 747,
+    "sha256": "a528a6c87f1cbac672e4898bba37906448737107bd444b2d14c96f2caf38f9a4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-full-pandas-0.response.json": {
+    "bytes": 794,
+    "sha256": "f5d5c192f4eac2b45cd5fbb524a3df520d77553f06dddf72c5c99155f563104c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-full-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-full-swiftsci-0.request.json": {
+    "bytes": 747,
+    "sha256": "a528a6c87f1cbac672e4898bba37906448737107bd444b2d14c96f2caf38f9a4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-full-swiftsci-0.response.json": {
+    "bytes": 599,
+    "sha256": "0f2898c101c037d2a694789dcea13d36192d8deb0cc8e5a24ec742d52c198ef7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-learned-full.expected.f64": {
+    "bytes": 472,
+    "sha256": "8584358fffddc1d37eab0a5b16a2e916cc506d5f9ad18785d898b830df1bdaa0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-pandas-0.request.json": {
+    "bytes": 746,
+    "sha256": "1a429ce8aba3d6c2d8ff092a6eacb339876b0667b1bd4f06814084042fe6d6a0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-pandas-0.response.json": {
+    "bytes": 798,
+    "sha256": "835a1f36c171160b6b31493a84424e94832b43b3663a0eb4f2884b3e84d05cf6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single0-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single0-pandas-0.request.json": {
+    "bytes": 754,
+    "sha256": "1c49935484b1f99263e15658c6dbde29858e1558d282fb3d3f71d4eb0cdfee03"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single0-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "436cf5e0e46c1ba713836985897073d7bdea0964dc5ed97da853e4ad3900793a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single0-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single0-swiftsci-0.request.json": {
+    "bytes": 754,
+    "sha256": "1c49935484b1f99263e15658c6dbde29858e1558d282fb3d3f71d4eb0cdfee03"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single0-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "c41d14d0f44c58bdb7ff3c7411250291f1f6f000eabc3d41f2de77c20027c5d3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single0.expected.f64": {
+    "bytes": 280,
+    "sha256": "cfbfb4bbf9e6308b544a9902984d76af5e7376d09ce767b878640cfc7a96d18a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single1-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single1-pandas-0.request.json": {
+    "bytes": 754,
+    "sha256": "2c004e74b299fd785a3a93c50415891459dec40de8b0f7363a178ae3a9d76b5b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single1-pandas-0.response.json": {
+    "bytes": 798,
+    "sha256": "84f8a51ce51412dcf9f50d73f8e261393677527dc5ff217a9f252ee5b56c7968"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single1-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single1-swiftsci-0.request.json": {
+    "bytes": 754,
+    "sha256": "2c004e74b299fd785a3a93c50415891459dec40de8b0f7363a178ae3a9d76b5b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single1-swiftsci-0.response.json": {
+    "bytes": 597,
+    "sha256": "d4841e21076baa41abfc6be9cf7ce53504b1ee9c9e45d5a8b744d23ddd3d0643"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-single1.expected.f64": {
+    "bytes": 280,
+    "sha256": "9c88721f1eb6eda9d21797850f9840e47d2d82ed88976b7a87d4aa15533dc0e9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-swiftsci-0.log": {
+    "bytes": 65,
+    "sha256": "69c417e797c6dd72ec0baca4c3a96c95aa1fdda10f94180d530ef23937b4ccc2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-swiftsci-0.request.json": {
+    "bytes": 746,
+    "sha256": "1a429ce8aba3d6c2d8ff092a6eacb339876b0667b1bd4f06814084042fe6d6a0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached-swiftsci-0.response.json": {
+    "bytes": 289,
+    "sha256": "000f76e0dd4bf23d8cc5d50534eb1c7918ca9d488dfa14d6da4c21cd5f182a58"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-cached.expected.f64": {
+    "bytes": 504,
+    "sha256": "bec74837da599fc6b25a9ce81766f69039d778c242bf19c7cf7c79453883cc8b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-full-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-full-pandas-0.request.json": {
+    "bytes": 744,
+    "sha256": "1d2fec488e7c887f36ce234c1ea0f85705a6dacef2993001ed8f54b8a9aba74e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-full-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "df59bcbdb945f72e4a227ecc9cc348b360de6ebb864c326b25d69c0aee3c125b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-full-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-full-swiftsci-0.request.json": {
+    "bytes": 744,
+    "sha256": "1d2fec488e7c887f36ce234c1ea0f85705a6dacef2993001ed8f54b8a9aba74e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-full-swiftsci-0.response.json": {
+    "bytes": 597,
+    "sha256": "d1084bb34f707356604013e239775cbe303dd65355b8e2d422a7f735e30a3bbd"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-rope-full.expected.f64": {
+    "bytes": 472,
+    "sha256": "d5a4d973077a4b6f16f2a5aeca6e4c0c64ab31af2ec3af3dcf10ede61f7f0c64"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-zero-projections-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-zero-projections-pandas-0.request.json": {
+    "bytes": 750,
+    "sha256": "843bf3a7606f3ef9a93c176ec6e99b7e83116d44f928b1658278ca7cda700499"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-zero-projections-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "9557a1ce3c45b9fbc36c21394ab49ff2956a030e34f65e0b421a86ae3e138d28"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-zero-projections-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-zero-projections-swiftsci-0.request.json": {
+    "bytes": 750,
+    "sha256": "843bf3a7606f3ef9a93c176ec6e99b7e83116d44f928b1658278ca7cda700499"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-zero-projections-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "9bcd97c5dc12f2b3c80274b4269e3823adb6c0085f45c61b5ebab202ff494db7"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/neural-gpu-zero-projections.expected.f64": {
+    "bytes": 248,
+    "sha256": "2ca95ff343fc24c1fb0c972f58f11a0f66a0485424c06e8de11ee26f5b341c95"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-03/run.json": {
+    "bytes": 162682,
+    "sha256": "60e42b6fd02b2bd9b7eb21ca647e7ca40d486da675d6ad2514caad9756e80775"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/certificate.json": {
+    "bytes": 44948,
+    "sha256": "ccc1c22a09f6259a56f25e51d2ed0c7ff95865faae506365db3fe37938e749b5"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/events.jsonl": {
+    "bytes": 8479,
+    "sha256": "c65d8994be50706914d77e8337254e605e01855f290ccd4daf036f4620f46094"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-cached-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-cached-pandas-0.request.json": {
+    "bytes": 753,
+    "sha256": "c696c7e21799d0eb4f4b5268216ae5cfd1182eb289f2c8ef8b44920def246bc4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-cached-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "729c563685fde2f21c012b57ca8a06889c0cee3eb103e259432305028c557cca"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-cached-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-cached-swiftsci-0.request.json": {
+    "bytes": 753,
+    "sha256": "c696c7e21799d0eb4f4b5268216ae5cfd1182eb289f2c8ef8b44920def246bc4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-cached-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "1f474d8c73311ff08ce2cf0e9350c4791942b32e6144b971dd1a2f3b013adc07"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-cached.expected.f64": {
+    "bytes": 504,
+    "sha256": "30e6301e1c1ccd281e796da92a64d1d288ae120bd5fabf1f4a38560b140032e9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-full-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-full-pandas-0.request.json": {
+    "bytes": 751,
+    "sha256": "78fcb7f8f751282137fabf5cadb23bd7ddd87ed4e2303afdc9e6278134546508"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-full-pandas-0.response.json": {
+    "bytes": 794,
+    "sha256": "3f436d7b45278aa1a7856eb0d6ce634294c22911e2df82b26cf674f4e2fb28da"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-full-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-full-swiftsci-0.request.json": {
+    "bytes": 751,
+    "sha256": "78fcb7f8f751282137fabf5cadb23bd7ddd87ed4e2303afdc9e6278134546508"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-full-swiftsci-0.response.json": {
+    "bytes": 597,
+    "sha256": "3c0b403d4ae14b29fdcd0dc215f155de637c20c75aaa3040219d01708f5619d3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-learned-full.expected.f64": {
+    "bytes": 472,
+    "sha256": "8584358fffddc1d37eab0a5b16a2e916cc506d5f9ad18785d898b830df1bdaa0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-cached-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-cached-pandas-0.request.json": {
+    "bytes": 750,
+    "sha256": "f5b05c776e842dde936f5d5794b5dbc53f22984f607a35376bcbdb8c3b92c4d3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-cached-pandas-0.response.json": {
+    "bytes": 798,
+    "sha256": "9a536bddb83b1f1ec20707c95e8e05271328dd2a24f492eb784a332af59548fa"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-cached-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-cached-swiftsci-0.request.json": {
+    "bytes": 750,
+    "sha256": "f5b05c776e842dde936f5d5794b5dbc53f22984f607a35376bcbdb8c3b92c4d3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-cached-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "7e97acba873f0c8c74a1dcd5434dcec48b5d106e6a8eeb8984bad29fe152c4e4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-cached.expected.f64": {
+    "bytes": 504,
+    "sha256": "bec74837da599fc6b25a9ce81766f69039d778c242bf19c7cf7c79453883cc8b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-full-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-full-pandas-0.request.json": {
+    "bytes": 748,
+    "sha256": "8a989182811757633fd96a9de2698f494f0a301203077b4584115d3a394502fc"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-full-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "323ca8b201a2f5d100bd8dd9f6c3f24de3140dd7a4ee81d513a4c9ccfe070a4e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-full-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-full-swiftsci-0.request.json": {
+    "bytes": 748,
+    "sha256": "8a989182811757633fd96a9de2698f494f0a301203077b4584115d3a394502fc"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-full-swiftsci-0.response.json": {
+    "bytes": 601,
+    "sha256": "7cacb9ae7f0b92470cb0f44e52d4a176d33691977ca4966a1548509fafcf329a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-rope-full.expected.f64": {
+    "bytes": 472,
+    "sha256": "d5a4d973077a4b6f16f2a5aeca6e4c0c64ab31af2ec3af3dcf10ede61f7f0c64"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-zero-projections-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-zero-projections-pandas-0.request.json": {
+    "bytes": 754,
+    "sha256": "c93a278d40cf3621c000f5402ef503378e7ff80753f0781e5d4ccafc7fa6cbfb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-zero-projections-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "fe373375cbe404a6c1edbf078a9ff52a881ea38ae9681c1dc75abc2303a68a3c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-zero-projections-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-zero-projections-swiftsci-0.request.json": {
+    "bytes": 754,
+    "sha256": "c93a278d40cf3621c000f5402ef503378e7ff80753f0781e5d4ccafc7fa6cbfb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-zero-projections-swiftsci-0.response.json": {
+    "bytes": 600,
+    "sha256": "1f416f6b749d33c5500d887bb720ceda9bbb1a058d5fa89e9a60db306a5778aa"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/neural-cpu-zero-projections.expected.f64": {
+    "bytes": 248,
+    "sha256": "2ca95ff343fc24c1fb0c972f58f11a0f66a0485424c06e8de11ee26f5b341c95"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-cpu-01/run.json": {
+    "bytes": 123741,
+    "sha256": "12fe30fea8fcf909983ba89b634f9aa9b61658dea4ddb54891c57f530c62a8df"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/certificate.json": {
+    "bytes": 44551,
+    "sha256": "686aeda5bfd62a1f1bdd0bdd0b7245a5d69a773cfe7571b2725d049ffbb4741a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/events.jsonl": {
+    "bytes": 2254,
+    "sha256": "84d02a602ced1e2c452f5f22a039759b0297b24213180037d4a40f46fa14a5ce"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-cpu-public-loader-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-cpu-public-loader-pandas-0.request.json": {
+    "bytes": 755,
+    "sha256": "6fa955a930b6ef16c04de31aee27b54569e50af46c48423c447ce9acdc5a9ebb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-cpu-public-loader-pandas-0.response.json": {
+    "bytes": 794,
+    "sha256": "c3009edd4b2b051912fa3e839c7153d474bd33446197eae8ed575ce51fcc3a37"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-cpu-public-loader-swiftsci-0.log": {
+    "bytes": 79,
+    "sha256": "afe187c15d1c75dd2d15fa1f052752b373bb58209601d422a0e507d88adf18a0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-cpu-public-loader-swiftsci-0.request.json": {
+    "bytes": 755,
+    "sha256": "6fa955a930b6ef16c04de31aee27b54569e50af46c48423c447ce9acdc5a9ebb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-cpu-public-loader-swiftsci-0.response.json": {
+    "bytes": 303,
+    "sha256": "385a001dd5d3453dde6e614b7717df42c10dc5f2e9d2f9d820dc1cc9dbf927ee"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-cpu-public-loader.expected.f64": {
+    "bytes": 472,
+    "sha256": "8584358fffddc1d37eab0a5b16a2e916cc506d5f9ad18785d898b830df1bdaa0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-gpu-public-loader-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-gpu-public-loader-pandas-0.request.json": {
+    "bytes": 755,
+    "sha256": "a61c523fa160ff1ba1444bb884cbfc9cca62e14fac51c9314400e0dd5e9e6598"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-gpu-public-loader-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "40a195a23186337f5cb0e1dfa9a7fb3b1c13b6ed5c1ad285fb580a19049ce7ee"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-gpu-public-loader-swiftsci-0.log": {
+    "bytes": 79,
+    "sha256": "afe187c15d1c75dd2d15fa1f052752b373bb58209601d422a0e507d88adf18a0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-gpu-public-loader-swiftsci-0.request.json": {
+    "bytes": 755,
+    "sha256": "a61c523fa160ff1ba1444bb884cbfc9cca62e14fac51c9314400e0dd5e9e6598"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-gpu-public-loader-swiftsci-0.response.json": {
+    "bytes": 303,
+    "sha256": "927610872401d099ff2ab45593d6a6f05b63333f3d1f015329144ab2f47f6f39"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/neural-gpu-public-loader.expected.f64": {
+    "bytes": 472,
+    "sha256": "d5a4d973077a4b6f16f2a5aeca6e4c0c64ab31af2ec3af3dcf10ede61f7f0c64"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-01/run.json": {
+    "bytes": 105000,
+    "sha256": "3cb4b4cb93db42f7daef097018f73adde9d2b322f63bc31667b4efe0090805d2"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/certificate.json": {
+    "bytes": 44551,
+    "sha256": "345a4f4280f09882808c96664aed35fec066129b3e0d17343c698d89c203026e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/events.jsonl": {
+    "bytes": 2255,
+    "sha256": "80f04936a61fef69ead5465d924594806de68dda5649309fdcf20a0e4988fb71"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-cpu-public-loader-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-cpu-public-loader-pandas-0.request.json": {
+    "bytes": 755,
+    "sha256": "cd2245968e77f16d9c0ff363562dc461581deab147cb6bdc3243117fed20ecb8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-cpu-public-loader-pandas-0.response.json": {
+    "bytes": 795,
+    "sha256": "f122e0f87c2e78f9992fd4a1e473a6bac6cc0e83e53fea7d9d0587921d331b44"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-cpu-public-loader-swiftsci-0.log": {
+    "bytes": 79,
+    "sha256": "afe187c15d1c75dd2d15fa1f052752b373bb58209601d422a0e507d88adf18a0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-cpu-public-loader-swiftsci-0.request.json": {
+    "bytes": 755,
+    "sha256": "cd2245968e77f16d9c0ff363562dc461581deab147cb6bdc3243117fed20ecb8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-cpu-public-loader-swiftsci-0.response.json": {
+    "bytes": 303,
+    "sha256": "6faf79a17cd5162fd63649aecf7bd8ea28f2146b0477a67c955c861925e28da0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-cpu-public-loader.expected.f64": {
+    "bytes": 472,
+    "sha256": "8584358fffddc1d37eab0a5b16a2e916cc506d5f9ad18785d898b830df1bdaa0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-gpu-public-loader-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-gpu-public-loader-pandas-0.request.json": {
+    "bytes": 755,
+    "sha256": "f52e281000a8250eeba475c228204f565d7d744a54983386b78e88403dc6a342"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-gpu-public-loader-pandas-0.response.json": {
+    "bytes": 796,
+    "sha256": "371b9cf8e543d9b86cb401524aa684fde2db54520df8a3c0c26c84ac4de4e807"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-gpu-public-loader-swiftsci-0.log": {
+    "bytes": 79,
+    "sha256": "afe187c15d1c75dd2d15fa1f052752b373bb58209601d422a0e507d88adf18a0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-gpu-public-loader-swiftsci-0.request.json": {
+    "bytes": 755,
+    "sha256": "f52e281000a8250eeba475c228204f565d7d744a54983386b78e88403dc6a342"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-gpu-public-loader-swiftsci-0.response.json": {
+    "bytes": 303,
+    "sha256": "36527bc7835ded5b9cb3acec14f40738e53a627ebbf7a256bd58525d7bdcc18a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/neural-gpu-public-loader.expected.f64": {
+    "bytes": 472,
+    "sha256": "d5a4d973077a4b6f16f2a5aeca6e4c0c64ab31af2ec3af3dcf10ede61f7f0c64"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-loader-02/run.json": {
+    "bytes": 105048,
+    "sha256": "334c1421409f8a6ac1e18979c7f760586042fca80eb355b187d540e0f26b152c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/certificate.json": {
+    "bytes": 45988,
+    "sha256": "5c666aef9aed7608ce8d8f76b6df9fccb66fcb4497688cc7760c804723c82040"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/events.jsonl": {
+    "bytes": 17319,
+    "sha256": "0c8c1be90c27bd8622bbccf7a550d9fd0da787624de2681c84ff4607db1824ea"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-mean-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-mean-pandas-0.request.json": {
+    "bytes": 768,
+    "sha256": "139faa2570a06029bcd75c9a1683fe4b95b7b5bb6165cbb802aaab000d2f6ede"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-mean-pandas-0.response.json": {
+    "bytes": 553,
+    "sha256": "69f953531c81bb35c3d309e369c649145d411b3e629775a5ce3146ffe7c0c2fc"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-mean-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-mean-swiftsci-0.request.json": {
+    "bytes": 768,
+    "sha256": "139faa2570a06029bcd75c9a1683fe4b95b7b5bb6165cbb802aaab000d2f6ede"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-mean-swiftsci-0.response.json": {
+    "bytes": 403,
+    "sha256": "77a94068fc6f4901d2ff6963cdc1f9870c6bda049ae1f6ae374d04b7b1e5f483"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-mean.expected.f64": {
+    "bytes": 8,
+    "sha256": "f1b48b0b965a6e50664e82ddf9c4bd7677dc31ddef4860972cf3a3bb7e01384c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-stddev-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-stddev-pandas-0.request.json": {
+    "bytes": 772,
+    "sha256": "9b48bd311394064612b7a8d5ae2bd379ccad975346b90d1719d33492b65afe2d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-stddev-pandas-0.response.json": {
+    "bytes": 552,
+    "sha256": "25efc27eea1079b17eb215fe1d00df1939b019d2b3cefe4e42557db9c71ef934"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-stddev-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-stddev-swiftsci-0.request.json": {
+    "bytes": 772,
+    "sha256": "9b48bd311394064612b7a8d5ae2bd379ccad975346b90d1719d33492b65afe2d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-stddev-swiftsci-0.response.json": {
+    "bytes": 403,
+    "sha256": "c5652276c4ff605c2b08ced097b4b2f38d4199f496c11b16383e37443e2aeefb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-stddev.expected.f64": {
+    "bytes": 8,
+    "sha256": "45d2b662d9d490ae9b932759c910b26b9a874065de620f4ac0a3a23a65e40b8c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-variance-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-variance-pandas-0.request.json": {
+    "bytes": 776,
+    "sha256": "0c352b1cb23724510c27e7fcd39f8dafeebbdd7f0cc8a33af0374c9d144cc863"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-variance-pandas-0.response.json": {
+    "bytes": 554,
+    "sha256": "e89777a0280eccfe348ae86ad5ce354d1d952c0a05ed6382ee2796e1b3edd683"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-variance-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-variance-swiftsci-0.request.json": {
+    "bytes": 776,
+    "sha256": "0c352b1cb23724510c27e7fcd39f8dafeebbdd7f0cc8a33af0374c9d144cc863"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-variance-swiftsci-0.response.json": {
+    "bytes": 404,
+    "sha256": "cc899b9a88e33c30a2bdec439d99601fc6bfae4ba56773d9fb28a2ba9bb5c166"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/nist-variance.expected.f64": {
+    "bytes": 8,
+    "sha256": "c738dd99fada954a0be83cb94069e65973256ed5a199cd293841c789ad3b0910"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/run.json": {
+    "bytes": 145462,
+    "sha256": "4cbc1b0b406407ca5a323901e86484e705cbbdf8393e75252117bf569a96ea8c"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-csv-read-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-csv-read-pandas-0.request.json": {
+    "bytes": 715,
+    "sha256": "f863fa2acfa559edb86df9c7b446fa6634840056d999bd78317d49d72213014a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-csv-read-pandas-0.response.json": {
+    "bytes": 537,
+    "sha256": "92531a2ae39027e3cff0d6948abcd141cdbd8b8d18a54940036fe4130eda1136"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-csv-read-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-csv-read-swiftsci-0.request.json": {
+    "bytes": 715,
+    "sha256": "f863fa2acfa559edb86df9c7b446fa6634840056d999bd78317d49d72213014a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-csv-read-swiftsci-0.response.json": {
+    "bytes": 386,
+    "sha256": "b33de364c8fe15774859caeeaf397f7bd714b18fd8118f5c04aeb07708ee7fab"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-csv-read.expected.f64": {
+    "bytes": 4128,
+    "sha256": "efac62078d3b1c41cf49e32d0c322fddd5f9bb03d8cacd883985a86bdbacf37f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-filter-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-filter-pandas-0.request.json": {
+    "bytes": 711,
+    "sha256": "f2e846a12626edf8c5b2e41c06db450b21b9f6c78fb6859dab1013bfc09adc82"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-filter-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "a35094b4046ce5dded2af35b6c634db95fff1aad9036aad42b6e7fe03ead77a6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-filter-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-filter-swiftsci-0.request.json": {
+    "bytes": 711,
+    "sha256": "f2e846a12626edf8c5b2e41c06db450b21b9f6c78fb6859dab1013bfc09adc82"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-filter-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "7c3cf41cf1b66056de97e2e3ce62a44cdf62187ccbc67193b64a08fdd74340e3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-filter.expected.f64": {
+    "bytes": 1952,
+    "sha256": "dc459fc86f8ddfb8da8ab37a1665162db9c21bae7d6dc02498e7f0c09e4d6a33"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-flat-matrix-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-flat-matrix-pandas-0.request.json": {
+    "bytes": 721,
+    "sha256": "deb652946893841c907647863e94c53899781c08c66180af57bb950353071d91"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-flat-matrix-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "1b4cfef0633b82056d5392fcd01e7421c18826e3783cdc4d4283d368607de802"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-flat-matrix-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-flat-matrix-swiftsci-0.request.json": {
+    "bytes": 721,
+    "sha256": "deb652946893841c907647863e94c53899781c08c66180af57bb950353071d91"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-flat-matrix-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "c21519b9a1d4b2b53ae62615f83cfd516f1628fcb144a2e7a51b1c9117b08085"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-flat-matrix.expected.f64": {
+    "bytes": 2064,
+    "sha256": "c18fc18efae8a32bde3d05ff185d0c8b90fbad80feaaa644d714df44fe5894d4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-group-sum-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-group-sum-pandas-0.request.json": {
+    "bytes": 717,
+    "sha256": "a244f7be83aacef86cb9ce826d0f8909c98d21bc5d8ce3aaa2a16d858ea3d490"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-group-sum-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "e908cb46265ed44c30110df4e30f143b998d17cc47d593eb892b1fb2961fa01b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-group-sum-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-group-sum-swiftsci-0.request.json": {
+    "bytes": 717,
+    "sha256": "a244f7be83aacef86cb9ce826d0f8909c98d21bc5d8ce3aaa2a16d858ea3d490"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-group-sum-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "5b658e095aa8bf04d61ca1422bf73d2c9be9e2144d6d37c764fdaab9b57fc19e"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-group-sum.expected.f64": {
+    "bytes": 112,
+    "sha256": "ace3f83ef64b76fa6cabe830bfe89ab3351f77810e2876e7aa7268fe146bb7c8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-mean-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-mean-pandas-0.request.json": {
+    "bytes": 711,
+    "sha256": "b829b526ae354345eb43d62ddfb73c7be248bd3b28d9fdb0d66ecd26926f29b3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-mean-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "ebebea115c13317e825411703ac0f0315f85433bb3768df5856843a003dc9bfa"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-mean-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-mean-swiftsci-0.request.json": {
+    "bytes": 711,
+    "sha256": "b829b526ae354345eb43d62ddfb73c7be248bd3b28d9fdb0d66ecd26926f29b3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-mean-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "05dc679cbc544f365e91f03c6a122c4aa5eb44106e171b72067f3c9cb0e63bf1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-mean.expected.f64": {
+    "bytes": 8,
+    "sha256": "c284eeeeffc1eb15c7889a10f238c85e5308b90e8a78dd741219f969dde881e1"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-minmax-scale-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-minmax-scale-pandas-0.request.json": {
+    "bytes": 731,
+    "sha256": "410be6cb95b7c961959a8172e83cb84671f194b948d4e8cd6136a7d1e3f1f1e0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-minmax-scale-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "b5fd385bb3fb96e0717284b64c9586381cabad71468f6dc59204899b9a443c43"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-minmax-scale-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-minmax-scale-swiftsci-0.request.json": {
+    "bytes": 731,
+    "sha256": "410be6cb95b7c961959a8172e83cb84671f194b948d4e8cd6136a7d1e3f1f1e0"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-minmax-scale-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "b3e3cd121b9fc5aa70f81082c01fe0f3daceeb36eb462b840f18f590b6476bee"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-minmax-scale.expected.f64": {
+    "bytes": 2064,
+    "sha256": "727a62b21b8173cad20262e963e5b1138499f0f7c74960b8575b4dc19dad4b39"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-sort-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-sort-pandas-0.request.json": {
+    "bytes": 707,
+    "sha256": "9d0434e7fef4ef25abd092a58fe2503a369042f7482a0207972281139d7b2ca9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-sort-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "914693f572d76aa34a0a0ee79bcfcb974fe725352ae1288afa250babb3de550d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-sort-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-sort-swiftsci-0.request.json": {
+    "bytes": 707,
+    "sha256": "9d0434e7fef4ef25abd092a58fe2503a369042f7482a0207972281139d7b2ca9"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-sort-swiftsci-0.response.json": {
+    "bytes": 384,
+    "sha256": "db57f7374a9eb6bdaea5f2dc165f57eff4bd9c90ef87640ac25c84b9e7edde48"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-sort.expected.f64": {
+    "bytes": 4128,
+    "sha256": "2adb66207f2a3d19bb7b72ff749c241d3e0068c3a107d44333dbade722ba171d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-standard-scale-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-standard-scale-pandas-0.request.json": {
+    "bytes": 735,
+    "sha256": "d5ea4bdbd6497a43765d1cc95d1b925556f240acb36dd83748bd70351d8d8715"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-standard-scale-pandas-0.response.json": {
+    "bytes": 536,
+    "sha256": "8a6bc07f28c8489294915c59071fe8de3908da9bf4dd83a374d8fee58d7d6e82"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-standard-scale-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-standard-scale-swiftsci-0.request.json": {
+    "bytes": 735,
+    "sha256": "d5ea4bdbd6497a43765d1cc95d1b925556f240acb36dd83748bd70351d8d8715"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-standard-scale-swiftsci-0.response.json": {
+    "bytes": 405,
+    "sha256": "ed1eed42da2315a31a7fd476a5ea2ad394bda097898df9a507d4d3c61895540a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-standard-scale.expected.f64": {
+    "bytes": 2064,
+    "sha256": "3dd66892515eb0b2068a5527ef9c4fe785d5af2d0f2b4886c73b08969ac18988"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-stddev-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-stddev-pandas-0.request.json": {
+    "bytes": 715,
+    "sha256": "b20d41b800b57518b504c6c70a433dc631da22ba4ecde531f5268c2bebba33ab"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-stddev-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "8935619a7dea83f71907e2876997ae05c4117521ee659ea2747417e7a39781cb"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-stddev-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-stddev-swiftsci-0.request.json": {
+    "bytes": 715,
+    "sha256": "b20d41b800b57518b504c6c70a433dc631da22ba4ecde531f5268c2bebba33ab"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-stddev-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "6246e114ae26f020b89faf4a6b0aee46cbf6c1ee0ab3062775ff676784fda026"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-stddev.expected.f64": {
+    "bytes": 8,
+    "sha256": "13494b618c867a5a9ea9bbe13d24d42cbd930dddf627d6b3885bdf768ab1d68b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-target-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-target-pandas-0.request.json": {
+    "bytes": 711,
+    "sha256": "ce3907265d83569bab34ae265bdbe7142b6ce9d79747e92fca6827f8979b45a4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-target-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "495846d16ef675bfb11b5c0a0723ca88c3797f1c928f251d99f7e5abdbaafb96"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-target-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-target-swiftsci-0.request.json": {
+    "bytes": 711,
+    "sha256": "ce3907265d83569bab34ae265bdbe7142b6ce9d79747e92fca6827f8979b45a4"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-target-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "5af3f51c29b5869bd39adc19cc0a2afb2d96249a027c298c863ac8d82e8f69f6"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-target.expected.f64": {
+    "bytes": 1032,
+    "sha256": "7c8dfdec8fd454bdaadcbb798ece6f3e028e205bf8584ba519095c1452208979"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-variance-pandas-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-variance-pandas-0.request.json": {
+    "bytes": 719,
+    "sha256": "ac2f715297111f8001588acd9084b6968d4c1790b4221c530b81adf9096cec24"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-variance-pandas-0.response.json": {
+    "bytes": 535,
+    "sha256": "177ba75909473b658c6e75c91b8040b9d97f56bf382706332b83f14cfed3a238"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-variance-swiftsci-0.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-variance-swiftsci-0.request.json": {
+    "bytes": 719,
+    "sha256": "ac2f715297111f8001588acd9084b6968d4c1790b4221c530b81adf9096cec24"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-variance-swiftsci-0.response.json": {
+    "bytes": 383,
+    "sha256": "cba6a7108d9066792150badcf063892136c90a46fb6bb5ef7054d25416233a9d"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/runs/suite-neural-smoke-01/tiny-variance.expected.f64": {
+    "bytes": 8,
+    "sha256": "67ab9611c5c2899bb2bb024a8bfd0540b89e5f125320fa8e62917ce0c928adc8"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/suite-neural-02-audit.log": {
+    "bytes": 124,
+    "sha256": "31a5f1beb26a90c115b64e304cb3df6eea55f774865ea48f113560be84e34669"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/suite-neural-02.log": {
+    "bytes": 182,
+    "sha256": "d6eea0a4ae2d468ea6ac4e9005cdd2a645ba6d48932df6ec4bf80865add0bee3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/suite-neural-03-audit.log": {
+    "bytes": 28,
+    "sha256": "11a099f7c51d42f4adcc0d933c119b965fdc969fbbd9bf7afbfacf011adc0034"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/suite-neural-03.log": {
+    "bytes": 1064,
+    "sha256": "5f0c05ce58b79cd037ad7b7c913ab6af07c21f6df180269d85b64b189774e32a"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/suite-neural-cpu-01-audit.log": {
+    "bytes": 55,
+    "sha256": "64732bcb588f062385be7a1a95b0fab63d59270b045483c1660fd4daab1f2a65"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/suite-neural-cpu-01.log": {
+    "bytes": 444,
+    "sha256": "8294d4735535bc8075601f32890faf3f08bda1a89908b6d277dfcc2657afc28f"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/suite-neural-loader-02-audit.log": {
+    "bytes": 28,
+    "sha256": "11a099f7c51d42f4adcc0d933c119b965fdc969fbbd9bf7afbfacf011adc0034"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/suite-neural-loader-02.log": {
+    "bytes": 192,
+    "sha256": "0bc7a2f946d343b14253cb8297ea816717830de8dcf26f6306ad02ee15437226"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/suite-neural-smoke-01-audit.log": {
+    "bytes": 55,
+    "sha256": "64732bcb588f062385be7a1a95b0fab63d59270b045483c1660fd4daab1f2a65"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/suite-neural-smoke-01.log": {
+    "bytes": 904,
+    "sha256": "1f45295d4738392fdfd17c3988c4f146b51f20de2d15d4ef47c99b3930516a0b"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/summarize.py": {
+    "bytes": 2925,
+    "sha256": "398d8de284a78b3784e94d168428ccce96e9207cfabf191811669a627dcbe3c3"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/validate-final.py": {
+    "bytes": 1694,
+    "sha256": "0724466947e5022aca6a2de75e0ac763be9ed3f731580996ab2312a0c4dafb51"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/validation-exits.json": {
+    "bytes": 701,
+    "sha256": "94c19ee8e16c2267584f42a7153170141cd10a4e6895cab56deb2581783a3856"
+  },
+  "Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/worker.build.json": {
+    "bytes": 45569,
+    "sha256": "a95c789cf39dfcce2a16107cdd44a6454b73715e23cf36cbd0f08eb907ce2b7e"
+  },
+  "Documentation/EngineeringNotes/benchmarks/2026-09-27-dataset-strategy.md": {
+    "bytes": 19726,
+    "sha256": "30247c3cedf2125447e9cd8a07a9d9f4806a3aa9213ed103f788a819b71621fb"
+  },
+  "Documentation/EngineeringNotes/benchmarks/2026-09-27-neural-suite.md": {
+    "bytes": 4360,
+    "sha256": "6b825c1414bd228c739bcc2c24afb389bd1d5c0b5adadf2ba8435e3ea3cbb08b"
+  }
+}
