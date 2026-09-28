@@ -1,9 +1,9 @@
 import copy,hashlib,json,struct,subprocess,sys
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci');run_dir=root/'Benchmarks/Runs/suite-neural-03';out=Path('/private/tmp/swiftsci-suite-neural/negative-workers');out.mkdir(exist_ok=True)
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');run_dir=root/'Benchmarks/Runs/suite-neural-03';out=Path('/private/tmp/swiftsci-suite-neural/negative-workers');out.mkdir(exist_ok=True)
 sys.path.insert(0,str(root/'Benchmarks/Tools'))
 from neural_reference import reference
-commands={'swiftsci':['/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
+commands={'swiftsci':['/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
 cases=['neural-cpu-learned-full','neural-cpu-rope-cached','neural-gpu-learned-cached','neural-gpu-rope-full']
 records=[]
 for case in cases:

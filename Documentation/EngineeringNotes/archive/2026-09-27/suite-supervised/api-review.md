@@ -1,6 +1,6 @@
 # Stage 4 supervised API review
 
-Reviewed SwiftSci at `/Users/crabel/Documents/src/SwiftSci`, HEAD `279c01433dfd76e6768c72c7af7d2950fa5d3944`. This was a source review. No repository files were edited and no new Swift code was compiled or executed. This report belongs in temporary working material, outside the contribution branch.
+Reviewed SwiftSci at `/Users/LOCAL_USER/Documents/src/SwiftSci`, HEAD `279c01433dfd76e6768c72c7af7d2950fa5d3944`. This was a source review. No repository files were edited and no new Swift code was compiled or executed. This report belongs in temporary working material, outside the contribution branch.
 
 The first useful increment is raw Diabetes input, persisted train/validation/test row IDs, an actual `StandardScaler` fitted only on training rows, and actual CPU `LinearRegression.fit` and held-out `predict` calls. Compare every held-out prediction against an independent high-precision least-squares reference. Return fitted scaler parameters as well, since OLS predictions can stay unchanged under invertible changes of feature scale and cannot prove that preprocessing is correct by themselves.
 

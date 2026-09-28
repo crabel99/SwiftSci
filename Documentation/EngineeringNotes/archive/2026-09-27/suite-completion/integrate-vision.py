@@ -1,6 +1,6 @@
 from pathlib import Path
 import shutil,json
-root=Path('/Users/crabel/Documents/src/SwiftSci');candidate=Path('/private/tmp/swiftsci-suite-finish/vision')
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');candidate=Path('/private/tmp/swiftsci-suite-finish/vision')
 for p in (candidate/'Benchmarks').rglob('*'):
  if p.is_file() and '__pycache__' not in p.parts:
   dest=root/p.relative_to(candidate);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,dest)

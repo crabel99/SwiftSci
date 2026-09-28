@@ -4,7 +4,7 @@ Adopted by crabel99 on September 27, 2026. Apply this charter when planning, imp
 
 ## Objective
 
-Build a top-tier scientific and numerical library that can form the foundation for local models and demanding scientific computation on Apple Silicon.
+Develop scientific data structures and numerical operations for local models and demanding scientific computation on Apple silicon.
 
 Judge progress by supported engineering workflows, correct results, memory and execution costs, and maintainability. This objective describes the quality we intend to earn.
 

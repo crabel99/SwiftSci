@@ -52,4 +52,4 @@ The committed branch was rebuilt and compared with the unchanged pandas and Kira
 
 SwiftSci filtering takes about 1.51 times the pandas duration in this run. Sorting and grouping remain the largest gaps. These are CPU workloads on one shared Mac; the complete benchmark report records type differences and measurement limits.
 
-[Final benchmark report](/Users/crabel/local-ai/spl/swiftpandas/benchmark/results/20260926T000220Z/REPORT.md)
+[Final benchmark report](/Users/LOCAL_USER/local-ai/spl/swiftpandas/benchmark/results/20260926T000220Z/REPORT.md)

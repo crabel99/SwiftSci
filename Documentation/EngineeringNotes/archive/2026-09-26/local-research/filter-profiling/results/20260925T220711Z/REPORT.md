@@ -51,18 +51,18 @@ The source repositories remain at their prior states. SwiftSci retains the uncom
 Run these probes with:
 
 ```sh
-cd "/Users/crabel/local-ai/spl/swiftsci/filter-profiling"
+cd "/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-profiling"
 swift build -c release --arch arm64 -j 8
-/Users/crabel/local-ai/spl/swiftsci/benchmark/.venv/bin/python run.py
+/Users/LOCAL_USER/local-ai/spl/swiftsci/benchmark/.venv/bin/python run.py
 ```
 
 Sources inspected:
 
-- [SwiftSci column gathering](/Users/crabel/Documents/src/SwiftSci/Sources/SwiftDataFrame/Columns/TypedColumn.swift:110)
-- [SwiftSci frame gathering](/Users/crabel/Documents/src/SwiftSci/Sources/SwiftDataFrame/Core/DataFrame.swift:647)
-- [Kiraa frame filtering](/Users/crabel/Documents/src/kiraa-swift-pandas/Sources/SwiftPandas/DataFrame/DataFrame.swift:553)
-- [Kiraa typed take](/Users/crabel/Documents/src/kiraa-swift-pandas/Sources/SwiftPandas/Core/Array/NativeArray.swift:258)
-- [Kiraa validity handling](/Users/crabel/Documents/src/kiraa-swift-pandas/Sources/SwiftPandas/Core/Array/NullableArray.swift:355)
-- [Installed pandas dispatch snapshot](/Users/crabel/local-ai/spl/swiftsci/filter-profiling/installed-pandas-take.py)
+- [SwiftSci column gathering](/Users/LOCAL_USER/Documents/src/SwiftSci/Sources/SwiftDataFrame/Columns/TypedColumn.swift:110)
+- [SwiftSci frame gathering](/Users/LOCAL_USER/Documents/src/SwiftSci/Sources/SwiftDataFrame/Core/DataFrame.swift:647)
+- [Kiraa frame filtering](/Users/LOCAL_USER/Documents/src/kiraa-swift-pandas/Sources/SwiftPandas/DataFrame/DataFrame.swift:553)
+- [Kiraa typed take](/Users/LOCAL_USER/Documents/src/kiraa-swift-pandas/Sources/SwiftPandas/Core/Array/NativeArray.swift:258)
+- [Kiraa validity handling](/Users/LOCAL_USER/Documents/src/kiraa-swift-pandas/Sources/SwiftPandas/Core/Array/NullableArray.swift:355)
+- [Installed pandas dispatch snapshot](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-profiling/installed-pandas-take.py)
 
 Raw timings, native samples, executable hashes and the candidate source diff are stored beside this report. Source and harness hashes are recorded in metadata.json.

@@ -4,7 +4,7 @@ Read-only investigation. No adapter, production, or dependency changes. No diagn
 
 ## Evidence
 
-The actual Release dependency checkout is `/Users/crabel/Library/Caches/SwiftSci/xcode-packages/checkouts/mlx-swift`, revision `0bb916c67f4b9e5c682cbe02a42c701c93ab5021` (reported package version 0.31.6). Its working tree is clean.
+The actual Release dependency checkout is `/Users/LOCAL_USER/Library/Caches/SwiftSci/xcode-packages/checkouts/mlx-swift`, revision `0bb916c67f4b9e5c682cbe02a42c701c93ab5021` (reported package version 0.31.6). Its working tree is clean.
 
 Source SHA-256:
 

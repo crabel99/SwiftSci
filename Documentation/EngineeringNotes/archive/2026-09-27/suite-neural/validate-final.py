@@ -1,6 +1,6 @@
 import json,subprocess
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci');out=Path('/private/tmp/swiftsci-suite-neural');python=str(root/'Benchmarks/.venv-standardized/bin/python');bench=str(root/'Benchmarks/Tools/bench.py');worker='/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');out=Path('/private/tmp/swiftsci-suite-neural');python=str(root/'Benchmarks/.venv-standardized/bin/python');bench=str(root/'Benchmarks/Tools/bench.py');worker='/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'
 records=[]
 for profile,name,expected in [('neural-conformance','suite-neural-02',1),('neural-loader-conformance','suite-neural-loader-02',1),('neural-cpu-conformance','suite-neural-cpu-01',0),('smoke','suite-neural-smoke-01',0)]:
  args=[python,bench,'run','--profile',profile,'--engines','swiftsci,pandas','--swift-worker',worker,'--python',python,'--output',str(root/'Benchmarks/Runs'/name)]

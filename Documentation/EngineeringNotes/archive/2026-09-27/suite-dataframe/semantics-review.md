@@ -1,6 +1,6 @@
 # Dataframe suite semantics review
 
-Reviewed canonical source and test files in `/Users/crabel/Documents/src/SwiftSci`. No production files changed. This is a source and existing-test review, not a new runtime verification. Ignore the untracked files ending in ` 2` and ` 3`; the canonical files carry the reviewed contracts.
+Reviewed canonical source and test files in `/Users/LOCAL_USER/Documents/src/SwiftSci`. No production files changed. This is a source and existing-test review, not a new runtime verification. Ignore the untracked files ending in ` 2` and ` 3`; the canonical files carry the reviewed contracts.
 
 ## Public calls for the suite
 

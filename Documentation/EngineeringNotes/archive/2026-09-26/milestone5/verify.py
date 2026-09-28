@@ -1,6 +1,6 @@
 import subprocess,json,sys
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci')
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci')
 python=str(root/'Benchmarks/.venv-standardized/bin/python')
 bench=[python,str(root/'Benchmarks/Tools/bench.py')]
 worker=str(Path.home()/'Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker')

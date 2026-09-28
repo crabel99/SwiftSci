@@ -12,7 +12,7 @@ The fit route isolates preprocessing and prediction. The native route saves the 
 
 Both profiles join CPU acceptance. The suite now assigns 24 canonical profiles to execution tiers. CI also challenges passing workflow workers with corrupted answers and invalid inputs, retaining evidence after failures.
 
-The contribution's [workflow guide](/Users/crabel/Documents/src/SwiftSci/Benchmarks/Fixtures/workflows/README.md) defines output ordering, tolerances, fixture regeneration, retained artifacts, and timing limits.
+The contribution's [workflow guide](/Users/LOCAL_USER/Documents/src/SwiftSci/Benchmarks/Fixtures/workflows/README.md) defines output ordering, tolerances, fixture regeneration, retained artifacts, and timing limits.
 
 ## Recorded validation
 

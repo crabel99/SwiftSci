@@ -833,7 +833,7 @@
       "case_id": "mixed-tiny-parquet-write",
       "case_key": "4805f3db9b8804c997c94069b3c869af76165da862d63b6321e37f71a44fee10",
       "engine": "swiftsci",
-      "error": "Could not open Parquet input source '/Users/crabel/Documents/src/SwiftSci/Benchmarks/Runs/migration-unit2/mixed-tiny-parquet-write-swiftsci-0.response.json.sample0.parquet': Couldn't deserialize thrift: TProtocolException: Invalid data\n",
+      "error": "Could not open Parquet input source '/Users/LOCAL_USER/Documents/src/SwiftSci/Benchmarks/Runs/migration-unit2/mixed-tiny-parquet-write-swiftsci-0.response.json.sample0.parquet': Couldn't deserialize thrift: TProtocolException: Invalid data\n",
       "status": "failed"
     },
     {
@@ -1661,7 +1661,7 @@
       "pandas": {
         "command": [
           "Benchmarks/.venv-standardized/bin/python",
-          "/Users/crabel/Documents/src/SwiftSci/Benchmarks/Python/standard_worker.py"
+          "/Users/LOCAL_USER/Documents/src/SwiftSci/Benchmarks/Python/standard_worker.py"
         ],
         "version": "3.0.6 2.5.3 1.18.1 25.0.1 3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
         "worker_sha256": "23b0b70a75070278abc84988889ce39114403609da1dcbf6e7c218dc83e5277b"
@@ -1679,9 +1679,9 @@
             "-destination",
             "platform=macOS,arch=arm64",
             "-derivedDataPath",
-            "/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/derived",
+            "/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/derived",
             "-clonedSourcePackagesDirPath",
-            "/Users/crabel/Library/Caches/SwiftSci/xcode-packages",
+            "/Users/LOCAL_USER/Library/Caches/SwiftSci/xcode-packages",
             "-onlyUsePackageVersionsFromResolvedFile",
             "-skipPackagePluginValidation",
             "ENABLE_TESTABILITY=YES",
@@ -1689,7 +1689,7 @@
           ],
           "environment": {
             "chip": "Apple M4 Max",
-            "host": "Cals-MacBook-Pro-2.local",
+            "host": "AppleSiliconHost",
             "machine": "arm64",
             "memory_bytes": "137438953472",
             "os_build": "26A428",
@@ -1705,9 +1705,9 @@
             },
             "xcode": "Xcode 27.0\nBuild version 27A266a"
           },
-          "log": "/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/build.log",
+          "log": "/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/build.log",
           "schema_version": 1,
-          "snapshot": "/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/source-1p6hmn1l",
+          "snapshot": "/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/source-1p6hmn1l",
           "source": {
             "commit": "221225ada1055ad339dc36bae97855bc5c3f79c3",
             "files": {
@@ -2025,13 +2025,13 @@
           }
         },
         "command": [
-          "/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker"
+          "/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker"
         ]
       }
     },
     "environment": {
       "chip": "Apple M4 Max",
-      "host": "Cals-MacBook-Pro-2.local",
+      "host": "AppleSiliconHost",
       "machine": "arm64",
       "memory_bytes": "137438953472",
       "os_build": "26A428",

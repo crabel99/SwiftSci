@@ -1,6 +1,6 @@
 import hashlib,json,os,subprocess,tempfile
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci');work=Path('/private/tmp/swiftsci-suite-neural');archive='Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/'
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');work=Path('/private/tmp/swiftsci-suite-neural');archive='Documentation/EngineeringNotes/archive/2026-09-27/suite-neural/'
 def git(*args,**kwargs):return subprocess.check_output(['git','-C',str(root),*args],**kwargs).decode().strip()
 base=git('rev-parse','codex/engineering-notes');assert base==git('rev-parse','origin/codex/engineering-notes')
 head=git('rev-parse','HEAD');index_tree=git('write-tree')

@@ -25,7 +25,7 @@ Baseline is `4dc6b533dd`; candidate is `4c5bb95354`. The same production executa
 | 1,000,000 | Int32 | 3.723 | 1.947 | 1.91x |
 | 1,000,000 | Float32 | 3.768 | 1.985 | 1.90x |
 
-[Raw matched results](/Users/crabel/local-ai/spl/swiftsci/filter-optimization/production-before-after/summary.json). Million-row peak RSS stayed effectively unchanged. These production fixtures contain missing values, so their improvement primarily comes from gathering. The null-free Float path is evaluated separately below.
+[Raw matched results](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-optimization/production-before-after/summary.json). Million-row peak RSS stayed effectively unchanged. These production fixtures contain missing values, so their improvement primarily comes from gathering. The null-free Float path is evaluated separately below.
 
 ## Breadth and regressions
 
@@ -48,7 +48,7 @@ For one million present values, cached `isNotNull` changed from about 1.93 ms to
 - Compact numeric buffers preserve a substantial memory advantage, approximately half the optional-array payload. Converting optional inputs into compact storage and back inside one filter took 4.22–4.76 times as long by median million-row case ratio. Keep this work on the separate storage branch and migrate consumers together.
 - Run-aware block copying remains a candidate for later work. Its dispatch must account for actual run structure and validity patterns, including the cost of detecting them. Selection percentage alone is insufficient.
 
-The [storage experiment report](/Users/crabel/local-ai/spl/swiftsci/filter-optimization/storage-experiment/REPORT.md) records all 1,728 validated cases and distinguishes payload memory, live allocations and whole-process peak RSS. It is a standalone serial prototype, so its timings are not production SwiftSci speedups.
+The [storage experiment report](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-optimization/storage-experiment/REPORT.md) records all 1,728 validated cases and distinguishes payload memory, live allocations and whole-process peak RSS. It is a standalone serial prototype, so its timings are not production SwiftSci speedups.
 
 ## Full production comparison
 
@@ -69,7 +69,7 @@ All 24 SwiftSci workload/size combinations passed comparison with pandas/Python.
 | correlation | 1.713 | 2.421 | n/a |
 | forecast | 12.605 | 388.562 | n/a |
 
-[Full production report](/Users/crabel/local-ai/spl/swiftsci/production-comparison/results/20260926T104626Z/REPORT.md) includes both sizes, memory, timing spread, correctness limitations, versions and reproduction commands.
+[Full production report](/Users/LOCAL_USER/local-ai/spl/swiftsci/production-comparison/results/20260926T104626Z/REPORT.md) includes both sizes, memory, timing spread, correctness limitations, versions and reproduction commands.
 
 ## Validation and limits
 
@@ -83,14 +83,14 @@ Hardware was an Apple M4 Max with 128 GiB unified memory and Swift 6.4. An unrel
 
 ## Reproduction assets
 
-- [Table and operator benchmark](/Users/crabel/local-ai/spl/swiftsci/filter-matrix/README.md)
-- [Original tuning](/Users/crabel/local-ai/spl/swiftsci/filter-matrix/results/tuning/summary.json)
-- [Revised tuning](/Users/crabel/local-ai/spl/swiftsci/filter-matrix/results/tuning-revised/summary.json)
-- [Holdout](/Users/crabel/local-ai/spl/swiftsci/filter-matrix/results/holdout/summary.json)
-- [Holdout confirmation](/Users/crabel/local-ai/spl/swiftsci/filter-matrix/results/holdout-confirmation/summary.json)
-- [Cached-null operator comparison](/Users/crabel/local-ai/spl/swiftsci/filter-matrix/results/operators-cached/summary.json)
-- [Matched production runner](/Users/crabel/local-ai/spl/swiftsci/filter-optimization/compare-production.py)
-- [Debug test summary](/Users/crabel/local-ai/spl/swiftsci/full-suite-validation/debug-20260926T104326Z-x4cAFJ/summary.json)
-- [Release test summary](/Users/crabel/local-ai/spl/swiftsci/full-suite-validation/release-20260926T104427Z-yygDpe/summary.json)
+- [Table and operator benchmark](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-matrix/README.md)
+- [Original tuning](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-matrix/results/tuning/summary.json)
+- [Revised tuning](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-matrix/results/tuning-revised/summary.json)
+- [Holdout](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-matrix/results/holdout/summary.json)
+- [Holdout confirmation](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-matrix/results/holdout-confirmation/summary.json)
+- [Cached-null operator comparison](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-matrix/results/operators-cached/summary.json)
+- [Matched production runner](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-optimization/compare-production.py)
+- [Debug test summary](/Users/LOCAL_USER/local-ai/spl/swiftsci/full-suite-validation/debug-20260926T104326Z-x4cAFJ/summary.json)
+- [Release test summary](/Users/LOCAL_USER/local-ai/spl/swiftsci/full-suite-validation/release-20260926T104427Z-yygDpe/summary.json)
 
 Candidate binaries and metadata are preserved under `filter-matrix/binaries`. Metadata records source revisions, diff hashes, compiler and binary hashes. Rejected patches and assembly probes are retained under `filter-optimization/candidates`.

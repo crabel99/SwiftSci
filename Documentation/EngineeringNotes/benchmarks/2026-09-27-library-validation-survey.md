@@ -16,7 +16,7 @@ The supported scope should be explicit. Distributed query processing, broad deep
 
 The local implementation inspected was `ab7aa2f1dab7256eed5de177fb5060a25740c643` on `codex/standardized-benchmarks`. The existing uncommitted `Benchmarks/README.md` documentation edit was preserved. This survey read representative upstream test and benchmark code as well as official documentation. It did not run new benchmarks or re-execute library tests. The detailed reviews separate observed source coverage from recorded passing evidence.
 
-The existing acceptance run records 22 profiles and 1,132 engine-case executions: 1,102 passed, 30 failed, and zero infrastructure errors. The controller suite recorded 135 passing tests. These are not counts of unique algorithms or the library's entire test suite. See the [suite completion record](2026-09-27-suite-completion.md), [acceptance artifact](/Users/crabel/Documents/src/SwiftSci/Benchmarks/Runs/finish-acceptance-02/acceptance.json), and [benchmark guide](/Users/crabel/Documents/src/SwiftSci/Benchmarks/README.md).
+The existing acceptance run records 22 profiles and 1,132 engine-case executions: 1,102 passed, 30 failed, and zero infrastructure errors. The controller suite recorded 135 passing tests. These are not counts of unique algorithms or the library's entire test suite. See the [suite completion record](2026-09-27-suite-completion.md), [acceptance artifact](/Users/LOCAL_USER/Documents/src/SwiftSci/Benchmarks/Runs/finish-acceptance-02/acceptance.json), and [benchmark guide](/Users/LOCAL_USER/Documents/src/SwiftSci/Benchmarks/README.md).
 
 Three specialist reviews supply the detailed comparisons and source links:
 
@@ -59,7 +59,7 @@ Existing unit tests include typed joins, Unicode and dates, externally generated
 
 ### Tie public claims to workload evidence
 
-The main [README](/Users/crabel/Documents/src/SwiftSci/README.md) makes broad zero-copy, data-race freedom, memory advantage, and complete parity claims. The bounded suite does not substantiate those claims across the library. This survey does not prove all those claims false. It shows that they exceed the evidence reviewed.
+The main [README](/Users/LOCAL_USER/Documents/src/SwiftSci/README.md) makes broad zero-copy, data-race freedom, memory advantage, and complete parity claims. The bounded suite does not substantiate those claims across the library. This survey does not prove all those claims false. It shows that they exceed the evidence reviewed.
 
 The next documentation contract should map each claim to its public API, supported input domain, checked environment, required profile, and remaining exclusions. Numerical conformance, predictive quality, and performance eligibility need separate statuses. The existing failed evidence must remain visible. An aggregate pass count must never turn a known failing loader or estimator into a qualified workflow.
 

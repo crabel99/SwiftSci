@@ -6,4 +6,4 @@ This branch retains our research, engineering decisions, discussion summaries an
 
 Before planning, implementing, validating or reviewing SwiftSci work, follow the [charter workflow](Documentation/EngineeringNotes/CHARTER.md#workflow) and its guidance for the type of change.
 
-The [working record](Documentation/EngineeringNotes/README.md) holds the current decisions and evidence.
+Start with the [working record](Documentation/EngineeringNotes/README.md) for current decisions and evidence. The [publication review](Documentation/EngineeringNotes/PUBLICATION-REVIEW.md) describes the sanitation scope and the provenance limits of edited evidence copies.

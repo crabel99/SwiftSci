@@ -69,12 +69,12 @@ The inspected SwiftSci checkout carries an MIT license, the installed pandas dis
 
 ## Evidence and source locations
 
-- [Filtering profile report](/Users/crabel/local-ai/spl/swiftsci/filter-profiling/results/20260925T220711Z/REPORT.md)
-- [SwiftSci column implementation](/Users/crabel/Documents/src/SwiftSci/Sources/SwiftDataFrame/Columns/TypedColumn.swift)
-- [SwiftSci CSV options](/Users/crabel/Documents/src/SwiftSci/Sources/SwiftDataFrame/IO/CSVReadOptions.swift)
-- [SwiftSci CSV parsing](/Users/crabel/Documents/src/SwiftSci/Sources/SwiftDataFrame/IO/CSVReader.swift)
-- [SwiftSci lazy optimizer](/Users/crabel/Documents/src/SwiftSci/Sources/SwiftDataFrame/Lazy/QueryPlan.swift)
-- [SwiftSci Arrow buffer](/Users/crabel/Documents/src/SwiftSci/Sources/SwiftDataFrame/Internal/ArrowDataBuffer.swift)
-- [Kiraa lazy optimizer](/Users/crabel/Documents/src/kiraa-swift-pandas/Sources/SwiftPandas/Lazy/QueryOptimizer.swift)
-- [Kiraa validated CSV reads](/Users/crabel/Documents/src/kiraa-swift-pandas/Sources/SwiftPandas/IO/CSV/CSVReaderStrict.swift)
-- [Kiraa resident server](/Users/crabel/Documents/src/kiraa-swift-pandas/Sources/SwiftPandasCLI/Server/Handlers.swift)
+- [Filtering profile report](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-profiling/results/20260925T220711Z/REPORT.md)
+- [SwiftSci column implementation](/Users/LOCAL_USER/Documents/src/SwiftSci/Sources/SwiftDataFrame/Columns/TypedColumn.swift)
+- [SwiftSci CSV options](/Users/LOCAL_USER/Documents/src/SwiftSci/Sources/SwiftDataFrame/IO/CSVReadOptions.swift)
+- [SwiftSci CSV parsing](/Users/LOCAL_USER/Documents/src/SwiftSci/Sources/SwiftDataFrame/IO/CSVReader.swift)
+- [SwiftSci lazy optimizer](/Users/LOCAL_USER/Documents/src/SwiftSci/Sources/SwiftDataFrame/Lazy/QueryPlan.swift)
+- [SwiftSci Arrow buffer](/Users/LOCAL_USER/Documents/src/SwiftSci/Sources/SwiftDataFrame/Internal/ArrowDataBuffer.swift)
+- [Kiraa lazy optimizer](/Users/LOCAL_USER/Documents/src/kiraa-swift-pandas/Sources/SwiftPandas/Lazy/QueryOptimizer.swift)
+- [Kiraa validated CSV reads](/Users/LOCAL_USER/Documents/src/kiraa-swift-pandas/Sources/SwiftPandas/IO/CSV/CSVReaderStrict.swift)
+- [Kiraa resident server](/Users/LOCAL_USER/Documents/src/kiraa-swift-pandas/Sources/SwiftPandasCLI/Server/Handlers.swift)

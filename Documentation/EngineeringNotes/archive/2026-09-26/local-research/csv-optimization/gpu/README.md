@@ -39,7 +39,7 @@ The installed Metal compiler rejects a shader with a `double` pointer with `'dou
 xcrun clang -O3 -c classify.c -o classify.o
 xcrun swiftc -O -whole-module-optimization SystemsCSVParser.swift main.swift classify.o -o csv-gpu
 ./csv-gpu --check
-./csv-gpu /Users/crabel/local-ai/spl/swiftsci/benchmark/data-1000000.csv
+./csv-gpu /Users/LOCAL_USER/local-ai/spl/swiftsci/benchmark/data-1000000.csv
 ./csv-gpu data-4000000.csv
 ```
 

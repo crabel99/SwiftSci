@@ -51,6 +51,6 @@ The final matched run passed all output comparisons at 100,000 and 1,000,000 row
 
 SwiftSci is faster on this grouped-sum workload, which has a single integer key with 100 groups and two numeric value columns. This does not establish an advantage for arbitrary keys, multiple-key grouping or every aggregation. The results are local CPU measurements on a shared Mac.
 
-[Complete matched report](/Users/crabel/local-ai/spl/swiftpandas/benchmark/results/20260926T003937Z/REPORT.md)
+[Complete matched report](/Users/LOCAL_USER/local-ai/spl/swiftpandas/benchmark/results/20260926T003937Z/REPORT.md)
 
 Column storage remains unchanged. Packed values and validity bitmaps are still a separate storage-design proposal.

@@ -36,7 +36,7 @@ The final matched comparison passed all output-value checks at 100,000 and 1,000
 | Sort | 65.671 | 59.883 | 29.281 |
 | Group | 21.052 | 9.285 | 4.711 |
 
-[Complete matched benchmark report](/Users/crabel/local-ai/spl/swiftpandas/benchmark/results/20260926T001725Z/REPORT.md)
+[Complete matched benchmark report](/Users/LOCAL_USER/local-ai/spl/swiftpandas/benchmark/results/20260926T001725Z/REPORT.md)
 
 ## Scope and remaining work
 

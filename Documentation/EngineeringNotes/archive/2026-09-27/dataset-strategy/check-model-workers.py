@@ -1,7 +1,7 @@
 import json, hashlib, struct, subprocess
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci');base=root/'Benchmarks/Runs/strategy-models-01';out=Path('/private/tmp/swiftsci-strategy/model-negative-workers');out.mkdir(exist_ok=True)
-commands={'swiftsci':['/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');base=root/'Benchmarks/Runs/strategy-models-01';out=Path('/private/tmp/swiftsci-strategy/model-negative-workers');out.mkdir(exist_ok=True)
+commands={'swiftsci':['/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
 results=[]
 for case in ['pca-oblique-k2','multinomial-nb-noncontiguous']:
  request=json.loads((base/(case+'-swiftsci-0.request.json')).read_text())

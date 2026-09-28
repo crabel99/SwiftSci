@@ -1,6 +1,6 @@
 import json,subprocess
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci')
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci')
 d=json.load(open(root/'.build/index-build/arm64-apple-macosx/debug/description.json'))
 v=next(v for k,v in d['swiftCommands'].items() if 'SwiftSciBenchmarkWorker' in k)
 a=v['otherArguments']; kept=[];i=0

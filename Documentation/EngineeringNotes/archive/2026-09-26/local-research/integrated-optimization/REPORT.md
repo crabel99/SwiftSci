@@ -13,7 +13,7 @@ One million rows, native arm64 Release on this M4 Max. Medians in milliseconds f
 | Stable descending sort | 36.113 | 29.734 | 59.256 |
 | Filter → sort → group | 19.875 | 20.252 | 41.998 |
 
-[Full comparison, memory and raw evidence](/Users/crabel/local-ai/spl/swiftsci/production-comparison/results/20260926T043033Z/REPORT.md). The recorded source is clean except for the two pre-existing untracked directories. All 24 SwiftSci workload/size combinations passed output parity. Kiraa retained its two known integer-filter failures; those timings are excluded. Actual Kiraa composite key columns now participate in validation.
+[Full comparison, memory and raw evidence](/Users/LOCAL_USER/local-ai/spl/swiftsci/production-comparison/results/20260926T043033Z/REPORT.md). The recorded source is clean except for the two pre-existing untracked directories. All 24 SwiftSci workload/size combinations passed output parity. Kiraa retained its two known integer-filter failures; those timings are excluded. Actual Kiraa composite key columns now participate in validation.
 
 ## Matched before-and-after experiment
 
@@ -26,7 +26,7 @@ The preserved original executable at `2694d303f8` was alternated with the candid
 | Filter → sort → group | 36.730 | 20.077 | 1.83× | 121.1 | 125.0 |
 | Two-key group sum | 49.536 | 11.375 | 4.35× | 101.0 | 99.6 |
 
-[Alternating samples and executable hashes](/Users/crabel/local-ai/spl/swiftsci/integrated-optimization/measurements/20260926T042111Z/raw.json). RSS is a whole-process high-water measurement, including fixtures and allocator reuse. It is not an incremental scratch-allocation count. CSV memory fell about 47 percent. Sorting scratch can increase memory on other distributions, and this pipeline used about 4 MiB more at its peak.
+[Alternating samples and executable hashes](/Users/LOCAL_USER/local-ai/spl/swiftsci/integrated-optimization/measurements/20260926T042111Z/raw.json). RSS is a whole-process high-water measurement, including fixtures and allocator reuse. It is not an incremental scratch-allocation count. CSV memory fell about 47 percent. Sorting scratch can increase memory on other distributions, and this pipeline used about 4 MiB more at its peak.
 
 ## Source and design decisions
 

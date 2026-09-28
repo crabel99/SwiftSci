@@ -1,10 +1,10 @@
 import json, hashlib, struct, subprocess
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci')
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci')
 base=root/'Benchmarks/Runs/strategy-nist-decimal-01'
 out=Path('/private/tmp/swiftsci-strategy/negative-workers');out.mkdir(exist_ok=True)
 request=json.loads((base/'nist-norris-decimal-swiftsci-0.request.json').read_text())
-commands={'swiftsci':['/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
+commands={'swiftsci':['/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
 results=[]
 for variant in ['control','wrong-final-prediction','ragged','boolean','extra-field']:
  req=dict(request)

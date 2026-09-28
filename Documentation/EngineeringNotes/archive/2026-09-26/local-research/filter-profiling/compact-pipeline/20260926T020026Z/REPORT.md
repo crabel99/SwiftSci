@@ -129,4 +129,4 @@ The next production step should be a tested compact numeric buffer and a consume
 
 ## Reproduce
 
-Run `../run.sh` from this result directory, or `/Users/crabel/local-ai/spl/swiftsci/filter-profiling/compact-pipeline/run.sh` from anywhere. The script builds the experiment and writes a new timestamped result directory. It leaves production repositories unchanged.
+Run `../run.sh` from this result directory, or `/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-profiling/compact-pipeline/run.sh` from anywhere. The script builds the experiment and writes a new timestamped result directory. It leaves production repositories unchanged.

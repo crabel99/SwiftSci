@@ -1,7 +1,7 @@
 import json, hashlib, struct, subprocess
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci');base=root/'Benchmarks/Runs/suite-controlled-01';out=Path('/private/tmp/swiftsci-suite-stage3/negative-workers');out.mkdir(exist_ok=True)
-commands={'swiftsci':['/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');base=root/'Benchmarks/Runs/suite-controlled-01';out=Path('/private/tmp/swiftsci-suite-stage3/negative-workers');out.mkdir(exist_ok=True)
+commands={'swiftsci':['/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
 results=[]
 for case in ['controlled-kalman-scalar','controlled-kmeans-one-mean','controlled-cosine-distinct','controlled-kernel-interaction']:
  request=json.loads((base/(case+'-swiftsci-0.request.json')).read_text())

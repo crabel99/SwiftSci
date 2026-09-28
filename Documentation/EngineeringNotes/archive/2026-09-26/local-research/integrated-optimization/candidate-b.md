@@ -93,7 +93,7 @@ Sorting returns a stable row permutation. Equal keys retain their order in the i
 
 Grouping resolves typed keys against the row domain and assigns first-seen IDs. Dictionary or bounded-domain algorithms remain internal alternatives. Factorization caches live only within an immutable execution and identify both column storage and row domain. Reusing a code array from a different selection would be wrong. Floating zero and NaN canonicalization follows current grouping identity, with null distinct. Output labels keep the current public representation when materialized.
 
-Source grounding: [public column values](/Users/crabel/Documents/src/SwiftSci/Sources/SwiftDataFrame/Columns/TypedColumn.swift:19), [eager storage](/Users/crabel/Documents/src/SwiftSci/Sources/SwiftDataFrame/Core/DataFrame.swift:10), [current lazy execution](/Users/crabel/Documents/src/SwiftSci/Sources/SwiftDataFrame/Lazy/LazyDataFrame.swift:61), [AnyColumn protocol](/Users/crabel/Documents/src/SwiftSci/Sources/SwiftDataFrame/Columns/AnyColumn.swift:1).
+Source grounding: [public column values](/Users/LOCAL_USER/Documents/src/SwiftSci/Sources/SwiftDataFrame/Columns/TypedColumn.swift:19), [eager storage](/Users/LOCAL_USER/Documents/src/SwiftSci/Sources/SwiftDataFrame/Core/DataFrame.swift:10), [current lazy execution](/Users/LOCAL_USER/Documents/src/SwiftSci/Sources/SwiftDataFrame/Lazy/LazyDataFrame.swift:61), [AnyColumn protocol](/Users/LOCAL_USER/Documents/src/SwiftSci/Sources/SwiftDataFrame/Columns/AnyColumn.swift:1).
 
 ## Module boundary and lifetime
 

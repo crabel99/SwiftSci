@@ -1,7 +1,7 @@
 import copy,hashlib,json,struct,subprocess
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci');out=Path('/private/tmp/swiftsci-suite-finish/negative-workers');out.mkdir(exist_ok=True)
-commands={'swiftsci':['/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');out=Path('/private/tmp/swiftsci-suite-finish/negative-workers');out.mkdir(exist_ok=True)
+commands={'swiftsci':['/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
 cases=[('finish-vision-01','vision-cpu-rgb-odd-identity'),('finish-vision-01','vision-cpu-rgb-up-asymmetric'),('finish-boundary-01','boundary-cpu-float64-narrow'),('finish-boundary-01','boundary-gpu-float32-wide'),('finish-acceptance-02/boundary-sweep','sweep-gpu-float32-128x8-prepared'),('finish-acceptance-02/boundary-sweep','sweep-cpu-float64-128x64-conversion')]
 records=[]
 for run,case in cases:

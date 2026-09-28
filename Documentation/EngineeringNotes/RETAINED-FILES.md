@@ -1,8 +1,8 @@
 # Retained files
 
-Captured files are unchanged originals. Their claims and paths describe the work at the time they were written. They are not automatic endorsements or current implementation instructions.
+This index identifies the historical files retained for engineering context. Published copies have local identity fields sanitized. Their claims describe the work at the time they were written, not current implementation instructions or endorsements.
 
-The [manifest](archive/2026-09-26/manifest.json) records source locations, capture time, sizes and SHA-256 hashes. Local links inside older reports may point to their original locations; use this index to find retained copies.
+The [original capture manifest](archive/2026-09-26/manifest.json) retains the original capture times and hashes. Identity-bearing paths have been replaced with placeholders. Original hashes are provenance for the captured artifacts, not checksums of modified publication copies. See the [publication review](PUBLICATION-REVIEW.md). Local links inside older reports may be placeholders; use this index to find retained copies.
 
 | Retained document or artifact | Original collection |
 |---|---|

@@ -1,10 +1,10 @@
 # SwiftSci engineering working record
 
-This record belongs to `crabel99/SwiftSci`, on branch `codex/engineering-notes`. crabel99 requested a continuing branch for documentation and discussion that will stay in our fork without an upstream PR.
+This branch records the engineering rationale behind contributions from the `crabel99/SwiftSci` fork. It retains constraints, alternatives, rejected approaches, benchmark findings, and unresolved questions so reviewers can follow why an implementation changed.
 
-Refer to the project owner as `crabel99` in documentation and discussion records.
+`codex/engineering-notes` is a documentation and evidence branch. It is not an implementation branch and is not intended to merge into upstream `main`. Individual PRs contain the relevant code, tests, public documentation, and a concise explanation of the verified results. Upstream design decisions remain with the maintainer.
 
-The branch starts at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`. PR #39 has merged. Production implementation and contribution work continue on their own branches.
+The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`. Entries are dated working records, not a claim that every proposal is accepted or every result applies to the latest code. The current contribution sequence is [testing #41](https://github.com/Nodibell/SwiftSci/pull/41), [repairs #43](https://github.com/Nodibell/SwiftSci/pull/43), [precision #44](https://github.com/Nodibell/SwiftSci/pull/44), and [compact preparation #45](https://github.com/Nodibell/SwiftSci/pull/45).
 
 ## Start here
 
@@ -39,21 +39,20 @@ The branch starts at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`.
 
 - [September 26 discussion and decisions](discussions/2026-09-26.md) records our needs, contribution approach, compiler fix, coverage work and branch decision.
 - [Decision record format](DECISION-RECORDS.md) describes what to retain when choosing an engineering approach.
-- [Retained files](RETAINED-FILES.md) indexes 73 original notes and supporting artifacts captured from the existing SwiftSci research and this chat's verification work.
+- [Retained files](RETAINED-FILES.md) indexes 73 original notes and supporting artifacts captured from the existing SwiftSci research and local verification work.
 - [PR #39 snapshot](archive/2026-09-26/pr39.json) preserves the description, public discussion and check results observed when this record was created.
-- [Draft reply to the maintainer](drafts/maintainer-reply.md) preserves the proposed response from this chat. It has not been posted by this chat.
 
 ## Keeping the record
 
 Commit new discussion summaries, research findings, alternatives and evidence to this branch. Date each entry and identify the relevant source revision. Mark proposals, measured results, source observations and unresolved questions separately. Record why a decision changed instead of rewriting an old experiment as if it had reached the new conclusion.
 
-The archived source notes are unchanged originals. Their wording, local paths and historical claims remain as recorded. The index and manifest identify retained copies. New summaries and decisions should use plain language and the unslop self-audit.
+Archived publication copies have local usernames, hostnames, and device identifiers removed. Paths containing `LOCAL_USER` and values such as `LOCAL_DEVICE_ID` are placeholders. Measurements, numerical outputs, failures, source revisions, and technical limitations are retained. See the [publication review](PUBLICATION-REVIEW.md) for scope and provenance limits.
 
 The initial collection includes the retained Markdown notes under the local SwiftSci research directory, three uncommitted workspace proposals, the storage research's small supporting artifacts, and the compiler verification snippets. Build caches, binaries, generated datasets and a duplicate source checkout are excluded. Large raw outputs remain in their existing locations or committed benchmark evidence. This is not an export of other chats or every local run artifact.
 
 ## Relationship to upstream contributions
 
-Keep this branch on our fork. Push its commits to `origin/codex/engineering-notes`; do not open an upstream PR from it. The fork is public, so this branch is public too.
+Keep this branch on our fork. Push its commits to `origin/codex/engineering-notes`; do not open an upstream PR from it. The fork and this branch are public. Review prose and evidence for credentials and unnecessary personal or machine information before every push.
 
 Start implementation branches from the appropriate upstream revision or agreed dependency branch. Keep our internal research, engineering decisions, discussion summaries and local reports on this branch. Contribution branches may contain implementation, tests, fixture attribution and public usage instructions. Do not copy internal records into a PR; summarize the relevant verified facts for reviewers. Avoid merging this archive branch into them. Upstream remains the owner of its API and architectural decisions; our working proposals do not imply maintainer approval.
 

@@ -1,6 +1,6 @@
 import hashlib,json,subprocess
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci');out=Path('/private/tmp/swiftsci-suite-finish');directory=root/'Benchmarks/Runs/finish-acceptance-02'
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');out=Path('/private/tmp/swiftsci-suite-finish');directory=root/'Benchmarks/Runs/finish-acceptance-02'
 a=json.loads((directory/'acceptance.json').read_text());policy=json.loads((root/'Benchmarks/Specs/acceptance.json').read_text())
 assert a['status'] in ('passed','failed') and len(a['profiles'])==len(policy['profiles'])==22
 assert [p['profile'] for p in a['profiles']]==[p['profile'] for p in policy['profiles']]

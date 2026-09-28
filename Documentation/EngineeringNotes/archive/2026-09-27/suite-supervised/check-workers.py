@@ -1,11 +1,11 @@
 import copy,json,hashlib,struct,subprocess,sys
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci');base=root/'Benchmarks/Runs/suite-supervised-01';out=Path('/private/tmp/swiftsci-suite-stage4/negative-workers');out.mkdir(exist_ok=True)
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');base=root/'Benchmarks/Runs/suite-supervised-01';out=Path('/private/tmp/swiftsci-suite-stage4/negative-workers');out.mkdir(exist_ok=True)
 sys.path.insert(0,str(root/'Benchmarks/Tools'))
 from build_supervised_fixtures import reference
 import mpmath as mp
 mp.mp.dps=80
-commands={'swiftsci':['/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
+commands={'swiftsci':['/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
 results=[]
 for case in ['wine-red-supervised-scale','wine-red-supervised-ols-cpu','wdbc-supervised-scale']:
  request=json.loads((base/(case+'-swiftsci-0.request.json')).read_text())

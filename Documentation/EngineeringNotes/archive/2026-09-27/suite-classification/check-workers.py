@@ -1,11 +1,11 @@
 import json,hashlib,struct,subprocess,sys
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci');base=root/'Benchmarks/Runs/suite-classification-01';out=Path('/private/tmp/swiftsci-suite-classification/negative-workers');out.mkdir(exist_ok=True)
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');base=root/'Benchmarks/Runs/suite-classification-01';out=Path('/private/tmp/swiftsci-suite-classification/negative-workers');out.mkdir(exist_ok=True)
 sys.path.insert(0,str(root/'Benchmarks/Tools'))
 from build_supervised_fixtures import reference
 import mpmath as mp
 mp.mp.dps=80
-commands={'swiftsci':['/Users/crabel/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
+commands={'swiftsci':['/Users/LOCAL_USER/Library/Caches/SwiftSci/standardized-benchmarks/derived/Build/Products/Release/SwiftSciBenchmarkWorker'],'pandas':[str(root/'Benchmarks/.venv-standardized/bin/python'),str(root/'Benchmarks/Python/standard_worker.py')]}
 results=[]
 for epochs in (0,1,32):
  case=f'wdbc-supervised-logistic-cpu-epochs{epochs}'

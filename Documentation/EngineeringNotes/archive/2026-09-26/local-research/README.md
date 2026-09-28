@@ -12,9 +12,9 @@ The Release sorting failure was isolated and the workaround was merged upstream 
 - Existing upstream expectations were not changed or weakened.
 - Dataframe, statistics, and forecasting modules were covered. This is not a full-package test or security audit.
 
-The patch and regression tests are in `/Users/crabel/Documents/src/SwiftSci`. The standalone reproducer and issue text are kept outside the repository in `/Users/crabel/local-ai/spl/swiftsci/issue-material`. The merged source tree matches the tested fix branch exactly.
+The patch and regression tests are in `/Users/LOCAL_USER/Documents/src/SwiftSci`. The standalone reproducer and issue text are kept outside the repository in `/Users/LOCAL_USER/local-ai/spl/swiftsci/issue-material`. The merged source tree matches the tested fix branch exactly.
 
-[Issue text and compiler reproduction](/Users/crabel/local-ai/spl/swiftsci/issue-material/issue.md)
+[Issue text and compiler reproduction](/Users/LOCAL_USER/local-ai/spl/swiftsci/issue-material/issue.md)
 
 ## Rerun current tests
 

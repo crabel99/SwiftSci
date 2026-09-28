@@ -1,6 +1,6 @@
 import json, pathlib, urllib.request, hashlib, datetime
-root=pathlib.Path('/Users/crabel/Documents/src/SwiftSci')
-out=pathlib.Path('/Users/crabel/local-ai/spl/swiftsci/data-architecture-research/local-ai')
+root=pathlib.Path('/Users/LOCAL_USER/Documents/src/SwiftSci')
+out=pathlib.Path('/Users/LOCAL_USER/local-ai/spl/swiftsci/data-architecture-research/local-ai')
 files=['Sources/SwiftLLM/Core/KVCache.swift','Sources/SwiftLLM/Core/PagedKVCache.swift']
 blocks=[]; hashes={}
 for name in files:

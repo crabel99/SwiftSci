@@ -1,6 +1,6 @@
 import json, collections, hashlib
 from pathlib import Path
-root=Path('/Users/crabel/Documents/src/SwiftSci');out=Path('/private/tmp/swiftsci-suite-neural')
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');out=Path('/private/tmp/swiftsci-suite-neural')
 runs=[('suite-neural-03','neural-conformance',{('neural-gpu-rope-cached','swiftsci')}),('suite-neural-loader-02','neural-loader-conformance',{('neural-cpu-public-loader','swiftsci'),('neural-gpu-public-loader','swiftsci')}),('suite-neural-cpu-01','neural-cpu-conformance',set()),('suite-neural-smoke-01','smoke',set())]
 results=[]
 for name,profile,failures in runs:

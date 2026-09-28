@@ -1,6 +1,6 @@
 # DataFrame semantic fixture review
 
-Reviewed `/Users/crabel/Documents/src/SwiftSci` at HEAD `31b3cff29057aab3013c459658af80575b794386`. This is a source review. No production files changed and no tests ran for this note.
+Reviewed `/Users/LOCAL_USER/Documents/src/SwiftSci` at HEAD `31b3cff29057aab3013c459658af80575b794386`. This is a source review. No production files changed and no tests ran for this note.
 
 ## Public API and scope
 

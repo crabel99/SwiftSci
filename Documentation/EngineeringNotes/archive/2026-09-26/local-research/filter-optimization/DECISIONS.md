@@ -23,4 +23,4 @@ These results come from a controlled standalone serial prototype, not the produc
 - Rejected native integer comparison after the operator matrix showed no material gain.
 - Accepted cached null predicates for uniform-nullness columns.
 
-Final measurements, commit IDs and validation are in [REPORT.md](/Users/crabel/local-ai/spl/swiftsci/filter-optimization/REPORT.md).
+Final measurements, commit IDs and validation are in [REPORT.md](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-optimization/REPORT.md).

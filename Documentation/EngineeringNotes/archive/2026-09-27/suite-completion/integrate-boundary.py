@@ -1,6 +1,6 @@
 from pathlib import Path
 import shutil,json
-root=Path('/Users/crabel/Documents/src/SwiftSci');scratch=Path('/private/tmp/swiftsci-suite-finish/boundary')
+root=Path('/Users/LOCAL_USER/Documents/src/SwiftSci');scratch=Path('/private/tmp/swiftsci-suite-finish/boundary')
 for name in ['BoundaryWorkloads.swift','BoundarySweepWorkloads.swift']:shutil.copyfile(scratch/name,root/'Benchmarks/Worker'/name)
 for name in ['boundary_fixtures.py','boundary_reference.py','boundary_cases.py','boundary_sweep.py']:shutil.copyfile(scratch/name,root/'Benchmarks/Tools'/name)
 shutil.copyfile(scratch/'boundary_workloads.py',root/'Benchmarks/Python/boundary_workloads.py')

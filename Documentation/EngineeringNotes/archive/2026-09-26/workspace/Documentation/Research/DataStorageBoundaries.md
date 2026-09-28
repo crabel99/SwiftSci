@@ -50,11 +50,11 @@ Three research agents inspected separate consumer, interoperability, and mutatio
 
 Supporting reviews and exact line citations are retained locally:
 
-- [SwiftSci consumers](/Users/crabel/local-ai/spl/swiftsci/data-architecture-research/agent-notes/swiftsci-consumers.md)
-- [Array interoperability](/Users/crabel/local-ai/spl/swiftsci/data-architecture-research/agent-notes/array-interop.md)
-- [Mutation and hardware](/Users/crabel/local-ai/spl/swiftsci/data-architecture-research/agent-notes/mutation-hardware.md)
+- [SwiftSci consumers](/Users/LOCAL_USER/local-ai/spl/swiftsci/data-architecture-research/agent-notes/swiftsci-consumers.md)
+- [Array interoperability](/Users/LOCAL_USER/local-ai/spl/swiftsci/data-architecture-research/agent-notes/array-interop.md)
+- [Mutation and hardware](/Users/LOCAL_USER/local-ai/spl/swiftsci/data-architecture-research/agent-notes/mutation-hardware.md)
 
-Earlier Debug and Release suites each passed 891 tests. Earlier compact-storage experiments showed a substantial resident-memory benefit but slower optional-to-compact-to-optional conversion. Those results support integrating consumers before replacing storage. They do not establish that the proposed architecture is faster. See the [storage experiment](/Users/crabel/local-ai/spl/swiftsci/filter-optimization/storage-experiment/REPORT.md) and [production comparison](/Users/crabel/local-ai/spl/swiftsci/production-comparison/results/20260926T104626Z/REPORT.md).
+Earlier Debug and Release suites each passed 891 tests. Earlier compact-storage experiments showed a substantial resident-memory benefit but slower optional-to-compact-to-optional conversion. Those results support integrating consumers before replacing storage. They do not establish that the proposed architecture is faster. See the [storage experiment](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-optimization/storage-experiment/REPORT.md) and [production comparison](/Users/LOCAL_USER/local-ai/spl/swiftsci/production-comparison/results/20260926T104626Z/REPORT.md).
 
 ## Problems demonstrated in the current implementation
 
@@ -67,7 +67,7 @@ A separate CPU-only package imported the actual SwiftDataFrame and SwiftStats pr
 | Int64 NPY conversion | `9007199254740993` becomes Double `9007199254740992`; the direct Int64 reader preserves it. | Preserve dtype by default; require an explicit lossy conversion policy. |
 | Feature-matrix extraction | Float, Int32 and native Int columns each throw a cast error. | Define numeric type coverage consistently across storage and consumers. |
 
-[Diagnostic source](/Users/crabel/local-ai/spl/swiftsci/data-architecture-research/probes/Sources/BoundaryProbe/main.swift), [results](/Users/crabel/local-ai/spl/swiftsci/data-architecture-research/probes/result.jsonl), [provenance](/Users/crabel/local-ai/spl/swiftsci/data-architecture-research/probes/metadata.json).
+[Diagnostic source](/Users/LOCAL_USER/local-ai/spl/swiftsci/data-architecture-research/probes/Sources/BoundaryProbe/main.swift), [results](/Users/LOCAL_USER/local-ai/spl/swiftsci/data-architecture-research/probes/result.jsonl), [provenance](/Users/LOCAL_USER/local-ai/spl/swiftsci/data-architecture-research/probes/metadata.json).
 
 These cases were missing from the earlier passing suite. Storage changes must preserve intended semantics rather than preserve these defects. Separate regression fixes should precede performance comparisons that depend on these paths.
 
@@ -233,6 +233,6 @@ Keep this work on the compact-storage development path. The current optimization
 
 The already loaded local Qwen3-Coder-Next 4-bit model reviewed only the two SwiftSci KV cache files through the local LM Studio endpoint. It received no tools or write access. Its response helped flag concatenation, slot objects and stacking for inspection, but incorrectly inferred eager MLX execution from Swift assignment and suggested allocation behavior the supplied files could not establish. Those claims were rejected. MLXArray is a class, and MLX graph evaluation is lazy.
 
-The cache conclusions in this report come from source verification and primary documentation, not the model's assertions. This task illustrates a useful delegation boundary: local AI can inventory code and propose questions; ownership, laziness and numerical correctness require source checks or executable evidence. [Prompt, response and provenance](/Users/crabel/local-ai/spl/swiftsci/data-architecture-research/local-ai/metadata.json).
+The cache conclusions in this report come from source verification and primary documentation, not the model's assertions. This task illustrates a useful delegation boundary: local AI can inventory code and propose questions; ownership, laziness and numerical correctness require source checks or executable evidence. [Prompt, response and provenance](/Users/LOCAL_USER/local-ai/spl/swiftsci/data-architecture-research/local-ai/metadata.json).
 
 No production code, dependency pin, branch, commit or PR changed during this research. The six small CPU diagnostics demonstrate current conversion behavior. GPU lifetime concerns, cache behavior, proposed mutation contracts and the new end-to-end architecture remain to be tested and implemented.

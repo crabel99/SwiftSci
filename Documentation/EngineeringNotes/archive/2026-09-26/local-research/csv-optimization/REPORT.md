@@ -15,7 +15,7 @@ Memory is whole-process peak RSS sampled by the benchmark, including retained fi
 
 ## Full production comparison
 
-[Complete timings, memory, variation and methodology](/Users/crabel/local-ai/spl/swiftsci/production-comparison/results/20260926T051154Z/REPORT.md). Raw results are beside that report. All 24 SwiftSci workload/size combinations passed value comparison. Kiraa native integer filtering failed the existing two parity checks and is excluded from rankings.
+[Complete timings, memory, variation and methodology](/Users/LOCAL_USER/local-ai/spl/swiftsci/production-comparison/results/20260926T051154Z/REPORT.md). Raw results are beside that report. All 24 SwiftSci workload/size combinations passed value comparison. Kiraa native integer filtering failed the existing two parity checks and is excluded from rankings.
 
 One-million-row medians from the fresh comparison:
 
@@ -77,7 +77,7 @@ GPU classification was faster than serial NEON classification, but usable field-
 
 The GPU experiment includes buffer allocation, command submission, synchronization and CPU index materialization. Mapped input avoids a copy but still loses by 18–21%. The installed Metal compiler rejects double, so scientific Float64 conversion stays on the CPU. No Float32 substitution was made.
 
-[Benchmark source and reproduction instructions](/Users/crabel/Documents/src/SwiftSci/Benchmarks/CSVAcceleration/README.md). [Raw GPU evidence](/Users/crabel/local-ai/spl/swiftsci/csv-optimization/gpu/README.md). A future GPU design could retain packed indexes in shared GPU buffers and avoid CPU array materialization. That belongs with the separate compact-storage work.
+[Benchmark source and reproduction instructions](/Users/LOCAL_USER/Documents/src/SwiftSci/Benchmarks/CSVAcceleration/README.md). [Raw GPU evidence](/Users/LOCAL_USER/local-ai/spl/swiftsci/csv-optimization/gpu/README.md). A future GPU design could retain packed indexes in shared GPU buffers and avoid CPU array materialization. That belongs with the separate compact-storage work.
 
 ## Validation
 
@@ -89,9 +89,9 @@ The GPU experiment includes buffer allocation, command submission, synchronizati
 - Decimal checks compare binary64 bit patterns, a 10,000-number corpus, long decimals, scientific notation, signed zero, overflow/underflow and integer typing above 2^53.
 - GPU experiment passed 108 small equivalence cases and every field/row comparison on both full input files.
 
-[Sanitizer sources, scripts and captured results](/Users/crabel/local-ai/spl/swiftsci/csv-optimization/sanitizers).
+[Sanitizer sources, scripts and captured results](/Users/LOCAL_USER/local-ai/spl/swiftsci/csv-optimization/sanitizers).
 
-[Debug result](/Users/crabel/local-ai/spl/swiftsci/full-suite-validation/debug-20260926T050909Z-MJkgg3/summary.json). [Release result](/Users/crabel/local-ai/spl/swiftsci/full-suite-validation/release-20260926T051001Z-xoLATq/summary.json).
+[Debug result](/Users/LOCAL_USER/local-ai/spl/swiftsci/full-suite-validation/debug-20260926T050909Z-MJkgg3/summary.json). [Release result](/Users/LOCAL_USER/local-ai/spl/swiftsci/full-suite-validation/release-20260926T051001Z-xoLATq/summary.json).
 
 ## Limits
 

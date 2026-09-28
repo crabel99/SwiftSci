@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-r=Path('/Users/crabel/Documents/src/SwiftSci')
+r=Path('/Users/LOCAL_USER/Documents/src/SwiftSci')
 def edit(path,old,new):
  p=r/path;s=p.read_text();assert old in s,(path,old);p.write_text(s.replace(old,new))
 edit('Package.swift','"SwiftForecast", "SwiftExplain"],','"SwiftForecast", "SwiftExplain", "SwiftLLM",\n                .product(name: "MLX", package: "mlx-swift"),\n                .product(name: "MLXNN", package: "mlx-swift")],')

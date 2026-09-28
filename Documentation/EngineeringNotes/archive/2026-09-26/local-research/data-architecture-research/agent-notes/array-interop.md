@@ -72,7 +72,7 @@ The Array API's DLPack import contract permits copies when requested and require
 
 ### Kiraa's Swift implementation
 
-Local revision `fc5d957401f70e9d3b6b07270f7f300d488fd39f`, repository `/Users/crabel/Documents/src/kiraa-swift-pandas`.
+Local revision `fc5d957401f70e9d3b6b07270f7f300d488fd39f`, repository `/Users/LOCAL_USER/Documents/src/kiraa-swift-pandas`.
 
 - `NativeArray.ensureUnique` checks reference uniqueness, creates a separate buffer owner if shared, and relies on `ContiguousArray` storage for eventual detachment. Its mutable-buffer closure checks uniqueness once before bulk work. [NativeArray.swift, lines 95-107 and 219-225](https://github.com/hypermedia-tech/kiraa-swift-pandas/blob/fc5d957401f70e9d3b6b07270f7f300d488fd39f/Sources/SwiftPandas/Core/Array/NativeArray.swift#L95).
 - `NullableArray` scalar assignment updates the numeric slot and validity bit, or only clears validity for nil. [NullableArray.swift, lines 228-242](https://github.com/hypermedia-tech/kiraa-swift-pandas/blob/fc5d957401f70e9d3b6b07270f7f300d488fd39f/Sources/SwiftPandas/Core/Array/NullableArray.swift#L228).

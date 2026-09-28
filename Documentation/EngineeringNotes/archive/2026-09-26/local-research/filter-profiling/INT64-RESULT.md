@@ -20,10 +20,10 @@ Every value comparison passed at both 100,000 and 1,000,000 rows. The Python com
 
 All 264 scoped tests passed in Debug and Release: 135 dataframe, 63 statistics, 56 forecasting and 10 independent checks. New Int64 tests verify limits, values beyond 2^53, duplicate and reordered indices, null counts, source preservation, zero/all/partial selections and the parallel gather path in four-column frames. Correctness tests pass before and after; the performance improvement is established by external benchmarks rather than fragile timing assertions in unit tests.
 
-- [Complete comparison](/Users/crabel/local-ai/spl/swiftpandas/benchmark/results/20260925T221745Z/REPORT.md)
-- [Feature-integration assessment](/Users/crabel/local-ai/spl/swiftsci/filter-profiling/FEATURE-INTEGRATION.md)
-- [Candidate patch](/Users/crabel/local-ai/spl/swiftsci/filter-profiling/int64-candidate.patch)
-- [Release validation](/Users/crabel/local-ai/spl/swiftsci/filter-profiling/int64-tests-release.log)
-- [Debug validation](/Users/crabel/local-ai/spl/swiftsci/filter-profiling/int64-tests-debug.log)
+- [Complete comparison](/Users/LOCAL_USER/local-ai/spl/swiftpandas/benchmark/results/20260925T221745Z/REPORT.md)
+- [Feature-integration assessment](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-profiling/FEATURE-INTEGRATION.md)
+- [Candidate patch](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-profiling/int64-candidate.patch)
+- [Release validation](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-profiling/int64-tests-release.log)
+- [Debug validation](/Users/LOCAL_USER/local-ai/spl/swiftsci/filter-profiling/int64-tests-debug.log)
 
 The next changes should be independent, measured patches. The feature assessment identifies existing capabilities, genuine gaps, compatibility decisions and acceptance checks. It does not add a new storage engine or importer in this candidate.

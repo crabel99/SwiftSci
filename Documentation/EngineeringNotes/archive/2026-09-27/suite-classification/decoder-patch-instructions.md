@@ -28,7 +28,7 @@ The adapter fits only `scaled[0]` with `targets[0]`. Validation and test targets
 
 # Source findings and verification
 
-All source paths below are relative to `/Users/crabel/Documents/src/SwiftSci`.
+All source paths below are relative to `/Users/LOCAL_USER/Documents/src/SwiftSci`.
 
 - `Sources/SwiftML/Core/LogisticRegression.swift:61` exposes the Float learning-rate fit API. Line 84 converts it to Double for CPU training. Using 0.125 makes the conversion exact.
 - `LogisticRegression.swift:96` implements CPU fitting. Lines 100-101 initialize zero weights and bias. Lines 116-127 average full-batch gradients. Lines 134-137 apply the update with no regularization. Epoch zero retains the initialized parameters.
