@@ -8,6 +8,8 @@ The branch starts at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`.
 
 ## Start here
 
+- [Dot-product qualification](benchmarks/2026-09-28-dot-qualification.md) identifies the SmLs ingestion fault, compares reduction accuracy and throughput, and records the range limits that block an unconditional replacement.
+
 - [Precision reduction implementation](benchmarks/2026-09-28-precision-kernels.md) records the centered variance fix, ANOVA speedup, memory measurements and retained numerical failures.
 
 - [Efficient precision on Apple silicon](benchmarks/2026-09-28-apple-precision.md) records crabel99's hardware-focused objective, native Swift FMA/SIMD evidence and the next implementation comparison.
