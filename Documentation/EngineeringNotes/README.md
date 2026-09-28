@@ -8,6 +8,8 @@ The branch starts at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`.
 
 ## Start here
 
+- [Precision branch performance comparison](benchmarks/2026-09-28-performance-comparison.md) compares the branch with its starting point and Python, including accuracy costs and remaining dataframe bottlenecks.
+
 - [Original-decimal ANOVA ingestion](benchmarks/2026-09-28-decimal-ingestion.md) records the SmLs ingestion fix, exact decimal centering, unchanged reference contracts and validation evidence.
 
 - [Dot-product implementation](benchmarks/2026-09-28-dot-implementation.md) records the per-operation policy, BLAS crossover, exact recovery, regression tests and integrated performance costs.
