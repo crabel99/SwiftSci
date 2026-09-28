@@ -8,6 +8,8 @@ The branch starts at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`.
 
 ## Start here
 
+- [Upstream integration after Parquet merge](benchmarks/2026-09-28-main-sync.md) records the synchronized PR stack, full unit suite, and CPU acceptance results.
+
 - [Precision branch performance comparison](benchmarks/2026-09-28-performance-comparison.md) compares the branch with its starting point and Python, including accuracy costs and remaining dataframe bottlenecks.
 
 - [Original-decimal ANOVA ingestion](benchmarks/2026-09-28-decimal-ingestion.md) records the SmLs ingestion fix, exact decimal centering, unchanged reference contracts and validation evidence.
