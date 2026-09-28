@@ -10,6 +10,16 @@ Judge progress by supported engineering workflows, correct results, memory and e
 
 Numerical correctness and safe ownership are acceptance conditions. Evaluate speed, memory use and API convenience within those conditions. Prefer coherent, dependable capabilities that another engineer can understand and maintain.
 
+## Apple silicon precision priority
+
+Refined by crabel99 on September 28, 2026. Engineer core data structures, mutations and common scientific and AI algorithms together for Swift on Apple silicon. Treat numerical requirements, memory capacity, data movement, execution cost and safe ownership as design constraints.
+
+Choose the least costly implementation that meets the declared accuracy and behavior requirements. Evaluate representation, algorithm, compiler output and hardware execution together. Extra precision or GPU use alone does not establish an improvement. Preserve explicit conversion semantics and measure complete workflows as well as isolated kernels.
+
+Use hardware features where evidence supports them, including native fused arithmetic, SIMD and appropriate Accelerate operations. Verify their numerical contracts. Established libraries already contain hardware optimizations; compare measured behavior instead of assuming our language or platform focus guarantees an advantage.
+
+See the [hardware precision record](benchmarks/2026-09-28-apple-precision.md) for the verified compiler probe, candidate implementations and validation gate. This objective does not change upstream API ownership or certification tolerances.
+
 ## Workflow
 
 1. Define the step. Name the scientific or local-model workflow it supports, the requirement or failure it addresses, and the evidence that will establish success. For testing, certification, production repair or baseline work, first read the [required work order](benchmarks/2026-09-27-controlled-suite.md#required-work-order). Planning is complete when the affected behavior and acceptance checks are explicit and the scope follows that order.

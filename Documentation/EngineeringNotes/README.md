@@ -8,6 +8,8 @@ The branch starts at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`.
 
 ## Start here
 
+- [Efficient precision on Apple silicon](benchmarks/2026-09-28-apple-precision.md) records crabel99's hardware-focused objective, native Swift FMA/SIMD evidence and the next implementation comparison.
+
 - [Scientific precision practices](benchmarks/2026-09-28-precision-practices.md) compares representation, stable arithmetic and diagnostics, with a reproducible NIST input-conversion experiment.
 
 - [PR 41 repair record](benchmarks/2026-09-27-pr41-repairs.md) explains the nine fault commits, complete validation, and retained acceptance limits.
