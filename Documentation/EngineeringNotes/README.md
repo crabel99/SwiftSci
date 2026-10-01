@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Sort and gather locality experiment](benchmarks/2026-10-01-unified-memory-locality.md) separates sort-key caching from selected-column gathering, records 360 validated measurements, and preserves the speed versus memory tradeoff.
+
 - [Owned column and selection prototype](benchmarks/2026-10-01-unified-memory-prototype.md) records the local trial, correctness checks, measured memory savings, large-input speed regressions and the next locality experiment.
 
 - [Unified-memory storage design](benchmarks/2026-10-01-unified-memory-design.md) records the current allocation paths, Apple and MLX ownership constraints, local Metal feasibility probe, proposed column/selection/matrix design, and qualification plan. This is a proposal, not an implemented storage replacement.
