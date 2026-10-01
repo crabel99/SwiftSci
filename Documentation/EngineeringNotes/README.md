@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Unified-memory storage design](benchmarks/2026-10-01-unified-memory-design.md) records the current allocation paths, Apple and MLX ownership constraints, local Metal feasibility probe, proposed column/selection/matrix design, and qualification plan. This is a proposal, not an implemented storage replacement.
+
 - [Four-PR implementation sequence](benchmarks/2026-09-28-pr-stack.md) records branch boundaries, compact integration, validation, and remaining review criteria.
 
 - [Upstream integration after Parquet merge](benchmarks/2026-09-28-main-sync.md) records the synchronized PR stack, full unit suite, and CPU acceptance results.
