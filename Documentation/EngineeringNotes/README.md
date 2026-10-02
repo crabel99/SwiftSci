@@ -52,6 +52,10 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 - [Retained files](RETAINED-FILES.md) indexes 73 original notes and supporting artifacts captured from the existing SwiftSci research and local verification work.
 - [PR #39 snapshot](archive/2026-09-26/pr39.json) preserves the description, public discussion and check results observed when this record was created.
 
+- [Memory prototype sequence](benchmarks/2026-10-01-memory-sequence.md) records snapshot mutation costs, public file workflows, direct device sharing and retained failures.
+- [Memory integration proposal](benchmarks/2026-10-01-memory-integration.md) defines compatible integration through prepared selections and matrices, with separate mutation and device qualification.
+- [Pinned MLX managed-import failure](benchmarks/2026-10-01-mlx-managed-finalizer.md) records a completed finalizer that retains its captured owner and the passing direct C comparison.
+
 ## Keeping the record
 
 Commit new discussion summaries, research findings, alternatives and evidence to this branch. Date each entry and identify the relevant source revision. Mark proposals, measured results, source observations and unresolved questions separately. Record why a decision changed instead of rewriting an old experiment as if it had reached the new conclusion.
