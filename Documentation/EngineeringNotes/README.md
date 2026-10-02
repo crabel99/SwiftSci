@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Bounded gathering and scoped reads](benchmarks/2026-10-01-bounded-gather.md) records the tile-size and buffer-access experiments, exact scratch budgets, and the resulting speed versus memory tradeoff.
+
 - [Sort and gather locality experiment](benchmarks/2026-10-01-unified-memory-locality.md) separates sort-key caching from selected-column gathering, records 360 validated measurements, and preserves the speed versus memory tradeoff.
 
 - [Owned column and selection prototype](benchmarks/2026-10-01-unified-memory-prototype.md) records the local trial, correctness checks, measured memory savings, large-input speed regressions and the next locality experiment.
