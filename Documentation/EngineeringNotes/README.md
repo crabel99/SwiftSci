@@ -56,6 +56,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 - [Memory integration proposal](benchmarks/2026-10-01-memory-integration.md) defines compatible integration through prepared selections and matrices, with separate mutation and device qualification.
 - [Pinned MLX managed-import failure](benchmarks/2026-10-01-mlx-managed-finalizer.md) records a completed finalizer that retains its captured owner and the passing direct C comparison.
 
+- [MLX 0.32.3 upgrade qualification](benchmarks/2026-10-04-mlx-upgrade.md) records the fixed managed-buffer ownership path and three dependency-related LLM failures that block broader adoption.
+
 ## Keeping the record
 
 Commit new discussion summaries, research findings, alternatives and evidence to this branch. Date each entry and identify the relevant source revision. Mark proposals, measured results, source observations and unresolved questions separately. Record why a decision changed instead of rewriting an old experiment as if it had reached the new conclusion.
