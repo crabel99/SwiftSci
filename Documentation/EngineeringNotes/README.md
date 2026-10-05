@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Memory foundation fixes and qualification](benchmarks/2026-10-05-memory-foundation-fixes.md) records ownership repairs, shared row maps, allocation accounting, NIST qualification, public workflow timings and remaining production boundaries.
+
 - [Third memory foundation review](benchmarks/2026-10-05-memory-foundation-review.md) records the reproduced MLX donation lifetime requirement, duplicate row maps, production-model qualification gaps, and the proposed snapshot/preparation boundary.
 
 - [Snapshot treatments and direct matrix preparation](benchmarks/2026-10-04-snapshot-treatments.md) records per-snapshot storage choices, ownership checks, setup-inclusive reuse comparisons and the slower lower-scratch packing experiment.
