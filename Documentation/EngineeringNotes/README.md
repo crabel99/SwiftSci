@@ -60,6 +60,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 - [MLX regression source diagnosis](benchmarks/2026-10-04-mlx-regression-source.md) isolates the missing runtime precision option, verifies the correction, and separates the invalid-context construction defect.
 
+- [Invalid-context generation fix](benchmarks/2026-10-04-context-validation-fix.md) preserves typed errors with stricter MLX validation and records the passing combined Release suite.
+
 ## Keeping the record
 
 Commit new discussion summaries, research findings, alternatives and evidence to this branch. Date each entry and identify the relevant source revision. Mark proposals, measured results, source observations and unresolved questions separately. Record why a decision changed instead of rewriting an old experiment as if it had reached the new conclusion.
