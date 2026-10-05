@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Memory kernel trial checkpoint](benchmarks/2026-10-04-memory-kernel-trial.md) records the preserved parent, initialized-owner experiment, verification, clone gains and remaining construction regression.
+
 - [Apple silicon memory design review](benchmarks/2026-10-04-memory-design-review.md) identifies preparation, allocation, ownership and byte-budget gaps, with primary-source evidence and an ordered experiment plan.
 
 - [Fitting access and retained-workflow reuse](benchmarks/2026-10-01-retained-workflow-reuse.md) records scoped fitting reads, changing training folds, cache snapshot behavior, and setup-inclusive speed versus memory results.
