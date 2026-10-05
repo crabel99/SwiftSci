@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Mixed CPU/GPU admission](benchmarks/2026-10-05-mixed-device-admission.md) records private streams, buffer lifetime checks and device-specific throughput/memory tradeoffs.
+
 - [Concurrent CPU admission](benchmarks/2026-10-05-concurrent-admission.md) records shared-cache ownership, throughput, latency and memory tradeoffs.
 
 - [Repeated fitting and scratch reuse](benchmarks/2026-10-05-repeated-fitting.md) compares caller-owned input caches, changing training splits and bounded scratch reuse.
