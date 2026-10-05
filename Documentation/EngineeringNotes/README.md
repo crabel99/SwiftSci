@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Memory prerequisites before production integration](benchmarks/2026-10-05-memory-prerequisites.md) records byte admission, asynchronous ownership, prepared-column qualification and the measured memory/time tradeoff.
+
 - [Memory foundation fixes and qualification](benchmarks/2026-10-05-memory-foundation-fixes.md) records ownership repairs, shared row maps, allocation accounting, NIST qualification, public workflow timings and remaining production boundaries.
 
 - [Third memory foundation review](benchmarks/2026-10-05-memory-foundation-review.md) records the reproduced MLX donation lifetime requirement, duplicate row maps, production-model qualification gaps, and the proposed snapshot/preparation boundary.
