@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Repeated fitting and scratch reuse](benchmarks/2026-10-05-repeated-fitting.md) compares caller-owned input caches, changing training splits and bounded scratch reuse.
+
 - [Bounded prepared scaling](benchmarks/2026-10-05-tiled-scaler.md) records the measured dispatch limits, exact-rounding correction and full validation.
 
 - [Memory and performance balance](benchmarks/2026-10-05-memory-balance.md) compares tiled traversal, column access, workspace sizes and the next policy decisions.
