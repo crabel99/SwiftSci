@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Snapshot treatments and direct matrix preparation](benchmarks/2026-10-04-snapshot-treatments.md) records per-snapshot storage choices, ownership checks, setup-inclusive reuse comparisons and the slower lower-scratch packing experiment.
+
 - [Memory kernel trial checkpoint](benchmarks/2026-10-04-memory-kernel-trial.md) records the preserved parent, initialized-owner experiment, verification, clone gains and remaining construction regression.
 
 - [Apple silicon memory design review](benchmarks/2026-10-04-memory-design-review.md) identifies preparation, allocation, ownership and byte-budget gaps, with primary-source evidence and an ordered experiment plan.
