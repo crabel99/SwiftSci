@@ -1,0 +1,35 @@
+{
+  "implementation": {
+    "commit": "c57fb6db02ea45b4f28852d812dcd076bf9a8b95",
+    "branch": "codex/arrow-retention-trial",
+    "parent": "299221aab3865c57f8220bc8f2f03854708c6c65",
+    "files": {
+      "Package.swift": "473ded381ba37d2b5461a188b182d603a6048cf10b929167457147cc6d577d96",
+      "Benchmarks/ArrowRetentionPrototype/RetainedColumn.swift": "7819117c044fcdd266ec7e9a21db6376593f935e71e4b8f9dbfcfe05bd713a19",
+      "Benchmarks/ArrowRetentionPrototype/Checks.swift": "1adafdc5ae00cdad45247c6f345e61e531b2002f6af432c9b0e5e9010ae9f850",
+      "Benchmarks/ArrowRetentionPrototype/main.swift": "a617676ae0dce4e89d26131274b621c06ae55bfa8afa0644179e39b0dd7b7b63",
+      "Benchmarks/ArrowRetentionPrototype/run.py": "146209db2fbbce31bd21425da134138474bce358481cad535210d8e87a7a9a74"
+    }
+  },
+  "release_binary_sha256": "007191b829159b32c2024dd14d5d025350c0bec98da3c8e6049a54aad4e2942e",
+  "asan_binary_sha256": "0ed9a0bdb1d9bc86aca546f0864646adb3a707fca1726e618233f5d23b8b3add",
+  "worker_sources_match_release_and_asan": true,
+  "controller_sha256": "146209db2fbbce31bd21425da134138474bce358481cad535210d8e87a7a9a74",
+  "arrow_version": "21.0.0",
+  "arrow_commit": "fb3f3d91be5acd511b7289c7820becc1a68e455d",
+  "hardware": "Apple M4 Max",
+  "physical_memory_bytes": 137438953472,
+  "macos": "27.0",
+  "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+  "xcode": "Xcode 27.0\nBuild version 27A266a",
+  "final_workers": 63,
+  "final_checks_passed": true,
+  "release_ownership_cycles_per_path": 200,
+  "asan_ownership_cycles_per_path": 1000,
+  "asan_stderr_bytes": 0,
+  "leak_scan_ownership_cycles_per_path": 1000,
+  "leaks_found": 0,
+  "production_sources_changed": false,
+  "full_library_suite_run": false,
+  "pushed": false
+}

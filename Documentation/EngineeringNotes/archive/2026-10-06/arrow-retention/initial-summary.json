@@ -1,0 +1,281 @@
+{
+  "binary_sha256": "01b601344c6f3b16b21fb4d704667becff80672b04e2b8c0fc14a1d42aaaab09",
+  "rounds": 3,
+  "workers": 54,
+  "cases": {
+    "small": [
+      1000,
+      1,
+      7,
+      1,
+      1
+    ],
+    "dense": [
+      100000,
+      1,
+      0,
+      1,
+      1
+    ],
+    "large": [
+      1000000,
+      1,
+      7,
+      1,
+      1
+    ],
+    "chunked": [
+      1000000,
+      32,
+      7,
+      1,
+      1
+    ],
+    "sparse": [
+      1000000,
+      32,
+      7,
+      100,
+      1
+    ],
+    "repeated": [
+      100000,
+      8,
+      7,
+      3,
+      5
+    ]
+  },
+  "medians": {
+    "small": {
+      "copy": {
+        "import_ms": 0.19849999248981476,
+        "selection_ms": 0.00562499463558197,
+        "matrix_ms": 0.011915996670722961,
+        "operation_ms": 0.2157919853925705,
+        "input_ms": 0.34645798802375793,
+        "import_malloc_delta_bytes": 66720,
+        "operation_range_ms": [
+          0.21416600048542023,
+          0.22933298349380493
+        ]
+      },
+      "stream-copy": {
+        "import_ms": 0.1302500069141388,
+        "selection_ms": 0.005541011691093445,
+        "matrix_ms": 0.012333005666732788,
+        "operation_ms": 0.14854200184345245,
+        "input_ms": 0.3517500013113022,
+        "import_malloc_delta_bytes": 66720,
+        "operation_range_ms": [
+          0.1437070220708847,
+          0.15137401223182678
+        ]
+      },
+      "retained": {
+        "import_ms": 0.0007500052452087402,
+        "selection_ms": 0.015124991536140442,
+        "matrix_ms": 0.04462499916553497,
+        "operation_ms": 0.06058299541473389,
+        "input_ms": 0.3419580012559891,
+        "import_malloc_delta_bytes": 448,
+        "operation_range_ms": [
+          0.057999998331069946,
+          0.06566798686981201
+        ]
+      }
+    },
+    "dense": {
+      "copy": {
+        "import_ms": 18.859375,
+        "selection_ms": 0.27300000190734863,
+        "matrix_ms": 0.793042004108429,
+        "operation_ms": 19.930582001805305,
+        "input_ms": 32.034791991114616,
+        "import_malloc_delta_bytes": 6423712,
+        "operation_range_ms": [
+          19.657209008932114,
+          21.75129099190235
+        ]
+      },
+      "stream-copy": {
+        "import_ms": 12.619916006922722,
+        "selection_ms": 0.22129099071025848,
+        "matrix_ms": 0.8003749996423721,
+        "operation_ms": 13.611458003520966,
+        "input_ms": 32.24908399581909,
+        "import_malloc_delta_bytes": 6423712,
+        "operation_range_ms": [
+          13.037833005189896,
+          14.848123982548714
+        ]
+      },
+      "retained": {
+        "import_ms": 0.0017089992761611938,
+        "selection_ms": 1.2677910029888153,
+        "matrix_ms": 4.49583300948143,
+        "operation_ms": 5.787501007318497,
+        "input_ms": 31.662250012159348,
+        "import_malloc_delta_bytes": 448,
+        "operation_range_ms": [
+          5.693084001541138,
+          5.968707010149956
+        ]
+      }
+    },
+    "large": {
+      "copy": {
+        "import_ms": 190.30279099941254,
+        "selection_ms": 2.1561670005321503,
+        "matrix_ms": 5.98429100215435,
+        "operation_ms": 198.3352070003748,
+        "input_ms": 316.23358400166035,
+        "import_malloc_delta_bytes": 64029856,
+        "operation_range_ms": [
+          197.9956260174513,
+          208.40279099345207
+        ]
+      },
+      "stream-copy": {
+        "import_ms": 129.95649999380112,
+        "selection_ms": 2.1539579927921295,
+        "matrix_ms": 6.080834001302719,
+        "operation_ms": 138.08870799839497,
+        "input_ms": 324.6079580038786,
+        "import_malloc_delta_bytes": 64029856,
+        "operation_range_ms": [
+          135.4075009971857,
+          142.5965419858694
+        ]
+      },
+      "retained": {
+        "import_ms": 0.0017089992761611938,
+        "selection_ms": 11.707707986235619,
+        "matrix_ms": 46.64420799911022,
+        "operation_ms": 58.35370698571205,
+        "input_ms": 316.2779579907656,
+        "import_malloc_delta_bytes": 448,
+        "operation_range_ms": [
+          57.06258299946785,
+          58.961833998560905
+        ]
+      }
+    },
+    "chunked": {
+      "copy": {
+        "import_ms": 906.8564160019159,
+        "selection_ms": 2.4563339948654175,
+        "matrix_ms": 6.392375007271767,
+        "operation_ms": 915.7084990143776,
+        "input_ms": 320.7824999988079,
+        "import_malloc_delta_bytes": 64029856,
+        "operation_range_ms": [
+          901.9480820000172,
+          968.1247079968452
+        ]
+      },
+      "stream-copy": {
+        "import_ms": 133.31420800089836,
+        "selection_ms": 2.3803330063819885,
+        "matrix_ms": 6.306791990995407,
+        "operation_ms": 142.00133299827576,
+        "input_ms": 323.66162499785423,
+        "import_malloc_delta_bytes": 64029856,
+        "operation_range_ms": [
+          135.16841600835323,
+          145.3703339844942
+        ]
+      },
+      "retained": {
+        "import_ms": 0.008083999156951904,
+        "selection_ms": 13.764416009187698,
+        "matrix_ms": 50.3979170024395,
+        "operation_ms": 64.17041701078415,
+        "input_ms": 349.2185830026865,
+        "import_malloc_delta_bytes": 5312,
+        "operation_range_ms": [
+          57.934915974736214,
+          73.25162400305271
+        ]
+      }
+    },
+    "sparse": {
+      "copy": {
+        "import_ms": 973.2850000113249,
+        "selection_ms": 1.5020829886198044,
+        "matrix_ms": 0.17350000143051147,
+        "operation_ms": 974.9507090002298,
+        "input_ms": 347.904875010252,
+        "import_malloc_delta_bytes": 64029856,
+        "operation_range_ms": [
+          892.9179579913616,
+          999.4464989900589
+        ]
+      },
+      "stream-copy": {
+        "import_ms": 134.60533300042152,
+        "selection_ms": 1.5251659899950027,
+        "matrix_ms": 0.19158399105072021,
+        "operation_ms": 136.3311249911785,
+        "input_ms": 326.2597910016775,
+        "import_malloc_delta_bytes": 64029856,
+        "operation_range_ms": [
+          133.1316260099411,
+          136.94474898278713
+        ]
+      },
+      "retained": {
+        "import_ms": 0.007500007748603821,
+        "selection_ms": 10.590415999293327,
+        "matrix_ms": 41.602541998028755,
+        "operation_ms": 51.96383398771286,
+        "input_ms": 324.47066600620747,
+        "import_malloc_delta_bytes": 5312,
+        "operation_range_ms": [
+          50.84112401306629,
+          54.39691700041294
+        ]
+      }
+    },
+    "repeated": {
+      "copy": {
+        "import_ms": 35.482458010315895,
+        "selection_ms": 0.0976250022649765,
+        "matrix_ms": 1.0716660022735596,
+        "operation_ms": 36.64849901199341,
+        "input_ms": 33.35162499547005,
+        "import_malloc_delta_bytes": 6423712,
+        "operation_range_ms": [
+          36.435001000761986,
+          39.53879202902317
+        ]
+      },
+      "stream-copy": {
+        "import_ms": 13.068667009472847,
+        "selection_ms": 0.10037499666213989,
+        "matrix_ms": 1.2809990048408508,
+        "operation_ms": 14.450041010975838,
+        "input_ms": 32.60375000536442,
+        "import_malloc_delta_bytes": 6423712,
+        "operation_range_ms": [
+          14.162499010562897,
+          15.311749011278152
+        ]
+      },
+      "retained": {
+        "import_ms": 0.004250004887580872,
+        "selection_ms": 1.1257079988718033,
+        "matrix_ms": 21.205875009298325,
+        "operation_ms": 22.335207998752594,
+        "input_ms": 33.94699999690056,
+        "import_malloc_delta_bytes": 1472,
+        "operation_range_ms": [
+          22.174873992800713,
+          24.08245699107647
+        ]
+      }
+    }
+  },
+  "timing_scope": "Import + selection + repeated gather/matrix or direct selected matrix packing. Input creation and output validation excluded.",
+  "ownership": "Producer storage must stay immutable. Views retain record batches; dense output remains owned."
+}
