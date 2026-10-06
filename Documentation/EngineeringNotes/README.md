@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Legacy memory-ticket deprecation](research/2026-10-06-memory-ticket-deprecation.md) records the first compatibility step in backend reuse and its targeted validation.
+
 - [Reuse existing memory implementations](research/2026-10-06-memory-library-reuse.md) identifies MLX, Arrow, Metal, and Swift container integration opportunities and the contracts that still need local policy.
 
 - [Asynchronous CPU workspace cleanup](benchmarks/2026-10-06-cpu-async-cleanup.md) records close-time admission, cancellation-safe draining, sanitizer checks, and retained model results.
