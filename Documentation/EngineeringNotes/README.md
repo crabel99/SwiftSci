@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Shared admission across workloads](benchmarks/2026-10-05-shared-admission-workloads.md) compares memory, batch time and job response across three input profiles and three CPU/GPU mixes.
+
 - [Shared admission width with one GPU slot](benchmarks/2026-10-05-shared-admission-focused.md) records memory savings, batch timing and the CPU response-time tradeoff across shared widths.
 
 - [Focused GPU admission and physical memory](benchmarks/2026-10-05-gpu-admission-focused.md) records the bounded comparison, graphics-inclusive memory measurements, pressure guards and host-memory incident resolution.
