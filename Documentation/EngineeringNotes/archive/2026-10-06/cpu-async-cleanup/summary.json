@@ -1,0 +1,87 @@
+{
+  "checks_sha256": "1bfb7782fad363edfe77afd7a4c0c98be33cffb2561b7516f91e92525cf4224c",
+  "measured_fits": 576,
+  "ownership_successful_fits": 240,
+  "ownership_workers": 20,
+  "samples_sha256": "e83344e9fe19adf768afa6fb3dbea9053733d70b6e85e0c119d8d0fe5d653bbd",
+  "status": "passed",
+  "summaries": [
+    {
+      "arms": {
+        "async-close": {
+          "batch_ms": 129.446208,
+          "fit_ms": 116.8482925,
+          "peak_mib": 10.172515869140625
+        },
+        "scoped-close": {
+          "batch_ms": 129.640042,
+          "fit_ms": 117.2239575,
+          "peak_mib": 10.969379425048828
+        }
+      },
+      "async_vs_scoped_fit_percent": [
+        0.09965921651875487,
+        -0.7323865908315796
+      ],
+      "profile": "cpu-small"
+    },
+    {
+      "arms": {
+        "async-close": {
+          "batch_ms": 4842.7192085,
+          "fit_ms": 4791.990519,
+          "peak_mib": 82.2585220336914
+        },
+        "scoped-close": {
+          "batch_ms": 4859.945063,
+          "fit_ms": 4810.178478,
+          "peak_mib": 82.11007308959961
+        }
+      },
+      "async_vs_scoped_fit_percent": [
+        -0.522591000738748,
+        -0.2321370477002982
+      ],
+      "profile": "cpu-same"
+    },
+    {
+      "arms": {
+        "async-close": {
+          "batch_ms": 2811.2484585,
+          "fit_ms": 2736.9810825000004,
+          "peak_mib": 94.40694808959961
+        },
+        "scoped-close": {
+          "batch_ms": 2832.0312080000003,
+          "fit_ms": 2755.4216465,
+          "peak_mib": 89.4303970336914
+        }
+      },
+      "async_vs_scoped_fit_percent": [
+        -0.7320039867192429,
+        -0.6077255128753123
+      ],
+      "profile": "cpu-sizes"
+    },
+    {
+      "arms": {
+        "async-close": {
+          "batch_ms": 2763.5655415,
+          "fit_ms": 2687.7687275,
+          "peak_mib": 101.641357421875
+        },
+        "scoped-close": {
+          "batch_ms": 2750.8197915,
+          "fit_ms": 2676.659001,
+          "peak_mib": 101.641357421875
+        }
+      },
+      "async_vs_scoped_fit_percent": [
+        -1.5856432714553947,
+        2.4703725895753426
+      ],
+      "profile": "cpu-growing"
+    }
+  ],
+  "workers": 16
+}

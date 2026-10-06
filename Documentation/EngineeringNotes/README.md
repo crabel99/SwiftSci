@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Asynchronous CPU workspace cleanup](benchmarks/2026-10-06-cpu-async-cleanup.md) records close-time admission, cancellation-safe draining, sanitizer checks, and retained model results.
+
 - [Scoped CPU workspace ownership](benchmarks/2026-10-06-cpu-scoped-workspace.md) records explicit per-batch ownership, overlapping reservations, last-borrow cleanup, and the retained memory benefit.
 
 - [Batch-planned CPU workspace and reservation lifetime](benchmarks/2026-10-06-cpu-planned-workspace.md) records the changing-shape memory benefit, complete timing, capacity-error behavior, and cancellation checks.

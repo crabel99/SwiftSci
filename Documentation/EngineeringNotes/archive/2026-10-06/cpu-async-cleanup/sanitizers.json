@@ -1,0 +1,64 @@
+[
+  {
+    "mode": "release",
+    "command": [
+      "xcrun",
+      "swiftc",
+      "-O",
+      "-parse-as-library",
+      "/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/source-async-cleanup-rvvw50pn/Sources/SwiftML/Core/CPUWorkspaceTrial.swift",
+      "/private/tmp/AsyncCloseStress.swift",
+      "-o",
+      "/Users/crabel/local-ai/spl/swiftsci/cpu-async-cleanup-20261006/stress-release"
+    ],
+    "result": {
+      "status": "passed",
+      "rounds": 100,
+      "throwing_borrowers": 50,
+      "normal_borrowers": 50,
+      "arc_fallback": true
+    }
+  },
+  {
+    "mode": "address",
+    "command": [
+      "xcrun",
+      "swiftc",
+      "-O",
+      "-parse-as-library",
+      "-sanitize=address",
+      "/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/source-async-cleanup-rvvw50pn/Sources/SwiftML/Core/CPUWorkspaceTrial.swift",
+      "/private/tmp/AsyncCloseStress.swift",
+      "-o",
+      "/Users/crabel/local-ai/spl/swiftsci/cpu-async-cleanup-20261006/stress-address"
+    ],
+    "result": {
+      "status": "passed",
+      "rounds": 100,
+      "throwing_borrowers": 50,
+      "normal_borrowers": 50,
+      "arc_fallback": true
+    }
+  },
+  {
+    "mode": "thread",
+    "command": [
+      "xcrun",
+      "swiftc",
+      "-O",
+      "-parse-as-library",
+      "-sanitize=thread",
+      "/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/source-async-cleanup-rvvw50pn/Sources/SwiftML/Core/CPUWorkspaceTrial.swift",
+      "/private/tmp/AsyncCloseStress.swift",
+      "-o",
+      "/Users/crabel/local-ai/spl/swiftsci/cpu-async-cleanup-20261006/stress-thread"
+    ],
+    "result": {
+      "status": "passed",
+      "rounds": 100,
+      "throwing_borrowers": 50,
+      "normal_borrowers": 50,
+      "arc_fallback": true
+    }
+  }
+]
