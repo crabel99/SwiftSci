@@ -1,0 +1,4 @@
+{
+  "format": "unified",
+  "patch": "--- a/Benchmarks/UnifiedMemoryPrototype/Integration/MixedDevice.swift\n+++ b/Benchmarks/UnifiedMemoryPrototype/Integration/MixedDevice.swift\n@@ -12,8 +12,8 @@\n     let bias: Double\n }\n \n-func mixedFit(_ input: ConcurrentInput, device: ExecutionDevice) async throws -> MixedResult {\n-    let model = LinearRegression(device: device)\n+func mixedFit(_ input: ConcurrentInput, device: ExecutionDevice, workspace: CPUWorkspaceTrial? = nil) async throws -> MixedResult {\n+    let model = LinearRegression(device: device, trialWorkspace: workspace)\n     let pipeline = RegressionPipeline(transformers: [], estimator: model)\n     try await pipeline.fit(features: input.train, targets: input.targets)\n     let predictions = try await pipeline.predict(features: input.query)\n"
+}

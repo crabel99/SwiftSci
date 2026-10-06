@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Scoped CPU workspace ownership](benchmarks/2026-10-06-cpu-scoped-workspace.md) records explicit per-batch ownership, overlapping reservations, last-borrow cleanup, and the retained memory benefit.
+
 - [Batch-planned CPU workspace and reservation lifetime](benchmarks/2026-10-06-cpu-planned-workspace.md) records the changing-shape memory benefit, complete timing, capacity-error behavior, and cancellation checks.
 
 - [Bounded CPU workspace reuse trial](benchmarks/2026-10-06-cpu-workspace.md) compares ordinary arrays, fixed capacity and query-sized growth, including workload-order effects and the limits of normalized memory measurements.

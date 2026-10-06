@@ -1,0 +1,131 @@
+{
+  "checks_sha256": "b38ccc6728a328993184498a85eb54fca97827a456f31dfd5b44cc97f69ac9c2",
+  "measured_fits": 1296,
+  "ownership_successful_fits": 200,
+  "ownership_workers": 20,
+  "samples_sha256": "c8a9a26c88ec5aeed4f5d24b288ac59b4052f0a47f10ba210cc6deb1985acc4b",
+  "status": "passed",
+  "summaries": [
+    {
+      "arms": {
+        "arrays": {
+          "batch_ms": 116.081959,
+          "fit_ms": 105.176833,
+          "peak_mib": 11.156890869140625
+        },
+        "global-planned": {
+          "batch_ms": 113.964458,
+          "fit_ms": 103.141126,
+          "peak_mib": 10.938140869140625
+        },
+        "scoped-planned": {
+          "batch_ms": 115.74475,
+          "fit_ms": 104.278372,
+          "peak_mib": 10.953765869140625
+        }
+      },
+      "profile": "cpu-small",
+      "scoped_vs_arrays_peak_mib": [
+        0.078125,
+        -0.203125,
+        -1.0156478881835938
+      ],
+      "scoped_vs_global_fit_percent": [
+        2.1104603686279866,
+        0.30725917288934035,
+        1.1026115809517067
+      ]
+    },
+    {
+      "arms": {
+        "arrays": {
+          "batch_ms": 4324.173042,
+          "fit_ms": 4279.878587,
+          "peak_mib": 82.0944595336914
+        },
+        "global-planned": {
+          "batch_ms": 4264.4845,
+          "fit_ms": 4219.153166,
+          "peak_mib": 82.1257095336914
+        },
+        "scoped-planned": {
+          "batch_ms": 4248.014209,
+          "fit_ms": 4203.879751,
+          "peak_mib": 82.0944595336914
+        }
+      },
+      "profile": "cpu-same",
+      "scoped_vs_arrays_peak_mib": [
+        0.0,
+        0.03125,
+        0.0
+      ],
+      "scoped_vs_global_fit_percent": [
+        -0.30067812330419885,
+        -1.9757902250729709,
+        -0.3620019088920623
+      ]
+    },
+    {
+      "arms": {
+        "arrays": {
+          "batch_ms": 2494.446375,
+          "fit_ms": 2428.508791,
+          "peak_mib": 93.7038345336914
+        },
+        "global-planned": {
+          "batch_ms": 2437.290459,
+          "fit_ms": 2370.297876,
+          "peak_mib": 85.2975845336914
+        },
+        "scoped-planned": {
+          "batch_ms": 2462.700291,
+          "fit_ms": 2399.334751,
+          "peak_mib": 85.2819595336914
+        }
+      },
+      "profile": "cpu-sizes",
+      "scoped_vs_arrays_peak_mib": [
+        -8.421875,
+        -10.046897888183594,
+        -7.453102111816406
+      ],
+      "scoped_vs_global_fit_percent": [
+        -0.1595885373295136,
+        0.24519661539523785,
+        1.2250306298633218
+      ]
+    },
+    {
+      "arms": {
+        "arrays": {
+          "batch_ms": 2415.551375,
+          "fit_ms": 2348.678251,
+          "peak_mib": 116.938232421875
+        },
+        "global-planned": {
+          "batch_ms": 2482.794084,
+          "fit_ms": 2415.072338,
+          "peak_mib": 102.688232421875
+        },
+        "scoped-planned": {
+          "batch_ms": 2495.504625,
+          "fit_ms": 2428.098039,
+          "peak_mib": 102.672607421875
+        }
+      },
+      "profile": "cpu-growing",
+      "scoped_vs_arrays_peak_mib": [
+        -14.296875,
+        -15.09375,
+        -14.03125
+      ],
+      "scoped_vs_global_fit_percent": [
+        2.078144754416078,
+        -0.2582931300995628,
+        -3.0171924812961826
+      ]
+    }
+  ],
+  "workers": 36
+}
