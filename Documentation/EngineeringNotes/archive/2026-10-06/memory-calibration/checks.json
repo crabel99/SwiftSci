@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "shape-growth-cpu-gpu",
+    "overflow-cpu-gpu",
+    "fifo-no-small-bypass",
+    "cancelled-head-drains-successor"
+  ],
+  "scope": "FIFO prevents bypass starvation under releasing owners; it deliberately permits head-of-line blocking. This does not promise latency bounds.",
+  "status": "passed"
+}

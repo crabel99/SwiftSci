@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "success",
+    "cancel-after-submit",
+    "throw-after-submit",
+    "cancel-gpu-queue-cpu-bypass",
+    "cancel-memory-queue",
+    "rejected-memory-request"
+  ],
+  "scope": "GPU admission precedes shared-memory admission. CPU jobs bypass the GPU budget. Queued cancellation, rejected memory requests and submitted-device cleanup release both constraints without releasing another operation's grant.",
+  "status": "passed"
+}

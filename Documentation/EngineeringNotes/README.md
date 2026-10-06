@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Regression workspace calibration and mixed-size FIFO](benchmarks/2026-10-06-memory-calibration.md) separates per-job estimates from shared inputs and runtime memory, with measured coverage and queue-ordering checks.
+
 - [Shared admission across workloads](benchmarks/2026-10-05-shared-admission-workloads.md) compares memory, batch time and job response across three input profiles and three CPU/GPU mixes.
 
 - [Shared admission width with one GPU slot](benchmarks/2026-10-05-shared-admission-focused.md) records memory savings, batch timing and the CPU response-time tradeoff across shared widths.

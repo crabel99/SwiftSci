@@ -1,0 +1,1337 @@
+[
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 36,
+      "peak_physical_footprint_bytes": 6161128,
+      "physical_footprint_bytes": 6161128,
+      "resident_bytes": 16334848
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 6030056,
+      "physical_footprint_bytes": 6030056,
+      "resident_bytes": 16187392
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5997288,
+      "physical_footprint_bytes": 5997288,
+      "resident_bytes": 16138240
+    },
+    "candidate_bytes": 2222848,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 41472,
+      "ols_matrix": 73728,
+      "rhs": 8192,
+      "vectors_and_results_allowance": 2304
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 349084,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 36,
+    "peak_above_prefit_current_bytes": 131072,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 0,
+    "rows": 1024,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 82048,
+    "status": "passed",
+    "width": 8
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 8836,
+      "peak_physical_footprint_bytes": 179012328,
+      "physical_footprint_bytes": 178881256,
+      "resident_bytes": 21676032
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178799336,
+      "physical_footprint_bytes": 178799336,
+      "resident_bytes": 21577728
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178766568,
+      "physical_footprint_bytes": 178766568,
+      "resident_bytes": 21544960
+    },
+    "candidate_bytes": 8538112,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 65536,
+      "parameters_and_prediction_allowance": 18432,
+      "targets_and_autodiff_vectors_allowance": 65536
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 230260459,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 41088,
+    "peak_above_prefit_current_bytes": 212992,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 0,
+    "rows": 1024,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 82048,
+    "status": "passed",
+    "width": 8
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 132,
+      "peak_physical_footprint_bytes": 20185832,
+      "physical_footprint_bytes": 20185832,
+      "resident_bytes": 30359552
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 15778536,
+      "physical_footprint_bytes": 15778536,
+      "resident_bytes": 25935872
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5948088,
+      "physical_footprint_bytes": 5948088,
+      "resident_bytes": 16089088
+    },
+    "candidate_bytes": 7119616,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 557568,
+      "ols_matrix": 4325376,
+      "rhs": 131072,
+      "vectors_and_results_allowance": 8448
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 22798709,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 132,
+    "peak_above_prefit_current_bytes": 4407296,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 0,
+    "rows": 16384,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 4358656,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 197588,
+      "peak_physical_footprint_bytes": 190923544,
+      "physical_footprint_bytes": 190923544,
+      "resident_bytes": 33619968
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 188400408,
+      "physical_footprint_bytes": 188400408,
+      "resident_bytes": 31211520
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178635520,
+      "physical_footprint_bytes": 178635520,
+      "resident_bytes": 21463040
+    },
+    "candidate_bytes": 13699072,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 4194304,
+      "parameters_and_prediction_allowance": 67584,
+      "targets_and_autodiff_vectors_allowance": 1048576
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 789896500,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 2294228,
+    "peak_above_prefit_current_bytes": 2523136,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 0,
+    "rows": 16384,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 4358656,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 132,
+      "peak_physical_footprint_bytes": 84951808,
+      "physical_footprint_bytes": 84951808,
+      "resident_bytes": 95158272
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 58409680,
+      "physical_footprint_bytes": 58409680,
+      "resident_bytes": 68632576
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5849760,
+      "physical_footprint_bytes": 5849760,
+      "resident_bytes": 16039936
+    },
+    "candidate_bytes": 29863168,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 557568,
+      "ols_matrix": 26400000,
+      "rhs": 800000,
+      "vectors_and_results_allowance": 8448
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 113624208,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 132,
+    "peak_above_prefit_current_bytes": 26542128,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 0,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 26433280,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 13632324,
+      "peak_physical_footprint_bytes": 257819464,
+      "physical_footprint_bytes": 257819464,
+      "resident_bytes": 100155392
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 231064368,
+      "physical_footprint_bytes": 231064368,
+      "resident_bytes": 73826304
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178504448,
+      "physical_footprint_bytes": 178504448,
+      "resident_bytes": 21299200
+    },
+    "candidate_bytes": 40456192,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 25600000,
+      "parameters_and_prediction_allowance": 67584,
+      "targets_and_autodiff_vectors_allowance": 6400000
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 1336389916,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 13631812,
+    "peak_above_prefit_current_bytes": 26755096,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 0,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 26433280,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 516,
+      "peak_physical_footprint_bytes": 37159656,
+      "physical_footprint_bytes": 37159656,
+      "resident_bytes": 47382528
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 27460328,
+      "physical_footprint_bytes": 27460328,
+      "resident_bytes": 37666816
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5915344,
+      "physical_footprint_bytes": 5915344,
+      "resident_bytes": 16072704
+    },
+    "candidate_bytes": 19170048,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 8520192,
+      "ols_matrix": 8454144,
+      "rhs": 65536,
+      "vectors_and_results_allowance": 33024
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 50437833,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 516,
+    "peak_above_prefit_current_bytes": 9699328,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 0,
+    "rows": 8192,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 8587264,
+    "status": "passed",
+    "width": 128
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 66616,
+      "peak_physical_footprint_bytes": 204931840,
+      "physical_footprint_bytes": 204882688,
+      "resident_bytes": 47710208
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 200164096,
+      "physical_footprint_bytes": 200164096,
+      "resident_bytes": 42926080
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178635496,
+      "physical_footprint_bytes": 178635496,
+      "resident_bytes": 21413888
+    },
+    "candidate_bytes": 17565696,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 8388608,
+      "parameters_and_prediction_allowance": 264192,
+      "targets_and_autodiff_vectors_allowance": 524288
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 481619125,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 4260920,
+    "peak_above_prefit_current_bytes": 4767744,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 0,
+    "rows": 8192,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 8587264,
+    "status": "passed",
+    "width": 128
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 36,
+      "peak_physical_footprint_bytes": 27050728,
+      "physical_footprint_bytes": 27050728,
+      "resident_bytes": 37273600
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 19743464,
+      "physical_footprint_bytes": 19743464,
+      "resident_bytes": 29949952
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5948112,
+      "physical_footprint_bytes": 5948112,
+      "resident_bytes": 16105472
+    },
+    "candidate_bytes": 10140928,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 41472,
+      "ols_matrix": 7200000,
+      "rhs": 800000,
+      "vectors_and_results_allowance": 2304
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 31107417,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 36,
+    "peak_above_prefit_current_bytes": 7307264,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 0,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 7208320,
+    "status": "passed",
+    "width": 8
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 4444804,
+      "peak_physical_footprint_bytes": 200557336,
+      "physical_footprint_bytes": 200557336,
+      "resident_bytes": 42516480
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 192299800,
+      "physical_footprint_bytes": 192299800,
+      "resident_bytes": 35078144
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178553600,
+      "physical_footprint_bytes": 178553600,
+      "resident_bytes": 21348352
+    },
+    "candidate_bytes": 21207040,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 6400000,
+      "parameters_and_prediction_allowance": 18432,
+      "targets_and_autodiff_vectors_allowance": 6400000
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 836575208,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 4440188,
+    "peak_above_prefit_current_bytes": 8257536,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 0,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 7208320,
+    "status": "passed",
+    "width": 8
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 36,
+      "peak_physical_footprint_bytes": 6226664,
+      "physical_footprint_bytes": 6226664,
+      "resident_bytes": 16400384
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 6095592,
+      "physical_footprint_bytes": 6095592,
+      "resident_bytes": 16236544
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 6062824,
+      "physical_footprint_bytes": 6062824,
+      "resident_bytes": 16203776
+    },
+    "candidate_bytes": 2222848,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 41472,
+      "ols_matrix": 73728,
+      "rhs": 8192,
+      "vectors_and_results_allowance": 2304
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 348750,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 36,
+    "peak_above_prefit_current_bytes": 131072,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 1,
+    "rows": 1024,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 82048,
+    "status": "passed",
+    "width": 8
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 4444852,
+      "peak_physical_footprint_bytes": 200475416,
+      "physical_footprint_bytes": 200475416,
+      "resident_bytes": 42434560
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 192545560,
+      "physical_footprint_bytes": 192545560,
+      "resident_bytes": 35291136
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178782976,
+      "physical_footprint_bytes": 178782976,
+      "resident_bytes": 21544960
+    },
+    "candidate_bytes": 21207040,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 6400000,
+      "parameters_and_prediction_allowance": 18432,
+      "targets_and_autodiff_vectors_allowance": 6400000
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 819651417,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 4440244,
+    "peak_above_prefit_current_bytes": 7929856,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 1,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 7208320,
+    "status": "passed",
+    "width": 8
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 36,
+      "peak_physical_footprint_bytes": 27083520,
+      "physical_footprint_bytes": 27083520,
+      "resident_bytes": 37289984
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 19776256,
+      "physical_footprint_bytes": 19776256,
+      "resident_bytes": 29966336
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5964520,
+      "physical_footprint_bytes": 5964520,
+      "resident_bytes": 16105472
+    },
+    "candidate_bytes": 10140928,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 41472,
+      "ols_matrix": 7200000,
+      "rhs": 800000,
+      "vectors_and_results_allowance": 2304
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 32683458,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 36,
+    "peak_above_prefit_current_bytes": 7307264,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 1,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 7208320,
+    "status": "passed",
+    "width": 8
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 66624,
+      "peak_physical_footprint_bytes": 205259544,
+      "physical_footprint_bytes": 205259544,
+      "resident_bytes": 48070656
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 200770328,
+      "physical_footprint_bytes": 200770328,
+      "resident_bytes": 43548672
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 179241728,
+      "physical_footprint_bytes": 179241728,
+      "resident_bytes": 22036480
+    },
+    "candidate_bytes": 17565696,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 8388608,
+      "parameters_and_prediction_allowance": 264192,
+      "targets_and_autodiff_vectors_allowance": 524288
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 233292167,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 4260928,
+    "peak_above_prefit_current_bytes": 4489216,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 1,
+    "rows": 8192,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 8587264,
+    "status": "passed",
+    "width": 128
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 516,
+      "peak_physical_footprint_bytes": 37225168,
+      "physical_footprint_bytes": 37225168,
+      "resident_bytes": 47464448
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 27525840,
+      "physical_footprint_bytes": 27525840,
+      "resident_bytes": 37748736
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5931704,
+      "physical_footprint_bytes": 5931704,
+      "resident_bytes": 16105472
+    },
+    "candidate_bytes": 19170048,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 8520192,
+      "ols_matrix": 8454144,
+      "rhs": 65536,
+      "vectors_and_results_allowance": 33024
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 51272666,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 516,
+    "peak_above_prefit_current_bytes": 9699328,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 1,
+    "rows": 8192,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 8587264,
+    "status": "passed",
+    "width": 128
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 14042060,
+      "peak_physical_footprint_bytes": 258343752,
+      "physical_footprint_bytes": 258343752,
+      "resident_bytes": 100270080
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 231113520,
+      "physical_footprint_bytes": 231113520,
+      "resident_bytes": 73957376
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178684672,
+      "physical_footprint_bytes": 178684672,
+      "resident_bytes": 21446656
+    },
+    "candidate_bytes": 40456192,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 25600000,
+      "parameters_and_prediction_allowance": 67584,
+      "targets_and_autodiff_vectors_allowance": 6400000
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 1251104417,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 14041540,
+    "peak_above_prefit_current_bytes": 27230232,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 1,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 26433280,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 132,
+      "peak_physical_footprint_bytes": 85017368,
+      "physical_footprint_bytes": 85017368,
+      "resident_bytes": 95207424
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 58524416,
+      "physical_footprint_bytes": 58524416,
+      "resident_bytes": 68714496
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5980880,
+      "physical_footprint_bytes": 5980880,
+      "resident_bytes": 16138240
+    },
+    "candidate_bytes": 29863168,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 557568,
+      "ols_matrix": 26400000,
+      "rhs": 800000,
+      "vectors_and_results_allowance": 8448
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 120864250,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 132,
+    "peak_above_prefit_current_bytes": 26492952,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 1,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 26433280,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 197444,
+      "peak_physical_footprint_bytes": 190825240,
+      "physical_footprint_bytes": 190825240,
+      "resident_bytes": 33456128
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 188449560,
+      "physical_footprint_bytes": 188449560,
+      "resident_bytes": 31195136
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178684672,
+      "physical_footprint_bytes": 178684672,
+      "resident_bytes": 21446656
+    },
+    "candidate_bytes": 13699072,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 4194304,
+      "parameters_and_prediction_allowance": 67584,
+      "targets_and_autodiff_vectors_allowance": 1048576
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 302558250,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 2294084,
+    "peak_above_prefit_current_bytes": 2375680,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 1,
+    "rows": 16384,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 4358656,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 132,
+      "peak_physical_footprint_bytes": 20103888,
+      "physical_footprint_bytes": 20103888,
+      "resident_bytes": 30343168
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 15712976,
+      "physical_footprint_bytes": 15712976,
+      "resident_bytes": 25935872
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5980880,
+      "physical_footprint_bytes": 5980880,
+      "resident_bytes": 16138240
+    },
+    "candidate_bytes": 7119616,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 557568,
+      "ols_matrix": 4325376,
+      "rhs": 131072,
+      "vectors_and_results_allowance": 8448
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 23385375,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 132,
+    "peak_above_prefit_current_bytes": 4390912,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 1,
+    "rows": 16384,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 4358656,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 8824,
+      "peak_physical_footprint_bytes": 178995968,
+      "physical_footprint_bytes": 178864896,
+      "resident_bytes": 21643264
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178766592,
+      "physical_footprint_bytes": 178766592,
+      "resident_bytes": 21528576
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178733824,
+      "physical_footprint_bytes": 178733824,
+      "resident_bytes": 21495808
+    },
+    "candidate_bytes": 8538112,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 65536,
+      "parameters_and_prediction_allowance": 18432,
+      "targets_and_autodiff_vectors_allowance": 65536
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 221091792,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 41080,
+    "peak_above_prefit_current_bytes": 229376,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 1,
+    "rows": 1024,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 82048,
+    "status": "passed",
+    "width": 8
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 132,
+      "peak_physical_footprint_bytes": 20120296,
+      "physical_footprint_bytes": 20120296,
+      "resident_bytes": 30343168
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 15745768,
+      "physical_footprint_bytes": 15745768,
+      "resident_bytes": 25952256
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5997288,
+      "physical_footprint_bytes": 5997288,
+      "resident_bytes": 16138240
+    },
+    "candidate_bytes": 7119616,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 557568,
+      "ols_matrix": 4325376,
+      "rhs": 131072,
+      "vectors_and_results_allowance": 8448
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 23210084,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 132,
+    "peak_above_prefit_current_bytes": 4374528,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 2,
+    "rows": 16384,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 4358656,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 197444,
+      "peak_physical_footprint_bytes": 190874392,
+      "physical_footprint_bytes": 190874392,
+      "resident_bytes": 33505280
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 188400408,
+      "physical_footprint_bytes": 188400408,
+      "resident_bytes": 31178752
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178635520,
+      "physical_footprint_bytes": 178635520,
+      "resident_bytes": 21430272
+    },
+    "candidate_bytes": 13699072,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 4194304,
+      "parameters_and_prediction_allowance": 67584,
+      "targets_and_autodiff_vectors_allowance": 1048576
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 295833000,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 2294084,
+    "peak_above_prefit_current_bytes": 2473984,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 2,
+    "rows": 16384,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 4358656,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 132,
+      "peak_physical_footprint_bytes": 85017392,
+      "physical_footprint_bytes": 85017392,
+      "resident_bytes": 95191040
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 58475288,
+      "physical_footprint_bytes": 58475288,
+      "resident_bytes": 68648960
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5915368,
+      "physical_footprint_bytes": 5915368,
+      "resident_bytes": 16056320
+    },
+    "candidate_bytes": 29863168,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 557568,
+      "ols_matrix": 26400000,
+      "rhs": 800000,
+      "vectors_and_results_allowance": 8448
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 121460208,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 132,
+    "peak_above_prefit_current_bytes": 26542104,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 2,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 26433280,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 14042068,
+      "peak_physical_footprint_bytes": 258360136,
+      "physical_footprint_bytes": 258360136,
+      "resident_bytes": 100286464
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 231195440,
+      "physical_footprint_bytes": 231195440,
+      "resident_bytes": 73924608
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178635520,
+      "physical_footprint_bytes": 178635520,
+      "resident_bytes": 21397504
+    },
+    "candidate_bytes": 40456192,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 25600000,
+      "parameters_and_prediction_allowance": 67584,
+      "targets_and_autodiff_vectors_allowance": 6400000
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 1238772208,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 14041556,
+    "peak_above_prefit_current_bytes": 27164696,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 2,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 26433280,
+    "status": "passed",
+    "width": 32
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 516,
+      "peak_physical_footprint_bytes": 37126888,
+      "physical_footprint_bytes": 37126888,
+      "resident_bytes": 47349760
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 27460328,
+      "physical_footprint_bytes": 27460328,
+      "resident_bytes": 37666816
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5898960,
+      "physical_footprint_bytes": 5898960,
+      "resident_bytes": 16056320
+    },
+    "candidate_bytes": 19170048,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 8520192,
+      "ols_matrix": 8454144,
+      "rhs": 65536,
+      "vectors_and_results_allowance": 33024
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 48282834,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 516,
+    "peak_above_prefit_current_bytes": 9666560,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 2,
+    "rows": 8192,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 8587264,
+    "status": "passed",
+    "width": 128
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 66612,
+      "peak_physical_footprint_bytes": 204473112,
+      "physical_footprint_bytes": 204473112,
+      "resident_bytes": 47316992
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 200000280,
+      "physical_footprint_bytes": 200000280,
+      "resident_bytes": 42778624
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178471680,
+      "physical_footprint_bytes": 178471680,
+      "resident_bytes": 21266432
+    },
+    "candidate_bytes": 17565696,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 8388608,
+      "parameters_and_prediction_allowance": 264192,
+      "targets_and_autodiff_vectors_allowance": 524288
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 232267792,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 4260916,
+    "peak_above_prefit_current_bytes": 4472832,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 2,
+    "rows": 8192,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 8587264,
+    "status": "passed",
+    "width": 128
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 36,
+      "peak_physical_footprint_bytes": 26919632,
+      "physical_footprint_bytes": 26919632,
+      "resident_bytes": 37158912
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 19612368,
+      "physical_footprint_bytes": 19612368,
+      "resident_bytes": 29835264
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5849784,
+      "physical_footprint_bytes": 5849784,
+      "resident_bytes": 16023552
+    },
+    "candidate_bytes": 10140928,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 41472,
+      "ols_matrix": 7200000,
+      "rhs": 800000,
+      "vectors_and_results_allowance": 2304
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 30121417,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 36,
+    "peak_above_prefit_current_bytes": 7307264,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 2,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 7208320,
+    "status": "passed",
+    "width": 8
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 4444804,
+      "peak_physical_footprint_bytes": 200557336,
+      "physical_footprint_bytes": 200557336,
+      "resident_bytes": 42516480
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 192185088,
+      "physical_footprint_bytes": 192185088,
+      "resident_bytes": 35012608
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178438888,
+      "physical_footprint_bytes": 178438888,
+      "resident_bytes": 21282816
+    },
+    "candidate_bytes": 21207040,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 6400000,
+      "parameters_and_prediction_allowance": 18432,
+      "targets_and_autodiff_vectors_allowance": 6400000
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 869560834,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 4030596,
+    "peak_above_prefit_current_bytes": 8372248,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 2,
+    "rows": 100000,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 7208320,
+    "status": "passed",
+    "width": 8
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 36,
+      "peak_physical_footprint_bytes": 6095568,
+      "physical_footprint_bytes": 6095568,
+      "resident_bytes": 16334848
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5931728,
+      "physical_footprint_bytes": 5931728,
+      "resident_bytes": 16105472
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5898960,
+      "physical_footprint_bytes": 5898960,
+      "resident_bytes": 16056320
+    },
+    "candidate_bytes": 2222848,
+    "candidate_components": {
+      "allocator_allowance": 2097152,
+      "lapack_and_refinement_allowance": 41472,
+      "ols_matrix": 73728,
+      "rhs": 8192,
+      "vectors_and_results_allowance": 2304
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "cpu",
+    "fit_predict_ns": 355709,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 36,
+    "peak_above_prefit_current_bytes": 163840,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 2,
+    "rows": 1024,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 82048,
+    "status": "passed",
+    "width": 8
+  },
+  {
+    "after_fit_before_oracle": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 8820,
+      "peak_physical_footprint_bytes": 178701056,
+      "physical_footprint_bytes": 178569984,
+      "resident_bytes": 21381120
+    },
+    "before_fit": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178488064,
+      "physical_footprint_bytes": 178488064,
+      "resident_bytes": 21282816
+    },
+    "before_input": {
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178455296,
+      "physical_footprint_bytes": 178455296,
+      "resident_bytes": 21250048
+    },
+    "candidate_bytes": 8538112,
+    "candidate_components": {
+      "allocator_allowance": 8388608,
+      "float_matrix_and_possible_import_copy": 65536,
+      "parameters_and_prediction_allowance": 18432,
+      "targets_and_autodiff_vectors_allowance": 65536
+    },
+    "candidate_covers_observed_envelope": true,
+    "device": "gpu",
+    "fit_predict_ns": 210533375,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mlx_peak_active_bytes": 41076,
+    "peak_above_prefit_current_bytes": 212992,
+    "prior_peak_above_prefit_current_bytes": 0,
+    "round": 2,
+    "rows": 1024,
+    "scope": "Single warmed-runtime prepared fit. Lifetime physical peak minus pre-fit current footprint is a conservative observed envelope, not an isolated allocator peak. Candidate allowances are experimental, not hard memory bounds.",
+    "shared_payload_bytes": 82048,
+    "status": "passed",
+    "width": 8
+  }
+]
