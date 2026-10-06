@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Batch-planned CPU workspace and reservation lifetime](benchmarks/2026-10-06-cpu-planned-workspace.md) records the changing-shape memory benefit, complete timing, capacity-error behavior, and cancellation checks.
+
 - [Bounded CPU workspace reuse trial](benchmarks/2026-10-06-cpu-workspace.md) compares ordinary arrays, fixed capacity and query-sized growth, including workload-order effects and the limits of normalized memory measurements.
 
 - [CPU retention and allocator reclamation](benchmarks/2026-10-06-cpu-retention.md) identifies freed resident workspace, isolates the GPU-warmup confound, and records the allocator control and CPU leak scan.
