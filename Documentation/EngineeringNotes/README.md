@@ -8,7 +8,7 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
-- **Dependency boundary:** MLX Swift 0.32.3 contains the managed-buffer finalizer fix but does not yet bundle our core SIMD patch #4602. Preserve the ownership correction and verify both fixes before declaring the dependency complete. See [PR #60](https://github.com/Nodibell/SwiftSci/pull/60) and [Arrow validation with required MLX](research/2026-10-06-arrow-import-pr-validation.md). Do not revert this pin to match upstream main.
+- [Pinned MLX Swift backport](research/2026-10-06-mlx-simd-backport.md) records the approved temporary fork, exact upstream patch comparison, passing CPU regressions, and three remaining SwiftSci compatibility failures. Preserve both the finalizer correction and SIMD fix when changing this dependency.
 
 - [Signed Arrow date32 import](research/2026-10-06-arrow-date32-import.md) records the reproduced cast failure, signed-date correction, ownership checks, and existing upstream fix.
 

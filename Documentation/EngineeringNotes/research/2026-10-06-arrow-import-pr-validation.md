@@ -1,5 +1,7 @@
 # Arrow validation with required MLX ownership fix
 
+Dependency decision and branch heads were superseded later on this date by the [approved SIMD backport](2026-10-06-mlx-simd-backport.md). Results below retain their original tested commits.
+
 Date: 2026-10-06. Arrow branch: `codex/arrow-import-compatibility` at `d8c13bb662b967999da4c05b5c7f5bb418295126`. Dependency prerequisite: `c4063e83116550ef97b289e4e2423df47072cbe0` in [draft PR #60](https://github.com/Nodibell/SwiftSci/pull/60), based on upstream main `0d0de4bea8e892dc1abc32be7878160d7f777109`.
 
 ## Required dependency and PR order

@@ -1,0 +1,35 @@
+{
+  "result": "Failed",
+  "passedTests": 1144,
+  "failedTests": 3,
+  "skippedTests": 2,
+  "testFailures": [
+    {
+      "failureText": "Crash: xctest at <deduplicated_symbol>",
+      "targetName": "SwiftLLMTests",
+      "testIdentifier": 597,
+      "testIdentifierString": "GenerationResultTests/invalidRequests(api:)",
+      "testIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftLLMTests/GenerationResultTests/invalidRequests(api:)",
+      "testName": "All entry points return the typed request error"
+    },
+    {
+      "failureText": "Expectation failed: worstRatio <= 1\nworstRatio \u2192 1.5823296156926971\n1 \u2192 1.0: dim=64, GPU=true, factor=8.0, traditional=false, length=1, offset=131069, error/budget=1.5823296156926971",
+      "targetName": "SwiftLLMTests",
+      "testIdentifier": 615,
+      "testIdentifierString": "LlamaRotaryScalingTests/rotationOracle(dimensions:gpu:)",
+      "testIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftLLMTests/LlamaRotaryScalingTests/rotationOracle(dimensions:gpu:)",
+      "testName": "Scaled rotations match a Double oracle across layouts and long positions"
+    },
+    {
+      "failureText": "Expectation failed: abs(actual[index] - expected) <= expected.ulp\nabs(actual[index] - expected) \u2192 0.0008544922\nexpected.ulp \u2192 6.1035156e-05: GPU=true, frequency=15, actual=774.8639, expected=774.86475",
+      "targetName": "SwiftLLMTests",
+      "testIdentifier": 613,
+      "testIdentifierString": "LlamaRotaryScalingTests/transitionFrequencies(gpu:)",
+      "testIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftLLMTests/LlamaRotaryScalingTests/transitionFrequencies(gpu:)",
+      "testName": "Transition-band frequencies match the checkpoint reference"
+    }
+  ],
+  "head": "93c19c198508ad00510d0f60715f1d127ac0e822",
+  "manifest_sha256": "0dfaf850bec0cf10c915f674fb82355e5a59dc4def9c948f439e48f7eeabee6c",
+  "lockfile_sha256": "93db6ee420b6fecef4ab56013df316c3ac49aee28e9587bb83f41fa1f3466ef4"
+}
