@@ -1,0 +1,126 @@
+{
+  "upstream_base": "0d0de4bea8e892dc1abc32be7878160d7f777109",
+  "dependency_head": "c4063e83116550ef97b289e4e2423df47072cbe0",
+  "dependency_pr": "https://github.com/Nodibell/SwiftSci/pull/60",
+  "arrow_branch": "codex/arrow-import-compatibility",
+  "arrow_head": "d8c13bb662b967999da4c05b5c7f5bb418295126",
+  "tested_head": "cd6b8218b1adcebd0a43d0382270623e902a125e",
+  "identical_tree": "3430f96c1a061df757961a2e78492d36f1e36c08",
+  "required_mlx_version": "0.32.3",
+  "required_mlx_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075",
+  "preserved_branch": "codex/arrow-chunk-import",
+  "preserved_head": "32badeece6728e9b75054b2f997459c377dfb69e",
+  "memory_branch_full_suite": {
+    "result": "Failed",
+    "passedTests": 1055,
+    "failedTests": 2,
+    "skippedTests": 2,
+    "executions": [
+      {
+        "passed": 1288,
+        "failed": 3,
+        "skipped": 2
+      }
+    ],
+    "failures": [
+      {
+        "test": "LlamaRotaryScalingTests/rotationOracle(dimensions:gpu:)",
+        "failure": "Expectation failed: worstRatio <= 1\nworstRatio \u2192 1.5823296156926971\n1 \u2192 1.0: dim=64, GPU=true, factor=8.0, traditional=false, length=1, offset=131069, error/budget=1.5823296156926971"
+      },
+      {
+        "test": "LlamaRotaryScalingTests/transitionFrequencies(gpu:)",
+        "failure": "Expectation failed: abs(actual[index] - expected) <= expected.ulp\nabs(actual[index] - expected) \u2192 0.0008544922\nexpected.ulp \u2192 6.1035156e-05: GPU=true, frequency=15, actual=774.8639, expected=774.86475"
+      }
+    ]
+  },
+  "memory_parent_rotary_suite": {
+    "result": "Failed",
+    "passedTests": 4,
+    "failedTests": 2,
+    "skippedTests": 0,
+    "executions": [
+      {
+        "passed": 8,
+        "failed": 3,
+        "skipped": 0
+      }
+    ],
+    "failures": [
+      {
+        "test": "LlamaRotaryScalingTests/rotationOracle(dimensions:gpu:)",
+        "failure": "Expectation failed: worstRatio <= 1\nworstRatio \u2192 1.5823296156926971\n1 \u2192 1.0: dim=64, GPU=true, factor=8.0, traditional=false, length=1, offset=131069, error/budget=1.5823296156926971"
+      },
+      {
+        "test": "LlamaRotaryScalingTests/transitionFrequencies(gpu:)",
+        "failure": "Expectation failed: abs(actual[index] - expected) <= expected.ulp\nabs(actual[index] - expected) \u2192 0.0008544922\nexpected.ulp \u2192 6.1035156e-05: GPU=true, frequency=15, actual=774.8639, expected=774.86475"
+      }
+    ]
+  },
+  "isolated_arrow_full_suite": {
+    "result": "Failed",
+    "passedTests": 1152,
+    "failedTests": 3,
+    "skippedTests": 2,
+    "executions": [
+      {
+        "passed": 1372,
+        "failed": 4,
+        "skipped": 2
+      }
+    ],
+    "failures": [
+      {
+        "test": "GenerationResultTests/invalidRequests(api:)",
+        "failure": "Crash: xctest at <deduplicated_symbol>"
+      },
+      {
+        "test": "LlamaRotaryScalingTests/rotationOracle(dimensions:gpu:)",
+        "failure": "Expectation failed: worstRatio <= 1\nworstRatio \u2192 1.5823296156926971\n1 \u2192 1.0: dim=64, GPU=true, factor=8.0, traditional=false, length=1, offset=131069, error/budget=1.5823296156926971"
+      },
+      {
+        "test": "LlamaRotaryScalingTests/transitionFrequencies(gpu:)",
+        "failure": "Expectation failed: abs(actual[index] - expected) <= expected.ulp\nabs(actual[index] - expected) \u2192 0.0008544922\nexpected.ulp \u2192 6.1035156e-05: GPU=true, frequency=15, actual=774.8639, expected=774.86475"
+      }
+    ]
+  },
+  "review": {
+    "review_base": "299221aab3865c57f8220bc8f2f03854708c6c65",
+    "review_head": "32badeece6728e9b75054b2f997459c377dfb69e",
+    "isolated_head": "cd6b8218b1adcebd0a43d0382270623e902a125e",
+    "standards_findings": [],
+    "spec_findings": [],
+    "files": {
+      "Sources/SwiftDataFrame/Internal/ArrowTableBridge.swift": "af067255f6eb8ca9a39b244306465e579babc1c20ba44106f95bbfdc7944eac4",
+      "Tests/SwiftDataFrameTests/DataFrameArrowChunkTests.swift": "48986ae3a7d086f0086659b8147916b1879d76a551df430c72ecc2eb42c360d6",
+      "Tests/SwiftDataFrameTests/DataFrameArrowDate32Tests.swift": "565018f6e372f268d0f1656aba130ed0cad9bf0c717291b9d466230e9f38b4a0"
+    },
+    "scope": "Arrow source and tests; dependency upgrade rationale reviewed separately in existing MLX qualification report"
+  },
+  "benchmark_workers": 42,
+  "benchmark_binaries": {
+    "before": {
+      "binary_sha256": "c2ae9d9238023b11d155b817c40c04dda201c6574250327bf1cbe721e6929b8a",
+      "bridge_sha256": "b9d839152ea7354e85edb218eb4ab1140e844fb338bf91e6b9ee5c1fccaca481"
+    },
+    "after": {
+      "binary_sha256": "f6e9d612274cf4c4e1c1733582ab44825a4ba88d6d28eb92d191e7312bb1b74c",
+      "bridge_sha256": "af067255f6eb8ca9a39b244306465e579babc1c20ba44106f95bbfdc7944eac4"
+    }
+  },
+  "dependency_pr_exact_head_tested_locally": false,
+  "arrow_branch_pushed": false,
+  "arrow_pr_created": false,
+  "preserved_integration_worker_sha256": "8cf4eb7b76a17f1f8bd202cf140f9512423c21fdced7ca8bfe2c4302fe1bf22d",
+  "release_boundary": {
+    "swift_release": "0.32.3",
+    "swift_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075",
+    "bundled_mlx": "1f8e74e3f12f31365464a6867c6579f0e9b29d85",
+    "user_simd_pr": "https://github.com/ml-explore/mlx/pull/4602",
+    "user_simd_merge": "8c56dd880e27b0ed1f9b7be998d153b884f2a5d8",
+    "bundled_revision_behind_merge_by": 126,
+    "swift_main": "b4f768435b15f9d6f09ca02a0037a36f9bd3690e",
+    "swift_main_bundles_same_core": true,
+    "latest_core_release": "v0.32.3",
+    "simd_fix_in_swift_release": false
+  }
+}
