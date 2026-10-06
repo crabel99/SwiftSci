@@ -1,0 +1,74 @@
+{
+  "active_job_peak": 2,
+  "batch_ns": 941547292,
+  "budget_limit_bytes": 914505472,
+  "budget_units": 2,
+  "cache_payload_bytes": 30791936,
+  "cpu_seconds": 0.569489,
+  "final_reserved_bytes": 0,
+  "gpu_active_job_peak": 1,
+  "gpu_slot_final_count": 0,
+  "gpu_slot_peak_count": 1,
+  "gpu_slots": 1,
+  "input_shapes": [
+    {
+      "training_rows": 100000,
+      "width": 32
+    },
+    {
+      "training_rows": 16384,
+      "width": 32
+    }
+  ],
+  "job_count": 4,
+  "jobs": [
+    {
+      "completion_ns": 124139542,
+      "device": "cpu",
+      "device_queue_ns": 0,
+      "memory_queue_ns": 7583,
+      "queue_ns": 7583,
+      "service_ns": 124069834
+    },
+    {
+      "completion_ns": 245180333,
+      "device": "cpu",
+      "device_queue_ns": 0,
+      "memory_queue_ns": 124076709,
+      "queue_ns": 124076709,
+      "service_ns": 121015916
+    },
+    {
+      "completion_ns": 602296333,
+      "device": "gpu",
+      "device_queue_ns": 5959,
+      "memory_queue_ns": 916,
+      "queue_ns": 6875,
+      "service_ns": 602218125
+    },
+    {
+      "completion_ns": 941518917,
+      "device": "gpu",
+      "device_queue_ns": 602216042,
+      "memory_queue_ns": 3167,
+      "queue_ns": 602219209,
+      "service_ns": 339199875
+    }
+  ],
+  "jobs_per_second": 4.248326169048129,
+  "mix": "mixed",
+  "mixed_admitted_overlap": true,
+  "mlx_active_after_batch_bytes": 0,
+  "mlx_active_before_bytes": 0,
+  "mlx_cached_after_batch_bytes": 197588,
+  "mlx_peak_active_before_oracle_bytes": 2294228,
+  "peak_physical_footprint_before_oracle_bytes": 266912608,
+  "peak_reservation_bytes": 914505472,
+  "peak_rss_before_oracle_bytes": 109641728,
+  "physical_footprint_after_jobs_bytes": 266912608,
+  "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+  "setup_ns": 39523792,
+  "setup_plus_batch_ns": 981071084,
+  "size": "heterogeneous",
+  "status": "passed"
+}
