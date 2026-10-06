@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Focused GPU admission and physical memory](benchmarks/2026-10-05-gpu-admission-focused.md) records the bounded comparison, graphics-inclusive memory measurements, pressure guards and host-memory incident resolution.
+
 - [Mixed CPU/GPU admission](benchmarks/2026-10-05-mixed-device-admission.md) records private streams, buffer lifetime checks and device-specific throughput/memory tradeoffs.
 
 - [Concurrent CPU admission](benchmarks/2026-10-05-concurrent-admission.md) records shared-cache ownership, throughput, latency and memory tradeoffs.
