@@ -1,0 +1,88 @@
+{
+  "pr_head": "409e6ee545b88c22b83520845660c27ec584125d",
+  "memory_head": "6e10f5833961d6813cc65b0491fe622c83c55a5d",
+  "mlx_swift_revision": "4657976edcdd2c60642424985d474b45ddddb390",
+  "mlx_core_revision": "ba70087d777b7a0206e620ddda780fb783d0e795",
+  "before": {
+    "passedTests": 17,
+    "failedTests": 3,
+    "skippedTests": 0
+  },
+  "parity-before": {
+    "passedTests": 18,
+    "failedTests": 3,
+    "skippedTests": 0
+  },
+  "after": {
+    "passedTests": 21,
+    "failedTests": 0,
+    "skippedTests": 0
+  },
+  "full-release": {
+    "passedTests": 1148,
+    "failedTests": 0,
+    "skippedTests": 2
+  },
+  "memory-release": {
+    "passedTests": 1058,
+    "failedTests": 0,
+    "skippedTests": 2
+  },
+  "worker_checks": [
+    {
+      "name": "ownership",
+      "command": [
+        "/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/derived/Build/Products/Release/SwiftSciMemoryDevicePrototype",
+        "--mlx-finalizer-probe"
+      ],
+      "sha256": "1216c1e528cfd56f7076811e2dbedb8652e47748fa3d84cb8d27a25671391f83",
+      "exit_code": 0
+    },
+    {
+      "name": "device",
+      "command": [
+        "/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/derived/Build/Products/Release/SwiftSciMemoryDevicePrototype",
+        "--device-check"
+      ],
+      "sha256": "1216c1e528cfd56f7076811e2dbedb8652e47748fa3d84cb8d27a25671391f83",
+      "exit_code": 0
+    },
+    {
+      "name": "donation",
+      "command": [
+        "/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/derived/Build/Products/Release/SwiftSciMemoryDevicePrototype",
+        "--donation-check"
+      ],
+      "sha256": "1216c1e528cfd56f7076811e2dbedb8652e47748fa3d84cb8d27a25671391f83",
+      "exit_code": 0
+    },
+    {
+      "name": "integration",
+      "command": [
+        "/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/derived/Build/Products/Release/SwiftSciMemoryIntegrationPrototype",
+        "--check"
+      ],
+      "sha256": "b28180c19bb61343bd64165b474c5295fbca8e45ab38c7ddfbe8d05367e9896c",
+      "exit_code": 0
+    },
+    {
+      "name": "prepared",
+      "command": [
+        "/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/derived/Build/Products/Release/SwiftSciMemoryIntegrationPrototype",
+        "--prepared-check"
+      ],
+      "sha256": "b28180c19bb61343bd64165b474c5295fbca8e45ab38c7ddfbe8d05367e9896c",
+      "exit_code": 0
+    }
+  ],
+  "ownership": {
+    "allocations": 1,
+    "dependency": "mlx-swift 0.32.3",
+    "finalizer_calls": 1,
+    "owner_live_bytes": 0,
+    "releases": 1,
+    "retained_lease": false,
+    "scope": "isolated process; completed GPU read and cache clear; callback and captured owner release required",
+    "status": "passed"
+  }
+}

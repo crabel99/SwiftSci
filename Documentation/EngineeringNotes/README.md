@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [MLX compatibility and memory integration](research/2026-10-06-mlx-compatibility.md) records resolution of all three upgrade failures, passing full Release suites, fresh ownership checks, and the tested working memory head.
+
 - [Pinned MLX Swift backport](research/2026-10-06-mlx-simd-backport.md) records the approved temporary fork, exact upstream patch comparison, passing CPU regressions, and three remaining SwiftSci compatibility failures. Preserve both the finalizer correction and SIMD fix when changing this dependency.
 
 - [Signed Arrow date32 import](research/2026-10-06-arrow-date32-import.md) records the reproduced cast failure, signed-date correction, ownership checks, and existing upstream fix.

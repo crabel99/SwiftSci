@@ -1,5 +1,7 @@
 # Pinned MLX Swift backport
 
+The three compatibility failures recorded below were resolved later on this date. See [compatibility and integration results](2026-10-06-mlx-compatibility.md); earlier test results retain their original fingerprints.
+
 Date: 2026-10-06.
 
 The user approved a temporary fork that combines the managed-buffer ownership fix in official MLX Swift 0.32.3 with their merged CPU float16 SIMD fix, MLX #4602. Official core v0.32.3 predates the October 4 merge. Official Swift 0.32.3 and current Swift main still bundle an older core. A Swift version number alone does not establish inclusion of the core fix.
