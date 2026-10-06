@@ -1,0 +1,17 @@
+--- a/Benchmarks/UnifiedMemoryPrototype/Integration/RetainedMemory.swift
++++ b/Benchmarks/UnifiedMemoryPrototype/Integration/RetainedMemory.swift
+@@ -1,11 +1,14 @@
+ import Foundation
+ import Darwin
++import Metal
+ import MLX
+ import SwiftML
+ import SwiftSciMemoryPrototypeCore
+ 
+ private func retentionSnapshot() throws -> [String: UInt64] {
+     var values = try processMemorySnapshot()
++    values["sample_mach_ticks"] = mach_absolute_time()
++    values["metal_device_allocated_bytes"] = UInt64(MTLCreateSystemDefaultDevice()?.currentAllocatedSize ?? 0)
+     var statistics = malloc_statistics_t()
+     malloc_zone_statistics(nil, &statistics)
+     values["malloc_bytes_in_use"] = UInt64(statistics.size_in_use)

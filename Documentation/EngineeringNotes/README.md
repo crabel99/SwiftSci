@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Metal memory retention at the synchronous matrix boundary](benchmarks/2026-10-06-metal-profile.md) records Instruments evidence and a disposable autorelease-pool control that removes the repeated GPU allocation growth.
+
 - [Retained memory across repeated job sizes](benchmarks/2026-10-06-retained-memory.md) separates released input ownership, CPU retention and continued GPU footprint growth, including a stream-lifetime control.
 
 - [Counted GPU slots and unequal workspace estimates](benchmarks/2026-10-06-weighted-admission.md) records slot separation, fixed-budget comparisons and the observed 32 MiB footprint exceedances.

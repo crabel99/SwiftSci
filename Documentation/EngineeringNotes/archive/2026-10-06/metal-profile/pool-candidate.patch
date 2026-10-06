@@ -1,0 +1,17 @@
+--- a/Sources/SwiftPreprocessing/Core/ScopedGPURead.swift
++++ b/Sources/SwiftPreprocessing/Core/ScopedGPURead.swift
+@@ -41,6 +41,7 @@
+     package static func withMatrix<R>(rows: Int, columns: Int,
+                                       value: (Int, Int) -> Double,
+                                       _ operation: (MLXArray) throws -> R) throws -> R {
++        return try autoreleasepool {
+         let (count, overflow) = rows.multipliedReportingOverflow(by: columns)
+         let (bytes, byteOverflow) = count.multipliedReportingOverflow(by: MemoryLayout<Float>.stride)
+         guard rows > 0, columns > 0, rows <= Int32.max, columns <= Int32.max, !overflow, !byteOverflow,
+@@ -53,5 +54,6 @@
+             for c in 0..<columns { pointer.advanced(by:r*columns+c).initialize(to:Float(value(r,c))) }
+         }
+         return try withBuffer(buffer,range:0..<count,shape:[rows,columns]) { input,_ in try operation(input) }
++        }
+     }
+ }
