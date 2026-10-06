@@ -1,0 +1,28 @@
+{
+  "implementation_commit": "32badeece6728e9b75054b2f997459c377dfb69e",
+  "parent": "fafa07a3de4b489636c89db42616b8f89c770082",
+  "branch": "codex/arrow-chunk-import",
+  "files": {
+    "Sources/SwiftDataFrame/Internal/ArrowTableBridge.swift": "af067255f6eb8ca9a39b244306465e579babc1c20ba44106f95bbfdc7944eac4",
+    "Tests/SwiftDataFrameTests/DataFrameArrowDate32Tests.swift": "565018f6e372f268d0f1656aba130ed0cad9bf0c717291b9d466230e9f38b4a0"
+  },
+  "before": {
+    "failed": 1,
+    "passed": 0,
+    "test": "DataFrameArrowDate32Tests/builderRepresentation()",
+    "failure": "Forced cast from Arrow.ChunkedArray<Foundation.Date> to Arrow.ChunkedArray<Swift.Int32>"
+  },
+  "after": {
+    "release_test_definitions_passed": 270,
+    "executions_including_parameters": 363,
+    "failed": 0,
+    "skipped": 0
+  },
+  "arrow_version": "21.0.0",
+  "arrow_revision": "fb3f3d91be5acd511b7289c7820becc1a68e455d",
+  "upstream_fix": "https://github.com/apache/arrow-swift/pull/194",
+  "preserved_integration_worker_sha256": "8cf4eb7b76a17f1f8bd202cf140f9512423c21fdced7ca8bfe2c4302fe1bf22d",
+  "full_library_suite_run": false,
+  "benchmark_rerun": false,
+  "pushed": false
+}
