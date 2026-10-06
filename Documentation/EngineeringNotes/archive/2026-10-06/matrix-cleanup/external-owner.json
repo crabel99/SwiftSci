@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "success",
+    "cancel-after-submit",
+    "throw-after-submit"
+  ],
+  "scope": "Production ScopedGPURead wrapped in a private-stream drain under MemoryBudget: owner and reservation retained during a submitted scope, then released on success, cancellation and error. This qualifies the combined pattern, not the adapter drain in isolation or still-running kernels at observation time.",
+  "status": "passed"
+}

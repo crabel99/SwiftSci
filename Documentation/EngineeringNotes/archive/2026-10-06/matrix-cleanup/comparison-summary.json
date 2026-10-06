@@ -1,0 +1,81 @@
+{
+  "measured_fits": 126,
+  "processes": 24,
+  "samples_sha256": "017a98d25859ae17d0740275b7274249f7d84a68fcf435266286bf3d2ceca75d",
+  "scope": "Three fresh workers per arm/case on AC power, alternating arm order. All numerical and lifecycle checks apply. Workload timing is unprofiled; small shared-host sample, not a full performance baseline.",
+  "status": "passed",
+  "summaries": [
+    {
+      "arm": "baseline",
+      "case": "retention",
+      "cycle_footprint_growth_bytes": [
+        5603328,
+        11010048,
+        16826368
+      ]
+    },
+    {
+      "arm": "fixed",
+      "case": "retention",
+      "cycle_footprint_growth_bytes": [
+        327680,
+        524288,
+        819200
+      ]
+    },
+    {
+      "arm": "baseline",
+      "batch_ns": 546472583,
+      "batch_ns_range": [
+        523410917,
+        551589500
+      ],
+      "case": "cpu-heavy"
+    },
+    {
+      "arm": "fixed",
+      "batch_ns": 549666625,
+      "batch_ns_range": [
+        547617333,
+        559763334
+      ],
+      "case": "cpu-heavy"
+    },
+    {
+      "arm": "baseline",
+      "batch_ns": 685934000,
+      "batch_ns_range": [
+        664693375,
+        717820458
+      ],
+      "case": "mixed"
+    },
+    {
+      "arm": "fixed",
+      "batch_ns": 707720083,
+      "batch_ns_range": [
+        688970417,
+        723437500
+      ],
+      "case": "mixed"
+    },
+    {
+      "arm": "baseline",
+      "batch_ns": 1506118333,
+      "batch_ns_range": [
+        1451985792,
+        1520259916
+      ],
+      "case": "gpu-heavy"
+    },
+    {
+      "arm": "fixed",
+      "batch_ns": 1456260625,
+      "batch_ns_range": [
+        1441692833,
+        1477686792
+      ],
+      "case": "gpu-heavy"
+    }
+  ]
+}

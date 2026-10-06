@@ -1,0 +1,28 @@
+{
+  "checks": [
+    {
+      "metal_allocated_bytes_after_cycles": [
+        1523712,
+        1523712,
+        1523712
+      ],
+      "mode": "success"
+    },
+    {
+      "metal_allocated_bytes_after_cycles": [
+        1523712,
+        1523712,
+        1523712
+      ],
+      "mode": "throw-after-submit"
+    },
+    {
+      "cancelled": true,
+      "metal_allocated_after_bytes": 1523712,
+      "metal_allocated_before_bytes": 1523712,
+      "mode": "cancel-after-submit"
+    }
+  ],
+  "scope": "Fresh-process production withMatrix regression: aliased/copied imports, post-submission errors, cancellation while a synchronous scope is open. Completed cycles must not accumulate Metal allocations. Other owner/admission checks remain separate.",
+  "status": "passed"
+}
