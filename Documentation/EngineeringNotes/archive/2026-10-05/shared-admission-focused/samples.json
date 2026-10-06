@@ -1,0 +1,1367 @@
+[
+  {
+    "active_job_peak": 1,
+    "average_cpu_cores": 0.5445819526868316,
+    "batch_ns": 921626208,
+    "budget_limit_bytes": 536996608,
+    "budget_units": 1,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 354310416.5,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 248548021.0,
+    "cpu_median_queue_ns": 248548021.0,
+    "cpu_median_service_ns": 105689583.5,
+    "cpu_seconds": 0.501901,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 709379875.0,
+    "gpu_median_device_queue_ns": 248548812.5,
+    "gpu_median_memory_queue_ns": 105704729.5,
+    "gpu_median_queue_ns": 354253542.0,
+    "gpu_median_service_ns": 355048042.0,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 106666458,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 7792,
+        "queue_ns": 7792,
+        "service_ns": 106600833
+      },
+      {
+        "completion_ns": 497157000,
+        "device": "gpu",
+        "device_queue_ns": 3625,
+        "memory_queue_ns": 106619625,
+        "queue_ns": 106623250,
+        "service_ns": 390467459
+      },
+      {
+        "completion_ns": 601954375,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 497088250,
+        "queue_ns": 497088250,
+        "service_ns": 104778334
+      },
+      {
+        "completion_ns": 921602750,
+        "device": "gpu",
+        "device_queue_ns": 497094000,
+        "memory_queue_ns": 104789834,
+        "queue_ns": 601883834,
+        "service_ns": 319628625
+      }
+    ],
+    "jobs_per_second": 4.340154354638318,
+    "median_completion_ns": 549555687.5,
+    "median_queue_ns": 301855750.0,
+    "median_service_ns": 213114729.0,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": false,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197444,
+    "mlx_peak_active_before_oracle_bytes": 2294076,
+    "peak_physical_footprint_before_oracle_bytes": 260768584,
+    "peak_reservation_bytes": 536996608,
+    "peak_rss_before_oracle_bytes": 103546880,
+    "physical_footprint_after_jobs_bytes": 260768584,
+    "round": 0,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 40113709,
+    "setup_plus_batch_ns": 961739917,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 2,
+    "average_cpu_cores": 0.5964894788306107,
+    "batch_ns": 896911042,
+    "budget_limit_bytes": 914505472,
+    "budget_units": 2,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 173265334.0,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 57880271.0,
+    "cpu_median_queue_ns": 57880271.0,
+    "cpu_median_service_ns": 115316479.5,
+    "cpu_seconds": 0.534998,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 745626667.0,
+    "gpu_median_device_queue_ns": 297144729.5,
+    "gpu_median_memory_queue_ns": 1812.0,
+    "gpu_median_queue_ns": 297146541.5,
+    "gpu_median_service_ns": 448401146.0,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 115814584,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 7250,
+        "queue_ns": 7250,
+        "service_ns": 115753334
+      },
+      {
+        "completion_ns": 230716084,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 115753292,
+        "queue_ns": 115753292,
+        "service_ns": 114879625
+      },
+      {
+        "completion_ns": 594366000,
+        "device": "gpu",
+        "device_queue_ns": 3709,
+        "memory_queue_ns": 833,
+        "queue_ns": 4542,
+        "service_ns": 594300083
+      },
+      {
+        "completion_ns": 896887334,
+        "device": "gpu",
+        "device_queue_ns": 594285750,
+        "memory_queue_ns": 2791,
+        "queue_ns": 594288541,
+        "service_ns": 302502209
+      }
+    ],
+    "jobs_per_second": 4.459751093130148,
+    "median_completion_ns": 412541042.0,
+    "median_queue_ns": 57880271.0,
+    "median_service_ns": 209127771.5,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": true,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197588,
+    "mlx_peak_active_before_oracle_bytes": 2294228,
+    "peak_physical_footprint_before_oracle_bytes": 261194544,
+    "peak_reservation_bytes": 914505472,
+    "peak_rss_before_oracle_bytes": 104005632,
+    "physical_footprint_after_jobs_bytes": 261194544,
+    "round": 0,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37545167,
+    "setup_plus_batch_ns": 934456209,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 3,
+    "average_cpu_cores": 0.7450310974036991,
+    "batch_ns": 880979334,
+    "budget_limit_bytes": 1669523200,
+    "budget_units": 4,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 171605521.5,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 6500.5,
+    "cpu_median_queue_ns": 6500.5,
+    "cpu_median_service_ns": 171521958.5,
+    "cpu_seconds": 0.656357,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 718973687.5,
+    "gpu_median_device_queue_ns": 278455708.0,
+    "gpu_median_memory_queue_ns": 1646.0,
+    "gpu_median_queue_ns": 278457354.0,
+    "gpu_median_service_ns": 440429062.0,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 171545959,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 8834,
+        "queue_ns": 8834,
+        "service_ns": 171475125
+      },
+      {
+        "completion_ns": 171665084,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 4167,
+        "queue_ns": 4167,
+        "service_ns": 171568792
+      },
+      {
+        "completion_ns": 556992250,
+        "device": "gpu",
+        "device_queue_ns": 3291,
+        "memory_queue_ns": 834,
+        "queue_ns": 4125,
+        "service_ns": 556919166
+      },
+      {
+        "completion_ns": 880955125,
+        "device": "gpu",
+        "device_queue_ns": 556908125,
+        "memory_queue_ns": 2458,
+        "queue_ns": 556910583,
+        "service_ns": 323938958
+      }
+    ],
+    "jobs_per_second": 4.5404016253575366,
+    "median_completion_ns": 364328667.0,
+    "median_queue_ns": 6500.5,
+    "median_service_ns": 247753875.0,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": true,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197572,
+    "mlx_peak_active_before_oracle_bytes": 2294084,
+    "peak_physical_footprint_before_oracle_bytes": 287933256,
+    "peak_reservation_bytes": 1292014336,
+    "peak_rss_before_oracle_bytes": 130760704,
+    "physical_footprint_after_jobs_bytes": 287933256,
+    "round": 0,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37197959,
+    "setup_plus_batch_ns": 918177293,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 1,
+    "average_cpu_cores": 0.569756909657014,
+    "batch_ns": 866104459,
+    "budget_limit_bytes": 536996608,
+    "budget_units": 1,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 326101313.0,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 219858917.0,
+    "cpu_median_queue_ns": 219858917.0,
+    "cpu_median_service_ns": 106170375.0,
+    "cpu_seconds": 0.493469,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 652928667.0,
+    "gpu_median_device_queue_ns": 219858604.5,
+    "gpu_median_memory_queue_ns": 106182354.0,
+    "gpu_median_queue_ns": 326040958.5,
+    "gpu_median_service_ns": 326810208.5,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 107602042,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 8292,
+        "queue_ns": 8292,
+        "service_ns": 107535833
+      },
+      {
+        "completion_ns": 439777167,
+        "device": "gpu",
+        "device_queue_ns": 3584,
+        "memory_queue_ns": 107552416,
+        "queue_ns": 107556000,
+        "service_ns": 332154917
+      },
+      {
+        "completion_ns": 544600584,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 439709542,
+        "queue_ns": 439709542,
+        "service_ns": 104804917
+      },
+      {
+        "completion_ns": 866080167,
+        "device": "gpu",
+        "device_queue_ns": 439713625,
+        "memory_queue_ns": 104812292,
+        "queue_ns": 544525917,
+        "service_ns": 321465500
+      }
+    ],
+    "jobs_per_second": 4.618380564185503,
+    "median_completion_ns": 492188875.5,
+    "median_queue_ns": 273632771.0,
+    "median_service_ns": 214500666.5,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": false,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197588,
+    "mlx_peak_active_before_oracle_bytes": 2294228,
+    "peak_physical_footprint_before_oracle_bytes": 261014344,
+    "peak_reservation_bytes": 536996608,
+    "peak_rss_before_oracle_bytes": 103809024,
+    "physical_footprint_after_jobs_bytes": 261014344,
+    "round": 1,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37204333,
+    "setup_plus_batch_ns": 903308792,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 3,
+    "average_cpu_cores": 0.746233523534163,
+    "batch_ns": 864153083,
+    "budget_limit_bytes": 1669523200,
+    "budget_units": 4,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 167567791.5,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 6625.0,
+    "cpu_median_queue_ns": 6625.0,
+    "cpu_median_service_ns": 167477687.5,
+    "cpu_seconds": 0.64486,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 713115291.5,
+    "gpu_median_device_queue_ns": 281006979.0,
+    "gpu_median_memory_queue_ns": 1604.5,
+    "gpu_median_queue_ns": 281008583.5,
+    "gpu_median_service_ns": 432013729.0,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 167086875,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 3417,
+        "queue_ns": 3417,
+        "service_ns": 166983250
+      },
+      {
+        "completion_ns": 168048708,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 9833,
+        "queue_ns": 9833,
+        "service_ns": 167972125
+      },
+      {
+        "completion_ns": 562100250,
+        "device": "gpu",
+        "device_queue_ns": 3000,
+        "memory_queue_ns": 875,
+        "queue_ns": 3875,
+        "service_ns": 562021000
+      },
+      {
+        "completion_ns": 864130333,
+        "device": "gpu",
+        "device_queue_ns": 562010958,
+        "memory_queue_ns": 2334,
+        "queue_ns": 562013292,
+        "service_ns": 302006458
+      }
+    ],
+    "jobs_per_second": 4.628809499948287,
+    "median_completion_ns": 365074479.0,
+    "median_queue_ns": 6854.0,
+    "median_service_ns": 234989291.5,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": true,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197572,
+    "mlx_peak_active_before_oracle_bytes": 2294064,
+    "peak_physical_footprint_before_oracle_bytes": 287638368,
+    "peak_reservation_bytes": 1292014336,
+    "peak_rss_before_oracle_bytes": 130433024,
+    "physical_footprint_after_jobs_bytes": 285541216,
+    "round": 1,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37146791,
+    "setup_plus_batch_ns": 901299874,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 2,
+    "average_cpu_cores": 0.6057623649038191,
+    "batch_ns": 890489458,
+    "budget_limit_bytes": 914505472,
+    "budget_units": 2,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 167897229.0,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 55828375.5,
+    "cpu_median_queue_ns": 55828375.5,
+    "cpu_median_service_ns": 112000354.0,
+    "cpu_seconds": 0.539425,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 739341916.5,
+    "gpu_median_device_queue_ns": 294071083.0,
+    "gpu_median_memory_queue_ns": 1750.0,
+    "gpu_median_queue_ns": 294072833.0,
+    "gpu_median_service_ns": 445189729.5,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 111706250,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 7417,
+        "queue_ns": 7417,
+        "service_ns": 111644125
+      },
+      {
+        "completion_ns": 224088208,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 111649334,
+        "queue_ns": 111649334,
+        "service_ns": 112356583
+      },
+      {
+        "completion_ns": 588217833,
+        "device": "gpu",
+        "device_queue_ns": 4208,
+        "memory_queue_ns": 1000,
+        "queue_ns": 5208,
+        "service_ns": 588150875
+      },
+      {
+        "completion_ns": 890466000,
+        "device": "gpu",
+        "device_queue_ns": 588137958,
+        "memory_queue_ns": 2500,
+        "queue_ns": 588140458,
+        "service_ns": 302228584
+      }
+    ],
+    "jobs_per_second": 4.491911683024101,
+    "median_completion_ns": 406153020.5,
+    "median_queue_ns": 55828375.5,
+    "median_service_ns": 207292583.5,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": true,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197588,
+    "mlx_peak_active_before_oracle_bytes": 2294228,
+    "peak_physical_footprint_before_oracle_bytes": 261260128,
+    "peak_reservation_bytes": 914505472,
+    "peak_rss_before_oracle_bytes": 104038400,
+    "physical_footprint_after_jobs_bytes": 261260128,
+    "round": 1,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37760209,
+    "setup_plus_batch_ns": 928249667,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 3,
+    "average_cpu_cores": 0.7527501279802543,
+    "batch_ns": 853721542,
+    "budget_limit_bytes": 1669523200,
+    "budget_units": 4,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 166476812.5,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 6396.0,
+    "cpu_median_queue_ns": 6396.0,
+    "cpu_median_service_ns": 166389271.0,
+    "cpu_seconds": 0.6426390000000001,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 702637666.5,
+    "gpu_median_device_queue_ns": 275744270.5,
+    "gpu_median_memory_queue_ns": 2125.5,
+    "gpu_median_queue_ns": 275746396.0,
+    "gpu_median_service_ns": 426797708.0,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 165244750,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 9167,
+        "queue_ns": 9167,
+        "service_ns": 165171500
+      },
+      {
+        "completion_ns": 167708875,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 3625,
+        "queue_ns": 3625,
+        "service_ns": 167607042
+      },
+      {
+        "completion_ns": 551574875,
+        "device": "gpu",
+        "device_queue_ns": 3833,
+        "memory_queue_ns": 1584,
+        "queue_ns": 5417,
+        "service_ns": 551494708
+      },
+      {
+        "completion_ns": 853700458,
+        "device": "gpu",
+        "device_queue_ns": 551484708,
+        "memory_queue_ns": 2667,
+        "queue_ns": 551487375,
+        "service_ns": 302100708
+      }
+    ],
+    "jobs_per_second": 4.685368475802148,
+    "median_completion_ns": 359641875.0,
+    "median_queue_ns": 7292.0,
+    "median_service_ns": 234853875.0,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": true,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197572,
+    "mlx_peak_active_before_oracle_bytes": 2294076,
+    "peak_physical_footprint_before_oracle_bytes": 287703904,
+    "peak_reservation_bytes": 1292014336,
+    "peak_rss_before_oracle_bytes": 130498560,
+    "physical_footprint_after_jobs_bytes": 287703904,
+    "round": 2,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37460000,
+    "setup_plus_batch_ns": 891181542,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 1,
+    "average_cpu_cores": 0.5690100657658659,
+    "batch_ns": 861807250,
+    "budget_limit_bytes": 536996608,
+    "budget_units": 1,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 325313750.0,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 219389708.5,
+    "cpu_median_queue_ns": 219389708.5,
+    "cpu_median_service_ns": 105846354.0,
+    "cpu_seconds": 0.49037700000000006,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 650316083.5,
+    "gpu_median_device_queue_ns": 219389562.0,
+    "gpu_median_memory_queue_ns": 105855125.0,
+    "gpu_median_queue_ns": 325244687.0,
+    "gpu_median_service_ns": 324987417.0,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 107798375,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 9458,
+        "queue_ns": 9458,
+        "service_ns": 107728750
+      },
+      {
+        "completion_ns": 438845875,
+        "device": "gpu",
+        "device_queue_ns": 3791,
+        "memory_queue_ns": 107743750,
+        "queue_ns": 107747541,
+        "service_ns": 331028292
+      },
+      {
+        "completion_ns": 542829125,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 438769959,
+        "queue_ns": 438769959,
+        "service_ns": 103963958
+      },
+      {
+        "completion_ns": 861786292,
+        "device": "gpu",
+        "device_queue_ns": 438775333,
+        "memory_queue_ns": 103966500,
+        "queue_ns": 542741833,
+        "service_ns": 318946542
+      }
+    ],
+    "jobs_per_second": 4.641409085384232,
+    "median_completion_ns": 490837500.0,
+    "median_queue_ns": 273258750.0,
+    "median_service_ns": 213337646.0,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": false,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 131908,
+    "mlx_peak_active_before_oracle_bytes": 2228548,
+    "peak_physical_footprint_before_oracle_bytes": 260719432,
+    "peak_reservation_bytes": 536996608,
+    "peak_rss_before_oracle_bytes": 103514112,
+    "physical_footprint_after_jobs_bytes": 260719432,
+    "round": 2,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37254583,
+    "setup_plus_batch_ns": 899061833,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 2,
+    "average_cpu_cores": 0.6805794490309961,
+    "batch_ns": 931647291,
+    "budget_limit_bytes": 914505472,
+    "budget_units": 2,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 169991541.5,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 57868187.5,
+    "cpu_median_queue_ns": 57868187.5,
+    "cpu_median_service_ns": 112049021.0,
+    "cpu_seconds": 0.6340600000000001,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 770065853.5,
+    "gpu_median_device_queue_ns": 304211500.0,
+    "gpu_median_memory_queue_ns": 1791.5,
+    "gpu_median_queue_ns": 304213291.5,
+    "gpu_median_service_ns": 465768166.5,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 115791208,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 8583,
+        "queue_ns": 8583,
+        "service_ns": 115722750
+      },
+      {
+        "completion_ns": 224191875,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 115727792,
+        "queue_ns": 115727792,
+        "service_ns": 108375292
+      },
+      {
+        "completion_ns": 608504416,
+        "device": "gpu",
+        "device_queue_ns": 3417,
+        "memory_queue_ns": 916,
+        "queue_ns": 4333,
+        "service_ns": 608433750
+      },
+      {
+        "completion_ns": 931627291,
+        "device": "gpu",
+        "device_queue_ns": 608419583,
+        "memory_queue_ns": 2667,
+        "queue_ns": 608422250,
+        "service_ns": 323102583
+      }
+    ],
+    "jobs_per_second": 4.293470327924777,
+    "median_completion_ns": 416348145.5,
+    "median_queue_ns": 57868187.5,
+    "median_service_ns": 219412666.5,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": true,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197588,
+    "mlx_peak_active_before_oracle_bytes": 2294228,
+    "peak_physical_footprint_before_oracle_bytes": 261210952,
+    "peak_reservation_bytes": 914505472,
+    "peak_rss_before_oracle_bytes": 104005632,
+    "physical_footprint_after_jobs_bytes": 261210952,
+    "round": 2,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37341500,
+    "setup_plus_batch_ns": 968988791,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 3,
+    "average_cpu_cores": 0.7476054830241531,
+    "batch_ns": 854191167,
+    "budget_limit_bytes": 1669523200,
+    "budget_units": 4,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 164798708.5,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 5437.5,
+    "cpu_median_queue_ns": 5437.5,
+    "cpu_median_service_ns": 164722333.5,
+    "cpu_seconds": 0.638598,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 703111958.0,
+    "gpu_median_device_queue_ns": 275990895.5,
+    "gpu_median_memory_queue_ns": 1729.5,
+    "gpu_median_queue_ns": 275992625.0,
+    "gpu_median_service_ns": 427038374.5,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 163472375,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 6709,
+        "queue_ns": 6709,
+        "service_ns": 163408583
+      },
+      {
+        "completion_ns": 166125042,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 4166,
+        "queue_ns": 4166,
+        "service_ns": 166036084
+      },
+      {
+        "completion_ns": 552054958,
+        "device": "gpu",
+        "device_queue_ns": 3833,
+        "memory_queue_ns": 834,
+        "queue_ns": 4667,
+        "service_ns": 551987666
+      },
+      {
+        "completion_ns": 854168958,
+        "device": "gpu",
+        "device_queue_ns": 551977958,
+        "memory_queue_ns": 2625,
+        "queue_ns": 551980583,
+        "service_ns": 302089083
+      }
+    ],
+    "jobs_per_second": 4.682792511245904,
+    "median_completion_ns": 359090000.0,
+    "median_queue_ns": 5688.0,
+    "median_service_ns": 234062583.5,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": true,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197588,
+    "mlx_peak_active_before_oracle_bytes": 2294228,
+    "peak_physical_footprint_before_oracle_bytes": 287769440,
+    "peak_reservation_bytes": 1292014336,
+    "peak_rss_before_oracle_bytes": 130564096,
+    "physical_footprint_after_jobs_bytes": 287769440,
+    "round": 3,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37985167,
+    "setup_plus_batch_ns": 892176334,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 2,
+    "average_cpu_cores": 0.5949870478106688,
+    "batch_ns": 914999750,
+    "budget_limit_bytes": 914505472,
+    "budget_units": 2,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 165383437.0,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 54986520.5,
+    "cpu_median_queue_ns": 54986520.5,
+    "cpu_median_service_ns": 110321375.0,
+    "cpu_seconds": 0.544413,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 761514520.5,
+    "gpu_median_device_queue_ns": 303983875.5,
+    "gpu_median_memory_queue_ns": 2083.0,
+    "gpu_median_queue_ns": 303985958.5,
+    "gpu_median_service_ns": 457439062.5,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 110031291,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 7375,
+        "queue_ns": 7375,
+        "service_ns": 109964708
+      },
+      {
+        "completion_ns": 220735583,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 109965666,
+        "queue_ns": 109965666,
+        "service_ns": 110678042
+      },
+      {
+        "completion_ns": 608055625,
+        "device": "gpu",
+        "device_queue_ns": 4209,
+        "memory_queue_ns": 1625,
+        "queue_ns": 5834,
+        "service_ns": 607980875
+      },
+      {
+        "completion_ns": 914973416,
+        "device": "gpu",
+        "device_queue_ns": 607963542,
+        "memory_queue_ns": 2541,
+        "queue_ns": 607966083,
+        "service_ns": 306897250
+      }
+    ],
+    "jobs_per_second": 4.3715858938759276,
+    "median_completion_ns": 414395604.0,
+    "median_queue_ns": 54986520.5,
+    "median_service_ns": 208787646.0,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": true,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197588,
+    "mlx_peak_active_before_oracle_bytes": 2294228,
+    "peak_physical_footprint_before_oracle_bytes": 261309256,
+    "peak_reservation_bytes": 914505472,
+    "peak_rss_before_oracle_bytes": 104103936,
+    "physical_footprint_after_jobs_bytes": 261309256,
+    "round": 3,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37555417,
+    "setup_plus_batch_ns": 952555167,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 1,
+    "average_cpu_cores": 0.5630525755676863,
+    "batch_ns": 886458959,
+    "budget_limit_bytes": 536996608,
+    "budget_units": 1,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 334179187.5,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 226753166.5,
+    "cpu_median_queue_ns": 226753166.5,
+    "cpu_median_service_ns": 107348458.0,
+    "cpu_seconds": 0.49912300000000004,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 670003521.0,
+    "gpu_median_device_queue_ns": 226753188.0,
+    "gpu_median_memory_queue_ns": 107360145.5,
+    "gpu_median_queue_ns": 334113333.5,
+    "gpu_median_service_ns": 335806666.5,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 109355625,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 8750,
+        "queue_ns": 8750,
+        "service_ns": 109284708
+      },
+      {
+        "completion_ns": 453572042,
+        "device": "gpu",
+        "device_queue_ns": 3334,
+        "memory_queue_ns": 109303083,
+        "queue_ns": 109306417,
+        "service_ns": 344194125
+      },
+      {
+        "completion_ns": 559002750,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 453497583,
+        "queue_ns": 453497583,
+        "service_ns": 105412208
+      },
+      {
+        "completion_ns": 886435000,
+        "device": "gpu",
+        "device_queue_ns": 453503042,
+        "memory_queue_ns": 105417208,
+        "queue_ns": 558920250,
+        "service_ns": 327419208
+      }
+    ],
+    "jobs_per_second": 4.512335240553421,
+    "median_completion_ns": 506287396.0,
+    "median_queue_ns": 281402000.0,
+    "median_service_ns": 218351958.0,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": false,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197580,
+    "mlx_peak_active_before_oracle_bytes": 2294200,
+    "peak_physical_footprint_before_oracle_bytes": 260817712,
+    "peak_reservation_bytes": 536996608,
+    "peak_rss_before_oracle_bytes": 103628800,
+    "physical_footprint_after_jobs_bytes": 260817712,
+    "round": 3,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37262292,
+    "setup_plus_batch_ns": 923721251,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 1,
+    "average_cpu_cores": 0.5702182743536393,
+    "batch_ns": 870624500,
+    "budget_limit_bytes": 536996608,
+    "budget_units": 1,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 327781437.5,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 220861937.0,
+    "cpu_median_queue_ns": 220861937.0,
+    "cpu_median_service_ns": 106847854.5,
+    "cpu_seconds": 0.496446,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 656193187.5,
+    "gpu_median_device_queue_ns": 220862833.5,
+    "gpu_median_memory_queue_ns": 106858187.0,
+    "gpu_median_queue_ns": 327721020.5,
+    "gpu_median_service_ns": 328394104.5,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 107531958,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 7416,
+        "queue_ns": 7416,
+        "service_ns": 107468250
+      },
+      {
+        "completion_ns": 441783417,
+        "device": "gpu",
+        "device_queue_ns": 3917,
+        "memory_queue_ns": 107484708,
+        "queue_ns": 107488625,
+        "service_ns": 334228334
+      },
+      {
+        "completion_ns": 548030917,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 441716458,
+        "queue_ns": 441716458,
+        "service_ns": 106227459
+      },
+      {
+        "completion_ns": 870602958,
+        "device": "gpu",
+        "device_queue_ns": 441721750,
+        "memory_queue_ns": 106231666,
+        "queue_ns": 547953416,
+        "service_ns": 322559875
+      }
+    ],
+    "jobs_per_second": 4.594403212866167,
+    "median_completion_ns": 494907167.0,
+    "median_queue_ns": 274602541.5,
+    "median_service_ns": 215014062.5,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": false,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197444,
+    "mlx_peak_active_before_oracle_bytes": 2294084,
+    "peak_physical_footprint_before_oracle_bytes": 260801328,
+    "peak_reservation_bytes": 536996608,
+    "peak_rss_before_oracle_bytes": 103596032,
+    "physical_footprint_after_jobs_bytes": 260801328,
+    "round": 4,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37578125,
+    "setup_plus_batch_ns": 908202625,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 2,
+    "average_cpu_cores": 0.5890788707085964,
+    "batch_ns": 906376084,
+    "budget_limit_bytes": 914505472,
+    "budget_units": 2,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 166611042.0,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 56007041.5,
+    "cpu_median_queue_ns": 56007041.5,
+    "cpu_median_service_ns": 110534354.5,
+    "cpu_seconds": 0.5339269999999999,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 754888729.5,
+    "gpu_median_device_queue_ns": 301675437.5,
+    "gpu_median_memory_queue_ns": 1875.5,
+    "gpu_median_queue_ns": 301677313.0,
+    "gpu_median_service_ns": 453132020.5,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 112063792,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 7583,
+        "queue_ns": 7583,
+        "service_ns": 111999542
+      },
+      {
+        "completion_ns": 221158292,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 112006500,
+        "queue_ns": 112006500,
+        "service_ns": 109069167
+      },
+      {
+        "completion_ns": 603424084,
+        "device": "gpu",
+        "device_queue_ns": 4125,
+        "memory_queue_ns": 1084,
+        "queue_ns": 5209,
+        "service_ns": 603355750
+      },
+      {
+        "completion_ns": 906353375,
+        "device": "gpu",
+        "device_queue_ns": 603346750,
+        "memory_queue_ns": 2667,
+        "queue_ns": 603349417,
+        "service_ns": 302908291
+      }
+    ],
+    "jobs_per_second": 4.4131791103173015,
+    "median_completion_ns": 412291188.0,
+    "median_queue_ns": 56007041.5,
+    "median_service_ns": 207453916.5,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": true,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197572,
+    "mlx_peak_active_before_oracle_bytes": 2228656,
+    "peak_physical_footprint_before_oracle_bytes": 261194568,
+    "peak_reservation_bytes": 914505472,
+    "peak_rss_before_oracle_bytes": 104022016,
+    "physical_footprint_after_jobs_bytes": 261194568,
+    "round": 4,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 38347917,
+    "setup_plus_batch_ns": 944724001,
+    "size": "heterogeneous",
+    "status": "passed"
+  },
+  {
+    "active_job_peak": 3,
+    "average_cpu_cores": 0.7525053158876553,
+    "batch_ns": 862391250,
+    "budget_limit_bytes": 1669523200,
+    "budget_units": 4,
+    "cache_payload_bytes": 30791936,
+    "cpu_median_completion_ns": 168525292.0,
+    "cpu_median_device_queue_ns": 0.0,
+    "cpu_median_memory_queue_ns": 6125.0,
+    "cpu_median_queue_ns": 6125.0,
+    "cpu_median_service_ns": 168447854.5,
+    "cpu_seconds": 0.648954,
+    "final_reserved_bytes": 0,
+    "gpu_active_job_peak": 1,
+    "gpu_budget_final_bytes": 0,
+    "gpu_budget_peak_bytes": 377508864,
+    "gpu_median_completion_ns": 710919645.5,
+    "gpu_median_device_queue_ns": 279699083.5,
+    "gpu_median_memory_queue_ns": 1791.5,
+    "gpu_median_queue_ns": 279700875.0,
+    "gpu_median_service_ns": 431138395.5,
+    "gpu_slots": 1,
+    "input_shapes": [
+      {
+        "training_rows": 100000,
+        "width": 32
+      },
+      {
+        "training_rows": 16384,
+        "width": 32
+      }
+    ],
+    "job_count": 4,
+    "jobs": [
+      {
+        "completion_ns": 167675417,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 8000,
+        "queue_ns": 8000,
+        "service_ns": 167611250
+      },
+      {
+        "completion_ns": 169375167,
+        "device": "cpu",
+        "device_queue_ns": 0,
+        "memory_queue_ns": 4250,
+        "queue_ns": 4250,
+        "service_ns": 169284459
+      },
+      {
+        "completion_ns": 559469458,
+        "device": "gpu",
+        "device_queue_ns": 3750,
+        "memory_queue_ns": 875,
+        "queue_ns": 4625,
+        "service_ns": 559401708
+      },
+      {
+        "completion_ns": 862369833,
+        "device": "gpu",
+        "device_queue_ns": 559394417,
+        "memory_queue_ns": 2708,
+        "queue_ns": 559397125,
+        "service_ns": 302875083
+      }
+    ],
+    "jobs_per_second": 4.638265984261784,
+    "median_completion_ns": 364422312.5,
+    "median_queue_ns": 6312.5,
+    "median_service_ns": 236079771.0,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "mix": "mixed",
+    "mixed_admitted_overlap": true,
+    "mlx_active_after_batch_bytes": 0,
+    "mlx_active_before_bytes": 0,
+    "mlx_cached_after_batch_bytes": 197572,
+    "mlx_peak_active_before_oracle_bytes": 2294084,
+    "peak_physical_footprint_before_oracle_bytes": 287605552,
+    "peak_reservation_bytes": 1292014336,
+    "peak_rss_before_oracle_bytes": 130449408,
+    "physical_footprint_after_jobs_bytes": 285508400,
+    "round": 4,
+    "scope": "Four independent models share scaled input. Private task streams drain before release. CPU uses Double OLS; GPU uses Float32 gradient descent. Compare admission settings within each mix, not solver speed across devices. Estimates do not cap RSS or MLX cache; overlap counts admitted scopes, not simultaneous kernels.",
+    "setup_ns": 37576708,
+    "setup_plus_batch_ns": 899967958,
+    "size": "heterogeneous",
+    "status": "passed"
+  }
+]
