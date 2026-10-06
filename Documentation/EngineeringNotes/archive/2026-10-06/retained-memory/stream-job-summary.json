@@ -1,0 +1,80 @@
+{
+  "build_sha256": "75e5dbd9419dd14d43d791d226414e4e34732b5bc5e9a772128024c122862925",
+  "measured_fits": 108,
+  "processes": 12,
+  "rounds": 3,
+  "samples_sha256": "7e0aae589fd34ee48dee1e724fd7a354c5f146b0e395e69c9d58a9240863c650",
+  "scope": "Numerical and lifecycle checks only. Retention measurements are observations, not a leak detector or a physical-memory bound. Cleanup treatments affect the worker process only.",
+  "status": "passed",
+  "stream_scope": "job",
+  "summaries": [
+    {
+      "cycle_end_footprint_growth_bytes": [
+        10076184,
+        15843352,
+        21217304
+      ],
+      "final_cleanup_footprint_drop_bytes": 0,
+      "final_footprint_above_warm_bytes": 40763440,
+      "footprint_drop_on_input_release_bytes": -16384,
+      "last_after_footprint_growth_bytes": 21217304,
+      "last_before_footprint_growth_bytes": 21217304,
+      "last_malloc_allocated_growth_bytes": 0,
+      "last_malloc_in_use_growth_bytes": 213232,
+      "last_mlx_cache_bytes": 4645768,
+      "profile": "gpu-sizes",
+      "treatment": "retain"
+    },
+    {
+      "cycle_end_footprint_growth_bytes": [
+        5980160,
+        11386880,
+        16580608
+      ],
+      "final_cleanup_footprint_drop_bytes": 0,
+      "final_footprint_above_warm_bytes": 35995672,
+      "footprint_drop_on_input_release_bytes": -16384,
+      "last_after_footprint_growth_bytes": 16580608,
+      "last_before_footprint_growth_bytes": 16580608,
+      "last_malloc_allocated_growth_bytes": 4194304,
+      "last_malloc_in_use_growth_bytes": 165280,
+      "last_mlx_cache_bytes": 0,
+      "profile": "gpu-sizes",
+      "treatment": "mlx-clear"
+    },
+    {
+      "cycle_end_footprint_growth_bytes": [
+        10305536,
+        15712256,
+        21037056
+      ],
+      "final_cleanup_footprint_drop_bytes": 0,
+      "final_footprint_above_warm_bytes": 40796208,
+      "footprint_drop_on_input_release_bytes": -16384,
+      "last_after_footprint_growth_bytes": 21037056,
+      "last_before_footprint_growth_bytes": 21037056,
+      "last_malloc_allocated_growth_bytes": 0,
+      "last_malloc_in_use_growth_bytes": 214336,
+      "last_mlx_cache_bytes": 4650036,
+      "profile": "gpu-sizes",
+      "treatment": "malloc-relief"
+    },
+    {
+      "cycle_end_footprint_growth_bytes": [
+        5849088,
+        11255808,
+        16613376
+      ],
+      "final_cleanup_footprint_drop_bytes": 0,
+      "final_footprint_above_warm_bytes": 35946520,
+      "footprint_drop_on_input_release_bytes": -16384,
+      "last_after_footprint_growth_bytes": 16613376,
+      "last_before_footprint_growth_bytes": 16613376,
+      "last_malloc_allocated_growth_bytes": 0,
+      "last_malloc_in_use_growth_bytes": 114016,
+      "last_mlx_cache_bytes": 0,
+      "profile": "gpu-sizes",
+      "treatment": "both"
+    }
+  ]
+}

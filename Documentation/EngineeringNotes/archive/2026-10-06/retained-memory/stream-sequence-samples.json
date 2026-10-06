@@ -1,0 +1,5042 @@
+[
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10902,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2615024,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219644696,
+      "physical_footprint_bytes": 219448088,
+      "resident_bytes": 61980672
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10901,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2614512,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219644696,
+      "physical_footprint_bytes": 219448088,
+      "resident_bytes": 61980672
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 11040,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2639056,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 4650036,
+      "peak_physical_footprint_bytes": 219644696,
+      "physical_footprint_bytes": 219644696,
+      "resident_bytes": 62111744
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10848,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14705136,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 198591256,
+          "physical_footprint_bytes": 198591256,
+          "resident_bytes": 41320448
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10950,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14728960,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197588,
+          "peak_physical_footprint_bytes": 201065240,
+          "physical_footprint_bytes": 201065240,
+          "resident_bytes": 43728896
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10949,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14728448,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197588,
+          "peak_physical_footprint_bytes": 201065240,
+          "physical_footprint_bytes": 201065240,
+          "resident_bytes": 43728896
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10948,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14727936,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197588,
+          "peak_physical_footprint_bytes": 201048856,
+          "physical_footprint_bytes": 201048856,
+          "resident_bytes": 43712512
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11064,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14772864,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4641844,
+          "peak_physical_footprint_bytes": 208765720,
+          "physical_footprint_bytes": 208765720,
+          "resident_bytes": 50626560
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11063,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14772352,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4641844,
+          "peak_physical_footprint_bytes": 208765720,
+          "physical_footprint_bytes": 208765720,
+          "resident_bytes": 50626560
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11062,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14771840,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4641844,
+          "peak_physical_footprint_bytes": 208765720,
+          "physical_footprint_bytes": 208765720,
+          "resident_bytes": 50626560
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11112,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14865728,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 209175320,
+          "physical_footprint_bytes": 209175320,
+          "resident_bytes": 50872320
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11111,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14865216,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 209175320,
+          "physical_footprint_bytes": 209175320,
+          "resident_bytes": 50872320
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11110,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14864704,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 209175320,
+          "physical_footprint_bytes": 209175320,
+          "resident_bytes": 50872320
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11123,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14872064,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 211288856,
+          "physical_footprint_bytes": 211288856,
+          "resident_bytes": 53051392
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11122,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14871552,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 211288856,
+          "physical_footprint_bytes": 211288856,
+          "resident_bytes": 53051392
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11121,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14871040,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 211288856,
+          "physical_footprint_bytes": 211288856,
+          "resident_bytes": 53051392
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11132,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14875584,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214516504,
+          "physical_footprint_bytes": 214516504,
+          "resident_bytes": 56705024
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11131,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14875072,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214516504,
+          "physical_footprint_bytes": 214516504,
+          "resident_bytes": 56705024
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11130,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14874560,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214516504,
+          "physical_footprint_bytes": 214516504,
+          "resident_bytes": 56705024
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11141,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14879296,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214549272,
+          "physical_footprint_bytes": 214270744,
+          "resident_bytes": 56737792
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11140,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14878784,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214549272,
+          "physical_footprint_bytes": 214270744,
+          "resident_bytes": 56737792
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11139,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14878272,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214549272,
+          "physical_footprint_bytes": 214270744,
+          "resident_bytes": 56737792
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11150,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14883232,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 216384280,
+          "physical_footprint_bytes": 216384280,
+          "resident_bytes": 58851328
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11149,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14882720,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 216384280,
+          "physical_footprint_bytes": 216384280,
+          "resident_bytes": 58851328
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11148,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14882208,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 216384280,
+          "physical_footprint_bytes": 216384280,
+          "resident_bytes": 58851328
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11159,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14886720,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219595544,
+          "physical_footprint_bytes": 219595544,
+          "resident_bytes": 62062592
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11158,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14886208,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219595544,
+          "physical_footprint_bytes": 219595544,
+          "resident_bytes": 62062592
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11157,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14885696,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219595544,
+          "physical_footprint_bytes": 219595544,
+          "resident_bytes": 62062592
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11168,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14890496,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219628312,
+          "physical_footprint_bytes": 219628312,
+          "resident_bytes": 62095360
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11167,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14889984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219628312,
+          "physical_footprint_bytes": 219628312,
+          "resident_bytes": 62095360
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11166,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14889472,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219628312,
+          "physical_footprint_bytes": 219628312,
+          "resident_bytes": 62095360
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 0,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "retain",
+    "warmed": {
+      "malloc_blocks_in_use": 10719,
+      "malloc_bytes_allocated": 41943040,
+      "malloc_bytes_in_use": 2452304,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 179241728,
+      "physical_footprint_bytes": 179241728,
+      "resident_bytes": 21954560
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10897,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2575280,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 223593264,
+      "physical_footprint_bytes": 219038512,
+      "resident_bytes": 61849600
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10896,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2574768,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 223593264,
+      "physical_footprint_bytes": 219038512,
+      "resident_bytes": 61849600
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 10895,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2574256,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 223593264,
+      "physical_footprint_bytes": 219038512,
+      "resident_bytes": 61849600
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10851,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14727968,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 202687280,
+          "physical_footprint_bytes": 202687280,
+          "resident_bytes": 45449216
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10875,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14755568,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 205177648,
+          "physical_footprint_bytes": 205177648,
+          "resident_bytes": 47824896
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10874,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14755056,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 205177648,
+          "physical_footprint_bytes": 205177648,
+          "resident_bytes": 47824896
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10969,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14772864,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197588,
+          "peak_physical_footprint_bytes": 205161264,
+          "physical_footprint_bytes": 205161264,
+          "resident_bytes": 47808512
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10956,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14796768,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212681520,
+          "physical_footprint_bytes": 212681520,
+          "resident_bytes": 54657024
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10955,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14796256,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212681520,
+          "physical_footprint_bytes": 212681520,
+          "resident_bytes": 54657024
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11060,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14815536,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444852,
+          "peak_physical_footprint_bytes": 212681520,
+          "physical_footprint_bytes": 212681520,
+          "resident_bytes": 54657024
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10967,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14801952,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212861744,
+          "physical_footprint_bytes": 208290608,
+          "resident_bytes": 51085312
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10966,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14801440,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212861744,
+          "physical_footprint_bytes": 208290608,
+          "resident_bytes": 51085312
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11041,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14815872,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8836,
+          "peak_physical_footprint_bytes": 212861744,
+          "physical_footprint_bytes": 208290608,
+          "resident_bytes": 51085312
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10978,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14807264,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212861744,
+          "physical_footprint_bytes": 210535216,
+          "resident_bytes": 53264384
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10977,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14806752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212861744,
+          "physical_footprint_bytes": 210535216,
+          "resident_bytes": 53264384
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11052,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14821184,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 212861744,
+          "physical_footprint_bytes": 210535216,
+          "resident_bytes": 53264384
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10987,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14810784,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218071856,
+          "physical_footprint_bytes": 218071856,
+          "resident_bytes": 60063744
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10986,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14810272,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218071856,
+          "physical_footprint_bytes": 218071856,
+          "resident_bytes": 60063744
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11091,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14829552,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444852,
+          "peak_physical_footprint_bytes": 218071856,
+          "physical_footprint_bytes": 218071856,
+          "resident_bytes": 60063744
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10996,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14814496,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218235696,
+          "physical_footprint_bytes": 213664560,
+          "resident_bytes": 56475648
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10995,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14813984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218235696,
+          "physical_footprint_bytes": 213664560,
+          "resident_bytes": 56475648
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11073,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14828944,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8840,
+          "peak_physical_footprint_bytes": 218235696,
+          "physical_footprint_bytes": 213664560,
+          "resident_bytes": 56475648
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11005,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14818432,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218235696,
+          "physical_footprint_bytes": 215974704,
+          "resident_bytes": 58654720
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11004,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14817920,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218235696,
+          "physical_footprint_bytes": 215974704,
+          "resident_bytes": 58654720
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11084,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14833088,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197444,
+          "peak_physical_footprint_bytes": 218235696,
+          "physical_footprint_bytes": 215974704,
+          "resident_bytes": 58654720
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11014,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14821920,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 223429424,
+          "physical_footprint_bytes": 223429424,
+          "resident_bytes": 65421312
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11013,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14821408,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 223429424,
+          "physical_footprint_bytes": 223429424,
+          "resident_bytes": 65421312
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11118,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14840688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444852,
+          "peak_physical_footprint_bytes": 223429424,
+          "physical_footprint_bytes": 223429424,
+          "resident_bytes": 65421312
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11023,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14825696,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 223593264,
+          "physical_footprint_bytes": 219022128,
+          "resident_bytes": 61833216
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11022,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14825184,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 223593264,
+          "physical_footprint_bytes": 219022128,
+          "resident_bytes": 61833216
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11100,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14840144,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8840,
+          "peak_physical_footprint_bytes": 223593264,
+          "physical_footprint_bytes": 219022128,
+          "resident_bytes": 61833216
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 0,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "mlx-clear",
+    "warmed": {
+      "malloc_blocks_in_use": 10722,
+      "malloc_bytes_allocated": 41943040,
+      "malloc_bytes_in_use": 2475136,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 179258136,
+      "physical_footprint_bytes": 179258136,
+      "resident_bytes": 22003712
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10891,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2574608,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 220021528,
+      "physical_footprint_bytes": 220021528,
+      "resident_bytes": 62029824
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10890,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2574096,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 220021528,
+      "physical_footprint_bytes": 220021528,
+      "resident_bytes": 62029824
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 11029,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2598640,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 4650036,
+      "peak_physical_footprint_bytes": 220021528,
+      "physical_footprint_bytes": 220021528,
+      "resident_bytes": 62029824
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10827,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14633152,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 198886168,
+          "physical_footprint_bytes": 198886168,
+          "resident_bytes": 41730048
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10921,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14660288,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 201261848,
+          "physical_footprint_bytes": 201261848,
+          "resident_bytes": 44023808
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10920,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14659776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 201245464,
+          "physical_footprint_bytes": 201245464,
+          "resident_bytes": 44007424
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10919,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14659264,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 201245464,
+          "physical_footprint_bytes": 201245464,
+          "resident_bytes": 44007424
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11033,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14713760,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4166532,
+          "peak_physical_footprint_bytes": 208601880,
+          "physical_footprint_bytes": 208601880,
+          "resident_bytes": 50937856
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11032,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14713248,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4166532,
+          "peak_physical_footprint_bytes": 208601880,
+          "physical_footprint_bytes": 208601880,
+          "resident_bytes": 50937856
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11031,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14712736,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4166532,
+          "peak_physical_footprint_bytes": 208601880,
+          "physical_footprint_bytes": 208601880,
+          "resident_bytes": 50937856
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11085,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14815536,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4174772,
+          "peak_physical_footprint_bytes": 208765720,
+          "physical_footprint_bytes": 208765720,
+          "resident_bytes": 51101696
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11084,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14815024,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4174772,
+          "peak_physical_footprint_bytes": 208765720,
+          "physical_footprint_bytes": 208765720,
+          "resident_bytes": 51101696
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11083,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14814512,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4174772,
+          "peak_physical_footprint_bytes": 208765720,
+          "physical_footprint_bytes": 208765720,
+          "resident_bytes": 51101696
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11102,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14824240,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240308,
+          "peak_physical_footprint_bytes": 210944792,
+          "physical_footprint_bytes": 210944792,
+          "resident_bytes": 53280768
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11101,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14823728,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240308,
+          "peak_physical_footprint_bytes": 210944792,
+          "physical_footprint_bytes": 210944792,
+          "resident_bytes": 53280768
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11100,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14823216,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240308,
+          "peak_physical_footprint_bytes": 210944792,
+          "physical_footprint_bytes": 210944792,
+          "resident_bytes": 53280768
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11112,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14830320,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240308,
+          "peak_physical_footprint_bytes": 214172440,
+          "physical_footprint_bytes": 214172440,
+          "resident_bytes": 56524800
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11111,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14829808,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240308,
+          "peak_physical_footprint_bytes": 214172440,
+          "physical_footprint_bytes": 214172440,
+          "resident_bytes": 56524800
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11110,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14829296,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240308,
+          "peak_physical_footprint_bytes": 214172440,
+          "physical_footprint_bytes": 214172440,
+          "resident_bytes": 56524800
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11121,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14834032,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240308,
+          "peak_physical_footprint_bytes": 214205208,
+          "physical_footprint_bytes": 214205208,
+          "resident_bytes": 56557568
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11120,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14833520,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240308,
+          "peak_physical_footprint_bytes": 214205208,
+          "physical_footprint_bytes": 214205208,
+          "resident_bytes": 56557568
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11119,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14833008,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240308,
+          "peak_physical_footprint_bytes": 214205208,
+          "physical_footprint_bytes": 214205208,
+          "resident_bytes": 56557568
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11134,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14841056,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240436,
+          "peak_physical_footprint_bytes": 216318744,
+          "physical_footprint_bytes": 216318744,
+          "resident_bytes": 58736640
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11133,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14840544,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240436,
+          "peak_physical_footprint_bytes": 216318744,
+          "physical_footprint_bytes": 216318744,
+          "resident_bytes": 58736640
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11132,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14840032,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4240436,
+          "peak_physical_footprint_bytes": 216318744,
+          "physical_footprint_bytes": 216318744,
+          "resident_bytes": 58736640
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11148,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14846304,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219972376,
+          "physical_footprint_bytes": 219972376,
+          "resident_bytes": 61980672
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11147,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14845792,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219972376,
+          "physical_footprint_bytes": 219972376,
+          "resident_bytes": 61980672
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11146,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14845280,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219972376,
+          "physical_footprint_bytes": 219972376,
+          "resident_bytes": 61980672
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11157,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14850080,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 220005144,
+          "physical_footprint_bytes": 220005144,
+          "resident_bytes": 62013440
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11156,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14849568,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 220005144,
+          "physical_footprint_bytes": 220005144,
+          "resident_bytes": 62013440
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11155,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14849056,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 220005144,
+          "physical_footprint_bytes": 220005144,
+          "resident_bytes": 62013440
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 0,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "malloc-relief",
+    "warmed": {
+      "malloc_blocks_in_use": 10698,
+      "malloc_bytes_allocated": 46137344,
+      "malloc_bytes_in_use": 2380320,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 179438336,
+      "physical_footprint_bytes": 179438336,
+      "resident_bytes": 22265856
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10881,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2539920,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 220300056,
+      "physical_footprint_bytes": 216154904,
+      "resident_bytes": 58982400
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10880,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2539408,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 220300056,
+      "physical_footprint_bytes": 216154904,
+      "resident_bytes": 58982400
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 10879,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2538896,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 220300056,
+      "physical_footprint_bytes": 216154904,
+      "resident_bytes": 58982400
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10840,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14624048,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 199181080,
+          "physical_footprint_bytes": 199181080,
+          "resident_bytes": 42024960
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10849,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14638720,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 201786136,
+          "physical_footprint_bytes": 201786136,
+          "resident_bytes": 44515328
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10848,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14638208,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 201769752,
+          "physical_footprint_bytes": 201769752,
+          "resident_bytes": 44498944
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10923,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14652640,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 201769752,
+          "physical_footprint_bytes": 201769752,
+          "resident_bytes": 44498944
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10929,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14677408,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 208945944,
+          "physical_footprint_bytes": 208945944,
+          "resident_bytes": 51347456
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10928,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14676896,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 208945944,
+          "physical_footprint_bytes": 208945944,
+          "resident_bytes": 51347456
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11013,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14692800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4035204,
+          "peak_physical_footprint_bytes": 208945944,
+          "physical_footprint_bytes": 208945944,
+          "resident_bytes": 51347456
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10951,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14766592,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 209109784,
+          "physical_footprint_bytes": 205079320,
+          "resident_bytes": 47890432
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10950,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14766080,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 209109784,
+          "physical_footprint_bytes": 205079320,
+          "resident_bytes": 47890432
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11045,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14783888,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 12980,
+          "peak_physical_footprint_bytes": 209109784,
+          "physical_footprint_bytes": 205079320,
+          "resident_bytes": 47890432
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10962,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14771904,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 209109784,
+          "physical_footprint_bytes": 207323928,
+          "resident_bytes": 50069504
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10961,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14771392,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 209109784,
+          "physical_footprint_bytes": 207323928,
+          "resident_bytes": 50069504
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11033,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14785296,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131904,
+          "peak_physical_footprint_bytes": 209109784,
+          "physical_footprint_bytes": 207323928,
+          "resident_bytes": 50069504
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10971,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14775424,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 214860568,
+          "physical_footprint_bytes": 214860568,
+          "resident_bytes": 56868864
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10970,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14774912,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 214860568,
+          "physical_footprint_bytes": 214860568,
+          "resident_bytes": 56868864
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11069,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14793136,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444844,
+          "peak_physical_footprint_bytes": 214860568,
+          "physical_footprint_bytes": 214860568,
+          "resident_bytes": 56868864
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10980,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14779136,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 215024408,
+          "physical_footprint_bytes": 210453272,
+          "resident_bytes": 53280768
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10979,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14778624,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 215024408,
+          "physical_footprint_bytes": 210453272,
+          "resident_bytes": 53280768
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11059,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14793792,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 12932,
+          "peak_physical_footprint_bytes": 215024408,
+          "physical_footprint_bytes": 210453272,
+          "resident_bytes": 53280768
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10989,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14783072,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 215024408,
+          "physical_footprint_bytes": 212697880,
+          "resident_bytes": 55459840
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10988,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14782560,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 215024408,
+          "physical_footprint_bytes": 212697880,
+          "resident_bytes": 55459840
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11063,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14796992,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 215024408,
+          "physical_footprint_bytes": 212697880,
+          "resident_bytes": 55459840
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10998,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14786560,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 220136216,
+          "physical_footprint_bytes": 220136216,
+          "resident_bytes": 62554112
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10997,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14786048,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 220136216,
+          "physical_footprint_bytes": 220136216,
+          "resident_bytes": 62554112
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11082,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14801952,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4035204,
+          "peak_physical_footprint_bytes": 220136216,
+          "physical_footprint_bytes": 220136216,
+          "resident_bytes": 62554112
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11007,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14790336,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 220300056,
+          "physical_footprint_bytes": 216138520,
+          "resident_bytes": 58966016
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11006,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14789824,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 220300056,
+          "physical_footprint_bytes": 216138520,
+          "resident_bytes": 58966016
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11084,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14804784,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8840,
+          "peak_physical_footprint_bytes": 220300056,
+          "physical_footprint_bytes": 216138520,
+          "resident_bytes": 58966016
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 0,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "both",
+    "warmed": {
+      "malloc_blocks_in_use": 10711,
+      "malloc_bytes_allocated": 50331648,
+      "malloc_bytes_in_use": 2371216,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 179127064,
+      "physical_footprint_bytes": 179127064,
+      "resident_bytes": 21823488
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10874,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2532624,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 220513048,
+      "physical_footprint_bytes": 220513048,
+      "resident_bytes": 62930944
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10873,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2532112,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 220513048,
+      "physical_footprint_bytes": 220513048,
+      "resident_bytes": 62930944
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 11004,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2555392,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 4584372,
+      "peak_physical_footprint_bytes": 220513048,
+      "physical_footprint_bytes": 220513048,
+      "resident_bytes": 62930944
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10824,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14622432,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 199492376,
+          "physical_footprint_bytes": 199492376,
+          "resident_bytes": 42270720
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10913,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14643920,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131904,
+          "peak_physical_footprint_bytes": 201868056,
+          "physical_footprint_bytes": 201868056,
+          "resident_bytes": 44597248
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10912,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14643408,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131904,
+          "peak_physical_footprint_bytes": 201868056,
+          "physical_footprint_bytes": 201868056,
+          "resident_bytes": 44597248
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10911,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14642896,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131904,
+          "peak_physical_footprint_bytes": 201851672,
+          "physical_footprint_bytes": 201851672,
+          "resident_bytes": 44580864
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11027,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14687872,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4576132,
+          "peak_physical_footprint_bytes": 209584920,
+          "physical_footprint_bytes": 209584920,
+          "resident_bytes": 51511296
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11026,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14687360,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4576132,
+          "peak_physical_footprint_bytes": 209584920,
+          "physical_footprint_bytes": 209584920,
+          "resident_bytes": 51511296
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11025,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14686848,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4576132,
+          "peak_physical_footprint_bytes": 209584920,
+          "physical_footprint_bytes": 209584920,
+          "resident_bytes": 51511296
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11075,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14781424,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 209715992,
+          "physical_footprint_bytes": 209715992,
+          "resident_bytes": 51642368
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11074,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14780912,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 209715992,
+          "physical_footprint_bytes": 209715992,
+          "resident_bytes": 51642368
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11073,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14780400,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 209715992,
+          "physical_footprint_bytes": 209715992,
+          "resident_bytes": 51642368
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11086,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14786736,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 211878680,
+          "physical_footprint_bytes": 211878680,
+          "resident_bytes": 53870592
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11085,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14786224,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 211878680,
+          "physical_footprint_bytes": 211878680,
+          "resident_bytes": 53870592
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11084,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14785712,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 211878680,
+          "physical_footprint_bytes": 211878680,
+          "resident_bytes": 53870592
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11096,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14790896,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 215106328,
+          "physical_footprint_bytes": 215106328,
+          "resident_bytes": 57524224
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11095,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14790384,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 215106328,
+          "physical_footprint_bytes": 215106328,
+          "resident_bytes": 57524224
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11094,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14789872,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 215106328,
+          "physical_footprint_bytes": 215106328,
+          "resident_bytes": 57524224
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11105,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14794608,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 215139096,
+          "physical_footprint_bytes": 215139096,
+          "resident_bytes": 57556992
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11104,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14794096,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 215139096,
+          "physical_footprint_bytes": 215139096,
+          "resident_bytes": 57556992
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11103,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14793584,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 215139096,
+          "physical_footprint_bytes": 215139096,
+          "resident_bytes": 57556992
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11114,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14798544,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 217252632,
+          "physical_footprint_bytes": 217252632,
+          "resident_bytes": 59670528
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11113,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14798032,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 217252632,
+          "physical_footprint_bytes": 217252632,
+          "resident_bytes": 59670528
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11112,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14797520,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 217252632,
+          "physical_footprint_bytes": 217252632,
+          "resident_bytes": 59670528
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11123,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14802032,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 220463896,
+          "physical_footprint_bytes": 220463896,
+          "resident_bytes": 62881792
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11122,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14801520,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 220463896,
+          "physical_footprint_bytes": 220463896,
+          "resident_bytes": 62881792
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11121,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14801008,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 220463896,
+          "physical_footprint_bytes": 220463896,
+          "resident_bytes": 62881792
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11132,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14806832,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 220496664,
+          "physical_footprint_bytes": 220496664,
+          "resident_bytes": 62914560
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11131,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14806320,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 220496664,
+          "physical_footprint_bytes": 220496664,
+          "resident_bytes": 62914560
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11130,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14805808,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 220496664,
+          "physical_footprint_bytes": 220496664,
+          "resident_bytes": 62914560
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 1,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "retain",
+    "warmed": {
+      "malloc_blocks_in_use": 10695,
+      "malloc_bytes_allocated": 46137344,
+      "malloc_bytes_in_use": 2369600,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 179340032,
+      "physical_footprint_bytes": 179340032,
+      "resident_bytes": 22102016
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10876,
+      "malloc_bytes_allocated": 79691776,
+      "malloc_bytes_in_use": 2529072,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 224346928,
+      "physical_footprint_bytes": 219792176,
+      "resident_bytes": 62685184
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10875,
+      "malloc_bytes_allocated": 79691776,
+      "malloc_bytes_in_use": 2528560,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 224346928,
+      "physical_footprint_bytes": 219792176,
+      "resident_bytes": 62685184
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 10874,
+      "malloc_bytes_allocated": 79691776,
+      "malloc_bytes_in_use": 2528048,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 224346928,
+      "physical_footprint_bytes": 219792176,
+      "resident_bytes": 62685184
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10839,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14704800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 203113264,
+          "physical_footprint_bytes": 203113264,
+          "resident_bytes": 45957120
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10855,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14711920,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 205554480,
+          "physical_footprint_bytes": 205554480,
+          "resident_bytes": 48283648
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10854,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14711408,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 205538096,
+          "physical_footprint_bytes": 205538096,
+          "resident_bytes": 48267264
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10949,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14729216,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197588,
+          "peak_physical_footprint_bytes": 205538096,
+          "physical_footprint_bytes": 205538096,
+          "resident_bytes": 48267264
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10935,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14750560,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 213025584,
+          "physical_footprint_bytes": 213025584,
+          "resident_bytes": 55083008
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10934,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14750048,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 213025584,
+          "physical_footprint_bytes": 213025584,
+          "resident_bytes": 55083008
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11039,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14769328,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444852,
+          "peak_physical_footprint_bytes": 213025584,
+          "physical_footprint_bytes": 213025584,
+          "resident_bytes": 55083008
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10946,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14755744,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 213189424,
+          "physical_footprint_bytes": 208618288,
+          "resident_bytes": 51494912
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10945,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14755232,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 213189424,
+          "physical_footprint_bytes": 208618288,
+          "resident_bytes": 51494912
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11040,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14773040,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 12980,
+          "peak_physical_footprint_bytes": 213189424,
+          "physical_footprint_bytes": 208618288,
+          "resident_bytes": 51494912
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10957,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14761056,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 213189424,
+          "physical_footprint_bytes": 210928432,
+          "resident_bytes": 53673984
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10956,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14760544,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 213189424,
+          "physical_footprint_bytes": 210928432,
+          "resident_bytes": 53673984
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11051,
+          "malloc_bytes_allocated": 75497472,
+          "malloc_bytes_in_use": 14778352,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197588,
+          "peak_physical_footprint_bytes": 213189424,
+          "physical_footprint_bytes": 210928432,
+          "resident_bytes": 53673984
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10966,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14764576,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218825520,
+          "physical_footprint_bytes": 218825520,
+          "resident_bytes": 60899328
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10965,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14764064,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218825520,
+          "physical_footprint_bytes": 218825520,
+          "resident_bytes": 60899328
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11070,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14783344,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444852,
+          "peak_physical_footprint_bytes": 218825520,
+          "physical_footprint_bytes": 218825520,
+          "resident_bytes": 60899328
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10975,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14768288,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218989360,
+          "physical_footprint_bytes": 214418224,
+          "resident_bytes": 57311232
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10974,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14767776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218989360,
+          "physical_footprint_bytes": 214418224,
+          "resident_bytes": 57311232
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11049,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14782208,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8836,
+          "peak_physical_footprint_bytes": 218989360,
+          "physical_footprint_bytes": 214418224,
+          "resident_bytes": 57311232
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10984,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14772224,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218989360,
+          "physical_footprint_bytes": 216728368,
+          "resident_bytes": 59490304
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10983,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14771712,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218989360,
+          "physical_footprint_bytes": 216728368,
+          "resident_bytes": 59490304
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11066,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14787408,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197572,
+          "peak_physical_footprint_bytes": 218989360,
+          "physical_footprint_bytes": 216728368,
+          "resident_bytes": 59490304
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10993,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14775712,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 224183088,
+          "physical_footprint_bytes": 224183088,
+          "resident_bytes": 66256896
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10992,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14775200,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 224183088,
+          "physical_footprint_bytes": 224183088,
+          "resident_bytes": 66256896
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11085,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14792368,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444836,
+          "peak_physical_footprint_bytes": 224183088,
+          "physical_footprint_bytes": 224183088,
+          "resident_bytes": 66256896
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11002,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14779488,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 224346928,
+          "physical_footprint_bytes": 219775792,
+          "resident_bytes": 62668800
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11001,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14778976,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 224346928,
+          "physical_footprint_bytes": 219775792,
+          "resident_bytes": 62668800
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11081,
+          "malloc_bytes_allocated": 79691776,
+          "malloc_bytes_in_use": 14794144,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 12932,
+          "peak_physical_footprint_bytes": 224346928,
+          "physical_footprint_bytes": 219775792,
+          "resident_bytes": 62668800
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 1,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "both",
+    "warmed": {
+      "malloc_blocks_in_use": 10710,
+      "malloc_bytes_allocated": 54525952,
+      "malloc_bytes_in_use": 2451968,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 179716912,
+      "physical_footprint_bytes": 179716912,
+      "resident_bytes": 22528000
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10868,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2517264,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219857712,
+      "physical_footprint_bytes": 219857712,
+      "resident_bytes": 62259200
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10867,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2516752,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219857712,
+      "physical_footprint_bytes": 219857712,
+      "resident_bytes": 62259200
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 11006,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2541296,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 4650036,
+      "peak_physical_footprint_bytes": 219857712,
+      "physical_footprint_bytes": 219857712,
+      "resident_bytes": 62259200
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10830,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14687776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 198935344,
+          "physical_footprint_bytes": 198935344,
+          "resident_bytes": 41779200
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10930,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14711104,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197572,
+          "peak_physical_footprint_bytes": 201294640,
+          "physical_footprint_bytes": 201294640,
+          "resident_bytes": 44023808
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10929,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14710592,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197572,
+          "peak_physical_footprint_bytes": 201278256,
+          "physical_footprint_bytes": 201278256,
+          "resident_bytes": 44007424
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10928,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14710080,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197572,
+          "peak_physical_footprint_bytes": 201278256,
+          "physical_footprint_bytes": 201278256,
+          "resident_bytes": 44007424
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11041,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14754480,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4641796,
+          "peak_physical_footprint_bytes": 208962352,
+          "physical_footprint_bytes": 208962352,
+          "resident_bytes": 50888704
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11040,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14753968,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4641796,
+          "peak_physical_footprint_bytes": 208962352,
+          "physical_footprint_bytes": 208962352,
+          "resident_bytes": 50888704
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11039,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14753456,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4641796,
+          "peak_physical_footprint_bytes": 208962352,
+          "physical_footprint_bytes": 208962352,
+          "resident_bytes": 50888704
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11077,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14763872,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 208995120,
+          "physical_footprint_bytes": 208995120,
+          "resident_bytes": 50921472
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11076,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14763360,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 208995120,
+          "physical_footprint_bytes": 208995120,
+          "resident_bytes": 50921472
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11075,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14762848,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 208995120,
+          "physical_footprint_bytes": 208995120,
+          "resident_bytes": 50921472
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11089,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14773280,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 211206960,
+          "physical_footprint_bytes": 211206960,
+          "resident_bytes": 53198848
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11088,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14772768,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 211206960,
+          "physical_footprint_bytes": 211206960,
+          "resident_bytes": 53198848
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11087,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14772256,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 211206960,
+          "physical_footprint_bytes": 211206960,
+          "resident_bytes": 53198848
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11098,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14776800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214434608,
+          "physical_footprint_bytes": 214434608,
+          "resident_bytes": 56852480
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11097,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14776288,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214434608,
+          "physical_footprint_bytes": 214434608,
+          "resident_bytes": 56852480
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11096,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14775776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214434608,
+          "physical_footprint_bytes": 214434608,
+          "resident_bytes": 56852480
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11107,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14780512,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214467376,
+          "physical_footprint_bytes": 214467376,
+          "resident_bytes": 56885248
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11106,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14780000,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214467376,
+          "physical_footprint_bytes": 214467376,
+          "resident_bytes": 56885248
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11105,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14779488,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 214467376,
+          "physical_footprint_bytes": 214467376,
+          "resident_bytes": 56885248
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11116,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14784448,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 216597296,
+          "physical_footprint_bytes": 216597296,
+          "resident_bytes": 59080704
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11115,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14783936,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 216597296,
+          "physical_footprint_bytes": 216597296,
+          "resident_bytes": 59080704
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11114,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14783424,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 216597296,
+          "physical_footprint_bytes": 216597296,
+          "resident_bytes": 59080704
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11125,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14788960,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219808560,
+          "physical_footprint_bytes": 219808560,
+          "resident_bytes": 62210048
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11124,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14788448,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219808560,
+          "physical_footprint_bytes": 219808560,
+          "resident_bytes": 62210048
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11123,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14787936,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219808560,
+          "physical_footprint_bytes": 219808560,
+          "resident_bytes": 62210048
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11134,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14792736,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219841328,
+          "physical_footprint_bytes": 219841328,
+          "resident_bytes": 62242816
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11133,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14792224,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219841328,
+          "physical_footprint_bytes": 219841328,
+          "resident_bytes": 62242816
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11132,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14791712,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4650036,
+          "peak_physical_footprint_bytes": 219841328,
+          "physical_footprint_bytes": 219841328,
+          "resident_bytes": 62242816
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 1,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "malloc-relief",
+    "warmed": {
+      "malloc_blocks_in_use": 10701,
+      "malloc_bytes_allocated": 46137344,
+      "malloc_bytes_in_use": 2434944,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 179553048,
+      "physical_footprint_bytes": 179553048,
+      "resident_bytes": 22380544
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10877,
+      "malloc_bytes_allocated": 62914560,
+      "malloc_bytes_in_use": 2537648,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 223626032,
+      "physical_footprint_bytes": 219071280,
+      "resident_bytes": 61882368
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10876,
+      "malloc_bytes_allocated": 62914560,
+      "malloc_bytes_in_use": 2537136,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 223626032,
+      "physical_footprint_bytes": 219071280,
+      "resident_bytes": 61882368
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 10875,
+      "malloc_bytes_allocated": 62914560,
+      "malloc_bytes_in_use": 2536624,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 223626032,
+      "physical_footprint_bytes": 219071280,
+      "resident_bytes": 61882368
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10840,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14713376,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 202064688,
+          "physical_footprint_bytes": 202064688,
+          "resident_bytes": 44826624
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10856,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14720448,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 204440368,
+          "physical_footprint_bytes": 204440368,
+          "resident_bytes": 47153152
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10855,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14719936,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 204440368,
+          "physical_footprint_bytes": 204440368,
+          "resident_bytes": 47153152
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10930,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14734368,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 204423984,
+          "physical_footprint_bytes": 204423984,
+          "resident_bytes": 47136768
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10936,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14759136,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212386608,
+          "physical_footprint_bytes": 212386608,
+          "resident_bytes": 54362112
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10935,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14758624,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212386608,
+          "physical_footprint_bytes": 212386608,
+          "resident_bytes": 54362112
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11037,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14777376,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444848,
+          "peak_physical_footprint_bytes": 212386608,
+          "physical_footprint_bytes": 212386608,
+          "resident_bytes": 54362112
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10947,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14764320,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212566832,
+          "physical_footprint_bytes": 207995696,
+          "resident_bytes": 50790400
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10946,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14763808,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212566832,
+          "physical_footprint_bytes": 207995696,
+          "resident_bytes": 50790400
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11024,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14778768,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8840,
+          "peak_physical_footprint_bytes": 212566832,
+          "physical_footprint_bytes": 207995696,
+          "resident_bytes": 50790400
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10958,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14769632,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212566832,
+          "physical_footprint_bytes": 210305840,
+          "resident_bytes": 52969472
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10957,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14769120,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 212566832,
+          "physical_footprint_bytes": 210305840,
+          "resident_bytes": 52969472
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11052,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14786928,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197588,
+          "peak_physical_footprint_bytes": 212566832,
+          "physical_footprint_bytes": 210305840,
+          "resident_bytes": 52969472
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10967,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14773152,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 217695024,
+          "physical_footprint_bytes": 217695024,
+          "resident_bytes": 60096512
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10966,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14772640,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 217695024,
+          "physical_footprint_bytes": 217695024,
+          "resident_bytes": 60096512
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11051,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14788544,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4035204,
+          "peak_physical_footprint_bytes": 217695024,
+          "physical_footprint_bytes": 217695024,
+          "resident_bytes": 60096512
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10976,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14776864,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 217858864,
+          "physical_footprint_bytes": 213697328,
+          "resident_bytes": 56508416
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10975,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14776352,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 217858864,
+          "physical_footprint_bytes": 213697328,
+          "resident_bytes": 56508416
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11050,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14790784,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8836,
+          "peak_physical_footprint_bytes": 217858864,
+          "physical_footprint_bytes": 213697328,
+          "resident_bytes": 56508416
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10985,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14780800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 217858864,
+          "physical_footprint_bytes": 215941936,
+          "resident_bytes": 58687488
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10984,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14780288,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 217858864,
+          "physical_footprint_bytes": 215941936,
+          "resident_bytes": 58687488
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11059,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14794720,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 217858864,
+          "physical_footprint_bytes": 215941936,
+          "resident_bytes": 58687488
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10994,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14784288,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 223462192,
+          "physical_footprint_bytes": 223462192,
+          "resident_bytes": 65454080
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10993,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14783776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 223462192,
+          "physical_footprint_bytes": 223462192,
+          "resident_bytes": 65454080
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11098,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14803056,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444852,
+          "peak_physical_footprint_bytes": 223462192,
+          "physical_footprint_bytes": 223462192,
+          "resident_bytes": 65454080
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11003,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14788064,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 223626032,
+          "physical_footprint_bytes": 219054896,
+          "resident_bytes": 61865984
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11002,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14787552,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 223626032,
+          "physical_footprint_bytes": 219054896,
+          "resident_bytes": 61865984
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11077,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14801984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8836,
+          "peak_physical_footprint_bytes": 223626032,
+          "physical_footprint_bytes": 219054896,
+          "resident_bytes": 61865984
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 1,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "mlx-clear",
+    "warmed": {
+      "malloc_blocks_in_use": 10711,
+      "malloc_bytes_allocated": 41943040,
+      "malloc_bytes_in_use": 2460544,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 179192600,
+      "physical_footprint_bytes": 179192600,
+      "resident_bytes": 21938176
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10893,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2581264,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219611928,
+      "physical_footprint_bytes": 219611928,
+      "resident_bytes": 61964288
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10892,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2580752,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219611928,
+      "physical_footprint_bytes": 219611928,
+      "resident_bytes": 61964288
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 11026,
+      "malloc_bytes_allocated": 67108864,
+      "malloc_bytes_in_use": 2604560,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 4645940,
+      "peak_physical_footprint_bytes": 219611928,
+      "physical_footprint_bytes": 219611928,
+      "resident_bytes": 61964288
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10848,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14735392,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 198329088,
+          "physical_footprint_bytes": 198329088,
+          "resident_bytes": 41205760
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10947,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14775328,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 200655640,
+          "physical_footprint_bytes": 200655640,
+          "resident_bytes": 43466752
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10946,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14774816,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 200639256,
+          "physical_footprint_bytes": 200639256,
+          "resident_bytes": 43450368
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10945,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14774304,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 200639256,
+          "physical_footprint_bytes": 200639256,
+          "resident_bytes": 43450368
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11054,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14820576,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4166532,
+          "peak_physical_footprint_bytes": 208323352,
+          "physical_footprint_bytes": 208323352,
+          "resident_bytes": 50659328
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11053,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14820064,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4166532,
+          "peak_physical_footprint_bytes": 208323352,
+          "physical_footprint_bytes": 208323352,
+          "resident_bytes": 50659328
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11052,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14819552,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4166532,
+          "peak_physical_footprint_bytes": 208323352,
+          "physical_footprint_bytes": 208323352,
+          "resident_bytes": 50659328
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11073,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14827024,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4170632,
+          "peak_physical_footprint_bytes": 208356120,
+          "physical_footprint_bytes": 208356120,
+          "resident_bytes": 50692096
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11072,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14826512,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4170632,
+          "peak_physical_footprint_bytes": 208356120,
+          "physical_footprint_bytes": 208356120,
+          "resident_bytes": 50692096
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11071,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14826000,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4170632,
+          "peak_physical_footprint_bytes": 208356120,
+          "physical_footprint_bytes": 208356120,
+          "resident_bytes": 50692096
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11084,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14832336,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4170632,
+          "peak_physical_footprint_bytes": 210469656,
+          "physical_footprint_bytes": 210469656,
+          "resident_bytes": 52871168
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11083,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14831824,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4170632,
+          "peak_physical_footprint_bytes": 210469656,
+          "physical_footprint_bytes": 210469656,
+          "resident_bytes": 52871168
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11082,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14831312,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4170632,
+          "peak_physical_footprint_bytes": 210469656,
+          "physical_footprint_bytes": 210469656,
+          "resident_bytes": 52871168
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11110,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14838704,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4580276,
+          "peak_physical_footprint_bytes": 214106904,
+          "physical_footprint_bytes": 214106904,
+          "resident_bytes": 56115200
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11109,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14838192,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4580276,
+          "peak_physical_footprint_bytes": 214106904,
+          "physical_footprint_bytes": 214106904,
+          "resident_bytes": 56115200
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11108,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14837680,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4580276,
+          "peak_physical_footprint_bytes": 214106904,
+          "physical_footprint_bytes": 214106904,
+          "resident_bytes": 56115200
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11119,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14842416,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4580276,
+          "peak_physical_footprint_bytes": 214172440,
+          "physical_footprint_bytes": 214172440,
+          "resident_bytes": 56180736
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11118,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14841904,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4580276,
+          "peak_physical_footprint_bytes": 214172440,
+          "physical_footprint_bytes": 214172440,
+          "resident_bytes": 56180736
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11117,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14841392,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4580276,
+          "peak_physical_footprint_bytes": 214172440,
+          "physical_footprint_bytes": 214172440,
+          "resident_bytes": 56180736
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11136,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14847712,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4645940,
+          "peak_physical_footprint_bytes": 216351512,
+          "physical_footprint_bytes": 216351512,
+          "resident_bytes": 58294272
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11135,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14847200,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4645940,
+          "peak_physical_footprint_bytes": 216351512,
+          "physical_footprint_bytes": 216351512,
+          "resident_bytes": 58294272
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11134,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14846688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4645940,
+          "peak_physical_footprint_bytes": 216351512,
+          "physical_footprint_bytes": 216351512,
+          "resident_bytes": 58294272
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11145,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14851200,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4645940,
+          "peak_physical_footprint_bytes": 219562776,
+          "physical_footprint_bytes": 219562776,
+          "resident_bytes": 61915136
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11144,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14850688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4645940,
+          "peak_physical_footprint_bytes": 219562776,
+          "physical_footprint_bytes": 219562776,
+          "resident_bytes": 61915136
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11143,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14850176,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4645940,
+          "peak_physical_footprint_bytes": 219562776,
+          "physical_footprint_bytes": 219562776,
+          "resident_bytes": 61915136
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11154,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14856000,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4645940,
+          "peak_physical_footprint_bytes": 219595544,
+          "physical_footprint_bytes": 219595544,
+          "resident_bytes": 61947904
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11153,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14855488,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4645940,
+          "peak_physical_footprint_bytes": 219595544,
+          "physical_footprint_bytes": 219595544,
+          "resident_bytes": 61947904
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11152,
+          "malloc_bytes_allocated": 67108864,
+          "malloc_bytes_in_use": 14854976,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4645940,
+          "peak_physical_footprint_bytes": 219595544,
+          "physical_footprint_bytes": 219595544,
+          "resident_bytes": 61947904
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 2,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "malloc-relief",
+    "warmed": {
+      "malloc_blocks_in_use": 10719,
+      "malloc_bytes_allocated": 50331648,
+      "malloc_bytes_in_use": 2482560,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 179192576,
+      "physical_footprint_bytes": 179192576,
+      "resident_bytes": 22036480
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10896,
+      "malloc_bytes_allocated": 62914560,
+      "malloc_bytes_in_use": 2572720,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219022128,
+      "physical_footprint_bytes": 214876976,
+      "resident_bytes": 57720832
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10895,
+      "malloc_bytes_allocated": 62914560,
+      "malloc_bytes_in_use": 2572208,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219022128,
+      "physical_footprint_bytes": 214876976,
+      "resident_bytes": 57720832
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 10894,
+      "malloc_bytes_allocated": 62914560,
+      "malloc_bytes_in_use": 2571696,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219022128,
+      "physical_footprint_bytes": 214876976,
+      "resident_bytes": 57720832
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10826,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14617024,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 198329136,
+          "physical_footprint_bytes": 198329136,
+          "resident_bytes": 41123840
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10845,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14627200,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 200688432,
+          "physical_footprint_bytes": 200688432,
+          "resident_bytes": 43401216
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10844,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14626688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 200672048,
+          "physical_footprint_bytes": 200672048,
+          "resident_bytes": 43384832
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10919,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14641120,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 200672048,
+          "physical_footprint_bytes": 200672048,
+          "resident_bytes": 43384832
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10927,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14671008,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 208290608,
+          "physical_footprint_bytes": 208290608,
+          "resident_bytes": 50266112
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10926,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14670496,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 208290608,
+          "physical_footprint_bytes": 208290608,
+          "resident_bytes": 50266112
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11016,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14687136,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444804,
+          "peak_physical_footprint_bytes": 208290608,
+          "physical_footprint_bytes": 208290608,
+          "resident_bytes": 50266112
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10952,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14707456,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 208470832,
+          "physical_footprint_bytes": 203948848,
+          "resident_bytes": 46743552
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10951,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14706944,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 208470832,
+          "physical_footprint_bytes": 203948848,
+          "resident_bytes": 46743552
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11026,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14721376,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8836,
+          "peak_physical_footprint_bytes": 208470832,
+          "physical_footprint_bytes": 203948848,
+          "resident_bytes": 46743552
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10964,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14715328,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 208470832,
+          "physical_footprint_bytes": 206340912,
+          "resident_bytes": 49004544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10963,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14714816,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 208470832,
+          "physical_footprint_bytes": 206340912,
+          "resident_bytes": 49004544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11043,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14729984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197444,
+          "peak_physical_footprint_bytes": 208470832,
+          "physical_footprint_bytes": 206340912,
+          "resident_bytes": 49004544
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10986,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14808224,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 213943088,
+          "physical_footprint_bytes": 213943088,
+          "resident_bytes": 55934976
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10985,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14807712,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 213943088,
+          "physical_footprint_bytes": 213943088,
+          "resident_bytes": 55934976
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11090,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14826992,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444852,
+          "peak_physical_footprint_bytes": 213943088,
+          "physical_footprint_bytes": 213943088,
+          "resident_bytes": 55934976
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10995,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14811936,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 214106928,
+          "physical_footprint_bytes": 209535792,
+          "resident_bytes": 52346880
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10994,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14811424,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 214106928,
+          "physical_footprint_bytes": 209535792,
+          "resident_bytes": 52346880
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11069,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14825856,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8836,
+          "peak_physical_footprint_bytes": 214106928,
+          "physical_footprint_bytes": 209535792,
+          "resident_bytes": 52346880
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11004,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14815872,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 214106928,
+          "physical_footprint_bytes": 211780400,
+          "resident_bytes": 54525952
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11003,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14815360,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 214106928,
+          "physical_footprint_bytes": 211780400,
+          "resident_bytes": 54525952
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11078,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14829792,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 214106928,
+          "physical_footprint_bytes": 211780400,
+          "resident_bytes": 54525952
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11013,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14819360,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218858288,
+          "physical_footprint_bytes": 218858288,
+          "resident_bytes": 61292544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11012,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14818848,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 218858288,
+          "physical_footprint_bytes": 218858288,
+          "resident_bytes": 61292544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11097,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14834752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4035204,
+          "peak_physical_footprint_bytes": 218858288,
+          "physical_footprint_bytes": 218858288,
+          "resident_bytes": 61292544
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11022,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14823136,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 219022128,
+          "physical_footprint_bytes": 214860592,
+          "resident_bytes": 57704448
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11021,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14822624,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 219022128,
+          "physical_footprint_bytes": 214860592,
+          "resident_bytes": 57704448
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11096,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14837056,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8836,
+          "peak_physical_footprint_bytes": 219022128,
+          "physical_footprint_bytes": 214860592,
+          "resident_bytes": 57704448
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 2,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "both",
+    "warmed": {
+      "malloc_blocks_in_use": 10697,
+      "malloc_bytes_allocated": 41943040,
+      "malloc_bytes_in_use": 2364192,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178995992,
+      "physical_footprint_bytes": 178995992,
+      "resident_bytes": 21774336
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10879,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2543888,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 223363864,
+      "physical_footprint_bytes": 223363864,
+      "resident_bytes": 65781760
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10878,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2543376,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 223363864,
+      "physical_footprint_bytes": 223363864,
+      "resident_bytes": 65781760
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 11009,
+      "malloc_bytes_allocated": 58720256,
+      "malloc_bytes_in_use": 2566656,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 4584372,
+      "peak_physical_footprint_bytes": 223363864,
+      "physical_footprint_bytes": 223363864,
+      "resident_bytes": 65781760
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10840,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14717696,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 202490648,
+          "physical_footprint_bytes": 202490648,
+          "resident_bytes": 45268992
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10934,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14740512,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 204882712,
+          "physical_footprint_bytes": 204882712,
+          "resident_bytes": 47611904
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10933,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14740000,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 204882712,
+          "physical_footprint_bytes": 204882712,
+          "resident_bytes": 47611904
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10932,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14739488,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 204866328,
+          "physical_footprint_bytes": 204866328,
+          "resident_bytes": 47595520
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11040,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14783200,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4166532,
+          "peak_physical_footprint_bytes": 212173592,
+          "physical_footprint_bytes": 212173592,
+          "resident_bytes": 54509568
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11039,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14782688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4166532,
+          "peak_physical_footprint_bytes": 212173592,
+          "physical_footprint_bytes": 212173592,
+          "resident_bytes": 54509568
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11038,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14782176,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4166532,
+          "peak_physical_footprint_bytes": 212173592,
+          "physical_footprint_bytes": 212173592,
+          "resident_bytes": 54509568
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11061,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14789856,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4174724,
+          "peak_physical_footprint_bytes": 212206360,
+          "physical_footprint_bytes": 212206360,
+          "resident_bytes": 54542336
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11060,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14789344,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4174724,
+          "peak_physical_footprint_bytes": 212206360,
+          "physical_footprint_bytes": 212206360,
+          "resident_bytes": 54542336
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11059,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14788832,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4174724,
+          "peak_physical_footprint_bytes": 212206360,
+          "physical_footprint_bytes": 212206360,
+          "resident_bytes": 54542336
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11072,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14795168,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4174724,
+          "peak_physical_footprint_bytes": 214319896,
+          "physical_footprint_bytes": 214319896,
+          "resident_bytes": 56721408
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11071,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14794656,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4174724,
+          "peak_physical_footprint_bytes": 214319896,
+          "physical_footprint_bytes": 214319896,
+          "resident_bytes": 56721408
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11070,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14794144,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4174724,
+          "peak_physical_footprint_bytes": 214319896,
+          "physical_footprint_bytes": 214319896,
+          "resident_bytes": 56721408
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11095,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14801008,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 217957144,
+          "physical_footprint_bytes": 217957144,
+          "resident_bytes": 59965440
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11094,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14800496,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 217957144,
+          "physical_footprint_bytes": 217957144,
+          "resident_bytes": 59965440
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11093,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14799984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 217957144,
+          "physical_footprint_bytes": 217957144,
+          "resident_bytes": 59965440
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11104,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14804816,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 217989912,
+          "physical_footprint_bytes": 217989912,
+          "resident_bytes": 59998208
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11103,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14804304,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 217989912,
+          "physical_footprint_bytes": 217989912,
+          "resident_bytes": 59998208
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11102,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14803792,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 217989912,
+          "physical_footprint_bytes": 217989912,
+          "resident_bytes": 59998208
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11113,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14808752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 220103448,
+          "physical_footprint_bytes": 220103448,
+          "resident_bytes": 62111744
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11112,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14808240,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 220103448,
+          "physical_footprint_bytes": 220103448,
+          "resident_bytes": 62111744
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11111,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14807728,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 220103448,
+          "physical_footprint_bytes": 220103448,
+          "resident_bytes": 62111744
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11122,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14812240,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 223314712,
+          "physical_footprint_bytes": 223314712,
+          "resident_bytes": 65732608
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11121,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14811728,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 223314712,
+          "physical_footprint_bytes": 223314712,
+          "resident_bytes": 65732608
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11120,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14811216,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584364,
+          "peak_physical_footprint_bytes": 223314712,
+          "physical_footprint_bytes": 223314712,
+          "resident_bytes": 65732608
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11137,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14818096,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 223347480,
+          "physical_footprint_bytes": 223347480,
+          "resident_bytes": 65765376
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11136,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14817584,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 223347480,
+          "physical_footprint_bytes": 223347480,
+          "resident_bytes": 65765376
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11135,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14817072,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4584372,
+          "peak_physical_footprint_bytes": 223347480,
+          "physical_footprint_bytes": 223347480,
+          "resident_bytes": 65765376
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 2,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "retain",
+    "warmed": {
+      "malloc_blocks_in_use": 10711,
+      "malloc_bytes_allocated": 33554432,
+      "malloc_bytes_in_use": 2464864,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178995968,
+      "physical_footprint_bytes": 178995968,
+      "resident_bytes": 21757952
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 10888,
+      "malloc_bytes_allocated": 62914560,
+      "malloc_bytes_in_use": 2568624,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219890456,
+      "physical_footprint_bytes": 215335704,
+      "resident_bytes": 58163200
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 10887,
+      "malloc_bytes_allocated": 62914560,
+      "malloc_bytes_in_use": 2568112,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219890456,
+      "physical_footprint_bytes": 215335704,
+      "resident_bytes": 58163200
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 10886,
+      "malloc_bytes_allocated": 62914560,
+      "malloc_bytes_in_use": 2567600,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 219890456,
+      "physical_footprint_bytes": 215335704,
+      "resident_bytes": 58163200
+    },
+    "cycles": 3,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 9,
+    "memory_pressure_after": 1,
+    "memory_pressure_before": 1,
+    "profile": "gpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 10820,
+          "malloc_bytes_allocated": 58720256,
+          "malloc_bytes_in_use": 14620448,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 198329088,
+          "physical_footprint_bytes": 198329088,
+          "resident_bytes": 41156608
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10840,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14630784,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 200819480,
+          "physical_footprint_bytes": 200819480,
+          "resident_bytes": 43548672
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10839,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14630272,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 200803096,
+          "physical_footprint_bytes": 200803096,
+          "resident_bytes": 43532288
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 10914,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14644704,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 131908,
+          "peak_physical_footprint_bytes": 200803096,
+          "physical_footprint_bytes": 200803096,
+          "resident_bytes": 43532288
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10923,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14677152,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 208814872,
+          "physical_footprint_bytes": 208814872,
+          "resident_bytes": 50806784
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10922,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14676640,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 208814872,
+          "physical_footprint_bytes": 208814872,
+          "resident_bytes": 50806784
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11012,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14693280,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444804,
+          "peak_physical_footprint_bytes": 208814872,
+          "physical_footprint_bytes": 208814872,
+          "resident_bytes": 50806784
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10942,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14702816,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 209011480,
+          "physical_footprint_bytes": 204440344,
+          "resident_bytes": 47251456
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10941,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14702304,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 209011480,
+          "physical_footprint_bytes": 204440344,
+          "resident_bytes": 47251456
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11019,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14717264,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 8840,
+          "peak_physical_footprint_bytes": 209011480,
+          "physical_footprint_bytes": 204440344,
+          "resident_bytes": 47251456
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10969,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14800608,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 209011480,
+          "physical_footprint_bytes": 206897944,
+          "resident_bytes": 49577984
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10968,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14800096,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 209011480,
+          "physical_footprint_bytes": 206897944,
+          "resident_bytes": 49577984
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11063,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14817904,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197588,
+          "peak_physical_footprint_bytes": 209011480,
+          "physical_footprint_bytes": 206897944,
+          "resident_bytes": 49577984
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10978,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14804128,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 213959448,
+          "physical_footprint_bytes": 213959448,
+          "resident_bytes": 56377344
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10977,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14803616,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 213959448,
+          "physical_footprint_bytes": 213959448,
+          "resident_bytes": 56377344
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11062,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14819520,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4035204,
+          "peak_physical_footprint_bytes": 213959448,
+          "physical_footprint_bytes": 213959448,
+          "resident_bytes": 56377344
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10987,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14807840,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 214123288,
+          "physical_footprint_bytes": 209961752,
+          "resident_bytes": 52789248
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10986,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14807328,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 214123288,
+          "physical_footprint_bytes": 209961752,
+          "resident_bytes": 52789248
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11081,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14825136,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 12980,
+          "peak_physical_footprint_bytes": 214123288,
+          "physical_footprint_bytes": 209961752,
+          "resident_bytes": 52789248
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 10996,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14811776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 214123288,
+          "physical_footprint_bytes": 212271896,
+          "resident_bytes": 54968320
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 10995,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14811264,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 214123288,
+          "physical_footprint_bytes": 212271896,
+          "resident_bytes": 54968320
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11090,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14829072,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 197588,
+          "peak_physical_footprint_bytes": 214123288,
+          "physical_footprint_bytes": 212271896,
+          "resident_bytes": 54968320
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 16384,
+        "step": 0,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11005,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14815264,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 219726616,
+          "physical_footprint_bytes": 219726616,
+          "resident_bytes": 61734912
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11004,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14814752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 219726616,
+          "physical_footprint_bytes": 219726616,
+          "resident_bytes": 61734912
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11109,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14834032,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 4444852,
+          "peak_physical_footprint_bytes": 219726616,
+          "physical_footprint_bytes": 219726616,
+          "resident_bytes": 61734912
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 1,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 11014,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14819040,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 219890456,
+          "physical_footprint_bytes": 215319320,
+          "resident_bytes": 58146816
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 11013,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14818528,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 219890456,
+          "physical_footprint_bytes": 215319320,
+          "resident_bytes": 58146816
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 11108,
+          "malloc_bytes_allocated": 62914560,
+          "malloc_bytes_in_use": 14836336,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 12980,
+          "peak_physical_footprint_bytes": 219890456,
+          "physical_footprint_bytes": 215319320,
+          "resident_bytes": 58146816
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 1024,
+        "step": 2,
+        "stream": "Stream(Device(gpu, 0), 3)",
+        "width": 8
+      }
+    ],
+    "round": 2,
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 11649024,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "mlx-clear",
+    "warmed": {
+      "malloc_blocks_in_use": 10691,
+      "malloc_bytes_allocated": 41943040,
+      "malloc_bytes_in_use": 2367616,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 178979560,
+      "physical_footprint_bytes": 178979560,
+      "resident_bytes": 21790720
+    }
+  }
+]

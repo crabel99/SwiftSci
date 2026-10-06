@@ -1,0 +1,88 @@
+{
+  "active_job_peak": 1,
+  "after_batch_before_oracle": {
+    "mlx_active_bytes": 0,
+    "mlx_cached_bytes": 197620,
+    "peak_physical_footprint_bytes": 284115784,
+    "physical_footprint_bytes": 284115784,
+    "resident_bytes": 126812160
+  },
+  "batch_ns": 555891958,
+  "before_batch": {
+    "mlx_active_bytes": 0,
+    "mlx_cached_bytes": 0,
+    "peak_physical_footprint_bytes": 246367000,
+    "physical_footprint_bytes": 246367000,
+    "resident_bytes": 89128960
+  },
+  "budget_limit_bytes": 240428544,
+  "final_reserved_bytes": 0,
+  "gpu_slot_final_count": 0,
+  "gpu_slot_peak_count": 1,
+  "job_count": 4,
+  "jobs": [
+    {
+      "completion_ns": 128076458,
+      "device": "cpu",
+      "device_queue_ns": 0,
+      "estimated_bytes": 29863168,
+      "index": 0,
+      "memory_queue_ns": 10166,
+      "queue_ns": 10166,
+      "rows": 100000,
+      "service_ns": 128014542,
+      "width": 32
+    },
+    {
+      "completion_ns": 469445166,
+      "device": "gpu",
+      "device_queue_ns": 4084,
+      "estimated_bytes": 29863168,
+      "index": 1,
+      "memory_queue_ns": 128045958,
+      "queue_ns": 128050042,
+      "rows": 16384,
+      "service_ns": 341336333,
+      "width": 32
+    },
+    {
+      "completion_ns": 523621458,
+      "device": "cpu",
+      "device_queue_ns": 0,
+      "estimated_bytes": 29863168,
+      "index": 2,
+      "memory_queue_ns": 469391375,
+      "queue_ns": 469391375,
+      "rows": 8192,
+      "service_ns": 54155792,
+      "width": 128
+    },
+    {
+      "completion_ns": 555863583,
+      "device": "cpu",
+      "device_queue_ns": 0,
+      "estimated_bytes": 29863168,
+      "index": 3,
+      "memory_queue_ns": 523563667,
+      "queue_ns": 523563667,
+      "rows": 100000,
+      "service_ns": 32223208,
+      "width": 8
+    }
+  ],
+  "mix": "cpu-heavy",
+  "mlx_peak_active_bytes": 2294228,
+  "peak_above_prebatch_current_bytes": 37748784,
+  "peak_reservation_bytes": 236737280,
+  "policy": "equal",
+  "scope": "Warmed runtime, shared input reservation and one counted GPU slot. Unequal job sizes under a fixed workspace byte budget. Reservations do not cap physical allocations; reference fits follow measurement.",
+  "setup_ns": 64107625,
+  "setup_plus_batch_ns": 619999583,
+  "shared_payload_bytes": 46587520,
+  "shared_reservation_bytes": 206874112,
+  "status": "passed",
+  "workspace_covers_observed_envelope": false,
+  "workspace_estimate_peak_bytes": 29863168,
+  "workspace_limit_bytes": 33554432,
+  "workspace_mib": 32
+}
