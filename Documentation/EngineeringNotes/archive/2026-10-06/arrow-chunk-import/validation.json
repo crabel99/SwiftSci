@@ -1,0 +1,31 @@
+{
+  "implementation_commit": "fafa07a3de4b489636c89db42616b8f89c770082",
+  "branch": "codex/arrow-chunk-import",
+  "parent": "299221aab3865c57f8220bc8f2f03854708c6c65",
+  "files": {
+    "Sources/SwiftDataFrame/Internal/ArrowTableBridge.swift": "50f0fd765ecd75766c5a204db19338e827cc9a14fe611d56d2612040dd8919f2",
+    "Tests/SwiftDataFrameTests/DataFrameArrowChunkTests.swift": "48986ae3a7d086f0086659b8147916b1879d76a551df430c72ecc2eb42c360d6"
+  },
+  "release_tests_passed": 266,
+  "failed": 0,
+  "skipped": 0,
+  "parameterized_test_executions": 357,
+  "red_failures": [
+    {
+      "test": "DataFrameArrowChunkTests/emptyChunks()",
+      "failure": "Crash: xctest at specialized static Runner._applyScopingTraits(for:testCase:_:)"
+    },
+    {
+      "test": "DataFrameArrowChunkTests/nullStrategies(_:)",
+      "failure": "Crash: xctest at <deduplicated_symbol>"
+    }
+  ],
+  "benchmark_workers_passed": 42,
+  "benchmark_before_sha256": "007191b829159b32c2024dd14d5d025350c0bec98da3c8e6049a54aad4e2942e",
+  "benchmark_after_sha256": "3c6ada0f609de3cc99c846104d2386bf8e83f77ceb26577ccab75e1aec93f2b3",
+  "trial_harness_commit": "c57fb6db02ea45b4f28852d812dcd076bf9a8b95",
+  "production_source_difference_only": "Sources/SwiftDataFrame/Internal/ArrowTableBridge.swift",
+  "preserved_integration_worker_sha256": "8cf4eb7b76a17f1f8bd202cf140f9512423c21fdced7ca8bfe2c4302fe1bf22d",
+  "full_library_suite_run": false,
+  "pushed": false
+}

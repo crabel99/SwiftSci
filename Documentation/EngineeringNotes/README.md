@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Owned Arrow import with chunk traversal](research/2026-10-06-arrow-chunk-import.md) records the compatible production optimization, regression evidence, and separate date32 follow-up.
+
 - [Retained Arrow column trial](research/2026-10-06-arrow-retention-trial.md) compares copying and borrowed storage, verifies release, and identifies the production integration boundaries.
 
 - [Legacy memory-ticket deprecation](research/2026-10-06-memory-ticket-deprecation.md) records the first compatibility step in backend reuse and its targeted validation.
