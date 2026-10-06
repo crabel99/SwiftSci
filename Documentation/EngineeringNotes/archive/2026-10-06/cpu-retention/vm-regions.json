@@ -1,0 +1,122 @@
+{
+  "both": {
+    "cycle-1": [
+      "Physical footprint:         97.0M",
+      "Physical footprint (peak):  223.1M",
+      "Malloc Large (empty)              33.3M    33.3M    33.3M       0K       0K       0K       0K        2         see MALLOC ZONE table below",
+      "Malloc Small                      84.0M    57.8M    57.8M       0K       0K       0K       0K       27         see MALLOC ZONE table below",
+      "Malloc Small (empty)              4096K      16K      16K       0K       0K       0K       0K        1         see MALLOC ZONE table below"
+    ],
+    "cycle-12": [
+      "Physical footprint:         97.3M",
+      "Physical footprint (peak):  223.1M",
+      "Malloc Large (empty)              33.3M    33.3M    33.3M       0K       0K       0K       0K        2         see MALLOC ZONE table below",
+      "Malloc Small                      84.0M    58.1M    58.1M       0K       0K       0K       0K       27         see MALLOC ZONE table below",
+      "Malloc Small (empty)              4096K      16K      16K       0K       0K       0K       0K        1         see MALLOC ZONE table below"
+    ],
+    "final-cleanup": [
+      "Physical footprint:         97.3M",
+      "Physical footprint (peak):  223.1M",
+      "Malloc Large (empty)              33.3M    33.3M    33.3M       0K       0K       0K       0K        2         see MALLOC ZONE table below",
+      "Malloc Small                      24.1M    6288K    6288K       0K       0K       0K       0K       12         see MALLOC ZONE table below",
+      "Malloc Small (empty)              63.9M    52.0M    52.0M       0K       0K       0K       0K       16         see MALLOC ZONE table below"
+    ],
+    "inputs-dropped": [
+      "Physical footprint:         97.3M",
+      "Physical footprint (peak):  223.1M",
+      "Malloc Large (empty)              33.3M    33.3M    33.3M       0K       0K       0K       0K        2         see MALLOC ZONE table below",
+      "Malloc Small                      28.1M    6320K    6320K       0K       0K       0K       0K       13         see MALLOC ZONE table below",
+      "Malloc Small (empty)              59.9M    51.9M    51.9M       0K       0K       0K       0K       15         see MALLOC ZONE table below"
+    ],
+    "inputs-ready": [
+      "Physical footprint:         223.1M",
+      "Physical footprint (peak):  223.1M",
+      "Malloc Small                      80.0M    56.8M    56.8M       0K       0K       0K       0K       26         see MALLOC ZONE table below",
+      "Malloc Small (empty)              4096K      16K      16K       0K       0K       0K       0K        1         see MALLOC ZONE table below",
+      "owned unmapped (graphics)        160.0M   160.0M   160.0M       0K       0K       0K       0K       20"
+    ],
+    "warmed": [
+      "Physical footprint:         170.8M",
+      "Physical footprint (peak):  170.9M",
+      "Malloc Small                      20.0M    4880K    4880K       0K       0K       0K       0K        9         see MALLOC ZONE table below",
+      "Malloc Small (empty)              12.0M      80K      80K       0K       0K       0K       0K        3         see MALLOC ZONE table below",
+      "owned unmapped (graphics)        160.0M   160.0M   160.0M       0K       0K       0K       0K       21"
+    ]
+  },
+  "cache-disabled": {
+    "cycle-1": [
+      "Physical footprint:         31.9M",
+      "Physical footprint (peak):  56.9M",
+      "Malloc Small                      64.0M    54.5M    45.2M       0K       0K       0K       0K       18         see MALLOC ZONE table below"
+    ],
+    "cycle-12": [
+      "Physical footprint:         32.0M",
+      "Physical footprint (peak):  57.2M",
+      "Malloc Small                      64.0M    54.6M    45.3M       0K       0K       0K       0K       18         see MALLOC ZONE table below"
+    ],
+    "final-cleanup": [
+      "Physical footprint:         6865K",
+      "Physical footprint (peak):  57.2M",
+      "Malloc Small                      16.0M    7088K    2832K       0K       0K       0K       0K        6         see MALLOC ZONE table below",
+      "Malloc Small (empty)              48.0M    47.7M       0K       0K       0K       0K       0K       12         see MALLOC ZONE table below"
+    ],
+    "inputs-dropped": [
+      "Physical footprint:         6881K",
+      "Physical footprint (peak):  57.2M",
+      "Malloc Small                      16.0M    7088K    2832K       0K       0K       0K       0K        6         see MALLOC ZONE table below",
+      "Malloc Small (empty)              48.0M    47.7M       0K       0K       0K       0K       0K       12         see MALLOC ZONE table below"
+    ],
+    "inputs-ready": [
+      "Physical footprint:         31.6M",
+      "Physical footprint (peak):  55.2M",
+      "Malloc Small                      64.0M    54.4M    45.1M       0K       0K       0K       0K       18         see MALLOC ZONE table below"
+    ],
+    "warmed": [
+      "Physical footprint:         6001K",
+      "Physical footprint (peak):  6001K",
+      "Malloc Small                      16.0M    2400K    2368K       0K       0K       0K       0K        6         see MALLOC ZONE table below"
+    ]
+  },
+  "cpu": {
+    "cycle-1": [
+      "Physical footprint:         110.8M",
+      "Physical footprint (peak):  110.8M",
+      "Malloc Large (empty)              33.3M    33.3M    33.3M       0K       0K       0K       0K        2         see MALLOC ZONE table below",
+      "Malloc Small                      76.0M    57.7M    57.7M       0K       0K       0K       0K       21         see MALLOC ZONE table below",
+      "Malloc Small (empty)              20.0M    15.5M    15.5M       0K       0K       0K       0K        5         see MALLOC ZONE table below"
+    ],
+    "cycle-12": [
+      "Physical footprint:         111.0M",
+      "Physical footprint (peak):  111.0M",
+      "Malloc Large (empty)              33.3M    33.3M    33.3M       0K       0K       0K       0K        2         see MALLOC ZONE table below",
+      "Malloc Small                      76.0M    57.9M    57.9M       0K       0K       0K       0K       21         see MALLOC ZONE table below",
+      "Malloc Small (empty)              20.0M    15.5M    15.5M       0K       0K       0K       0K        5         see MALLOC ZONE table below"
+    ],
+    "final-cleanup": [
+      "Physical footprint:         111.0M",
+      "Physical footprint (peak):  111.0M",
+      "Malloc Large (empty)              33.3M    33.3M    33.3M       0K       0K       0K       0K        2         see MALLOC ZONE table below",
+      "Malloc Small                      24.0M    7184K    7184K       0K       0K       0K       0K        8         see MALLOC ZONE table below",
+      "Malloc Small (empty)              72.0M    66.4M    66.4M       0K       0K       0K       0K       18         see MALLOC ZONE table below"
+    ],
+    "inputs-dropped": [
+      "Physical footprint:         111.0M",
+      "Physical footprint (peak):  111.0M",
+      "Malloc Large (empty)              33.3M    33.3M    33.3M       0K       0K       0K       0K        2         see MALLOC ZONE table below",
+      "Malloc Small                      24.0M    7184K    7184K       0K       0K       0K       0K        8         see MALLOC ZONE table below",
+      "Malloc Small (empty)              72.0M    66.4M    66.4M       0K       0K       0K       0K       18         see MALLOC ZONE table below"
+    ],
+    "inputs-ready": [
+      "Physical footprint:         76.9M",
+      "Physical footprint (peak):  76.9M",
+      "Malloc Small                      76.0M    57.4M    57.4M       0K       0K       0K       0K       21         see MALLOC ZONE table below",
+      "Malloc Small (empty)              20.0M    15.5M    15.5M       0K       0K       0K       0K        5         see MALLOC ZONE table below"
+    ],
+    "warmed": [
+      "Physical footprint:         6081K",
+      "Physical footprint (peak):  6081K",
+      "Malloc Small                      16.0M    2352K    2352K       0K       0K       0K       0K        6         see MALLOC ZONE table below",
+      "Malloc Small (empty)              4096K      48K      48K       0K       0K       0K       0K        1         see MALLOC ZONE table below"
+    ]
+  }
+}

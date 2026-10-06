@@ -1,0 +1,4 @@
+{
+  "format": "unified",
+  "patch": "--- a/Benchmarks/UnifiedMemoryPrototype/Integration/main.swift\n+++ b/Benchmarks/UnifiedMemoryPrototype/Integration/main.swift\n@@ -252,7 +252,7 @@\n } else if (args.count == 4 || args.count == 5), args[0] == \"--retained-memory\",\n    [\"cpu-same\", \"cpu-sizes\", \"gpu-sizes\"].contains(args[1]),\n    [\"retain\", \"mlx-clear\", \"malloc-relief\", \"both\"].contains(args[2]),\n-   let cycles = Int(args[3]), (1...3).contains(cycles),\n+   let cycles = Int(args[3]), (1...12).contains(cycles),\n    args.count == 4 || [\"job\", \"sequence\"].contains(args[4]) {\n     try await output(retainedMemoryTrial(profile: args[1], treatment: args[2], cycles: cycles, streamScope: args.count == 5 ? args[4] : \"job\"))\n } else if args.count == 4, args[0] == \"--weighted-admission\",\n"
+}

@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [CPU retention and allocator reclamation](benchmarks/2026-10-06-cpu-retention.md) identifies freed resident workspace, isolates the GPU-warmup confound, and records the allocator control and CPU leak scan.
+
 - [Production matrix autorelease cleanup](benchmarks/2026-10-06-matrix-cleanup.md) records the failing-before regression, synchronous cleanup fix, cancellation and owner checks, and unprofiled comparisons.
 
 - [Metal memory retention at the synchronous matrix boundary](benchmarks/2026-10-06-metal-profile.md) records Instruments evidence and a disposable autorelease-pool control that removes the repeated GPU allocation growth.

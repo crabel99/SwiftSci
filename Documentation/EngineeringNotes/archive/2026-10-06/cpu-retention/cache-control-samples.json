@@ -1,0 +1,4412 @@
+[
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 7720,
+      "malloc_bytes_allocated": 71303168,
+      "malloc_bytes_in_use": 1267744,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 59753216,
+      "physical_footprint_bytes": 6849280,
+      "resident_bytes": 71532544
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 7719,
+      "malloc_bytes_allocated": 71303168,
+      "malloc_bytes_in_use": 1267232,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 59753216,
+      "physical_footprint_bytes": 6849280,
+      "resident_bytes": 71532544
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 7736,
+      "malloc_bytes_allocated": 71303168,
+      "malloc_bytes_in_use": 1271744,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 676,
+      "peak_physical_footprint_bytes": 59753216,
+      "physical_footprint_bytes": 6865664,
+      "resident_bytes": 71548928
+    },
+    "cycles": 12,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 36,
+    "profile": "cpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 7889,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45679104,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 57344720,
+          "physical_footprint_bytes": 32555728,
+          "resident_bytes": 70713344
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7909,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45687024,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 132,
+          "peak_physical_footprint_bytes": 59114216,
+          "physical_footprint_bytes": 32686824,
+          "resident_bytes": 70877184
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7908,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45686512,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 132,
+          "peak_physical_footprint_bytes": 59114216,
+          "physical_footprint_bytes": 32686824,
+          "resident_bytes": 70877184
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7907,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45686000,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 132,
+          "peak_physical_footprint_bytes": 59114216,
+          "physical_footprint_bytes": 32686824,
+          "resident_bytes": 70877184
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7927,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45704256,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 644,
+          "peak_physical_footprint_bytes": 59114216,
+          "physical_footprint_bytes": 32850664,
+          "resident_bytes": 71041024
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7926,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45703744,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 644,
+          "peak_physical_footprint_bytes": 59114216,
+          "physical_footprint_bytes": 32834280,
+          "resident_bytes": 71024640
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7925,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45703232,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 644,
+          "peak_physical_footprint_bytes": 59114216,
+          "physical_footprint_bytes": 32834280,
+          "resident_bytes": 71024640
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7937,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45708752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59114216,
+          "physical_footprint_bytes": 32867048,
+          "resident_bytes": 71057408
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7936,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45708240,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59114216,
+          "physical_footprint_bytes": 32867048,
+          "resident_bytes": 71057408
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7935,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45707728,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59114216,
+          "physical_footprint_bytes": 32867048,
+          "resident_bytes": 71057408
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7944,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45712848,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32948968,
+          "resident_bytes": 71139328
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7943,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45712336,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32948968,
+          "resident_bytes": 71139328
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7942,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45711824,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32948968,
+          "resident_bytes": 71139328
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7949,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45716336,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7948,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45715824,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7947,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45715312,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7954,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45717648,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7953,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45717136,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7952,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45716624,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7959,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45720368,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59572992,
+          "physical_footprint_bytes": 33194752,
+          "resident_bytes": 71368704
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7958,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45719856,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59572992,
+          "physical_footprint_bytes": 33194752,
+          "resident_bytes": 71368704
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7957,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45719344,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59572992,
+          "physical_footprint_bytes": 33194752,
+          "resident_bytes": 71368704
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7964,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45723824,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59572992,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7963,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45723312,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59572992,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7962,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45722800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59572992,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7969,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45725200,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59572992,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7968,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45724688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59572992,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7967,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45724176,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59572992,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7974,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45727920,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7973,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45727408,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7972,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45726896,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "cycle": 3,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7979,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45731376,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7978,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45730864,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7977,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45730352,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "cycle": 3,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7984,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45732688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7983,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45732176,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7982,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45731664,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "cycle": 3,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7989,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45735408,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33227520,
+          "resident_bytes": 71401472
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7988,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45734896,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33227520,
+          "resident_bytes": 71401472
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7987,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45734384,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "cycle": 4,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7994,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45738864,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33227520,
+          "resident_bytes": 71401472
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7993,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45738352,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33227520,
+          "resident_bytes": 71401472
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7992,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45737840,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33227520,
+          "resident_bytes": 71401472
+        },
+        "cycle": 4,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7999,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45740176,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7998,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45739664,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7997,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45739152,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "cycle": 4,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8004,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45742896,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8003,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45742384,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8002,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45741872,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "cycle": 5,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8009,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45746512,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8008,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45746000,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8007,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45745488,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "cycle": 5,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8014,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45747824,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8013,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45747312,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8012,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45746800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "cycle": 5,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8019,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45750544,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8018,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45750032,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8017,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45749520,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "cycle": 6,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8024,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45754000,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8023,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45753488,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8022,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45752976,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "cycle": 6,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8029,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45755312,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8028,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45754800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8027,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45754288,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "cycle": 6,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8034,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45758032,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8033,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45757520,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8032,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45757008,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "cycle": 7,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8039,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45761488,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8038,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45760976,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8037,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45760464,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "cycle": 7,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8044,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45762800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33309440,
+          "resident_bytes": 71483392
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8043,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45762288,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33309440,
+          "resident_bytes": 71483392
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8042,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45761776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33309440,
+          "resident_bytes": 71483392
+        },
+        "cycle": 7,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8049,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45765520,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59720448,
+          "physical_footprint_bytes": 33309440,
+          "resident_bytes": 71483392
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8048,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45765008,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59720448,
+          "physical_footprint_bytes": 33309440,
+          "resident_bytes": 71483392
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8047,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45764496,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59720448,
+          "physical_footprint_bytes": 33309440,
+          "resident_bytes": 71483392
+        },
+        "cycle": 8,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8054,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45768976,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59720448,
+          "physical_footprint_bytes": 33325824,
+          "resident_bytes": 71499776
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8053,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45768464,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59720448,
+          "physical_footprint_bytes": 33325824,
+          "resident_bytes": 71499776
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8052,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45767952,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59720448,
+          "physical_footprint_bytes": 33325824,
+          "resident_bytes": 71499776
+        },
+        "cycle": 8,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8059,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45770288,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59720448,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8058,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45769776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59720448,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8057,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45769264,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59720448,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "cycle": 8,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8064,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45773008,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8063,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45772496,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8062,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45771984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "cycle": 9,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8069,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45776464,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8068,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45775952,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8067,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45775440,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "cycle": 9,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8074,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45777776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8073,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45777264,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8072,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45776752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "cycle": 9,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8079,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45780496,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8078,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45779984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8077,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45779472,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "cycle": 10,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8084,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45783952,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8083,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45783440,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8082,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45782928,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "cycle": 10,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8089,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45785264,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8088,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45784752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8087,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45784240,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "cycle": 10,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8094,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45787984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8093,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45787472,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8092,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45786960,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "cycle": 11,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8099,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45791440,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8098,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45790928,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8097,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45790416,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "cycle": 11,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8104,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45792752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8103,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45792240,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8102,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45791728,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "cycle": 11,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      }
+    ],
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 42228864,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "retain",
+    "warmed": {
+      "malloc_blocks_in_use": 7518,
+      "malloc_bytes_allocated": 20971520,
+      "malloc_bytes_in_use": 1156576,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5587616,
+      "physical_footprint_bytes": 5587616,
+      "resident_bytes": 15843328
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 7720,
+      "malloc_bytes_allocated": 71303168,
+      "malloc_bytes_in_use": 1267744,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 59769600,
+      "physical_footprint_bytes": 6849280,
+      "resident_bytes": 71532544
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 7719,
+      "malloc_bytes_allocated": 71303168,
+      "malloc_bytes_in_use": 1267232,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 59769600,
+      "physical_footprint_bytes": 6849280,
+      "resident_bytes": 71532544
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 7736,
+      "malloc_bytes_allocated": 71303168,
+      "malloc_bytes_in_use": 1271744,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 676,
+      "peak_physical_footprint_bytes": 59769600,
+      "physical_footprint_bytes": 6865664,
+      "resident_bytes": 71548928
+    },
+    "cycles": 12,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 36,
+    "profile": "cpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 7887,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45673984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 57328336,
+          "physical_footprint_bytes": 32555728,
+          "resident_bytes": 70713344
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7907,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45681904,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 132,
+          "peak_physical_footprint_bytes": 59032272,
+          "physical_footprint_bytes": 32604880,
+          "resident_bytes": 70811648
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7906,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45681392,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 132,
+          "peak_physical_footprint_bytes": 59032272,
+          "physical_footprint_bytes": 32604880,
+          "resident_bytes": 70811648
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7905,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45680880,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 132,
+          "peak_physical_footprint_bytes": 59032272,
+          "physical_footprint_bytes": 32604880,
+          "resident_bytes": 70811648
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7926,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45701696,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 644,
+          "peak_physical_footprint_bytes": 59032272,
+          "physical_footprint_bytes": 32785104,
+          "resident_bytes": 70991872
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7925,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45701184,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 644,
+          "peak_physical_footprint_bytes": 59032272,
+          "physical_footprint_bytes": 32768720,
+          "resident_bytes": 70975488
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7924,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45700672,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 644,
+          "peak_physical_footprint_bytes": 59032272,
+          "physical_footprint_bytes": 32752336,
+          "resident_bytes": 70959104
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7937,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45708752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59032272,
+          "physical_footprint_bytes": 32834256,
+          "resident_bytes": 71041024
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7936,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45708240,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59032272,
+          "physical_footprint_bytes": 32834256,
+          "resident_bytes": 71041024
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7935,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45707728,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59032272,
+          "physical_footprint_bytes": 32834256,
+          "resident_bytes": 71041024
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7944,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45712848,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32948968,
+          "resident_bytes": 71139328
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7943,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45712336,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32948968,
+          "resident_bytes": 71139328
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7942,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45711824,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32948968,
+          "resident_bytes": 71139328
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7949,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45716336,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7948,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45715824,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7947,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45715312,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7954,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45717648,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7953,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45717136,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7952,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45716624,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343592,
+          "physical_footprint_bytes": 32965352,
+          "resident_bytes": 71155712
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7959,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45720368,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409128,
+          "physical_footprint_bytes": 33014504,
+          "resident_bytes": 71204864
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7958,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45719856,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409128,
+          "physical_footprint_bytes": 33014504,
+          "resident_bytes": 71204864
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7957,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45719344,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409128,
+          "physical_footprint_bytes": 33014504,
+          "resident_bytes": 71204864
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7964,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45723824,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409128,
+          "physical_footprint_bytes": 33047272,
+          "resident_bytes": 71237632
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7963,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45723312,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409128,
+          "physical_footprint_bytes": 33047272,
+          "resident_bytes": 71237632
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7962,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45722800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409128,
+          "physical_footprint_bytes": 33047272,
+          "resident_bytes": 71237632
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7969,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45725200,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409128,
+          "physical_footprint_bytes": 33047272,
+          "resident_bytes": 71237632
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7968,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45724688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409128,
+          "physical_footprint_bytes": 33047272,
+          "resident_bytes": 71237632
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7967,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45724176,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409128,
+          "physical_footprint_bytes": 33047272,
+          "resident_bytes": 71237632
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7974,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45727920,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458280,
+          "physical_footprint_bytes": 33047272,
+          "resident_bytes": 71237632
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7973,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45727408,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458280,
+          "physical_footprint_bytes": 33047272,
+          "resident_bytes": 71237632
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7972,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45726896,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458280,
+          "physical_footprint_bytes": 33047272,
+          "resident_bytes": 71237632
+        },
+        "cycle": 3,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7979,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45731376,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458280,
+          "physical_footprint_bytes": 33096424,
+          "resident_bytes": 71286784
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7978,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45730864,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458280,
+          "physical_footprint_bytes": 33096424,
+          "resident_bytes": 71286784
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7977,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45730352,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458280,
+          "physical_footprint_bytes": 33096424,
+          "resident_bytes": 71286784
+        },
+        "cycle": 3,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7984,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45732688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458280,
+          "physical_footprint_bytes": 33096424,
+          "resident_bytes": 71286784
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7983,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45732176,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458280,
+          "physical_footprint_bytes": 33096424,
+          "resident_bytes": 71286784
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7982,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45731664,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458280,
+          "physical_footprint_bytes": 33096424,
+          "resident_bytes": 71286784
+        },
+        "cycle": 3,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7989,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45735408,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59507432,
+          "physical_footprint_bytes": 33112808,
+          "resident_bytes": 71303168
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7988,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45734896,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59507432,
+          "physical_footprint_bytes": 33112808,
+          "resident_bytes": 71303168
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7987,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45734384,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59507432,
+          "physical_footprint_bytes": 33096424,
+          "resident_bytes": 71286784
+        },
+        "cycle": 4,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7994,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45738864,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59507432,
+          "physical_footprint_bytes": 33178368,
+          "resident_bytes": 71352320
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7993,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45738352,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59507432,
+          "physical_footprint_bytes": 33178368,
+          "resident_bytes": 71352320
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7992,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45737840,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59507432,
+          "physical_footprint_bytes": 33178368,
+          "resident_bytes": 71352320
+        },
+        "cycle": 4,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7999,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45740176,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59507432,
+          "physical_footprint_bytes": 33178368,
+          "resident_bytes": 71352320
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7998,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45739664,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59507432,
+          "physical_footprint_bytes": 33178368,
+          "resident_bytes": 71352320
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7997,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45739152,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59507432,
+          "physical_footprint_bytes": 33178368,
+          "resident_bytes": 71352320
+        },
+        "cycle": 4,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8004,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45742896,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8003,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45742384,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8002,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45741872,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33211136,
+          "resident_bytes": 71385088
+        },
+        "cycle": 5,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8009,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45746512,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8008,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45746000,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8007,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45745488,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "cycle": 5,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8014,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45747824,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8013,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45747312,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8012,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45746800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59622144,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "cycle": 5,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8019,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45750544,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8018,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45750032,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8017,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45749520,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33243904,
+          "resident_bytes": 71417856
+        },
+        "cycle": 6,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8024,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45754000,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8023,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45753488,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8022,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45752976,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "cycle": 6,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8029,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45755312,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8028,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45754800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8027,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45754288,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59654912,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "cycle": 6,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8034,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45758032,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8033,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45757520,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8032,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45757008,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "cycle": 7,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8039,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45761488,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8038,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45760976,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8037,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45760464,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33293056,
+          "resident_bytes": 71467008
+        },
+        "cycle": 7,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8044,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45762800,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33309440,
+          "resident_bytes": 71483392
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8043,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45762288,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33309440,
+          "resident_bytes": 71483392
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8042,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45761776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704064,
+          "physical_footprint_bytes": 33309440,
+          "resident_bytes": 71483392
+        },
+        "cycle": 7,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8049,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45765520,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8048,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45765008,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8047,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45764496,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33342208,
+          "resident_bytes": 71516160
+        },
+        "cycle": 8,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8054,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45768976,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8053,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45768464,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8052,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45767952,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "cycle": 8,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8059,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45770288,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8058,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45769776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8057,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45769264,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59753216,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "cycle": 8,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8064,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45773008,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8063,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45772496,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8062,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45771984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "cycle": 9,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8069,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45776464,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8068,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45775952,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8067,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45775440,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "cycle": 9,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8074,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45777776,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8073,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45777264,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8072,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45776752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "cycle": 9,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8079,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45780496,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8078,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45779984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8077,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45779472,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "cycle": 10,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8084,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45783952,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8083,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45783440,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8082,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45782928,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "cycle": 10,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8089,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45785264,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8088,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45784752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8087,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45784240,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "cycle": 10,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8094,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45787984,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33374976,
+          "resident_bytes": 71548928
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8093,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45787472,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8092,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45786960,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33358592,
+          "resident_bytes": 71532544
+        },
+        "cycle": 11,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8099,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45791440,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33374976,
+          "resident_bytes": 71548928
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8098,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45790928,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33374976,
+          "resident_bytes": 71548928
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8097,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45790416,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33374976,
+          "resident_bytes": 71548928
+        },
+        "cycle": 11,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8104,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45792752,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33374976,
+          "resident_bytes": 71548928
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8103,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45792240,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33374976,
+          "resident_bytes": 71548928
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8102,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45791728,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59769600,
+          "physical_footprint_bytes": 33374976,
+          "resident_bytes": 71548928
+        },
+        "cycle": 11,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      }
+    ],
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 42228864,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "retain",
+    "warmed": {
+      "malloc_blocks_in_use": 7556,
+      "malloc_bytes_allocated": 20971520,
+      "malloc_bytes_in_use": 1154288,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5571232,
+      "physical_footprint_bytes": 5571232,
+      "resident_bytes": 15843328
+    }
+  },
+  {
+    "after_final_malloc_relief": {
+      "malloc_blocks_in_use": 7723,
+      "malloc_bytes_allocated": 71303168,
+      "malloc_bytes_in_use": 1275424,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 59704016,
+      "physical_footprint_bytes": 6783696,
+      "resident_bytes": 71499776
+    },
+    "after_final_mlx_clear": {
+      "malloc_blocks_in_use": 7722,
+      "malloc_bytes_allocated": 71303168,
+      "malloc_bytes_in_use": 1274912,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 59704016,
+      "physical_footprint_bytes": 6783696,
+      "resident_bytes": 71499776
+    },
+    "after_inputs_dropped": {
+      "malloc_blocks_in_use": 7739,
+      "malloc_bytes_allocated": 71303168,
+      "malloc_bytes_in_use": 1279424,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 676,
+      "peak_physical_footprint_bytes": 59704016,
+      "physical_footprint_bytes": 6800080,
+      "resident_bytes": 71516160
+    },
+    "cycles": 12,
+    "final_malloc_reported_released_bytes": 0,
+    "fits": 36,
+    "profile": "cpu-sizes",
+    "records": [
+      {
+        "memory": {
+          "malloc_blocks_in_use": 7889,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45679104,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 0,
+          "peak_physical_footprint_bytes": 57311928,
+          "physical_footprint_bytes": 32522936,
+          "resident_bytes": 70696960
+        },
+        "phase": "inputs-ready"
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7909,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45687024,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 132,
+          "peak_physical_footprint_bytes": 59081424,
+          "physical_footprint_bytes": 32654032,
+          "resident_bytes": 70860800
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7908,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45686512,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 132,
+          "peak_physical_footprint_bytes": 59081424,
+          "physical_footprint_bytes": 32654032,
+          "resident_bytes": 70860800
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7907,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45686000,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 132,
+          "peak_physical_footprint_bytes": 59081424,
+          "physical_footprint_bytes": 32654032,
+          "resident_bytes": 70860800
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7929,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45709376,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 644,
+          "peak_physical_footprint_bytes": 59081424,
+          "physical_footprint_bytes": 32817872,
+          "resident_bytes": 71024640
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7928,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45708864,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 644,
+          "peak_physical_footprint_bytes": 59081424,
+          "physical_footprint_bytes": 32801488,
+          "resident_bytes": 71008256
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7927,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45708352,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 644,
+          "peak_physical_footprint_bytes": 59081424,
+          "physical_footprint_bytes": 32785104,
+          "resident_bytes": 70991872
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7940,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45716432,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59081424,
+          "physical_footprint_bytes": 32850640,
+          "resident_bytes": 71057408
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7939,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45715920,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59081424,
+          "physical_footprint_bytes": 32850640,
+          "resident_bytes": 71057408
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7938,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45715408,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59081424,
+          "physical_footprint_bytes": 32850640,
+          "resident_bytes": 71057408
+        },
+        "cycle": 0,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7947,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45720528,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343568,
+          "physical_footprint_bytes": 32948944,
+          "resident_bytes": 71155712
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7946,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45720016,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343568,
+          "physical_footprint_bytes": 32948944,
+          "resident_bytes": 71155712
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7945,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45719504,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343568,
+          "physical_footprint_bytes": 32948944,
+          "resident_bytes": 71155712
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7952,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45724016,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343568,
+          "physical_footprint_bytes": 32965328,
+          "resident_bytes": 71172096
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7951,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45723504,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343568,
+          "physical_footprint_bytes": 32965328,
+          "resident_bytes": 71172096
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7950,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45722992,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343568,
+          "physical_footprint_bytes": 32965328,
+          "resident_bytes": 71172096
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7957,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45725328,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343568,
+          "physical_footprint_bytes": 32965328,
+          "resident_bytes": 71172096
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7956,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45724816,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343568,
+          "physical_footprint_bytes": 32965328,
+          "resident_bytes": 71172096
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7955,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45724304,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59343568,
+          "physical_footprint_bytes": 32965328,
+          "resident_bytes": 71172096
+        },
+        "cycle": 1,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7962,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45728048,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409104,
+          "physical_footprint_bytes": 33014480,
+          "resident_bytes": 71221248
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7961,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45727536,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409104,
+          "physical_footprint_bytes": 33014480,
+          "resident_bytes": 71221248
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7960,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45727024,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409104,
+          "physical_footprint_bytes": 33014480,
+          "resident_bytes": 71221248
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7967,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45731504,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409104,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7966,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45730992,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409104,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7965,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45730480,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409104,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7972,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45732880,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409104,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7971,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45732368,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409104,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7970,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45731856,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59409104,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "cycle": 2,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7977,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45735600,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7976,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45735088,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7975,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45734576,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "cycle": 3,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7982,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45739056,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7981,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45738544,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7980,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45738032,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "cycle": 3,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7987,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45740368,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7986,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45739856,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7985,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45739344,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "cycle": 3,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7992,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45743088,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33047248,
+          "resident_bytes": 71254016
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7991,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45742576,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33047248,
+          "resident_bytes": 71254016
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7990,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45742064,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33030864,
+          "resident_bytes": 71237632
+        },
+        "cycle": 4,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 7997,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45746544,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33047248,
+          "resident_bytes": 71254016
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 7996,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45746032,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33047248,
+          "resident_bytes": 71254016
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 7995,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45745520,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33047248,
+          "resident_bytes": 71254016
+        },
+        "cycle": 4,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8002,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45747856,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33047248,
+          "resident_bytes": 71254016
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8001,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45747344,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33047248,
+          "resident_bytes": 71254016
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8000,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45746832,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59441872,
+          "physical_footprint_bytes": 33047248,
+          "resident_bytes": 71254016
+        },
+        "cycle": 4,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8007,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45750576,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458256,
+          "physical_footprint_bytes": 33063632,
+          "resident_bytes": 71270400
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8006,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45750064,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458256,
+          "physical_footprint_bytes": 33063632,
+          "resident_bytes": 71270400
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8005,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45749552,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458256,
+          "physical_footprint_bytes": 33063632,
+          "resident_bytes": 71270400
+        },
+        "cycle": 5,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8012,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45754192,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458256,
+          "physical_footprint_bytes": 33063632,
+          "resident_bytes": 71270400
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8011,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45753680,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458256,
+          "physical_footprint_bytes": 33063632,
+          "resident_bytes": 71270400
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8010,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45753168,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458256,
+          "physical_footprint_bytes": 33063632,
+          "resident_bytes": 71270400
+        },
+        "cycle": 5,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8017,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45755504,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458256,
+          "physical_footprint_bytes": 33063632,
+          "resident_bytes": 71270400
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8016,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45754992,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458256,
+          "physical_footprint_bytes": 33063632,
+          "resident_bytes": 71270400
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8015,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45754480,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59458256,
+          "physical_footprint_bytes": 33063632,
+          "resident_bytes": 71270400
+        },
+        "cycle": 5,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8022,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45758224,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59540176,
+          "physical_footprint_bytes": 33129168,
+          "resident_bytes": 71335936
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8021,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45757712,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59540176,
+          "physical_footprint_bytes": 33129168,
+          "resident_bytes": 71335936
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8020,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45757200,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59540176,
+          "physical_footprint_bytes": 33129168,
+          "resident_bytes": 71335936
+        },
+        "cycle": 6,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8027,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45761680,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59540176,
+          "physical_footprint_bytes": 33145552,
+          "resident_bytes": 71352320
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8026,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45761168,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59540176,
+          "physical_footprint_bytes": 33145552,
+          "resident_bytes": 71352320
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8025,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45760656,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59540176,
+          "physical_footprint_bytes": 33145552,
+          "resident_bytes": 71352320
+        },
+        "cycle": 6,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8032,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45762992,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59540176,
+          "physical_footprint_bytes": 33161936,
+          "resident_bytes": 71368704
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8031,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45762480,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59540176,
+          "physical_footprint_bytes": 33161936,
+          "resident_bytes": 71368704
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8030,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45761968,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59540176,
+          "physical_footprint_bytes": 33161936,
+          "resident_bytes": 71368704
+        },
+        "cycle": 6,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8037,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45765712,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59638480,
+          "physical_footprint_bytes": 33227472,
+          "resident_bytes": 71434240
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8036,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45765200,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59638480,
+          "physical_footprint_bytes": 33227472,
+          "resident_bytes": 71434240
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8035,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45764688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59638480,
+          "physical_footprint_bytes": 33227472,
+          "resident_bytes": 71434240
+        },
+        "cycle": 7,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8042,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45769168,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59638480,
+          "physical_footprint_bytes": 33227472,
+          "resident_bytes": 71434240
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8041,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45768656,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59638480,
+          "physical_footprint_bytes": 33227472,
+          "resident_bytes": 71434240
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8040,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45768144,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59638480,
+          "physical_footprint_bytes": 33227472,
+          "resident_bytes": 71434240
+        },
+        "cycle": 7,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8047,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45770480,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59638480,
+          "physical_footprint_bytes": 33243856,
+          "resident_bytes": 71450624
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8046,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45769968,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59638480,
+          "physical_footprint_bytes": 33243856,
+          "resident_bytes": 71450624
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8045,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45769456,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59638480,
+          "physical_footprint_bytes": 33243856,
+          "resident_bytes": 71450624
+        },
+        "cycle": 7,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8052,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45773200,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59687632,
+          "physical_footprint_bytes": 33276624,
+          "resident_bytes": 71483392
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8051,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45772688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59687632,
+          "physical_footprint_bytes": 33276624,
+          "resident_bytes": 71483392
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8050,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45772176,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59687632,
+          "physical_footprint_bytes": 33276624,
+          "resident_bytes": 71483392
+        },
+        "cycle": 8,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8057,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45776656,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59687632,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8056,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45776144,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59687632,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8055,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45775632,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59687632,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "cycle": 8,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8062,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45777968,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59687632,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8061,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45777456,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59687632,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8060,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45776944,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59687632,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "cycle": 8,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8067,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45780688,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8066,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45780176,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8065,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45779664,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "cycle": 9,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8072,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45784144,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8071,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45783632,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8070,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45783120,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "cycle": 9,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8077,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45785456,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8076,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45784944,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8075,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45784432,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "cycle": 9,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8082,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45788176,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8081,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45787664,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8080,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45787152,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "cycle": 10,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8087,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45791632,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8086,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45791120,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8085,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45790608,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "cycle": 10,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8092,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45792944,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8091,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45792432,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8090,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45791920,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "cycle": 10,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8097,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45795664,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33309392,
+          "resident_bytes": 71516160
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8096,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45795152,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8095,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45794640,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33293008,
+          "resident_bytes": 71499776
+        },
+        "cycle": 11,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 0,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 32
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8102,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45799120,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33309392,
+          "resident_bytes": 71516160
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8101,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45798608,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33309392,
+          "resident_bytes": 71516160
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8100,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45798096,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33309392,
+          "resident_bytes": 71516160
+        },
+        "cycle": 11,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 8192,
+        "step": 1,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 128
+      },
+      {
+        "after_intervention": {
+          "malloc_blocks_in_use": 8107,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45800432,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33309392,
+          "resident_bytes": 71516160
+        },
+        "after_mlx_stage": {
+          "malloc_blocks_in_use": 8106,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45799920,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33309392,
+          "resident_bytes": 71516160
+        },
+        "before_intervention": {
+          "malloc_blocks_in_use": 8105,
+          "malloc_bytes_allocated": 71303168,
+          "malloc_bytes_in_use": 45799408,
+          "mlx_active_bytes": 0,
+          "mlx_cached_bytes": 676,
+          "peak_physical_footprint_bytes": 59704016,
+          "physical_footprint_bytes": 33309392,
+          "resident_bytes": 71516160
+        },
+        "cycle": 11,
+        "malloc_reported_released_bytes": 0,
+        "phase": "job",
+        "rows": 100000,
+        "step": 2,
+        "stream": "Stream(Device(cpu, 0), 2)",
+        "width": 8
+      }
+    ],
+    "scope": "Sequential shape transitions with inputs retained, then released. Cleanup probes affect this disposable worker only. Malloc allocated space, bytes in use, MLX counters and physical footprint are distinct overlapping measurements, not additive categories. Independent numerical references follow retention measurements.",
+    "shared_payload_bytes": 42228864,
+    "status": "passed",
+    "stream_scope": "sequence",
+    "treatment": "retain",
+    "warmed": {
+      "malloc_blocks_in_use": 7518,
+      "malloc_bytes_allocated": 20971520,
+      "malloc_bytes_in_use": 1156576,
+      "mlx_active_bytes": 0,
+      "mlx_cached_bytes": 0,
+      "peak_physical_footprint_bytes": 5538440,
+      "physical_footprint_bytes": 5538440,
+      "resident_bytes": 15810560
+    }
+  }
+]
