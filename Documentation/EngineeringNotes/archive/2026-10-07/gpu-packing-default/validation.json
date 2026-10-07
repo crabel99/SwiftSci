@@ -1,0 +1,25 @@
+{
+  "candidate-release": {
+    "result": "Passed",
+    "passedTests": 226,
+    "failedTests": 0,
+    "skippedTests": 0
+  },
+  "integration-release": {
+    "result": "Passed",
+    "passedTests": 839,
+    "failedTests": 0,
+    "skippedTests": 2
+  },
+  "final-integration-release": {
+    "result": "Passed",
+    "passedTests": 839,
+    "failedTests": 0,
+    "skippedTests": 2
+  },
+  "limitations": [
+    "Two Llama tokenizer tests require optional SWIFTSCI_LLAMA_TOKENIZER_JSON",
+    "Existing MNIST NPZ test returns early with missing developer-local fixture and is reported passed",
+    "Nine selected test targets; not full library or sanitizer validation"
+  ]
+}

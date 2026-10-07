@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Prepared GPU packing default qualification](benchmarks/2026-10-07-gpu-packing-default.md) records tile selection, actual API comparisons, broader integration checks and small-input uncertainty.
+
 - [Shared GPU packing and blocked conversion](benchmarks/2026-10-07-shared-gpu-packing.md) records the shared bulk boundary, 226 passing tests and 760 workflow samples across four feature widths.
 
 - [Retained GPU crossover and compiler investigation](benchmarks/2026-10-07-retained-gpu-crossover.md) records 500 workflow samples, 105 phase samples, verified import decisions and Release compiler findings.
