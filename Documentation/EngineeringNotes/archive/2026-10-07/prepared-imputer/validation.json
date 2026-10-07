@@ -1,0 +1,149 @@
+{
+  "implementation_commit": "8386d2476f32a1f685314134cd0be1b5f291e79d",
+  "parent": "a075d7f52ef8fb75ba8b623e1ca21235f89764ab",
+  "workers": 27,
+  "requests": 304416,
+  "selected_release_tests_passed": 872,
+  "selected_release_tests_failed": 0,
+  "optional_skips": 2,
+  "controller_tests_passed": 12,
+  "red_ownership_failures": 3,
+  "complete_output_hashes_match": true,
+  "workers_remaining": 0,
+  "paired_results": [
+    {
+      "case": "small",
+      "reference": "rows",
+      "round": 0,
+      "throughput_ratio": 5.175945485844905,
+      "rss_reduction_percent": 0.496277915632759
+    },
+    {
+      "case": "small",
+      "reference": "rows",
+      "round": 1,
+      "throughput_ratio": 5.2437426917880545,
+      "rss_reduction_percent": 0.4950495049504955
+    },
+    {
+      "case": "small",
+      "reference": "rows",
+      "round": 2,
+      "throughput_ratio": 5.054142460878213,
+      "rss_reduction_percent": -0.4983388704318914
+    },
+    {
+      "case": "small",
+      "reference": "copy",
+      "round": 0,
+      "throughput_ratio": 1.0958873523583696,
+      "rss_reduction_percent": 0.3314001657000798
+    },
+    {
+      "case": "small",
+      "reference": "copy",
+      "round": 1,
+      "throughput_ratio": 1.098422257090911,
+      "rss_reduction_percent": 0.2481389578163795
+    },
+    {
+      "case": "small",
+      "reference": "copy",
+      "round": 2,
+      "throughput_ratio": 1.070967732798882,
+      "rss_reduction_percent": -0.3316749585406287
+    },
+    {
+      "case": "medium",
+      "reference": "rows",
+      "round": 0,
+      "throughput_ratio": 3.0317895602489413,
+      "rss_reduction_percent": 16.094147582697204
+    },
+    {
+      "case": "medium",
+      "reference": "rows",
+      "round": 1,
+      "throughput_ratio": 3.0603238972662967,
+      "rss_reduction_percent": 21.71326591314694
+    },
+    {
+      "case": "medium",
+      "reference": "rows",
+      "round": 2,
+      "throughput_ratio": 3.075610369576097,
+      "rss_reduction_percent": 21.24105011933174
+    },
+    {
+      "case": "medium",
+      "reference": "copy",
+      "round": 0,
+      "throughput_ratio": 1.0215490994456387,
+      "rss_reduction_percent": 7.1780436312456
+    },
+    {
+      "case": "medium",
+      "reference": "copy",
+      "round": 1,
+      "throughput_ratio": 1.0234570445152364,
+      "rss_reduction_percent": 7.323943661971832
+    },
+    {
+      "case": "medium",
+      "reference": "copy",
+      "round": 2,
+      "throughput_ratio": 1.034086478769559,
+      "rss_reduction_percent": 13.555992141453832
+    },
+    {
+      "case": "large",
+      "reference": "rows",
+      "round": 0,
+      "throughput_ratio": 2.3685522641913517,
+      "rss_reduction_percent": 67.14524747665568
+    },
+    {
+      "case": "large",
+      "reference": "rows",
+      "round": 1,
+      "throughput_ratio": 2.38997060765005,
+      "rss_reduction_percent": 66.12021857923497
+    },
+    {
+      "case": "large",
+      "reference": "rows",
+      "round": 2,
+      "throughput_ratio": 2.341700526107636,
+      "rss_reduction_percent": 65.24657134519988
+    },
+    {
+      "case": "large",
+      "reference": "copy",
+      "round": 0,
+      "throughput_ratio": 1.0625133528448074,
+      "rss_reduction_percent": 49.36782565296956
+    },
+    {
+      "case": "large",
+      "reference": "copy",
+      "round": 1,
+      "throughput_ratio": 1.0327244329730296,
+      "rss_reduction_percent": 41.232227488151665
+    },
+    {
+      "case": "large",
+      "reference": "copy",
+      "round": 2,
+      "throughput_ratio": 1.0173134497330063,
+      "rss_reduction_percent": 41.2258191867351
+    }
+  ],
+  "decision": "Keep native prepared imputation and consuming storage. Preserve the prepared regression finite-input boundary.",
+  "limitations": [
+    "Same-executable explicit row reference, not a separate parent binary",
+    "Three rounds on one actively used Apple M4 Max host",
+    "Measurement includes input allocation, missing marking, exact validation and hashing",
+    "CPU preprocessing only; no training-time or GPU inference performance claim",
+    "Selected nine-module Release test suite, not full-library or sanitizer certification"
+  ]
+}
