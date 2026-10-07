@@ -1,0 +1,240 @@
+{
+  "implementation_commit": "a075d7f52ef8fb75ba8b623e1ca21235f89764ab",
+  "comparison_base": "4c6d91b263bd16cd776eb315f6e1cafd44b6abab",
+  "measured_workers": 48,
+  "measured_requests": 608256,
+  "complete": true,
+  "decision": "Keep the consuming implementation for continued development. Repeatable large and mixed RSS reductions; no uniform speedup or formal noninferiority claim.",
+  "pairwise_results": [
+    {
+      "case": "small",
+      "storage": "copy",
+      "round": 0,
+      "throughput_change_percent": 3.4608794025806633,
+      "rss_reduction_percent": -7.09253170502584
+    },
+    {
+      "case": "small",
+      "storage": "copy",
+      "round": 1,
+      "throughput_change_percent": -1.3235894082184951,
+      "rss_reduction_percent": 0.17621145374449032
+    },
+    {
+      "case": "small",
+      "storage": "copy",
+      "round": 2,
+      "throughput_change_percent": -10.679257846821377,
+      "rss_reduction_percent": 0.5573618207152853
+    },
+    {
+      "case": "small",
+      "storage": "owned",
+      "round": 0,
+      "throughput_change_percent": 3.3307489813710456,
+      "rss_reduction_percent": 0.04703668861711918
+    },
+    {
+      "case": "small",
+      "storage": "owned",
+      "round": 1,
+      "throughput_change_percent": -3.900814694185739,
+      "rss_reduction_percent": -2.7570093457943923
+    },
+    {
+      "case": "small",
+      "storage": "owned",
+      "round": 2,
+      "throughput_change_percent": 1.5631448805261572,
+      "rss_reduction_percent": 0.5305039787798393
+    },
+    {
+      "case": "medium",
+      "storage": "copy",
+      "round": 0,
+      "throughput_change_percent": 3.0124616551411965,
+      "rss_reduction_percent": -8.010335917312661
+    },
+    {
+      "case": "medium",
+      "storage": "copy",
+      "round": 1,
+      "throughput_change_percent": 8.080454852292696,
+      "rss_reduction_percent": -2.9643527204502806
+    },
+    {
+      "case": "medium",
+      "storage": "copy",
+      "round": 2,
+      "throughput_change_percent": -3.803994031681235,
+      "rss_reduction_percent": -10.013060513713533
+    },
+    {
+      "case": "medium",
+      "storage": "owned",
+      "round": 0,
+      "throughput_change_percent": -0.6633440598978191,
+      "rss_reduction_percent": 10.847730012053036
+    },
+    {
+      "case": "medium",
+      "storage": "owned",
+      "round": 1,
+      "throughput_change_percent": -1.0591348615427543,
+      "rss_reduction_percent": 5.165733964700814
+    },
+    {
+      "case": "medium",
+      "storage": "owned",
+      "round": 2,
+      "throughput_change_percent": 0.0955026494920963,
+      "rss_reduction_percent": 3.9732142857142883
+    },
+    {
+      "case": "large",
+      "storage": "copy",
+      "round": 0,
+      "throughput_change_percent": 2.6569151279722814,
+      "rss_reduction_percent": 5.588096362777517
+    },
+    {
+      "case": "large",
+      "storage": "copy",
+      "round": 1,
+      "throughput_change_percent": -0.05393479394499856,
+      "rss_reduction_percent": 5.628444617860806
+    },
+    {
+      "case": "large",
+      "storage": "copy",
+      "round": 2,
+      "throughput_change_percent": 1.5349084014095071,
+      "rss_reduction_percent": -1.9174254468372176
+    },
+    {
+      "case": "large",
+      "storage": "owned",
+      "round": 0,
+      "throughput_change_percent": 39.02004391975058,
+      "rss_reduction_percent": 32.78267663801764
+    },
+    {
+      "case": "large",
+      "storage": "owned",
+      "round": 1,
+      "throughput_change_percent": -0.49564143871790867,
+      "rss_reduction_percent": 36.746520411859066
+    },
+    {
+      "case": "large",
+      "storage": "owned",
+      "round": 2,
+      "throughput_change_percent": 2.5985571913163197,
+      "rss_reduction_percent": 36.69425763062597
+    },
+    {
+      "case": "mixed",
+      "storage": "copy",
+      "round": 0,
+      "throughput_change_percent": 18.06790775511331,
+      "rss_reduction_percent": 14.03287914691943
+    },
+    {
+      "case": "mixed",
+      "storage": "copy",
+      "round": 1,
+      "throughput_change_percent": 10.154236294116625,
+      "rss_reduction_percent": 1.5392443709451697
+    },
+    {
+      "case": "mixed",
+      "storage": "copy",
+      "round": 2,
+      "throughput_change_percent": -1.4639500275103745,
+      "rss_reduction_percent": 4.274157846017623
+    },
+    {
+      "case": "mixed",
+      "storage": "owned",
+      "round": 0,
+      "throughput_change_percent": -13.993814045520026,
+      "rss_reduction_percent": 31.464025137135852
+    },
+    {
+      "case": "mixed",
+      "storage": "owned",
+      "round": 1,
+      "throughput_change_percent": 5.462034850768771,
+      "rss_reduction_percent": 27.823469332903294
+    },
+    {
+      "case": "mixed",
+      "storage": "owned",
+      "round": 2,
+      "throughput_change_percent": 3.4740011677501625,
+      "rss_reduction_percent": 27.702811676791573
+    }
+  ],
+  "owned_summary": [
+    {
+      "case": "small",
+      "median_paired_throughput_change_percent": 1.5631448805261572,
+      "throughput_change_range_percent": [
+        -3.900814694185739,
+        3.3307489813710456
+      ],
+      "median_paired_rss_reduction_percent": 0.04703668861711918,
+      "rss_reduction_range_percent": [
+        -2.7570093457943923,
+        0.5305039787798393
+      ]
+    },
+    {
+      "case": "medium",
+      "median_paired_throughput_change_percent": -0.6633440598978191,
+      "throughput_change_range_percent": [
+        -1.0591348615427543,
+        0.0955026494920963
+      ],
+      "median_paired_rss_reduction_percent": 5.165733964700814,
+      "rss_reduction_range_percent": [
+        3.9732142857142883,
+        10.847730012053036
+      ]
+    },
+    {
+      "case": "large",
+      "median_paired_throughput_change_percent": 2.5985571913163197,
+      "throughput_change_range_percent": [
+        -0.49564143871790867,
+        39.02004391975058
+      ],
+      "median_paired_rss_reduction_percent": 36.69425763062597,
+      "rss_reduction_range_percent": [
+        32.78267663801764,
+        36.746520411859066
+      ]
+    },
+    {
+      "case": "mixed",
+      "median_paired_throughput_change_percent": 3.4740011677501625,
+      "throughput_change_range_percent": [
+        -13.993814045520026,
+        5.462034850768771
+      ],
+      "median_paired_rss_reduction_percent": 27.823469332903294,
+      "rss_reduction_range_percent": [
+        27.702811676791573,
+        31.464025137135852
+      ]
+    }
+  ],
+  "prior_selected_release_tests": 865,
+  "tests_rerun": false,
+  "limitations": [
+    "Three rounds on one actively used host",
+    "No formal noninferiority margin or statistical certification",
+    "In-process linear inference including fixture generation, validation and hashing",
+    "One hardware configuration; no runtime testing on macOS 14"
+  ]
+}

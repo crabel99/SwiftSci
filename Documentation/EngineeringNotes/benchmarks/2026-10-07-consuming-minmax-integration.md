@@ -2,6 +2,8 @@
 
 Date: 2026-10-07
 
+A later [completed interleaved comparison](2026-10-07-consuming-minmax-followup.md) records the requested follow-up. The timing limitation below describes the earlier run.
+
 ## Decision
 
 Retain the MinMaxScaler ownership change as a local trial. Correctness and storage-reuse checks pass, and the completed workloads show lower resident memory for large and mixed consumed inputs. Throughput is not yet qualified for production. Concurrent host work confounded both the initial timing comparison and the attempted interleaved follow-up.
