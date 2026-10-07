@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Owned schema for retained GPU prediction](benchmarks/2026-10-07-retained-gpu-schema.md) records the typed input adapter, 224 passing tests and 60 workflow samples.
+
 - [Direct packing into retained GPU storage](benchmarks/2026-10-07-direct-gpu-packing.md) records 222 passing tests and 60 workflow samples. Direct packing removes the large-input staging penalty while preserving faster repeated prediction.
 
 - [Retained input regression workflow](benchmarks/2026-10-07-retained-gpu-workflow.md) records 220 passing tests and 40 workflow samples, showing faster repeated prediction with higher setup cost and peak memory.
