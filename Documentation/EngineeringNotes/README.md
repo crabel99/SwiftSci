@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Retained shared GPU input trial](research/2026-10-07-retained-gpu-trial.md) records allocation-scoped ownership, GPU completion on every read exit, seven new tests, and 217 passing focused Release tests.
+
 - [Prepared regression production PR](research/2026-10-06-prepared-memory-pr.md) records draft #62, the compatibility correction, 1,174 passing Release tests, the unchanged CPU regression policy, and uninstrumented memory/performance comparisons.
 
 - [Arrow PR validation and submission](research/2026-10-06-arrow-pr-ready.md) records the clean 1,156-test Release result, independent reviews, draft PR #61, and green prerequisite PR #60 now ready for review.
