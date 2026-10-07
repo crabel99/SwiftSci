@@ -1,0 +1,116 @@
+{
+  "implementation_commit": "f0261a2212d08b74f0444d9f76e510e93cb606d8",
+  "parent": "8386d2476f32a1f685314134cd0be1b5f291e79d",
+  "production_changes": false,
+  "selected_release_tests_passed": 874,
+  "selected_release_tests_failed": 0,
+  "optional_skips": 2,
+  "controller_tests_passed": 16,
+  "integrity_workers": 8,
+  "integrity_requests": 64,
+  "complete_retained_source_checks": 32,
+  "timed_workers": 24,
+  "timed_requests": 149760,
+  "timed_cleanup_windows": 96,
+  "maximum_absolute_prediction_error": 1.9073486328125e-06,
+  "prediction_bound": 0.0001,
+  "complete_output_hashes_match": true,
+  "fitted_parameter_hashes_match": true,
+  "workers_remaining": 0,
+  "paired_results": [
+    {
+      "case": "small",
+      "round": 0,
+      "throughput_change_percent": -14.218724460828069,
+      "rss_reduction_percent": 0.7784120394395466,
+      "peak_rss_reduction_percent": 0.7784120394395466
+    },
+    {
+      "case": "small",
+      "round": 1,
+      "throughput_change_percent": -18.401720603231077,
+      "rss_reduction_percent": 2.436495593571797,
+      "peak_rss_reduction_percent": 2.436495593571797
+    },
+    {
+      "case": "small",
+      "round": 2,
+      "throughput_change_percent": -7.425731886051635,
+      "rss_reduction_percent": 0.10565240359218242,
+      "peak_rss_reduction_percent": 0.10565240359218242
+    },
+    {
+      "case": "medium",
+      "round": 0,
+      "throughput_change_percent": -5.809493190312953,
+      "rss_reduction_percent": 7.928730512249437,
+      "peak_rss_reduction_percent": 7.585004359197911
+    },
+    {
+      "case": "medium",
+      "round": 1,
+      "throughput_change_percent": 2.579564610284235,
+      "rss_reduction_percent": 5.595996360327571,
+      "peak_rss_reduction_percent": 5.469097376611831
+    },
+    {
+      "case": "medium",
+      "round": 2,
+      "throughput_change_percent": -0.3381821554713893,
+      "rss_reduction_percent": 3.3437360677663897,
+      "peak_rss_reduction_percent": 3.968600087221985
+    },
+    {
+      "case": "large",
+      "round": 0,
+      "throughput_change_percent": 0.17147894992508572,
+      "rss_reduction_percent": 43.41863833896669,
+      "peak_rss_reduction_percent": 39.45590171127687
+    },
+    {
+      "case": "large",
+      "round": 1,
+      "throughput_change_percent": 2.7253575321297463,
+      "rss_reduction_percent": 43.42369958808315,
+      "peak_rss_reduction_percent": 39.48950256991027
+    },
+    {
+      "case": "large",
+      "round": 2,
+      "throughput_change_percent": -3.1062852592073975,
+      "rss_reduction_percent": 56.50590499973986,
+      "peak_rss_reduction_percent": 50.831253237884425
+    },
+    {
+      "case": "mixed",
+      "round": 0,
+      "throughput_change_percent": 5.340659782246315,
+      "rss_reduction_percent": 39.1009693746247,
+      "peak_rss_reduction_percent": 38.42753394379539
+    },
+    {
+      "case": "mixed",
+      "round": 1,
+      "throughput_change_percent": 8.052906009230565,
+      "rss_reduction_percent": 38.82825184917914,
+      "peak_rss_reduction_percent": 35.47948030521757
+    },
+    {
+      "case": "mixed",
+      "round": 2,
+      "throughput_change_percent": 0.5823205978015222,
+      "rss_reduction_percent": 35.53391570003341,
+      "peak_rss_reduction_percent": 29.951907950919143
+    }
+  ],
+  "decision": "Keep the end-to-end coverage and explicit consuming path; investigate small-request overhead separately before claiming a universal performance benefit. No production code or dispatch thresholds changed.",
+  "limitations": [
+    "Three rounds on one actively used Apple M4 Max host",
+    "Retained versus consumed input in one executable, not pre-branch or Python comparison",
+    "CPU fitting validated but excluded from timing; inference uses GPU",
+    "Persistent benchmark request metrics contribute to CPU allocations and residency",
+    "MLX owner and reservation checks do not certify absence of every CPU leak",
+    "Selected nine-module Release suite; no sanitizer or full-library certification",
+    "No persistence, reload or macOS 14 runtime test in this increment"
+  ]
+}

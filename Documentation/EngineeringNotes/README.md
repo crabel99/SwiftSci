@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Missing observations through GPU regression](benchmarks/2026-10-07-imputed-regression-integration.md) records training-only preprocessing, source integrity, repeated cleanup, sustained memory savings and the observed small-request throughput tradeoff.
+
 - [Prepared imputer integration](benchmarks/2026-10-07-prepared-imputer-integration.md) records native column reuse, the regression finite-input boundary, 872 selected Release test passes and the CPU comparison.
 
 - [Completed MinMax ownership comparison](benchmarks/2026-10-07-consuming-minmax-followup.md) records 48 interleaved workers, 608,256 checked requests and the observed throughput and resident-memory ranges.
