@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Prepared regression production PR](research/2026-10-06-prepared-memory-pr.md) records draft #62, the compatibility correction, 1,174 passing Release tests, the unchanged CPU regression policy, and uninstrumented memory/performance comparisons.
+
 - [Arrow PR validation and submission](research/2026-10-06-arrow-pr-ready.md) records the clean 1,156-test Release result, independent reviews, draft PR #61, and green prerequisite PR #60 now ready for review.
 
 - [MLX compatibility and memory integration](research/2026-10-06-mlx-compatibility.md) records resolution of all three upgrade failures, passing full Release suites, fresh ownership checks, and the tested working memory head.
