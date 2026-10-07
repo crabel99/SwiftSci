@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Direct packing into retained GPU storage](benchmarks/2026-10-07-direct-gpu-packing.md) records 222 passing tests and 60 workflow samples. Direct packing removes the large-input staging penalty while preserving faster repeated prediction.
+
 - [Retained input regression workflow](benchmarks/2026-10-07-retained-gpu-workflow.md) records 220 passing tests and 40 workflow samples, showing faster repeated prediction with higher setup cost and peak memory.
 
 - [Retained GPU input comparison](benchmarks/2026-10-07-retained-gpu-comparison.md) records 80 verified fresh-process samples, faster large-input reuse, lower offset-input memory, and mixed small-input results.
