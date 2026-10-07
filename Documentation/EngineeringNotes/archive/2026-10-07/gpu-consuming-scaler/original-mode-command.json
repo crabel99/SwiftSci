@@ -1,0 +1,19 @@
+[
+  "/opt/homebrew/opt/python@3.14/bin/python3.14",
+  "Benchmarks/Tools/compare_gpu_budget_workflow.py",
+  "--worker",
+  "/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/derived/Build/Products/Release/SwiftSciRetainedGPUTrial",
+  "--output",
+  "/Users/crabel/local-ai/spl/swiftsci/gpu-consuming-scaler-20261007/original-mode",
+  "--rows",
+  "65535",
+  "65536",
+  "--columns",
+  "65",
+  "--limits-mib",
+  "256",
+  "--rounds",
+  "1",
+  "--requests",
+  "8"
+]

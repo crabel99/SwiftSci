@@ -1,0 +1,15 @@
+[
+  "/opt/homebrew/opt/python@3.14/bin/python3.14",
+  "Benchmarks/Tools/compare_gpu_memory_reuse.py",
+  "--worker",
+  "/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/derived/Build/Products/Release/SwiftSciRetainedGPUTrial",
+  "--output",
+  "/Users/crabel/local-ai/spl/swiftsci/gpu-consuming-scaler-20261007/comparison",
+  "--rounds",
+  "2",
+  "--bursts",
+  "32",
+  "--storage",
+  "copy",
+  "owned"
+]

@@ -1,0 +1,582 @@
+[
+  {
+    "after_cache_clear": {
+      "mlx_active_bytes": 0,
+      "mlx_cache_bytes": 0,
+      "peak_rss_bytes": 328384512,
+      "rss_bytes": 311345152
+    },
+    "after_close": {
+      "mlx_active_bytes": 0,
+      "mlx_cache_bytes": 17301768,
+      "peak_rss_bytes": 328384512,
+      "rss_bytes": 311345152
+    },
+    "before": {
+      "mlx_active_bytes": 264,
+      "mlx_cache_bytes": 0,
+      "peak_rss_bytes": 25870336,
+      "rss_bytes": 25870336
+    },
+    "columns": 65,
+    "elapsed_ms": 131.058459,
+    "estimate_bytes": 112262104,
+    "estimate_capacities": {
+      "backend_allowance": 8388608,
+      "logical_copy": 17039360,
+      "outputs_and_readback": 1572840,
+      "packed_allocation": 17039360,
+      "raw_and_transformed": 68156400,
+      "scaler_scratch_and_metadata": 65536
+    },
+    "limit_bytes": 268435456,
+    "measured": {
+      "mlx_active_bytes": 264,
+      "mlx_cache_bytes": 17301504,
+      "peak_rss_bytes": 328384512,
+      "rss_bytes": 311345152
+    },
+    "peak_admitted_requests": 2,
+    "peak_reserved_bytes": 224524208,
+    "policy": "logical",
+    "queued_after": 0,
+    "request_count": 8,
+    "requests": [
+      {
+        "consumeMS": 9.290458,
+        "generateMS": 6.243625,
+        "id": 0,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "a3cee9d4a7dd74dab641bea349b7c58f2755a09d0f9aedfdf033ee1c5e7cea12",
+        "predictMS": 12.939166,
+        "queueMS": 0.013625,
+        "reusedInputColumns": 0,
+        "serviceMS": 38.339959,
+        "transformMS": 9.850792
+      },
+      {
+        "consumeMS": 9.348041,
+        "generateMS": 6.201708,
+        "id": 1,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "513ddb5a4485a874ffdf1dd31ad3e4613b617b3cd00e59e73dfe4b9f9cb4ee45",
+        "predictMS": 8.924209,
+        "queueMS": 0.028375,
+        "reusedInputColumns": 0,
+        "serviceMS": 33.361791,
+        "transformMS": 8.86525
+      },
+      {
+        "consumeMS": 8.712917,
+        "generateMS": 4.805458,
+        "id": 2,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "4e93a8e1edfca5aa1f021e2dda925c9900b8554ee6f8ff0c6fba30b5c38c272e",
+        "predictMS": 8.2315,
+        "queueMS": 33.432459,
+        "reusedInputColumns": 0,
+        "serviceMS": 30.569833,
+        "transformMS": 8.798083
+      },
+      {
+        "consumeMS": 9.442209,
+        "generateMS": 4.546209,
+        "id": 3,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "64f254603ba6bcd681f7cc8c32ec733981c645dfac81834d0d8999f6b81f3c01",
+        "predictMS": 9.21525,
+        "queueMS": 38.36425,
+        "reusedInputColumns": 0,
+        "serviceMS": 31.187834,
+        "transformMS": 7.961
+      },
+      {
+        "consumeMS": 9.487583,
+        "generateMS": 4.737,
+        "id": 4,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "f8392a86bdfb1c848e9970a60e72ba330d2ee6703184b7e0d037e8297b7a12e8",
+        "predictMS": 5.227333,
+        "queueMS": 64.023833,
+        "reusedInputColumns": 0,
+        "serviceMS": 26.5535,
+        "transformMS": 7.074416
+      },
+      {
+        "consumeMS": 11.042083,
+        "generateMS": 4.600667,
+        "id": 5,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "f6b7e9ea48df9b4ebc76cc0bd6edfd01da7fb0e74e07796c0a3d1850cfdc5fe8",
+        "predictMS": 7.197625,
+        "queueMS": 69.570792,
+        "reusedInputColumns": 0,
+        "serviceMS": 29.878375,
+        "transformMS": 7.009833
+      },
+      {
+        "consumeMS": 10.313208,
+        "generateMS": 7.06075,
+        "id": 6,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "08a11bda95e031b8bd73346a43eda0ee557d6f0ac42f51b918451d866881388b",
+        "predictMS": 6.006292,
+        "queueMS": 90.595917,
+        "reusedInputColumns": 0,
+        "serviceMS": 31.977,
+        "transformMS": 8.567708
+      },
+      {
+        "consumeMS": 8.867292,
+        "generateMS": 5.50525,
+        "id": 7,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "77fd0ddf6b921fee05cee1a8d70df4a678ff3e7881cffe4a867e6446b2eb7166",
+        "predictMS": 7.209209,
+        "queueMS": 99.47375,
+        "reusedInputColumns": 0,
+        "serviceMS": 31.506583,
+        "transformMS": 9.89875
+      }
+    ],
+    "requests_per_second": 61.041462420979634,
+    "reserved_after": 0,
+    "round": 0,
+    "rows": 65535
+  },
+  {
+    "after_cache_clear": {
+      "mlx_active_bytes": 0,
+      "mlx_cache_bytes": 0,
+      "peak_rss_bytes": 272941056,
+      "rss_bytes": 238862336
+    },
+    "after_close": {
+      "mlx_active_bytes": 0,
+      "mlx_cache_bytes": 262408,
+      "peak_rss_bytes": 272941056,
+      "rss_bytes": 238862336
+    },
+    "before": {
+      "mlx_active_bytes": 264,
+      "mlx_cache_bytes": 0,
+      "peak_rss_bytes": 26705920,
+      "rss_bytes": 26705920
+    },
+    "columns": 65,
+    "elapsed_ms": 127.8435,
+    "estimate_bytes": 95222744,
+    "estimate_capacities": {
+      "backend_allowance": 8388608,
+      "logical_copy": 0,
+      "outputs_and_readback": 1572840,
+      "packed_allocation": 17039360,
+      "raw_and_transformed": 68156400,
+      "scaler_scratch_and_metadata": 65536
+    },
+    "limit_bytes": 268435456,
+    "measured": {
+      "mlx_active_bytes": 264,
+      "mlx_cache_bytes": 262144,
+      "peak_rss_bytes": 272941056,
+      "rss_bytes": 238862336
+    },
+    "peak_admitted_requests": 2,
+    "peak_reserved_bytes": 190445488,
+    "policy": "padded",
+    "queued_after": 0,
+    "request_count": 8,
+    "requests": [
+      {
+        "consumeMS": 10.722042,
+        "generateMS": 6.59,
+        "id": 0,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "a3cee9d4a7dd74dab641bea349b7c58f2755a09d0f9aedfdf033ee1c5e7cea12",
+        "predictMS": 7.383292,
+        "queueMS": 0.041292,
+        "reusedInputColumns": 0,
+        "serviceMS": 34.195375,
+        "transformMS": 9.471459
+      },
+      {
+        "consumeMS": 10.208583,
+        "generateMS": 6.54775,
+        "id": 1,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "513ddb5a4485a874ffdf1dd31ad3e4613b617b3cd00e59e73dfe4b9f9cb4ee45",
+        "predictMS": 13.197209,
+        "queueMS": 0.018583,
+        "reusedInputColumns": 0,
+        "serviceMS": 39.641583,
+        "transformMS": 9.661542
+      },
+      {
+        "consumeMS": 10.339667,
+        "generateMS": 4.607458,
+        "id": 2,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "4e93a8e1edfca5aa1f021e2dda925c9900b8554ee6f8ff0c6fba30b5c38c272e",
+        "predictMS": 8.67975,
+        "queueMS": 34.264375,
+        "reusedInputColumns": 0,
+        "serviceMS": 31.720792,
+        "transformMS": 8.066125
+      },
+      {
+        "consumeMS": 10.554083,
+        "generateMS": 5.279834,
+        "id": 3,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "64f254603ba6bcd681f7cc8c32ec733981c645dfac81834d0d8999f6b81f3c01",
+        "predictMS": 7.461458,
+        "queueMS": 39.6815,
+        "reusedInputColumns": 0,
+        "serviceMS": 31.9765,
+        "transformMS": 8.656792
+      },
+      {
+        "consumeMS": 10.156125,
+        "generateMS": 4.763375,
+        "id": 4,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "f8392a86bdfb1c848e9970a60e72ba330d2ee6703184b7e0d037e8297b7a12e8",
+        "predictMS": 5.517792,
+        "queueMS": 66.008292,
+        "reusedInputColumns": 0,
+        "serviceMS": 27.804,
+        "transformMS": 7.338792
+      },
+      {
+        "consumeMS": 10.723959,
+        "generateMS": 4.641625,
+        "id": 5,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "f6b7e9ea48df9b4ebc76cc0bd6edfd01da7fb0e74e07796c0a3d1850cfdc5fe8",
+        "predictMS": 5.456583,
+        "queueMS": 71.67575,
+        "reusedInputColumns": 0,
+        "serviceMS": 28.156125,
+        "transformMS": 7.308583
+      },
+      {
+        "consumeMS": 10.396792,
+        "generateMS": 4.654167,
+        "id": 6,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "08a11bda95e031b8bd73346a43eda0ee557d6f0ac42f51b918451d866881388b",
+        "predictMS": 5.831792,
+        "queueMS": 93.840916,
+        "reusedInputColumns": 0,
+        "serviceMS": 28.032292,
+        "transformMS": 7.12
+      },
+      {
+        "consumeMS": 10.74075,
+        "generateMS": 4.590834,
+        "id": 7,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "77fd0ddf6b921fee05cee1a8d70df4a678ff3e7881cffe4a867e6446b2eb7166",
+        "predictMS": 5.438375,
+        "queueMS": 99.850292,
+        "reusedInputColumns": 0,
+        "serviceMS": 27.910792,
+        "transformMS": 7.113292
+      }
+    ],
+    "requests_per_second": 62.57650956051735,
+    "reserved_after": 0,
+    "round": 0,
+    "rows": 65535
+  },
+  {
+    "after_cache_clear": {
+      "mlx_active_bytes": 0,
+      "mlx_cache_bytes": 0,
+      "peak_rss_bytes": 244236288,
+      "rss_bytes": 227196928
+    },
+    "after_close": {
+      "mlx_active_bytes": 0,
+      "mlx_cache_bytes": 262408,
+      "peak_rss_bytes": 244236288,
+      "rss_bytes": 227196928
+    },
+    "before": {
+      "mlx_active_bytes": 264,
+      "mlx_cache_bytes": 0,
+      "peak_rss_bytes": 26542080,
+      "rss_bytes": 26542080
+    },
+    "columns": 65,
+    "elapsed_ms": 126.4635,
+    "estimate_bytes": 95223808,
+    "estimate_capacities": {
+      "backend_allowance": 8388608,
+      "logical_copy": 0,
+      "outputs_and_readback": 1572864,
+      "packed_allocation": 17039360,
+      "raw_and_transformed": 68157440,
+      "scaler_scratch_and_metadata": 65536
+    },
+    "limit_bytes": 268435456,
+    "measured": {
+      "mlx_active_bytes": 264,
+      "mlx_cache_bytes": 262144,
+      "peak_rss_bytes": 244236288,
+      "rss_bytes": 227196928
+    },
+    "peak_admitted_requests": 2,
+    "peak_reserved_bytes": 190447616,
+    "policy": "logical",
+    "queued_after": 0,
+    "request_count": 8,
+    "requests": [
+      {
+        "consumeMS": 8.95625,
+        "generateMS": 6.682125,
+        "id": 0,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "138f5b56cb84291fb65630dea1b0e00cbe3d6b5f2abcdcab4e4b0ed038efc998",
+        "predictMS": 5.835834,
+        "queueMS": 0.016667,
+        "reusedInputColumns": 0,
+        "serviceMS": 32.293041,
+        "transformMS": 10.79275
+      },
+      {
+        "consumeMS": 9.291167,
+        "generateMS": 6.705625,
+        "id": 1,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "dfbbad5ca065b9634b2d1c39bfd010e167b42168778561dd0df30ab82e0565ca",
+        "predictMS": 10.711959,
+        "queueMS": 0.026416,
+        "reusedInputColumns": 0,
+        "serviceMS": 37.739,
+        "transformMS": 11.003666
+      },
+      {
+        "consumeMS": 10.017708,
+        "generateMS": 4.60075,
+        "id": 2,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "4a69c1f90eaa5e10b0c1dd7d8aebc281c17e4da1d241514d69461845dc133264",
+        "predictMS": 8.392167,
+        "queueMS": 32.342417,
+        "reusedInputColumns": 0,
+        "serviceMS": 30.411292,
+        "transformMS": 7.37275
+      },
+      {
+        "consumeMS": 10.078125,
+        "generateMS": 4.618625,
+        "id": 3,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "311589f603fa6a084f095f1078300b8c222de2b24ad1b1d5bce3486f918dedd8",
+        "predictMS": 8.361375,
+        "queueMS": 37.782084,
+        "reusedInputColumns": 0,
+        "serviceMS": 30.454875,
+        "transformMS": 7.372667
+      },
+      {
+        "consumeMS": 8.866625,
+        "generateMS": 4.904792,
+        "id": 4,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "8859c79a7af0d747a8b7790bcdbf1f8485ed897c63a42e5d57cc06c581d60e1e",
+        "predictMS": 8.547958,
+        "queueMS": 62.780375,
+        "reusedInputColumns": 0,
+        "serviceMS": 30.744583,
+        "transformMS": 8.401209
+      },
+      {
+        "consumeMS": 8.780042,
+        "generateMS": 4.653417,
+        "id": 5,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "23ba3ba70a68391f210a49aa0b25efb293b5b42a6d06d443cca5ab688e1832e9",
+        "predictMS": 8.868917,
+        "queueMS": 68.250125,
+        "reusedInputColumns": 0,
+        "serviceMS": 30.384167,
+        "transformMS": 8.050333
+      },
+      {
+        "consumeMS": 9.602792,
+        "generateMS": 4.9495,
+        "id": 6,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "d2cb00fd6be47abbff0cd3569a83300bd1d40689d92488b983a86d66d73fc98e",
+        "predictMS": 5.601958,
+        "queueMS": 93.550666,
+        "reusedInputColumns": 0,
+        "serviceMS": 27.80775,
+        "transformMS": 7.627833
+      },
+      {
+        "consumeMS": 8.64125,
+        "generateMS": 4.67125,
+        "id": 7,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "a971ff06c43ff85de6c37788a39c79d8ccbe80697d0d7c99f4d9155473979863",
+        "predictMS": 7.231125,
+        "queueMS": 98.651459,
+        "reusedInputColumns": 0,
+        "serviceMS": 27.730917,
+        "transformMS": 7.165042
+      }
+    ],
+    "requests_per_second": 63.259359419911675,
+    "reserved_after": 0,
+    "round": 0,
+    "rows": 65536
+  },
+  {
+    "after_cache_clear": {
+      "mlx_active_bytes": 0,
+      "mlx_cache_bytes": 0,
+      "peak_rss_bytes": 253329408,
+      "rss_bytes": 219250688
+    },
+    "after_close": {
+      "mlx_active_bytes": 0,
+      "mlx_cache_bytes": 262408,
+      "peak_rss_bytes": 253329408,
+      "rss_bytes": 219250688
+    },
+    "before": {
+      "mlx_active_bytes": 264,
+      "mlx_cache_bytes": 0,
+      "peak_rss_bytes": 26034176,
+      "rss_bytes": 26034176
+    },
+    "columns": 65,
+    "elapsed_ms": 116.311875,
+    "estimate_bytes": 95223808,
+    "estimate_capacities": {
+      "backend_allowance": 8388608,
+      "logical_copy": 0,
+      "outputs_and_readback": 1572864,
+      "packed_allocation": 17039360,
+      "raw_and_transformed": 68157440,
+      "scaler_scratch_and_metadata": 65536
+    },
+    "limit_bytes": 268435456,
+    "measured": {
+      "mlx_active_bytes": 264,
+      "mlx_cache_bytes": 262144,
+      "peak_rss_bytes": 253329408,
+      "rss_bytes": 219250688
+    },
+    "peak_admitted_requests": 2,
+    "peak_reserved_bytes": 190447616,
+    "policy": "padded",
+    "queued_after": 0,
+    "request_count": 8,
+    "requests": [
+      {
+        "consumeMS": 8.750333,
+        "generateMS": 6.395125,
+        "id": 0,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "138f5b56cb84291fb65630dea1b0e00cbe3d6b5f2abcdcab4e4b0ed038efc998",
+        "predictMS": 5.655375,
+        "queueMS": 0.016292,
+        "reusedInputColumns": 0,
+        "serviceMS": 30.310542,
+        "transformMS": 9.481833
+      },
+      {
+        "consumeMS": 9.033084,
+        "generateMS": 6.403833,
+        "id": 1,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "dfbbad5ca065b9634b2d1c39bfd010e167b42168778561dd0df30ab82e0565ca",
+        "predictMS": 9.389375,
+        "queueMS": 0.026667,
+        "reusedInputColumns": 0,
+        "serviceMS": 35.439,
+        "transformMS": 10.590375
+      },
+      {
+        "consumeMS": 8.8595,
+        "generateMS": 4.812333,
+        "id": 2,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "4a69c1f90eaa5e10b0c1dd7d8aebc281c17e4da1d241514d69461845dc133264",
+        "predictMS": 5.770417,
+        "queueMS": 30.358917,
+        "reusedInputColumns": 0,
+        "serviceMS": 27.0475,
+        "transformMS": 7.580042
+      },
+      {
+        "consumeMS": 8.699959,
+        "generateMS": 4.567792,
+        "id": 3,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "311589f603fa6a084f095f1078300b8c222de2b24ad1b1d5bce3486f918dedd8",
+        "predictMS": 5.178458,
+        "queueMS": 35.483916,
+        "reusedInputColumns": 0,
+        "serviceMS": 26.688708,
+        "transformMS": 8.213333
+      },
+      {
+        "consumeMS": 9.151,
+        "generateMS": 4.718,
+        "id": 4,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "8859c79a7af0d747a8b7790bcdbf1f8485ed897c63a42e5d57cc06c581d60e1e",
+        "predictMS": 5.067708,
+        "queueMS": 57.429917,
+        "reusedInputColumns": 0,
+        "serviceMS": 25.929958,
+        "transformMS": 6.971958
+      },
+      {
+        "consumeMS": 9.080458,
+        "generateMS": 4.588041,
+        "id": 5,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "23ba3ba70a68391f210a49aa0b25efb293b5b42a6d06d443cca5ab688e1832e9",
+        "predictMS": 6.603834,
+        "queueMS": 62.185917,
+        "reusedInputColumns": 0,
+        "serviceMS": 27.410583,
+        "transformMS": 7.112292
+      },
+      {
+        "consumeMS": 9.332834,
+        "generateMS": 4.527042,
+        "id": 6,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "d2cb00fd6be47abbff0cd3569a83300bd1d40689d92488b983a86d66d73fc98e",
+        "predictMS": 4.929792,
+        "queueMS": 83.381292,
+        "reusedInputColumns": 0,
+        "serviceMS": 25.75425,
+        "transformMS": 6.938042
+      },
+      {
+        "consumeMS": 9.059333,
+        "generateMS": 4.512125,
+        "id": 7,
+        "maxError": 9.5367431640625e-07,
+        "outputSHA256": "a971ff06c43ff85de6c37788a39c79d8ccbe80697d0d7c99f4d9155473979863",
+        "predictMS": 5.381375,
+        "queueMS": 89.612542,
+        "reusedInputColumns": 0,
+        "serviceMS": 26.625625,
+        "transformMS": 7.651416
+      }
+    ],
+    "requests_per_second": 68.78059527455817,
+    "reserved_after": 0,
+    "round": 0,
+    "rows": 65536
+  }
+]

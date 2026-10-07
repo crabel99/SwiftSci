@@ -1,0 +1,25 @@
+{
+  "base": "5ee5ff7649035a2953d5ed53941116e61891be02",
+  "reviews": [
+    {
+      "axis": "behavior",
+      "agent": "scoped_padding_behavior",
+      "findings": [],
+      "scope": "Ownership, aliases, NaN handling, fitted-parameter snapshot, validation, metadata and concurrent transforms."
+    },
+    {
+      "axis": "standards",
+      "agent": "scoped_padding_standards",
+      "findings": [],
+      "scope": "Documented standards, public API docs, duplication, naming and maintainability."
+    }
+  ],
+  "review_type": "Read-only source review; no reviewer builds or tests.",
+  "source_sha256": {
+    "Sources/SwiftPreprocessing/Core/StandardScaler.swift": "1b5e984ede1eac98b8c5388ca0cadc25e5a895ef324ea0e775393c1d779916ec",
+    "Tests/SwiftPreprocessingTests/ConsumingScalerTests.swift": "6a5045444207cd9ab55161567ee8cc7c42263e2da272c183c8a6114a3fc0df3e",
+    "Tests/SwiftPreprocessingTests/TiledScalerCompatibilityTests.swift": "f8e86ae50e2f5a9fb07de967ce7b5bd9b3d13e48eb10f8f614f11a575f76a378",
+    "Benchmarks/RetainedGPUTrial/OwnedScalerTrial.swift": "dde3c2173332a7661b36ed0ef3e62c926aca434d71d25e21da937bf1efb98510",
+    "Benchmarks/RetainedGPUTrial/README.md": "fc5743190291df01d8de0055ce78280d7a2e17e5f4446ff01b7a085737dcf541"
+  }
+}
