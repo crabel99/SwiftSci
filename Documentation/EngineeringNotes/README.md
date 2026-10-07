@@ -130,6 +130,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 - [Invalid-context generation fix](benchmarks/2026-10-04-context-validation-fix.md) preserves typed errors with stricter MLX validation and records the passing combined Release suite.
 
+- [Retained reservation handoff trial](research/2026-10-06-retained-memory-handoff-trial.md) records atomic admission transfer, storage-owner cleanup, focused sanitizer checks, and the remaining model integration boundary.
+
 ## Keeping the record
 
 Commit new discussion summaries, research findings, alternatives and evidence to this branch. Date each entry and identify the relevant source revision. Mark proposals, measured results, source observations and unresolved questions separately. Record why a decision changed instead of rewriting an old experiment as if it had reached the new conclusion.
