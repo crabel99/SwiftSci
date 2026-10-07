@@ -1,0 +1,411 @@
+
+/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/derived/Build/Intermediates.noindex/SwiftSci.build/Release/SwiftPreprocessing-t.build/Objects-normal/arm64/PreparedFloatPacking.o:	file format mach-o arm64
+
+Disassembly of section __TEXT,__text:
+
+0000000000000000 <ltmp0>:
+       0: 12001c08     	and	w8, w0, #0xff
+       4: 6b21011f     	cmp	w8, w1, uxtb
+       8: 1a9f17e0     	cset	w0, eq
+       c: d65f03c0     	ret
+
+0000000000000010 <SwiftPreprocessing.PreparedFloatPacking.Strategy.hash(into: inout Swift.Hasher) -> ()>:
+      10: a9be4ff4     	stp	x20, x19, [sp, #-0x20]!
+      14: a9017bfd     	stp	x29, x30, [sp, #0x10]
+      18: 910043fd     	add	x29, sp, #0x10
+      1c: aa0003f4     	mov	x20, x0
+      20: 92401c20     	and	x0, x1, #0xff
+      24: 94000000     	bl	0x24 <SwiftPreprocessing.PreparedFloatPacking.Strategy.hash(into: inout Swift.Hasher) -> ()+0x14>
+		0000000000000024:  ARM64_RELOC_BRANCH26	Swift.Hasher._combine(Swift.UInt) -> ()
+      28: a9417bfd     	ldp	x29, x30, [sp, #0x10]
+      2c: a8c24ff4     	ldp	x20, x19, [sp], #0x20
+      30: d65f03c0     	ret
+
+0000000000000034 <SwiftPreprocessing.PreparedFloatPacking.Strategy.hashValue.getter : Swift.Int>:
+      34: d101c3ff     	sub	sp, sp, #0x70
+      38: a9054ff4     	stp	x20, x19, [sp, #0x50]
+      3c: a9067bfd     	stp	x29, x30, [sp, #0x60]
+      40: 910183fd     	add	x29, sp, #0x60
+      44: aa0003f3     	mov	x19, x0
+      48: 910023e8     	add	x8, sp, #0x8
+      4c: d2800000     	mov	x0, #0x0                ; =0
+      50: 94000000     	bl	0x50 <SwiftPreprocessing.PreparedFloatPacking.Strategy.hashValue.getter : Swift.Int+0x1c>
+		0000000000000050:  ARM64_RELOC_BRANCH26	Swift.Hasher.init(_seed: Swift.Int) -> Swift.Hasher
+      54: 92401e60     	and	x0, x19, #0xff
+      58: 910023f4     	add	x20, sp, #0x8
+      5c: 94000000     	bl	0x5c <SwiftPreprocessing.PreparedFloatPacking.Strategy.hashValue.getter : Swift.Int+0x28>
+		000000000000005c:  ARM64_RELOC_BRANCH26	Swift.Hasher._combine(Swift.UInt) -> ()
+      60: 910023f4     	add	x20, sp, #0x8
+      64: 94000000     	bl	0x64 <SwiftPreprocessing.PreparedFloatPacking.Strategy.hashValue.getter : Swift.Int+0x30>
+		0000000000000064:  ARM64_RELOC_BRANCH26	Swift.Hasher._finalize() -> Swift.Int
+      68: a9467bfd     	ldp	x29, x30, [sp, #0x60]
+      6c: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+      70: 9101c3ff     	add	sp, sp, #0x70
+      74: d65f03c0     	ret
+
+0000000000000078 <protocol witness for static Swift.Equatable.== infix(A, A) -> Swift.Bool in conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Equatable in SwiftPreprocessing>:
+      78: 39400008     	ldrb	w8, [x0]
+      7c: 39400029     	ldrb	w9, [x1]
+      80: 6b09011f     	cmp	w8, w9
+      84: 1a9f17e0     	cset	w0, eq
+      88: d65f03c0     	ret
+
+000000000000008c <protocol witness for Swift.Hashable.hashValue.getter : Swift.Int in conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing>:
+      8c: d101c3ff     	sub	sp, sp, #0x70
+      90: a9054ff4     	stp	x20, x19, [sp, #0x50]
+      94: a9067bfd     	stp	x29, x30, [sp, #0x60]
+      98: 910183fd     	add	x29, sp, #0x60
+      9c: 39400293     	ldrb	w19, [x20]
+      a0: 910023e8     	add	x8, sp, #0x8
+      a4: d2800000     	mov	x0, #0x0                ; =0
+      a8: 94000000     	bl	0xa8 <protocol witness for Swift.Hashable.hashValue.getter : Swift.Int in conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing+0x1c>
+		00000000000000a8:  ARM64_RELOC_BRANCH26	Swift.Hasher.init(_seed: Swift.Int) -> Swift.Hasher
+      ac: 910023f4     	add	x20, sp, #0x8
+      b0: aa1303e0     	mov	x0, x19
+      b4: 94000000     	bl	0xb4 <protocol witness for Swift.Hashable.hashValue.getter : Swift.Int in conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing+0x28>
+		00000000000000b4:  ARM64_RELOC_BRANCH26	Swift.Hasher._combine(Swift.UInt) -> ()
+      b8: 910023f4     	add	x20, sp, #0x8
+      bc: 94000000     	bl	0xbc <protocol witness for Swift.Hashable.hashValue.getter : Swift.Int in conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing+0x30>
+		00000000000000bc:  ARM64_RELOC_BRANCH26	Swift.Hasher._finalize() -> Swift.Int
+      c0: a9467bfd     	ldp	x29, x30, [sp, #0x60]
+      c4: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+      c8: 9101c3ff     	add	sp, sp, #0x70
+      cc: d65f03c0     	ret
+
+00000000000000d0 <protocol witness for Swift.Hashable.hash(into: inout Swift.Hasher) -> () in conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing>:
+      d0: a9be4ff4     	stp	x20, x19, [sp, #-0x20]!
+      d4: a9017bfd     	stp	x29, x30, [sp, #0x10]
+      d8: 910043fd     	add	x29, sp, #0x10
+      dc: aa0003e8     	mov	x8, x0
+      e0: 39400280     	ldrb	w0, [x20]
+      e4: aa0803f4     	mov	x20, x8
+      e8: 94000000     	bl	0xe8 <protocol witness for Swift.Hashable.hash(into: inout Swift.Hasher) -> () in conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing+0x18>
+		00000000000000e8:  ARM64_RELOC_BRANCH26	Swift.Hasher._combine(Swift.UInt) -> ()
+      ec: a9417bfd     	ldp	x29, x30, [sp, #0x10]
+      f0: a8c24ff4     	ldp	x20, x19, [sp], #0x20
+      f4: d65f03c0     	ret
+
+00000000000000f8 <protocol witness for Swift.Hashable._rawHashValue(seed: Swift.Int) -> Swift.Int in conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing>:
+      f8: d101c3ff     	sub	sp, sp, #0x70
+      fc: a9054ff4     	stp	x20, x19, [sp, #0x50]
+     100: a9067bfd     	stp	x29, x30, [sp, #0x60]
+     104: 910183fd     	add	x29, sp, #0x60
+     108: 39400293     	ldrb	w19, [x20]
+     10c: 910023e8     	add	x8, sp, #0x8
+     110: 94000000     	bl	0x110 <protocol witness for Swift.Hashable._rawHashValue(seed: Swift.Int) -> Swift.Int in conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing+0x18>
+		0000000000000110:  ARM64_RELOC_BRANCH26	Swift.Hasher.init(_seed: Swift.Int) -> Swift.Hasher
+     114: 910023f4     	add	x20, sp, #0x8
+     118: aa1303e0     	mov	x0, x19
+     11c: 94000000     	bl	0x11c <protocol witness for Swift.Hashable._rawHashValue(seed: Swift.Int) -> Swift.Int in conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing+0x24>
+		000000000000011c:  ARM64_RELOC_BRANCH26	Swift.Hasher._combine(Swift.UInt) -> ()
+     120: 910023f4     	add	x20, sp, #0x8
+     124: 94000000     	bl	0x124 <protocol witness for Swift.Hashable._rawHashValue(seed: Swift.Int) -> Swift.Int in conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing+0x2c>
+		0000000000000124:  ARM64_RELOC_BRANCH26	Swift.Hasher._finalize() -> Swift.Int
+     128: a9467bfd     	ldp	x29, x30, [sp, #0x60]
+     12c: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+     130: 9101c3ff     	add	sp, sp, #0x70
+     134: d65f03c0     	ret
+
+0000000000000138 <static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()>:
+     138: 14000000     	b	0x138 <static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()>
+		0000000000000138:  ARM64_RELOC_BRANCH26	function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()
+
+000000000000013c <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()>:
+     13c: a9bc5ff8     	stp	x24, x23, [sp, #-0x40]!
+     140: a90157f6     	stp	x22, x21, [sp, #0x10]
+     144: a9024ff4     	stp	x20, x19, [sp, #0x20]
+     148: a9037bfd     	stp	x29, x30, [sp, #0x30]
+     14c: 9100c3fd     	add	x29, sp, #0x30
+     150: aa0603f6     	mov	x22, x6
+     154: aa0503f7     	mov	x23, x5
+     158: aa0403f3     	mov	x19, x4
+     15c: aa0203f4     	mov	x20, x2
+     160: aa0103f5     	mov	x21, x1
+     164: 94000000     	bl	0x164 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x28>
+		0000000000000164:  ARM64_RELOC_BRANCH26	SwiftDataFrame.PreparedNumericBatch.columnCount.getter : Swift.Int
+     168: 9b007ea8     	mul	x8, x21, x0
+     16c: 9b407ea9     	smulh	x9, x21, x0
+     170: eb88fd3f     	cmp	x9, x8, asr #63
+     174: 54000f01     	b.ne	0x354 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x218>
+     178: eb0802ff     	cmp	x23, x8
+     17c: 54000ee1     	b.ne	0x358 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x21c>
+     180: f10006ff     	cmp	x23, #0x1
+     184: 54000cab     	b.lt	0x318 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x1dc>
+     188: b4000f33     	cbz	x19, 0x36c <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x230>
+     18c: 12001ec8     	and	w8, w22, #0xff
+     190: 7100051f     	cmp	w8, #0x1
+     194: 54000801     	b.ne	0x294 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x158>
+     198: f10006bf     	cmp	x21, #0x1
+     19c: 54000beb     	b.lt	0x318 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x1dc>
+     1a0: d280000a     	mov	x10, #0x0               ; =0
+     1a4: 91008288     	add	x8, x20, #0x20
+     1a8: 5280040c     	mov	w12, #0x20              ; =32
+     1ac: 52800309     	mov	w9, #0x18               ; =24
+     1b0: aa0c03eb     	mov	x11, x12
+     1b4: eb0c02bf     	cmp	x21, x12
+     1b8: 9a8cb2ac     	csel	x12, x21, x12, lt
+     1bc: f100041f     	cmp	x0, #0x1
+     1c0: 540005cb     	b.lt	0x278 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x13c>
+     1c4: d280000d     	mov	x13, #0x0               ; =0
+     1c8: 5280040e     	mov	w14, #0x20              ; =32
+     1cc: eb0e001f     	cmp	x0, x14
+     1d0: 9a8eb00f     	csel	x15, x0, x14, lt
+     1d4: eb0d01df     	cmp	x14, x13
+     1d8: 54000bcb     	b.lt	0x350 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x214>
+     1dc: 540000e1     	b.ne	0x1f8 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0xbc>
+     1e0: eb0001df     	cmp	x14, x0
+     1e4: 540004aa     	b.ge	0x278 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x13c>
+     1e8: aa0e03ed     	mov	x13, x14
+     1ec: b10081ce     	adds	x14, x14, #0x20
+     1f0: 54fffee7     	b.vc	0x1cc <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x90>
+     1f4: 1400005a     	b	0x35c <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x220>
+     1f8: eb0a017f     	cmp	x11, x10
+     1fc: 54000b2b     	b.lt	0x360 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x224>
+     200: f9400a90     	ldr	x16, [x20, #0x10]
+     204: 14000004     	b	0x214 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0xd8>
+     208: 910005ad     	add	x13, x13, #0x1
+     20c: eb0f01bf     	cmp	x13, x15
+     210: 54fffe80     	b.eq	0x1e0 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0xa4>
+     214: eb0f01bf     	cmp	x13, x15
+     218: 5400092a     	b.ge	0x33c <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x200>
+     21c: eb1001bf     	cmp	x13, x16
+     220: 54000902     	b.hs	0x340 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x204>
+     224: eb0a017f     	cmp	x11, x10
+     228: 54ffff00     	b.eq	0x208 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0xcc>
+     22c: eb0a017f     	cmp	x11, x10
+     230: 540008ad     	b.le	0x344 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x208>
+     234: 9b097db1     	mul	x17, x13, x9
+     238: f8716911     	ldr	x17, [x8, x17]
+     23c: 91008231     	add	x17, x17, #0x20
+     240: aa0a03e1     	mov	x1, x10
+     244: 9b007c22     	mul	x2, x1, x0
+     248: 9b407c23     	smulh	x3, x1, x0
+     24c: eb82fc7f     	cmp	x3, x2, asr #63
+     250: 540006e1     	b.ne	0x32c <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x1f0>
+     254: ab0d0042     	adds	x2, x2, x13
+     258: 540006c6     	b.vs	0x330 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x1f4>
+     25c: fc617a20     	ldr	d0, [x17, x1, lsl #3]
+     260: 91000421     	add	x1, x1, #0x1
+     264: 1e624000     	fcvt	s0, d0
+     268: bc227a60     	str	s0, [x19, x2, lsl #2]
+     26c: eb01019f     	cmp	x12, x1
+     270: 54fffea1     	b.ne	0x244 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x108>
+     274: 17ffffe5     	b	0x208 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0xcc>
+     278: eb15017f     	cmp	x11, x21
+     27c: 540004ea     	b.ge	0x318 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x1dc>
+     280: 9100816c     	add	x12, x11, #0x20
+     284: aa0b03ea     	mov	x10, x11
+     288: b100817f     	cmn	x11, #0x20
+     28c: 54fff927     	b.vc	0x1b0 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x74>
+     290: d4200020     	brk	#0x1
+     294: b7f80695     	tbnz	x21, #0x3f, 0x364 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x228>
+     298: b4000415     	cbz	x21, 0x318 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x1dc>
+     29c: b7f80660     	tbnz	x0, #0x3f, 0x368 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x22c>
+     2a0: d2800008     	mov	x8, #0x0                ; =0
+     2a4: 91008289     	add	x9, x20, #0x20
+     2a8: 14000004     	b	0x2b8 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x17c>
+     2ac: 91000508     	add	x8, x8, #0x1
+     2b0: eb15011f     	cmp	x8, x21
+     2b4: 54000320     	b.eq	0x318 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x1dc>
+     2b8: b4ffffa0     	cbz	x0, 0x2ac <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x170>
+     2bc: 9b007d0a     	mul	x10, x8, x0
+     2c0: 9b407d0b     	smulh	x11, x8, x0
+     2c4: eb8afd7f     	cmp	x11, x10, asr #63
+     2c8: 54000401     	b.ne	0x348 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x20c>
+     2cc: f9400a8b     	ldr	x11, [x20, #0x10]
+     2d0: eb0b001f     	cmp	x0, x11
+     2d4: 540003cc     	b.gt	0x34c <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x210>
+     2d8: d280000b     	mov	x11, #0x0               ; =0
+     2dc: aa0903ec     	mov	x12, x9
+     2e0: ab0b014d     	adds	x13, x10, x11
+     2e4: 54000286     	b.vs	0x334 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x1f8>
+     2e8: f841858e     	ldr	x14, [x12], #0x18
+     2ec: f94009cf     	ldr	x15, [x14, #0x10]
+     2f0: eb0f011f     	cmp	x8, x15
+     2f4: 54000222     	b.hs	0x338 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x1fc>
+     2f8: 9100056b     	add	x11, x11, #0x1
+     2fc: 8b080dce     	add	x14, x14, x8, lsl #3
+     300: fd4011c0     	ldr	d0, [x14, #0x20]
+     304: 1e624000     	fcvt	s0, d0
+     308: bc2d7a60     	str	s0, [x19, x13, lsl #2]
+     30c: eb0b001f     	cmp	x0, x11
+     310: 54fffe81     	b.ne	0x2e0 <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x1a4>
+     314: 17ffffe6     	b	0x2ac <function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()+0x170>
+     318: a9437bfd     	ldp	x29, x30, [sp, #0x30]
+     31c: a9424ff4     	ldp	x20, x19, [sp, #0x20]
+     320: a94157f6     	ldp	x22, x21, [sp, #0x10]
+     324: a8c45ff8     	ldp	x24, x23, [sp], #0x40
+     328: d65f03c0     	ret
+     32c: d4200020     	brk	#0x1
+     330: d4200020     	brk	#0x1
+     334: d4200020     	brk	#0x1
+     338: d4200020     	brk	#0x1
+     33c: d4200020     	brk	#0x1
+     340: d4200020     	brk	#0x1
+     344: d4200020     	brk	#0x1
+     348: d4200020     	brk	#0x1
+     34c: d4200020     	brk	#0x1
+     350: d4200020     	brk	#0x1
+     354: d4200020     	brk	#0x1
+     358: d4200020     	brk	#0x1
+     35c: d4200020     	brk	#0x1
+     360: d4200020     	brk	#0x1
+     364: d4200020     	brk	#0x1
+     368: d4200020     	brk	#0x1
+     36c: d4200020     	brk	#0x1
+
+0000000000000370 <base witness table accessor for Swift.Equatable in SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing>:
+     370: 14000000     	b	0x370 <base witness table accessor for Swift.Equatable in SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Hashable in SwiftPreprocessing>
+		0000000000000370:  ARM64_RELOC_BRANCH26	lazy protocol witness table accessor for type SwiftPreprocessing.PreparedFloatPacking.Strategy and conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Equatable in SwiftPreprocessing
+
+0000000000000374 <lazy protocol witness table accessor for type SwiftPreprocessing.PreparedFloatPacking.Strategy and conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Equatable in SwiftPreprocessing>:
+     374: 90000008     	adrp	x8, 0x0 <ltmp0>
+		0000000000000374:  ARM64_RELOC_PAGE21	lazy protocol witness table cache variable for type SwiftPreprocessing.PreparedFloatPacking.Strategy and conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Equatable in SwiftPreprocessing
+     378: f9400100     	ldr	x0, [x8]
+		0000000000000378:  ARM64_RELOC_PAGEOFF12	lazy protocol witness table cache variable for type SwiftPreprocessing.PreparedFloatPacking.Strategy and conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Equatable in SwiftPreprocessing
+     37c: b4000040     	cbz	x0, 0x384 <lazy protocol witness table accessor for type SwiftPreprocessing.PreparedFloatPacking.Strategy and conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Equatable in SwiftPreprocessing+0x10>
+     380: d65f03c0     	ret
+     384: a9bf7bfd     	stp	x29, x30, [sp, #-0x10]!
+     388: 910003fd     	mov	x29, sp
+     38c: 90000000     	adrp	x0, 0x0 <ltmp0>
+		000000000000038c:  ARM64_RELOC_PAGE21	protocol conformance descriptor for SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Equatable in SwiftPreprocessing
+     390: 91000000     	add	x0, x0, #0x0
+		0000000000000390:  ARM64_RELOC_PAGEOFF12	protocol conformance descriptor for SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Equatable in SwiftPreprocessing
+     394: 90000001     	adrp	x1, 0x0 <ltmp0>
+		0000000000000394:  ARM64_RELOC_ADDEND	0x10
+		0000000000000394:  ARM64_RELOC_PAGE21	full type metadata for SwiftPreprocessing.PreparedFloatPacking.Strategy
+     398: 91000021     	add	x1, x1, #0x0
+		0000000000000398:  ARM64_RELOC_ADDEND	0x10
+		0000000000000398:  ARM64_RELOC_PAGEOFF12	full type metadata for SwiftPreprocessing.PreparedFloatPacking.Strategy
+     39c: 94000000     	bl	0x39c <lazy protocol witness table accessor for type SwiftPreprocessing.PreparedFloatPacking.Strategy and conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Equatable in SwiftPreprocessing+0x28>
+		000000000000039c:  ARM64_RELOC_BRANCH26	_swift_getWitnessTable
+     3a0: 90000008     	adrp	x8, 0x0 <ltmp0>
+		00000000000003a0:  ARM64_RELOC_PAGE21	lazy protocol witness table cache variable for type SwiftPreprocessing.PreparedFloatPacking.Strategy and conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Equatable in SwiftPreprocessing
+     3a4: 91000108     	add	x8, x8, #0x0
+		00000000000003a4:  ARM64_RELOC_PAGEOFF12	lazy protocol witness table cache variable for type SwiftPreprocessing.PreparedFloatPacking.Strategy and conformance SwiftPreprocessing.PreparedFloatPacking.Strategy : Swift.Equatable in SwiftPreprocessing
+     3a8: c89ffd00     	stlr	x0, [x8]
+     3ac: a8c17bfd     	ldp	x29, x30, [sp], #0x10
+     3b0: d65f03c0     	ret
+
+00000000000003b4 <type metadata accessor for SwiftPreprocessing.PreparedFloatPacking>:
+     3b4: 90000000     	adrp	x0, 0x0 <ltmp0>
+		00000000000003b4:  ARM64_RELOC_ADDEND	0x10
+		00000000000003b4:  ARM64_RELOC_PAGE21	full type metadata for SwiftPreprocessing.PreparedFloatPacking
+     3b8: 91000000     	add	x0, x0, #0x0
+		00000000000003b8:  ARM64_RELOC_ADDEND	0x10
+		00000000000003b8:  ARM64_RELOC_PAGEOFF12	full type metadata for SwiftPreprocessing.PreparedFloatPacking
+     3bc: d2800001     	mov	x1, #0x0                ; =0
+     3c0: d65f03c0     	ret
+
+00000000000003c4 <___swift_memcpy1_1>:
+     3c4: 39400028     	ldrb	w8, [x1]
+     3c8: 39000008     	strb	w8, [x0]
+     3cc: d65f03c0     	ret
+
+00000000000003d0 <___swift_noop_void_return>:
+     3d0: d65f03c0     	ret
+
+00000000000003d4 <getEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy>:
+     3d4: 34000261     	cbz	w1, 0x420 <getEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x4c>
+     3d8: 7103fc3f     	cmp	w1, #0xff
+     3dc: 540003a3     	b.lo	0x450 <getEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x7c>
+     3e0: 11000428     	add	w8, w1, #0x1
+     3e4: 32183fe9     	mov	w9, #0xffff00           ; =16776960
+     3e8: 5280008a     	mov	w10, #0x4               ; =4
+     3ec: 5280004b     	mov	w11, #0x2               ; =2
+     3f0: 6b09011f     	cmp	w8, w9
+     3f4: 1a8a3169     	csel	w9, w11, w10, lo
+     3f8: 53087d08     	lsr	w8, w8, #8
+     3fc: 7103fd1f     	cmp	w8, #0xff
+     400: 1a9f2528     	csinc	w8, w9, wzr, hs
+     404: 7100111f     	cmp	w8, #0x4
+     408: 54000120     	b.eq	0x42c <getEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x58>
+     40c: 7100091f     	cmp	w8, #0x2
+     410: 540001c1     	b.ne	0x448 <getEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x74>
+     414: 78401008     	ldurh	w8, [x0, #0x1]
+     418: 350000e8     	cbnz	w8, 0x434 <getEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x60>
+     41c: 1400000d     	b	0x450 <getEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x7c>
+     420: 12800008     	mov	w8, #-0x1               ; =-1
+     424: 11000500     	add	w0, w8, #0x1
+     428: d65f03c0     	ret
+     42c: b8401008     	ldur	w8, [x0, #0x1]
+     430: 34000108     	cbz	w8, 0x450 <getEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x7c>
+     434: 39400009     	ldrb	w9, [x0]
+     438: 2a082128     	orr	w8, w9, w8, lsl #8
+     43c: 51000908     	sub	w8, w8, #0x2
+     440: 11000500     	add	w0, w8, #0x1
+     444: d65f03c0     	ret
+     448: 39400408     	ldrb	w8, [x0, #0x1]
+     44c: 35ffff48     	cbnz	w8, 0x434 <getEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x60>
+     450: 39400008     	ldrb	w8, [x0]
+     454: 71000908     	subs	w8, w8, #0x2
+     458: 5a9f2108     	csinv	w8, w8, wzr, hs
+     45c: 11000500     	add	w0, w8, #0x1
+     460: d65f03c0     	ret
+
+0000000000000464 <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy>:
+     464: 11000448     	add	w8, w2, #0x1
+     468: 32183fe9     	mov	w9, #0xffff00           ; =16776960
+     46c: 5280008a     	mov	w10, #0x4               ; =4
+     470: 5280004b     	mov	w11, #0x2               ; =2
+     474: 6b09011f     	cmp	w8, w9
+     478: 1a8a3169     	csel	w9, w11, w10, lo
+     47c: 53087d08     	lsr	w8, w8, #8
+     480: 7103fd1f     	cmp	w8, #0xff
+     484: 1a9f2528     	csinc	w8, w9, wzr, hs
+     488: 7103fc5f     	cmp	w2, #0xff
+     48c: 1a8833e8     	csel	w8, wzr, w8, lo
+     490: 7103f83f     	cmp	w1, #0xfe
+     494: 540000e8     	b.hi	0x4b0 <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x4c>
+     498: 7100051f     	cmp	w8, #0x1
+     49c: 540001cc     	b.gt	0x4d4 <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x70>
+     4a0: 34000208     	cbz	w8, 0x4e0 <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x7c>
+     4a4: 3900041f     	strb	wzr, [x0, #0x1]
+     4a8: 350001e1     	cbnz	w1, 0x4e4 <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x80>
+     4ac: 14000017     	b	0x508 <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0xa4>
+     4b0: 5103fc2a     	sub	w10, w1, #0xff
+     4b4: 53087d49     	lsr	w9, w10, #8
+     4b8: 11000529     	add	w9, w9, #0x1
+     4bc: 3900000a     	strb	w10, [x0]
+     4c0: 7100051f     	cmp	w8, #0x1
+     4c4: 5400016c     	b.gt	0x4f0 <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x8c>
+     4c8: 34000208     	cbz	w8, 0x508 <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0xa4>
+     4cc: 39000409     	strb	w9, [x0, #0x1]
+     4d0: d65f03c0     	ret
+     4d4: 7100091f     	cmp	w8, #0x2
+     4d8: 54000141     	b.ne	0x500 <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x9c>
+     4dc: 7800101f     	sturh	wzr, [x0, #0x1]
+     4e0: 34000141     	cbz	w1, 0x508 <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0xa4>
+     4e4: 11000428     	add	w8, w1, #0x1
+     4e8: 39000008     	strb	w8, [x0]
+     4ec: d65f03c0     	ret
+     4f0: 7100091f     	cmp	w8, #0x2
+     4f4: 540000c1     	b.ne	0x50c <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0xa8>
+     4f8: 78001009     	sturh	w9, [x0, #0x1]
+     4fc: d65f03c0     	ret
+     500: b800101f     	stur	wzr, [x0, #0x1]
+     504: 35ffff01     	cbnz	w1, 0x4e4 <storeEnumTagSinglePayload value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy+0x80>
+     508: d65f03c0     	ret
+     50c: b8001009     	stur	w9, [x0, #0x1]
+     510: d65f03c0     	ret
+
+0000000000000514 <getEnumTag value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy>:
+     514: 39400000     	ldrb	w0, [x0]
+     518: d65f03c0     	ret
+
+000000000000051c <destructiveProjectEnumData value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy>:
+     51c: d65f03c0     	ret
+
+0000000000000520 <destructiveInjectEnumTag value witness for SwiftPreprocessing.PreparedFloatPacking.Strategy>:
+     520: 39000001     	strb	w1, [x0]
+     524: d65f03c0     	ret
+
+0000000000000528 <type metadata accessor for SwiftPreprocessing.PreparedFloatPacking.Strategy>:
+     528: 90000000     	adrp	x0, 0x0 <ltmp0>
+		0000000000000528:  ARM64_RELOC_ADDEND	0x10
+		0000000000000528:  ARM64_RELOC_PAGE21	full type metadata for SwiftPreprocessing.PreparedFloatPacking.Strategy
+     52c: 91000000     	add	x0, x0, #0x0
+		000000000000052c:  ARM64_RELOC_ADDEND	0x10
+		000000000000052c:  ARM64_RELOC_PAGEOFF12	full type metadata for SwiftPreprocessing.PreparedFloatPacking.Strategy
+     530: d2800001     	mov	x1, #0x0                ; =0
+     534: d65f03c0     	ret

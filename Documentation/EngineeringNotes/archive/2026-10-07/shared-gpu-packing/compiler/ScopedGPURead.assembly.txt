@@ -1,0 +1,783 @@
+
+/Users/crabel/Library/Caches/SwiftSci/unified-memory-prototype/derived/Build/Intermediates.noindex/SwiftSci.build/Release/SwiftPreprocessing-t.build/Objects-normal/arm64/ScopedGPURead.o:	file format mach-o arm64
+
+Disassembly of section __TEXT,__text:
+
+0000000000000000 <ltmp0>:
+       0: f81a0ffc     	str	x28, [sp, #-0x60]!
+       4: a9016bfb     	stp	x27, x26, [sp, #0x10]
+       8: a90263f9     	stp	x25, x24, [sp, #0x20]
+       c: a9035bf7     	stp	x23, x22, [sp, #0x30]
+      10: a9044ff4     	stp	x20, x19, [sp, #0x40]
+      14: a9057bfd     	stp	x29, x30, [sp, #0x50]
+      18: 910143fd     	add	x29, sp, #0x50
+      1c: aa1503f3     	mov	x19, x21
+      20: aa0503f7     	mov	x23, x5
+      24: aa0403f6     	mov	x22, x4
+      28: aa0303f4     	mov	x20, x3
+      2c: aa0203fc     	mov	x28, x2
+      30: aa0103fa     	mov	x26, x1
+      34: aa0003f9     	mov	x25, x0
+      38: aa0803f8     	mov	x24, x8
+      3c: 94000000     	bl	0x3c <ltmp0+0x3c>
+		000000000000003c:  ARM64_RELOC_BRANCH26	_objc_msgSend$storageMode
+      40: b5000e40     	cbnz	x0, 0x208 <ltmp0+0x208>
+      44: b7f80e3a     	tbnz	x26, #0x3f, 0x208 <ltmp0+0x208>
+      48: eb1c035f     	cmp	x26, x28
+      4c: 54000de0     	b.eq	0x208 <ltmp0+0x208>
+      50: aa1903e0     	mov	x0, x25
+      54: 94000000     	bl	0x54 <ltmp0+0x54>
+		0000000000000054:  ARM64_RELOC_BRANCH26	_objc_msgSend$length
+      58: 91000c08     	add	x8, x0, #0x3
+      5c: f100001f     	cmp	x0, #0x0
+      60: 9a80b108     	csel	x8, x8, x0, lt
+      64: eb880b9f     	cmp	x28, x8, asr #2
+      68: 54000d0c     	b.gt	0x208 <ltmp0+0x208>
+      6c: f9400a88     	ldr	x8, [x20, #0x10]
+      70: b4000cc8     	cbz	x8, 0x208 <ltmp0+0x208>
+      74: 91008289     	add	x9, x20, #0x20
+      78: 12b0000a     	mov	w10, #0x7fffffff        ; =2147483647
+      7c: aa0803eb     	mov	x11, x8
+      80: aa0903ec     	mov	x12, x9
+      84: f840858d     	ldr	x13, [x12], #0x8
+      88: d10005ad     	sub	x13, x13, #0x1
+      8c: eb0a01bf     	cmp	x13, x10
+      90: 54000bc2     	b.hs	0x208 <ltmp0+0x208>
+      94: f100056b     	subs	x11, x11, #0x1
+      98: 54ffff61     	b.ne	0x84 <ltmp0+0x84>
+      9c: 5280003b     	mov	w27, #0x1               ; =1
+      a0: f840852a     	ldr	x10, [x9], #0x8
+      a4: 9b4a7f6b     	smulh	x11, x27, x10
+      a8: 9b0a7f7b     	mul	x27, x27, x10
+      ac: eb9bfd7f     	cmp	x11, x27, asr #63
+      b0: 54000ec1     	b.ne	0x288 <ltmp0+0x288>
+      b4: f1000508     	subs	x8, x8, #0x1
+      b8: 54ffff41     	b.ne	0xa0 <ltmp0+0xa0>
+      bc: eb1a0388     	subs	x8, x28, x26
+      c0: 54001746     	b.vs	0x3a8 <ltmp0+0x3a8>
+      c4: eb08037f     	cmp	x27, x8
+      c8: 54001041     	b.ne	0x2d0 <ltmp0+0x2d0>
+      cc: aa1903e0     	mov	x0, x25
+      d0: 94000000     	bl	0xd0 <ltmp0+0xd0>
+		00000000000000d0:  ARM64_RELOC_BRANCH26	_swift_unknownObjectRetain
+      d4: 94000000     	bl	0xd4 <ltmp0+0xd4>
+		00000000000000d4:  ARM64_RELOC_BRANCH26	_objc_msgSend$contents
+      d8: aa0003fc     	mov	x28, x0
+      dc: aa1903e0     	mov	x0, x25
+      e0: 94000000     	bl	0xe0 <ltmp0+0xe0>
+		00000000000000e0:  ARM64_RELOC_BRANCH26	_objc_autorelease
+      e4: 94000000     	bl	0xe4 <ltmp0+0xe4>
+		00000000000000e4:  ARM64_RELOC_BRANCH26	_getpagesize
+      e8: d2fc0008     	mov	x8, #-0x2000000000000000 ; =-2305843009213693952
+      ec: 8b080368     	add	x8, x27, x8
+      f0: d37efd08     	lsr	x8, x8, #62
+      f4: f1000d1f     	cmp	x8, #0x3
+      f8: 540015a3     	b.lo	0x3ac <ltmp0+0x3ac>
+      fc: 93407c08     	sxtw	x8, w0
+     100: 34001588     	cbz	w8, 0x3b0 <ltmp0+0x3b0>
+     104: 8b1a0b9a     	add	x26, x28, x26, lsl #2
+     108: d2f00009     	mov	x9, #-0x8000000000000000 ; =-9223372036854775808
+     10c: eb09035f     	cmp	x26, x9
+     110: 54000061     	b.ne	0x11c <ltmp0+0x11c>
+     114: 3100051f     	cmn	w8, #0x1
+     118: 540014e0     	b.eq	0x3b4 <ltmp0+0x3b4>
+     11c: 9ac80f49     	sdiv	x9, x26, x8
+     120: 9b08e929     	msub	x9, x9, x8, x26
+     124: b5000149     	cbnz	x9, 0x14c <ltmp0+0x14c>
+     128: d37ef769     	lsl	x9, x27, #2
+     12c: d2f0000a     	mov	x10, #-0x8000000000000000 ; =-9223372036854775808
+     130: eb0a013f     	cmp	x9, x10
+     134: 54000061     	b.ne	0x140 <ltmp0+0x140>
+     138: 3100051f     	cmn	w8, #0x1
+     13c: 540013e0     	b.eq	0x3b8 <ltmp0+0x3b8>
+     140: 9ac80d2a     	sdiv	x10, x9, x8
+     144: 9b08a548     	msub	x8, x10, x8, x9
+     148: b4000ea8     	cbz	x8, 0x31c <ltmp0+0x31c>
+     14c: d2800000     	mov	x0, #0x0                ; =0
+     150: 94000000     	bl	0x150 <ltmp0+0x150>
+		0000000000000150:  ARM64_RELOC_BRANCH26	type metadata accessor for MLX.MLXArray
+     154: aa0003f9     	mov	x25, x0
+     158: f90007f4     	str	x20, [sp, #0x8]
+     15c: aa1403e0     	mov	x0, x20
+     160: 94000000     	bl	0x160 <ltmp0+0x160>
+		0000000000000160:  ARM64_RELOC_BRANCH26	_swift_bridgeObjectRetain
+     164: 90000000     	adrp	x0, 0x0 <ltmp0>
+		0000000000000164:  ARM64_RELOC_PAGE21	demangling cache variable for type metadata for [Swift.Int]
+     168: 91000000     	add	x0, x0, #0x0
+		0000000000000168:  ARM64_RELOC_PAGEOFF12	demangling cache variable for type metadata for [Swift.Int]
+     16c: 90000001     	adrp	x1, 0x0 <ltmp0>
+		000000000000016c:  ARM64_RELOC_PAGE21	mangled name ref for type metadata for [Swift.Int]
+     170: 91000021     	add	x1, x1, #0x0
+		0000000000000170:  ARM64_RELOC_PAGEOFF12	mangled name ref for type metadata for [Swift.Int]
+     174: 94000000     	bl	0x174 <ltmp0+0x174>
+		0000000000000174:  ARM64_RELOC_BRANCH26	___swift_instantiateConcreteTypeFromMangledNameV2
+     178: aa0003f4     	mov	x20, x0
+     17c: 94000000     	bl	0x17c <ltmp0+0x17c>
+		000000000000017c:  ARM64_RELOC_BRANCH26	lazy protocol witness table accessor for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+     180: aa0003e6     	mov	x6, x0
+     184: 90000003     	adrp	x3, 0x0 <ltmp0>
+		0000000000000184:  ARM64_RELOC_GOT_LOAD_PAGE21	type metadata for Swift.Float
+     188: f9400063     	ldr	x3, [x3]
+		0000000000000188:  ARM64_RELOC_GOT_LOAD_PAGEOFF12	type metadata for Swift.Float
+     18c: 90000005     	adrp	x5, 0x0 <ltmp0>
+		000000000000018c:  ARM64_RELOC_GOT_LOAD_PAGE21	protocol witness table for Swift.Float : MLX.HasDType in MLX
+     190: f94000a5     	ldr	x5, [x5]
+		0000000000000190:  ARM64_RELOC_GOT_LOAD_PAGEOFF12	protocol witness table for Swift.Float : MLX.HasDType in MLX
+     194: 910023e2     	add	x2, sp, #0x8
+     198: aa1a03e0     	mov	x0, x26
+     19c: aa1b03e1     	mov	x1, x27
+     1a0: aa1403e4     	mov	x4, x20
+     1a4: aa1903f4     	mov	x20, x25
+     1a8: 94000000     	bl	0x1a8 <ltmp0+0x1a8>
+		00000000000001a8:  ARM64_RELOC_BRANCH26	MLX.MLXArray.__allocating_init<A, B where A: MLX.HasDType, B: Swift.Collection, B.Element == Swift.Int>(Swift.UnsafeBufferPointer<A>, B?) -> MLX.MLXArray
+     1ac: aa0003f9     	mov	x25, x0
+     1b0: 52800015     	mov	w21, #0x0               ; =0
+     1b4: aa1903e0     	mov	x0, x25
+     1b8: 94000000     	bl	0x1b8 <ltmp0+0x1b8>
+		00000000000001b8:  ARM64_RELOC_BRANCH26	_swift_retain
+     1bc: aa1803e8     	mov	x8, x24
+     1c0: aa1503e1     	mov	x1, x21
+     1c4: aa1703f4     	mov	x20, x23
+     1c8: aa1303f5     	mov	x21, x19
+     1cc: d63f02c0     	blr	x22
+     1d0: aa1503f3     	mov	x19, x21
+     1d4: aa1903e0     	mov	x0, x25
+     1d8: 94000000     	bl	0x1d8 <ltmp0+0x1d8>
+		00000000000001d8:  ARM64_RELOC_BRANCH26	_swift_release
+     1dc: d2800000     	mov	x0, #0x0                ; =0
+     1e0: 94000000     	bl	0x1e0 <ltmp0+0x1e0>
+		00000000000001e0:  ARM64_RELOC_BRANCH26	type metadata accessor for MLX.Stream
+     1e4: aa0003f4     	mov	x20, x0
+     1e8: 94000000     	bl	0x1e8 <ltmp0+0x1e8>
+		00000000000001e8:  ARM64_RELOC_BRANCH26	static MLX.Stream.gpu.getter : MLX.Stream
+     1ec: aa0003f4     	mov	x20, x0
+     1f0: 94000000     	bl	0x1f0 <ltmp0+0x1f0>
+		00000000000001f0:  ARM64_RELOC_BRANCH26	MLX.Stream.synchronize() -> ()
+     1f4: aa1903e0     	mov	x0, x25
+     1f8: 94000000     	bl	0x1f8 <ltmp0+0x1f8>
+		00000000000001f8:  ARM64_RELOC_BRANCH26	_swift_release
+     1fc: aa1403e0     	mov	x0, x20
+     200: 94000000     	bl	0x200 <ltmp0+0x200>
+		0000000000000200:  ARM64_RELOC_BRANCH26	_swift_release
+     204: 14000019     	b	0x268 <ltmp0+0x268>
+     208: d2800000     	mov	x0, #0x0                ; =0
+     20c: 94000000     	bl	0x20c <ltmp0+0x20c>
+		000000000000020c:  ARM64_RELOC_BRANCH26	type metadata accessor for SwiftDataFrame.SwiftMLError
+     210: aa0003f4     	mov	x20, x0
+     214: 94000000     	bl	0x214 <ltmp0+0x214>
+		0000000000000214:  ARM64_RELOC_BRANCH26	lazy protocol witness table accessor for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+     218: aa0003e1     	mov	x1, x0
+     21c: aa1403e0     	mov	x0, x20
+     220: d2800002     	mov	x2, #0x0                ; =0
+     224: 52800003     	mov	w3, #0x0                ; =0
+     228: 94000000     	bl	0x228 <ltmp0+0x228>
+		0000000000000228:  ARM64_RELOC_BRANCH26	_swift_allocError
+     22c: aa0003f3     	mov	x19, x0
+     230: aa0103e0     	mov	x0, x1
+     234: 90000008     	adrp	x8, 0x0 <ltmp0>
+		0000000000000234:  ARM64_RELOC_PAGE21	l_.str.31.Invalid shared GPU input extent
+     238: 91000108     	add	x8, x8, #0x0
+		0000000000000238:  ARM64_RELOC_PAGEOFF12	l_.str.31.Invalid shared GPU input extent
+     23c: d1008108     	sub	x8, x8, #0x20
+     240: b2410108     	orr	x8, x8, #0x8000000000000000
+     244: d28003a9     	mov	x9, #0x1d               ; =29
+     248: f2fa0009     	movk	x9, #0xd000, lsl #48
+     24c: b27f0129     	orr	x9, x9, #0x2
+     250: a9002029     	stp	x9, x8, [x1]
+     254: aa1403e1     	mov	x1, x20
+     258: 528000e2     	mov	w2, #0x7                ; =7
+     25c: 94000000     	bl	0x25c <ltmp0+0x25c>
+		000000000000025c:  ARM64_RELOC_BRANCH26	_swift_storeEnumTagMultiPayload
+     260: aa1303f5     	mov	x21, x19
+     264: 94000000     	bl	0x264 <ltmp0+0x264>
+		0000000000000264:  ARM64_RELOC_BRANCH26	_swift_willThrow
+     268: aa1303f5     	mov	x21, x19
+     26c: a9457bfd     	ldp	x29, x30, [sp, #0x50]
+     270: a9444ff4     	ldp	x20, x19, [sp, #0x40]
+     274: a9435bf7     	ldp	x23, x22, [sp, #0x30]
+     278: a94263f9     	ldp	x25, x24, [sp, #0x20]
+     27c: a9416bfb     	ldp	x27, x26, [sp, #0x10]
+     280: f84607fc     	ldr	x28, [sp], #0x60
+     284: d65f03c0     	ret
+     288: d2800000     	mov	x0, #0x0                ; =0
+     28c: 94000000     	bl	0x28c <ltmp0+0x28c>
+		000000000000028c:  ARM64_RELOC_BRANCH26	type metadata accessor for SwiftDataFrame.SwiftMLError
+     290: aa0003f4     	mov	x20, x0
+     294: 94000000     	bl	0x294 <ltmp0+0x294>
+		0000000000000294:  ARM64_RELOC_BRANCH26	lazy protocol witness table accessor for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+     298: aa0003e1     	mov	x1, x0
+     29c: aa1403e0     	mov	x0, x20
+     2a0: d2800002     	mov	x2, #0x0                ; =0
+     2a4: 52800003     	mov	w3, #0x0                ; =0
+     2a8: 94000000     	bl	0x2a8 <ltmp0+0x2a8>
+		00000000000002a8:  ARM64_RELOC_BRANCH26	_swift_allocError
+     2ac: aa0003f3     	mov	x19, x0
+     2b0: aa0103e0     	mov	x0, x1
+     2b4: 90000008     	adrp	x8, 0x0 <ltmp0>
+		00000000000002b4:  ARM64_RELOC_PAGE21	l_.str.29.GPU input shape overflows Int
+     2b8: 91000108     	add	x8, x8, #0x0
+		00000000000002b8:  ARM64_RELOC_PAGEOFF12	l_.str.29.GPU input shape overflows Int
+     2bc: d1008108     	sub	x8, x8, #0x20
+     2c0: b2410108     	orr	x8, x8, #0x8000000000000000
+     2c4: d28003a9     	mov	x9, #0x1d               ; =29
+     2c8: f2fa0009     	movk	x9, #0xd000, lsl #48
+     2cc: 17ffffe1     	b	0x250 <ltmp0+0x250>
+     2d0: d2800000     	mov	x0, #0x0                ; =0
+     2d4: 94000000     	bl	0x2d4 <ltmp0+0x2d4>
+		00000000000002d4:  ARM64_RELOC_BRANCH26	type metadata accessor for SwiftDataFrame.SwiftMLError
+     2d8: aa0003f4     	mov	x20, x0
+     2dc: 94000000     	bl	0x2dc <ltmp0+0x2dc>
+		00000000000002dc:  ARM64_RELOC_BRANCH26	lazy protocol witness table accessor for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+     2e0: aa0003e1     	mov	x1, x0
+     2e4: aa1403e0     	mov	x0, x20
+     2e8: d2800002     	mov	x2, #0x0                ; =0
+     2ec: 52800003     	mov	w3, #0x0                ; =0
+     2f0: 94000000     	bl	0x2f0 <ltmp0+0x2f0>
+		00000000000002f0:  ARM64_RELOC_BRANCH26	_swift_allocError
+     2f4: aa0003f3     	mov	x19, x0
+     2f8: aa0103e0     	mov	x0, x1
+     2fc: 90000008     	adrp	x8, 0x0 <ltmp0>
+		00000000000002fc:  ARM64_RELOC_PAGE21	l_.str.35.GPU input shape differs from extent
+     300: 91000108     	add	x8, x8, #0x0
+		0000000000000300:  ARM64_RELOC_PAGEOFF12	l_.str.35.GPU input shape differs from extent
+     304: d1008108     	sub	x8, x8, #0x20
+     308: b2410108     	orr	x8, x8, #0x8000000000000000
+     30c: d28003a9     	mov	x9, #0x1d               ; =29
+     310: f2fa0009     	movk	x9, #0xd000, lsl #48
+     314: 91001929     	add	x9, x9, #0x6
+     318: 17ffffce     	b	0x250 <ltmp0+0x250>
+     31c: d2800000     	mov	x0, #0x0                ; =0
+     320: 94000000     	bl	0x320 <ltmp0+0x320>
+		0000000000000320:  ARM64_RELOC_BRANCH26	type metadata accessor for MLX.MLXArray
+     324: aa0003fb     	mov	x27, x0
+     328: f90007f4     	str	x20, [sp, #0x8]
+     32c: 90000000     	adrp	x0, 0x0 <ltmp0>
+		000000000000032c:  ARM64_RELOC_ADDEND	0x10
+		000000000000032c:  ARM64_RELOC_PAGE21	l_metadata
+     330: 91000000     	add	x0, x0, #0x0
+		0000000000000330:  ARM64_RELOC_ADDEND	0x10
+		0000000000000330:  ARM64_RELOC_PAGEOFF12	l_metadata
+     334: 52800301     	mov	w1, #0x18               ; =24
+     338: 528000e2     	mov	w2, #0x7                ; =7
+     33c: 94000000     	bl	0x33c <ltmp0+0x33c>
+		000000000000033c:  ARM64_RELOC_BRANCH26	_swift_allocObject
+     340: aa0003fc     	mov	x28, x0
+     344: f9000819     	str	x25, [x0, #0x10]
+     348: aa1903e0     	mov	x0, x25
+     34c: 94000000     	bl	0x34c <ltmp0+0x34c>
+		000000000000034c:  ARM64_RELOC_BRANCH26	_swift_unknownObjectRetain
+     350: aa1403e0     	mov	x0, x20
+     354: 94000000     	bl	0x354 <ltmp0+0x354>
+		0000000000000354:  ARM64_RELOC_BRANCH26	_swift_bridgeObjectRetain
+     358: 90000000     	adrp	x0, 0x0 <ltmp0>
+		0000000000000358:  ARM64_RELOC_PAGE21	demangling cache variable for type metadata for [Swift.Int]
+     35c: 91000000     	add	x0, x0, #0x0
+		000000000000035c:  ARM64_RELOC_PAGEOFF12	demangling cache variable for type metadata for [Swift.Int]
+     360: 90000001     	adrp	x1, 0x0 <ltmp0>
+		0000000000000360:  ARM64_RELOC_PAGE21	mangled name ref for type metadata for [Swift.Int]
+     364: 91000021     	add	x1, x1, #0x0
+		0000000000000364:  ARM64_RELOC_PAGEOFF12	mangled name ref for type metadata for [Swift.Int]
+     368: 94000000     	bl	0x368 <ltmp0+0x368>
+		0000000000000368:  ARM64_RELOC_BRANCH26	___swift_instantiateConcreteTypeFromMangledNameV2
+     36c: aa0003f4     	mov	x20, x0
+     370: 94000000     	bl	0x370 <ltmp0+0x370>
+		0000000000000370:  ARM64_RELOC_BRANCH26	lazy protocol witness table accessor for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+     374: aa0003e6     	mov	x6, x0
+     378: 90000003     	adrp	x3, 0x0 <ltmp0>
+		0000000000000378:  ARM64_RELOC_PAGE21	partial apply forwarder for closure #2 () -> () in static SwiftPreprocessing.ScopedGPURead.withBuffer<A>(_: __C.MTLBuffer, range: Swift.Range<Swift.Int>, shape: [Swift.Int], _: (MLX.MLXArray, Swift.Bool) throws -> A) throws -> A
+     37c: 91000063     	add	x3, x3, #0x0
+		000000000000037c:  ARM64_RELOC_PAGEOFF12	partial apply forwarder for closure #2 () -> () in static SwiftPreprocessing.ScopedGPURead.withBuffer<A>(_: __C.MTLBuffer, range: Swift.Range<Swift.Int>, shape: [Swift.Int], _: (MLX.MLXArray, Swift.Bool) throws -> A) throws -> A
+     380: 910023e1     	add	x1, sp, #0x8
+     384: aa1a03e0     	mov	x0, x26
+     388: 52800142     	mov	w2, #0xa                ; =10
+     38c: aa1c03e4     	mov	x4, x28
+     390: aa1403e5     	mov	x5, x20
+     394: aa1b03f4     	mov	x20, x27
+     398: 94000000     	bl	0x398 <ltmp0+0x398>
+		0000000000000398:  ARM64_RELOC_BRANCH26	MLX.MLXArray.__allocating_init<A where A: Swift.Collection, A.Element == Swift.Int>(rawPointer: Swift.UnsafeMutableRawPointer, _: A?, dtype: MLX.DType, finalizer: () -> ()) -> MLX.MLXArray
+     39c: aa0003f9     	mov	x25, x0
+     3a0: 52800035     	mov	w21, #0x1               ; =1
+     3a4: 17ffff84     	b	0x1b4 <ltmp0+0x1b4>
+     3a8: d4200020     	brk	#0x1
+     3ac: d4200020     	brk	#0x1
+     3b0: d4200020     	brk	#0x1
+     3b4: d4200020     	brk	#0x1
+     3b8: d4200020     	brk	#0x1
+
+00000000000003bc <static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A>:
+     3bc: d10103ff     	sub	sp, sp, #0x40
+     3c0: a9037bfd     	stp	x29, x30, [sp, #0x30]
+     3c4: 9100c3fd     	add	x29, sp, #0x30
+     3c8: a90107e0     	stp	x0, x1, [sp, #0x10]
+     3cc: a9020fe2     	stp	x2, x3, [sp, #0x20]
+     3d0: 90000002     	adrp	x2, 0x0 <ltmp0>
+		00000000000003d0:  ARM64_RELOC_PAGE21	partial apply forwarder for closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A
+     3d4: 91000042     	add	x2, x2, #0x0
+		00000000000003d4:  ARM64_RELOC_PAGEOFF12	partial apply forwarder for closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A
+     3d8: 910003e3     	mov	x3, sp
+     3dc: 94000000     	bl	0x3dc <static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0x20>
+		00000000000003dc:  ARM64_RELOC_BRANCH26	static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A
+     3e0: a9437bfd     	ldp	x29, x30, [sp, #0x30]
+     3e4: 910103ff     	add	sp, sp, #0x40
+     3e8: d65f03c0     	ret
+
+00000000000003ec <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A>:
+     3ec: a9ba6ffc     	stp	x28, x27, [sp, #-0x60]!
+     3f0: a90167fa     	stp	x26, x25, [sp, #0x10]
+     3f4: a9025ff8     	stp	x24, x23, [sp, #0x20]
+     3f8: a90357f6     	stp	x22, x21, [sp, #0x30]
+     3fc: a9044ff4     	stp	x20, x19, [sp, #0x40]
+     400: a9057bfd     	stp	x29, x30, [sp, #0x50]
+     404: 910143fd     	add	x29, sp, #0x50
+     408: b7f80522     	tbnz	x2, #0x3f, 0x4ac <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0xc0>
+     40c: aa0203f6     	mov	x22, x2
+     410: b40003c2     	cbz	x2, 0x488 <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0x9c>
+     414: aa0303f5     	mov	x21, x3
+     418: b7f804c3     	tbnz	x3, #0x3f, 0x4b0 <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0xc4>
+     41c: aa0503f4     	mov	x20, x5
+     420: aa0403f3     	mov	x19, x4
+     424: aa0003f7     	mov	x23, x0
+     428: d2800018     	mov	x24, #0x0               ; =0
+     42c: 14000004     	b	0x43c <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0x50>
+     430: 91000718     	add	x24, x24, #0x1
+     434: eb16031f     	cmp	x24, x22
+     438: 54000280     	b.eq	0x488 <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0x9c>
+     43c: b4ffffb5     	cbz	x21, 0x430 <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0x44>
+     440: d2800001     	mov	x1, #0x0                ; =0
+     444: 9b157f19     	mul	x25, x24, x21
+     448: 9b557f08     	smulh	x8, x24, x21
+     44c: eb99fd1f     	cmp	x8, x25, asr #63
+     450: 1a9f07fa     	cset	w26, ne
+     454: b4000317     	cbz	x23, 0x4b4 <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0xc8>
+     458: 3700027a     	tbnz	w26, #0x0, 0x4a4 <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0xb8>
+     45c: ab01033b     	adds	x27, x25, x1
+     460: 54000246     	b.vs	0x4a8 <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0xbc>
+     464: 9100043c     	add	x28, x1, #0x1
+     468: aa1803e0     	mov	x0, x24
+     46c: d63f0260     	blr	x19
+     470: 1e624000     	fcvt	s0, d0
+     474: bc3b7ae0     	str	s0, [x23, x27, lsl #2]
+     478: aa1c03e1     	mov	x1, x28
+     47c: eb1c02bf     	cmp	x21, x28
+     480: 54fffea1     	b.ne	0x454 <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0x68>
+     484: 17ffffeb     	b	0x430 <closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0x44>
+     488: a9457bfd     	ldp	x29, x30, [sp, #0x50]
+     48c: a9444ff4     	ldp	x20, x19, [sp, #0x40]
+     490: a94357f6     	ldp	x22, x21, [sp, #0x30]
+     494: a9425ff8     	ldp	x24, x23, [sp, #0x20]
+     498: a94167fa     	ldp	x26, x25, [sp, #0x10]
+     49c: a8c66ffc     	ldp	x28, x27, [sp], #0x60
+     4a0: d65f03c0     	ret
+     4a4: d4200020     	brk	#0x1
+     4a8: d4200020     	brk	#0x1
+     4ac: d4200020     	brk	#0x1
+     4b0: d4200020     	brk	#0x1
+     4b4: d4200020     	brk	#0x1
+
+00000000000004b8 <static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A>:
+     4b8: d101c3ff     	sub	sp, sp, #0x70
+     4bc: f9000bfc     	str	x28, [sp, #0x10]
+     4c0: a9026bfb     	stp	x27, x26, [sp, #0x20]
+     4c4: a90363f9     	stp	x25, x24, [sp, #0x30]
+     4c8: a9045bf7     	stp	x23, x22, [sp, #0x40]
+     4cc: a9054ff4     	stp	x20, x19, [sp, #0x50]
+     4d0: a9067bfd     	stp	x29, x30, [sp, #0x60]
+     4d4: 910183fd     	add	x29, sp, #0x60
+     4d8: aa1503f4     	mov	x20, x21
+     4dc: aa0603f6     	mov	x22, x6
+     4e0: aa0503f7     	mov	x23, x5
+     4e4: aa0403f8     	mov	x24, x4
+     4e8: aa0303f9     	mov	x25, x3
+     4ec: aa0203fa     	mov	x26, x2
+     4f0: aa0103fb     	mov	x27, x1
+     4f4: aa0003fc     	mov	x28, x0
+     4f8: aa0803f3     	mov	x19, x8
+     4fc: 94000000     	bl	0x4fc <static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x44>
+		00000000000004fc:  ARM64_RELOC_BRANCH26	__objc_autoreleasePoolPush
+     500: f90007e0     	str	x0, [sp, #0x8]
+     504: 910063e7     	add	x7, sp, #0x18
+     508: aa1303e8     	mov	x8, x19
+     50c: aa1c03e0     	mov	x0, x28
+     510: aa1b03e1     	mov	x1, x27
+     514: aa1a03e2     	mov	x2, x26
+     518: aa1903e3     	mov	x3, x25
+     51c: aa1803e4     	mov	x4, x24
+     520: aa1703e5     	mov	x5, x23
+     524: aa1603e6     	mov	x6, x22
+     528: aa1403f5     	mov	x21, x20
+     52c: 94000000     	bl	0x52c <static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x74>
+		000000000000052c:  ARM64_RELOC_BRANCH26	closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A
+     530: b4000075     	cbz	x21, 0x53c <static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x84>
+     534: f9400ff4     	ldr	x20, [sp, #0x18]
+     538: 14000002     	b	0x540 <static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x88>
+     53c: aa1503f4     	mov	x20, x21
+     540: f94007e0     	ldr	x0, [sp, #0x8]
+     544: 94000000     	bl	0x544 <static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x8c>
+		0000000000000544:  ARM64_RELOC_BRANCH26	__objc_autoreleasePoolPop
+     548: aa1403f5     	mov	x21, x20
+     54c: a9467bfd     	ldp	x29, x30, [sp, #0x60]
+     550: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+     554: a9445bf7     	ldp	x23, x22, [sp, #0x40]
+     558: a94363f9     	ldp	x25, x24, [sp, #0x30]
+     55c: a9426bfb     	ldp	x27, x26, [sp, #0x20]
+     560: f9400bfc     	ldr	x28, [sp, #0x10]
+     564: 9101c3ff     	add	sp, sp, #0x70
+     568: d65f03c0     	ret
+
+000000000000056c <static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(batch: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy, _: (MLX.MLXArray) throws -> A) throws -> A>:
+     56c: d10283ff     	sub	sp, sp, #0xa0
+     570: a90457fc     	stp	x28, x21, [sp, #0x40]
+     574: a9056bfb     	stp	x27, x26, [sp, #0x50]
+     578: a90663f9     	stp	x25, x24, [sp, #0x60]
+     57c: a9075bf7     	stp	x23, x22, [sp, #0x70]
+     580: a9084ff4     	stp	x20, x19, [sp, #0x80]
+     584: a9097bfd     	stp	x29, x30, [sp, #0x90]
+     588: 910243fd     	add	x29, sp, #0x90
+     58c: aa0703f4     	mov	x20, x7
+     590: aa0603f6     	mov	x22, x6
+     594: aa0503f7     	mov	x23, x5
+     598: aa0403f8     	mov	x24, x4
+     59c: aa0303f9     	mov	x25, x3
+     5a0: aa0203fa     	mov	x26, x2
+     5a4: aa0103fb     	mov	x27, x1
+     5a8: aa0003fc     	mov	x28, x0
+     5ac: aa0803f3     	mov	x19, x8
+     5b0: 94000000     	bl	0x5b0 <static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(batch: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy, _: (MLX.MLXArray) throws -> A) throws -> A+0x44>
+		00000000000005b0:  ARM64_RELOC_BRANCH26	SwiftDataFrame.PreparedNumericBatch.columnCount.getter : Swift.Int
+     5b4: aa0003e1     	mov	x1, x0
+     5b8: a9016ffc     	stp	x28, x27, [sp, #0x10]
+     5bc: a90267fa     	stp	x26, x25, [sp, #0x20]
+     5c0: 3900c3f8     	strb	w24, [sp, #0x30]
+     5c4: 90000002     	adrp	x2, 0x0 <ltmp0>
+		00000000000005c4:  ARM64_RELOC_PAGE21	partial apply forwarder for closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(batch: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy, _: (MLX.MLXArray) throws -> A) throws -> A
+     5c8: 91000042     	add	x2, x2, #0x0
+		00000000000005c8:  ARM64_RELOC_PAGEOFF12	partial apply forwarder for closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(batch: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy, _: (MLX.MLXArray) throws -> A) throws -> A
+     5cc: 910003e3     	mov	x3, sp
+     5d0: aa1303e8     	mov	x8, x19
+     5d4: aa1b03e0     	mov	x0, x27
+     5d8: aa1703e4     	mov	x4, x23
+     5dc: aa1603e5     	mov	x5, x22
+     5e0: aa1403e6     	mov	x6, x20
+     5e4: f94027f5     	ldr	x21, [sp, #0x48]
+     5e8: 94000000     	bl	0x5e8 <static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(batch: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy, _: (MLX.MLXArray) throws -> A) throws -> A+0x7c>
+		00000000000005e8:  ARM64_RELOC_BRANCH26	static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A
+     5ec: a9497bfd     	ldp	x29, x30, [sp, #0x90]
+     5f0: a9484ff4     	ldp	x20, x19, [sp, #0x80]
+     5f4: a9475bf7     	ldp	x23, x22, [sp, #0x70]
+     5f8: a94663f9     	ldp	x25, x24, [sp, #0x60]
+     5fc: a9456bfb     	ldp	x27, x26, [sp, #0x50]
+     600: f94023fc     	ldr	x28, [sp, #0x40]
+     604: 910283ff     	add	sp, sp, #0xa0
+     608: d65f03c0     	ret
+
+000000000000060c <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A>:
+     60c: d102c3ff     	sub	sp, sp, #0xb0
+     610: f9002bfc     	str	x28, [sp, #0x50]
+     614: a9066bfb     	stp	x27, x26, [sp, #0x60]
+     618: a90763f9     	stp	x25, x24, [sp, #0x70]
+     61c: a9085bf7     	stp	x23, x22, [sp, #0x80]
+     620: a9094ff4     	stp	x20, x19, [sp, #0x90]
+     624: a90a7bfd     	stp	x29, x30, [sp, #0xa0]
+     628: 910283fd     	add	x29, sp, #0xa0
+     62c: aa0703f8     	mov	x24, x7
+     630: f81b83b5     	stur	x21, [x29, #-0x48]
+     634: a90123e5     	stp	x5, x8, [sp, #0x10]
+     638: 9b017c17     	mul	x23, x0, x1
+     63c: 9b417c08     	smulh	x8, x0, x1
+     640: eb97fd1f     	cmp	x8, x23, asr #63
+     644: 1a9f07e8     	cset	w8, ne
+     648: b26183e9     	mov	x9, #-0x80000000        ; =-2147483648
+     64c: b26187ea     	mov	x10, #-0x7fffffff       ; =-2147483647
+     650: 8b09000b     	add	x11, x0, x9
+     654: eb0a017f     	cmp	x11, x10
+     658: 540008e3     	b.lo	0x774 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x168>
+     65c: aa0103fc     	mov	x28, x1
+     660: 8b090029     	add	x9, x1, x9
+     664: eb0a013f     	cmp	x9, x10
+     668: 54000863     	b.lo	0x774 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x168>
+     66c: 37000848     	tbnz	w8, #0x0, 0x774 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x168>
+     670: d2fc0008     	mov	x8, #-0x2000000000000000 ; =-2305843009213693952
+     674: 8b0802e8     	add	x8, x23, x8
+     678: d37efd08     	lsr	x8, x8, #62
+     67c: f1000d1f     	cmp	x8, #0x3
+     680: 540007a3     	b.lo	0x774 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x168>
+     684: aa0603fa     	mov	x26, x6
+     688: aa0403fb     	mov	x27, x4
+     68c: aa0303f4     	mov	x20, x3
+     690: aa0203f9     	mov	x25, x2
+     694: aa0003f6     	mov	x22, x0
+     698: 94000000     	bl	0x698 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x8c>
+		0000000000000698:  ARM64_RELOC_BRANCH26	_MTLCreateSystemDefaultDevice
+     69c: b40006c0     	cbz	x0, 0x774 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x168>
+     6a0: aa0003f3     	mov	x19, x0
+     6a4: f90007f8     	str	x24, [sp, #0x8]
+     6a8: d37ef6e2     	lsl	x2, x23, #2
+     6ac: d2800003     	mov	x3, #0x0                ; =0
+     6b0: 94000000     	bl	0x6b0 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0xa4>
+		00000000000006b0:  ARM64_RELOC_BRANCH26	_objc_msgSend$newBufferWithLength:options:
+     6b4: b40005a0     	cbz	x0, 0x768 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x15c>
+     6b8: aa0003f8     	mov	x24, x0
+     6bc: 94000000     	bl	0x6bc <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0xb0>
+		00000000000006bc:  ARM64_RELOC_BRANCH26	_swift_unknownObjectRetain
+     6c0: 94000000     	bl	0x6c0 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0xb4>
+		00000000000006c0:  ARM64_RELOC_BRANCH26	_objc_msgSend$contents
+     6c4: aa0003f5     	mov	x21, x0
+     6c8: aa1803e0     	mov	x0, x24
+     6cc: 94000000     	bl	0x6cc <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0xc0>
+		00000000000006cc:  ARM64_RELOC_BRANCH26	_objc_autorelease
+     6d0: aa1503e0     	mov	x0, x21
+     6d4: aa1703e1     	mov	x1, x23
+     6d8: d63f0320     	blr	x25
+     6dc: 90000000     	adrp	x0, 0x0 <ltmp0>
+		00000000000006dc:  ARM64_RELOC_PAGE21	demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Swift.Int>
+     6e0: 91000000     	add	x0, x0, #0x0
+		00000000000006e0:  ARM64_RELOC_PAGEOFF12	demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Swift.Int>
+     6e4: 90000001     	adrp	x1, 0x0 <ltmp0>
+		00000000000006e4:  ARM64_RELOC_PAGE21	mangled name ref for type metadata for Swift._ContiguousArrayStorage<Swift.Int>
+     6e8: 91000021     	add	x1, x1, #0x0
+		00000000000006e8:  ARM64_RELOC_PAGEOFF12	mangled name ref for type metadata for Swift._ContiguousArrayStorage<Swift.Int>
+     6ec: 94000000     	bl	0x6ec <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0xe0>
+		00000000000006ec:  ARM64_RELOC_BRANCH26	___swift_instantiateConcreteTypeFromMangledNameV2
+     6f0: 52800601     	mov	w1, #0x30               ; =48
+     6f4: 528000e2     	mov	w2, #0x7                ; =7
+     6f8: 94000000     	bl	0x6f8 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0xec>
+		00000000000006f8:  ARM64_RELOC_BRANCH26	_swift_allocObject
+     6fc: aa0003f9     	mov	x25, x0
+     700: 90000008     	adrp	x8, 0x0 <ltmp0>
+		0000000000000700:  ARM64_RELOC_PAGE21	lCPI5_0
+     704: 3dc00100     	ldr	q0, [x8]
+		0000000000000704:  ARM64_RELOC_PAGEOFF12	lCPI5_0
+     708: 3d800400     	str	q0, [x0, #0x10]
+     70c: a9027016     	stp	x22, x28, [x0, #0x20]
+     710: a9036ffa     	stp	x26, x27, [sp, #0x30]
+     714: a94123e9     	ldp	x9, x8, [sp, #0x10]
+     718: f90023e9     	str	x9, [sp, #0x40]
+     71c: 90000004     	adrp	x4, 0x0 <ltmp0>
+		000000000000071c:  ARM64_RELOC_PAGE21	partial apply forwarder for closure #1 (MLX.MLXArray, Swift.Bool) throws -> A in closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A
+     720: 91000084     	add	x4, x4, #0x0
+		0000000000000720:  ARM64_RELOC_PAGEOFF12	partial apply forwarder for closure #1 (MLX.MLXArray, Swift.Bool) throws -> A in closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A
+     724: 910083e5     	add	x5, sp, #0x20
+     728: aa1803e0     	mov	x0, x24
+     72c: d2800001     	mov	x1, #0x0                ; =0
+     730: aa1703e2     	mov	x2, x23
+     734: aa1903e3     	mov	x3, x25
+     738: f85b83b5     	ldur	x21, [x29, #-0x48]
+     73c: 94000000     	bl	0x73c <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x130>
+		000000000000073c:  ARM64_RELOC_BRANCH26	static SwiftPreprocessing.ScopedGPURead.withBuffer<A>(_: __C.MTLBuffer, range: Swift.Range<Swift.Int>, shape: [Swift.Int], _: (MLX.MLXArray, Swift.Bool) throws -> A) throws -> A
+     740: aa1503f4     	mov	x20, x21
+     744: aa1303e0     	mov	x0, x19
+     748: 94000000     	bl	0x748 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x13c>
+		0000000000000748:  ARM64_RELOC_BRANCH26	_swift_unknownObjectRelease
+     74c: aa1803e0     	mov	x0, x24
+     750: 94000000     	bl	0x750 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x144>
+		0000000000000750:  ARM64_RELOC_BRANCH26	_swift_unknownObjectRelease
+     754: aa1903e0     	mov	x0, x25
+     758: 94000000     	bl	0x758 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x14c>
+		0000000000000758:  ARM64_RELOC_BRANCH26	_swift_release
+     75c: f94007f8     	ldr	x24, [sp, #0x8]
+     760: b5000394     	cbnz	x20, 0x7d0 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x1c4>
+     764: 1400001d     	b	0x7d8 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x1cc>
+     768: aa1303e0     	mov	x0, x19
+     76c: 94000000     	bl	0x76c <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x160>
+		000000000000076c:  ARM64_RELOC_BRANCH26	_swift_unknownObjectRelease
+     770: f94007f8     	ldr	x24, [sp, #0x8]
+     774: d2800000     	mov	x0, #0x0                ; =0
+     778: 94000000     	bl	0x778 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x16c>
+		0000000000000778:  ARM64_RELOC_BRANCH26	type metadata accessor for SwiftDataFrame.SwiftMLError
+     77c: aa0003f3     	mov	x19, x0
+     780: 94000000     	bl	0x780 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x174>
+		0000000000000780:  ARM64_RELOC_BRANCH26	lazy protocol witness table accessor for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+     784: aa0003e1     	mov	x1, x0
+     788: aa1303e0     	mov	x0, x19
+     78c: d2800002     	mov	x2, #0x0                ; =0
+     790: 52800003     	mov	w3, #0x0                ; =0
+     794: 94000000     	bl	0x794 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x188>
+		0000000000000794:  ARM64_RELOC_BRANCH26	_swift_allocError
+     798: aa0003f4     	mov	x20, x0
+     79c: aa0103e0     	mov	x0, x1
+     7a0: 90000008     	adrp	x8, 0x0 <ltmp0>
+		00000000000007a0:  ARM64_RELOC_PAGE21	l_.str.34.Cannot allocate GPU feature matrix
+     7a4: 91000108     	add	x8, x8, #0x0
+		00000000000007a4:  ARM64_RELOC_PAGEOFF12	l_.str.34.Cannot allocate GPU feature matrix
+     7a8: d1008108     	sub	x8, x8, #0x20
+     7ac: b2410108     	orr	x8, x8, #0x8000000000000000
+     7b0: d2800449     	mov	x9, #0x22               ; =34
+     7b4: f2fa0009     	movk	x9, #0xd000, lsl #48
+     7b8: a9002029     	stp	x9, x8, [x1]
+     7bc: aa1303e1     	mov	x1, x19
+     7c0: 528000e2     	mov	w2, #0x7                ; =7
+     7c4: 94000000     	bl	0x7c4 <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x1b8>
+		00000000000007c4:  ARM64_RELOC_BRANCH26	_swift_storeEnumTagMultiPayload
+     7c8: aa1403f5     	mov	x21, x20
+     7cc: 94000000     	bl	0x7cc <closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A+0x1c0>
+		00000000000007cc:  ARM64_RELOC_BRANCH26	_swift_willThrow
+     7d0: f9000314     	str	x20, [x24]
+     7d4: 52800034     	mov	w20, #0x1               ; =1
+     7d8: aa1403f5     	mov	x21, x20
+     7dc: a94a7bfd     	ldp	x29, x30, [sp, #0xa0]
+     7e0: a9494ff4     	ldp	x20, x19, [sp, #0x90]
+     7e4: a9485bf7     	ldp	x23, x22, [sp, #0x80]
+     7e8: a94763f9     	ldp	x25, x24, [sp, #0x70]
+     7ec: a9466bfb     	ldp	x27, x26, [sp, #0x60]
+     7f0: f9402bfc     	ldr	x28, [sp, #0x50]
+     7f4: 9102c3ff     	add	sp, sp, #0xb0
+     7f8: d65f03c0     	ret
+
+00000000000007fc <lazy protocol witness table accessor for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame>:
+     7fc: 90000008     	adrp	x8, 0x0 <ltmp0>
+		00000000000007fc:  ARM64_RELOC_PAGE21	lazy protocol witness table cache variable for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+     800: f9400100     	ldr	x0, [x8]
+		0000000000000800:  ARM64_RELOC_PAGEOFF12	lazy protocol witness table cache variable for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+     804: b4000040     	cbz	x0, 0x80c <lazy protocol witness table accessor for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame+0x10>
+     808: d65f03c0     	ret
+     80c: a9bf7bfd     	stp	x29, x30, [sp, #-0x10]!
+     810: 910003fd     	mov	x29, sp
+     814: 52801fe0     	mov	w0, #0xff               ; =255
+     818: 94000000     	bl	0x818 <lazy protocol witness table accessor for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame+0x1c>
+		0000000000000818:  ARM64_RELOC_BRANCH26	type metadata accessor for SwiftDataFrame.SwiftMLError
+     81c: aa0003e1     	mov	x1, x0
+     820: 90000000     	adrp	x0, 0x0 <ltmp0>
+		0000000000000820:  ARM64_RELOC_GOT_LOAD_PAGE21	protocol conformance descriptor for SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+     824: f9400000     	ldr	x0, [x0]
+		0000000000000824:  ARM64_RELOC_GOT_LOAD_PAGEOFF12	protocol conformance descriptor for SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+     828: 94000000     	bl	0x828 <lazy protocol witness table accessor for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame+0x2c>
+		0000000000000828:  ARM64_RELOC_BRANCH26	_swift_getWitnessTable
+     82c: 90000008     	adrp	x8, 0x0 <ltmp0>
+		000000000000082c:  ARM64_RELOC_PAGE21	lazy protocol witness table cache variable for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+     830: 91000108     	add	x8, x8, #0x0
+		0000000000000830:  ARM64_RELOC_PAGEOFF12	lazy protocol witness table cache variable for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+     834: c89ffd00     	stlr	x0, [x8]
+     838: a8c17bfd     	ldp	x29, x30, [sp], #0x10
+     83c: d65f03c0     	ret
+
+0000000000000840 <___swift_instantiateConcreteTypeFromMangledNameV2>:
+     840: a9be4ff4     	stp	x20, x19, [sp, #-0x20]!
+     844: a9017bfd     	stp	x29, x30, [sp, #0x10]
+     848: 910043fd     	add	x29, sp, #0x10
+     84c: aa0003f3     	mov	x19, x0
+     850: f9400000     	ldr	x0, [x0]
+     854: 92400008     	and	x8, x0, #0x1
+     858: f100001f     	cmp	x0, #0x0
+     85c: fa401900     	ccmp	x8, #0x0, #0x0, ne
+     860: 54000120     	b.eq	0x884 <___swift_instantiateConcreteTypeFromMangledNameV2+0x44>
+     864: f9400029     	ldr	x9, [x1]
+     868: 9360fd28     	asr	x8, x9, #32
+     86c: 8b29c020     	add	x0, x1, w9, sxtw
+     870: aa0803e1     	mov	x1, x8
+     874: d2800002     	mov	x2, #0x0                ; =0
+     878: d2800003     	mov	x3, #0x0                ; =0
+     87c: 94000000     	bl	0x87c <___swift_instantiateConcreteTypeFromMangledNameV2+0x3c>
+		000000000000087c:  ARM64_RELOC_BRANCH26	_swift_getTypeByMangledNameInContext2
+     880: f9000260     	str	x0, [x19]
+     884: a9417bfd     	ldp	x29, x30, [sp, #0x10]
+     888: a8c24ff4     	ldp	x20, x19, [sp], #0x20
+     88c: d65f03c0     	ret
+
+0000000000000890 <lazy protocol witness table accessor for type [Swift.Int] and conformance [A] : Swift.Collection in Swift>:
+     890: 90000008     	adrp	x8, 0x0 <ltmp0>
+		0000000000000890:  ARM64_RELOC_PAGE21	lazy protocol witness table cache variable for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+     894: f9400100     	ldr	x0, [x8]
+		0000000000000894:  ARM64_RELOC_PAGEOFF12	lazy protocol witness table cache variable for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+     898: b4000040     	cbz	x0, 0x8a0 <lazy protocol witness table accessor for type [Swift.Int] and conformance [A] : Swift.Collection in Swift+0x10>
+     89c: d65f03c0     	ret
+     8a0: a9bf7bfd     	stp	x29, x30, [sp, #-0x10]!
+     8a4: 910003fd     	mov	x29, sp
+     8a8: 90000000     	adrp	x0, 0x0 <ltmp0>
+		00000000000008a8:  ARM64_RELOC_PAGE21	demangling cache variable for type metadata for [Swift.Int]
+     8ac: 91000000     	add	x0, x0, #0x0
+		00000000000008ac:  ARM64_RELOC_PAGEOFF12	demangling cache variable for type metadata for [Swift.Int]
+     8b0: 90000001     	adrp	x1, 0x0 <ltmp0>
+		00000000000008b0:  ARM64_RELOC_PAGE21	mangled name ref for type metadata for [Swift.Int]
+     8b4: 91000021     	add	x1, x1, #0x0
+		00000000000008b4:  ARM64_RELOC_PAGEOFF12	mangled name ref for type metadata for [Swift.Int]
+     8b8: 94000000     	bl	0x8b8 <lazy protocol witness table accessor for type [Swift.Int] and conformance [A] : Swift.Collection in Swift+0x28>
+		00000000000008b8:  ARM64_RELOC_BRANCH26	___swift_instantiateConcreteTypeFromMangledNameAbstractV2
+     8bc: aa0003e1     	mov	x1, x0
+     8c0: 90000000     	adrp	x0, 0x0 <ltmp0>
+		00000000000008c0:  ARM64_RELOC_GOT_LOAD_PAGE21	protocol conformance descriptor for [A] : Swift.Collection in Swift
+     8c4: f9400000     	ldr	x0, [x0]
+		00000000000008c4:  ARM64_RELOC_GOT_LOAD_PAGEOFF12	protocol conformance descriptor for [A] : Swift.Collection in Swift
+     8c8: 94000000     	bl	0x8c8 <lazy protocol witness table accessor for type [Swift.Int] and conformance [A] : Swift.Collection in Swift+0x38>
+		00000000000008c8:  ARM64_RELOC_BRANCH26	_swift_getWitnessTable
+     8cc: 90000008     	adrp	x8, 0x0 <ltmp0>
+		00000000000008cc:  ARM64_RELOC_PAGE21	lazy protocol witness table cache variable for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+     8d0: 91000108     	add	x8, x8, #0x0
+		00000000000008d0:  ARM64_RELOC_PAGEOFF12	lazy protocol witness table cache variable for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+     8d4: c89ffd00     	stlr	x0, [x8]
+     8d8: a8c17bfd     	ldp	x29, x30, [sp], #0x10
+     8dc: d65f03c0     	ret
+
+00000000000008e0 <___swift_instantiateConcreteTypeFromMangledNameAbstractV2>:
+     8e0: f9400008     	ldr	x8, [x0]
+     8e4: b4000068     	cbz	x8, 0x8f0 <___swift_instantiateConcreteTypeFromMangledNameAbstractV2+0x10>
+     8e8: 927ff900     	and	x0, x8, #0xfffffffffffffffe
+     8ec: d65f03c0     	ret
+     8f0: a9be4ff4     	stp	x20, x19, [sp, #-0x20]!
+     8f4: a9017bfd     	stp	x29, x30, [sp, #0x10]
+     8f8: 910043fd     	add	x29, sp, #0x10
+     8fc: aa0003f3     	mov	x19, x0
+     900: f9400028     	ldr	x8, [x1]
+     904: 9360fd02     	asr	x2, x8, #32
+     908: 8b28c021     	add	x1, x1, w8, sxtw
+     90c: 52801fe0     	mov	w0, #0xff               ; =255
+     910: d2800003     	mov	x3, #0x0                ; =0
+     914: d2800004     	mov	x4, #0x0                ; =0
+     918: 94000000     	bl	0x918 <___swift_instantiateConcreteTypeFromMangledNameAbstractV2+0x38>
+		0000000000000918:  ARM64_RELOC_BRANCH26	_swift_getTypeByMangledNameInContextInMetadataState2
+     91c: b2400008     	orr	x8, x0, #0x1
+     920: f9000268     	str	x8, [x19]
+     924: a9417bfd     	ldp	x29, x30, [sp, #0x10]
+     928: a8c24ff4     	ldp	x20, x19, [sp], #0x20
+     92c: 927ff900     	and	x0, x8, #0xfffffffffffffffe
+     930: d65f03c0     	ret
+
+0000000000000934 <___swift_closure_destructor>:
+     934: a9bf7bfd     	stp	x29, x30, [sp, #-0x10]!
+     938: 910003fd     	mov	x29, sp
+     93c: f9400a80     	ldr	x0, [x20, #0x10]
+     940: 94000000     	bl	0x940 <___swift_closure_destructor+0xc>
+		0000000000000940:  ARM64_RELOC_BRANCH26	_swift_unknownObjectRelease
+     944: aa1403e0     	mov	x0, x20
+     948: 52800301     	mov	w1, #0x18               ; =24
+     94c: 528000e2     	mov	w2, #0x7                ; =7
+     950: a8c17bfd     	ldp	x29, x30, [sp], #0x10
+     954: 14000000     	b	0x954 <___swift_closure_destructor+0x20>
+		0000000000000954:  ARM64_RELOC_BRANCH26	_swift_deallocObject
+
+0000000000000958 <partial apply forwarder for closure #2 () -> () in static SwiftPreprocessing.ScopedGPURead.withBuffer<A>(_: __C.MTLBuffer, range: Swift.Range<Swift.Int>, shape: [Swift.Int], _: (MLX.MLXArray, Swift.Bool) throws -> A) throws -> A>:
+     958: d65f03c0     	ret
+
+000000000000095c <partial apply forwarder for closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A>:
+     95c: a9410e82     	ldp	x2, x3, [x20, #0x10]
+     960: a9421684     	ldp	x4, x5, [x20, #0x20]
+     964: 14000000     	b	0x964 <partial apply forwarder for closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A+0x8>
+		0000000000000964:  ARM64_RELOC_BRANCH26	closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A
+
+0000000000000968 <partial apply forwarder for closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(batch: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy, _: (MLX.MLXArray) throws -> A) throws -> A>:
+     968: aa0103e5     	mov	x5, x1
+     96c: aa0003e4     	mov	x4, x0
+     970: a9410680     	ldp	x0, x1, [x20, #0x10]
+     974: a9420e82     	ldp	x2, x3, [x20, #0x20]
+     978: 3940c286     	ldrb	w6, [x20, #0x30]
+     97c: 14000000     	b	0x97c <partial apply forwarder for closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(batch: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy, _: (MLX.MLXArray) throws -> A) throws -> A+0x14>
+		000000000000097c:  ARM64_RELOC_BRANCH26	function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()
+
+0000000000000980 <type metadata accessor for SwiftPreprocessing.ScopedGPURead>:
+     980: 90000000     	adrp	x0, 0x0 <ltmp0>
+		0000000000000980:  ARM64_RELOC_ADDEND	0x10
+		0000000000000980:  ARM64_RELOC_PAGE21	full type metadata for SwiftPreprocessing.ScopedGPURead
+     984: 91000000     	add	x0, x0, #0x0
+		0000000000000984:  ARM64_RELOC_ADDEND	0x10
+		0000000000000984:  ARM64_RELOC_PAGEOFF12	full type metadata for SwiftPreprocessing.ScopedGPURead
+     988: d2800001     	mov	x1, #0x0                ; =0
+     98c: d65f03c0     	ret
+
+0000000000000990 <partial apply forwarder for closure #1 (MLX.MLXArray, Swift.Bool) throws -> A in closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A>:
+     990: f81e0ff4     	str	x20, [sp, #-0x20]!
+     994: a9017bfd     	stp	x29, x30, [sp, #0x10]
+     998: 910043fd     	add	x29, sp, #0x10
+     99c: a941d289     	ldp	x9, x20, [x20, #0x18]
+     9a0: d63f0120     	blr	x9
+     9a4: a9417bfd     	ldp	x29, x30, [sp, #0x10]
+     9a8: f84207f4     	ldr	x20, [sp], #0x20
+     9ac: d65f03c0     	ret

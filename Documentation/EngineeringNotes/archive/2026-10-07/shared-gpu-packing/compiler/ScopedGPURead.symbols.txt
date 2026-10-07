@@ -1,0 +1,121 @@
+                 U type metadata accessor for SwiftDataFrame.SwiftMLError
+                 U protocol conformance descriptor for SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+                 U SwiftDataFrame.PreparedNumericBatch.columnCount.getter : Swift.Int
+                 U function signature specialization <Arg[3] = Dead> of static SwiftPreprocessing.PreparedFloatPacking.initialize(_: SwiftDataFrame.PreparedNumericBatch, into: Swift.UnsafeMutableBufferPointer<Swift.Float>, strategy: SwiftPreprocessing.PreparedFloatPacking.Strategy) -> ()
+                 U MLX.Stream.synchronize() -> ()
+                 U static MLX.Stream.gpu.getter : MLX.Stream
+                 U type metadata accessor for MLX.Stream
+                 U MLX.MLXArray.__allocating_init<A where A: Swift.Collection, A.Element == Swift.Int>(rawPointer: Swift.UnsafeMutableRawPointer, _: A?, dtype: MLX.DType, finalizer: () -> ()) -> MLX.MLXArray
+                 U type metadata accessor for MLX.MLXArray
+                 U MLX.MLXArray.__allocating_init<A, B where A: MLX.HasDType, B: Swift.Collection, B.Element == Swift.Int>(Swift.UnsafeBufferPointer<A>, B?) -> MLX.MLXArray
+                 U protocol conformance descriptor for [A] : Swift.Collection in Swift
+                 U protocol witness table for Swift.Float : MLX.HasDType in MLX
+                 U type metadata for Swift.Float
+                 U nominal type descriptor for Swift._ContiguousArrayStorage
+                 U value witness table for ()
+                 U _MTLCreateSystemDefaultDevice
+                 U __objc_autoreleasePoolPop
+                 U __objc_autoreleasePoolPush
+                 U __swift_FORCE_LOAD_$_swiftAccelerate
+                 U __swift_FORCE_LOAD_$_swiftCompression
+                 U __swift_FORCE_LOAD_$_swiftCoreFoundation
+                 U __swift_FORCE_LOAD_$_swiftDispatch
+                 U __swift_FORCE_LOAD_$_swiftFoundation
+                 U __swift_FORCE_LOAD_$_swiftIOKit
+                 U __swift_FORCE_LOAD_$_swiftMetal
+                 U __swift_FORCE_LOAD_$_swiftOSLog
+                 U __swift_FORCE_LOAD_$_swiftObjectiveC
+                 U __swift_FORCE_LOAD_$_swiftXPC
+                 U __swift_FORCE_LOAD_$_swift_Builtin_float
+                 U __swift_FORCE_LOAD_$_swiftos
+                 U __swift_FORCE_LOAD_$_swiftsimd
+                 U _getpagesize
+                 U _objc_autorelease
+                 U _objc_msgSend$contents
+                 U _objc_msgSend$length
+                 U _objc_msgSend$newBufferWithLength:options:
+                 U _objc_msgSend$storageMode
+                 U _swift_allocError
+                 U _swift_allocObject
+                 U _swift_bridgeObjectRetain
+                 U _swift_deallocObject
+                 U _swift_getTypeByMangledNameInContext2
+                 U _swift_getTypeByMangledNameInContextInMetadataState2
+                 U _swift_getWitnessTable
+                 U _swift_release
+                 U _swift_retain
+                 U _swift_storeEnumTagMultiPayload
+                 U _swift_unknownObjectRelease
+                 U _swift_unknownObjectRetain
+                 U _swift_willThrow
+0000000000000000 T static SwiftPreprocessing.ScopedGPURead.withBuffer<A>(_: __C.MTLBuffer, range: Swift.Range<Swift.Int>, shape: [Swift.Int], _: (MLX.MLXArray, Swift.Bool) throws -> A) throws -> A
+0000000000000000 t ltmp0
+00000000000003bc T static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A
+00000000000003ec T closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A
+00000000000004b8 T static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A
+000000000000056c T static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(batch: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy, _: (MLX.MLXArray) throws -> A) throws -> A
+000000000000060c T closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A
+00000000000007fc T lazy protocol witness table accessor for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+0000000000000840 T ___swift_instantiateConcreteTypeFromMangledNameV2
+0000000000000890 T lazy protocol witness table accessor for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+00000000000008e0 T ___swift_instantiateConcreteTypeFromMangledNameAbstractV2
+0000000000000934 t ___swift_closure_destructor
+0000000000000958 t partial apply forwarder for closure #2 () -> () in static SwiftPreprocessing.ScopedGPURead.withBuffer<A>(_: __C.MTLBuffer, range: Swift.Range<Swift.Int>, shape: [Swift.Int], _: (MLX.MLXArray, Swift.Bool) throws -> A) throws -> A
+000000000000095c t partial apply forwarder for closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A
+0000000000000968 t partial apply forwarder for closure #1 (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> () in static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(batch: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy, _: (MLX.MLXArray) throws -> A) throws -> A
+0000000000000980 T type metadata accessor for SwiftPreprocessing.ScopedGPURead
+0000000000000990 t partial apply forwarder for closure #1 (MLX.MLXArray, Swift.Bool) throws -> A in closure #1 () throws -> A in static SwiftPreprocessing.ScopedGPURead.(withMatrix in _8FCCA38D69A0A87D14B5BDD979B8F800)<A>(rows: Swift.Int, columns: Swift.Int, initialize: (Swift.UnsafeMutableBufferPointer<Swift.Float>) -> (), _: (MLX.MLXArray) throws -> A) throws -> A
+00000000000009b0 s lCPI5_0
+00000000000009b0 s ltmp1
+00000000000009c0 S __swift_FORCE_LOAD_$_swiftos_$_SwiftPreprocessing
+00000000000009c0 s ltmp2
+00000000000009c8 S __swift_FORCE_LOAD_$_swiftObjectiveC_$_SwiftPreprocessing
+00000000000009d0 S __swift_FORCE_LOAD_$_swift_Builtin_float_$_SwiftPreprocessing
+00000000000009d8 S __swift_FORCE_LOAD_$_swiftXPC_$_SwiftPreprocessing
+00000000000009e0 S __swift_FORCE_LOAD_$_swiftDispatch_$_SwiftPreprocessing
+00000000000009e8 S __swift_FORCE_LOAD_$_swiftOSLog_$_SwiftPreprocessing
+00000000000009f0 S __swift_FORCE_LOAD_$_swiftFoundation_$_SwiftPreprocessing
+00000000000009f8 S __swift_FORCE_LOAD_$_swiftCoreFoundation_$_SwiftPreprocessing
+0000000000000a00 S __swift_FORCE_LOAD_$_swiftIOKit_$_SwiftPreprocessing
+0000000000000a08 S __swift_FORCE_LOAD_$_swiftMetal_$_SwiftPreprocessing
+0000000000000a10 S __swift_FORCE_LOAD_$_swiftCompression_$_SwiftPreprocessing
+0000000000000a18 S __swift_FORCE_LOAD_$_swiftAccelerate_$_SwiftPreprocessing
+0000000000000a20 S __swift_FORCE_LOAD_$_swiftsimd_$_SwiftPreprocessing
+0000000000000a28 s l_metadata
+0000000000000a50 S full type metadata for SwiftPreprocessing.ScopedGPURead
+0000000000000a60 S type metadata for SwiftPreprocessing.ScopedGPURead
+0000000000000a70 D lazy protocol witness table cache variable for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+0000000000000a70 d ltmp3
+0000000000000a78 D demangling cache variable for type metadata for [Swift.Int]
+0000000000000a80 D lazy protocol witness table cache variable for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+0000000000000a88 D demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Swift.Int>
+0000000000000a90 s l_.str.31.Invalid shared GPU input extent
+0000000000000a90 s ltmp4
+0000000000000ab0 s l_.str.29.GPU input shape overflows Int
+0000000000000ad0 s l_.str.35.GPU input shape differs from extent
+0000000000000b00 s l_.str.34.Cannot allocate GPU feature matrix
+0000000000000b24 S _symbolic SaySiG
+0000000000000b24 s ltmp5
+0000000000000b2c S _symbolic So9MTLBuffer_p
+0000000000000b3c S _symbolic _____ 18SwiftPreprocessing13ScopedGPUReadO
+0000000000000b42 S _symbolic _____ySiG s23_ContiguousArrayStorageC
+0000000000000b50 S mangled name ref for type metadata for [Swift.Int]
+0000000000000b50 s ltmp6
+0000000000000b60 s l_.str.18.SwiftPreprocessing
+0000000000000b73 s l_.str.13.ScopedGPURead
+0000000000000b88 S mangled name ref for type metadata for Swift._ContiguousArrayStorage<Swift.Int>
+0000000000000b90 S ___swift_reflection_version
+0000000000000b94 s l__swift5_reflection_descriptor
+0000000000000b94 s ltmp7
+0000000000000ba4 S module descriptor SwiftPreprocessing
+0000000000000ba4 s ltmp8
+0000000000000bb0 S nominal type descriptor for SwiftPreprocessing.ScopedGPURead
+0000000000000bcc S reflection metadata field descriptor SwiftPreprocessing.ScopedGPURead
+0000000000000bcc s ltmp9
+0000000000000bdc s lnominal type descriptor runtime record for SwiftPreprocessing.ScopedGPURead
+0000000000000bdc s ltmp10
+0000000000000be0 s l_llvm.swift_module_hash
+0000000000000be0 s ltmp11
+0000000000000bf0 s ltmp12
+0000000000006920 s ltmp13
+0000000000006b20 s ltmp14

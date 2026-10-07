@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Shared GPU packing and blocked conversion](benchmarks/2026-10-07-shared-gpu-packing.md) records the shared bulk boundary, 226 passing tests and 760 workflow samples across four feature widths.
+
 - [Retained GPU crossover and compiler investigation](benchmarks/2026-10-07-retained-gpu-crossover.md) records 500 workflow samples, 105 phase samples, verified import decisions and Release compiler findings.
 
 - [Owned schema for retained GPU prediction](benchmarks/2026-10-07-retained-gpu-schema.md) records the typed input adapter, 224 passing tests and 60 workflow samples.

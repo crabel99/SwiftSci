@@ -1,0 +1,412 @@
+                 U type metadata accessor for SwiftDataFrame.SwiftMLError
+                 U protocol conformance descriptor for SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+                 U SwiftDataFrame.PreparedNumericBatch.columnCount.getter : Swift.Int
+                 U SwiftDataFrame.PreparedNumericBatch.requireFinite() throws -> ()
+                 U static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, _: (MLX.MLXArray) throws -> A) throws -> A
+                 U static SwiftPreprocessing.ScopedGPURead.withMatrix<A>(batch: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy, _: (MLX.MLXArray) throws -> A) throws -> A
+                 U SwiftPreprocessing.HardwareRouter.shared.unsafeMutableAddressor : SwiftPreprocessing.HardwareRouter
+                 U nominal type descriptor for SwiftPreprocessing.ExecutionDevice
+                 U SwiftPreprocessing.RetainedPreparedGPUInputTrial.columnCount.getter : Swift.Int
+                 U SwiftPreprocessing.RetainedPreparedGPUInputTrial.withRead<A where A: Swift.Sendable>(@Sendable (MLX.MLXArray, MLX.Stream) throws -> A) async throws -> A
+                 U async function pointer to SwiftPreprocessing.RetainedPreparedGPUInputTrial.withRead<A where A: Swift.Sendable>(@Sendable (MLX.MLXArray, MLX.Stream) throws -> A) async throws -> A
+                 U MLX.buildValueAndGradient<A where A: Swift.Collection, A.Element == Swift.Int>(_: ([MLX.MLXArray]) -> [MLX.MLXArray], argumentNumbers: A) -> ([MLX.MLXArray]) -> ([MLX.MLXArray], [MLX.MLXArray])
+                 U MLX.add<A, B where A: MLX.ScalarOrArray, B: MLX.ScalarOrArray>(_: A, _: B, stream: MLX.StreamOrDevice) -> MLX.MLXArray
+                 U MLX.eval(MLX.MLXArray...) -> ()
+                 U MLX.mean(_: MLX.MLXArray, keepDims: Swift.Bool, stream: MLX.StreamOrDevice) -> MLX.MLXArray
+                 U MLX.zeros<A, B where A: Swift.Collection, B: MLX.HasDType, A.Element == Swift.Int>(_: A, type: B.Type, stream: MLX.StreamOrDevice) -> MLX.MLXArray
+                 U static MLX.Device.gpu.getter : MLX.Device
+                 U type metadata accessor for MLX.Device
+                 U static MLX.Stream.defaultStream.getter : MLX.Stream
+                 U static MLX.Stream.withNewDefaultDevice<A>(device: MLX.Device, _: () throws -> A) throws -> A
+                 U type metadata accessor for MLX.Stream
+                 U MLX.matmul(_: MLX.MLXArray, _: MLX.MLXArray, stream: MLX.StreamOrDevice) -> MLX.MLXArray
+                 U MLX.square(_: MLX.MLXArray, stream: MLX.StreamOrDevice) -> MLX.MLXArray
+                 U static MLX.MLXArray.* infix<A where A: MLX.ScalarOrArray>(A, MLX.MLXArray) -> MLX.MLXArray
+                 U static MLX.MLXArray.+ infix(MLX.MLXArray, MLX.MLXArray) -> MLX.MLXArray
+                 U static MLX.MLXArray.- infix(MLX.MLXArray, MLX.MLXArray) -> MLX.MLXArray
+                 U MLX.MLXArray.item<A where A: MLX.HasDType>(A.Type) -> A
+                 U MLX.MLXArray.size.getter : Swift.Int
+                 U MLX.MLXArray.shape.getter : [Swift.Int]
+                 U MLX.MLXArray.asArray<A where A: MLX.HasDType>(A.Type) -> [A]
+                 U MLX.MLXArray.reshaped<A where A: Swift.Collection, A.Element == Swift.Int>(_: A, stream: MLX.StreamOrDevice) -> MLX.MLXArray
+                 U protocol witness table for MLX.MLXArray : MLX.ScalarOrArray in MLX
+                 U type metadata accessor for MLX.MLXArray
+                 U nominal type descriptor for MLX.MLXArray
+                 U MLX.MLXArray.__allocating_init<A, B where A: MLX.HasDType, B: Swift.Collection, B.Element == Swift.Int>([A], B?) -> MLX.MLXArray
+                 U protocol descriptor for SwiftML.RegressorEstimator
+                 U value witness table for Builtin.NativeObject
+                 U Swift.String.append(Swift.String) -> ()
+                 U static Swift.Array._allocateBufferUninitialized(minimumCapacity: Swift.Int) -> Swift._ArrayBuffer<A>
+                 U generic specialization <Swift.Double> of Swift.Array.init(repeating: A, count: Swift.Int) -> [A]
+                 U generic specialization <Swift.String> of static (extension in Swift):Swift.Array<A where A: Swift.Equatable>.== infix([A], [A]) -> Swift.Bool
+                 U generic specialization <Swift.Double> of static (extension in Swift):Swift.Array<A where A: Swift.Equatable>.== infix([A], [A]) -> Swift.Bool
+                 U protocol conformance descriptor for [A] : Swift.Collection in Swift
+                 U method descriptor for Swift.Actor.unownedExecutor.getter : Swift.UnownedSerialExecutor
+                 U protocol descriptor for Swift.Actor
+                 U static (extension in Swift):Swift.Task< where A == Swift.Never, B == Swift.Never>.checkCancellation() throws -> ()
+                 U type metadata for Swift.Double
+                 U protocol witness table for Swift.Float : MLX.ScalarOrArray in MLX
+                 U protocol witness table for Swift.Float : MLX.HasDType in MLX
+                 U type metadata for Swift.Float
+                 U function signature specialization <Arg[0] = Owned To Guaranteed> of generic specialization <Swift.String, [Swift.String]> of Swift.Set.init<A where A == A1.Element, A1: Swift.Sequence>(__owned A1) -> Swift.Set<A>
+                 U generic specialization <[Swift.Double]> of (extension in Swift):Swift.Collection.prefix(Swift.Int) -> A.SubSequence
+                 U generic pre-specialization <Swift.AnyObject> of Swift._ArrayBuffer._getElementSlowPath(Swift.Int) -> Swift.AnyObject
+                 U generic specialization <Swift.Double> of Swift._ArrayBuffer._consumeAndCreateNew(bufferIsUnique: Swift.Bool, minimumCapacity: Swift.Int, growForAppend: Swift.Bool) -> Swift._ArrayBuffer<A>
+                 U generic specialization <Swift.Double> of Swift._ArrayBuffer._consumeAndCreateNew() -> Swift._ArrayBuffer<A>
+                 U generic specialization <Swift.Double> of Swift.ContiguousArray._createNewBuffer(bufferIsUnique: Swift.Bool, minimumCapacity: Swift.Int, growForAppend: Swift.Bool) -> ()
+                 U generic specialization <Swift.Float> of Swift.ContiguousArray._createNewBuffer(bufferIsUnique: Swift.Bool, minimumCapacity: Swift.Int, growForAppend: Swift.Bool) -> ()
+                 U dispatch thunk of Swift.CustomStringConvertible.description.getter : Swift.String
+                 U nominal type descriptor for Swift._ContiguousArrayStorage
+                 U type metadata accessor for Swift.__ContiguousArrayStorageBase
+                 U generic specialization <Swift.ArraySlice<Swift.Double>> of Swift._copyCollectionToContiguousArray<A where A: Swift.Collection>(A) -> Swift.ContiguousArray<A.Element>
+                 U type metadata for Swift.Int32
+                 U protocol witness table for Swift.Int32 : Swift.CustomStringConvertible in Swift
+                 U type metadata for ()
+                 U _OBJC_CLASS_$_Swift._SwiftObject
+                 U _OBJC_METACLASS_$_Swift._SwiftObject
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U __objc_empty_cache
+                 U __swiftEmptyArrayStorage
+                 U __swift_FORCE_LOAD_$_swiftAccelerate
+                 U __swift_FORCE_LOAD_$_swiftCompression
+                 U __swift_FORCE_LOAD_$_swiftCoreFoundation
+                 U __swift_FORCE_LOAD_$_swiftDispatch
+                 U __swift_FORCE_LOAD_$_swiftFoundation
+                 U __swift_FORCE_LOAD_$_swiftIOKit
+                 U __swift_FORCE_LOAD_$_swiftMetal
+                 U __swift_FORCE_LOAD_$_swiftOSLog
+                 U __swift_FORCE_LOAD_$_swiftObjectiveC
+                 U __swift_FORCE_LOAD_$_swiftXPC
+                 U __swift_FORCE_LOAD_$_swift_Builtin_float
+                 U __swift_FORCE_LOAD_$_swiftos
+                 U __swift_FORCE_LOAD_$_swiftsimd
+                 U _bzero
+                 U _dgels$NEWLAPACK
+                 U _objc_opt_self
+                 U _swift_allocError
+                 U _swift_allocObject
+                 U _swift_beginAccess
+                 U _swift_bridgeObjectRelease
+                 U _swift_bridgeObjectRetain
+                 U _swift_deallocObject
+                 U _swift_defaultActor_deallocate
+                 U _swift_defaultActor_destroy
+                 U _swift_defaultActor_initialize
+                 U _swift_deletedAsyncMethodErrorTu
+                 U _swift_deletedMethodError
+                 U _swift_dynamicCastClass
+                 U _swift_errorRelease
+                 U _swift_getTypeByMangledNameInContext2
+                 U _swift_getTypeByMangledNameInContextInMetadataState2
+                 U _swift_getWitnessTable
+                 U _swift_initStackObject
+                 U _swift_initStaticObject
+                 U _swift_isUniquelyReferenced_nonNull_native
+                 U _swift_release
+                 U _swift_retain
+                 U _swift_storeEnumTagMultiPayload
+                 U _swift_task_alloc
+                 U _swift_task_dealloc
+                 U _swift_task_switch
+                 U _swift_unknownObjectRelease
+                 U _swift_unknownObjectRetain
+                 U _swift_willThrow
+0000000000000000 T function signature specialization <Arg[0] = [Closure Propagated : $sS3dIeghyyd_Sd_SdtSds5NeverOIegnrzr_TR147$s7SwiftML16LinearRegressionC16fitCPUAnalytical33_7F02BDA64AEEB55E25B87D2DD6247628LL8features7targetsyx_SaySdGtKAA0D8FeaturesAELLRzlFS2d_SdtYbcfu0_Tf3nnnpf_n, Argument Types : []> of generic specialization <Swift.Zip2Sequence<[Swift.Double], [Swift.Double]>, Swift.Double, Swift.Never> of (extension in Swift):Swift.Sequence.map<A, B where B1: Swift.Error>((A.Element) throws(B1) -> A1) throws(B1) -> [A1]
+0000000000000000 t ltmp0
+00000000000001cc T key path setter for SwiftML.LinearRegression.weights : MLX.MLXArray? : SwiftML.LinearRegression
+0000000000000228 T SwiftML.LinearRegression.weights.getter : MLX.MLXArray?
+000000000000025c T key path setter for SwiftML.LinearRegression.bias : MLX.MLXArray? : SwiftML.LinearRegression
+00000000000002b8 T SwiftML.LinearRegression.bias.getter : MLX.MLXArray?
+00000000000002ec T SwiftML.LinearRegression.requestedDevice.getter : SwiftPreprocessing.ExecutionDevice
+00000000000002f4 T SwiftML.LinearRegression.resolvedDevice.getter : SwiftPreprocessing.ExecutionDevice?
+0000000000000324 T SwiftML.LinearRegression.__allocating_init(device: SwiftPreprocessing.ExecutionDevice) -> SwiftML.LinearRegression
+000000000000037c T SwiftML.LinearRegression.init(device: SwiftPreprocessing.ExecutionDevice) -> SwiftML.LinearRegression
+00000000000003c4 T SwiftML.LinearRegression.__allocating_init(weights: [Swift.Double], bias: Swift.Double, device: SwiftPreprocessing.ExecutionDevice) -> SwiftML.LinearRegression
+0000000000000420 T SwiftML.LinearRegression.init(weights: [Swift.Double], bias: Swift.Double, device: SwiftPreprocessing.ExecutionDevice) -> SwiftML.LinearRegression
+00000000000006fc T SwiftML.LinearRegression.getWeightsAndBias() -> (weights: [Swift.Double]?, bias: Swift.Double?)
+0000000000000728 T SwiftML.LinearRegression.fit(features: [[Swift.Double]], targets: [Swift.Double]) async throws -> ()
+0000000000000794 t (1) await resume partial function for SwiftML.LinearRegression.fit(features: [[Swift.Double]], targets: [Swift.Double]) async throws -> ()
+00000000000007d0 T SwiftML.LinearRegression.fit(features: [[Swift.Double]], targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+00000000000007f0 t (1) suspend resume partial function for SwiftML.LinearRegression.fit(features: [[Swift.Double]], targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+00000000000009bc t (2) suspend resume partial function for SwiftML.LinearRegression.fit(features: [[Swift.Double]], targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+0000000000000a28 t (3) suspend resume partial function for SwiftML.LinearRegression.fit(features: [[Swift.Double]], targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+0000000000000b68 T SwiftML.LinearRegression.fit(features: SwiftDataFrame.PreparedNumericBatch, targets: [Swift.Double]) async throws -> ()
+0000000000000b88 t (1) suspend resume partial function for SwiftML.LinearRegression.fit(features: SwiftDataFrame.PreparedNumericBatch, targets: [Swift.Double]) async throws -> ()
+0000000000000e08 t (2) suspend resume partial function for SwiftML.LinearRegression.fit(features: SwiftDataFrame.PreparedNumericBatch, targets: [Swift.Double]) async throws -> ()
+0000000000000e78 t (3) suspend resume partial function for SwiftML.LinearRegression.fit(features: SwiftDataFrame.PreparedNumericBatch, targets: [Swift.Double]) async throws -> ()
+0000000000000fdc T generic specialization <SwiftML.(RegressionRows in _7F02BDA64AEEB55E25B87D2DD6247628)> of closure #1 () throws -> () in SwiftML.LinearRegression.(fitValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+0000000000001258 T generic specialization <SwiftML.(RegressionColumns in _7F02BDA64AEEB55E25B87D2DD6247628)> of closure #1 () throws -> () in SwiftML.LinearRegression.(fitValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+00000000000014dc T closure #3 (MLX.MLXArray) throws -> () in closure #1 () throws -> () in SwiftML.LinearRegression.(fitValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+0000000000001644 T generic specialization <SwiftML.(RegressionRows in _7F02BDA64AEEB55E25B87D2DD6247628)> of SwiftML.LinearRegression.(fitCPUAnalytical in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double]) throws -> ()
+0000000000002664 T generic specialization <SwiftML.(RegressionColumns in _7F02BDA64AEEB55E25B87D2DD6247628)> of SwiftML.LinearRegression.(fitCPUAnalytical in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double]) throws -> ()
+0000000000003748 T SwiftML.LinearRegression.fitCPUGradientDescent(features: [[Swift.Double]], targets: [Swift.Double], learningRate: Swift.Double, epochs: Swift.Int) throws -> ()
+0000000000003850 T generic specialization <SwiftML.(RegressionRows in _7F02BDA64AEEB55E25B87D2DD6247628)> of SwiftML.LinearRegression.(fitCPUGradientDescent in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double], learningRate: Swift.Double, epochs: Swift.Int) throws -> ()
+00000000000040b4 T generic specialization <SwiftML.(RegressionColumns in _7F02BDA64AEEB55E25B87D2DD6247628)> of SwiftML.LinearRegression.(fitCPUGradientDescent in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double], learningRate: Swift.Double, epochs: Swift.Int) throws -> ()
+00000000000048b0 T SwiftML.LinearRegression.(fitGPU in _7F02BDA64AEEB55E25B87D2DD6247628)(X: MLX.MLXArray, y: MLX.MLXArray, learningRate: Swift.Float, epochs: Swift.Int) throws -> ()
+000000000000509c T lossFn #1 (params: [MLX.MLXArray]) -> [MLX.MLXArray] in SwiftML.LinearRegression.(fitGPU in _7F02BDA64AEEB55E25B87D2DD6247628)(X: MLX.MLXArray, y: MLX.MLXArray, learningRate: Swift.Float, epochs: Swift.Int) throws -> ()
+000000000000524c T SwiftML.LinearRegression.predict(features: [[Swift.Double]]) throws -> [Swift.Double]
+000000000000530c T SwiftML.LinearRegression.predict(features: SwiftDataFrame.PreparedNumericBatch) async throws -> [Swift.Double]
+0000000000005384 t (1) await resume partial function for SwiftML.LinearRegression.predict(features: SwiftDataFrame.PreparedNumericBatch) async throws -> [Swift.Double]
+00000000000053cc T SwiftML.LinearRegression.predict(features: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy) async throws -> [Swift.Double]
+00000000000053f0 t (1) suspend resume partial function for SwiftML.LinearRegression.predict(features: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy) async throws -> [Swift.Double]
+0000000000005680 T generic specialization <SwiftML.(RegressionRows in _7F02BDA64AEEB55E25B87D2DD6247628)> of SwiftML.LinearRegression.(predictValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A) throws -> [Swift.Double]
+0000000000005bb4 T generic specialization <SwiftML.(RegressionColumns in _7F02BDA64AEEB55E25B87D2DD6247628)> of SwiftML.LinearRegression.(predictValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A) throws -> [Swift.Double]
+0000000000006084 t merged closure #1 (MLX.MLXArray) throws -> [Swift.Double] in SwiftML.LinearRegression.predict(features: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy) async throws -> [Swift.Double]
+00000000000061b0 T SwiftML.LinearRegression.predict(X: MLX.MLXArray) throws -> MLX.MLXArray
+0000000000006460 T SwiftML.LinearRegression.predict(retainedFeatures: SwiftPreprocessing.RetainedPreparedGPUInputTrial) async throws -> [Swift.Double]
+0000000000006480 t (1) suspend resume partial function for SwiftML.LinearRegression.predict(retainedFeatures: SwiftPreprocessing.RetainedPreparedGPUInputTrial) async throws -> [Swift.Double]
+0000000000006678 t (2) await resume partial function for SwiftML.LinearRegression.predict(retainedFeatures: SwiftPreprocessing.RetainedPreparedGPUInputTrial) async throws -> [Swift.Double]
+00000000000066e4 t (3) suspend resume partial function for SwiftML.LinearRegression.predict(retainedFeatures: SwiftPreprocessing.RetainedPreparedGPUInputTrial) async throws -> [Swift.Double]
+00000000000066f4 t (4) suspend resume partial function for SwiftML.LinearRegression.predict(retainedFeatures: SwiftPreprocessing.RetainedPreparedGPUInputTrial) async throws -> [Swift.Double]
+0000000000006728 T closure #1 @Sendable (MLX.MLXArray, MLX.Stream) throws -> [Swift.Double] in SwiftML.LinearRegression.predict(retainedFeatures: SwiftPreprocessing.RetainedPreparedGPUInputTrial) async throws -> [Swift.Double]
+0000000000006bd4 T SwiftML.LinearRegression.getWeights() -> [Swift.Double]?
+0000000000006d28 T SwiftML.LinearRegression.getBias() -> Swift.Double?
+0000000000006dc0 T SwiftML.LinearRegression.deinit
+0000000000006dfc T SwiftML.LinearRegression.__deallocating_deinit
+0000000000006e38 T SwiftML.LinearRegression.unownedExecutor.getter : Swift.UnownedSerialExecutor
+0000000000006e44 T protocol witness for Swift.Actor.unownedExecutor.getter : Swift.UnownedSerialExecutor in conformance SwiftML.LinearRegression : Swift.Actor in SwiftML
+0000000000006e50 T protocol witness for SwiftML.RegressorEstimator.fit(features: SwiftDataFrame.PreparedNumericBatch, targets: [Swift.Double]) async throws -> () in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000006ed0 T protocol witness for SwiftML.RegressorEstimator.predict(features: SwiftDataFrame.PreparedNumericBatch) async throws -> [Swift.Double] in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000006f4c T protocol witness for SwiftML.RegressorEstimator.fit(features: [[Swift.Double]], targets: [Swift.Double]) async throws -> () in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000006fbc T protocol witness for SwiftML.RegressorEstimator.predict(features: [[Swift.Double]]) async throws -> [Swift.Double] in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000006fd4 t (1) suspend resume partial function for protocol witness for SwiftML.RegressorEstimator.predict(features: [[Swift.Double]]) async throws -> [Swift.Double] in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000007020 T ___swift_instantiateConcreteTypeFromMangledNameV2
+0000000000007070 T lazy protocol witness table accessor for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+00000000000070c0 T ___swift_instantiateConcreteTypeFromMangledNameAbstractV2
+0000000000007114 T lazy protocol witness table accessor for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+0000000000007158 t partial apply forwarder for generic not re-abstracted specialization <SwiftML.(RegressionRows in _7F02BDA64AEEB55E25B87D2DD6247628)> of closure #1 () throws -> () in SwiftML.LinearRegression.(fitValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+0000000000007180 T function signature specialization <Arg[6] = Dead> of generic specialization <SwiftML.(RegressionRows in _7F02BDA64AEEB55E25B87D2DD6247628)> of gradient #1 <A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(at: [Swift.Double]) -> [Swift.Double] in SwiftML.LinearRegression.(fitCPUAnalytical in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double]) throws -> ()
+000000000000751c T function signature specialization <Arg[2] = Dead> of gradientNorm #1 <A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>([Swift.Double]) -> Swift.Double in SwiftML.LinearRegression.(fitCPUAnalytical in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double]) throws -> ()
+0000000000007584 t partial apply forwarder for generic not re-abstracted specialization <SwiftML.(RegressionColumns in _7F02BDA64AEEB55E25B87D2DD6247628)> of closure #1 () throws -> () in SwiftML.LinearRegression.(fitValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+00000000000075bc t partial apply forwarder for closure #1 @Sendable (MLX.MLXArray, MLX.Stream) throws -> [Swift.Double] in SwiftML.LinearRegression.predict(retainedFeatures: SwiftPreprocessing.RetainedPreparedGPUInputTrial) async throws -> [Swift.Double]
+00000000000075dc t l_keypath_get
+0000000000007624 t l_keypath_set
+0000000000007628 t l_keypath_get.10
+0000000000007670 t l_keypath_set.11
+0000000000007674 t l_keypath_get.12
+00000000000076b8 t l_keypath_set.13
+00000000000076f8 T type metadata accessor for SwiftML.LinearRegression
+0000000000007718 t ___swift_closure_destructor
+000000000000774c t partial apply forwarder for lossFn #1 (params: [MLX.MLXArray]) -> [MLX.MLXArray] in SwiftML.LinearRegression.(fitGPU in _7F02BDA64AEEB55E25B87D2DD6247628)(X: MLX.MLXArray, y: MLX.MLXArray, learningRate: Swift.Float, epochs: Swift.Int) throws -> ()
+0000000000007758 t partial apply forwarder for closure #4 (MLX.MLXArray) throws -> [Swift.Double] in SwiftML.LinearRegression.(predictValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A) throws -> [Swift.Double]
+0000000000007770 T function signature specialization <Arg[5] = Exploded, Arg[6] = Dead> of generic specialization <SwiftML.(RegressionColumns in _7F02BDA64AEEB55E25B87D2DD6247628)> of gradient #1 <A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(at: [Swift.Double]) -> [Swift.Double] in SwiftML.LinearRegression.(fitCPUAnalytical in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double]) throws -> ()
+0000000000007b14 t partial apply forwarder for generic not re-abstracted specialization <SwiftML.(RegressionColumns in _7F02BDA64AEEB55E25B87D2DD6247628)> of closure #2 (Swift.Int, Swift.Int) -> Swift.Double in closure #1 () throws -> () in SwiftML.LinearRegression.(fitValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+0000000000007b18 t merged partial apply forwarder for generic not re-abstracted specialization <SwiftML.(RegressionColumns in _7F02BDA64AEEB55E25B87D2DD6247628)> of closure #3 (Swift.Int, Swift.Int) -> Swift.Double in SwiftML.LinearRegression.(predictValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A) throws -> [Swift.Double]
+0000000000007b68 t partial apply forwarder for closure #3 (MLX.MLXArray) throws -> () in closure #1 () throws -> () in SwiftML.LinearRegression.(fitValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+0000000000007b88 t partial apply forwarder for generic not re-abstracted specialization <SwiftML.(RegressionRows in _7F02BDA64AEEB55E25B87D2DD6247628)> of closure #2 (Swift.Int, Swift.Int) -> Swift.Double in closure #1 () throws -> () in SwiftML.LinearRegression.(fitValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+0000000000007b8c t merged partial apply forwarder for generic not re-abstracted specialization <SwiftML.(RegressionRows in _7F02BDA64AEEB55E25B87D2DD6247628)> of closure #3 (Swift.Int, Swift.Int) -> Swift.Double in SwiftML.LinearRegression.(predictValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A) throws -> [Swift.Double]
+0000000000007bd8 T ___swift_memcpy16_8
+0000000000007be4 T ___swift_noop_void_return
+0000000000007be8 T getEnumTagSinglePayload value witness for SwiftML.(OLSAccumulator in _7F02BDA64AEEB55E25B87D2DD6247628)
+0000000000007c08 T storeEnumTagSinglePayload value witness for SwiftML.(OLSAccumulator in _7F02BDA64AEEB55E25B87D2DD6247628)
+0000000000007c30 T type metadata accessor for SwiftML.(OLSAccumulator in _7F02BDA64AEEB55E25B87D2DD6247628)
+0000000000007c40 t (1) await resume partial function for protocol witness for SwiftML.RegressorEstimator.fit(features: SwiftDataFrame.PreparedNumericBatch, targets: [Swift.Double]) async throws -> () in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000007c44 t (1) await resume partial function for protocol witness for SwiftML.RegressorEstimator.fit(features: [[Swift.Double]], targets: [Swift.Double]) async throws -> () in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000007c48 t (1) await resume partial function for protocol witness for SwiftML.RegressorEstimator.predict(features: SwiftDataFrame.PreparedNumericBatch) async throws -> [Swift.Double] in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000007c4c t partial apply forwarder for closure #3 (MLX.MLXArray) throws -> () in closure #1 () throws -> () in SwiftML.LinearRegression.(fitValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A, targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> () with unmangled suffix ".22"
+0000000000007c60 t partial apply forwarder for closure #1 (MLX.MLXArray) throws -> [Swift.Double] in SwiftML.LinearRegression.predict(features: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy) async throws -> [Swift.Double]
+0000000000007c74 t partial apply forwarder for closure #4 (MLX.MLXArray) throws -> [Swift.Double] in SwiftML.LinearRegression.(predictValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A) throws -> [Swift.Double] with unmangled suffix ".21"
+0000000000007c88 t partial apply forwarder for generic not re-abstracted specialization <SwiftML.(RegressionColumns in _7F02BDA64AEEB55E25B87D2DD6247628)> of closure #3 (Swift.Int, Swift.Int) -> Swift.Double in SwiftML.LinearRegression.(predictValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A) throws -> [Swift.Double]
+0000000000007c8c t partial apply forwarder for generic not re-abstracted specialization <SwiftML.(RegressionRows in _7F02BDA64AEEB55E25B87D2DD6247628)> of closure #3 (Swift.Int, Swift.Int) -> Swift.Double in SwiftML.LinearRegression.(predictValidated in _7F02BDA64AEEB55E25B87D2DD6247628)<A where A: SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)>(features: A) throws -> [Swift.Double]
+0000000000007c90 s lCPI10_0
+0000000000007c90 s ltmp1
+0000000000007ca0 s lCPI10_1
+0000000000007cb0 s lCPI22_0
+0000000000007cc0 s lCPI23_0
+0000000000007cd0 s lCPI25_0
+0000000000007ce0 s lCPI25_1
+0000000000007cf0 s lCPI26_0
+0000000000007d00 s lCPI26_1
+0000000000007d10 s lCPI28_0
+0000000000007d20 s lCPI28_1
+0000000000007d30 s lCPI29_0
+0000000000007d40 s lCPI29_1
+0000000000007d50 s lCPI30_0
+0000000000007d60 s lCPI30_1
+0000000000007d70 s lCPI31_0
+0000000000007d80 s lCPI37_0
+0000000000007d90 s lCPI38_0
+0000000000007da0 s lCPI46_0
+0000000000007db0 s lCPI46_1
+0000000000007dc0 S __swift_FORCE_LOAD_$_swiftFoundation_$_SwiftML
+0000000000007dc0 s ltmp2
+0000000000007dc8 S __swift_FORCE_LOAD_$_swift_Builtin_float_$_SwiftML
+0000000000007dd0 S __swift_FORCE_LOAD_$_swiftObjectiveC_$_SwiftML
+0000000000007dd8 S __swift_FORCE_LOAD_$_swiftCoreFoundation_$_SwiftML
+0000000000007de0 S __swift_FORCE_LOAD_$_swiftDispatch_$_SwiftML
+0000000000007de8 S __swift_FORCE_LOAD_$_swiftXPC_$_SwiftML
+0000000000007df0 S __swift_FORCE_LOAD_$_swiftIOKit_$_SwiftML
+0000000000007df8 S __swift_FORCE_LOAD_$_swiftos_$_SwiftML
+0000000000007e00 S __swift_FORCE_LOAD_$_swiftOSLog_$_SwiftML
+0000000000007e08 S __swift_FORCE_LOAD_$_swiftMetal_$_SwiftML
+0000000000007e10 S __swift_FORCE_LOAD_$_swiftCompression_$_SwiftML
+0000000000007e18 S __swift_FORCE_LOAD_$_swiftAccelerate_$_SwiftML
+0000000000007e20 S __swift_FORCE_LOAD_$_swiftsimd_$_SwiftML
+0000000000007e28 S protocol witness table for SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000007e50 S property descriptor for SwiftML.LinearRegression.weights : MLX.MLXArray?
+0000000000007e60 S property descriptor for SwiftML.LinearRegression.bias : MLX.MLXArray?
+0000000000007e70 S property descriptor for SwiftML.LinearRegression.resolvedDevice : SwiftPreprocessing.ExecutionDevice?
+0000000000007e80 s l_metadata
+0000000000007ea8 S value witness table for SwiftML.(OLSAccumulator in _7F02BDA64AEEB55E25B87D2DD6247628)
+0000000000007f00 S full type metadata for SwiftML.(OLSAccumulator in _7F02BDA64AEEB55E25B87D2DD6247628)
+0000000000007f28 s l_got.protocol descriptor for Swift.Actor
+0000000000007f30 s l_got.method descriptor for Swift.Actor.unownedExecutor.getter : Swift.UnownedSerialExecutor
+0000000000007f38 s l_got.protocol descriptor for SwiftML.RegressorEstimator
+0000000000007f40 s l_got.swift_deletedAsyncMethodErrorTu
+0000000000007f48 S _symbolic SaySiG
+0000000000007f48 s ltmp3
+0000000000007f50 S _symbolic _____ySiG s23_ContiguousArrayStorageC
+0000000000007f5a S _symbolic _____ySfG s23_ContiguousArrayStorageC
+0000000000007f64 S _symbolic SaySdG
+0000000000007f6c S _symbolic SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)
+0000000000007fb2 S _symbolic x
+0000000000007fb4 S _symbolic _____ 7SwiftML16LinearRegressionC
+0000000000007fba S _symbolic BD
+0000000000007fbe S _symbolic _____Sg 3MLX8MLXArrayC
+0000000000007fc6 S _symbolic _____ 18SwiftPreprocessing15ExecutionDeviceO
+0000000000007fcc S _symbolic _____Sg 18SwiftPreprocessing15ExecutionDeviceO
+0000000000007fd4 S _symbolic SaySdGSg
+0000000000007fde S _symbolic SdSg
+0000000000007fe4 S _symbolic SaySSGSg
+0000000000007fee S _symbolic _____ 3MLX8MLXArrayC
+0000000000007ff4 S _symbolic _____yyXlG s23_ContiguousArrayStorageC
+0000000000008000 S _symbolic _____ 7SwiftML14OLSAccumulator33_7F02BDA64AEEB55E25B87D2DD6247628LLV
+0000000000008006 S _symbolic Sd
+0000000000008010 D demangling cache variable for type metadata for [Swift.Int]
+0000000000008010 d ltmp4
+0000000000008018 D lazy protocol witness table cache variable for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+0000000000008020 D demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Swift.Int>
+0000000000008028 D demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Swift.Float>
+0000000000008030 D lazy protocol witness table cache variable for type SwiftDataFrame.SwiftMLError and conformance SwiftDataFrame.SwiftMLError : Swift.Error in SwiftDataFrame
+0000000000008038 D demangling cache variable for type metadata for [Swift.Double]
+0000000000008040 D metaclass for SwiftML.LinearRegression
+0000000000008068 D full type metadata for SwiftML.LinearRegression
+0000000000008080 D type metadata for SwiftML.LinearRegression
+0000000000008240 D outlined variable #0 of SwiftML.LinearRegression.(fitGPU in _7F02BDA64AEEB55E25B87D2DD6247628)(X: MLX.MLXArray, y: MLX.MLXArray, learningRate: Swift.Float, epochs: Swift.Int) throws -> ()
+0000000000008270 D outlined variable #1 of SwiftML.LinearRegression.(fitGPU in _7F02BDA64AEEB55E25B87D2DD6247628)(X: MLX.MLXArray, y: MLX.MLXArray, learningRate: Swift.Float, epochs: Swift.Int) throws -> ()
+00000000000082a8 D demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Swift.AnyObject>
+00000000000082b0 S mangled name ref for type metadata for [Swift.Int]
+00000000000082b0 s ltmp5
+00000000000082b8 S mangled name ref for type metadata for Swift._ContiguousArrayStorage<Swift.Int>
+00000000000082c0 S mangled name ref for type metadata for Swift._ContiguousArrayStorage<Swift.Float>
+00000000000082c8 S async function pointer to SwiftML.LinearRegression.fit(features: [[Swift.Double]], targets: [Swift.Double]) async throws -> ()
+00000000000082d0 S async function pointer to SwiftML.LinearRegression.fit(features: [[Swift.Double]], targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+00000000000082e0 s l_.str.16.LinearRegression
+00000000000082f8 S async function pointer to SwiftML.LinearRegression.fit(features: SwiftDataFrame.PreparedNumericBatch, targets: [Swift.Double]) async throws -> ()
+0000000000008300 S async function pointer to SwiftML.LinearRegression.predict(features: SwiftDataFrame.PreparedNumericBatch) async throws -> [Swift.Double]
+0000000000008308 S async function pointer to SwiftML.LinearRegression.predict(features: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy) async throws -> [Swift.Double]
+0000000000008310 S mangled name ref for type metadata for [Swift.Double]
+0000000000008318 S async function pointer to SwiftML.LinearRegression.predict(retainedFeatures: SwiftPreprocessing.RetainedPreparedGPUInputTrial) async throws -> [Swift.Double]
+0000000000008320 S protocol conformance descriptor for SwiftML.LinearRegression : Swift.Actor in SwiftML
+0000000000008348 S protocol conformance descriptor for SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000008358 S async function pointer to protocol witness for SwiftML.RegressorEstimator.fit(features: SwiftDataFrame.PreparedNumericBatch, targets: [Swift.Double]) async throws -> () in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000008360 S async function pointer to protocol witness for SwiftML.RegressorEstimator.predict(features: SwiftDataFrame.PreparedNumericBatch) async throws -> [Swift.Double] in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000008368 S async function pointer to protocol witness for SwiftML.RegressorEstimator.fit(features: [[Swift.Double]], targets: [Swift.Double]) async throws -> () in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000008370 S async function pointer to protocol witness for SwiftML.RegressorEstimator.predict(features: [[Swift.Double]]) async throws -> [Swift.Double] in conformance SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000008378 S property descriptor for SwiftML.LinearRegression.requestedDevice : SwiftPreprocessing.ExecutionDevice
+0000000000008378 S property descriptor for SwiftML.LinearRegression.unownedExecutor : Swift.UnownedSerialExecutor
+000000000000837c s l_.str.7.SwiftML
+0000000000008390 s l_.str.18.RegressionFeatures
+00000000000083a8 S direct field offset for SwiftML.LinearRegression.weights : MLX.MLXArray?
+00000000000083b0 S direct field offset for SwiftML.LinearRegression.bias : MLX.MLXArray?
+00000000000083b8 S direct field offset for SwiftML.LinearRegression.requestedDevice : SwiftPreprocessing.ExecutionDevice
+00000000000083c0 S direct field offset for SwiftML.LinearRegression.resolvedDevice : SwiftPreprocessing.ExecutionDevice?
+00000000000083c8 S direct field offset for SwiftML.LinearRegression.(cpuWeights in _7F02BDA64AEEB55E25B87D2DD6247628) : [Swift.Double]?
+00000000000083d0 S direct field offset for SwiftML.LinearRegression.(cpuBias in _7F02BDA64AEEB55E25B87D2DD6247628) : Swift.Double?
+00000000000083d8 S direct field offset for SwiftML.LinearRegression.(preparedFeatureNames in _7F02BDA64AEEB55E25B87D2DD6247628) : [Swift.String]?
+00000000000083e0 S mangled name ref for type metadata for Swift._ContiguousArrayStorage<Swift.AnyObject>
+00000000000083e8 s l_.str.14.OLSAccumulator
+00000000000083f8 S ___swift_reflection_version
+0000000000008400 s l_.str.24.Invalid regression shape
+0000000000008400 s ltmp6
+0000000000008420 s l_.str.48.Regression dimensions exceed the solver capacity
+0000000000008460 s l_.str.68.Prepared regression requires unique names and aligned finite targets
+00000000000084b0 s l_.str.24.Invalid prediction shape
+00000000000084d0 s l_.str.54.Prediction feature names or order differ from training
+0000000000008510 s l_.str.95.Gradient descent diverged: weights or bias contains NaN or Infinity. Try a lower learning rate.
+0000000000008570 s l_.str.43.OLS requires numSamples >= numFeatures + 1.
+00000000000085a0 s l_.str.37.LAPACK dgels_ workspace query failed.
+00000000000085d0 s l_.str.39.LAPACK dgels_ solve failed with info =
+0000000000008600 s l_.str.38.OLS solution contains NaN or Infinity.
+0000000000008628 S reflection metadata field descriptor SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)
+0000000000008628 s ltmp8
+0000000000008638 S reflection metadata field descriptor SwiftML.LinearRegression
+00000000000086a8 S reflection metadata field descriptor SwiftML.(OLSAccumulator in _7F02BDA64AEEB55E25B87D2DD6247628)
+00000000000086d0 S module descriptor SwiftML
+00000000000086d0 s ltmp9
+00000000000086dc S anonymous descriptor SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)
+00000000000086fc S protocol descriptor for SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)
+000000000000872c S nominal type descriptor for SwiftML.LinearRegression
+0000000000008760 S method descriptor for SwiftML.LinearRegression.weights.getter : MLX.MLXArray?
+0000000000008778 S method descriptor for SwiftML.LinearRegression.bias.getter : MLX.MLXArray?
+0000000000008790 S method descriptor for SwiftML.LinearRegression.resolvedDevice.getter : SwiftPreprocessing.ExecutionDevice?
+00000000000087f0 S method descriptor for SwiftML.LinearRegression.__allocating_init(device: SwiftPreprocessing.ExecutionDevice) -> SwiftML.LinearRegression
+00000000000087f8 S method descriptor for SwiftML.LinearRegression.__allocating_init(weights: [Swift.Double], bias: Swift.Double, device: SwiftPreprocessing.ExecutionDevice) -> SwiftML.LinearRegression
+0000000000008800 S method descriptor for SwiftML.LinearRegression.getWeightsAndBias() -> (weights: [Swift.Double]?, bias: Swift.Double?)
+0000000000008808 S method descriptor for SwiftML.LinearRegression.fit(features: [[Swift.Double]], targets: [Swift.Double]) async throws -> ()
+0000000000008810 S method descriptor for SwiftML.LinearRegression.fit(features: [[Swift.Double]], targets: [Swift.Double], learningRate: Swift.Float, epochs: Swift.Int) async throws -> ()
+0000000000008818 S method descriptor for SwiftML.LinearRegression.fit(features: SwiftDataFrame.PreparedNumericBatch, targets: [Swift.Double]) async throws -> ()
+0000000000008838 S method descriptor for SwiftML.LinearRegression.fitCPUGradientDescent(features: [[Swift.Double]], targets: [Swift.Double], learningRate: Swift.Double, epochs: Swift.Int) throws -> ()
+0000000000008850 S method descriptor for SwiftML.LinearRegression.predict(features: [[Swift.Double]]) throws -> [Swift.Double]
+0000000000008858 S method descriptor for SwiftML.LinearRegression.predict(features: SwiftDataFrame.PreparedNumericBatch) async throws -> [Swift.Double]
+0000000000008860 S method descriptor for SwiftML.LinearRegression.predict(features: SwiftDataFrame.PreparedNumericBatch, packing: SwiftPreprocessing.PreparedFloatPacking.Strategy) async throws -> [Swift.Double]
+0000000000008870 S method descriptor for SwiftML.LinearRegression.predict(X: MLX.MLXArray) throws -> MLX.MLXArray
+0000000000008878 S method descriptor for SwiftML.LinearRegression.predict(retainedFeatures: SwiftPreprocessing.RetainedPreparedGPUInputTrial) async throws -> [Swift.Double]
+0000000000008880 S method descriptor for SwiftML.LinearRegression.getWeights() -> [Swift.Double]?
+0000000000008888 S method descriptor for SwiftML.LinearRegression.getBias() -> Swift.Double?
+0000000000008890 S anonymous descriptor SwiftML.(OLSAccumulator in _7F02BDA64AEEB55E25B87D2DD6247628)
+0000000000008898 S nominal type descriptor for SwiftML.(OLSAccumulator in _7F02BDA64AEEB55E25B87D2DD6247628)
+00000000000088c0 s l_.str.30.SwiftML.LinearRegression
+00000000000088c0 s ltmp10
+00000000000088e0 s __METACLASS_DATA_SwiftML.LinearRegression
+00000000000088e0 s ltmp11
+0000000000008928 s __IVARS_SwiftML.LinearRegression
+0000000000008a30 s __DATA_SwiftML.LinearRegression
+0000000000008a80 s l_.str.13.$defaultActor
+0000000000008a80 s ltmp12
+0000000000008a8e s l_.str.7.weights
+0000000000008a96 s l_.str.4.bias
+0000000000008a9b s l_.str.15.requestedDevice
+0000000000008aab s l_.str.14.resolvedDevice
+0000000000008aba s l_.str.10.cpuWeights
+0000000000008ac5 s l_.str.7.cpuBias
+0000000000008ad0 s l_.str.20.preparedFeatureNames
+0000000000008ae5 s l_.str.0.
+0000000000008ae5 s ltmp13
+0000000000008af0 s l___unnamed_1
+0000000000008af0 s ltmp14
+0000000000008afe s l___unnamed_2
+0000000000008b06 s l___unnamed_3
+0000000000008b0b s l___unnamed_4
+0000000000008b1b s l___unnamed_5
+0000000000008b2a s l___unnamed_6
+0000000000008b35 s l___unnamed_7
+0000000000008b40 s l___unnamed_8
+0000000000008b55 s l___unnamed_9
+0000000000008b5a s l___unnamed_10
+0000000000008b60 s l__swift5_reflection_descriptor
+0000000000008b60 s ltmp15
+0000000000008b78 s lprotocol descriptor runtime record for SwiftML.(RegressionFeatures in _7F02BDA64AEEB55E25B87D2DD6247628)
+0000000000008b78 s ltmp16
+0000000000008b7c s lprotocol conformance descriptor runtime record for SwiftML.LinearRegression : Swift.Actor in SwiftML
+0000000000008b7c s ltmp17
+0000000000008b80 s lprotocol conformance descriptor runtime record for SwiftML.LinearRegression : SwiftML.RegressorEstimator in SwiftML
+0000000000008b84 s lnominal type descriptor runtime record for SwiftML.LinearRegression
+0000000000008b84 s ltmp18
+0000000000008b88 s lnominal type descriptor runtime record for SwiftML.(OLSAccumulator in _7F02BDA64AEEB55E25B87D2DD6247628)
+0000000000008b8c s l_llvm.swift_module_hash
+0000000000008b8c s ltmp19
+0000000000008ba0 s _objc_classestype metadata for SwiftML.LinearRegression
+0000000000008ba0 s ltmp20
+0000000000008ba8 s ___swift_async_entry_functlets
+0000000000008ba8 s ltmp21
+0000000000008bd0 s ___swift_async_ret_functlets
+0000000000008bd0 s ltmp22
+0000000000008be8 s ___swift_async_cont_functlets
+0000000000008be8 s ltmp23
+0000000000008c14 s ltmp24
+000000000003ad28 s ltmp25
+000000000003b928 s ltmp26
+000000000003e470 b metadata instantiation cache for protocol conformance descriptor for SwiftML.LinearRegression : Swift.Actor in SwiftML
+000000000003e470 b ltmp7
