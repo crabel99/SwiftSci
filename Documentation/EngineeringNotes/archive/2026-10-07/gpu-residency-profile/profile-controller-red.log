@@ -1,0 +1,14 @@
+..F
+======================================================================
+FAIL: test_sigterm_does_not_leave_a_paused_worker (test_gpu_residency_profile.ResidencyProfileTests.test_sigterm_does_not_leave_a_paused_worker)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crabel/Library/Caches/SwiftSci/retained-gpu-trial-20261007/Benchmarks/Tests/test_gpu_residency_profile.py", line 67, in test_sigterm_does_not_leave_a_paused_worker
+    self.assertNotEqual(alive.returncode,0,f'worker survived controller SIGTERM: {alive.stdout.strip()}')
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : worker survived controller SIGTERM: Ts
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.081s
+
+FAILED (failures=1)

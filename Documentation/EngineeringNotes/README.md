@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Memory residency after GPU request cleanup](benchmarks/2026-10-07-gpu-residency-profile.md) attributes most sampled residual RSS to empty malloc regions, records the ineffective pressure-relief experiment, and preserves cleanup regression evidence.
+
 - [Request admission and scoped import policy](benchmarks/2026-10-07-gpu-budget-workflow.md) records throughput and concurrency under fixed reservation limits, plus the unresolved process-residency boundary.
 
 - [Scoped page-padded import trial](benchmarks/2026-10-07-scoped-padding-trial.md) records the avoided-copy memory benefit, timing uncertainty, ownership checks and unchanged default.

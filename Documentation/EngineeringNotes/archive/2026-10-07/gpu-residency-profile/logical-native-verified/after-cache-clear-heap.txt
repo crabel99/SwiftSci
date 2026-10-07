@@ -1,0 +1,269 @@
+Process:         SwiftSciRetainedGPUTrial [31530]
+Path:            /Users/USER/Library/Caches/*/SwiftSciRetainedGPUTrial
+Load Address:    0x104ed8000
+Identifier:      SwiftSciRetainedGPUTrial
+Version:         0
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  Python [31526]
+Target Type:     live task
+
+Date/Time:       2026-10-07 10:00:11.479 -0400
+Launch Time:     2026-10-07 10:00:05.439 -0400
+OS Version:      macOS 27.0 (26A428)
+Report Version:  7
+Analysis Tool:   /usr/bin/heap
+
+Physical footprint:         325.9M
+Physical footprint (peak):  358.0M
+Idle exit:                  untracked
+----
+
+Process 31530: 2 zones
+Zone DefaultMallocZone_0x106fd4000: Overall size: 181936KB; 9554 nodes malloced for 1999KB (1% of capacity)
+Zone objc-class_rw_t_0x107094000: Overall size: 64KB; 1060 nodes malloced for 25KB (39% of capacity)
+All zones: 10614 nodes malloced - 2024KB
+
+Zone DefaultMallocZone_0x106fd4000: 9554 nodes - Sizes: 96KB[2] 80KB[1] 48KB[6] 20KB[3] 16KB[6] 12KB[4] 10KB[3] 8KB[9] 7KB[3] 6KB[2] 5KB[10] 4KB[16] 3.5KB[7] 3KB[23] 2.5KB[37] 2KB[5] 1.75KB[1] 1.5KB[2] 1.25KB[30] 1KB[30] 896[15] 768[16] 640[23] 512[37] 448[22] 384[28] 320[40] 256[64] 224[17] 192[33] 160[181] 128[1120] 112[198] 96[684] 80[207] 64[2336] 48[3446] 32[578] 16[309]
+
+Zone objc-class_rw_t_0x107094000: 1060 nodes - Sizes: 32[530] 16[530]
+
+All zones: 10614 nodes malloced - Sizes: 96KB[2] 80KB[1] 48KB[6] 20KB[3] 16KB[6] 12KB[4] 10KB[3] 8KB[9] 7KB[3] 6KB[2] 5KB[10] 4KB[16] 3.5KB[7] 3KB[23] 2.5KB[37] 2KB[5] 1.75KB[1] 1.5KB[2] 1.25KB[30] 1KB[30] 896[15] 768[16] 640[23] 512[37] 448[22] 384[28] 320[40] 256[64] 224[17] 192[33] 160[181] 128[1120] 112[198] 96[684] 80[207] 64[2336] 48[3446] 32[1108] 16[839]
+
+Found:  442 ObjC classes  97 Swift classes  38 C++ classes  80 CFTypes
+Type names for non-objects could be derived from allocation backtraces if the process used MallocStackLogging
+
+-----------------------------------------------------------------------
+Zone DefaultMallocZone_0x106fd4000: 9554 nodes (2046400 bytes)
+
+   COUNT      BYTES       AVG   CLASS_NAME                                        TYPE    BINARY
+   =====      =====       ===   ==========                                        ====    ======
+    7406    1326992     179.2   non-object
+       6     294912   49152.0   MTLResourceList                                   ObjC    Metal
+     248      32480     131.0   Class.methodCache._buckets (bucket_t)             C       libobjc.A.dylib
+       6      30720    5120.0   AGX::HAL200::ComputeProgramVariant                C++     AGXMetalG16X
+      33      28304     857.7   NSMutableDictionary (Storage)                     C       CoreFoundation
+     204      27552     135.1   xpc_dictionary_t (Storage)                        C       libxpc.dylib
+     475      26512      55.8   CFString                                          ObjC    CoreFoundation
+       5      20480    4096.0   @autoreleasepool content                          C       libobjc.A.dylib
+       1      20480   20480.0   AGXG16CDevice._impl (malloc)                      C       AGXMetalG16X
+      23       9760     424.3   CFDictionary (Value Storage)                      C       CoreFoundation
+      59       7552     128.0   dispatch_queue_t (serial)                         ObjC    libdispatch.dylib
+       1       7168    7168.0   AGXG16XFamilyBinaryArchive._airntBinaryList (struct)  C       AGXMetalG16X
+       1       7168    7168.0   AGXG16XFamilyBinaryArchive._executableFileIndex (struct)  C       AGXMetalG16X
+      21       6656     317.0   CFDictionary (Key Storage)                        C       CoreFoundation
+      35       6624     189.3   NSMutableArray (Storage)                          C       CoreFoundation
+       5       6400    1280.0   AGXG16XFamilyCommandQueue                         ObjC    AGXMetalG16X
+       5       6400    1280.0   Task stack                                        Swift   libswift_Concurrency.dylib
+       1       6144    6144.0   _MTLDeviceFeatureQueries                          ObjC    Metal
+      13       5824     448.0   AGXBuffer                                         ObjC    AGXMetalG16X
+       5       5120    1024.0   AGXG16XFamilyCommandBuffer._storage (struct IOGPUMetalCommandBufferStorage)  C       AGXMetalG16X
+       1       5120    5120.0   AGX::HAL200::VertexProgramVariant                 C++     AGXMetalG16X
+      45       5040     112.0   IOGPUMetalResourcePool                            ObjC    IOGPU
+      45       5040     112.0   IOGPUMetalResourcePool._resourceArgs (struct IOGPUNewResourceArgs)  C       IOGPU
+       5       4480     896.0   AGXG16XFamilyCommandBuffer                        ObjC    AGXMetalG16X
+      65       4160      64.0   OS_os_log                                         ObjC    libsystem_trace.dylib
+       1       4096    4096.0   NSConcreteData (Bytes Storage)                    C       Foundation
+       3       3840    1280.0   AGXG16XFamilyComputeProgram                       ObjC    AGXMetalG16X
+       1       3584    3584.0   AGX::HAL200::ClearVisibilityVertexProgramVariant  C++     AGXMetalG16X
+       1       3584    3584.0   AGX::HAL200::DummyFeedbackFragmentProgramVariant  C++     AGXMetalG16X
+       1       3584    3584.0   AGX::HAL200::PassthroughVertexProgramVariant      C++     AGXMetalG16X
+       1       3584    3584.0   icu::UnicodeSet (list Storage)                    C       libicucore.A.dylib
+      22       3456     157.1   Swift.StringStorage                               Swift   libswiftCore.dylib
+       5       3200     640.0   AGXG16XFamilyCommandBuffer._impl (malloc)         C       AGXMetalG16X
+       2       3104    1552.0   CFDictionary (Weak Key Storage)                   C       CoreFoundation
+       1       3072    3072.0   AGXG16CDevice                                     ObjC    AGXMetalG16X
+       1       3072    3072.0   AGXG16CDevice._buffer_suballocator (struct IOGPUMetalSuballocator)  C       AGXMetalG16X
+       1       3072    3072.0   CFRunLoop                                         CFType  CoreFoundation
+      36       3040      84.4   CFData                                            ObjC    CoreFoundation
+      35       2800      80.0   Class.data.readonly (class_ro_t)                  C       libobjc.A.dylib
+      21       2688     128.0   dispatch_source_t                                 ObjC    libdispatch.dylib
+       7       2688     384.0   IOGPUMetalPooledResource                          ObjC    IOGPU
+       3       2688     896.0   AGXG16XFamilyComputePipeline                      ObjC    AGXMetalG16X
+       2       2560    1280.0   AGX::EndOfTileProgramKey                          C++     AGXMetalG16X
+      28       2176      77.7   NSDictionary                                      ObjC    CoreFoundation
+      45       2160      48.0   NSMutableArray                                    ObjC    CoreFoundation
+      13       2080     160.0   IOGPUMetalDeviceShmem                             ObjC    IOGPU
+       1       2048    2048.0   AGXG16XFamilyHeap._allocator (struct)             C       AGXMetalG16X
+       3       1920     640.0   LibraryWithData                                   C++     Metal
+      21       1856      88.4   CFArray                                           ObjC    CoreFoundation
+      28       1792      64.0   CFDictionary                                      ObjC    CoreFoundation
+       4       1792     448.0   AGXG16XFamilyBuffer                               ObjC    AGXMetalG16X
+       2       1792     896.0   icu::CollationSettings                            C++     libicucore.A.dylib
+      11       1760     160.0   CFPrefsPlistSource                                ObjC    CoreFoundation
+      16       1728     108.0   Class.data.methods (method_array_t)               C       libobjc.A.dylib
+      23       1696      73.7   dispatch_data_t                                   ObjC    libdispatch.dylib
+      21       1680      80.0   dispatch_semaphore_t                              ObjC    libdispatch.dylib
+      34       1632      48.0   __NSMallocBlock__                                 ObjC    libsystem_blocks.dylib
+       5       1600     320.0   IOGPUMetalResource                                ObjC    IOGPU
+       5       1600     320.0   Swift._DictionaryStorage<Swift.String, Swift.Int>  Swift   libswiftCore.dylib
+       3       1536     512.0   _MTLFunctionInternal                              ObjC    Metal
+       2       1536     768.0   _LocaleICU                                        Swift   Foundation
+       1       1536    1536.0   Swift._ContiguousArrayStorage<SwiftSciRetainedGPUTrial.BudgetRegressionWorkflow.RequestResult>  Swift   libswiftCore.dylib
+       9       1440     160.0   dispatch_mach_t                                   ObjC    libdispatch.dylib
+      41       1312      32.0   NSMutableDictionary                               ObjC    CoreFoundation
+       2       1280     640.0   Swift._ContiguousArrayStorage<Swift.Double>       Swift   libswiftCore.dylib
+       6       1184     197.3   xpc_string_t (Storage)                            C       libxpc.dylib
+      23       1104      48.0   Class.data.extended (class_rw_ext_t)              C       libobjc.A.dylib
+       3       1024     341.3   ColorSyncProfile                                  CFType  ColorSync
+       1       1024    1024.0   AGX::BackgroundObjectProgramKey                   C++     AGXMetalG16X
+       1       1024    1024.0   AGX::BlitComputeProgramKey                        C++     AGXMetalG16X
+       1       1024    1024.0   AGX::BlitFragmentProgramKey                       C++     AGXMetalG16X
+       1       1024    1024.0   AGXG16XFamilyBinaryArchive                        ObjC    AGXMetalG16X
+       1       1024    1024.0   AGXG16XFamilyResidencySet._hashTable (struct)     C       AGXMetalG16X
+      12        960      80.0   dispatch_group_t                                  ObjC    libdispatch.dylib
+       3        960     320.0   xpc_connection_t                                  ObjC    libxpc.dylib
+       5        944     188.8   NSPathStore2                                      ObjC    Foundation
+       4        896     224.0   CFBundle                                          CFType  CoreFoundation
+       1        896     896.0   icu::BMPSet                                       C++     libicucore.A.dylib
+       5        800     160.0   CFPrefsManagedSource                              ObjC    CoreFoundation
+       1        768     768.0   AGX::BlitFastClearProgramKey                      C++     AGXMetalG16X
+       1        768     768.0   AGX::BlitSparseProgramKey                         C++     AGXMetalG16X
+       1        768     768.0   AGX::BlitVertexFastClearProgramKey                C++     AGXMetalG16X
+       1        768     768.0   AGX::BlitVertexProgramKey                         C++     AGXMetalG16X
+       1        768     768.0   AGX::ComputeControlFlowPredicateProgramKey        C++     AGXMetalG16X
+       1        768     768.0   AGX::PassthroughObjectProgramKey                  C++     AGXMetalG16X
+       1        768     768.0   AGX::TessellationObjectProgramKey                 C++     AGXMetalG16X
+       1        768     768.0   AGX::TileDispatchVertexProgramKey                 C++     AGXMetalG16X
+      23        736      32.0   NSDictionary                                      ObjC    CoreFoundation
+      10        736      73.6   NSURL                                             ObjC    CoreFoundation
+       7        672      96.0   MTLBinaryEntry                                    ObjC    Metal
+       4        640     160.0   CFPrefsSuiteSearchListSource                      ObjC    CoreFoundation
+       1        640     640.0   LibraryWithFile                                   C++     Metal
+       1        640     640.0   Swift._ContiguousArrayStorage<SwiftPreprocessing.MemoryBudget.(Waiter in $105b41108)>  Swift   libswiftCore.dylib
+       7        560      80.0   MTLBinaryKey._id (malloc)                         C       Metal
+       7        560      80.0   std::__shared_ptr_emplace<AGX::FunctionTableSet<AGXG16XFamilyUserIntersectionFunctionTable>>  C++     AGXMetalG16X
+       7        560      80.0   std::__shared_ptr_emplace<AGX::FunctionTableSet<AGXG16XFamilyVisibleFunctionTable>>  C++     AGXMetalG16X
+       4        512     128.0   dispatch_queue_t (concurrent)                     ObjC    libdispatch.dylib
+       2        512     256.0   SCClientSession                                   C++     CarbonCore
+       5        480      96.0   NSLock                                            ObjC    Foundation
+       4        416     104.0   CGColor                                           CFType  CoreGraphics
+       4        384      96.0   CGColorSpace                                      CFType  CoreGraphics
+       4        384      96.0   _MTLLibrary._cacheEntry (struct MTLLibraryContainer)  C       Metal
+       4        384      96.0   xpc_dictionary_t                                  ObjC    libxpc.dylib
+       3        384     128.0   NSMapTable                                        ObjC    Foundation
+       3        368     122.7   Swift._ContiguousArrayStorage<Swift.String>       Swift   libswiftCore.dylib
+       7        320      45.7   __NSExactBlockVariable__                          ObjC    libsystem_blocks.dylib
+       5        320      64.0   CFBag                                             CFType  CoreFoundation
+       5        320      64.0   IOGPUMetalDeviceShmemPool                         ObjC    IOGPU
+       4        320      80.0   NSBundle                                          ObjC    Foundation
+       2        320     160.0   CFPrefsSearchListSource                           ObjC    CoreFoundation
+       2        320     160.0   MTLCompilerFSCache                                C++     Metal
+       1        320     320.0   MTLCompilerScheduler                              C++     Metal
+       1        320     320.0   Task stack                                        Swift   libswift_Concurrency.dylib
+       1        320     320.0   _FileCache                                        CFType  CoreServicesInternal
+       1        320     320.0   mlx::core::metal::MetalAllocator                  C++     SwiftSciRetainedGPUTrial
+       6        288      48.0   xpc_string_t                                      ObjC    libxpc.dylib
+       3        272      90.7   xpc_pipe_t                                        ObjC    libxpc.dylib
+       5        256      51.2   Swift._ContiguousArrayStorage<Swift.UInt8>        Swift   libswiftCore.dylib
+       4        256      64.0   _MTLLibrary                                       ObjC    Metal
+       2        256     128.0   NSArray                                           ObjC    CoreFoundation
+       1        256     256.0   AGXG16CDevice._supportedGPUFamilies (vector<MTLGPUFamily>)  C++     AGXMetalG16X
+       1        256     256.0   AGXG16XFamilyResidencySet                         ObjC    AGXMetalG16X
+       1        256     256.0   _NSJSONWriter.tempBuffer (char[])                 C       Foundation
+       3        240      80.0   NSHashTable                                       ObjC    Foundation
+       2        240     120.0   CFString (Storage)                                C       CoreFoundation
+       1        224     224.0   CFRunLoopMode                                     CFType  CoreFoundation
+       1        224     224.0   NSRecursiveLock                                   ObjC    Foundation
+       1        224     224.0   URLParseInfo                                      Swift   Foundation
+       1        224     224.0   icu::CollationTailoring                           C++     libicucore.A.dylib
+       1        224     224.0   icu::UnicodeSet                                   C++     libicucore.A.dylib
+       1        192     192.0   AGXG16XFamilyHeap                                 ObjC    AGXMetalG16X
+       1        192     192.0   CFXNotificationRegistrar                          CFType  CoreFoundation
+       1        192     192.0   Swift._DictionaryStorage<Foundation.UUID, Swift.Int>  Swift   libswiftCore.dylib
+       1        192     192.0   _NSThreadData                                     ObjC    Foundation
+       3        176      58.7   CFSet (Value Storage)                             C       CoreFoundation
+       2        160      80.0   CFPrefsSource                                     ObjC    CoreFoundation
+       2        160      80.0   NSPointerArray                                    ObjC    Foundation
+       2        160      80.0   _CharacterSet                                     Swift   Foundation
+       1        160     160.0   MemoryBudget                                      Swift   SwiftSciRetainedGPUTrial
+       1        160     160.0   _NSSwiftProcessInfo                               Swift   Foundation
+       1        160     160.0   std::__shared_ptr_emplace<AGX::HAL200::Sampler>   C++     AGXMetalG16X
+       3        144      48.0   CFSet                                             ObjC    CoreFoundation
+       3        144      48.0   MTLResourceListPool                               ObjC    Metal
+       3        144      48.0   NSAutoreleasePool                                 ObjC    Foundation
+       4        128      32.0   NSUUID                                            Swift   Foundation
+       3        128      42.7   NSMapTable (Key Storage)                          C       Foundation
+       3        128      42.7   NSMapTable (Weak Value Storage)                   C       Foundation
+       1        128     128.0   OS_dispatch_queue_runloop                         ObjC    libdispatch.dylib
+       7        112      16.0   MTLBinaryKey                                      ObjC    Metal
+       1        112     112.0   HardwareRouter                                    Swift   SwiftSciRetainedGPUTrial
+       1        112     112.0   StreamPairPromise                                 Swift   SwiftSciRetainedGPUTrial
+       1        112     112.0   Swift._DictionaryStorage<MLX.Device, Swift.Array<__C.mlx_stream_>>  Swift   libswiftCore.dylib
+       1        112     112.0   _CFXPreferences                                   ObjC    CoreFoundation
+       6         96      16.0   NSMutableDictionary.cow (struct __cow_state_t)    C       CoreFoundation
+       3         96      32.0   AGXG16XFamilyComputeOrFragmentOrTileProgram       ObjC    AGXMetalG16X
+       3         96      32.0   NSHashTable (Weak Object Storage)                 C       Foundation
+       3         96      32.0   NSNumber                                          ObjC    CoreFoundation
+       2         96      48.0   CFError                                           ObjC    CoreFoundation
+       1         96      96.0   _LSDefaults                                       ObjC    LaunchServices
+       1         96      96.0   _NSJSONWriter                                     ObjC    Foundation
+       1         96      96.0   icu::RuleBasedCollator                            C++     libicucore.A.dylib
+       5         80      16.0   MTLPrivateDataTable                               ObjC    Metal
+       5         80      16.0   NSCountedSet                                      ObjC    Foundation
+       1         80      80.0   CGRegion                                          CFType  CoreGraphics
+       1         80      80.0   MTLCompiler                                       ObjC    Metal
+       1         80      80.0   _NSBPlistMappedData                               ObjC    Foundation
+       1         80      80.0   _ProcessInfo                                      Swift   Foundation
+       1         80      80.0   _SwiftURL                                         Swift   Foundation
+       1         80      80.0   icu::CollationCacheEntry                          C++     libicucore.A.dylib
+       1         80      80.0   icu::Normalizer2Impl                              C++     libicucore.A.dylib
+       1         80      80.0   xpc_array_t (Storage)                             C       libxpc.dylib
+       2         64      32.0   Device                                            Swift   SwiftSciRetainedGPUTrial
+       2         64      32.0   _NSSwiftLocale                                    Swift   Foundation
+       1         64      64.0   AGXG16CDevice._libraryBuilder (malloc)            C       AGXMetalG16X
+       1         64      64.0   MTLIOAccelService                                 ObjC    Metal
+       1         64      64.0   MTLIOAccelServiceGlobalContext                    ObjC    Metal
+       1         64      64.0   MTLLoadedFile                                     ObjC    Metal
+       1         64      64.0   MTLLoader                                         ObjC    Metal
+       1         64      64.0   MTLLoader._global (malloc)                        C       Metal
+       1         64      64.0   NSPointerArray (Object Storage)                   C       Foundation
+       1         64      64.0   SCService                                         C++     CarbonCore
+       1         64      64.0   Swift._ContiguousArrayStorage<Swift.Array<Swift.UInt8>>  Swift   libswiftCore.dylib
+       1         64      64.0   _CFXPreferencesHandle                             ObjC    CoreFoundation
+       1         64      64.0   _NSMainThread                                     ObjC    Foundation
+       1         64      64.0   __NSBundleTables                                  ObjC    Foundation
+       1         64      64.0   std::__shared_ptr_emplace<FrameworkConfiguration>  C++     CoreAnalytics
+       1         64      64.0   std::__shared_ptr_emplace<std::unordered_map<MTLUINT256_t, NSObject<OS_dispatch_data>*, UnorderedContainerHash, UnorderedContainerHash>>  C++     Metal
+       3         48      16.0   NSArray                                           ObjC    CoreFoundation
+       1         48      48.0   AGX::HAL200::EncoderComputeServiceCDMSubstreamProcessor  C++     AGXMetalG16X
+       1         48      48.0   AGXG16CDevice._commandBufferStoragePool (struct IOGPUMetalCommandBufferStoragePool)  C       AGXMetalG16X
+       1         48      48.0   CFNotificationCenter                              CFType  CoreFoundation
+       1         48      48.0   ErrorHandler                                      Swift   SwiftSciRetainedGPUTrial
+       1         48      48.0   LazyStreamPromise                                 Swift   SwiftSciRetainedGPUTrial
+       1         48      48.0   MTLIOAccelService._notifyPort (struct IONotificationPort)  C       Metal
+       1         48      48.0   MTLIOAccelServiceGlobalContext._deviceNotifyPort (struct IONotificationPort)  C       Metal
+       1         48      48.0   NSUserDefaults                                    ObjC    CoreFoundation
+       1         48      48.0   icu::Locale                                       C++     libicucore.A.dylib
+       1         48      48.0   xpc_array_t                                       ObjC    libxpc.dylib
+       2         32      16.0   Device.ctx (malloc)                                       SwiftSciRetainedGPUTrial
+       2         32      16.0   _NSSwiftImmortalCharacterSetBridge                Swift   Foundation
+       1         32      32.0   CFMainExecutor                                    Swift   libswift_Concurrency.dylib
+       1         32      32.0   FSNode                                            ObjC    LaunchServices
+       1         32      32.0   IOGPUMemoryInfo                                   ObjC    IOGPU
+       1         32      32.0   MTLLoadedFileContentsWrapper                      ObjC    Metal
+       1         32      32.0   NSConcreteData                                    ObjC    Foundation
+       1         32      32.0   NSFileManager                                     ObjC    Foundation
+       1         32      32.0   NSMutableSet                                      ObjC    CoreFoundation
+       1         32      32.0   NSMutableSet (Storage)                            C       CoreFoundation
+       1         32      32.0   NSPointerArray (Weak Object Storage)              C       Foundation
+       1         32      32.0   RealizedStreamPromise                             Swift   SwiftSciRetainedGPUTrial
+       1         32      32.0   Stream                                            Swift   SwiftSciRetainedGPUTrial
+       1         32      32.0   StreamPool                                        Swift   SwiftSciRetainedGPUTrial
+       1         32      32.0   Swift.TaskLocal<Swift.Optional<MLX.(StreamPairPromise in $105b40498)>>  Swift   libswift_Concurrency.dylib
+       1         32      32.0   std::__shared_ptr_pointer<MTLCompilerCache*, std::shared_ptr<MTLCompilerCache>::__shared_ptr_default_delete<MTLCompilerCache, MTLCompilerCache>>  C++     Metal
+       1         16      16.0   AGXG16CDevice._pipelineLibraryBuilder (struct MTLPipelineLibraryBuilder)  C       AGXMetalG16X
+       1         16      16.0   AGXG16XFamilyBinaryArchive._linkResolver (unique_ptr<MTLArchiveLinkResolver>)  C++     AGXMetalG16X
+       1         16      16.0   AGXG16XFamilyBinaryArchive._mtlScriptBuilder (unique_ptr<MTLMetalScriptBuilder>)  C++     AGXMetalG16X
+       1         16      16.0   CFTaskExecutor                                    Swift   libswift_Concurrency.dylib
+       1         16      16.0   NSSet                                             ObjC    CoreFoundation
+       1         16      16.0   Stream.ctx (malloc)                                       SwiftSciRetainedGPUTrial
+       1         16      16.0   _NSFileManagerBridge                              Swift   Foundation
+
+-----------------------------------------------------------------------
+Zone objc-class_rw_t_0x107094000: 1060 nodes (25440 bytes)
+
+   COUNT      BYTES       AVG   CLASS_NAME                                        TYPE    BINARY
+   =====      =====       ===   ==========                                        ====    ======
+     530      16960      32.0   Metaclass.data (metaclass_rw_v2_t)                C       libobjc.A.dylib
+     530       8480      16.0   Class.data (class_rw_v2_t)                        C       libobjc.A.dylib

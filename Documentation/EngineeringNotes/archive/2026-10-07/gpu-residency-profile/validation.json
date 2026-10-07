@@ -1,0 +1,133 @@
+{
+  "result": "Passed",
+  "passedTests": 842,
+  "failedTests": 0,
+  "skippedTests": 2,
+  "controller_tests": 7,
+  "profile_workers": 4,
+  "profile_requests": 64,
+  "native_inspections": 18,
+  "native_leak_scans": 6,
+  "reported_leaks": 0,
+  "profiles": {
+    "logical-native-verified": {
+      "after_cache_clear": {
+        "malloc_allocated_bytes": 184549376,
+        "malloc_blocks_in_use": 10608,
+        "malloc_in_use_bytes": 2065168,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 223707136,
+        "physical_footprint_bytes": 341754768,
+        "pid": 31530,
+        "rss_bytes": 189644800
+      },
+      "after_pressure_relief": {
+        "before_relief_malloc_in_use_bytes": 2071664,
+        "before_relief_physical_footprint_bytes": 156369784,
+        "before_relief_rss_bytes": 172883968,
+        "malloc_allocated_bytes": 192937984,
+        "malloc_blocks_in_use": 10614,
+        "malloc_in_use_bytes": 2072144,
+        "malloc_relief_reported_bytes": 0,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 223707136,
+        "physical_footprint_bytes": 156369784,
+        "pid": 31530,
+        "rss_bytes": 172883968
+      }
+    },
+    "logical-none-verified": {
+      "after_cache_clear": {
+        "malloc_allocated_bytes": 188743680,
+        "malloc_blocks_in_use": 10614,
+        "malloc_in_use_bytes": 2070464,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 224034816,
+        "physical_footprint_bytes": 341640128,
+        "pid": 31502,
+        "rss_bytes": 189972480
+      },
+      "after_pressure_relief": {
+        "before_relief_malloc_in_use_bytes": 2074912,
+        "before_relief_physical_footprint_bytes": 341640128,
+        "before_relief_rss_bytes": 189972480,
+        "malloc_allocated_bytes": 188743680,
+        "malloc_blocks_in_use": 10620,
+        "malloc_in_use_bytes": 2075392,
+        "malloc_relief_reported_bytes": 0,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 224034816,
+        "physical_footprint_bytes": 341640128,
+        "pid": 31502,
+        "rss_bytes": 189972480
+      }
+    },
+    "padded-native-verified": {
+      "after_cache_clear": {
+        "malloc_allocated_bytes": 180355072,
+        "malloc_blocks_in_use": 10585,
+        "malloc_in_use_bytes": 2076512,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 204914688,
+        "physical_footprint_bytes": 339936120,
+        "pid": 31601,
+        "rss_bytes": 170885120
+      },
+      "after_pressure_relief": {
+        "before_relief_malloc_in_use_bytes": 2076656,
+        "before_relief_physical_footprint_bytes": 154502008,
+        "before_relief_rss_bytes": 171098112,
+        "malloc_allocated_bytes": 188743680,
+        "malloc_blocks_in_use": 10586,
+        "malloc_in_use_bytes": 2077136,
+        "malloc_relief_reported_bytes": 0,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 204914688,
+        "physical_footprint_bytes": 154502008,
+        "pid": 31601,
+        "rss_bytes": 171098112
+      }
+    },
+    "padded-none-verified": {
+      "after_cache_clear": {
+        "malloc_allocated_bytes": 205520896,
+        "malloc_blocks_in_use": 10626,
+        "malloc_in_use_bytes": 2152208,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 213745664,
+        "physical_footprint_bytes": 348259192,
+        "pid": 31521,
+        "rss_bytes": 179666944
+      },
+      "after_pressure_relief": {
+        "before_relief_malloc_in_use_bytes": 2156688,
+        "before_relief_physical_footprint_bytes": 348275576,
+        "before_relief_rss_bytes": 179683328,
+        "malloc_allocated_bytes": 205520896,
+        "malloc_blocks_in_use": 10632,
+        "malloc_in_use_bytes": 2157136,
+        "malloc_relief_reported_bytes": 0,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 213745664,
+        "physical_footprint_bytes": 348275576,
+        "pid": 31521,
+        "rss_bytes": 179683328
+      }
+    }
+  },
+  "limitations": [
+    "Selected integration targets, not full library or sanitizer validation",
+    "Two optional tokenizer skips; existing MNIST test returns early without fixture",
+    "Single machine and fixed request shape; diagnostic timings are not performance evidence",
+    "Physical footprint outside sampled malloc allocations remains partly unattributed",
+    "Zero leak reports do not prove universal absence of leaks"
+  ]
+}
