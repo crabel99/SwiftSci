@@ -1,0 +1,165 @@
+{
+  "commit": "5e1603eea4a0a66635727e01e6f76e20e883bb06",
+  "parent": "4230c29fc00cf7b89bde9d8f1ba000415aa8dd7f",
+  "production_changes": false,
+  "focused_release_tests_passed": 2,
+  "controller_tests_passed": 25,
+  "smoke_workers": 16,
+  "smoke_requests": 2080,
+  "prediction_workers": 4,
+  "prediction_requests": 49152,
+  "latency_workers": 12,
+  "latency_requests": 294912,
+  "complete_public_outputs_match": true,
+  "historical_output_hashes_match": true,
+  "pipeline_request_schema_preserved": true,
+  "maximum_absolute_error": 3.5762786865234375e-07,
+  "request_reservations_drained": true,
+  "gpu_owners_returned_to_baseline": true,
+  "final_gpu_active_and_cache_zero": true,
+  "workers_remaining": 0,
+  "phase_summary": [
+    {
+      "phase": "actor_wait",
+      "one_slot_us": 0.0802343750000001,
+      "two_slots_us": 175.7670219726562
+    },
+    {
+      "phase": "validation",
+      "one_slot_us": 0.08273339843750008,
+      "two_slots_us": 0.09389453125000011
+    },
+    {
+      "phase": "device_allocation",
+      "one_slot_us": 40.58766015625004,
+      "two_slots_us": 40.508829589843856
+    },
+    {
+      "phase": "packing",
+      "one_slot_us": 0.1299833984375002,
+      "two_slots_us": 0.14695410156250027
+    },
+    {
+      "phase": "import",
+      "one_slot_us": 1.6583339843749938,
+      "two_slots_us": 1.6736601562499969
+    },
+    {
+      "phase": "graph",
+      "one_slot_us": 0.8688583984374981,
+      "two_slots_us": 0.8831562499999988
+    },
+    {
+      "phase": "completion",
+      "one_slot_us": 118.9178588867187,
+      "two_slots_us": 118.75200976562499
+    },
+    {
+      "phase": "readback",
+      "one_slot_us": 1.7317480468749982,
+      "two_slots_us": 1.7632480468750014
+    },
+    {
+      "phase": "scope_cleanup",
+      "one_slot_us": 16.176972167968778,
+      "two_slots_us": 15.892089843749996
+    },
+    {
+      "phase": "actor_body",
+      "one_slot_us": 181.07735107421888,
+      "two_slots_us": 181.35700097656232
+    },
+    {
+      "phase": "awaited_prediction",
+      "one_slot_us": 181.60518505859358,
+      "two_slots_us": 358.48094384765625
+    }
+  ],
+  "validation_comparison": [
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "owned": false,
+      "before_us": 27.963500488281447,
+      "after_us": 0.8979008789062335
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "owned": true,
+      "before_us": 28.018164062500027,
+      "after_us": 0.8703420410156075
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "owned": false,
+      "before_us": 48.222243164062405,
+      "after_us": 1.0661791992187513
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "owned": true,
+      "before_us": 48.192413574218804,
+      "after_us": 1.0672807617187503
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "owned": false,
+      "before_us": 35.47573608398445,
+      "after_us": 1.2440827636718796
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "owned": true,
+      "before_us": 38.220101562500076,
+      "after_us": 1.212690673828123
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "owned": false,
+      "before_us": 36.21426464843753,
+      "after_us": 1.2318835449218786
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "owned": true,
+      "before_us": 34.179565185546906,
+      "after_us": 1.2311892089843721
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "owned": false,
+      "before_us": 38.6831306152344,
+      "after_us": 1.217246337890626
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "owned": true,
+      "before_us": 33.95589575195314,
+      "after_us": 1.2122368164062522
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "owned": false,
+      "before_us": 44.00762988281252,
+      "after_us": 1.249418457031254
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "owned": true,
+      "before_us": 42.350499755859374,
+      "after_us": 1.226071044921878
+    }
+  ],
+  "decision": "Keep production dispatch and import policy unchanged. Packing/import are minor for 64x3 inputs. Next separate device lookup from allocation and trial reuse of the Metal device handle before adding storage pooling."
+}
