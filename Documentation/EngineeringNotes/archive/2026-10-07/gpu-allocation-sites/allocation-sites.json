@@ -1,0 +1,35 @@
+{
+  "source": "history-pilot/history-peak.txt",
+  "evidence": [
+    {
+      "line": 23,
+      "text": "High water mark of allocated heap + VM memory: 167.7 MB  at malloc stack log record index 34,174"
+    },
+    {
+      "line": 24,
+      "text": "Current total allocated heap + VM memory:   3.6 MB  at malloc stack log record index 40,548"
+    },
+    {
+      "line": 25,
+      "text": "Cumulative total allocated heap + VM memory: 687.1 MB"
+    },
+    {
+      "line": 29,
+      "text": "9332 (168M) << TOTAL >>"
+    },
+    {
+      "line": 35,
+      "text": "+ ! :   | 130 (65.0M) StandardScaler.transform(_:)  (in SwiftSciRetainedGPUTrial) + 1192  [0x104f7de54]  StandardScaler.swift:184"
+    },
+    {
+      "line": 73,
+      "text": "+ ! :   |   130 (65.0M) specialized static RetainedRegressionWorkflow.fixture(rows:seed:columns:)  (in SwiftSciRetainedGPUTrial) + 196  [0x1045e69c4]  RegressionWorkflow.swift:10"
+    },
+    {
+      "file": "vmmap.txt",
+      "line": 39,
+      "text": "Malloc Small (empty)             160.0M   132.8M   132.8M       0K       0K       0K       0K       40         see MALLOC ZONE table below"
+    }
+  ],
+  "interpretation": "Peak-live allocation sites, not a census of all later resident pages"
+}
