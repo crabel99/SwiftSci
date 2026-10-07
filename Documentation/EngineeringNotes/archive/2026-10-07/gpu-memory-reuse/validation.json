@@ -1,0 +1,588 @@
+{
+  "result": "Passed",
+  "passedTests": 842,
+  "failedTests": 0,
+  "skippedTests": 2,
+  "controller_tests": 11,
+  "measured_workers": 20,
+  "measured_requests": 3200,
+  "smoke_requests": 32,
+  "original_mode_requests": 32,
+  "extended_series": [
+    {
+      "name": "0-fixed-logical",
+      "policy": "logical",
+      "schedule": "fixed",
+      "cycles_mib": {
+        "rss_bytes": [
+          284.81640625,
+          421.4140625,
+          443.8359375,
+          446.67578125,
+          447.75390625,
+          448.75,
+          449.47265625,
+          449.83984375
+        ],
+        "physical_footprint_bytes": [
+          349.52832221984863,
+          526.2081241607666,
+          548.6495590209961,
+          551.4308090209961,
+          477.5675277709961,
+          443.5636215209961,
+          379.2589340209961,
+          304.5440902709961
+        ],
+        "malloc_in_use_bytes": [
+          1.8089599609375,
+          1.8517608642578125,
+          1.8517608642578125,
+          1.8517608642578125,
+          1.8517608642578125,
+          1.8517608642578125,
+          1.910125732421875,
+          1.9295806884765625
+        ],
+        "malloc_allocated_bytes": [
+          321.0,
+          476.0,
+          500.0,
+          500.0,
+          500.0,
+          500.0,
+          500.0,
+          500.0
+        ]
+      },
+      "last_idle": {
+        "malloc_allocated_bytes": 524288000,
+        "malloc_blocks_in_use": 9486,
+        "malloc_in_use_bytes": 2023312,
+        "mlx_active_bytes": 264,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 523141120,
+        "physical_footprint_bytes": 193578136,
+        "pid": 47882,
+        "rss_bytes": 471760896
+      },
+      "closed": {
+        "malloc_allocated_bytes": 524288000,
+        "malloc_blocks_in_use": 9452,
+        "malloc_in_use_bytes": 2013280,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 523141120,
+        "physical_footprint_bytes": 193201304,
+        "pid": 47882,
+        "rss_bytes": 471744512
+      },
+      "peak_admitted": 2,
+      "max_error": 9.5367431640625e-07
+    },
+    {
+      "name": "0-fixed-padded",
+      "policy": "padded",
+      "schedule": "fixed",
+      "cycles_mib": {
+        "rss_bytes": [
+          313.1875,
+          393.28515625,
+          413.19921875,
+          446.1953125,
+          448.09765625,
+          449.03515625,
+          449.65625,
+          450.3203125
+        ],
+        "physical_footprint_bytes": [
+          457.85255241394043,
+          497.9307403564453,
+          517.9229564666748,
+          550.8878402709961,
+          528.0440902709961,
+          384.180814743042,
+          437.0792694091797,
+          314.5402069091797
+        ],
+        "malloc_in_use_bytes": [
+          1.9416122436523438,
+          1.942108154296875,
+          1.942108154296875,
+          1.942108154296875,
+          1.942108154296875,
+          1.942108154296875,
+          1.942108154296875,
+          1.942108154296875
+        ],
+        "malloc_allocated_bytes": [
+          360.0,
+          448.0,
+          469.0,
+          504.0,
+          504.0,
+          504.0,
+          504.0,
+          504.0
+        ]
+      },
+      "last_idle": {
+        "malloc_allocated_bytes": 528482304,
+        "malloc_blocks_in_use": 9496,
+        "malloc_in_use_bytes": 2036448,
+        "mlx_active_bytes": 264,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 506675200,
+        "physical_footprint_bytes": 371901616,
+        "pid": 48174,
+        "rss_bytes": 472334336
+      },
+      "closed": {
+        "malloc_allocated_bytes": 528482304,
+        "malloc_blocks_in_use": 9462,
+        "malloc_in_use_bytes": 2026416,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 506675200,
+        "physical_footprint_bytes": 203752624,
+        "pid": 48174,
+        "rss_bytes": 472317952
+      },
+      "peak_admitted": 2,
+      "max_error": 9.5367431640625e-07
+    },
+    {
+      "name": "0-mixed-logical",
+      "policy": "logical",
+      "schedule": "mixed",
+      "cycles_mib": {
+        "rss_bytes": [
+          233.7578125,
+          342.859375,
+          402.60546875,
+          427.828125,
+          430.9609375,
+          441.38671875,
+          469.70703125,
+          471.984375
+        ],
+        "physical_footprint_bytes": [
+          338.45016288757324,
+          487.5908679962158,
+          467.3643455505371,
+          572.5948257446289,
+          511.8370132446289,
+          458.3799934387207,
+          459.2784652709961,
+          339.2198715209961
+        ],
+        "malloc_in_use_bytes": [
+          1.9416885375976562,
+          1.9501190185546875,
+          1.9501190185546875,
+          1.9501190185546875,
+          1.9501190185546875,
+          1.9501190185546875,
+          1.9501190185546875,
+          1.9501190185546875
+        ],
+        "malloc_allocated_bytes": [
+          262.0,
+          376.0,
+          439.0,
+          460.0,
+          464.0,
+          474.0,
+          504.0,
+          504.0
+        ]
+      },
+      "last_idle": {
+        "malloc_allocated_bytes": 528482304,
+        "malloc_blocks_in_use": 9518,
+        "malloc_in_use_bytes": 2044848,
+        "mlx_active_bytes": 264,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 545226752,
+        "physical_footprint_bytes": 230933656,
+        "pid": 48512,
+        "rss_bytes": 495976448
+      },
+      "closed": {
+        "malloc_allocated_bytes": 528482304,
+        "malloc_blocks_in_use": 9484,
+        "malloc_in_use_bytes": 2034816,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 545226752,
+        "physical_footprint_bytes": 230556824,
+        "pid": 48512,
+        "rss_bytes": 495960064
+      },
+      "peak_admitted": 2,
+      "max_error": 9.5367431640625e-07
+    },
+    {
+      "name": "0-mixed-padded",
+      "policy": "padded",
+      "schedule": "mixed",
+      "cycles_mib": {
+        "rss_bytes": [
+          278.57421875,
+          420.69921875,
+          462.125,
+          466.921875,
+          471.921875,
+          474.65625,
+          475.859375,
+          476.546875
+        ],
+        "physical_footprint_bytes": [
+          343.14549255371094,
+          525.3955955505371,
+          566.7979907989502,
+          579.2980194091797,
+          500.2394256591797,
+          466.6573944091797,
+          436.1925506591797,
+          341.8761444091797
+        ],
+        "malloc_in_use_bytes": [
+          1.8756904602050781,
+          1.9477996826171875,
+          1.9477996826171875,
+          1.9477996826171875,
+          1.9477996826171875,
+          1.9477996826171875,
+          1.9477996826171875,
+          1.9477996826171875
+        ],
+        "malloc_allocated_bytes": [
+          319.0,
+          467.0,
+          504.0,
+          504.0,
+          508.0,
+          508.0,
+          508.0,
+          508.0
+        ]
+      },
+      "last_idle": {
+        "malloc_allocated_bytes": 532676608,
+        "malloc_blocks_in_use": 9517,
+        "malloc_in_use_bytes": 2042416,
+        "mlx_active_bytes": 264,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 534036480,
+        "physical_footprint_bytes": 358483120,
+        "pid": 49311,
+        "rss_bytes": 499695616
+      },
+      "closed": {
+        "malloc_allocated_bytes": 532676608,
+        "malloc_blocks_in_use": 9483,
+        "malloc_in_use_bytes": 2032384,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 534036480,
+        "physical_footprint_bytes": 190366896,
+        "pid": 49311,
+        "rss_bytes": 499712000
+      },
+      "peak_admitted": 2,
+      "max_error": 9.5367431640625e-07
+    },
+    {
+      "name": "1-fixed-logical",
+      "policy": "logical",
+      "schedule": "fixed",
+      "cycles_mib": {
+        "rss_bytes": [
+          337.0859375,
+          440.78125,
+          444.71484375,
+          445.1328125,
+          446.078125,
+          446.4765625,
+          447.890625,
+          448.05078125
+        ],
+        "physical_footprint_bytes": [
+          481.8369789123535,
+          585.6105194091797,
+          589.5441131591797,
+          549.9034881591797,
+          515.5323944091797,
+          440.5558319091797,
+          415.9113006591797,
+          337.8956756591797
+        ],
+        "malloc_in_use_bytes": [
+          1.7978744506835938,
+          1.8615264892578125,
+          1.8615264892578125,
+          1.8616790771484375,
+          1.9390411376953125,
+          1.9390411376953125,
+          1.9390792846679688,
+          1.9391937255859375
+        ],
+        "malloc_allocated_bytes": [
+          381.0,
+          500.0,
+          500.0,
+          500.0,
+          500.0,
+          500.0,
+          500.0,
+          500.0
+        ]
+      },
+      "last_idle": {
+        "malloc_allocated_bytes": 524288000,
+        "malloc_blocks_in_use": 9489,
+        "malloc_in_use_bytes": 2033392,
+        "mlx_active_bytes": 264,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 521404416,
+        "physical_footprint_bytes": 354518192,
+        "pid": 49998,
+        "rss_bytes": 470024192
+      },
+      "closed": {
+        "malloc_allocated_bytes": 524288000,
+        "malloc_blocks_in_use": 9455,
+        "malloc_in_use_bytes": 2023360,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 521404416,
+        "physical_footprint_bytes": 186418376,
+        "pid": 49998,
+        "rss_bytes": 470040576
+      },
+      "peak_admitted": 2,
+      "max_error": 9.5367431640625e-07
+    },
+    {
+      "name": "1-fixed-padded",
+      "policy": "padded",
+      "schedule": "fixed",
+      "cycles_mib": {
+        "rss_bytes": [
+          315.6796875,
+          442.8125,
+          443.7109375,
+          444.6484375,
+          445.3125,
+          445.93359375,
+          447.203125,
+          447.53515625
+        ],
+        "physical_footprint_bytes": [
+          420.360387802124,
+          547.5636215209961,
+          508.3448715209961,
+          589.3995590209961,
+          515.2198715209961,
+          400.9503574371338,
+          413.2511444091797,
+          326.4894256591797
+        ],
+        "malloc_in_use_bytes": [
+          1.9339447021484375,
+          1.93463134765625,
+          1.93463134765625,
+          1.93463134765625,
+          1.93463134765625,
+          1.93463134765625,
+          1.93463134765625,
+          1.93463134765625
+        ],
+        "malloc_allocated_bytes": [
+          361.0,
+          500.0,
+          500.0,
+          500.0,
+          500.0,
+          500.0,
+          500.0,
+          500.0
+        ]
+      },
+      "last_idle": {
+        "malloc_allocated_bytes": 524288000,
+        "malloc_blocks_in_use": 9490,
+        "malloc_in_use_bytes": 2028608,
+        "mlx_active_bytes": 264,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 504102912,
+        "physical_footprint_bytes": 342836400,
+        "pid": 49695,
+        "rss_bytes": 469762048
+      },
+      "closed": {
+        "malloc_allocated_bytes": 524288000,
+        "malloc_blocks_in_use": 9456,
+        "malloc_in_use_bytes": 2018576,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 504102912,
+        "physical_footprint_bytes": 174687408,
+        "pid": 49695,
+        "rss_bytes": 469745664
+      },
+      "peak_admitted": 2,
+      "max_error": 9.5367431640625e-07
+    },
+    {
+      "name": "1-mixed-logical",
+      "policy": "logical",
+      "schedule": "mixed",
+      "cycles_mib": {
+        "rss_bytes": [
+          273.99609375,
+          425.58203125,
+          446.421875,
+          464.90234375,
+          468.9765625,
+          471.984375,
+          473.4453125,
+          475.16796875
+        ],
+        "physical_footprint_bytes": [
+          418.71192741394043,
+          570.3800277709961,
+          589.098783493042,
+          529.5988006591797,
+          541.7823944091797,
+          472.7823944091797,
+          361.9425506591797,
+          347.2316131591797
+        ],
+        "malloc_in_use_bytes": [
+          1.90240478515625,
+          1.9525604248046875,
+          1.9525604248046875,
+          1.9525604248046875,
+          1.9525604248046875,
+          1.9525604248046875,
+          1.9525604248046875,
+          1.9525604248046875
+        ],
+        "malloc_allocated_bytes": [
+          307.0,
+          472.0,
+          490.0,
+          504.0,
+          504.0,
+          504.0,
+          504.0,
+          504.0
+        ]
+      },
+      "last_idle": {
+        "malloc_allocated_bytes": 528482304,
+        "malloc_blocks_in_use": 9519,
+        "malloc_in_use_bytes": 2047408,
+        "mlx_active_bytes": 264,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 549355520,
+        "physical_footprint_bytes": 364512432,
+        "pid": 50490,
+        "rss_bytes": 498663424
+      },
+      "closed": {
+        "malloc_allocated_bytes": 528482304,
+        "malloc_blocks_in_use": 9485,
+        "malloc_in_use_bytes": 2037376,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 549355520,
+        "physical_footprint_bytes": 196363440,
+        "pid": 50490,
+        "rss_bytes": 498647040
+      },
+      "peak_admitted": 2,
+      "max_error": 9.5367431640625e-07
+    },
+    {
+      "name": "1-mixed-padded",
+      "policy": "padded",
+      "schedule": "mixed",
+      "cycles_mib": {
+        "rss_bytes": [
+          222.83203125,
+          428.9296875,
+          457.86328125,
+          465.61328125,
+          471.09375,
+          473.89453125,
+          475.40234375,
+          476.58203125
+        ],
+        "physical_footprint_bytes": [
+          367.45797538757324,
+          573.6612720489502,
+          602.6105136871338,
+          610.3644256591797,
+          499.5284881591797,
+          386.0128631591797,
+          438.1886444091797,
+          351.0206756591797
+        ],
+        "malloc_in_use_bytes": [
+          1.9182052612304688,
+          1.9477996826171875,
+          1.9477996826171875,
+          1.9477996826171875,
+          1.9477996826171875,
+          1.9477996826171875,
+          1.9477996826171875,
+          1.9477996826171875
+        ],
+        "malloc_allocated_bytes": [
+          244.0,
+          471.0,
+          501.0,
+          504.0,
+          504.0,
+          504.0,
+          504.0,
+          504.0
+        ]
+      },
+      "last_idle": {
+        "malloc_allocated_bytes": 528482304,
+        "malloc_blocks_in_use": 9517,
+        "malloc_in_use_bytes": 2042416,
+        "mlx_active_bytes": 264,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 535003136,
+        "physical_footprint_bytes": 369001648,
+        "pid": 50213,
+        "rss_bytes": 500662272
+      },
+      "closed": {
+        "malloc_allocated_bytes": 528482304,
+        "malloc_blocks_in_use": 9483,
+        "malloc_in_use_bytes": 2032384,
+        "mlx_active_bytes": 0,
+        "mlx_cache_bytes": 0,
+        "peak_rss_bytes": 535003136,
+        "physical_footprint_bytes": 200852656,
+        "pid": 50213,
+        "rss_bytes": 500645888
+      },
+      "peak_admitted": 2,
+      "max_error": 9.5367431640625e-07
+    }
+  ],
+  "limitations": [
+    "Single machine, synthetic workload, one small fitted model",
+    "Selected Release integration targets; no full-library or sanitizer claim",
+    "Two optional tokenizer skips and existing MNIST early return",
+    "No process-memory cap or universal leak verdict",
+    "Old four-burst smoke summary growth values are invalid; final controller reports null"
+  ]
+}

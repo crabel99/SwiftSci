@@ -1,0 +1,14 @@
+...F
+======================================================================
+FAIL: test_single_cycle_has_no_growth_comparison (test_gpu_memory_reuse.MemoryReuseTests.test_single_cycle_has_no_growth_comparison)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crabel/Library/Caches/SwiftSci/retained-gpu-trial-20261007/Benchmarks/Tests/test_gpu_memory_reuse.py", line 58, in test_single_cycle_has_no_growth_comparison
+    self.assertIsNone(summarize(single)['rss_bytes']['cycle_mean_growth_mib'])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 is not None
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1)

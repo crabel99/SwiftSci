@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Reuse across repeated GPU request bursts](benchmarks/2026-10-07-gpu-memory-reuse.md) records early allocator expansion, later reuse and the remaining boundary between request budgets and process residency.
+
 - [Memory residency after GPU request cleanup](benchmarks/2026-10-07-gpu-residency-profile.md) attributes most sampled residual RSS to empty malloc regions, records the ineffective pressure-relief experiment, and preserves cleanup regression evidence.
 
 - [Request admission and scoped import policy](benchmarks/2026-10-07-gpu-budget-workflow.md) records throughput and concurrency under fixed reservation limits, plus the unresolved process-residency boundary.
