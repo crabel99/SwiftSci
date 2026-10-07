@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Retained input regression workflow](benchmarks/2026-10-07-retained-gpu-workflow.md) records 220 passing tests and 40 workflow samples, showing faster repeated prediction with higher setup cost and peak memory.
+
 - [Retained GPU input comparison](benchmarks/2026-10-07-retained-gpu-comparison.md) records 80 verified fresh-process samples, faster large-input reuse, lower offset-input memory, and mixed small-input results.
 
 - [Retained shared GPU input trial](research/2026-10-07-retained-gpu-trial.md) records allocation-scoped ownership, GPU completion on every read exit, seven new tests, and 217 passing focused Release tests.
