@@ -1,0 +1,4874 @@
+[
+  {
+    "cycle": 0,
+    "elapsed_ms": 332.669792,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 11840,
+      "malloc_in_use_bytes": 2215184,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 26378240,
+      "physical_footprint_bytes": 178242328,
+      "pid": 63921,
+      "rss_bytes": 26378240
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 315.55978125000024,
+        "median_us": 304.75,
+        "p95_us": 365.041
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 0,
+    "elapsed_ms": 307.271125,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12876,
+      "malloc_in_use_bytes": 2686432,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27230208,
+      "physical_footprint_bytes": 179127088,
+      "pid": 63921,
+      "rss_bytes": 27230208
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "actor_body": {
+        "mean_us": 290.42545019531264,
+        "median_us": 274.375,
+        "p95_us": 348.45799999999997
+      },
+      "actor_wait": {
+        "mean_us": 0.0795966796875001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 291.1738076171876,
+        "median_us": 275,
+        "p95_us": 349.625
+      },
+      "buffer_allocation": {
+        "mean_us": 3.846888671875,
+        "median_us": 3.375,
+        "p95_us": 6
+      },
+      "completion": {
+        "mean_us": 147.37105468749988,
+        "median_us": 141.209,
+        "p95_us": 187.333
+      },
+      "device_lookup": {
+        "mean_us": 107.82793554687493,
+        "median_us": 100.5,
+        "p95_us": 113.333
+      },
+      "graph": {
+        "mean_us": 1.1298095703124977,
+        "median_us": 1.0410000000000001,
+        "p95_us": 1.7910000000000001
+      },
+      "import": {
+        "mean_us": 2.226404296874994,
+        "median_us": 2.041,
+        "p95_us": 3.292
+      },
+      "packing": {
+        "mean_us": 0.15439843749999982,
+        "median_us": 0.125,
+        "p95_us": 0.29100000000000004
+      },
+      "readback": {
+        "mean_us": 2.163386718749998,
+        "median_us": 1.917,
+        "p95_us": 3.1670000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 23.473272460937554,
+        "median_us": 21.5,
+        "p95_us": 34.583000000000006
+      },
+      "validation": {
+        "mean_us": 0.08845507812500006,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 0,
+    "elapsed_ms": 170.547084,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12892,
+      "malloc_in_use_bytes": 2690816,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27262976,
+      "physical_footprint_bytes": 179143472,
+      "pid": 63921,
+      "rss_bytes": 27262976
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "actor_body": {
+        "mean_us": 157.73776367187503,
+        "median_us": 152.375,
+        "p95_us": 193.583
+      },
+      "actor_wait": {
+        "mean_us": 0.0760107421875001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 158.4226855468749,
+        "median_us": 153.083,
+        "p95_us": 194.625
+      },
+      "buffer_allocation": {
+        "mean_us": 3.049857421875001,
+        "median_us": 2.917,
+        "p95_us": 4.25
+      },
+      "completion": {
+        "mean_us": 127.54420410156267,
+        "median_us": 122.875,
+        "p95_us": 155.125
+      },
+      "device_lookup": {
+        "mean_us": 0.03026953125000015,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 1.011271484374997,
+        "median_us": 0.959,
+        "p95_us": 1.416
+      },
+      "import": {
+        "mean_us": 1.7381513671875006,
+        "median_us": 1.667,
+        "p95_us": 2.375
+      },
+      "packing": {
+        "mean_us": 0.12063671875000011,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.9701132812499946,
+        "median_us": 1.8339999999999999,
+        "p95_us": 2.9160000000000004
+      },
+      "scope_cleanup": {
+        "mean_us": 20.511044921875055,
+        "median_us": 19.583,
+        "p95_us": 29.916999999999998
+      },
+      "validation": {
+        "mean_us": 0.08661035156250006,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 164.809792,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 11883,
+      "malloc_in_use_bytes": 2619440,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27262976,
+      "physical_footprint_bytes": 179143472,
+      "pid": 63921,
+      "rss_bytes": 27262976
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "actor_body": {
+        "mean_us": 152.39548046874992,
+        "median_us": 146.583,
+        "p95_us": 188
+      },
+      "actor_wait": {
+        "mean_us": 0.07898144531250009,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 153.06442187499997,
+        "median_us": 147.334,
+        "p95_us": 188.667
+      },
+      "buffer_allocation": {
+        "mean_us": 3.020970703124984,
+        "median_us": 2.875,
+        "p95_us": 4.333
+      },
+      "completion": {
+        "mean_us": 123.32616015624994,
+        "median_us": 119.125,
+        "p95_us": 150.167
+      },
+      "device_lookup": {
+        "mean_us": 0.028087890625000167,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.9891269531249994,
+        "median_us": 0.958,
+        "p95_us": 1.3339999999999999
+      },
+      "import": {
+        "mean_us": 1.6854931640624973,
+        "median_us": 1.625,
+        "p95_us": 2.25
+      },
+      "packing": {
+        "mean_us": 0.11787011718750011,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.929593749999995,
+        "median_us": 1.7910000000000001,
+        "p95_us": 2.833
+      },
+      "scope_cleanup": {
+        "mean_us": 19.584753906250068,
+        "median_us": 18.416999999999998,
+        "p95_us": 29.875
+      },
+      "validation": {
+        "mean_us": 0.08739746093750007,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 269.475583,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12969,
+      "malloc_in_use_bytes": 2787104,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27410432,
+      "physical_footprint_bytes": 179323720,
+      "pid": 63921,
+      "rss_bytes": 27410432
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "actor_body": {
+        "mean_us": 253.3243515625,
+        "median_us": 237.375,
+        "p95_us": 339.291
+      },
+      "actor_wait": {
+        "mean_us": 0.08198339843750008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 254.10116210937494,
+        "median_us": 238.167,
+        "p95_us": 339.875
+      },
+      "buffer_allocation": {
+        "mean_us": 3.7781503906249987,
+        "median_us": 3.333,
+        "p95_us": 5.625
+      },
+      "completion": {
+        "mean_us": 145.2945996093747,
+        "median_us": 139.375,
+        "p95_us": 192.041
+      },
+      "device_lookup": {
+        "mean_us": 73.96740722656246,
+        "median_us": 45.667,
+        "p95_us": 137.5
+      },
+      "graph": {
+        "mean_us": 1.1564531249999956,
+        "median_us": 1,
+        "p95_us": 1.625
+      },
+      "import": {
+        "mean_us": 2.245184570312495,
+        "median_us": 2.041,
+        "p95_us": 3.292
+      },
+      "packing": {
+        "mean_us": 0.15499902343749986,
+        "median_us": 0.125,
+        "p95_us": 0.29100000000000004
+      },
+      "readback": {
+        "mean_us": 2.30373828124999,
+        "median_us": 2,
+        "p95_us": 3.792
+      },
+      "scope_cleanup": {
+        "mean_us": 22.239536132812557,
+        "median_us": 19.833,
+        "p95_us": 35.333000000000006
+      },
+      "validation": {
+        "mean_us": 0.09065917968750006,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 198.970375,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12985,
+      "malloc_in_use_bytes": 2398304,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27410432,
+      "physical_footprint_bytes": 179323720,
+      "pid": 63921,
+      "rss_bytes": 27410432
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 186.41881835937468,
+        "median_us": 170.917,
+        "p95_us": 260.29200000000003
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 251.16475,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 11965,
+      "malloc_in_use_bytes": 2717632,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27410432,
+      "physical_footprint_bytes": 179323720,
+      "pid": 63921,
+      "rss_bytes": 27410432
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "actor_body": {
+        "mean_us": 235.29912499999986,
+        "median_us": 196.375,
+        "p95_us": 391.334
+      },
+      "actor_wait": {
+        "mean_us": 0.08433300781250011,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 236.0750654296873,
+        "median_us": 197,
+        "p95_us": 392.5
+      },
+      "buffer_allocation": {
+        "mean_us": 3.796532226562497,
+        "median_us": 3.0829999999999997,
+        "p95_us": 6.958
+      },
+      "completion": {
+        "mean_us": 154.6996611328125,
+        "median_us": 126.29099999999998,
+        "p95_us": 231.167
+      },
+      "device_lookup": {
+        "mean_us": 44.86006835937503,
+        "median_us": 38.75,
+        "p95_us": 78.875
+      },
+      "graph": {
+        "mean_us": 1.1693339843749972,
+        "median_us": 1,
+        "p95_us": 1.917
+      },
+      "import": {
+        "mean_us": 2.454803710937498,
+        "median_us": 1.875,
+        "p95_us": 4.042
+      },
+      "packing": {
+        "mean_us": 0.15967675781249963,
+        "median_us": 0.125,
+        "p95_us": 0.33399999999999996
+      },
+      "readback": {
+        "mean_us": 2.4056806640624986,
+        "median_us": 1.833,
+        "p95_us": 4.583
+      },
+      "scope_cleanup": {
+        "mean_us": 23.528814453125037,
+        "median_us": 19.25,
+        "p95_us": 49.708000000000006
+      },
+      "validation": {
+        "mean_us": 0.0890322265625001,
+        "median_us": 0.083,
+        "p95_us": 0.16699999999999998
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 153.8665,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13006,
+      "malloc_in_use_bytes": 2797792,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27410432,
+      "physical_footprint_bytes": 179323720,
+      "pid": 63921,
+      "rss_bytes": 27410432
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "actor_body": {
+        "mean_us": 142.4327246093749,
+        "median_us": 141.416,
+        "p95_us": 163.375
+      },
+      "actor_wait": {
+        "mean_us": 0.07718847656250011,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 143.00667675781244,
+        "median_us": 141.917,
+        "p95_us": 164.5
+      },
+      "buffer_allocation": {
+        "mean_us": 2.7134951171875046,
+        "median_us": 2.6670000000000003,
+        "p95_us": 3.417
+      },
+      "completion": {
+        "mean_us": 116.59188964843746,
+        "median_us": 116.08300000000001,
+        "p95_us": 129.75
+      },
+      "device_lookup": {
+        "mean_us": 0.02844824218750016,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.9229169921874999,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.2080000000000002
+      },
+      "import": {
+        "mean_us": 1.5809873046875014,
+        "median_us": 1.583,
+        "p95_us": 1.9589999999999999
+      },
+      "packing": {
+        "mean_us": 0.11273339843750009,
+        "median_us": 0.125,
+        "p95_us": 0.125
+      },
+      "readback": {
+        "mean_us": 1.7266152343749992,
+        "median_us": 1.666,
+        "p95_us": 2.2920000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 17.130441406250046,
+        "median_us": 16.042,
+        "p95_us": 23.667
+      },
+      "validation": {
+        "mean_us": 0.08295898437500006,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 185.324917,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13022,
+      "malloc_in_use_bytes": 2408960,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27410432,
+      "physical_footprint_bytes": 179323720,
+      "pid": 63921,
+      "rss_bytes": 27410432
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 173.86004492187513,
+        "median_us": 164.917,
+        "p95_us": 242.333
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 174.688583,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12002,
+      "malloc_in_use_bytes": 2335136,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27426816,
+      "physical_footprint_bytes": 179340104,
+      "pid": 63921,
+      "rss_bytes": 27426816
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 163.6136982421875,
+        "median_us": 162.75,
+        "p95_us": 183.334
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 177.870625,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13032,
+      "malloc_in_use_bytes": 2806016,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27443200,
+      "physical_footprint_bytes": 179356488,
+      "pid": 63921,
+      "rss_bytes": 27443200
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "actor_body": {
+        "mean_us": 164.11730859375007,
+        "median_us": 149.042,
+        "p95_us": 244.917
+      },
+      "actor_wait": {
+        "mean_us": 0.07879003906250011,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 164.86641406249998,
+        "median_us": 149.666,
+        "p95_us": 247.041
+      },
+      "buffer_allocation": {
+        "mean_us": 3.429450195312496,
+        "median_us": 2.958,
+        "p95_us": 5.25
+      },
+      "completion": {
+        "mean_us": 130.12612792968744,
+        "median_us": 120,
+        "p95_us": 187.625
+      },
+      "device_lookup": {
+        "mean_us": 0.03176757812500015,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 1.2123193359374969,
+        "median_us": 1,
+        "p95_us": 1.5839999999999999
+      },
+      "import": {
+        "mean_us": 1.8898300781250006,
+        "median_us": 1.625,
+        "p95_us": 2.875
+      },
+      "packing": {
+        "mean_us": 0.12305175781250012,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 2.155342773437493,
+        "median_us": 1.875,
+        "p95_us": 3.2079999999999997
+      },
+      "scope_cleanup": {
+        "mean_us": 23.234143554687563,
+        "median_us": 19.458,
+        "p95_us": 36.667
+      },
+      "validation": {
+        "mean_us": 0.08705664062500011,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 261.72725,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13048,
+      "malloc_in_use_bytes": 2810400,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27443200,
+      "physical_footprint_bytes": 179356488,
+      "pid": 63921,
+      "rss_bytes": 27443200
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "actor_body": {
+        "mean_us": 245.63053808593762,
+        "median_us": 210.75,
+        "p95_us": 307.875
+      },
+      "actor_wait": {
+        "mean_us": 0.0856972656250001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 246.4346572265625,
+        "median_us": 211.584,
+        "p95_us": 309.29200000000003
+      },
+      "buffer_allocation": {
+        "mean_us": 3.915097656249999,
+        "median_us": 3.417,
+        "p95_us": 6.667
+      },
+      "completion": {
+        "mean_us": 141.7005224609375,
+        "median_us": 137.916,
+        "p95_us": 185.375
+      },
+      "device_lookup": {
+        "mean_us": 68.71340234375006,
+        "median_us": 40.042,
+        "p95_us": 66.25
+      },
+      "graph": {
+        "mean_us": 1.2394824218749991,
+        "median_us": 1.125,
+        "p95_us": 2
+      },
+      "import": {
+        "mean_us": 2.5911923828124985,
+        "median_us": 2.125,
+        "p95_us": 3.875
+      },
+      "packing": {
+        "mean_us": 0.16116894531249976,
+        "median_us": 0.125,
+        "p95_us": 0.292
+      },
+      "readback": {
+        "mean_us": 2.3850488281249964,
+        "median_us": 2.1670000000000003,
+        "p95_us": 3.542
+      },
+      "scope_cleanup": {
+        "mean_us": 22.67280859375003,
+        "median_us": 20.708000000000002,
+        "p95_us": 35.083000000000006
+      },
+      "validation": {
+        "mean_us": 0.0901523437500001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 188.948584,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12039,
+      "malloc_in_use_bytes": 2739008,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27443200,
+      "physical_footprint_bytes": 179356488,
+      "pid": 63921,
+      "rss_bytes": 27443200
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "actor_body": {
+        "mean_us": 175.28764355468775,
+        "median_us": 163.459,
+        "p95_us": 260
+      },
+      "actor_wait": {
+        "mean_us": 0.08283398437500009,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 175.96388769531254,
+        "median_us": 164.042,
+        "p95_us": 260.5
+      },
+      "buffer_allocation": {
+        "mean_us": 3.337470703124998,
+        "median_us": 2.875,
+        "p95_us": 5
+      },
+      "completion": {
+        "mean_us": 144.36844921875036,
+        "median_us": 135.958,
+        "p95_us": 197.834
+      },
+      "device_lookup": {
+        "mean_us": 0.03556054687500016,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 1.0926689453124994,
+        "median_us": 0.958,
+        "p95_us": 1.5839999999999999
+      },
+      "import": {
+        "mean_us": 1.8811533203124966,
+        "median_us": 1.667,
+        "p95_us": 2.666
+      },
+      "packing": {
+        "mean_us": 0.1259335937500001,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 2.1525439453124986,
+        "median_us": 1.875,
+        "p95_us": 3.291
+      },
+      "scope_cleanup": {
+        "mean_us": 20.436193359375025,
+        "median_us": 18.083,
+        "p95_us": 37.292
+      },
+      "validation": {
+        "mean_us": 0.08895117187500008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 234.918792,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13080,
+      "malloc_in_use_bytes": 2425952,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27443200,
+      "physical_footprint_bytes": 179356488,
+      "pid": 63921,
+      "rss_bytes": 27443200
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 221.7840292968751,
+        "median_us": 184.25,
+        "p95_us": 259.416
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 232.852208,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13085,
+      "malloc_in_use_bytes": 2821056,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27459584,
+      "physical_footprint_bytes": 179372872,
+      "pid": 63921,
+      "rss_bytes": 27459584
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "actor_body": {
+        "mean_us": 219.08599121093766,
+        "median_us": 201.458,
+        "p95_us": 256.125
+      },
+      "actor_wait": {
+        "mean_us": 0.0789794921875001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 219.70534570312498,
+        "median_us": 202.125,
+        "p95_us": 256.584
+      },
+      "buffer_allocation": {
+        "mean_us": 2.9829892578124957,
+        "median_us": 2.875,
+        "p95_us": 4.167
+      },
+      "completion": {
+        "mean_us": 137.1366464843751,
+        "median_us": 134.958,
+        "p95_us": 152.875
+      },
+      "device_lookup": {
+        "mean_us": 53.27347167968753,
+        "median_us": 38.083,
+        "p95_us": 51.458
+      },
+      "graph": {
+        "mean_us": 0.9547724609374969,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.2910000000000001
+      },
+      "import": {
+        "mean_us": 1.8768251953124906,
+        "median_us": 1.833,
+        "p95_us": 2.5829999999999997
+      },
+      "packing": {
+        "mean_us": 0.13252734375000028,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.9194824218749929,
+        "median_us": 1.833,
+        "p95_us": 2.5
+      },
+      "scope_cleanup": {
+        "mean_us": 18.81325683593756,
+        "median_us": 18,
+        "p95_us": 25.291999999999998
+      },
+      "validation": {
+        "mean_us": 0.08601464843750006,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 241.451292,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12076,
+      "malloc_in_use_bytes": 2749664,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27459584,
+      "physical_footprint_bytes": 179372872,
+      "pid": 63921,
+      "rss_bytes": 27459584
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "actor_body": {
+        "mean_us": 226.712517578125,
+        "median_us": 204.917,
+        "p95_us": 276.459
+      },
+      "actor_wait": {
+        "mean_us": 0.08638671875000009,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 227.3750078125003,
+        "median_us": 205.542,
+        "p95_us": 277.5
+      },
+      "buffer_allocation": {
+        "mean_us": 3.3275732421874977,
+        "median_us": 3.042,
+        "p95_us": 4.542
+      },
+      "completion": {
+        "mean_us": 141.04619140625002,
+        "median_us": 136.583,
+        "p95_us": 165
+      },
+      "device_lookup": {
+        "mean_us": 54.952716796875066,
+        "median_us": 39.083,
+        "p95_us": 51.541
+      },
+      "graph": {
+        "mean_us": 1.0338749999999972,
+        "median_us": 1,
+        "p95_us": 1.333
+      },
+      "import": {
+        "mean_us": 2.0456357421874998,
+        "median_us": 1.917,
+        "p95_us": 2.7079999999999997
+      },
+      "packing": {
+        "mean_us": 0.1400302734375002,
+        "median_us": 0.125,
+        "p95_us": 0.208
+      },
+      "readback": {
+        "mean_us": 2.098012695312497,
+        "median_us": 1.917,
+        "p95_us": 2.875
+      },
+      "scope_cleanup": {
+        "mean_us": 19.913702148437583,
+        "median_us": 18.625,
+        "p95_us": 27.417
+      },
+      "validation": {
+        "mean_us": 0.08972363281250008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 211.685417,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13117,
+      "malloc_in_use_bytes": 2436608,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27459584,
+      "physical_footprint_bytes": 179372872,
+      "pid": 63921,
+      "rss_bytes": 27459584
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 198.59517578124988,
+        "median_us": 181.625,
+        "p95_us": 226
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 170.671708,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13122,
+      "malloc_in_use_bytes": 2831872,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27459584,
+      "physical_footprint_bytes": 179372872,
+      "pid": 63921,
+      "rss_bytes": 27459584
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "actor_body": {
+        "mean_us": 158.64155957031235,
+        "median_us": 153.875,
+        "p95_us": 196.458
+      },
+      "actor_wait": {
+        "mean_us": 0.07773437500000012,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 159.24365332031238,
+        "median_us": 154.458,
+        "p95_us": 197.25
+      },
+      "buffer_allocation": {
+        "mean_us": 2.809375976562493,
+        "median_us": 2.666,
+        "p95_us": 4.083
+      },
+      "completion": {
+        "mean_us": 131.98246093749987,
+        "median_us": 127.95799999999998,
+        "p95_us": 159.209
+      },
+      "device_lookup": {
+        "mean_us": 0.029204101562500143,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.9456074218749956,
+        "median_us": 0.875,
+        "p95_us": 1.292
+      },
+      "import": {
+        "mean_us": 1.6296972656249953,
+        "median_us": 1.5410000000000001,
+        "p95_us": 2.2920000000000003
+      },
+      "packing": {
+        "mean_us": 0.11219140625000013,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.8249853515624992,
+        "median_us": 1.667,
+        "p95_us": 2.833
+      },
+      "scope_cleanup": {
+        "mean_us": 17.714953125000026,
+        "median_us": 15.834000000000001,
+        "p95_us": 28.459000000000003
+      },
+      "validation": {
+        "mean_us": 0.0801093750000001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 0,
+    "elapsed_ms": 218.9615,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 11887,
+      "malloc_in_use_bytes": 2300352,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 26525696,
+      "physical_footprint_bytes": 178389784,
+      "pid": 64009,
+      "rss_bytes": 26525696
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 414.2104121093754,
+        "median_us": 376.667,
+        "p95_us": 521.9580000000001
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 0,
+    "elapsed_ms": 219.781209,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 12970,
+      "malloc_in_use_bytes": 2864432,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27312128,
+      "physical_footprint_bytes": 179208984,
+      "pid": 64009,
+      "rss_bytes": 27312128
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "actor_body": {
+        "mean_us": 209.88942871093744,
+        "median_us": 197.375,
+        "p95_us": 248.625
+      },
+      "actor_wait": {
+        "mean_us": 204.93278515625013,
+        "median_us": 192.833,
+        "p95_us": 244.5
+      },
+      "awaited_prediction": {
+        "mean_us": 416.5273447265628,
+        "median_us": 393.875,
+        "p95_us": 498.375
+      },
+      "buffer_allocation": {
+        "mean_us": 3.074223632812499,
+        "median_us": 2.958,
+        "p95_us": 4.167
+      },
+      "completion": {
+        "mean_us": 131.11910644531272,
+        "median_us": 129.584,
+        "p95_us": 150.166
+      },
+      "device_lookup": {
+        "mean_us": 49.79734179687503,
+        "median_us": 39.917,
+        "p95_us": 54.291
+      },
+      "graph": {
+        "mean_us": 1.0002392578124968,
+        "median_us": 1,
+        "p95_us": 1.292
+      },
+      "import": {
+        "mean_us": 1.9511328124999954,
+        "median_us": 1.917,
+        "p95_us": 2.458
+      },
+      "packing": {
+        "mean_us": 0.13939062500000018,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.9244609374999935,
+        "median_us": 1.875,
+        "p95_us": 2.5
+      },
+      "scope_cleanup": {
+        "mean_us": 18.652219726562535,
+        "median_us": 18.083,
+        "p95_us": 25.584
+      },
+      "validation": {
+        "mean_us": 0.09178906250000007,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 0,
+    "elapsed_ms": 151.632917,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 12986,
+      "malloc_in_use_bytes": 2868816,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27328512,
+      "physical_footprint_bytes": 179208984,
+      "pid": 64009,
+      "rss_bytes": 27328512
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "actor_body": {
+        "mean_us": 143.61498925781262,
+        "median_us": 141,
+        "p95_us": 169.541
+      },
+      "actor_wait": {
+        "mean_us": 138.9503115234373,
+        "median_us": 136.25,
+        "p95_us": 165.083
+      },
+      "awaited_prediction": {
+        "mean_us": 284.1784140625001,
+        "median_us": 279.83299999999997,
+        "p95_us": 335.95799999999997
+      },
+      "buffer_allocation": {
+        "mean_us": 2.630166992187498,
+        "median_us": 2.5829999999999997,
+        "p95_us": 3.25
+      },
+      "completion": {
+        "mean_us": 116.76977148437503,
+        "median_us": 115.208,
+        "p95_us": 132.875
+      },
+      "device_lookup": {
+        "mean_us": 0.03274609375000015,
+        "median_us": 0.041,
+        "p95_us": 0.083
+      },
+      "graph": {
+        "mean_us": 0.9344218750000016,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.0839999999999999
+      },
+      "import": {
+        "mean_us": 1.7645322265625012,
+        "median_us": 1.75,
+        "p95_us": 2.125
+      },
+      "packing": {
+        "mean_us": 0.12061621093750013,
+        "median_us": 0.125,
+        "p95_us": 0.166
+      },
+      "readback": {
+        "mean_us": 1.7934707031249968,
+        "median_us": 1.667,
+        "p95_us": 2.1670000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 17.78967578125005,
+        "median_us": 16.958000000000002,
+        "p95_us": 22.625
+      },
+      "validation": {
+        "mean_us": 0.0889960937500001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 153.08225,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 11977,
+      "malloc_in_use_bytes": 2797440,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27328512,
+      "physical_footprint_bytes": 179208984,
+      "pid": 64009,
+      "rss_bytes": 27328512
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "actor_body": {
+        "mean_us": 144.98785839843745,
+        "median_us": 141.958,
+        "p95_us": 181.583
+      },
+      "actor_wait": {
+        "mean_us": 140.89078417968742,
+        "median_us": 137.208,
+        "p95_us": 177.625
+      },
+      "awaited_prediction": {
+        "mean_us": 287.5611884765626,
+        "median_us": 281.375,
+        "p95_us": 373.875
+      },
+      "buffer_allocation": {
+        "mean_us": 2.64211328125,
+        "median_us": 2.542,
+        "p95_us": 3.375
+      },
+      "completion": {
+        "mean_us": 117.45999414062489,
+        "median_us": 115.75,
+        "p95_us": 137.208
+      },
+      "device_lookup": {
+        "mean_us": 0.03366894531250018,
+        "median_us": 0.041999999999999996,
+        "p95_us": 0.083
+      },
+      "graph": {
+        "mean_us": 0.9273720703125011,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.125
+      },
+      "import": {
+        "mean_us": 1.7642324218749998,
+        "median_us": 1.7080000000000002,
+        "p95_us": 2.1670000000000003
+      },
+      "packing": {
+        "mean_us": 0.11783105468750012,
+        "median_us": 0.125,
+        "p95_us": 0.166
+      },
+      "readback": {
+        "mean_us": 1.8102451171875005,
+        "median_us": 1.666,
+        "p95_us": 2.209
+      },
+      "scope_cleanup": {
+        "mean_us": 18.421102539062563,
+        "median_us": 17.208000000000002,
+        "p95_us": 25.708000000000002
+      },
+      "validation": {
+        "mean_us": 0.09496191406250007,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 213.86625,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 13018,
+      "malloc_in_use_bytes": 2877600,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27344896,
+      "physical_footprint_bytes": 179225368,
+      "pid": 64009,
+      "rss_bytes": 27344896
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "actor_body": {
+        "mean_us": 204.33208886718725,
+        "median_us": 183.542,
+        "p95_us": 263.958
+      },
+      "actor_wait": {
+        "mean_us": 198.80768359375017,
+        "median_us": 178.375,
+        "p95_us": 258.667
+      },
+      "awaited_prediction": {
+        "mean_us": 404.76598535156234,
+        "median_us": 364.084,
+        "p95_us": 525.583
+      },
+      "buffer_allocation": {
+        "mean_us": 2.9760009765624846,
+        "median_us": 2.834,
+        "p95_us": 3.792
+      },
+      "completion": {
+        "mean_us": 118.06095605468744,
+        "median_us": 115.083,
+        "p95_us": 139.542
+      },
+      "device_lookup": {
+        "mean_us": 58.62250683593755,
+        "median_us": 40.667,
+        "p95_us": 109.791
+      },
+      "graph": {
+        "mean_us": 0.9503750000000009,
+        "median_us": 0.958,
+        "p95_us": 1.167
+      },
+      "import": {
+        "mean_us": 1.8828974609374907,
+        "median_us": 1.875,
+        "p95_us": 2.25
+      },
+      "packing": {
+        "mean_us": 0.1394746093750001,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.7636572265624977,
+        "median_us": 1.666,
+        "p95_us": 2.1670000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 17.935808593750068,
+        "median_us": 17.208000000000002,
+        "p95_us": 22.875
+      },
+      "validation": {
+        "mean_us": 0.09236816406250008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 179.109417,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 13034,
+      "malloc_in_use_bytes": 2488800,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27344896,
+      "physical_footprint_bytes": 179225368,
+      "pid": 64009,
+      "rss_bytes": 27344896
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 338.7333955078127,
+        "median_us": 317.375,
+        "p95_us": 397.708
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 208.008584,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 12014,
+      "malloc_in_use_bytes": 2808128,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27344896,
+      "physical_footprint_bytes": 179225368,
+      "pid": 64009,
+      "rss_bytes": 27344896
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "actor_body": {
+        "mean_us": 198.3711416015624,
+        "median_us": 186.292,
+        "p95_us": 229.291
+      },
+      "actor_wait": {
+        "mean_us": 194.19255664062496,
+        "median_us": 181.833,
+        "p95_us": 226
+      },
+      "awaited_prediction": {
+        "mean_us": 394.34805175781247,
+        "median_us": 371.458,
+        "p95_us": 460.83299999999997
+      },
+      "buffer_allocation": {
+        "mean_us": 3.0653535156250014,
+        "median_us": 2.958,
+        "p95_us": 4.458
+      },
+      "completion": {
+        "mean_us": 120.92490820312497,
+        "median_us": 118.291,
+        "p95_us": 138.41600000000003
+      },
+      "device_lookup": {
+        "mean_us": 48.64674218750005,
+        "median_us": 39.625,
+        "p95_us": 52.833999999999996
+      },
+      "graph": {
+        "mean_us": 0.9831582031249982,
+        "median_us": 0.958,
+        "p95_us": 1.292
+      },
+      "import": {
+        "mean_us": 1.898061523437491,
+        "median_us": 1.875,
+        "p95_us": 2.5
+      },
+      "packing": {
+        "mean_us": 0.14311035156250013,
+        "median_us": 0.125,
+        "p95_us": 0.208
+      },
+      "readback": {
+        "mean_us": 1.8715371093749962,
+        "median_us": 1.7080000000000002,
+        "p95_us": 2.6670000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 18.821308593750068,
+        "median_us": 18.125,
+        "p95_us": 28.416
+      },
+      "validation": {
+        "mean_us": 0.09441113281250009,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 156.101166,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 13055,
+      "malloc_in_use_bytes": 2888288,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27344896,
+      "physical_footprint_bytes": 179225368,
+      "pid": 64009,
+      "rss_bytes": 27344896
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "actor_body": {
+        "mean_us": 147.8599160156249,
+        "median_us": 145,
+        "p95_us": 169.75
+      },
+      "actor_wait": {
+        "mean_us": 143.11885156250008,
+        "median_us": 140.167,
+        "p95_us": 166.042
+      },
+      "awaited_prediction": {
+        "mean_us": 292.65010644531225,
+        "median_us": 287,
+        "p95_us": 335.375
+      },
+      "buffer_allocation": {
+        "mean_us": 2.769325195312504,
+        "median_us": 2.6670000000000003,
+        "p95_us": 3.5829999999999997
+      },
+      "completion": {
+        "mean_us": 120.556197265625,
+        "median_us": 118.70899999999999,
+        "p95_us": 135.791
+      },
+      "device_lookup": {
+        "mean_us": 0.031840820312500136,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.9547695312499986,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.2080000000000002
+      },
+      "import": {
+        "mean_us": 1.814415039062498,
+        "median_us": 1.75,
+        "p95_us": 2.25
+      },
+      "packing": {
+        "mean_us": 0.11966113281250011,
+        "median_us": 0.125,
+        "p95_us": 0.166
+      },
+      "readback": {
+        "mean_us": 1.7909999999999968,
+        "median_us": 1.7080000000000002,
+        "p95_us": 2.375
+      },
+      "scope_cleanup": {
+        "mean_us": 18.010371093750052,
+        "median_us": 17.459,
+        "p95_us": 25.083000000000002
+      },
+      "validation": {
+        "mean_us": 0.09464746093750008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 185.447167,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13071,
+      "malloc_in_use_bytes": 2499456,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27410432,
+      "physical_footprint_bytes": 179290904,
+      "pid": 64009,
+      "rss_bytes": 27410432
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 350.11873144531273,
+        "median_us": 330.959,
+        "p95_us": 406.875
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 187.618458,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 12051,
+      "malloc_in_use_bytes": 2425632,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27475968,
+      "physical_footprint_bytes": 179356440,
+      "pid": 64009,
+      "rss_bytes": 27475968
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 354.64998632812524,
+        "median_us": 330.625,
+        "p95_us": 427.458
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 157.679459,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13081,
+      "malloc_in_use_bytes": 2896512,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27492352,
+      "physical_footprint_bytes": 179372824,
+      "pid": 64009,
+      "rss_bytes": 27492352
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "actor_body": {
+        "mean_us": 148.9988593749999,
+        "median_us": 143.708,
+        "p95_us": 180.875
+      },
+      "actor_wait": {
+        "mean_us": 144.66349609375007,
+        "median_us": 139.209,
+        "p95_us": 177.583
+      },
+      "awaited_prediction": {
+        "mean_us": 295.5696289062493,
+        "median_us": 286.833,
+        "p95_us": 358.25
+      },
+      "buffer_allocation": {
+        "mean_us": 2.8632021484375003,
+        "median_us": 2.75,
+        "p95_us": 3.792
+      },
+      "completion": {
+        "mean_us": 118.94568164062498,
+        "median_us": 115.5,
+        "p95_us": 142.833
+      },
+      "device_lookup": {
+        "mean_us": 0.03258496093750015,
+        "median_us": 0.041,
+        "p95_us": 0.083
+      },
+      "graph": {
+        "mean_us": 1.0005683593749994,
+        "median_us": 0.958,
+        "p95_us": 1.375
+      },
+      "import": {
+        "mean_us": 1.9676025390624878,
+        "median_us": 1.916,
+        "p95_us": 2.542
+      },
+      "packing": {
+        "mean_us": 0.12211816406250013,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.9300517578124967,
+        "median_us": 1.75,
+        "p95_us": 2.875
+      },
+      "scope_cleanup": {
+        "mean_us": 20.194449218750044,
+        "median_us": 18.875,
+        "p95_us": 29.875
+      },
+      "validation": {
+        "mean_us": 0.09319531250000006,
+        "median_us": 0.083,
+        "p95_us": 0.166
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 217.731625,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13097,
+      "malloc_in_use_bytes": 2900896,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27492352,
+      "physical_footprint_bytes": 179372824,
+      "pid": 64009,
+      "rss_bytes": 27492352
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "actor_body": {
+        "mean_us": 207.44701464843754,
+        "median_us": 190.042,
+        "p95_us": 251
+      },
+      "actor_wait": {
+        "mean_us": 203.16061132812516,
+        "median_us": 185.5,
+        "p95_us": 249.834
+      },
+      "awaited_prediction": {
+        "mean_us": 412.5375322265623,
+        "median_us": 378.084,
+        "p95_us": 509.042
+      },
+      "buffer_allocation": {
+        "mean_us": 3.263904296875003,
+        "median_us": 3.084,
+        "p95_us": 4.957999999999999
+      },
+      "completion": {
+        "mean_us": 123.66187304687497,
+        "median_us": 119.666,
+        "p95_us": 145.042
+      },
+      "device_lookup": {
+        "mean_us": 53.33425976562499,
+        "median_us": 40.333,
+        "p95_us": 60.667
+      },
+      "graph": {
+        "mean_us": 1.0403525390624957,
+        "median_us": 1,
+        "p95_us": 1.5
+      },
+      "import": {
+        "mean_us": 2.0399931640624938,
+        "median_us": 1.9589999999999999,
+        "p95_us": 2.7920000000000003
+      },
+      "packing": {
+        "mean_us": 0.14912597656250035,
+        "median_us": 0.125,
+        "p95_us": 0.20900000000000002
+      },
+      "readback": {
+        "mean_us": 1.9448496093749934,
+        "median_us": 1.8339999999999999,
+        "p95_us": 2.7079999999999997
+      },
+      "scope_cleanup": {
+        "mean_us": 19.83997460937508,
+        "median_us": 18.916999999999998,
+        "p95_us": 29.375
+      },
+      "validation": {
+        "mean_us": 0.0996826171875001,
+        "median_us": 0.08399999999999999,
+        "p95_us": 0.16699999999999998
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 159.658625,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 12088,
+      "malloc_in_use_bytes": 2829504,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27492352,
+      "physical_footprint_bytes": 179372824,
+      "pid": 64009,
+      "rss_bytes": 27492352
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "actor_body": {
+        "mean_us": 151.14685644531258,
+        "median_us": 146.584,
+        "p95_us": 177.959
+      },
+      "actor_wait": {
+        "mean_us": 146.4581289062499,
+        "median_us": 141.83399999999997,
+        "p95_us": 174.583
+      },
+      "awaited_prediction": {
+        "mean_us": 299.3577773437498,
+        "median_us": 291.125,
+        "p95_us": 350.5
+      },
+      "buffer_allocation": {
+        "mean_us": 2.8558261718749964,
+        "median_us": 2.75,
+        "p95_us": 3.9170000000000003
+      },
+      "completion": {
+        "mean_us": 122.69153417968745,
+        "median_us": 119.583,
+        "p95_us": 138.917
+      },
+      "device_lookup": {
+        "mean_us": 0.03313281250000013,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 1.0073027343749987,
+        "median_us": 0.959,
+        "p95_us": 1.3339999999999999
+      },
+      "import": {
+        "mean_us": 1.9509189453124887,
+        "median_us": 1.875,
+        "p95_us": 2.458
+      },
+      "packing": {
+        "mean_us": 0.12194921875000013,
+        "median_us": 0.125,
+        "p95_us": 0.166
+      },
+      "readback": {
+        "mean_us": 1.8324482421874961,
+        "median_us": 1.709,
+        "p95_us": 2.5
+      },
+      "scope_cleanup": {
+        "mean_us": 18.781722656250043,
+        "median_us": 18.083,
+        "p95_us": 27.542
+      },
+      "validation": {
+        "mean_us": 0.0917294921875001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 205.407167,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13129,
+      "malloc_in_use_bytes": 2516448,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27492352,
+      "physical_footprint_bytes": 179372824,
+      "pid": 64009,
+      "rss_bytes": 27492352
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 389.04236621093713,
+        "median_us": 347.25,
+        "p95_us": 493.833
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 247.974208,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13134,
+      "malloc_in_use_bytes": 2911552,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27508736,
+      "physical_footprint_bytes": 179389208,
+      "pid": 64009,
+      "rss_bytes": 27508736
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "actor_body": {
+        "mean_us": 236.98312890625004,
+        "median_us": 211.083,
+        "p95_us": 268.959
+      },
+      "actor_wait": {
+        "mean_us": 232.51919726562517,
+        "median_us": 206.667,
+        "p95_us": 260.79200000000003
+      },
+      "awaited_prediction": {
+        "mean_us": 471.4547353515624,
+        "median_us": 420.29100000000005,
+        "p95_us": 552.833
+      },
+      "buffer_allocation": {
+        "mean_us": 3.368083984374995,
+        "median_us": 3.1670000000000003,
+        "p95_us": 5.042
+      },
+      "completion": {
+        "mean_us": 142.63745214843746,
+        "median_us": 138.833,
+        "p95_us": 163.5
+      },
+      "device_lookup": {
+        "mean_us": 63.22762304687499,
+        "median_us": 41.625,
+        "p95_us": 58.083000000000006
+      },
+      "graph": {
+        "mean_us": 1.0347529296874955,
+        "median_us": 1,
+        "p95_us": 1.542
+      },
+      "import": {
+        "mean_us": 2.0793496093749977,
+        "median_us": 2,
+        "p95_us": 2.917
+      },
+      "packing": {
+        "mean_us": 0.1496425781250004,
+        "median_us": 0.125,
+        "p95_us": 0.20900000000000002
+      },
+      "readback": {
+        "mean_us": 1.989617187499995,
+        "median_us": 1.875,
+        "p95_us": 2.7920000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 20.292013671875072,
+        "median_us": 19.417,
+        "p95_us": 28.75
+      },
+      "validation": {
+        "mean_us": 0.0958603515625001,
+        "median_us": 0.083,
+        "p95_us": 0.166
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 228.593375,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 12125,
+      "malloc_in_use_bytes": 2840160,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27508736,
+      "physical_footprint_bytes": 179389208,
+      "pid": 64009,
+      "rss_bytes": 27508736
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "actor_body": {
+        "mean_us": 218.5798593749999,
+        "median_us": 202.125,
+        "p95_us": 246.583
+      },
+      "actor_wait": {
+        "mean_us": 214.89796777343759,
+        "median_us": 197.542,
+        "p95_us": 242.291
+      },
+      "awaited_prediction": {
+        "mean_us": 435.18834765625064,
+        "median_us": 403.667,
+        "p95_us": 502.667
+      },
+      "buffer_allocation": {
+        "mean_us": 2.916060546874996,
+        "median_us": 2.833,
+        "p95_us": 4.333
+      },
+      "completion": {
+        "mean_us": 135.49812597656262,
+        "median_us": 134.458,
+        "p95_us": 153.334
+      },
+      "device_lookup": {
+        "mean_us": 54.84450781250008,
+        "median_us": 39.042,
+        "p95_us": 51.75
+      },
+      "graph": {
+        "mean_us": 0.9446396484374975,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.25
+      },
+      "import": {
+        "mean_us": 1.926105468749996,
+        "median_us": 1.875,
+        "p95_us": 2.584
+      },
+      "packing": {
+        "mean_us": 0.1456220703125003,
+        "median_us": 0.125,
+        "p95_us": 0.208
+      },
+      "readback": {
+        "mean_us": 1.785562499999997,
+        "median_us": 1.7080000000000002,
+        "p95_us": 2.458
+      },
+      "scope_cleanup": {
+        "mean_us": 18.523165039062558,
+        "median_us": 17.75,
+        "p95_us": 25.458000000000002
+      },
+      "validation": {
+        "mean_us": 0.09566210937500008,
+        "median_us": 0.08399999999999999,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 223.733875,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13166,
+      "malloc_in_use_bytes": 2527104,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27508736,
+      "physical_footprint_bytes": 179389208,
+      "pid": 64009,
+      "rss_bytes": 27508736
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 424.242345703125,
+        "median_us": 385.5,
+        "p95_us": 511.58400000000006
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 172.285875,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13171,
+      "malloc_in_use_bytes": 2922368,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27508736,
+      "physical_footprint_bytes": 179389208,
+      "pid": 64009,
+      "rss_bytes": 27508736
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "actor_body": {
+        "mean_us": 163.45401269531249,
+        "median_us": 163.208,
+        "p95_us": 189.375
+      },
+      "actor_wait": {
+        "mean_us": 159.0977734374997,
+        "median_us": 158.292,
+        "p95_us": 188.20899999999997
+      },
+      "awaited_prediction": {
+        "mean_us": 324.31446386718756,
+        "median_us": 324.70799999999997,
+        "p95_us": 376.666
+      },
+      "buffer_allocation": {
+        "mean_us": 2.806360351562502,
+        "median_us": 2.7079999999999997,
+        "p95_us": 3.6670000000000003
+      },
+      "completion": {
+        "mean_us": 134.8262060546874,
+        "median_us": 135.458,
+        "p95_us": 154.833
+      },
+      "device_lookup": {
+        "mean_us": 0.033900390625000165,
+        "median_us": 0.041999999999999996,
+        "p95_us": 0.083
+      },
+      "graph": {
+        "mean_us": 1.0023007812499976,
+        "median_us": 0.959,
+        "p95_us": 1.3339999999999999
+      },
+      "import": {
+        "mean_us": 1.9022705078124915,
+        "median_us": 1.8339999999999999,
+        "p95_us": 2.458
+      },
+      "packing": {
+        "mean_us": 0.12190234375000011,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.90368457031249,
+        "median_us": 1.875,
+        "p95_us": 2.458
+      },
+      "scope_cleanup": {
+        "mean_us": 18.969335937500087,
+        "median_us": 18.291,
+        "p95_us": 26.333
+      },
+      "validation": {
+        "mean_us": 0.0980537109375001,
+        "median_us": 0.08399999999999999,
+        "p95_us": 0.166
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 0,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 0,
+    "elapsed_ms": 236.305583,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 12557,
+      "malloc_in_use_bytes": 2361152,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 26427392,
+      "physical_footprint_bytes": 178291456,
+      "pid": 64040,
+      "rss_bytes": 26427392
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 448.4599208984373,
+        "median_us": 384.416,
+        "p95_us": 600.958
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 0,
+    "elapsed_ms": 225.913084,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 13593,
+      "malloc_in_use_bytes": 2832400,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27099136,
+      "physical_footprint_bytes": 178979584,
+      "pid": 64040,
+      "rss_bytes": 27099136
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "actor_body": {
+        "mean_us": 215.85937792968775,
+        "median_us": 204,
+        "p95_us": 258.29200000000003
+      },
+      "actor_wait": {
+        "mean_us": 212.37774609374972,
+        "median_us": 199.417,
+        "p95_us": 252.708
+      },
+      "awaited_prediction": {
+        "mean_us": 429.982478515625,
+        "median_us": 406.833,
+        "p95_us": 512.667
+      },
+      "buffer_allocation": {
+        "mean_us": 2.9800986328124996,
+        "median_us": 2.875,
+        "p95_us": 4.333
+      },
+      "completion": {
+        "mean_us": 135.55312695312512,
+        "median_us": 134.75,
+        "p95_us": 156.625
+      },
+      "device_lookup": {
+        "mean_us": 51.48574121093751,
+        "median_us": 39.542,
+        "p95_us": 55.959
+      },
+      "graph": {
+        "mean_us": 0.9780966796874967,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.333
+      },
+      "import": {
+        "mean_us": 1.8833701171874926,
+        "median_us": 1.833,
+        "p95_us": 2.5829999999999997
+      },
+      "packing": {
+        "mean_us": 0.13244726562500023,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.8923886718749972,
+        "median_us": 1.709,
+        "p95_us": 2.625
+      },
+      "scope_cleanup": {
+        "mean_us": 18.808962890625068,
+        "median_us": 18.041999999999998,
+        "p95_us": 26.5
+      },
+      "validation": {
+        "mean_us": 0.0987607421875001,
+        "median_us": 0.08399999999999999,
+        "p95_us": 0.166
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 0,
+    "elapsed_ms": 155.168667,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 13609,
+      "malloc_in_use_bytes": 2836784,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27115520,
+      "physical_footprint_bytes": 178979584,
+      "pid": 64040,
+      "rss_bytes": 27115520
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "actor_body": {
+        "mean_us": 147.08962304687475,
+        "median_us": 142.458,
+        "p95_us": 178.167
+      },
+      "actor_wait": {
+        "mean_us": 142.61133007812504,
+        "median_us": 137.833,
+        "p95_us": 173.542
+      },
+      "awaited_prediction": {
+        "mean_us": 291.2913798828124,
+        "median_us": 282.459,
+        "p95_us": 351.375
+      },
+      "buffer_allocation": {
+        "mean_us": 2.6986894531249983,
+        "median_us": 2.625,
+        "p95_us": 3.4589999999999996
+      },
+      "completion": {
+        "mean_us": 120.42874511718743,
+        "median_us": 117.16699999999999,
+        "p95_us": 140.959
+      },
+      "device_lookup": {
+        "mean_us": 0.035035156250000164,
+        "median_us": 0.041999999999999996,
+        "p95_us": 0.083
+      },
+      "graph": {
+        "mean_us": 0.9017656249999936,
+        "median_us": 0.916,
+        "p95_us": 1.083
+      },
+      "import": {
+        "mean_us": 1.7578388671874985,
+        "median_us": 1.7080000000000002,
+        "p95_us": 2.125
+      },
+      "packing": {
+        "mean_us": 0.11677832031250011,
+        "median_us": 0.125,
+        "p95_us": 0.125
+      },
+      "readback": {
+        "mean_us": 1.7460244140625034,
+        "median_us": 1.625,
+        "p95_us": 2.2079999999999997
+      },
+      "scope_cleanup": {
+        "mean_us": 17.64501562500005,
+        "median_us": 16.208,
+        "p95_us": 23.584
+      },
+      "validation": {
+        "mean_us": 0.09106542968750009,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 148.160125,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 12600,
+      "malloc_in_use_bytes": 2765408,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27115520,
+      "physical_footprint_bytes": 178979584,
+      "pid": 64040,
+      "rss_bytes": 27115520
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "actor_body": {
+        "mean_us": 140.39166992187498,
+        "median_us": 138.917,
+        "p95_us": 171.125
+      },
+      "actor_wait": {
+        "mean_us": 136.75811132812495,
+        "median_us": 134.209,
+        "p95_us": 169.291
+      },
+      "awaited_prediction": {
+        "mean_us": 278.7265341796869,
+        "median_us": 275.834,
+        "p95_us": 338.875
+      },
+      "buffer_allocation": {
+        "mean_us": 2.4906298828124966,
+        "median_us": 2.5,
+        "p95_us": 2.9589999999999996
+      },
+      "completion": {
+        "mean_us": 114.30279589843738,
+        "median_us": 113.25,
+        "p95_us": 131.917
+      },
+      "device_lookup": {
+        "mean_us": 0.037206054687500136,
+        "median_us": 0.041999999999999996,
+        "p95_us": 0.083
+      },
+      "graph": {
+        "mean_us": 0.8611367187499964,
+        "median_us": 0.875,
+        "p95_us": 1.042
+      },
+      "import": {
+        "mean_us": 1.6491650390624961,
+        "median_us": 1.625,
+        "p95_us": 1.9580000000000002
+      },
+      "packing": {
+        "mean_us": 0.1127822265625001,
+        "median_us": 0.125,
+        "p95_us": 0.125
+      },
+      "readback": {
+        "mean_us": 1.726595703124996,
+        "median_us": 1.542,
+        "p95_us": 2.042
+      },
+      "scope_cleanup": {
+        "mean_us": 17.52157714843754,
+        "median_us": 15.709000000000001,
+        "p95_us": 23.459
+      },
+      "validation": {
+        "mean_us": 0.09413281250000007,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 211.646583,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 13641,
+      "malloc_in_use_bytes": 2845568,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27131904,
+      "physical_footprint_bytes": 178995968,
+      "pid": 64040,
+      "rss_bytes": 27131904
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "actor_body": {
+        "mean_us": 202.08515722656225,
+        "median_us": 186,
+        "p95_us": 257.75
+      },
+      "actor_wait": {
+        "mean_us": 197.08187695312535,
+        "median_us": 181,
+        "p95_us": 253.04100000000003
+      },
+      "awaited_prediction": {
+        "mean_us": 400.7982607421868,
+        "median_us": 369.625,
+        "p95_us": 507.834
+      },
+      "buffer_allocation": {
+        "mean_us": 2.9665478515624826,
+        "median_us": 2.875,
+        "p95_us": 3.9579999999999997
+      },
+      "completion": {
+        "mean_us": 118.62270507812495,
+        "median_us": 115.833,
+        "p95_us": 135.083
+      },
+      "device_lookup": {
+        "mean_us": 55.30957128906254,
+        "median_us": 40.875,
+        "p95_us": 111.875
+      },
+      "graph": {
+        "mean_us": 0.9619150390624991,
+        "median_us": 0.958,
+        "p95_us": 1.209
+      },
+      "import": {
+        "mean_us": 1.873931640624998,
+        "median_us": 1.833,
+        "p95_us": 2.375
+      },
+      "packing": {
+        "mean_us": 0.13713378906250015,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.8590556640624978,
+        "median_us": 1.667,
+        "p95_us": 2.375
+      },
+      "scope_cleanup": {
+        "mean_us": 18.343417968750064,
+        "median_us": 17.291999999999998,
+        "p95_us": 24.542
+      },
+      "validation": {
+        "mean_us": 0.09389160156250012,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 180.769791,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 13657,
+      "malloc_in_use_bytes": 2456768,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27148288,
+      "physical_footprint_bytes": 179012352,
+      "pid": 64040,
+      "rss_bytes": 27148288
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 340.62625878906204,
+        "median_us": 329.125,
+        "p95_us": 395.54200000000003
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 192.781,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 12637,
+      "malloc_in_use_bytes": 2776096,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27148288,
+      "physical_footprint_bytes": 179012352,
+      "pid": 64040,
+      "rss_bytes": 27148288
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "actor_body": {
+        "mean_us": 183.89320800781252,
+        "median_us": 180.416,
+        "p95_us": 212.417
+      },
+      "actor_wait": {
+        "mean_us": 179.1537148437498,
+        "median_us": 175.417,
+        "p95_us": 205.875
+      },
+      "awaited_prediction": {
+        "mean_us": 364.60222753906294,
+        "median_us": 358.084,
+        "p95_us": 429.79200000000003
+      },
+      "buffer_allocation": {
+        "mean_us": 2.8568867187499865,
+        "median_us": 2.7920000000000003,
+        "p95_us": 3.7079999999999997
+      },
+      "completion": {
+        "mean_us": 116.43892480468753,
+        "median_us": 114.75,
+        "p95_us": 131.041
+      },
+      "device_lookup": {
+        "mean_us": 40.66341308593759,
+        "median_us": 39.125,
+        "p95_us": 45.916
+      },
+      "graph": {
+        "mean_us": 0.9396123046875001,
+        "median_us": 0.958,
+        "p95_us": 1.167
+      },
+      "import": {
+        "mean_us": 1.8187236328124987,
+        "median_us": 1.833,
+        "p95_us": 2.25
+      },
+      "packing": {
+        "mean_us": 0.13289062500000018,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.7667568359374997,
+        "median_us": 1.625,
+        "p95_us": 2.125
+      },
+      "scope_cleanup": {
+        "mean_us": 17.308634765625047,
+        "median_us": 16.209,
+        "p95_us": 21.875
+      },
+      "validation": {
+        "mean_us": 0.0911875000000001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 154.697958,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 13725,
+      "malloc_in_use_bytes": 2949088,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27328512,
+      "physical_footprint_bytes": 179208960,
+      "pid": 64040,
+      "rss_bytes": 27328512
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "actor_body": {
+        "mean_us": 146.57569531250007,
+        "median_us": 141.791,
+        "p95_us": 178.833
+      },
+      "actor_wait": {
+        "mean_us": 141.62889941406257,
+        "median_us": 137.041,
+        "p95_us": 173.375
+      },
+      "awaited_prediction": {
+        "mean_us": 289.8909931640623,
+        "median_us": 280.41700000000003,
+        "p95_us": 355.333
+      },
+      "buffer_allocation": {
+        "mean_us": 2.7263349609375016,
+        "median_us": 2.584,
+        "p95_us": 3.291
+      },
+      "completion": {
+        "mean_us": 119.44927246093762,
+        "median_us": 116.33300000000001,
+        "p95_us": 137.542
+      },
+      "device_lookup": {
+        "mean_us": 0.03222753906250016,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.950352539062499,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.125
+      },
+      "import": {
+        "mean_us": 1.7787695312500014,
+        "median_us": 1.75,
+        "p95_us": 2.166
+      },
+      "packing": {
+        "mean_us": 0.11970507812500011,
+        "median_us": 0.125,
+        "p95_us": 0.125
+      },
+      "readback": {
+        "mean_us": 1.7736298828124988,
+        "median_us": 1.625,
+        "p95_us": 2.1670000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 17.979517578125034,
+        "median_us": 17.042,
+        "p95_us": 24.042
+      },
+      "validation": {
+        "mean_us": 0.09158007812500008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 178.412125,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 13741,
+      "malloc_in_use_bytes": 2560256,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27328512,
+      "physical_footprint_bytes": 179208960,
+      "pid": 64040,
+      "rss_bytes": 27328512
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 335.9468222656246,
+        "median_us": 324.959,
+        "p95_us": 380.083
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 179.50575,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 12721,
+      "malloc_in_use_bytes": 2486432,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27344896,
+      "physical_footprint_bytes": 179225344,
+      "pid": 64040,
+      "rss_bytes": 27344896
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 337.8521113281249,
+        "median_us": 327.167,
+        "p95_us": 407.75
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 164.882292,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 33554432,
+      "malloc_blocks_in_use": 13751,
+      "malloc_in_use_bytes": 2957312,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27361280,
+      "physical_footprint_bytes": 179241728,
+      "pid": 64040,
+      "rss_bytes": 27361280
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "actor_body": {
+        "mean_us": 156.56548535156244,
+        "median_us": 154.29100000000003,
+        "p95_us": 181.084
+      },
+      "actor_wait": {
+        "mean_us": 152.7938085937501,
+        "median_us": 149.917,
+        "p95_us": 176.167
+      },
+      "awaited_prediction": {
+        "mean_us": 311.0010722656254,
+        "median_us": 306.625,
+        "p95_us": 359.458
+      },
+      "buffer_allocation": {
+        "mean_us": 2.6458515625000016,
+        "median_us": 2.584,
+        "p95_us": 3.333
+      },
+      "completion": {
+        "mean_us": 129.39989648437498,
+        "median_us": 126.79099999999998,
+        "p95_us": 145.333
+      },
+      "device_lookup": {
+        "mean_us": 0.03681835937500016,
+        "median_us": 0.041999999999999996,
+        "p95_us": 0.083
+      },
+      "graph": {
+        "mean_us": 0.9306132812499996,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.125
+      },
+      "import": {
+        "mean_us": 1.7648847656249975,
+        "median_us": 1.75,
+        "p95_us": 2.1670000000000003
+      },
+      "packing": {
+        "mean_us": 0.12487890625000013,
+        "median_us": 0.125,
+        "p95_us": 0.125
+      },
+      "readback": {
+        "mean_us": 1.734997070312504,
+        "median_us": 1.625,
+        "p95_us": 2.2079999999999997
+      },
+      "scope_cleanup": {
+        "mean_us": 18.135099609375064,
+        "median_us": 17.458000000000002,
+        "p95_us": 24.666
+      },
+      "validation": {
+        "mean_us": 0.09222070312500005,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 201.873625,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13767,
+      "malloc_in_use_bytes": 2961696,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27475968,
+      "physical_footprint_bytes": 179356416,
+      "pid": 64040,
+      "rss_bytes": 27475968
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "actor_body": {
+        "mean_us": 192.13336523437502,
+        "median_us": 184.708,
+        "p95_us": 230.459
+      },
+      "actor_wait": {
+        "mean_us": 187.1812724609374,
+        "median_us": 180.042,
+        "p95_us": 227.791
+      },
+      "awaited_prediction": {
+        "mean_us": 381.0574511718748,
+        "median_us": 366.458,
+        "p95_us": 462
+      },
+      "buffer_allocation": {
+        "mean_us": 3.1739072265624997,
+        "median_us": 3,
+        "p95_us": 4.708
+      },
+      "completion": {
+        "mean_us": 119.38714648437491,
+        "median_us": 116.5,
+        "p95_us": 138.417
+      },
+      "device_lookup": {
+        "mean_us": 42.929713867187516,
+        "median_us": 39.625,
+        "p95_us": 51.083000000000006
+      },
+      "graph": {
+        "mean_us": 1.0496943359374966,
+        "median_us": 1,
+        "p95_us": 1.5
+      },
+      "import": {
+        "mean_us": 2.096619140624993,
+        "median_us": 2,
+        "p95_us": 2.917
+      },
+      "packing": {
+        "mean_us": 0.14063183593750017,
+        "median_us": 0.125,
+        "p95_us": 0.208
+      },
+      "readback": {
+        "mean_us": 2.0317832031249954,
+        "median_us": 1.917,
+        "p95_us": 2.7920000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 19.101194335937578,
+        "median_us": 18.583,
+        "p95_us": 25.125
+      },
+      "validation": {
+        "mean_us": 0.1015205078125001,
+        "median_us": 0.08399999999999999,
+        "p95_us": 0.16699999999999998
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 152.707125,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 12758,
+      "malloc_in_use_bytes": 2890304,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27492352,
+      "physical_footprint_bytes": 179372800,
+      "pid": 64040,
+      "rss_bytes": 27492352
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "actor_body": {
+        "mean_us": 144.69228222656238,
+        "median_us": 142.292,
+        "p95_us": 157.166
+      },
+      "actor_wait": {
+        "mean_us": 139.60750781250002,
+        "median_us": 137.083,
+        "p95_us": 151.792
+      },
+      "awaited_prediction": {
+        "mean_us": 285.8693925781249,
+        "median_us": 281.917,
+        "p95_us": 321.33299999999997
+      },
+      "buffer_allocation": {
+        "mean_us": 2.6307421875000023,
+        "median_us": 2.5829999999999997,
+        "p95_us": 3.084
+      },
+      "completion": {
+        "mean_us": 118.50013183593767,
+        "median_us": 116.54100000000001,
+        "p95_us": 126.79099999999998
+      },
+      "device_lookup": {
+        "mean_us": 0.03164160156250014,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.9402607421875019,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.042
+      },
+      "import": {
+        "mean_us": 1.7927675781249979,
+        "median_us": 1.7910000000000001,
+        "p95_us": 2.125
+      },
+      "packing": {
+        "mean_us": 0.11739843750000012,
+        "median_us": 0.125,
+        "p95_us": 0.125
+      },
+      "readback": {
+        "mean_us": 1.7378154296874977,
+        "median_us": 1.667,
+        "p95_us": 2.1670000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 17.120420898437523,
+        "median_us": 16.083,
+        "p95_us": 20.875
+      },
+      "validation": {
+        "mean_us": 0.0889589843750001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 175.328834,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13799,
+      "malloc_in_use_bytes": 2577248,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27492352,
+      "physical_footprint_bytes": 179372800,
+      "pid": 64040,
+      "rss_bytes": 27492352
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 330.37877929687477,
+        "median_us": 321.709,
+        "p95_us": 390.375
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 199.676708,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13804,
+      "malloc_in_use_bytes": 2972352,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27508736,
+      "physical_footprint_bytes": 179389184,
+      "pid": 64040,
+      "rss_bytes": 27508736
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "actor_body": {
+        "mean_us": 190.32262304687504,
+        "median_us": 183.917,
+        "p95_us": 224.458
+      },
+      "actor_wait": {
+        "mean_us": 185.20085839843756,
+        "median_us": 179.25,
+        "p95_us": 219.54199999999997
+      },
+      "awaited_prediction": {
+        "mean_us": 377.2204755859373,
+        "median_us": 365.584,
+        "p95_us": 445.084
+      },
+      "buffer_allocation": {
+        "mean_us": 2.990850585937488,
+        "median_us": 2.834,
+        "p95_us": 3.875
+      },
+      "completion": {
+        "mean_us": 119.12593847656261,
+        "median_us": 116.16600000000001,
+        "p95_us": 138.667
+      },
+      "device_lookup": {
+        "mean_us": 42.64958105468753,
+        "median_us": 39.875,
+        "p95_us": 49.708000000000006
+      },
+      "graph": {
+        "mean_us": 0.9658476562499962,
+        "median_us": 0.958,
+        "p95_us": 1.167
+      },
+      "import": {
+        "mean_us": 1.9527539062499946,
+        "median_us": 1.917,
+        "p95_us": 2.417
+      },
+      "packing": {
+        "mean_us": 0.13469140625000023,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.8152802734374973,
+        "median_us": 1.7080000000000002,
+        "p95_us": 2.209
+      },
+      "scope_cleanup": {
+        "mean_us": 18.626302734375034,
+        "median_us": 18.041999999999998,
+        "p95_us": 22.917
+      },
+      "validation": {
+        "mean_us": 0.09061914062500008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 200.51025,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 12795,
+      "malloc_in_use_bytes": 2900960,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27508736,
+      "physical_footprint_bytes": 179389184,
+      "pid": 64040,
+      "rss_bytes": 27508736
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "actor_body": {
+        "mean_us": 191.23386328125008,
+        "median_us": 184,
+        "p95_us": 241.916
+      },
+      "actor_wait": {
+        "mean_us": 186.313783203125,
+        "median_us": 178.833,
+        "p95_us": 236.58399999999997
+      },
+      "awaited_prediction": {
+        "mean_us": 379.208913085938,
+        "median_us": 366.125,
+        "p95_us": 449.042
+      },
+      "buffer_allocation": {
+        "mean_us": 2.968651367187492,
+        "median_us": 2.875,
+        "p95_us": 3.875
+      },
+      "completion": {
+        "mean_us": 118.4799804687499,
+        "median_us": 116.20800000000001,
+        "p95_us": 137.833
+      },
+      "device_lookup": {
+        "mean_us": 44.28386621093757,
+        "median_us": 40.291000000000004,
+        "p95_us": 50.708999999999996
+      },
+      "graph": {
+        "mean_us": 0.9340039062499993,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.166
+      },
+      "import": {
+        "mean_us": 1.9337597656249939,
+        "median_us": 1.917,
+        "p95_us": 2.417
+      },
+      "packing": {
+        "mean_us": 0.13078027343750012,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.8178886718749983,
+        "median_us": 1.667,
+        "p95_us": 2.209
+      },
+      "scope_cleanup": {
+        "mean_us": 18.67720214843758,
+        "median_us": 17.541999999999998,
+        "p95_us": 24.208000000000002
+      },
+      "validation": {
+        "mean_us": 0.09251367187500012,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 197.985,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13836,
+      "malloc_in_use_bytes": 2587904,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27508736,
+      "physical_footprint_bytes": 179389184,
+      "pid": 64040,
+      "rss_bytes": 27508736
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 373.7411367187495,
+        "median_us": 337.33299999999997,
+        "p95_us": 456.583
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 166.175083,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 37748736,
+      "malloc_blocks_in_use": 13841,
+      "malloc_in_use_bytes": 2983168,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27508736,
+      "physical_footprint_bytes": 179389184,
+      "pid": 64040,
+      "rss_bytes": 27508736
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "actor_body": {
+        "mean_us": 157.5462734375,
+        "median_us": 153.292,
+        "p95_us": 192.916
+      },
+      "actor_wait": {
+        "mean_us": 152.61844433593748,
+        "median_us": 148.792,
+        "p95_us": 189.916
+      },
+      "awaited_prediction": {
+        "mean_us": 311.8882294921875,
+        "median_us": 306.666,
+        "p95_us": 388.91700000000003
+      },
+      "buffer_allocation": {
+        "mean_us": 2.7669628906250052,
+        "median_us": 2.6670000000000003,
+        "p95_us": 3.458
+      },
+      "completion": {
+        "mean_us": 128.93622265625,
+        "median_us": 125.95799999999998,
+        "p95_us": 154.79100000000003
+      },
+      "device_lookup": {
+        "mean_us": 0.03213671875000015,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.9733896484374979,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.2910000000000001
+      },
+      "import": {
+        "mean_us": 1.851224609374996,
+        "median_us": 1.792,
+        "p95_us": 2.334
+      },
+      "packing": {
+        "mean_us": 0.12060644531250012,
+        "median_us": 0.125,
+        "p95_us": 0.166
+      },
+      "readback": {
+        "mean_us": 1.8871542968749988,
+        "median_us": 1.75,
+        "p95_us": 2.333
+      },
+      "scope_cleanup": {
+        "mean_us": 19.12155175781258,
+        "median_us": 18.25,
+        "p95_us": 24.709
+      },
+      "validation": {
+        "mean_us": 0.09380273437500011,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 2
+  },
+  {
+    "cycle": 0,
+    "elapsed_ms": 225.074667,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12518,
+      "malloc_in_use_bytes": 2288944,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 26755072,
+      "physical_footprint_bytes": 178635568,
+      "pid": 64067,
+      "rss_bytes": 26755072
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 212.13666699218746,
+        "median_us": 182.875,
+        "p95_us": 291.792
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 0,
+    "elapsed_ms": 204.499792,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13554,
+      "malloc_in_use_bytes": 2760192,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27426816,
+      "physical_footprint_bytes": 179323696,
+      "pid": 64067,
+      "rss_bytes": 27426816
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "actor_body": {
+        "mean_us": 191.31461035156264,
+        "median_us": 179.958,
+        "p95_us": 242.75
+      },
+      "actor_wait": {
+        "mean_us": 0.08767285156250007,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 191.93272949218758,
+        "median_us": 180.583,
+        "p95_us": 243.375
+      },
+      "buffer_allocation": {
+        "mean_us": 2.879641601562486,
+        "median_us": 2.834,
+        "p95_us": 3.75
+      },
+      "completion": {
+        "mean_us": 116.60318457031259,
+        "median_us": 114.375,
+        "p95_us": 134.292
+      },
+      "device_lookup": {
+        "mean_us": 46.501319335937524,
+        "median_us": 37.958,
+        "p95_us": 47.792
+      },
+      "graph": {
+        "mean_us": 0.9425927734374978,
+        "median_us": 0.916,
+        "p95_us": 1.167
+      },
+      "import": {
+        "mean_us": 1.8431826171874948,
+        "median_us": 1.792,
+        "p95_us": 2.2920000000000003
+      },
+      "packing": {
+        "mean_us": 0.1300439453125002,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.9284267578124978,
+        "median_us": 1.7080000000000002,
+        "p95_us": 2.25
+      },
+      "scope_cleanup": {
+        "mean_us": 18.387008789062556,
+        "median_us": 17.541999999999998,
+        "p95_us": 23.167
+      },
+      "validation": {
+        "mean_us": 0.08503613281250007,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 0,
+    "elapsed_ms": 156.214708,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13570,
+      "malloc_in_use_bytes": 2764576,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27459584,
+      "physical_footprint_bytes": 179340080,
+      "pid": 64067,
+      "rss_bytes": 27459584
+    },
+    "output_sha256": "b32da49722c9143505914c9f713f98b5379c471a94b3713e781528859b88cd64",
+    "phases": {
+      "actor_body": {
+        "mean_us": 144.0966494140626,
+        "median_us": 138.5,
+        "p95_us": 187.20800000000003
+      },
+      "actor_wait": {
+        "mean_us": 0.08803320312500008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 144.71387792968736,
+        "median_us": 139.16600000000003,
+        "p95_us": 188
+      },
+      "buffer_allocation": {
+        "mean_us": 2.8740263671875095,
+        "median_us": 2.6670000000000003,
+        "p95_us": 3.334
+      },
+      "completion": {
+        "mean_us": 116.08627148437495,
+        "median_us": 112.667,
+        "p95_us": 139.209
+      },
+      "device_lookup": {
+        "mean_us": 0.032288085937500176,
+        "median_us": 0.041999999999999996,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.9419736328125017,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.042
+      },
+      "import": {
+        "mean_us": 1.6984414062499922,
+        "median_us": 1.625,
+        "p95_us": 2
+      },
+      "packing": {
+        "mean_us": 0.11725976562500011,
+        "median_us": 0.125,
+        "p95_us": 0.125
+      },
+      "readback": {
+        "mean_us": 1.8394511718749986,
+        "median_us": 1.625,
+        "p95_us": 2.166
+      },
+      "scope_cleanup": {
+        "mean_us": 18.764823242187553,
+        "median_us": 17.167,
+        "p95_us": 26.917
+      },
+      "validation": {
+        "mean_us": 0.0868544921875001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 155.44975,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12561,
+      "malloc_in_use_bytes": 2693200,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27459584,
+      "physical_footprint_bytes": 179340080,
+      "pid": 64067,
+      "rss_bytes": 27459584
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "actor_body": {
+        "mean_us": 143.62089746093744,
+        "median_us": 139.125,
+        "p95_us": 180.875
+      },
+      "actor_wait": {
+        "mean_us": 0.08398828125000007,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 144.2211220703126,
+        "median_us": 139.66600000000003,
+        "p95_us": 182.25
+      },
+      "buffer_allocation": {
+        "mean_us": 2.723928710937506,
+        "median_us": 2.625,
+        "p95_us": 3.292
+      },
+      "completion": {
+        "mean_us": 116.40330761718764,
+        "median_us": 113.083,
+        "p95_us": 140.541
+      },
+      "device_lookup": {
+        "mean_us": 0.030101562500000147,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.9216611328125003,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.042
+      },
+      "import": {
+        "mean_us": 1.6907646484374927,
+        "median_us": 1.625,
+        "p95_us": 2
+      },
+      "packing": {
+        "mean_us": 0.11597753906250012,
+        "median_us": 0.125,
+        "p95_us": 0.125
+      },
+      "readback": {
+        "mean_us": 1.7537822265624965,
+        "median_us": 1.625,
+        "p95_us": 2.1670000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 18.27196386718755,
+        "median_us": 17,
+        "p95_us": 25.375
+      },
+      "validation": {
+        "mean_us": 0.08384570312500006,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 221.383,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13602,
+      "malloc_in_use_bytes": 2773360,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27475968,
+      "physical_footprint_bytes": 179356464,
+      "pid": 64067,
+      "rss_bytes": 27475968
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "actor_body": {
+        "mean_us": 207.62658886718754,
+        "median_us": 183.708,
+        "p95_us": 273.83299999999997
+      },
+      "actor_wait": {
+        "mean_us": 0.08750292968750006,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 208.2534033203125,
+        "median_us": 184.292,
+        "p95_us": 274.375
+      },
+      "buffer_allocation": {
+        "mean_us": 3.0892773437499965,
+        "median_us": 2.917,
+        "p95_us": 4.25
+      },
+      "completion": {
+        "mean_us": 119.44637500000002,
+        "median_us": 115.833,
+        "p95_us": 139.541
+      },
+      "device_lookup": {
+        "mean_us": 58.936845703125,
+        "median_us": 39.166,
+        "p95_us": 118.25
+      },
+      "graph": {
+        "mean_us": 0.935300781249998,
+        "median_us": 0.875,
+        "p95_us": 1.209
+      },
+      "import": {
+        "mean_us": 1.8944121093749924,
+        "median_us": 1.833,
+        "p95_us": 2.5
+      },
+      "packing": {
+        "mean_us": 0.13285546875000015,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.8989736328124969,
+        "median_us": 1.709,
+        "p95_us": 2.417
+      },
+      "scope_cleanup": {
+        "mean_us": 19.269864257812568,
+        "median_us": 18,
+        "p95_us": 24.875
+      },
+      "validation": {
+        "mean_us": 0.08742187500000005,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 1,
+    "elapsed_ms": 215.788,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13618,
+      "malloc_in_use_bytes": 2384560,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27475968,
+      "physical_footprint_bytes": 179356464,
+      "pid": 64067,
+      "rss_bytes": 27475968
+    },
+    "output_sha256": "b5e5d055504a5ab3f003eab68ca412ce1b6937fc7ed902773f5ec946638cb9df",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 202.34387011718732,
+        "median_us": 184.541,
+        "p95_us": 236.583
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 221.480458,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12598,
+      "malloc_in_use_bytes": 2703888,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27492352,
+      "physical_footprint_bytes": 179372848,
+      "pid": 64067,
+      "rss_bytes": 27492352
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "actor_body": {
+        "mean_us": 207.8216142578121,
+        "median_us": 196.625,
+        "p95_us": 259.125
+      },
+      "actor_wait": {
+        "mean_us": 0.08728320312500008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 208.4447871093752,
+        "median_us": 197.25,
+        "p95_us": 259.625
+      },
+      "buffer_allocation": {
+        "mean_us": 3.0177001953124947,
+        "median_us": 2.834,
+        "p95_us": 4.084
+      },
+      "completion": {
+        "mean_us": 133.2081416015623,
+        "median_us": 132.083,
+        "p95_us": 158.167
+      },
+      "device_lookup": {
+        "mean_us": 46.040927734374996,
+        "median_us": 38,
+        "p95_us": 47.5
+      },
+      "graph": {
+        "mean_us": 0.9459746093749979,
+        "median_us": 0.916,
+        "p95_us": 1.167
+      },
+      "import": {
+        "mean_us": 1.873115234374992,
+        "median_us": 1.833,
+        "p95_us": 2.417
+      },
+      "packing": {
+        "mean_us": 0.13550390625000025,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.9236054687499944,
+        "median_us": 1.75,
+        "p95_us": 2.375
+      },
+      "scope_cleanup": {
+        "mean_us": 18.704371093750076,
+        "median_us": 17.75,
+        "p95_us": 24.375
+      },
+      "validation": {
+        "mean_us": 0.08487011718750007,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 154.626625,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13639,
+      "malloc_in_use_bytes": 2784048,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27492352,
+      "physical_footprint_bytes": 179372848,
+      "pid": 64067,
+      "rss_bytes": 27492352
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "actor_body": {
+        "mean_us": 142.92409082031259,
+        "median_us": 139.958,
+        "p95_us": 179.834
+      },
+      "actor_wait": {
+        "mean_us": 0.08304199218750008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 143.5072783203126,
+        "median_us": 140.541,
+        "p95_us": 180.5
+      },
+      "buffer_allocation": {
+        "mean_us": 2.6582031250000058,
+        "median_us": 2.6670000000000003,
+        "p95_us": 3.25
+      },
+      "completion": {
+        "mean_us": 115.86319921874998,
+        "median_us": 113.667,
+        "p95_us": 136.459
+      },
+      "device_lookup": {
+        "mean_us": 0.030711914062500147,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.901364257812499,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.083
+      },
+      "import": {
+        "mean_us": 1.6169433593749942,
+        "median_us": 1.625,
+        "p95_us": 1.9580000000000002
+      },
+      "packing": {
+        "mean_us": 0.11378027343750012,
+        "median_us": 0.125,
+        "p95_us": 0.125
+      },
+      "readback": {
+        "mean_us": 1.8369501953124985,
+        "median_us": 1.625,
+        "p95_us": 2.1670000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 18.247850585937574,
+        "median_us": 17.459,
+        "p95_us": 24.375
+      },
+      "validation": {
+        "mean_us": 0.08333300781250007,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 2,
+    "elapsed_ms": 196.242125,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13655,
+      "malloc_in_use_bytes": 2395216,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27508736,
+      "physical_footprint_bytes": 179389232,
+      "pid": 64067,
+      "rss_bytes": 27508736
+    },
+    "output_sha256": "3049259e10cfbc90fb8e5cf0825be6f63fb72e3041b3f0679adbaa5a8f8c44fd",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 183.6762255859375,
+        "median_us": 166.292,
+        "p95_us": 215.041
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 207.554125,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12635,
+      "malloc_in_use_bytes": 2321392,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27508736,
+      "physical_footprint_bytes": 179389232,
+      "pid": 64067,
+      "rss_bytes": 27508736
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 195.23492480468752,
+        "median_us": 181.625,
+        "p95_us": 228.583
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 166.370083,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13665,
+      "malloc_in_use_bytes": 2792272,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27525120,
+      "physical_footprint_bytes": 179405616,
+      "pid": 64067,
+      "rss_bytes": 27525120
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "actor_body": {
+        "mean_us": 154.11929882812495,
+        "median_us": 147.25,
+        "p95_us": 199.75
+      },
+      "actor_wait": {
+        "mean_us": 0.08757812500000009,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 154.72678710937484,
+        "median_us": 147.75,
+        "p95_us": 200.667
+      },
+      "buffer_allocation": {
+        "mean_us": 2.8502490234375024,
+        "median_us": 2.709,
+        "p95_us": 3.5
+      },
+      "completion": {
+        "mean_us": 125.91479492187499,
+        "median_us": 119.833,
+        "p95_us": 156.625
+      },
+      "device_lookup": {
+        "mean_us": 0.03176171875000014,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.9598935546875002,
+        "median_us": 0.9169999999999999,
+        "p95_us": 1.0839999999999999
+      },
+      "import": {
+        "mean_us": 1.7300283203124887,
+        "median_us": 1.667,
+        "p95_us": 2.083
+      },
+      "packing": {
+        "mean_us": 0.11994921875000011,
+        "median_us": 0.125,
+        "p95_us": 0.166
+      },
+      "readback": {
+        "mean_us": 1.8934384765624985,
+        "median_us": 1.709,
+        "p95_us": 2.291
+      },
+      "scope_cleanup": {
+        "mean_us": 18.842577148437556,
+        "median_us": 17.875,
+        "p95_us": 26.625
+      },
+      "validation": {
+        "mean_us": 0.09005761718750009,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 3,
+    "elapsed_ms": 205.646833,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13726,
+      "malloc_in_use_bytes": 2884160,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27623424,
+      "physical_footprint_bytes": 179520304,
+      "pid": 64067,
+      "rss_bytes": 27623424
+    },
+    "output_sha256": "7aacc82756fb9551c69004d187446bcc6dc0c218a278d84e47547dfec4e9486f",
+    "phases": {
+      "actor_body": {
+        "mean_us": 193.07172851562513,
+        "median_us": 179.5,
+        "p95_us": 233.667
+      },
+      "actor_wait": {
+        "mean_us": 0.08297167968750009,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 193.62857421875026,
+        "median_us": 180.042,
+        "p95_us": 234.66600000000003
+      },
+      "buffer_allocation": {
+        "mean_us": 2.5619550781249996,
+        "median_us": 2.458,
+        "p95_us": 3.666
+      },
+      "completion": {
+        "mean_us": 120.50607324218754,
+        "median_us": 117.375,
+        "p95_us": 141
+      },
+      "device_lookup": {
+        "mean_us": 47.38273339843754,
+        "median_us": 36,
+        "p95_us": 43.416999999999994
+      },
+      "graph": {
+        "mean_us": 0.8357441406249931,
+        "median_us": 0.7919999999999999,
+        "p95_us": 1.042
+      },
+      "import": {
+        "mean_us": 1.6497871093749943,
+        "median_us": 1.583,
+        "p95_us": 2.2079999999999997
+      },
+      "packing": {
+        "mean_us": 0.12361425781250011,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.7977177734374963,
+        "median_us": 1.7910000000000001,
+        "p95_us": 2.125
+      },
+      "scope_cleanup": {
+        "mean_us": 16.40238867187501,
+        "median_us": 15.041,
+        "p95_us": 21.083000000000002
+      },
+      "validation": {
+        "mean_us": 0.08485351562500008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 152.610916,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12717,
+      "malloc_in_use_bytes": 2812768,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27623424,
+      "physical_footprint_bytes": 179520304,
+      "pid": 64067,
+      "rss_bytes": 27623424
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "actor_body": {
+        "mean_us": 141.8987841796873,
+        "median_us": 139.58300000000003,
+        "p95_us": 165.458
+      },
+      "actor_wait": {
+        "mean_us": 0.07886132812500007,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 142.40178906249997,
+        "median_us": 140.125,
+        "p95_us": 166
+      },
+      "buffer_allocation": {
+        "mean_us": 2.321107421874999,
+        "median_us": 2.375,
+        "p95_us": 2.7920000000000003
+      },
+      "completion": {
+        "mean_us": 118.51988964843741,
+        "median_us": 116.66600000000001,
+        "p95_us": 138.459
+      },
+      "device_lookup": {
+        "mean_us": 0.027385742187500155,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.8333671874999956,
+        "median_us": 0.875,
+        "p95_us": 0.959
+      },
+      "import": {
+        "mean_us": 1.4549873046874906,
+        "median_us": 1.5,
+        "p95_us": 1.709
+      },
+      "packing": {
+        "mean_us": 0.11112304687500012,
+        "median_us": 0.125,
+        "p95_us": 0.125
+      },
+      "readback": {
+        "mean_us": 1.5409003906249938,
+        "median_us": 1.542,
+        "p95_us": 1.917
+      },
+      "scope_cleanup": {
+        "mean_us": 15.568469726562503,
+        "median_us": 14.667,
+        "p95_us": 19.833
+      },
+      "validation": {
+        "mean_us": 0.07987207031250008,
+        "median_us": 0.083,
+        "p95_us": 0.08399999999999999
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 185.692,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13758,
+      "malloc_in_use_bytes": 2499712,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27623424,
+      "physical_footprint_bytes": 179520304,
+      "pid": 64067,
+      "rss_bytes": 27623424
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 174.1185947265622,
+        "median_us": 162,
+        "p95_us": 186.709
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 4,
+    "elapsed_ms": 224.569667,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13763,
+      "malloc_in_use_bytes": 2894816,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27639808,
+      "physical_footprint_bytes": 179536688,
+      "pid": 64067,
+      "rss_bytes": 27639808
+    },
+    "output_sha256": "2f2460c3d735859f6dfa438087bc4623709fe4f30891cb689ed7d19e414a4760",
+    "phases": {
+      "actor_body": {
+        "mean_us": 211.32860449218768,
+        "median_us": 196.166,
+        "p95_us": 245.292
+      },
+      "actor_wait": {
+        "mean_us": 0.0875019531250001,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 211.89977636718748,
+        "median_us": 196.833,
+        "p95_us": 246
+      },
+      "buffer_allocation": {
+        "mean_us": 2.7554804687499925,
+        "median_us": 2.625,
+        "p95_us": 3.792
+      },
+      "completion": {
+        "mean_us": 134.48500390625028,
+        "median_us": 133.709,
+        "p95_us": 149.417
+      },
+      "device_lookup": {
+        "mean_us": 50.35943164062501,
+        "median_us": 37.042,
+        "p95_us": 45.625
+      },
+      "graph": {
+        "mean_us": 0.8685732421874968,
+        "median_us": 0.7919999999999999,
+        "p95_us": 1.0839999999999999
+      },
+      "import": {
+        "mean_us": 1.7298828125000019,
+        "median_us": 1.625,
+        "p95_us": 2.333
+      },
+      "packing": {
+        "mean_us": 0.13537597656250008,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.8397119140624973,
+        "median_us": 1.833,
+        "p95_us": 2.2079999999999997
+      },
+      "scope_cleanup": {
+        "mean_us": 17.23051367187505,
+        "median_us": 15.833,
+        "p95_us": 21.875
+      },
+      "validation": {
+        "mean_us": 0.08675292968750008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 225.401834,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 12754,
+      "malloc_in_use_bytes": 2823424,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27639808,
+      "physical_footprint_bytes": 179536688,
+      "pid": 64067,
+      "rss_bytes": 27639808
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "actor_body": {
+        "mean_us": 212.12508984375006,
+        "median_us": 197.958,
+        "p95_us": 239.292
+      },
+      "actor_wait": {
+        "mean_us": 0.08588476562500007,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 212.69437304687517,
+        "median_us": 198.583,
+        "p95_us": 239.833
+      },
+      "buffer_allocation": {
+        "mean_us": 2.6844541015624954,
+        "median_us": 2.542,
+        "p95_us": 4
+      },
+      "completion": {
+        "mean_us": 136.4530400390626,
+        "median_us": 135.083,
+        "p95_us": 150
+      },
+      "device_lookup": {
+        "mean_us": 49.232173828125006,
+        "median_us": 37.083,
+        "p95_us": 45.042
+      },
+      "graph": {
+        "mean_us": 0.8491523437499938,
+        "median_us": 0.7919999999999999,
+        "p95_us": 1.0839999999999999
+      },
+      "import": {
+        "mean_us": 1.7077070312499991,
+        "median_us": 1.625,
+        "p95_us": 2.375
+      },
+      "packing": {
+        "mean_us": 0.1231738281250001,
+        "median_us": 0.125,
+        "p95_us": 0.16699999999999998
+      },
+      "readback": {
+        "mean_us": 1.8973720703124932,
+        "median_us": 1.833,
+        "p95_us": 2.2920000000000003
+      },
+      "scope_cleanup": {
+        "mean_us": 17.274613281250033,
+        "median_us": 15.916,
+        "p95_us": 22
+      },
+      "validation": {
+        "mean_us": 0.08556738281250008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "lookup",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 206.434,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13795,
+      "malloc_in_use_bytes": 2510368,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27639808,
+      "physical_footprint_bytes": 179536688,
+      "pid": 64067,
+      "rss_bytes": 27639808
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "awaited_prediction": {
+        "mean_us": 194.0125830078125,
+        "median_us": 180,
+        "p95_us": 226.208
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "public",
+    "shared_imports": 0,
+    "slots": 1
+  },
+  {
+    "cycle": 5,
+    "elapsed_ms": 162.821833,
+    "max_error": 3.5762786865234375e-07,
+    "memory": {
+      "malloc_allocated_bytes": 46137344,
+      "malloc_blocks_in_use": 13800,
+      "malloc_in_use_bytes": 2905632,
+      "mlx_active_bytes": 32,
+      "mlx_cache_bytes": 1024,
+      "peak_rss_bytes": 27639808,
+      "physical_footprint_bytes": 179536688,
+      "pid": 64067,
+      "rss_bytes": 27639808
+    },
+    "output_sha256": "fff04de917bc7628533cf50fce731387bfb21b7c77371aa25c0b7c915b207633",
+    "phases": {
+      "actor_body": {
+        "mean_us": 150.69100097656244,
+        "median_us": 148.042,
+        "p95_us": 183.041
+      },
+      "actor_wait": {
+        "mean_us": 0.08687988281250009,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      },
+      "awaited_prediction": {
+        "mean_us": 151.3064003906249,
+        "median_us": 148.667,
+        "p95_us": 184.959
+      },
+      "buffer_allocation": {
+        "mean_us": 2.8725546874999925,
+        "median_us": 2.7079999999999997,
+        "p95_us": 3.875
+      },
+      "completion": {
+        "mean_us": 123.3753955078123,
+        "median_us": 120.459,
+        "p95_us": 144.917
+      },
+      "device_lookup": {
+        "mean_us": 0.03083496093750015,
+        "median_us": 0.041,
+        "p95_us": 0.041999999999999996
+      },
+      "graph": {
+        "mean_us": 0.9302421874999992,
+        "median_us": 0.916,
+        "p95_us": 1.2080000000000002
+      },
+      "import": {
+        "mean_us": 1.6875927734374925,
+        "median_us": 1.625,
+        "p95_us": 2.25
+      },
+      "packing": {
+        "mean_us": 0.11637207031250012,
+        "median_us": 0.125,
+        "p95_us": 0.166
+      },
+      "readback": {
+        "mean_us": 1.8907617187499968,
+        "median_us": 1.75,
+        "p95_us": 2.541
+      },
+      "scope_cleanup": {
+        "mean_us": 18.08011621093755,
+        "median_us": 16.666,
+        "p95_us": 25.791
+      },
+      "validation": {
+        "mean_us": 0.08518457031250008,
+        "median_us": 0.083,
+        "p95_us": 0.125
+      }
+    },
+    "queued_after": 0,
+    "requests": 1024,
+    "reserved_after": 0,
+    "round": 1,
+    "route": "retained",
+    "shared_imports": 0,
+    "slots": 1
+  }
+]

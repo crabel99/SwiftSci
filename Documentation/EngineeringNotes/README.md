@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Retained Metal device experiment](benchmarks/2026-10-07-device-reuse.md) isolates repeated device lookup, compares a retained handle with fresh per-request buffers, and defines the next production qualification.
+
 - [GPU prediction phases](benchmarks/2026-10-07-prediction-phases.md) separates small-input packing from device setup, completion and actor waiting, and records the benchmark hash-formatting correction.
 
 - [Small-request latency diagnosis](benchmarks/2026-10-07-small-imputed-latency.md) separates preprocessing and validation overhead from the awaited prediction call, records variable ownership timing, and leaves production dispatch unchanged.
