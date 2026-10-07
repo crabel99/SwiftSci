@@ -1,0 +1,188 @@
+{
+  "release_tests": 865,
+  "failed": 0,
+  "optional_skips": 2,
+  "controller_tests": 12,
+  "red_issues": 4,
+  "completed_main_requests": 608256,
+  "completed_main_workers": 48,
+  "completed_exploratory_interleaved_workers": 12,
+  "interleaved_stopped": true,
+  "throughput_qualified": false,
+  "paired_exploratory_changes": [
+    {
+      "case": "small",
+      "storage": "copy",
+      "round": 0,
+      "throughput_change_percent": -23.512108459256574,
+      "rss_reduction_percent": -0.48888888888889426
+    },
+    {
+      "case": "small",
+      "storage": "copy",
+      "round": 1,
+      "throughput_change_percent": -31.161907745742035,
+      "rss_reduction_percent": -0.04432624113475114
+    },
+    {
+      "case": "small",
+      "storage": "copy",
+      "round": 2,
+      "throughput_change_percent": -18.082468400091233,
+      "rss_reduction_percent": 0.0
+    },
+    {
+      "case": "small",
+      "storage": "owned",
+      "round": 0,
+      "throughput_change_percent": -24.825648825161963,
+      "rss_reduction_percent": 4.9267643142476665
+    },
+    {
+      "case": "small",
+      "storage": "owned",
+      "round": 1,
+      "throughput_change_percent": -29.23068972262206,
+      "rss_reduction_percent": 5.0509525919361975
+    },
+    {
+      "case": "small",
+      "storage": "owned",
+      "round": 2,
+      "throughput_change_percent": -13.13441861891178,
+      "rss_reduction_percent": 2.09260908281389
+    },
+    {
+      "case": "medium",
+      "storage": "copy",
+      "round": 0,
+      "throughput_change_percent": -28.211260178386187,
+      "rss_reduction_percent": -19.155290102389078
+    },
+    {
+      "case": "medium",
+      "storage": "copy",
+      "round": 1,
+      "throughput_change_percent": -21.345397869304072,
+      "rss_reduction_percent": 1.531814611154747
+    },
+    {
+      "case": "medium",
+      "storage": "copy",
+      "round": 2,
+      "throughput_change_percent": -25.043949423819413,
+      "rss_reduction_percent": -0.44017607042816653
+    },
+    {
+      "case": "medium",
+      "storage": "owned",
+      "round": 0,
+      "throughput_change_percent": -15.09661582794266,
+      "rss_reduction_percent": 0.879120879120876
+    },
+    {
+      "case": "medium",
+      "storage": "owned",
+      "round": 1,
+      "throughput_change_percent": -24.823397187069308,
+      "rss_reduction_percent": 7.797187899446101
+    },
+    {
+      "case": "medium",
+      "storage": "owned",
+      "round": 2,
+      "throughput_change_percent": -22.734489986425423,
+      "rss_reduction_percent": 7.114797031863818
+    },
+    {
+      "case": "large",
+      "storage": "copy",
+      "round": 0,
+      "throughput_change_percent": -3.342057992747416,
+      "rss_reduction_percent": -0.3414587878213027
+    },
+    {
+      "case": "large",
+      "storage": "copy",
+      "round": 1,
+      "throughput_change_percent": -5.974792030912745,
+      "rss_reduction_percent": -7.942238267148016
+    },
+    {
+      "case": "large",
+      "storage": "copy",
+      "round": 2,
+      "throughput_change_percent": -7.014350118638446,
+      "rss_reduction_percent": 1.1631179063877672
+    },
+    {
+      "case": "large",
+      "storage": "owned",
+      "round": 0,
+      "throughput_change_percent": -26.099771765736524,
+      "rss_reduction_percent": 39.06754084712249
+    },
+    {
+      "case": "large",
+      "storage": "owned",
+      "round": 1,
+      "throughput_change_percent": 2.5931413718982332,
+      "rss_reduction_percent": 39.62283127985919
+    },
+    {
+      "case": "large",
+      "storage": "owned",
+      "round": 2,
+      "throughput_change_percent": -3.283370065356883,
+      "rss_reduction_percent": 38.609100571949185
+    },
+    {
+      "case": "mixed",
+      "storage": "copy",
+      "round": 0,
+      "throughput_change_percent": -21.64363399111029,
+      "rss_reduction_percent": -4.473684210526319
+    },
+    {
+      "case": "mixed",
+      "storage": "copy",
+      "round": 1,
+      "throughput_change_percent": -8.187586412653847,
+      "rss_reduction_percent": 3.2535885167464085
+    },
+    {
+      "case": "mixed",
+      "storage": "copy",
+      "round": 2,
+      "throughput_change_percent": -13.087109267000486,
+      "rss_reduction_percent": -1.2597066436583315
+    },
+    {
+      "case": "mixed",
+      "storage": "owned",
+      "round": 0,
+      "throughput_change_percent": -7.66817251647296,
+      "rss_reduction_percent": 30.191503639085326
+    },
+    {
+      "case": "mixed",
+      "storage": "owned",
+      "round": 1,
+      "throughput_change_percent": -7.481345966709451,
+      "rss_reduction_percent": 28.585880097966143
+    },
+    {
+      "case": "mixed",
+      "storage": "owned",
+      "round": 2,
+      "throughput_change_percent": -10.781764223956692,
+      "rss_reduction_percent": 26.758286176232826
+    }
+  ],
+  "limitations": [
+    "Selected Release tests, not full-library or sanitizer coverage",
+    "Two optional skips and existing MNIST fixture early return",
+    "Uncontrolled concurrent host activity; no throughput verdict",
+    "In-process linear GPU inference only"
+  ]
+}
