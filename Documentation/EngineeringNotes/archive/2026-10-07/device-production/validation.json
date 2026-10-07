@@ -1,0 +1,238 @@
+{
+  "commit": "5fa86f9f7597681561a82b42787525061c1d35f5",
+  "parent": "98f9a9268aa2fa82beada688b00b7ddb74171e00",
+  "selected_release_tests_passed": 874,
+  "release_skipped": 2,
+  "controller_tests_passed": 32,
+  "production_workers": 48,
+  "production_requests": 299520,
+  "source_integrity_workers": 8,
+  "source_integrity_requests": 64,
+  "complete_source_checks": 32,
+  "smoke_workers": 8,
+  "smoke_requests": 32,
+  "output_and_parameter_equality": true,
+  "gpu_active_and_cache_zero_at_exit": true,
+  "reservations_drained": true,
+  "workers_remaining": 0,
+  "all_paired_throughput_changes_positive": true,
+  "paired_results": [
+    {
+      "baseline_rss_mib": 28.390625,
+      "candidate_rss_mib": 28.578125,
+      "case": "small",
+      "round": 0,
+      "service_median_change_percent": -54.402353016421756,
+      "storage": "copy",
+      "throughput_change_percent": 120.60039564081593
+    },
+    {
+      "baseline_rss_mib": 28.4375,
+      "candidate_rss_mib": 28.09375,
+      "case": "small",
+      "round": 0,
+      "service_median_change_percent": -20.414713689799026,
+      "storage": "owned",
+      "throughput_change_percent": 29.276919888146047
+    },
+    {
+      "baseline_rss_mib": 36.59375,
+      "candidate_rss_mib": 36.359375,
+      "case": "medium",
+      "round": 0,
+      "service_median_change_percent": -19.228536018278053,
+      "storage": "copy",
+      "throughput_change_percent": 28.071060617807973
+    },
+    {
+      "baseline_rss_mib": 31.28125,
+      "candidate_rss_mib": 32.125,
+      "case": "medium",
+      "round": 0,
+      "service_median_change_percent": -14.28949658172779,
+      "storage": "owned",
+      "throughput_change_percent": 0.990139682663993
+    },
+    {
+      "baseline_rss_mib": 289.984375,
+      "candidate_rss_mib": 278.609375,
+      "case": "large",
+      "round": 0,
+      "service_median_change_percent": -4.255515875115446,
+      "storage": "copy",
+      "throughput_change_percent": 6.150359021903418
+    },
+    {
+      "baseline_rss_mib": 209.703125,
+      "candidate_rss_mib": 187.703125,
+      "case": "large",
+      "round": 0,
+      "service_median_change_percent": -3.56432298934507,
+      "storage": "owned",
+      "throughput_change_percent": 3.181176208134273
+    },
+    {
+      "baseline_rss_mib": 320.671875,
+      "candidate_rss_mib": 258.828125,
+      "case": "mixed",
+      "round": 0,
+      "service_median_change_percent": -12.19591624992219,
+      "storage": "copy",
+      "throughput_change_percent": 7.262615905490333
+    },
+    {
+      "baseline_rss_mib": 214.09375,
+      "candidate_rss_mib": 211.875,
+      "case": "mixed",
+      "round": 0,
+      "service_median_change_percent": -16.07894844174176,
+      "storage": "owned",
+      "throughput_change_percent": 9.829776997691031
+    },
+    {
+      "baseline_rss_mib": 212.15625,
+      "candidate_rss_mib": 219.734375,
+      "case": "mixed",
+      "round": 1,
+      "service_median_change_percent": 6.242706713297785,
+      "storage": "owned",
+      "throughput_change_percent": 2.051797834340996
+    },
+    {
+      "baseline_rss_mib": 312.0625,
+      "candidate_rss_mib": 355.984375,
+      "case": "mixed",
+      "round": 1,
+      "service_median_change_percent": -11.90638220890693,
+      "storage": "copy",
+      "throughput_change_percent": 9.104041383842176
+    },
+    {
+      "baseline_rss_mib": 209.75,
+      "candidate_rss_mib": 184.359375,
+      "case": "large",
+      "round": 1,
+      "service_median_change_percent": -8.212548143432963,
+      "storage": "owned",
+      "throughput_change_percent": 9.170405626347966
+    },
+    {
+      "baseline_rss_mib": 292.90625,
+      "candidate_rss_mib": 324.859375,
+      "case": "large",
+      "round": 1,
+      "service_median_change_percent": -7.882450208716108,
+      "storage": "copy",
+      "throughput_change_percent": 6.871793704163931
+    },
+    {
+      "baseline_rss_mib": 31.1875,
+      "candidate_rss_mib": 31.59375,
+      "case": "medium",
+      "round": 1,
+      "service_median_change_percent": -22.24061810154525,
+      "storage": "owned",
+      "throughput_change_percent": 53.60095425622411
+    },
+    {
+      "baseline_rss_mib": 34.65625,
+      "candidate_rss_mib": 37.59375,
+      "case": "medium",
+      "round": 1,
+      "service_median_change_percent": -12.439165850308253,
+      "storage": "copy",
+      "throughput_change_percent": 38.8860297129602
+    },
+    {
+      "baseline_rss_mib": 28.1875,
+      "candidate_rss_mib": 28.03125,
+      "case": "small",
+      "round": 1,
+      "service_median_change_percent": -34.182009491908275,
+      "storage": "owned",
+      "throughput_change_percent": 69.77285433763562
+    },
+    {
+      "baseline_rss_mib": 28.40625,
+      "candidate_rss_mib": 27.6875,
+      "case": "small",
+      "round": 1,
+      "service_median_change_percent": -45.34784655581204,
+      "storage": "copy",
+      "throughput_change_percent": 118.99919523317179
+    },
+    {
+      "baseline_rss_mib": 28.265625,
+      "candidate_rss_mib": 28.671875,
+      "case": "small",
+      "round": 2,
+      "service_median_change_percent": -39.0002002002002,
+      "storage": "copy",
+      "throughput_change_percent": 110.6181373625061
+    },
+    {
+      "baseline_rss_mib": 28.203125,
+      "candidate_rss_mib": 27.96875,
+      "case": "small",
+      "round": 2,
+      "service_median_change_percent": -39.46458014172721,
+      "storage": "owned",
+      "throughput_change_percent": 80.47541228460464
+    },
+    {
+      "baseline_rss_mib": 37.71875,
+      "candidate_rss_mib": 36.984375,
+      "case": "medium",
+      "round": 2,
+      "service_median_change_percent": -12.390954672865318,
+      "storage": "copy",
+      "throughput_change_percent": 46.311211116536356
+    },
+    {
+      "baseline_rss_mib": 31.984375,
+      "candidate_rss_mib": 31.015625,
+      "case": "medium",
+      "round": 2,
+      "service_median_change_percent": -12.126396181384248,
+      "storage": "owned",
+      "throughput_change_percent": 52.62725157485559
+    },
+    {
+      "baseline_rss_mib": 298.0625,
+      "candidate_rss_mib": 288.859375,
+      "case": "large",
+      "round": 2,
+      "service_median_change_percent": -2.3936494112313245,
+      "storage": "copy",
+      "throughput_change_percent": 2.452568500189911
+    },
+    {
+      "baseline_rss_mib": 187.21875,
+      "candidate_rss_mib": 189.59375,
+      "case": "large",
+      "round": 2,
+      "service_median_change_percent": 0.17405782495716338,
+      "storage": "owned",
+      "throughput_change_percent": 1.5108942687768412
+    },
+    {
+      "baseline_rss_mib": 315.953125,
+      "candidate_rss_mib": 333.46875,
+      "case": "mixed",
+      "round": 2,
+      "service_median_change_percent": -16.823339130402903,
+      "storage": "copy",
+      "throughput_change_percent": 8.010943913392744
+    },
+    {
+      "baseline_rss_mib": 230.65625,
+      "candidate_rss_mib": 206.859375,
+      "case": "mixed",
+      "round": 2,
+      "service_median_change_percent": -8.370172781050266,
+      "storage": "owned",
+      "throughput_change_percent": 8.20722148923878
+    }
+  ],
+  "decision": "Keep the shared default-device owner on the integration trial branch. The production comparison supports the change across the measured sizes. No buffer pool, packing policy or CPU/GPU threshold change is justified by this work."
+}

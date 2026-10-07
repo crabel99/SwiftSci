@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Shared Metal device production qualification](benchmarks/2026-10-07-device-production.md) records the allocation-path change, 874 Release passes and paired public-pipeline results across four sizes.
+
 - [Retained Metal device experiment](benchmarks/2026-10-07-device-reuse.md) isolates repeated device lookup, compares a retained handle with fresh per-request buffers, and defines the next production qualification.
 
 - [GPU prediction phases](benchmarks/2026-10-07-prediction-phases.md) separates small-input packing from device setup, completion and actor waiting, and records the benchmark hash-formatting correction.
