@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Small-request latency diagnosis](benchmarks/2026-10-07-small-imputed-latency.md) separates preprocessing and validation overhead from the awaited prediction call, records variable ownership timing, and leaves production dispatch unchanged.
+
 - [Missing observations through GPU regression](benchmarks/2026-10-07-imputed-regression-integration.md) records training-only preprocessing, source integrity, repeated cleanup, sustained memory savings and the observed small-request throughput tradeoff.
 
 - [Prepared imputer integration](benchmarks/2026-10-07-prepared-imputer-integration.md) records native column reuse, the regression finite-input boundary, 872 selected Release test passes and the CPU comparison.

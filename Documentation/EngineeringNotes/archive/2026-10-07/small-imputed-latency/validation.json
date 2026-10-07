@@ -1,0 +1,530 @@
+{
+  "commit": "4230c29fc00cf7b89bde9d8f1ba000415aa8dd7f",
+  "parent": "f0261a2212d08b74f0444d9f76e510e93cb606d8",
+  "production_changes": false,
+  "focused_release_tests_passed": 2,
+  "controller_tests_passed": 20,
+  "smoke_workers": 6,
+  "diagnostic_workers": 12,
+  "diagnostic_requests": 294912,
+  "recheck_workers": 6,
+  "recheck_requests": 98304,
+  "recheck_throughput_changes_percent": [
+    63.958427030631015,
+    -0.9562565453387073,
+    -2.6957141588761835
+  ],
+  "maximum_absolute_error": 3.5762786865234375e-07,
+  "complete_outputs_match": true,
+  "request_reservations_drained": true,
+  "gpu_owners_returned_to_baseline": true,
+  "final_gpu_active_and_cache_zero": true,
+  "workers_remaining": 0,
+  "paired_results": [
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 0,
+      "pair": 0,
+      "throughput_change_percent": 5.389163077810055
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 0,
+      "pair": 1,
+      "throughput_change_percent": 0.5706683202446383
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 0,
+      "pair": 2,
+      "throughput_change_percent": 0.028716105081083576
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 0,
+      "pair": 3,
+      "throughput_change_percent": -0.3133084117606155
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 0,
+      "pair": 4,
+      "throughput_change_percent": -2.1748348399685757
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 0,
+      "pair": 5,
+      "throughput_change_percent": 1.188860346162457
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 1,
+      "pair": 0,
+      "throughput_change_percent": -1.9762695664127694
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 1,
+      "pair": 1,
+      "throughput_change_percent": 1.4108337955259787
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 1,
+      "pair": 2,
+      "throughput_change_percent": -0.817466192605576
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 1,
+      "pair": 3,
+      "throughput_change_percent": 1.393145637014248
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 1,
+      "pair": 4,
+      "throughput_change_percent": 7.051580597360929
+    },
+    {
+      "route": "preprocessing",
+      "slots": 1,
+      "round": 1,
+      "pair": 5,
+      "throughput_change_percent": -0.06550939800511468
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 0,
+      "pair": 0,
+      "throughput_change_percent": -3.7563350228180137
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 0,
+      "pair": 1,
+      "throughput_change_percent": 2.3561418266701883
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 0,
+      "pair": 2,
+      "throughput_change_percent": 1.010747439857429
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 0,
+      "pair": 3,
+      "throughput_change_percent": -1.419751828824345
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 0,
+      "pair": 4,
+      "throughput_change_percent": -1.8913917659649226
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 0,
+      "pair": 5,
+      "throughput_change_percent": 4.089066377480988
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 1,
+      "pair": 0,
+      "throughput_change_percent": 13.803820141521484
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 1,
+      "pair": 1,
+      "throughput_change_percent": 2.6056416025808993
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 1,
+      "pair": 2,
+      "throughput_change_percent": -1.966179103680199
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 1,
+      "pair": 3,
+      "throughput_change_percent": 0.5295945113906075
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 1,
+      "pair": 4,
+      "throughput_change_percent": 2.9191960348446733
+    },
+    {
+      "route": "preprocessing",
+      "slots": 2,
+      "round": 1,
+      "pair": 5,
+      "throughput_change_percent": -3.7807117158111803
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 0,
+      "pair": 0,
+      "throughput_change_percent": 3.4313516679369327
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 0,
+      "pair": 1,
+      "throughput_change_percent": -35.03795012461106
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 0,
+      "pair": 2,
+      "throughput_change_percent": -25.0517441623034
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 0,
+      "pair": 3,
+      "throughput_change_percent": 2.5231370468423497
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 0,
+      "pair": 4,
+      "throughput_change_percent": 2.7832913569266315
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 0,
+      "pair": 5,
+      "throughput_change_percent": -24.13830398841357
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 1,
+      "pair": 0,
+      "throughput_change_percent": -15.275832632568765
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 1,
+      "pair": 1,
+      "throughput_change_percent": 21.400894662730853
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 1,
+      "pair": 2,
+      "throughput_change_percent": -15.405217909682268
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 1,
+      "pair": 3,
+      "throughput_change_percent": -5.029423200167383
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 1,
+      "pair": 4,
+      "throughput_change_percent": 23.007132367727646
+    },
+    {
+      "route": "direct",
+      "slots": 1,
+      "round": 1,
+      "pair": 5,
+      "throughput_change_percent": 11.858045709424857
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 0,
+      "pair": 0,
+      "throughput_change_percent": 17.446259609550086
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 0,
+      "pair": 1,
+      "throughput_change_percent": 27.536024613842457
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 0,
+      "pair": 2,
+      "throughput_change_percent": 15.158555851489286
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 0,
+      "pair": 3,
+      "throughput_change_percent": -10.582635716701983
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 0,
+      "pair": 4,
+      "throughput_change_percent": -27.554734393871627
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 0,
+      "pair": 5,
+      "throughput_change_percent": -4.999394270199476
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 1,
+      "pair": 0,
+      "throughput_change_percent": 5.433278466439351
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 1,
+      "pair": 1,
+      "throughput_change_percent": 1.5967104817560918
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 1,
+      "pair": 2,
+      "throughput_change_percent": 6.792714348539763
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 1,
+      "pair": 3,
+      "throughput_change_percent": 0.5647091513462987
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 1,
+      "pair": 4,
+      "throughput_change_percent": 1.103551014000148
+    },
+    {
+      "route": "direct",
+      "slots": 2,
+      "round": 1,
+      "pair": 5,
+      "throughput_change_percent": 4.215967107851615
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 0,
+      "pair": 0,
+      "throughput_change_percent": 2.461437349838236
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 0,
+      "pair": 1,
+      "throughput_change_percent": 14.897531512502372
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 0,
+      "pair": 2,
+      "throughput_change_percent": -24.086931885210284
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 0,
+      "pair": 3,
+      "throughput_change_percent": -6.599121988657497
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 0,
+      "pair": 4,
+      "throughput_change_percent": 13.747900471752516
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 0,
+      "pair": 5,
+      "throughput_change_percent": 32.458359253430366
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 1,
+      "pair": 0,
+      "throughput_change_percent": 2.7431059000519564
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 1,
+      "pair": 1,
+      "throughput_change_percent": -32.634802775370716
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 1,
+      "pair": 2,
+      "throughput_change_percent": 1.0797489953353612
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 1,
+      "pair": 3,
+      "throughput_change_percent": 0.10291452207387142
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 1,
+      "pair": 4,
+      "throughput_change_percent": -9.35474499308009
+    },
+    {
+      "route": "pipeline",
+      "slots": 1,
+      "round": 1,
+      "pair": 5,
+      "throughput_change_percent": -6.638879654381835
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 0,
+      "pair": 0,
+      "throughput_change_percent": 14.931681774331086
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 0,
+      "pair": 1,
+      "throughput_change_percent": 16.404522798554023
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 0,
+      "pair": 2,
+      "throughput_change_percent": 36.32122784778362
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 0,
+      "pair": 3,
+      "throughput_change_percent": -3.2706447692512852
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 0,
+      "pair": 4,
+      "throughput_change_percent": -0.4935764615798699
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 0,
+      "pair": 5,
+      "throughput_change_percent": -0.44396459242358466
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 1,
+      "pair": 0,
+      "throughput_change_percent": 5.484733715992496
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 1,
+      "pair": 1,
+      "throughput_change_percent": -2.941826920658952
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 1,
+      "pair": 2,
+      "throughput_change_percent": 4.009344293823869
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 1,
+      "pair": 3,
+      "throughput_change_percent": -39.53702311455951
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 1,
+      "pair": 4,
+      "throughput_change_percent": -2.6716848031392293
+    },
+    {
+      "route": "pipeline",
+      "slots": 2,
+      "round": 1,
+      "pair": 5,
+      "throughput_change_percent": 6.86901691703552
+    }
+  ],
+  "decision": "Keep explicit consuming ownership. Do not add a preprocessing threshold or infer a stable ownership regression. Investigate the awaited prediction boundary and benchmark validation overhead before tuning production dispatch."
+}
