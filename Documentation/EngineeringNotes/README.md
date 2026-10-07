@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Consuming prepared pipelines under continuous requests](benchmarks/2026-10-07-consuming-pipeline-integration.md) records native ownership transfer, legacy compatibility fixes and sustained public-API measurements.
+
 - [Consuming prepared-batch scaler integration](benchmarks/2026-10-07-consuming-scaler-integration.md) moves the ownership experiment into the public scaler API and verifies compatibility and retained memory.
 
 - [Consuming scaler storage after allocation-site profiling](benchmarks/2026-10-07-gpu-owned-scaler.md) identifies duplicate column allocations and compares input reuse with a matched copy control.
