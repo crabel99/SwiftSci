@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Request admission and scoped import policy](benchmarks/2026-10-07-gpu-budget-workflow.md) records throughput and concurrency under fixed reservation limits, plus the unresolved process-residency boundary.
+
 - [Scoped page-padded import trial](benchmarks/2026-10-07-scoped-padding-trial.md) records the avoided-copy memory benefit, timing uncertainty, ownership checks and unchanged default.
 
 - [Prepared GPU packing default qualification](benchmarks/2026-10-07-gpu-packing-default.md) records tile selection, actual API comparisons, broader integration checks and small-input uncertainty.
