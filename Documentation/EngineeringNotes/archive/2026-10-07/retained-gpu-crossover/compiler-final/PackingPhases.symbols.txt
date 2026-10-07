@@ -1,0 +1,295 @@
+                 U Foundation.__DataStorage._bytes.getter : Swift.UnsafeMutableRawPointer?
+                 U Foundation.__DataStorage._length.getter : Swift.Int
+                 U Foundation.__DataStorage._offset.getter : Swift.Int
+                 U Foundation._convertNSErrorToError(__C.NSError?) -> Swift.Error
+                 U static Foundation.Data._unconditionallyBridgeFromObjectiveC(__C.NSData?) -> Foundation.Data
+                 U type metadata for Foundation.Data
+                 U SwiftDataFrame.PreparedNumericBatch.columnCount.getter : Swift.Int
+                 U SwiftDataFrame.PreparedNumericBatch.requireFinite() throws -> ()
+                 U SwiftPreprocessing.MemoryBudget.init(limit: Swift.Int) throws -> SwiftPreprocessing.MemoryBudget
+                 U type metadata accessor for SwiftPreprocessing.MemoryBudget
+                 U static SwiftPreprocessing.ScopedGPURead.withBuffer<A>(_: __C.MTLBuffer, range: Swift.Range<Swift.Int>, shape: [Swift.Int], _: (MLX.MLXArray, Swift.Bool) throws -> A) throws -> A
+                 U SwiftPreprocessing.RetainedPreparedGPUInputTrial.close() async -> ()
+                 U async function pointer to SwiftPreprocessing.RetainedPreparedGPUInputTrial.close() async -> ()
+                 U SwiftPreprocessing.RetainedPreparedGPUInputTrial.withRead<A where A: Swift.Sendable>(@Sendable (MLX.MLXArray, MLX.Stream) throws -> A) async throws -> A
+                 U async function pointer to SwiftPreprocessing.RetainedPreparedGPUInputTrial.withRead<A where A: Swift.Sendable>(@Sendable (MLX.MLXArray, MLX.Stream) throws -> A) async throws -> A
+                 U function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedGPUBenchmark.memory() -> [Swift.String : Swift.Int]
+                 U function signature specialization <Arg[2] = Dead> of static SwiftSciRetainedGPUTrial.RetainedRegressionWorkflow.fixture(rows: Swift.Int, seed: Swift.UInt64) throws -> SwiftDataFrame.PreparedNumericBatch
+                 U async function pointer to function signature specialization <Arg[3] = Dead> of static SwiftSciRetainedGPUTrial.RetainedRegressionWorkflow.prepare(_: SwiftDataFrame.PreparedNumericBatch, budget: SwiftPreprocessing.MemoryBudget, direct: Swift.Bool) async throws -> SwiftPreprocessing.RetainedPreparedGPUInputTrial
+                 U MLX.eval(MLX.MLXArray...) -> ()
+                 U static MLX.Memory.clearCache() -> ()
+                 U MLX.Stream.synchronize() -> ()
+                 U static MLX.Stream.gpu.getter : MLX.Stream
+                 U type metadata accessor for MLX.Stream
+                 U MLX.MLXArray.asArray<A where A: MLX.HasDType>(A.Type) -> [A]
+                 U type metadata accessor for MLX.MLXArray
+                 U MLX.MLXArray.__allocating_init<A, B where A: MLX.HasDType, B: Swift.Collection, B.Element == Swift.Int>([A], B?) -> MLX.MLXArray
+                 U (extension in Foundation):Swift.Dictionary._bridgeToObjectiveC() -> __C.NSDictionary
+                 U function signature specialization <Arg[0] = Owned To Guaranteed> of generic specialization <Swift.String, Swift.Double> of Swift.Dictionary.init(dictionaryLiteral: (A, B)...) -> [A : B]
+                 U function signature specialization <Arg[0] = Owned To Guaranteed> of generic specialization <Swift.String, Any> of Swift.Dictionary.init(dictionaryLiteral: (A, B)...) -> [A : B]
+                 U static Swift.String._fromUTF8Repairing(Swift.UnsafeBufferPointer<Swift.UInt8>) -> (result: Swift.String, repairsMade: Swift.Bool)
+                 U static Swift.String._uncheckedFromUTF8(Swift.UnsafeBufferPointer<Swift.UInt8>) -> Swift.String
+                 U generic specialization <Foundation.Data> of static Swift.String._fromNonContiguousUnsafeBitcastUTF8Repairing<A where A: Swift.Collection>(A) -> (result: Swift.String, repairsMade: Swift.Bool)
+                 U Swift.String.hash(into: inout Swift.Hasher) -> ()
+                 U Swift.String.UTF8View._foreignIndex(after: Swift.String.Index) -> Swift.String.Index
+                 U Swift.String.UTF8View._foreignIndex(_: Swift.String.Index, offsetBy: Swift.Int) -> Swift.String.Index
+                 U Swift.String.UTF8View._foreignSubscript(position: Swift.String.Index) -> Swift.UInt8
+                 U closure #2 (Swift.UnsafeRawBufferPointer) -> Swift.String in Swift.String.init<A, B where A: Swift.Collection, B: Swift._UnicodeEncoding, A.Element == B.CodeUnit>(decoding: A, as: B.Type) -> Swift.String
+                 U Swift.String.UTF16View.index(_: Swift.String.Index, offsetBy: Swift.Int) -> Swift.String.Index
+                 U type metadata for Swift.String
+                 U protocol witness table for Swift.String : Swift.Hashable in Swift
+                 U protocol witness table for Swift.String : Swift.Sequence in Swift
+                 U protocol witness table for Swift.String : Swift.LosslessStringConvertible in Swift
+                 U Swift.String.init<A where A: Swift.LosslessStringConvertible, A: Swift.Sequence, A.Swift.Sequence.Element == Swift.Character>(A) -> Swift.String
+                 U Swift.String.subscript.getter : (Swift.Range<Swift.String.Index>) -> Swift.Substring
+                 U generic specialization <[Swift.String]> of (extension in Swift):Swift.Sequence< where A.Element: Swift.Equatable>.contains(A.Element) -> Swift.Bool
+                 U protocol conformance descriptor for [A] : Swift.Collection in Swift
+                 U type metadata for Swift.Bool
+                 U dispatch thunk of Swift.Actor.unownedExecutor.getter : Swift.UnownedSerialExecutor
+                 U static Swift.MainActor.shared.getter : Swift.MainActor
+                 U type metadata accessor for Swift.MainActor
+                 U protocol conformance descriptor for Swift.MainActor : Swift.Actor in Swift
+                 U static (extension in Swift):Swift.Task< where A == Swift.Never, B == Swift.Never>.yield() async -> ()
+                 U async function pointer to static (extension in Swift):Swift.Task< where A == Swift.Never, B == Swift.Never>.yield() async -> ()
+                 U protocol witness table for Swift.Float : MLX.HasDType in MLX
+                 U type metadata for Swift.Float
+                 U type metadata for Swift.Int
+                 U Swift.Substring.UTF8View.distance(from: Swift.String.Index, to: Swift.String.Index) -> Swift.Int
+                 U static Swift.CommandLine.arguments.getter : [Swift.String]
+                 U Swift._StringObject.sharedUTF8.getter : Swift.UnsafeBufferPointer<Swift.UInt8>
+                 U static Swift.ContinuousClock.now.getter : Swift.ContinuousClock.Instant
+                 U static Swift.ContinuousClock.Instant.< infix(Swift.ContinuousClock.Instant, Swift.ContinuousClock.Instant) -> Swift.Bool
+                 U static Swift.ContinuousClock.Instant.now.getter : Swift.ContinuousClock.Instant
+                 U Swift.ContinuousClock.Instant.advanced(by: Swift.Duration) -> Swift.ContinuousClock.Instant
+                 U Swift.ContinuousClock.Instant.duration(to: Swift.ContinuousClock.Instant) -> Swift.Duration
+                 U type metadata accessor for Swift.ContinuousClock.Instant
+                 U static Swift._DictionaryStorage.copy(original: Swift.__RawDictionaryStorage) -> Swift._DictionaryStorage<A, B>
+                 U static Swift._DictionaryStorage.resize(original: Swift.__RawDictionaryStorage, capacity: Swift.Int, move: Swift.Bool) -> Swift._DictionaryStorage<A, B>
+                 U nominal type descriptor for Swift._DictionaryStorage
+                 U protocol descriptor for Swift._HasContiguousBytes
+                 U dispatch thunk of Swift._HasContiguousBytes.withUnsafeBytes<A>((Swift.UnsafeRawBufferPointer) throws -> A1) throws -> A1
+                 U dispatch thunk of Swift._HasContiguousBytes._providesContiguousBytesNoCopy.getter : Swift.Bool
+                 U nominal type descriptor for Swift._ContiguousArrayStorage
+                 U Swift._stringCompareWithSmolCheck(_: Swift._StringGuts, _: Swift._StringGuts, expecting: Swift._StringComparisonResult) -> Swift.Bool
+                 U Swift.KEY_TYPE_OF_DICTIONARY_VIOLATES_HASHABLE_REQUIREMENTS(Any.Type) -> Swift.Never
+                 U nominal type descriptor for Swift.UInt8
+                 U Swift.print(_: Any..., separator: Swift.String, terminator: Swift.String) -> ()
+                 U Swift.Hasher.init(_seed: Swift.Int) -> Swift.Hasher
+                 U Swift.Hasher._finalize() -> Swift.Int
+                 U Swift.Duration.components.getter : (seconds: Swift.Int64, attoseconds: Swift.Int64)
+                 U type metadata for Any
+                 U type metadata for ()
+                 U value witness table for ()
+                 U _MTLCreateSystemDefaultDevice
+                 U _OBJC_CLASS_$_NSJSONSerialization
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U __objc_autoreleasePoolPop
+                 U __objc_autoreleasePoolPush
+                 U __swiftEmptyArrayStorage
+                 U __swift_FORCE_LOAD_$_swiftAccelerate
+                 U __swift_FORCE_LOAD_$_swiftCompression
+                 U __swift_FORCE_LOAD_$_swiftCoreFoundation
+                 U __swift_FORCE_LOAD_$_swiftDispatch
+                 U __swift_FORCE_LOAD_$_swiftFoundation
+                 U __swift_FORCE_LOAD_$_swiftIOKit
+                 U __swift_FORCE_LOAD_$_swiftMetal
+                 U __swift_FORCE_LOAD_$_swiftOSLog
+                 U __swift_FORCE_LOAD_$_swiftObjectiveC
+                 U __swift_FORCE_LOAD_$_swiftXPC
+                 U __swift_FORCE_LOAD_$_swift_Builtin_float
+                 U __swift_FORCE_LOAD_$_swiftos
+                 U __swift_FORCE_LOAD_$_swiftsimd
+                 U _bzero
+                 U _getpagesize
+                 U _malloc_size
+                 U _memmove
+                 U _mlx_array_data_float32
+                 U _objc_autorelease
+                 U _objc_msgSend$contents
+                 U _objc_msgSend$dataWithJSONObject:options:error:
+                 U _objc_msgSend$newBufferWithLength:options:
+                 U _objc_opt_self
+                 U _objc_release
+                 U _objc_retain
+                 U _objc_retainAutoreleasedReturnValue
+                 U _swift_allocObject
+                 U _swift_arrayDestroy
+                 U _swift_beginAccess
+                 U _swift_bridgeObjectRelease
+                 U _swift_bridgeObjectRetain
+                 U _swift_dynamicCast
+                 U _swift_getTypeByMangledNameInContext2
+                 U _swift_getTypeByMangledNameInContextInMetadataState2
+                 U _swift_getWitnessTable
+                 U _swift_initStackObject
+                 U _swift_initStaticObject
+                 U _swift_isUniquelyReferenced_nonNull_native
+                 U _swift_release
+                 U _swift_retain
+                 U _swift_setDeallocating
+                 U _swift_task_alloc
+                 U _swift_task_dealloc
+                 U _swift_task_isCurrentExecutor
+                 U _swift_task_reportUnexpectedExecutor
+                 U _swift_task_switch
+                 U _swift_unknownObjectRelease
+                 U _swift_unknownObjectRetain
+                 U _swift_willThrow
+0000000000000000 T static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000000000 t ltmp0
+0000000000000058 t (1) await resume partial function for static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000000094 T static SwiftSciRetainedGPUTrial.RetainedPackingPhases.direct(SwiftDataFrame.PreparedNumericBatch, Swift.UnsafeMutablePointer<Swift.Float>) -> ()
+0000000000000098 T static SwiftSciRetainedGPUTrial.RetainedPackingPhases.hoisted(SwiftDataFrame.PreparedNumericBatch, Swift.UnsafeMutablePointer<Swift.Float>) -> ()
+000000000000009c T static SwiftSciRetainedGPUTrial.RetainedPackingPhases.callback(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, pointer: Swift.UnsafeMutablePointer<Swift.Float>) -> ()
+000000000000015c T closure #1 () -> () in static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+00000000000002cc T closure #2 () -> () in static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+00000000000003c4 T closure #2 (MLX.MLXArray, Swift.Bool) -> () in closure #3 () throws -> () in static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+00000000000004b0 T closure #4 @Sendable (MLX.MLXArray, MLX.Stream) -> [Swift.Float] in static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+00000000000004fc T generic specialization <Swift.String> of Swift.__RawDictionaryStorage.find<A where A: Swift.Hashable>(A) -> (bucket: Swift._HashTable.Bucket, found: Swift.Bool)
+0000000000000560 T generic specialization <Swift.String, Swift.Double> of Swift._NativeDictionary._insert(at: Swift._HashTable.Bucket, key: __owned A, value: __owned B) -> ()
+00000000000005a8 T generic specialization <Swift.String> of Swift.__RawDictionaryStorage.find<A where A: Swift.Hashable>(_: A, hashValue: Swift.Int) -> (bucket: Swift._HashTable.Bucket, found: Swift.Bool)
+0000000000000654 T generic specialization <Swift.String, Swift.Int> of Swift._parseInteger<A, B where A: Swift.StringProtocol, B: Swift.FixedWidthInteger>(ascii: A, radix: Swift.Int) -> B?
+0000000000000738 T generic specialization <Swift.String, Swift.Int> of closure #1 (Swift.UnsafeBufferPointer<Swift.UInt8>) -> B? in Swift._parseInteger<A, B where A: Swift.StringProtocol, B: Swift.FixedWidthInteger>(ascii: A, radix: Swift.Int) -> B?
+00000000000009b4 T static Swift.String._copying(Swift.String) -> Swift.String
+0000000000000a04 T generic specialization <serialized, Swift.String, Swift.PartialRangeFrom<Swift.String.Index>> of (extension in Swift):Swift.Collection.subscript.getter : <A where A1: Swift.RangeExpression, A.Index == A1.Bound>(A1) -> A.SubSequence
+0000000000000a50 T static Swift.String._copying(Swift.Substring) -> Swift.String
+0000000000000b94 T generic specialization <serialized, Swift.UInt8> of Swift._ContiguousArrayBuffer.init(_uninitializedCount: Swift.Int, minimumCapacity: Swift.Int) -> Swift._ContiguousArrayBuffer<A>
+0000000000000c04 T generic specialization <serialized, Swift.Substring.UTF8View> of (extension in Swift):Swift.Sequence._copySequenceContents(initializing: Swift.UnsafeMutableBufferPointer<A.Element>) -> (A.Iterator, Swift.Int)
+0000000000000dfc T Swift._StringGuts._slowEnsureMatchingEncoding(Swift.String.Index) -> Swift.String.Index
+0000000000000e74 T generic specialization <Swift.String, Swift.Double> of Swift._NativeDictionary.setValue(_: __owned B, forKey: A, isUnique: Swift.Bool) -> ()
+0000000000000fb4 T generic specialization <Swift.String, Swift.Double> of Swift._NativeDictionary.copy() -> ()
+0000000000001118 T generic specialization <Swift.String, Swift.Double> of Swift._NativeDictionary._copyOrMoveAndResize(capacity: Swift.Int, moveElements: Swift.Bool) -> ()
+00000000000013b0 T function signature specialization <Arg[2] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.direct(SwiftDataFrame.PreparedNumericBatch, Swift.UnsafeMutablePointer<Swift.Float>) -> ()
+00000000000014c4 T function signature specialization <Arg[2] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.hoisted(SwiftDataFrame.PreparedNumericBatch, Swift.UnsafeMutablePointer<Swift.Float>) -> ()
+0000000000001590 T function signature specialization <Arg[3] = Dead, Arg[4] = Exploded> of function signature specialization <Arg[2] = [Closure Propagated : $s24SwiftSciRetainedGPUTrial0C13PackingPhasesO3runyyYaKFZyyKXEfU1_SdSi_SitXEfU_, Argument Types : [SwiftDataFrame.PreparedNumericBatch]> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.callback(rows: Swift.Int, columns: Swift.Int, value: (Swift.Int, Swift.Int) -> Swift.Double, pointer: Swift.UnsafeMutablePointer<Swift.Float>) -> ()
+0000000000001630 T function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000001730 t (1) suspend resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002614 t (2) await resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002700 t (3) suspend resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002874 t (4) await resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002958 t (5) suspend resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002a48 t (6) suspend resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002ba0 t (7) await resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002c14 t (8) suspend resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002cd0 t (9) suspend resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002d40 t (10) suspend resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002e44 t (11) await resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002eb8 t (12) suspend resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000002f28 t (13) suspend resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+00000000000036b0 t (14) suspend resume partial function for function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+00000000000037ac T type metadata accessor for SwiftSciRetainedGPUTrial.RetainedPackingPhases
+00000000000037bc T lazy protocol witness table accessor for type Swift.MainActor and conformance Swift.MainActor : Swift.Actor in Swift
+0000000000003800 T ___swift_instantiateConcreteTypeFromMangledNameV2
+0000000000003850 t partial apply forwarder for closure #2 (MLX.MLXArray, Swift.Bool) -> () in closure #3 () throws -> () in static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+000000000000386c T outlined copy of Foundation.Data._Representation
+00000000000038ac T outlined consume of Foundation.Data._Representation
+00000000000038ec T outlined init with take of Swift._HasContiguousBytes
+0000000000003904 T ___swift_project_boxed_opaque_existential_1
+0000000000003928 T ___swift_destroy_boxed_opaque_existential_1
+0000000000003948 T lazy protocol witness table accessor for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+0000000000003998 T ___swift_instantiateConcreteTypeFromMangledNameAbstractV2
+00000000000039f0 s lCPI5_0
+00000000000039f0 s ltmp1
+0000000000003a00 s lCPI7_0
+0000000000003a10 s lCPI27_0
+0000000000003a20 s lCPI39_0
+0000000000003a30 s lCPI39_1
+0000000000003a40 S __swift_FORCE_LOAD_$_swiftos_$_SwiftSciRetainedGPUTrial
+0000000000003a40 s ltmp2
+0000000000003a48 S __swift_FORCE_LOAD_$_swiftObjectiveC_$_SwiftSciRetainedGPUTrial
+0000000000003a50 S __swift_FORCE_LOAD_$_swift_Builtin_float_$_SwiftSciRetainedGPUTrial
+0000000000003a58 S __swift_FORCE_LOAD_$_swiftXPC_$_SwiftSciRetainedGPUTrial
+0000000000003a60 S __swift_FORCE_LOAD_$_swiftDispatch_$_SwiftSciRetainedGPUTrial
+0000000000003a68 S __swift_FORCE_LOAD_$_swiftFoundation_$_SwiftSciRetainedGPUTrial
+0000000000003a70 S __swift_FORCE_LOAD_$_swiftCoreFoundation_$_SwiftSciRetainedGPUTrial
+0000000000003a78 S __swift_FORCE_LOAD_$_swiftIOKit_$_SwiftSciRetainedGPUTrial
+0000000000003a80 S __swift_FORCE_LOAD_$_swiftCompression_$_SwiftSciRetainedGPUTrial
+0000000000003a88 S __swift_FORCE_LOAD_$_swiftAccelerate_$_SwiftSciRetainedGPUTrial
+0000000000003a90 S __swift_FORCE_LOAD_$_swiftsimd_$_SwiftSciRetainedGPUTrial
+0000000000003a98 S __swift_FORCE_LOAD_$_swiftMetal_$_SwiftSciRetainedGPUTrial
+0000000000003aa0 S __swift_FORCE_LOAD_$_swiftOSLog_$_SwiftSciRetainedGPUTrial
+0000000000003aa8 S full type metadata for SwiftSciRetainedGPUTrial.RetainedPackingPhases
+0000000000003ab8 S type metadata for SwiftSciRetainedGPUTrial.RetainedPackingPhases
+0000000000003ad0 S async function pointer to static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000003ad0 s ltmp3
+0000000000003ad8 S async function pointer to function signature specialization <Arg[0] = Dead> of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000003ae0 s l_.str.24.SwiftSciRetainedGPUTrial
+0000000000003b00 s l_.str.21.RetainedPackingPhases
+0000000000003b18 S mangled name ref for type metadata for Swift._ContiguousArrayStorage<Swift.String>
+0000000000003b20 S mangled name ref for type metadata for Swift._ContiguousArrayStorage<Swift.Int>
+0000000000003b28 S mangled name ref for type metadata for [Swift.Float]
+0000000000003b30 S mangled name ref for type metadata for Swift._ContiguousArrayStorage<(Swift.String, Any)>
+0000000000003b38 S mangled name ref for type metadata for [Swift.String : Swift.Double]
+0000000000003b40 S mangled name ref for type metadata for [Swift.String : Swift.Int]
+0000000000003b48 S mangled name ref for type metadata for (Swift.String, Any)
+0000000000003b50 S mangled name ref for type metadata for Swift._ContiguousArrayStorage<Any>
+0000000000003b58 S mangled name ref for type metadata for Swift._HasContiguousBytes
+0000000000003b60 S mangled name ref for type metadata for Swift._ContiguousArrayStorage<Swift.AnyObject>
+0000000000003b68 S mangled name ref for type metadata for Swift._DictionaryStorage<Swift.String, Swift.Double>
+0000000000003b70 S mangled name ref for type metadata for Swift._ContiguousArrayStorage<Swift.Float>
+0000000000003b78 S mangled name ref for type metadata for [Swift.Int]
+0000000000003b80 S mangled name ref for type metadata for Swift._ContiguousArrayStorage<Swift.UInt8>
+0000000000003b88 S ___swift_reflection_version
+0000000000003b8c S module descriptor SwiftSciRetainedGPUTrial
+0000000000003b8c s ltmp4
+0000000000003b98 S nominal type descriptor for SwiftSciRetainedGPUTrial.RetainedPackingPhases
+0000000000003bb4 S _symbolic _____ 24SwiftSciRetainedGPUTrial0C13PackingPhasesO
+0000000000003bb4 s ltmp5
+0000000000003bba S _symbolic _____ySSG s23_ContiguousArrayStorageC
+0000000000003bc4 S _symbolic _____ySiG s23_ContiguousArrayStorageC
+0000000000003bce S _symbolic SaySfG
+0000000000003bd6 S _symbolic _____ySS_yptG s23_ContiguousArrayStorageC
+0000000000003be4 S _symbolic SDySSSdG
+0000000000003bee S _symbolic SDySSSiG
+0000000000003bf8 S _symbolic SS_ypt
+0000000000003c00 S _symbolic _____yypG s23_ContiguousArrayStorageC
+0000000000003c0a S _symbolic ______p s19_HasContiguousBytesP
+0000000000003c12 S _symbolic _____yyXlG s23_ContiguousArrayStorageC
+0000000000003c1e S _symbolic _____ySSSdG s18_DictionaryStorageC
+0000000000003c2a S _symbolic _____ySfG s23_ContiguousArrayStorageC
+0000000000003c34 S _symbolic SaySiG
+0000000000003c3c S _symbolic _____y_____G s23_ContiguousArrayStorageC s5UInt8V
+0000000000003c4c S reflection metadata field descriptor SwiftSciRetainedGPUTrial.RetainedPackingPhases
+0000000000003c4c s ltmp6
+0000000000003c60 D lazy protocol witness table cache variable for type Swift.MainActor and conformance Swift.MainActor : Swift.Actor in Swift
+0000000000003c60 d ltmp7
+0000000000003c68 D outlined variable #0 of static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000003cc0 D demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Swift.String>
+0000000000003cc8 D demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Swift.Int>
+0000000000003cd0 D demangling cache variable for type metadata for [Swift.Float]
+0000000000003cd8 D demangling cache variable for type metadata for Swift._ContiguousArrayStorage<(Swift.String, Any)>
+0000000000003ce0 D demangling cache variable for type metadata for [Swift.String : Swift.Double]
+0000000000003ce8 D demangling cache variable for type metadata for [Swift.String : Swift.Int]
+0000000000003cf0 D demangling cache variable for type metadata for (Swift.String, Any)
+0000000000003cf8 D demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Any>
+0000000000003d00 D demangling cache variable for type metadata for Swift._HasContiguousBytes
+0000000000003d08 D demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Swift.AnyObject>
+0000000000003d10 D demangling cache variable for type metadata for Swift._DictionaryStorage<Swift.String, Swift.Double>
+0000000000003d18 D outlined variable #0 of closure #1 () -> () in static SwiftSciRetainedGPUTrial.RetainedPackingPhases.run() async throws -> ()
+0000000000003d48 D demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Swift.Float>
+0000000000003d50 D demangling cache variable for type metadata for [Swift.Int]
+0000000000003d58 D lazy protocol witness table cache variable for type [Swift.Int] and conformance [A] : Swift.Collection in Swift
+0000000000003d60 D demangling cache variable for type metadata for Swift._ContiguousArrayStorage<Swift.UInt8>
+0000000000003d70 s l_.str.21.first_device_setup_ms
+0000000000003d70 s ltmp8
+0000000000003d90 s l_.str.44.SwiftSciRetainedGPUTrial/PackingPhases.swift
+0000000000003dc0 s l_.str.20.device_allocation_ms
+0000000000003de0 s l_.str.20.import_completion_ms
+0000000000003e00 s l_.str.24.retained_construction_ms
+0000000000003e20 s l_.str.17.after_cache_clear
+0000000000003e38 s l_OBJC_CLASS_REF_$_NSJSONSerialization
+0000000000003e38 s ltmp9
+0000000000003e40 s lnominal type descriptor runtime record for SwiftSciRetainedGPUTrial.RetainedPackingPhases
+0000000000003e40 s ltmp10
+0000000000003e44 s l_llvm.swift_module_hash
+0000000000003e44 s ltmp11
+0000000000003e54 s ___swift_async_entry_functlets
+0000000000003e54 s ltmp12
+0000000000003e5c s ___swift_async_ret_functlets
+0000000000003e5c s ltmp13
+0000000000003e70 s ___swift_async_cont_functlets
+0000000000003e70 s ltmp14
+0000000000003e98 s ltmp15
+0000000000013ee0 s ltmp16
+0000000000014560 s ltmp17
