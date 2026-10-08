@@ -201,3 +201,5 @@ Bring upstream changes into this branch when useful, preserving the dated record
 Explain the observed problem, the alternatives, the chosen tradeoff, the behavior that must remain correct, and the evidence supporting the choice. State limitations and the conditions that would justify revisiting it. Invite the maintainer to challenge assumptions.
 
 The PR should contain enough reasoning to review the change. Lasting design decisions belong in maintained documentation. Code comments should explain constraints that a future maintainer cannot readily infer from the code.
+
+- [CPU/GPU production closeout](benchmarks/2026-10-07-cpu-gpu-closeout.md) records the production/research boundary, complete validation and final public-workflow comparison.
