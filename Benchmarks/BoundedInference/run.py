@@ -26,7 +26,9 @@ def main():
     parser.add_argument('--models', type=Path, required=True)
     parser.add_argument('--raw', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--smoke', action='store_true')
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument('--smoke', action='store_true')
+    modes.add_argument('--sustained', action='store_true')
     args = parser.parse_args()
     build = read_json(Path(str(args.worker) + '.build.json'))
     verified_file(args.worker, build['binary_sha256'])
@@ -44,6 +46,10 @@ def main():
                        files=files, worker_sha256=sha(args.worker), raw_sha256=sha(args.raw),
                        environment=environment(), power_state=power_state(), build=build)
     (args.output / 'fingerprint.json').write_text(json.dumps(fingerprint, indent=2) + '\n')
+    if args.sustained:
+        from sustained import run
+        run(args)
+        return
     cases = [(rows, policy, delay) for rows in (1024, 8192) for policy in ('cpu', 'neural') for delay in (0, 5)]
     if args.smoke:
         cases = cases[:1]

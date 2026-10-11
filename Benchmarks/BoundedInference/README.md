@@ -33,3 +33,17 @@ The model directory contains `models-1024/program16.mlpackage` and `models-8192/
 Every output hash must match the serial reference under the same compute policy. Every result must preserve local row identity and source order. The worker rejects an exceeded batch window, an incomplete delivery, or a reservation that remains after shutdown. The unit tests separately cover blocked consumers, admission cancellation, competing runs, source errors, invalid shapes, nonfinite conversion, and consumer failure.
 
 CPU-and-Neural-Engine policy permits both devices. It does not establish Neural Engine placement or Double-precision equivalence. A larger window can trade retained memory and first-result latency for throughput. Use the measured application workload to choose the window; these results do not define an automatic hardware dispatch threshold.
+
+## Run sustained load and shutdown checks
+
+Add `--sustained` to the same command. Each window configuration runs in a fresh process. Fast-consumer cases process 1,024 batches per sample; delayed-consumer cases process 128. Each process computes the serial reference, warms its selected variant, and records three samples.
+
+The file contains at most one 8,192-row source cycle. The reader seeks within that cycle and verifies every later prediction against the corresponding first-cycle hash. Fixture storage, retained hashes, and memory checkpoints remain bounded as the number of processed batches increases. The repeated data tests sustained processing, not a larger independent dataset.
+
+Steady-state time starts after 32 completed batches and ends after the final consumer completes. It includes file decoding, preprocessing, prediction, output hashing, and consumer delay. The report separates model-ready time at the first source callback from steady-state throughput. Compiled-model and operating-system caches may already be warm.
+
+The memory report includes the second-half RSS range and end-to-start change for every configuration. Raw checkpoints accompany the report. Framework caches and allocator retention affect RSS, so a flat trace supports bounded-run behavior without proving leak freedom. No growth threshold substitutes for inspection of the trace.
+
+Separate real-model runs inject source failure, consumer failure, source cancellation, and consumer cancellation after 32 batches. Every case checks that the full reservation exists at the trigger, reaches zero before completion, and can be acquired again. Cancellation occurs at callback boundaries while the pipeline is active. The existing pool shutdown tests cover retaining ownership until admitted operations finish; these measurements do not prove device-command interruption.
+
+The sustained runner first checks the actual file adapter in isolation on Swift's cooperative executor. Foundation read temporaries must drain after each synchronous decode. Without that boundary, the regression retains hundreds of MiB across 128 reads even when numeric batches do not escape. The adapter uses `autoreleasepool` around reading and decoding; the returned Swift columns retain their own values. The 64 MiB growth cutoff applies to this fixed, model-free source regression. Core ML runs retain the separate 1 GiB process cutoff and report their memory traces without a leak-freedom claim.

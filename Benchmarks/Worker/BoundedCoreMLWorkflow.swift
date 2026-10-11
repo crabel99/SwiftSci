@@ -13,6 +13,7 @@ struct BoundedCoreMLRequest: Decodable {
     let policy: String
     let batches: Int
     let consumerDelayMilliseconds: Int
+    let variant: Int?
 }
 struct BoundedCoreMLSample: Encodable {
     let mode: String
@@ -21,6 +22,10 @@ struct BoundedCoreMLSample: Encodable {
     let iteration: Int
     let wallSeconds: Double
     let firstResultSeconds: Double
+    let modelReadySeconds: Double
+    let steadyStateSeconds: Double
+    let steadyStateBatches: Int
+    let checkpoints: [BoundedMemoryCheckpoint]
     let peakReservedBytes: Int
     let sampledResidentBytes: UInt64
     let maximumOutstanding: Int
@@ -85,13 +90,16 @@ private func boundedSample(_ q: BoundedCoreMLRequest, model: URL, file: URL,
           await source.maximumOutstanding <= window else { throw BenchmarkFailure("Bounded workflow did not drain") }
     let sample = await BoundedCoreMLSample(mode: reference ? "serial-reference" : "pipeline",
         window: window, slots: slots, iteration: iteration, wallSeconds: wall,
-        firstResultSeconds: source.firstResultSeconds, peakReservedBytes: budget.peak,
+        firstResultSeconds: source.firstResultSeconds, modelReadySeconds: source.firstLoadSeconds,
+        steadyStateSeconds: source.lastResultSeconds - source.steadyStartSeconds,
+        steadyStateBatches: q.batches - source.warmupBatches,
+        checkpoints: source.checkpoints, peakReservedBytes: budget.peak,
         sampledResidentBytes: source.sampledResidentBytes, maximumOutstanding: source.maximumOutstanding,
         thermalState: ProcessInfo.processInfo.thermalState.rawValue)
     return (sample, await source.hashes)
 }
 
-private func prepareBoundedFixture(_ q: BoundedCoreMLRequest, file: URL) throws
+func prepareBoundedFixture(_ q: BoundedCoreMLRequest, file: URL) throws
     -> (StandardPreprocessingPlan, String, String) {
         let rawData = try Data(contentsOf: URL(fileURLWithPath: q.rawFixture))
         let raw = try JSONDecoder().decode(FusionRawFixture.self, from: rawData)
@@ -111,7 +119,7 @@ func boundedCoreMLWorkflow(request: URL, output: URL) async -> Int32 {
     do {
         let q = try JSONDecoder().decode(BoundedCoreMLRequest.self, from: Data(contentsOf: request))
         guard [1024, 8192].contains(q.rows), ["cpu", "neural"].contains(q.policy),
-              q.batches > 0, q.batches <= 32, (0...100).contains(q.consumerDelayMilliseconds) else {
+              q.batches > 0, q.batches <= 4096, (q.variant == nil || (0..<5).contains(q.variant!)), (0...100).contains(q.consumerDelayMilliseconds) else {
             throw BenchmarkFailure("Invalid bounded workflow request")
         }
         let file = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
@@ -121,9 +129,15 @@ func boundedCoreMLWorkflow(request: URL, output: URL) async -> Int32 {
         let modelHash = try coreMLPackageHash(url)
         let compiled = try await MLModel.compileModel(at: url)
         defer { try? FileManager.default.removeItem(at: compiled) }
-        let variants = [(1, 1, true), (1, 1, false), (2, 1, false), (2, 2, false), (4, 2, false)]
+        let allVariants = [(1, 1, true), (1, 1, false), (2, 1, false), (2, 2, false), (4, 2, false)]
+        let variants = q.variant.map { [allVariants[$0]] } ?? allVariants
         var samples: [BoundedCoreMLSample] = []
         var reference: [String] = []
+        if q.variant != nil {
+            let (_, hashes) = try await boundedSample(q, model: compiled, file: file, plan: plan,
+                window: 1, slots: 1, reference: true, iteration: -2)
+            reference = hashes
+        }
         for iteration in -1..<3 {
             for offset in variants.indices {
                 let (window, slots, baseline) = variants[(offset + iteration + 1) % variants.count]
