@@ -1,0 +1,10 @@
+id	level	question	hypothesis	cost_to_test	constraint	status
+Q0	qualification	Match complete workflow ingestion and establish control evidence	Same responsibilities through final numerical output	Streaming and wine schemas remain unmatched	Required before workflow performance claims	planned
+S1	execution	Partition output gathering by row ranges as well as columns	More independent work for narrow large tables	Scheduling and destination ownership overhead	Existing storage and public interfaces unchanged	planned
+S2	algorithm	Parallel stable radix sorting	Reduce serial permutation time with bounded private histograms	Scratch, prefix work, bandwidth, and stable scatter rules	Compare independently with S3 from the same baseline	planned
+S3	algorithm	Stable chunk sorting and parallel merge	Comparison sorting may balance work better on some distributions	Pair storage, merge scratch, and copied bytes	Competing candidate; do not assume the Polars algorithm caused its advantage	planned
+C1	ingestion	Chunk-local typed CSV decoding with final contiguous output	Remove whole-file field descriptors	Builder multiplicity and final consolidation	Keep native column types and current public storage	planned
+C2	ingestion	Count safe row ranges then decode into disjoint final column buffers	Remove descriptors and final consolidation	Count pass, capacity planning, initialization, and bitmap-word ownership	Competing candidate with C1; preserve CSV grammar	planned
+C3	parsing	Quote-aware SIMD structural scanning	Retain vector scanning for quoted records	Boundary state, malformed input, and unescape work	Keep numeric conversion and CSV semantics fixed	planned
+I1	representation	UInt32 temporary permutations with a wide fallback	Reduce index traffic and scratch bytes	Bounds checks and conversion to public Int results	No smaller public row limit or reduced value precision	planned
+M1	architecture	Native typed values and validity for general columns	Extend compact storage benefits to ordinary dataframe operations	Public values compatibility, mutation, and consumer conversion	Separate storage design after execution experiments; retain exact Int64	planned

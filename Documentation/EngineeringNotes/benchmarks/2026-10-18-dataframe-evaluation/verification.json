@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "Protocol links, planned register, and existing operation-baseline eligibility; no new performance runs",
+  "checker_sha256": "d2e3277ebd6fae5bc551218079fd1cbe682e270826823aaf3689b38c70f682a4",
+  "baseline_run_sha256": "f5ffc3ab42eedfe6facda0e7bac64250000b58f961b02c074040c7fd2124d166",
+  "baseline_check": {
+    "status": "passed",
+    "scope": "matched public CSV and sort operations only",
+    "contract_hash": "120a11330e5683d09f72964d7dee32ac412aa5e091952f6b3428e9c52eb4276e",
+    "source_fingerprint": "886c4dbc723c4f7cf34e20c3a892694e4f02ca13008d17c5fe0368679d0c41f0",
+    "worker_executions": 80,
+    "csv_schema_receipts": 40,
+    "measured_samples": 400,
+    "complete_workflow_qualified": false,
+    "memory_tradeoff_qualified": false,
+    "energy_qualified": false,
+    "promotion_qualified": false
+  },
+  "historical_rejection": {
+    "status": "rejected",
+    "reason": "CSV v1 is unmatched; reject its performance ranking"
+  },
+  "repeat_output_identical": true,
+  "planned_experiments": 9
+}
