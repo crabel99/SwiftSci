@@ -10,6 +10,28 @@ Judge progress by supported engineering workflows, correct results, memory and e
 
 Numerical correctness and safe ownership are acceptance conditions. Evaluate speed, memory use and API convenience within those conditions. Prefer coherent, dependable capabilities that another engineer can understand and maintain.
 
+## Resource efficiency across the library
+
+Refined by crabel99 on October 18, 2026. This priority applies to the whole SwiftSci design: data structures, mutations, numerical algorithms, preprocessing, model operations, CPU execution, GPU execution and Neural Engine integration.
+
+Maximize useful, validated computation within the application's resource budget while meeting its declared accuracy, behavior and latency requirements. Favor lower total resource cost per correct result over the shortest isolated execution time. Correctness, safe ownership and maintainability remain acceptance conditions. A fast result that requires more aggregate processor time or memory is a tradeoff, not an automatic improvement.
+
+Treat latency requirements as constraints supplied by the workload. A longer operation can be the better default when it uses fewer resources and still meets those requirements. A latency-critical workload can justify extra resources, but that decision must be explicit. Do not invent a universal speed, CPU or memory weighting. Preserve distinct choices when workloads have different constraints.
+
+Evaluate accumulated CPU time, accelerator work, peak live storage, retained storage, allocation and data-movement costs, and energy where measurements support it. CPU time is useful for CPU-path comparisons; it is not a universal cost unit across performance cores, efficiency cores, GPUs and the Neural Engine. Low host CPU usage does not account for work offloaded to an accelerator. Include preparation, conversion, synchronization, output materialization and ownership lifetimes when judging a complete operation.
+
+This changes how we design, not only how we report benchmarks:
+
+- Choose representations and algorithms that reduce work, full-data passes, copied bytes and temporary materialization while preserving the numerical contract.
+- Carry compact native data into its consumers when possible. Include compatibility conversions and mutation costs in the design rather than hiding them behind an inexpensive-looking interface.
+- Reuse preparation and workspace when actual reuse justifies it. Bound retained storage and concurrent work, and make ownership and release conditions clear.
+- Use parallelism and hardware acceleration when they meet the workload's resource and latency constraints. Faster completion alone does not establish better resource efficiency.
+- Prefer existing well-tested implementations and simpler maintainable code when added complexity has no demonstrated workflow benefit.
+
+Validate the intended capacity benefit with sustained useful throughput under a fixed resource budget and bounded concurrency. Reduced CPU time or memory in one operation alone does not prove increased application throughput.
+
+The [parallel sorting experiment](benchmarks/2026-10-18-dataframe-evaluation/parallel-sort-results.md) exposed the distinction: lower elapsed time came with higher accumulated CPU time. Preserve its original acceptance rules and evidence. Subsequent default-selection decisions follow this clarified project objective. The [dataframe evaluation protocol](benchmarks/2026-10-18-dataframe-evaluation/README.md) applies it to the current experiments.
+
 ## Apple silicon precision priority
 
 Refined by crabel99 on September 28, 2026. Engineer core data structures, mutations and common scientific and AI algorithms together for Swift on Apple silicon. Treat numerical requirements, memory capacity, data movement, execution cost and safe ownership as design constraints.
@@ -38,7 +60,7 @@ Apply the rows relevant to the change. Scale the work to its scope.
 |---|---|
 | Numerical behavior | Define precision, missing values, ordering, convergence and failure behavior. Preserve row identity. Check results against analytical answers, trusted datasets, appropriate higher-precision calculations or independent implementations. Justify any lossy conversion or reduced precision against the workload's error requirements. |
 | Storage or mutation | Follow the affected data through loading, selection, preprocessing, computation and result access. Check ownership, lifetime and snapshot guarantees. Measure the allocations, retained memory and conversions relevant to the proposed benefit. |
-| CPU/GPU execution or performance | Account for dtype, layout, data residence, preparation, synchronization and materialization. Define the reference answer or quality target before comparing speed. Include a representative complete workflow for workflow-level claims; label isolated timings and exploratory runs with their narrower scope. |
+| CPU, GPU or Neural Engine execution | Define the reference answer or quality target, latency requirement and resource budget before comparison. Account for dtype, layout, data residence, preparation, device work, synchronization, materialization and total CPU time. Compare complete-workflow resource costs for workflow-level claims; label isolated timings and exploratory runs with their narrower scope. |
 | Test or certification infrastructure | Establish independent expected results and prove that relevant wrong outputs and malformed inputs are rejected. Include adverse numerical cases. Bound any certificate to the operations, configurations and qualification process actually checked. |
 | Public API or architecture | Check promised behavior as well as familiar naming. State unsupported paths and maintenance costs. Discuss proposed public changes with the maintainer, who retains ownership of the upstream roadmap and architecture. |
 | Documentation | Verify factual claims, references and status labels. Preserve historical evidence and distinguish it from current instructions. |

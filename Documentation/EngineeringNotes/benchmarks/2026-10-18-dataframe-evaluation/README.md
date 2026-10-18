@@ -2,9 +2,9 @@
 
 Status: evaluation protocol, recorded 2026-10-18. This record belongs to `codex/engineering-notes` and must not be merged into an implementation PR. It applies the [scientific computing charter](../../CHARTER.md) and the [decision record format](../../DECISION-RECORDS.md).
 
-The default objective is lower total resource cost per correct scientific or local-model result on Apple silicon. Treat response time as a workload constraint. A shorter elapsed time alone does not justify more accumulated CPU time or memory. Polars is a reference implementation and an alternative source of algorithms; beating one Polars timing is not the acceptance criterion.
+The [library-wide resource objective](../../CHARTER.md#resource-efficiency-across-the-library) owns the design priority for this work. This protocol defines the measurements and comparison procedure. Polars is a reference implementation and an alternative source of algorithms; beating one Polars timing is not the acceptance criterion.
 
-The user clarified this priority after the parallel sorting results on 2026-10-18. Preserve the original experiment plans and measurements. Their latency criteria remain historical facts, but passing them does not qualify a resource-efficient default.
+The user clarified the project objective after the parallel sorting results on 2026-10-18. Preserve the original experiment plans and measurements. Their latency criteria remain historical facts, but passing them does not qualify a resource-efficient default.
 
 Measure process CPU time per completed operation, peak owned live bytes, retained bytes, allocation and copy costs, and elapsed time separately. Measure throughput under a fixed resource budget and bounded concurrency when claiming that an optimization makes room for more useful computation. Native scheduling remains valid, but total CPU time must include all threads. On heterogeneous Apple silicon cores, CPU time is a resource-use proxy rather than an exact measure of instructions, FLOPs or energy.
 
