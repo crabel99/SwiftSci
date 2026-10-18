@@ -1,0 +1,1299 @@
+{
+  "date": "2026-10-18",
+  "scope": "Read-only source and existing-evidence audit; no new performance runs.",
+  "pull_requests": [
+    {
+      "number": 38,
+      "title": "fix(SwiftDataFrame): preserve descending order with missing values",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/38",
+      "merge": "f65e15de19d3d2de7da707cf8e765b8ec73862d4",
+      "first_parent": "03270a1adb938bc7fd89080cdd07dd31ce0afd96",
+      "assessment": {
+        "pr": 38,
+        "title": "fix(SwiftDataFrame): preserve descending order with missing values",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/38",
+        "merge_sha": "f65e15de19d3d2de7da707cf8e765b8ec73862d4",
+        "first_parent_sha": "03270a1adb938bc7fd89080cdd07dd31ce0afd96",
+        "reviewed_source_paths": [
+          "Sources/SwiftDataFrame/Columns/TypedColumn.swift"
+        ],
+        "reviewed_complete_introduced_source_diff": true,
+        "change": "Use one generic sorting comparator and select ascending/descending direction inside it to avoid the observed Swift 6.4 Release miscompilation.",
+        "default_or_opt_in": "Existing optional Comparable sorting path, including DataFrame sorting, changes automatically. No new mode, cache, pass or concurrency.",
+        "total_cpu_time_evidence": "None found. The PR and archived local-research README provide failing-before/passing-after correctness evidence, not runtime CPU measurements.",
+        "memory_evidence": "No new persistent buffers or input-sized intermediates in the introduced change; no allocation or live-memory measurement.",
+        "new_work_retention_parallelism": "Direction selection moves inside each non-null comparison. Any compiler-generated instruction cost is unmeasured.",
+        "reduced_work_copies": "Two closure implementations become one; no claimed data-copy reduction.",
+        "correctness_constraints": "The previous optimized descending result for [2,nil,1] was wrong. Preserve descending order, nulls last and row association. A wrong ascending result is not a cheaper valid baseline.",
+        "classification": [
+          "correctness_required_cost",
+          "missing_cpu_evidence"
+        ],
+        "disposition": "Retain correctness workaround. Nothing here establishes an efficiency regression.",
+        "next_useful_test": "Only if sorting is material to a measured workload, compare CPU time and comparisons on supported compilers while checking exact permutations with nulls and ties.",
+        "evidence": [
+          "https://github.com/Nodibell/SwiftSci/blob/f65e15de19d3d2de7da707cf8e765b8ec73862d4/Sources/SwiftDataFrame/Columns/TypedColumn.swift#L335",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/archive/2026-09-26/local-research/README.md"
+        ]
+      }
+    },
+    {
+      "number": 39,
+      "title": "Codex/dataframe pipeline optimization",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/39",
+      "merge": "bb4f8bfa2fbff287d99bfedd47b3ab8bb201b53e",
+      "first_parent": "f6320c1e9f852e49c44569119e362b00b4d550b9",
+      "assessment": {
+        "pr": 39,
+        "title": "Codex/dataframe pipeline optimization",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/39",
+        "merge_sha": "bb4f8bfa2fbff287d99bfedd47b3ab8bb201b53e",
+        "first_parent_sha": "f6320c1e9f852e49c44569119e362b00b4d550b9",
+        "reviewed_source_paths": [
+          "Sources/SwiftDataFrame/Columns/TypedColumn.swift",
+          "Sources/SwiftDataFrame/Core/DataFrame+FastFilter.swift",
+          "Sources/SwiftDataFrame/Core/DataFrame.swift",
+          "Sources/SwiftDataFrame/Core/GroupedDataFrame.swift",
+          "Sources/SwiftDataFrame/Errors/SwiftMLError.swift",
+          "Sources/SwiftDataFrame/IO/CSVColumnBuilder.swift",
+          "Sources/SwiftDataFrame/IO/CSVNullMatcher.swift",
+          "Sources/SwiftDataFrame/IO/CSVReader.swift",
+          "Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+          "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift",
+          "Sources/SwiftDataFrame/IO/VectorizedByteParsers.swift"
+        ],
+        "reviewed_complete_introduced_source_diff": true,
+        "change": "Typed numeric filtering/gathering, cached null metadata, stable cached/radix sorting, flat group IDs with typed keys and bounded integer lookup, compensated grouped sum/mean, checked integer sum API, flat packed CSV index and safer mapped-byte lifetime.",
+        "default_or_opt_in": "Existing filter(column:where:), filterFast, gathered, sort and grouped operations use the new implementations. Existing URL CSV reading and streaming call parseIndex. sumChecked is opt-in; GPU CSV is benchmark-only. Public optional-array columns remain.",
+        "total_cpu_time_evidence": "No operation-scoped user+system CPU series found in published before/after JSON or retained summaries. They record elapsed times and peak RSS. One-million-row separate stage medians include CSV 38.947 to 13.565 ms, filter 3.237 to 1.944 ms, adaptive sort 65.674 to 36.288 ms and two-key grouping 49.536 to 11.375 ms. These cannot establish total CPU reduction or be multiplied.",
+        "memory_evidence": "CSV later stage process-peak RSS median 310.1 to 186.4 MiB; earlier layout stage 584.4 to 308.5 MiB, separate experiments. PackedCSVField uses two Int words, flat rowStarts removes per-row arrays, output null counts avoid rescan. RSS includes fixtures/results/allocator state and is not live ownership. Final filtering RSS is effectively unchanged.",
+        "new_work_retention_parallelism": "CSV >=4 MiB attempts up to 8 workers, first counts unquoted fields then fills exact final ranges. Any quote abandons partial counting and triggers serial DFA parsing. Gather changes from >=4 columns and >=10000 rows to >=2 columns and estimated >=512 KiB output. Numeric Double sorting may inspect runs, abandon temporary tags, then construct keys plus index scratch and perform selected radix byte passes. Integer grouping does a range scan and up to 512 KiB lookup, or falls back to hashing. Composite grouping refines once per key column. Default compensated sums add per-group correction arrays and arithmetic.",
+        "reduced_work_copies": "Removes the old redundant dense Double value sort before sorting tagged indices, per-row string group construction, nested CSV record arrays, successful short numeric String decoding, repeated null scans and repeated columns reconstruction inside gather workers. Dense IDs replace per-group row arrays. These structural gains can offset additional passes.",
+        "correctness_constraints": "Exact integer comparisons and mixed thresholds, null/NaN identity, signed-zero group identity, stable ties, overflow-aware checked totals, decimal rounding, pointer lifetime and disjoint worker writes are required. Default grouped sum stays Double; sumChecked adds exact integer totals with final Int64 overflow errors.",
+        "classification": [
+          "structurally_reduced_work_storage_cpu_unmeasured",
+          "explicit_resource_tradeoff",
+          "correctness_required_cost",
+          "missing_cpu_evidence"
+        ],
+        "disposition": "Credible elapsed-time and CSV RSS improvements within measured fixtures. Do not call extra parallel scans a demonstrated resource regression. Audit current default CSV/gather CPU crossover before making an efficiency claim.",
+        "current_status": "Verified refs/audit/20261018/upstream-main e005efcc1dd55bb40f9e1ad63ac29e2d29de5178 still has the same parseIndex/count/fill implementation and gather 512 KiB/2-column heuristic. Current gather separately fixes empty-selection behavior; do not flag that historical behavior as current.",
+        "next_useful_test": "Paired fresh-process user+system CPU and latency measurements for serial versus parallel CSV around 4 MiB, late quotes/quoted fallback and wide/ragged data; gather around 512 KiB across widths and selection densities. Include exact outputs, allocation bytes and retained ownership, and keep decimal-rounding acceptance unchanged.",
+        "evidence": [
+          "https://github.com/Nodibell/SwiftSci/blob/bb4f8bfa2fbff287d99bfedd47b3ab8bb201b53e/Sources/SwiftDataFrame/IO/SystemsCSVParser.swift#L53",
+          "https://github.com/Nodibell/SwiftSci/blob/bb4f8bfa2fbff287d99bfedd47b3ab8bb201b53e/Sources/SwiftDataFrame/Core/DataFrame.swift#L647",
+          "https://github.com/Nodibell/SwiftSci/blob/bb4f8bfa2fbff287d99bfedd47b3ab8bb201b53e/Sources/SwiftDataFrame/Columns/TypedColumn.swift#L332",
+          "https://github.com/Nodibell/SwiftSci/blob/bb4f8bfa2fbff287d99bfedd47b3ab8bb201b53e/Sources/SwiftDataFrame/Core/GroupedDataFrame.swift#L355",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Benchmarks/Results/DataFrameOptimization/README.md",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Benchmarks/Results/DataFrameOptimization/csv-before-after/results.json",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Benchmarks/Results/DataFrameOptimization/filter-before-after/summary.json",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/discussions/2026-09-26.md"
+        ]
+      }
+    },
+    {
+      "number": 41,
+      "title": "Add reproducible numerical validation and public-workflow benchmarks",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/41",
+      "merge": "b6f827cddf89e16717d8f27e4401382233099e14",
+      "first_parent": "55be1d971c8f86e726ac446a3100fab9753dcec7",
+      "assessment": {
+        "number": 41,
+        "url": "https://github.com/Nodibell/SwiftSci/pull/41",
+        "classification": [
+          "validation infrastructure; byte-identical CLI rename"
+        ],
+        "change": "No library runtime algorithm change. Added benchmark targets and validation workloads; the two listed Source paths are a byte-identical main.swift-to-SwiftSciCLI.swift rename verified against Git objects.",
+        "resource_effect": "CI and benchmark execution consume resources intentionally; fixture line counts do not become runtime allocation.",
+        "cpu_evidence": "No before/after operation-scoped CPU measurement established in this review.",
+        "disposition": "Keep; account for suite execution separately from application efficiency.",
+        "merge": "b6f827cddf89e16717d8f27e4401382233099e14",
+        "first_parent": "55be1d971c8f86e726ac446a3100fab9753dcec7"
+      }
+    },
+    {
+      "number": 42,
+      "title": "Fix Parquet page layout and packed Boolean interoperability",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/42",
+      "merge": "55be1d971c8f86e726ac446a3100fab9753dcec7",
+      "first_parent": "2bdb883b8041f318cfcc9e1352180d7c46643c50",
+      "assessment": {
+        "pr": 42,
+        "title": "Fix Parquet page layout and packed Boolean interoperability",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/42",
+        "merge_sha": "55be1d971c8f86e726ac446a3100fab9753dcec7",
+        "first_parent_sha": "2bdb883b8041f318cfcc9e1352180d7c46643c50",
+        "reviewed_source_paths": [
+          "Sources/SwiftDataFrame/IO/ParquetReader.swift",
+          "Sources/SwiftDataFrame/IO/ParquetWriter.swift"
+        ],
+        "reviewed_complete_introduced_source_diff": true,
+        "change": "Write uncompressed Parquet page headers followed by compressed payloads, correct page/column metadata, pack present Boolean values into bits and decode standard bit-packed Boolean pages while retaining legacy-byte fallback.",
+        "default_or_opt_in": "Existing Parquet read/write behavior changes automatically. Legacy Boolean bytes are selected only by the existing legacy-layout reader fallback.",
+        "total_cpu_time_evidence": "None found. Interoperability validation checks a 129-row three-column round trip through PyArrow 25.0.1 and fixtures, not resource efficiency.",
+        "memory_evidence": "Boolean raw present-value payload shrinks from one byte to one bit per present value, rounded to whole bytes. Writer also removes the fullPage array that copied page header plus payload before Data conversion. No matched live-memory or allocation counter evidence; fileBytes, page payload and compressed payload remain owned intermediates.",
+        "new_work_retention_parallelism": "Bit extraction/packing adds integer operations per Boolean and the writer emits required metadata. Compression excludes the header. No new parallelism or retained cache.",
+        "reduced_work_copies": "Smaller Boolean payload and no fullPage concatenation; append Data directly rather than making an explicit [UInt8](compressedData) array.",
+        "correctness_constraints": "Standard readers must parse pages; nullable packed Boolean values advance the bit cursor only for present values, including a partial last byte. Previously self-round-tripping nonstandard output is not an equivalent correctness baseline.",
+        "classification": [
+          "correctness_required_cost",
+          "structurally_reduced_work_storage_cpu_unmeasured",
+          "missing_cpu_evidence"
+        ],
+        "disposition": "Retain interoperability fix. Storage reduction is structural; total CPU and compressed-file-size benefits are unmeasured.",
+        "next_useful_test": "Standard-valid before/after or alternative implementation comparison over Boolean null densities, row counts and compressibility, measuring user+system CPU, allocation bytes, peak live ownership and encoded file size.",
+        "evidence": [
+          "https://github.com/Nodibell/SwiftSci/blob/55be1d971c8f86e726ac446a3100fab9753dcec7/Sources/SwiftDataFrame/IO/ParquetWriter.swift#L50",
+          "https://github.com/Nodibell/SwiftSci/blob/55be1d971c8f86e726ac446a3100fab9753dcec7/Sources/SwiftDataFrame/IO/ParquetWriter.swift#L176",
+          "https://github.com/Nodibell/SwiftSci/blob/55be1d971c8f86e726ac446a3100fab9753dcec7/Sources/SwiftDataFrame/IO/ParquetReader.swift#L820",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/benchmarks/2026-09-28-main-sync.md"
+        ]
+      }
+    },
+    {
+      "number": 43,
+      "title": "Fix numerical, model-state, and persistence conformance failures",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/43",
+      "merge": "dd25b4ab633987af72196b4244434d24d7000910",
+      "first_parent": "b6f827cddf89e16717d8f27e4401382233099e14",
+      "assessment": {
+        "pr": 43,
+        "title": "Fix numerical, model-state, and persistence conformance failures",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/43",
+        "merge_sha": "dd25b4ab633987af72196b4244434d24d7000910",
+        "first_parent_sha": "b6f827cddf89e16717d8f27e4401382233099e14",
+        "reviewed_source_paths": [
+          "Sources/SwiftCluster/Core/PCA.swift",
+          "Sources/SwiftCluster/Core/VectorStore.swift",
+          "Sources/SwiftLLM/Core/TransformerDecoder.swift",
+          "Sources/SwiftML/Core/LinearRegression.swift",
+          "Sources/SwiftML/Core/LogisticRegression.swift",
+          "Sources/SwiftML/Serialization/CoreMLExporter.swift",
+          "Sources/SwiftML/Serialization/CoreMLProtobuf.swift",
+          "Sources/SwiftStats/Core/Stats+HypothesisTesting.swift"
+        ],
+        "reviewed_complete_introduced_source_diff": true,
+        "change": "Repair nine causes across supplied regression model state, cosine scaling, PCA total-variance denominator, decoder registered weight paths and batched rotary execution, ANOVA centering, compensated OLS stationarity refinement and valid multi-feature Core ML scaler pipelines.",
+        "default_or_opt_in": "Repairs affect existing routes automatically. CPU OLS always computes compensated residual gradient after dgels and can attempt three refinements. Cosine search alone uses scaled arithmetic; other metrics retain their paths. Multi-feature export alone expands to scalar stages. No accuracy-selection option is introduced.",
+        "total_cpu_time_evidence": "No matched CPU-time or repair-only throughput series found. Passing CPU regression policy here means no new conformance failure identities; it is not a CPU-resource benchmark. Combined later precision/compact numbers cannot be attributed to this repair PR.",
+        "memory_evidence": "OLS adds columnScales, compensated gradient state and candidate/correction vectors, all proportional to feature count rather than rows. Cosine allocates scaledQuery. PCA retains one scalar totalVariance. Supplied regression initializers create public Float MLX parameter arrays. Core ML pipeline serialization grows with feature count and may add rename stages. ANOVA removes flattened all-values and per-group centered arrays.",
+        "new_work_retention_parallelism": "OLS adds a column-max scan, initial full residual/gradient scan and up to three candidate residual/gradient scans plus triangular corrections. Cosine adds max-absolute scans and divisions to avoid norm under/overflow. Randomized PCA adds centered sum-of-squares traversal; exact SVD paths sum already available singular/eigenvalues. Scaler exports create one stage per feature and extra identity stages for overlapping names. No new thread scheduling.",
+        "reduced_work_copies": "ANOVA uses lazy residual sequences and compensated scalar reductions instead of flattening groups and allocating centered copies. Other costs principally restore correctness.",
+        "correctness_constraints": "Preserve existing references/tolerances. Tiny/large nonzero vectors must keep valid cosine, truncated PCA ratios must use all fitted variance, registered checkpoint weights must load, model-state constructors must predict, OLS stationarity must improve on difficult fixtures and serialized Core ML must load with overlapping names. Earlier failing answers are invalid alternatives.",
+        "classification": [
+          "correctness_required_cost",
+          "structurally_reduced_work_storage_cpu_unmeasured",
+          "missing_cpu_evidence"
+        ],
+        "disposition": "Retain repairs. OLS extra scans are a concrete cost worth qualifying on ordinary workloads, but evidence does not establish a regression per correct result.",
+        "next_useful_test": "Measure CPU fit time and allocation bytes on ordinary and difficult OLS datasets over rows/features; preserve oracle stationarity and coefficient checks. Any skip criterion must prove unchanged numerical acceptance. Separately qualify scale-safe cosine with overflow/underflow fixtures.",
+        "evidence": [
+          "https://github.com/Nodibell/SwiftSci/blob/dd25b4ab633987af72196b4244434d24d7000910/Sources/SwiftML/Core/LinearRegression.swift#L181",
+          "https://github.com/Nodibell/SwiftSci/blob/dd25b4ab633987af72196b4244434d24d7000910/Sources/SwiftCluster/Core/VectorStore.swift#L214",
+          "https://github.com/Nodibell/SwiftSci/blob/dd25b4ab633987af72196b4244434d24d7000910/Sources/SwiftCluster/Core/PCA.swift#L200",
+          "https://github.com/Nodibell/SwiftSci/blob/dd25b4ab633987af72196b4244434d24d7000910/Sources/SwiftML/Serialization/CoreMLProtobuf.swift#L525",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/benchmarks/2026-09-28-pr-stack.md"
+        ]
+      }
+    },
+    {
+      "number": 44,
+      "title": "Add Apple silicon reduction policies and decimal-preserving ANOVA",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/44",
+      "merge": "cf07e30b281d0585c401179281ffa2eba0a9c41f",
+      "first_parent": "dd25b4ab633987af72196b4244434d24d7000910",
+      "assessment": {
+        "pr": 44,
+        "title": "Add Apple silicon reduction policies and decimal-preserving ANOVA",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/44",
+        "merge_sha": "cf07e30b281d0585c401179281ffa2eba0a9c41f",
+        "first_parent_sha": "dd25b4ab633987af72196b4244434d24d7000910",
+        "reviewed_source_paths": [
+          "Sources/SwiftStats/Core/CenteredMoments.swift",
+          "Sources/SwiftStats/Core/CompensatedDotProduct.swift",
+          "Sources/SwiftStats/Core/DotProductAccuracy.swift",
+          "Sources/SwiftStats/Core/ExactDotProduct.swift",
+          "Sources/SwiftStats/Core/Stats+DecimalANOVA.swift",
+          "Sources/SwiftStats/Core/Stats+Descriptive.swift",
+          "Sources/SwiftStats/Core/Stats+HypothesisTesting.swift",
+          "Sources/SwiftStats/Core/Stats+LinearAlgebra.swift"
+        ],
+        "reviewed_complete_introduced_source_diff": true,
+        "change": "Add centered SIMD moments without an input-sized temporary; reuse them in ANOVA; use BLAS ddot for performance-policy vectors >=4096 when count fits Int32; add opt-in compensated dot with exact fallback and decimal-string ANOVA ingestion.",
+        "default_or_opt_in": "Existing two-argument dot remains performance mode, Double throughout. Compensated dot and decimalGroups are explicit caller choices. Existing Double variance and ANOVA use CenteredMoments automatically, with old finite-range fallback behavior.",
+        "total_cpu_time_evidence": "No operation-scoped total CPU series. Raw precision-kernels memory-before-time.txt and memory-after-time.txt each report only 0.01 user + 0.00 sys seconds at coarse precision for a separate one-shot process. Retired instructions are 320108116 before and 331971079 after, about 3.7% more for the whole process, not an isolated kernel count. These receipts include process startup/input work and cannot resolve kernel CPU cost. Kernel wall-time experiments show variance 4.242 to 4.421 ms at 8388608 values and 0.515 to 0.550 ms at 1048576; small cases are also slower. Default dot and medium/large ANOVA wall times improve in recorded experiments.",
+        "memory_evidence": "Default finite centered variance removes one 8-byte-per-element array. At 8388608 elements, RSS falls 140722176 to 73580544 bytes in separate one-shot receipts, about 64 MiB. RSS is a process peak, not ownership. Exact dot uses two 67-limb UInt64 magnitudes, 1072 logical bytes excluding metadata; no input-sized product array. Decimal ingestion materializes residual Double groups and temporary digit/string values.",
+        "new_work_retention_parallelism": "Default centered moments add compensated arithmetic and may do partial work before fallback. Performance ddot may have implementation-specific native threading; environment limits do not prove actual threads. Opt-in compensated mode checks products/cancellation and can restart the full reduction exactly. Decimal mode parses bounded strings and performs exact common-origin subtraction before binary64 conversion.",
+        "reduced_work_copies": "Removes centered variance buffer and uses bounded SIMD accumulators. ANOVA reuses the blocked routine instead of compensated scalar within-group loops. Performance dot uses existing Accelerate kernels and reads arrays directly.",
+        "correctness_constraints": "Actual binary64 variance example changes 67.578125 to correct 67.5703125. Compensated mode has a stronger useful accuracy goal but no universal correct-rounding guarantee; overflow/underflow/cancellation fallback is required. Decimal differences lost before a Double call cannot be recovered. Original decimal and binary64 workloads retain distinct references and tolerances.",
+        "classification": [
+          "explicit_resource_tradeoff",
+          "correctness_required_cost",
+          "structurally_reduced_work_storage_cpu_unmeasured",
+          "missing_operation_cpu_evidence"
+        ],
+        "disposition": "Measured default variance latency cost buys correctness and about 64 MiB less temporary storage. Expensive compensated dot and decimal ingestion are opt-in and cannot be called default regressions. Faster wrong/cancelled or pre-rounded results are not equivalent comparators.",
+        "next_useful_test": "Repeated paired CPU-time, latency and owned-allocation measurements of default variance on ordinary and offset inputs, with exact binary64 oracle. Sweep BLAS crossover sizes and actual thread use. Compare compensated/decimal alternatives only at the same numerical contract.",
+        "evidence": [
+          "https://github.com/Nodibell/SwiftSci/blob/cf07e30b281d0585c401179281ffa2eba0a9c41f/Sources/SwiftStats/Core/Stats+Descriptive.swift#L50",
+          "https://github.com/Nodibell/SwiftSci/blob/cf07e30b281d0585c401179281ffa2eba0a9c41f/Sources/SwiftStats/Core/Stats+LinearAlgebra.swift#L14",
+          "https://github.com/Nodibell/SwiftSci/blob/cf07e30b281d0585c401179281ffa2eba0a9c41f/Sources/SwiftStats/Core/CompensatedDotProduct.swift#L117",
+          "https://github.com/Nodibell/SwiftSci/blob/cf07e30b281d0585c401179281ffa2eba0a9c41f/Sources/SwiftStats/Core/Stats+DecimalANOVA.swift#L10",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/benchmarks/2026-09-28-precision-kernels.md",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/benchmarks/2026-09-28-dot-implementation.md",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/archive/2026-09-28/precision-kernels/evidence.tar.gz::memory-before-time.txt",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/archive/2026-09-28/precision-kernels/evidence.tar.gz::memory-after-time.txt"
+        ]
+      }
+    },
+    {
+      "number": 45,
+      "title": "Add compact numeric batches and reduce dataframe conversion allocations",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/45",
+      "merge": "56ac4bb67e2269607e436712c8127fc059e6c477",
+      "first_parent": "cf07e30b281d0585c401179281ffa2eba0a9c41f",
+      "assessment": {
+        "pr": 45,
+        "title": "Add compact numeric batches and reduce dataframe conversion allocations",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/45",
+        "merge_sha": "56ac4bb67e2269607e436712c8127fc059e6c477",
+        "first_parent_sha": "cf07e30b281d0585c401179281ffa2eba0a9c41f",
+        "reviewed_source_paths": [
+          "Sources/SwiftDataFrame/Core/DataFrame+Matrix.swift",
+          "Sources/SwiftDataFrame/Core/PreparedNumericBatch.swift",
+          "Sources/SwiftPreprocessing/Core/DataFrame+Preprocessing.swift",
+          "Sources/SwiftPreprocessing/Core/MinMaxScaler.swift",
+          "Sources/SwiftPreprocessing/Core/StandardScaler.swift"
+        ],
+        "reviewed_complete_introduced_source_diff": true,
+        "change": "Direct target extraction, shared feature-type resolution, owned compact Double batches with optional validity bitmaps and row maps, matrix layout export, snapshot-safe updates, concrete scaler integration and scratch reuse.",
+        "default_or_opt_in": "New PreparedNumericBatch APIs are opt-in, but existing target extraction, concrete DataFrame standardScale/minMaxScale conveniences and concrete scaler DataFrame overloads change automatically. Existing row-array APIs reuse scratch. Generic PreprocessingTransformer adapter keeps row-array dispatch and now converts once for fitTransform.",
+        "total_cpu_time_evidence": "No measured total CPU series found. Historical 100000-row standard-profile medians compare separate desktop sessions: target 3.958542 to 0.058083 ms, standard scaling+flat export 28.393000 to 2.785333 ms, minmax 33.164708 to 0.751166 ms. Matching workload/input contracts support descriptive latency improvement, not a controlled CPU-efficiency or universal baseline. Raw standard responses contain elapsed_ns and RSS.",
+        "memory_evidence": "Compact payload is 8 bytes per row per column plus optional ceil(rows/64)*8 validity bytes. Retaining a batch alongside its source adds owned compact buffers. Single-column matrix export shares the values via array copy-on-write; wider matrices pack into new contiguous arrays. ColumnValues and DataFrame replacement materialize optionals. Snapshot mutation detaches shared edited buffers. PayloadByteCount excludes row maps, capacity and metadata and is not total retained memory.",
+        "new_work_retention_parallelism": "Preparation converts selected optional columns into owned Double buffers. Row selection gathers new columns and maps original row indices. Multi-column matrix export packs again. Scalers allocate transformed dense columns; MinMax keeps shifted/scaled row-length scratch, Standard uses bounded row-width scratch with gathers/scatters. DataFrame output reconstructs optional columns. No new parallel scheduling.",
+        "reduced_work_copies": "Target extraction avoids N one-element rows. Concrete scaler DataFrame fitTransform prepares once, avoids nested rows and reuses workspaces. Row-array scaler scratch moves outside row/column loops. Consumers retaining prepared batches can reuse columns across operations; immediate optional round trips can still pay conversions.",
+        "correctness_constraints": "Int64-to-Double precision stays unchanged; valid NaN differs from missing while prepared. Scaling treats missing as NaN and outputs valid numeric NaNs rather than preserving validity. StandardScaler retains row-width vDSP operations for finite rounding compatibility. Preserve repeated features/selections, row identity, matrix order, atomic rejection and array snapshot semantics.",
+        "classification": [
+          "structurally_reduced_work_storage_cpu_unmeasured",
+          "explicit_resource_tradeoff",
+          "missing_cpu_evidence"
+        ],
+        "disposition": "Default target/scaler allocation reductions are well motivated and supported by elapsed-time evidence. New storage is additive, not an automatic replacement of dataframe storage or zero-copy device import. First-use/reuse/snapshot CPU cost remains unqualified.",
+        "next_useful_test": "Versioned setup-inclusive first-use and reused prepared workflows with CPU time, copied/allocation bytes and retained source+batch+matrix ownership. Include sparse edits with/without snapshots, layouts, missingness and immediate DataFrame materialization.",
+        "evidence": [
+          "https://github.com/Nodibell/SwiftSci/blob/56ac4bb67e2269607e436712c8127fc059e6c477/Sources/SwiftDataFrame/Core/DataFrame+Matrix.swift#L24",
+          "https://github.com/Nodibell/SwiftSci/blob/56ac4bb67e2269607e436712c8127fc059e6c477/Sources/SwiftDataFrame/Core/PreparedNumericBatch.swift#L34",
+          "https://github.com/Nodibell/SwiftSci/blob/56ac4bb67e2269607e436712c8127fc059e6c477/Sources/SwiftDataFrame/Core/PreparedNumericBatch.swift#L52",
+          "https://github.com/Nodibell/SwiftSci/blob/56ac4bb67e2269607e436712c8127fc059e6c477/Sources/SwiftDataFrame/Core/PreparedNumericBatch.swift#L166",
+          "https://github.com/Nodibell/SwiftSci/blob/56ac4bb67e2269607e436712c8127fc059e6c477/Sources/SwiftPreprocessing/Core/StandardScaler.swift#L164",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/benchmarks/2026-09-28-pr-stack.md",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/archive/2026-09-28/pr-stack/evidence.tar.gz::standard/run.json"
+        ]
+      }
+    },
+    {
+      "number": 48,
+      "title": "Fix Pages deployment failure on forks",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/48",
+      "merge": "c699e341df5f8b2409be3f0ebc3222f574505f59",
+      "first_parent": "1048192a12a99e633d9edc6cd7a0cb0486c65869",
+      "assessment": {
+        "number": 48,
+        "url": "https://github.com/Nodibell/SwiftSci/pull/48",
+        "classification": [
+          "CI-only"
+        ],
+        "change": "Restricts Pages deployment to upstream push/main. No Sources or dependency changes.",
+        "resource_effect": "No production runtime cost. Avoids futile fork deployment jobs.",
+        "cpu_evidence": "No before/after operation-scoped CPU measurement established in this review.",
+        "disposition": "Keep.",
+        "merge": "c699e341df5f8b2409be3f0ebc3222f574505f59",
+        "first_parent": "1048192a12a99e633d9edc6cd7a0cb0486c65869"
+      }
+    },
+    {
+      "number": 49,
+      "title": "Expand MLX comparison benchmarks and pinned Llama integration diagnostics",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/49",
+      "merge": "eec936b65c4bde81678b3113dd36b0a4d662d18a",
+      "first_parent": "e5242359fbe821ef2441534b89fec4f1c1545666",
+      "assessment": {
+        "number": 49,
+        "url": "https://github.com/Nodibell/SwiftSci/pull/49",
+        "classification": [
+          "benchmark-only"
+        ],
+        "change": "Adds MLX comparison and optional real-checkpoint diagnostics. Actual merged contribution has no Sources or dependency change.",
+        "resource_effect": "Precision experiments record slower FP32 policies and retained model memory, but do not adopt them in production.",
+        "cpu_evidence": "No before/after operation-scoped CPU measurement established in this review.",
+        "disposition": "Keep; never attribute experimental policy costs to production defaults.",
+        "merge": "eec936b65c4bde81678b3113dd36b0a4d662d18a",
+        "first_parent": "e5242359fbe821ef2441534b89fec4f1c1545666"
+      }
+    },
+    {
+      "number": 50,
+      "title": "Fix native Llama 3.2 inference and report generation completion",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/50",
+      "merge": "9b9e59b8c4fae83b977439f7a10e9cf4f497f0f0",
+      "first_parent": "29c8b2e9072534938368e2505355f1673b5d457e",
+      "assessment": {
+        "pr": 50,
+        "title": "Fix native Llama 3.2 inference and report generation completion",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/50",
+        "merge_sha": "9b9e59b8c4fae83b977439f7a10e9cf4f497f0f0",
+        "first_parent_sha": "29c8b2e9072534938368e2505355f1673b5d457e",
+        "reviewed_source_paths": [
+          "Sources/SwiftLLM/Core/Generation.swift",
+          "Sources/SwiftLLM/Core/GroupedQueryAttention.swift",
+          "Sources/SwiftLLM/Core/LLMModel.swift",
+          "Sources/SwiftLLM/Core/RoPEEmbedding.swift",
+          "Sources/SwiftLLM/Core/TransformerDecoder.swift",
+          "Sources/SwiftNLP/Core/BPETokenizer.swift",
+          "Sources/SwiftNLP/Core/ChatTemplate.swift",
+          "Sources/SwiftNLP/Core/Llama3Encoding.swift",
+          "Sources/SwiftNLP/Core/TokenStreamDecoder.swift",
+          "Sources/SwiftNLP/Core/Tokenizer.swift"
+        ],
+        "reviewed_complete_introduced_source_diff": true,
+        "change": "Correct native Llama tokenizer/chat formatting, grouped-query attention, tied embeddings, rotary scaling, EOS/UTF-8 stream boundaries and typed context completion. Generation uses bounded 2048-token prefill, causal mask mode and final-position vocabulary projection; benchmark builder adds safe/precise precompiled Metal settings/provenance.",
+        "default_or_opt_in": "All existing TransformerDecoder generation APIs use one bounded-prefill loop. Public forward still returns all-position logits. Llama1B preset uses 8 KV heads versus 32 query heads and tied embeddings, still defaulting to 8192 context tokens. Larger context requires caller configuration. Custom configs retain untied and ordinary multi-head defaults. Llama JSON tokenizer/chat template are explicitly selected. Metal policy applies to benchmark Xcode builds only, not downstream builds or MLX runtime JIT.",
+        "total_cpu_time_evidence": "No setup-inclusive total CPU or GPU-work accounting found. Historical Metal-policy comparison has synchronized elapsed-time samples on one pinned checkpoint and an isolated dependency repair: decode deltas <=1.2%, prefill -3.8% to +0.7%, too variable for a speed claim. Bounded-prefill diagnostic at 32768 tokens reports 18.2121 to 13.5302 seconds prefill, one sample each, not a repeated performance benchmark. Host CPU time would not measure GPU work.",
+        "memory_evidence": "Raw 32768-token checkpoint diagnostics show peak MLX allocation 14769330192 to 5093079072 bytes, 13.76 to 4.74 GiB. Bounded peaks 6259095584 at 65536 and 8674850840 at 131070, 5.83 and 8.08 GiB. These are MLX allocation peaks, distinct from RSS. Compact KV heads reduce per-token cache dimensions; tied output avoids an independent head. KV and attention work still grow with context. No universal leak or full process ownership claim.",
+        "new_work_retention_parallelism": "Chunking adds repeated dispatch and cache realization at chunk boundaries. Correct byte BPE/token configuration parsing and UTF-8 stream buffering add work only on selected tokenizer mode, with small per-stream pending bytes. Llama scaling retains per-layer frequency constants. Accurate build math may have a cost but is not a package-wide runtime-policy change. Generation no longer silently truncates overlong prompts, so equivalent requests must preserve full prompt semantics.",
+        "reduced_work_copies": "Generation projects only the final prompt hidden state instead of all vocabulary positions, avoids explicit full-prompt square masks, bounds temporary activations by chunk and skips inference when output budget/context slots are zero. Stops before an unnecessary decode forward at the final budget token. GQA keeps compact KV caches and tied embeddings remove duplicate projection weights.",
+        "correctness_constraints": "Correct checkpoint architecture/token IDs, cached-prefix causality and UTF-8/EOS boundaries are mandatory. Whole-prompt and chunked first logits can differ by 0.03125 while selected tokens match. Exact full-logit parity claims apply to the matched Swift/Python chunking strategy on the pinned BF16 1B checkpoint and repeated-token diagnostic. Long-document answer quality is not established.",
+        "classification": [
+          "correctness_required_cost",
+          "structurally_reduced_work_storage_cpu_unmeasured",
+          "explicit_resource_tradeoff",
+          "missing_cpu_gpu_work_evidence"
+        ],
+        "disposition": "Substantial observed MLX peak reduction with validated matched-strategy output. No evidence establishes a CPU-efficiency regression from chunking or safe math. Preserve default context and numerical scope.",
+        "next_useful_test": "Paired setup-inclusive CPU and device-duration/work measurements across prompt lengths and chunk sizes with the same checkpoint, token IDs and math policy; track active/peak MLX bytes, retained caches and output validity. Add repeated runs before adopting timing ratios.",
+        "evidence": [
+          "https://github.com/Nodibell/SwiftSci/blob/9b9e59b8c4fae83b977439f7a10e9cf4f497f0f0/Sources/SwiftLLM/Core/TransformerDecoder.swift#L124",
+          "https://github.com/Nodibell/SwiftSci/blob/9b9e59b8c4fae83b977439f7a10e9cf4f497f0f0/Sources/SwiftLLM/Core/TransformerDecoder.swift#L440",
+          "https://github.com/Nodibell/SwiftSci/blob/9b9e59b8c4fae83b977439f7a10e9cf4f497f0f0/Sources/SwiftLLM/Core/TransformerDecoder.swift#L635",
+          "https://github.com/Nodibell/SwiftSci/blob/9b9e59b8c4fae83b977439f7a10e9cf4f497f0f0/Sources/SwiftNLP/Core/BPETokenizer.swift#L113",
+          "https://github.com/Nodibell/SwiftSci/blob/9b9e59b8c4fae83b977439f7a10e9cf4f497f0f0/Benchmarks/Tools/runner.py#L26",
+          "/Users/crabel/local-ai/spl/swiftsci/llama-production-validation/long-context-20261001/validation-summary.json",
+          "/Users/crabel/local-ai/spl/swiftsci/llama-production-validation/long-context-20261001/prefill-32768/swift-32768.json",
+          "/Users/crabel/local-ai/spl/swiftsci/llama-production-validation/bounded-context-20261001/prefill-32768/swift-32768.json"
+        ]
+      }
+    },
+    {
+      "number": 52,
+      "title": "Add native tabular comparisons and a production-default benchmark baseline",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/52",
+      "merge": "f11e7a6c61a7ddfffd2635800103deea442e6ccb",
+      "first_parent": "406e8cd504ee7fb9723b851a28c2a89d4e7ac1d1",
+      "assessment": {
+        "number": 52,
+        "url": "https://github.com/Nodibell/SwiftSci/pull/52",
+        "classification": [
+          "benchmark-only"
+        ],
+        "change": "Adds production-default scheduling policy and Polars/DuckDB comparison adapters. Actual contribution has no Sources or dependency changes.",
+        "resource_effect": "Removes asymmetric thread overrides for comparisons. Native parallelism changes measured elapsed time; pool sizes and RSS do not establish operation CPU efficiency.",
+        "cpu_evidence": "No before/after operation-scoped CPU measurement established in this review.",
+        "disposition": "Keep; supplement historical wall-time baseline with resource accounting. Do not replace recorded fingerprints.",
+        "merge": "f11e7a6c61a7ddfffd2635800103deea442e6ccb",
+        "first_parent": "406e8cd504ee7fb9723b851a28c2a89d4e7ac1d1"
+      }
+    },
+    {
+      "number": 60,
+      "title": "Update MLX with SIMD backport and LLM compatibility fixes",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/60",
+      "merge": "e5242359fbe821ef2441534b89fec4f1c1545666",
+      "first_parent": "0d0de4bea8e892dc1abc32be7878160d7f777109",
+      "assessment": {
+        "pr": 60,
+        "title": "Update MLX with SIMD backport and LLM compatibility fixes",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/60",
+        "merge_sha": "e5242359fbe821ef2441534b89fec4f1c1545666",
+        "first_parent_sha": "0d0de4bea8e892dc1abc32be7878160d7f777109",
+        "reviewed_source_paths": [
+          "Sources/SwiftLLM/Core/RoPEEmbedding.swift",
+          "Sources/SwiftLLM/Core/TransformerDecoder.swift"
+        ],
+        "reviewed_complete_introduced_source_diff": true,
+        "change": "Replace global MLX Swift 0.31.6 pin with immutable fork 4657976e based on official 0.32.3 plus CPU Float16 SIMD comparison backport; fix invalid-context construction and compute small cached Llama frequency constants on CPU.",
+        "default_or_opt_in": "Dependency upgrade affects all modules using MLX. CPU frequency construction applies only to Llama3 scaling at initialization; rotation/inference remain on caller device. Nonpositive contexts allocate empty positional embeddings so existing generation validation returns a typed error.",
+        "total_cpu_time_evidence": "No matched CPU-time or runtime performance comparison for old/new pins or constant initialization. Hosted disabled performance job supplies no timing data. SIMD regression tests establish comparison correctness, not speed. A small SwiftSci diff does not characterize every resource change from the full underlying 0.31.6 to 0.32.3 dependency upgrade.",
+        "memory_evidence": "Managed-buffer finalizer correction is an ownership prerequisite. Exact-fork probe reported one finalizer, one allocation/release, no retained lease and zero live owner bytes after completed GPU read. This is bounded probe evidence, not whole-library memory improvement. Empty invalid-context embedding avoids invalid allocation. CPU-derived frequency table size is unchanged.",
+        "new_work_retention_parallelism": "Small d/2 frequency table is derived once per scaling module on CPU instead of initialization device, then retained for rotation. No new inference-time reduction pass. Dependency internals may change scheduling/resources beyond the explicitly backported patch and require their own qualification.",
+        "reduced_work_copies": "Removes managed-buffer owner retention for the qualified finalizer path. SIMD backport restores correct Float16 comparison masks; no measured copy or CPU reduction claim.",
+        "correctness_constraints": "Do not return to the leaking ownership pin or incorrect SIMD masks as a cheaper comparison. GPU power rounding shifted denominator 774.86475 to 774.8639 and exceeded unchanged phase budget; CPU constants remove device-dependent initialization without loosening tolerance. Typed invalid-context errors, including Int.min, must survive stricter MLX shape checks.",
+        "classification": [
+          "correctness_required_cost",
+          "dependency_ownership_repair",
+          "missing_cpu_evidence"
+        ],
+        "disposition": "Retain correctness and ownership fixes. Return to an official exact release only after verifying both finalizer and bundled-core SIMD fixes. No observed efficiency regression or general speedup is established.",
+        "next_useful_test": "Matched correct-workload CPU/device time and live-owner measurements across exact dependency pins, keeping finalizer/SIMD fixes present on both sides where required; separate one-time model initialization from repeated inference.",
+        "evidence": [
+          "https://github.com/Nodibell/SwiftSci/blob/e5242359fbe821ef2441534b89fec4f1c1545666/Package.swift#L48",
+          "https://github.com/Nodibell/SwiftSci/blob/e5242359fbe821ef2441534b89fec4f1c1545666/Sources/SwiftLLM/Core/RoPEEmbedding.swift#L35",
+          "https://github.com/Nodibell/SwiftSci/blob/e5242359fbe821ef2441534b89fec4f1c1545666/Sources/SwiftLLM/Core/TransformerDecoder.swift#L370",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/research/2026-10-06-mlx-simd-backport.md",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/research/2026-10-06-mlx-compatibility.md",
+          "/Users/crabel/Library/Caches/SwiftSci/engineering-evaluation-20261018/Documentation/EngineeringNotes/research/2026-10-06-arrow-import-pr-validation.md"
+        ]
+      }
+    },
+    {
+      "number": 61,
+      "title": "Optimize owned Arrow imports and fix signed date32 conversion",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/61",
+      "merge": "a010ef1eeaa4cbb91b50735ebf9b2410249b33fb",
+      "first_parent": "eec936b65c4bde81678b3113dd36b0a4d662d18a",
+      "assessment": {
+        "pr": 61,
+        "title": "Optimize owned Arrow imports and fix signed date32 conversion",
+        "pr_url": "https://github.com/Nodibell/SwiftSci/pull/61",
+        "merge": "a010ef1eeaa4cbb91b50735ebf9b2410249b33fb",
+        "first_parent": "eec936b65c4bde81678b3113dd36b0a4d662d18a",
+        "introduced_source_count": 1,
+        "change": "Replace per-row global Arrow chunk lookup with one traversal per chunk; read canonical date32 through signed Int32 days before widening to seconds.",
+        "default_scope": "Existing Arrow imports use this path by default. Owned-copy semantics and null policies remain unchanged; no retained Arrow view or new dependency is introduced.",
+        "classifications": [
+          "structurally_reduced_work",
+          "correctness_required_cost",
+          "missing_total_cpu_time_evidence"
+        ],
+        "cpu_time": {
+          "status": "not_measured_in_reviewed_evidence",
+          "details": "42 matched fresh-process workers report elapsed phase timings and memory counters, not summed CPU seconds. Historical million-row single-chunk workflow median 178.749 to 47.254 ms; 32 chunks 813.501 to 47.737 ms. No CPU-efficiency percentage follows from elapsed ratios."
+        },
+        "memory": {
+          "benefit": "Removes repeated chunk searches, not the owned destination copy. One-million-row import malloc delta is exactly 64,029,856 bytes in both versions.",
+          "new_work_or_retention": "One signed FixedArray accessor wrapper per date32 chunk; destination optional arrays are still reserved and filled.",
+          "limitations": "malloc delta is not an owned-live-storage inventory or leak measurement."
+        },
+        "correctness": "Copying isolates producer mutation and source release. Null versus valid NaN, integer precision, signed zero and infinities remain contractual. Signed date32 and empty-chunk failures cannot serve as cheaper valid baselines.",
+        "disposition": "Keep. This is a structural work reduction plus required date/empty-chunk correctness, with no demonstrated memory regression.",
+        "next_test": "On the same correct import/selection/matrix workload, record process user+system CPU deltas and allocation counts for single- and many-chunk inputs; retain the same owned and numerical contracts.",
+        "sources": [
+          {
+            "path": "Sources/SwiftDataFrame/Internal/ArrowTableBridge.swift",
+            "merge": "a010ef1eeaa4cbb91b50735ebf9b2410249b33fb",
+            "line": 54,
+            "end_line": 85,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/a010ef1eeaa4cbb91b50735ebf9b2410249b33fb/Sources/SwiftDataFrame/Internal/ArrowTableBridge.swift#L54-L85"
+          }
+        ],
+        "evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/arrow-import-mlx0323-final-20261006/upstream-comparison.json",
+          "/Users/crabel/local-ai/spl/swiftsci/arrow-import-mlx0323-final-20261006/upstream-measurements.jsonl",
+          "Documentation/EngineeringNotes/research/2026-10-06-arrow-pr-ready.md"
+        ]
+      }
+    },
+    {
+      "number": 62,
+      "title": "Keep prepared regression columnar and bound memory admission",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/62",
+      "merge": "304251a6116f171c4b3b29f272730d0a13dfbfc3",
+      "first_parent": "a010ef1eeaa4cbb91b50735ebf9b2410249b33fb",
+      "assessment": {
+        "pr": 62,
+        "title": "Keep prepared regression columnar and bound memory admission",
+        "pr_url": "https://github.com/Nodibell/SwiftSci/pull/62",
+        "merge": "304251a6116f171c4b3b29f272730d0a13dfbfc3",
+        "first_parent": "a010ef1eeaa4cbb91b50735ebf9b2410249b33fb",
+        "introduced_source_count": 10,
+        "change": "Add prepared regression dispatch and jointly selected feature/target snapshots; share the numerical solver between rows and columns; introduce explicit FIFO byte-estimate admission and scoped GPU matrix owners.",
+        "default_scope": "Prepared regression and byte-budget overloads are explicit choices. Existing row GPU fit/predict also switches from flattened Float arrays to scoped Metal shared-buffer staging with a completion fence and autorelease boundary. Legacy task-count limiter behavior and CPU/GPU routing thresholds are unchanged.",
+        "classifications": [
+          "structurally_reduced_work_and_storage",
+          "explicit_resource_tradeoff",
+          "correctness_required_cost",
+          "missing_final_total_cpu_time_evidence"
+        ],
+        "cpu_time": {
+          "status": "final_comparison_unmeasured_historical_option_evidence_available",
+          "details": "Corrected uninstrumented final comparison measures selection/preparation/fit/predict wall time, excludes source construction and prepared admission, and provides no CPU seconds. Earlier instrumented results were invalidated. Oct5 experiments of caller admission width do have process user+system deltas and include native worker threads, exclude cache setup and independent oracle. They are not measurements of the PR-introduced default.",
+          "historical_options": [
+            {
+              "workload": "eight wide CPU fits sharing scaled input; budget units 1 to 8",
+              "batch_ms": [
+                953.482,
+                302.91
+              ],
+              "cpu_seconds": [
+                0.962658,
+                2.32336
+              ],
+              "peak_rss_decimal_MB": [
+                94.405,
+                283.378
+              ]
+            },
+            {
+              "workload": "four large GPU fits; budget units 1 to 4",
+              "batch_ms": [
+                1336.737,
+                1354.574
+              ],
+              "host_cpu_seconds": [
+                0.691594,
+                0.836703
+              ],
+              "peak_rss_decimal_MB": [
+                33.538,
+                40.796
+              ]
+            }
+          ],
+          "historical_scope": "CPU time covers only host work, not GPU instructions. Whole-batch deltas start after shared setup and end before oracle replay. These optional concurrency policies trade total CPU/RSS against completion time."
+        },
+        "memory": {
+          "benefit": "Prepared CPU path avoids nested feature rows between scaler and regression. At 100k x 8, final measured peak RSS falls by about 7.5 to 8.4 MiB versus row workflows; 1k x 4 is essentially unchanged.",
+          "new_work_or_retention": "Scaler still allocates output columns plus bounded 2,048-Double tile and row-width scratch. QR still allocates feature+bias matrix, LAPACK work and refinement state. Shared Metal input aliases only when page alignment/extent permit; otherwise MLX makes a copy. Deferred stream synchronization holds owners until work completes. Budget actors retain active grants/waiters and may impose FIFO head-of-line waiting.",
+          "limitations": "Estimates cover participating callers, not RSS. Returned models/predictions outlive scoped grants and need caller lifetime accounting. Retained model/input owners and transfer trials in candidate notes were deliberately excluded from this merge."
+        },
+        "correctness": "Preserve Double QR/refinement and row API errors/zero-epoch behavior; GPU remains Float gradient descent. Row/column identity, finite prepared boundaries and synchronous device completion are required costs. Do not replace those with earlier incorrect or lifetime-unsafe paths.",
+        "disposition": "Keep the columnar and ownership improvements. Choose admission width for the desired total-resource/latency objective; historic concurrency data argues against a blanket wider default, which this PR does not install.",
+        "next_test": "Measure matched final row/prepared total CPU deltas including a separately reported admission/setup boundary, live allocated bytes and peak RSS. Sweep caller admission widths within each numerical route, never CPU OLS versus GPU GD as interchangeable accuracy.",
+        "sources": [
+          {
+            "path": "Sources/SwiftML/Core/EstimatorProtocols.swift",
+            "merge": "304251a6116f171c4b3b29f272730d0a13dfbfc3",
+            "line": 215,
+            "end_line": 236,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/304251a6116f171c4b3b29f272730d0a13dfbfc3/Sources/SwiftML/Core/EstimatorProtocols.swift#L215-L236"
+          },
+          {
+            "path": "Sources/SwiftML/Core/LinearRegression.swift",
+            "merge": "304251a6116f171c4b3b29f272730d0a13dfbfc3",
+            "line": 140,
+            "end_line": 163,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/304251a6116f171c4b3b29f272730d0a13dfbfc3/Sources/SwiftML/Core/LinearRegression.swift#L140-L163"
+          },
+          {
+            "path": "Sources/SwiftPreprocessing/Core/ScopedGPURead.swift",
+            "merge": "304251a6116f171c4b3b29f272730d0a13dfbfc3",
+            "line": 24,
+            "end_line": 60,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/304251a6116f171c4b3b29f272730d0a13dfbfc3/Sources/SwiftPreprocessing/Core/ScopedGPURead.swift#L24-L60"
+          },
+          {
+            "path": "Sources/SwiftPreprocessing/Core/MemoryBudget.swift",
+            "merge": "304251a6116f171c4b3b29f272730d0a13dfbfc3",
+            "line": 28,
+            "end_line": 115,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/304251a6116f171c4b3b29f272730d0a13dfbfc3/Sources/SwiftPreprocessing/Core/MemoryBudget.swift#L28-L115"
+          }
+        ],
+        "evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/prepared-memory-integration-20261006/final/comparison/samples.json",
+          "/Users/crabel/local-ai/spl/swiftsci/pr-resource-audit-20261018/findings/historical-admission-resource-evidence.json",
+          "Documentation/EngineeringNotes/research/2026-10-06-prepared-memory-pr.md",
+          "Documentation/EngineeringNotes/benchmarks/2026-10-05-concurrent-admission.md",
+          "Documentation/EngineeringNotes/benchmarks/2026-10-05-mixed-device-admission.md"
+        ],
+        "excluded_trial_evidence": [
+          "Documentation/EngineeringNotes/research/2026-10-07-retained-model-trial.md",
+          "Documentation/EngineeringNotes/research/2026-10-06-retained-memory-handoff-trial.md",
+          "Documentation/EngineeringNotes/research/2026-10-07-retained-gpu-trial.md"
+        ]
+      }
+    },
+    {
+      "number": 63,
+      "title": "Reuse prepared columns and reduce GPU prediction setup overhead",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/63",
+      "merge": "214ac373d20ae6f3c93d70d9a182608ee01fcab6",
+      "first_parent": "f11e7a6c61a7ddfffd2635800103deea442e6ccb",
+      "assessment": {
+        "pr": 63,
+        "title": "Reuse prepared columns and reduce GPU prediction setup overhead",
+        "pr_url": "https://github.com/Nodibell/SwiftSci/pull/63",
+        "merge": "214ac373d20ae6f3c93d70d9a182608ee01fcab6",
+        "first_parent": "f11e7a6c61a7ddfffd2635800103deea442e6ccb",
+        "introduced_source_count": 10,
+        "change": "Consume uniquely owned prepared columns through scaler/imputer/pipelines, pack prepared GPU prediction inputs in 16x16 tiles, and retain the default Metal device across allocations.",
+        "default_scope": "Existing prepared transform/pipeline calls now forward through consuming implementations while preserving caller snapshots by copy-on-write. Prepared GPU predictions use tiled packing automatically. All ScopedGPURead allocations, including row GPU paths, reuse the process device. Explicit ownership transfer is needed for reliable caller-buffer reuse. Row APIs and routing thresholds are unchanged.",
+        "classifications": [
+          "structurally_reduced_work_and_storage",
+          "explicit_resource_tradeoff",
+          "observed_sampled_rss_increase_in_one_case",
+          "missing_total_cpu_time_evidence"
+        ],
+        "cpu_time": {
+          "status": "not_measured_in_reviewed_final_receipts",
+          "details": "Prepared imputation/scaling, tiled packing and Metal-device experiments report elapsed/throughput and memory. They use different baselines and must not be multiplied into a cumulative speedup. Final extraction versus the already optimized trial ranged -1.44% to +1.03% throughput. No summed CPU-time comparison appears in reviewed final receipts."
+        },
+        "memory": {
+          "benefit": "Unique consuming columns can replace full output-column allocations. MinMax removes two row-count scratch arrays and writes its three arithmetic operations in place. Shared caller/internal aliases still detach correctly. Fixed packing writes directly into one newly allocated Metal buffer.",
+          "new_work_or_retention": "One successful initial MTLDevice reference persists for the process lifetime; this is not a buffer pool. Every matrix still receives fresh storage. Row-width scaler scratch is retained per operation to preserve rounding.",
+          "observed_tradeoff": "Device-reuse comparison mixed retained inputs: median sampled RSS 316.0 to 333.5 MiB; large consumed inputs: 209.7 to 187.7 MiB. This is an observed RSS increase in one measured configuration, not evidence of an unbounded owner leak. It is not isolated enough to attribute all residency to the retained device.",
+          "limitations": "Device-reuse experiment changes a real default allocation path, but its mixed-input workload retains snapshots by caller choice. Active MLX allocations/reservations drained between windows; final explicit cache clearing gave zero active/cache bytes. These do not prove universal leak freedom or complete driver reclamation."
+        },
+        "correctness": "Copy-on-write must preserve retained snapshots. StandardScaler keeps array-backed row-width vDSP division and MinMax keeps three separate arithmetic boundaries; faster reassociation is not equivalent. GPU Float packing preserves conversion behavior and retains the existing completion fence.",
+        "disposition": "Keep lower-copy consuming paths and device reuse. Record the mixed retained RSS rise as a workload-specific tradeoff; no proven general resource regression or automatic precision/routing change is established.",
+        "next_test": "Use matched binaries and input ownership modes to collect total CPU seconds, allocation counts, live owned bytes, RSS/footprint and retained device/runtime cache separately. Check small imputed requests and mixed retained workloads without phase probes before attributing cause.",
+        "sources": [
+          {
+            "path": "Sources/SwiftPreprocessing/Core/MetalDeviceOwner.swift",
+            "merge": "214ac373d20ae6f3c93d70d9a182608ee01fcab6",
+            "line": 3,
+            "end_line": 10,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/214ac373d20ae6f3c93d70d9a182608ee01fcab6/Sources/SwiftPreprocessing/Core/MetalDeviceOwner.swift#L3-L10"
+          },
+          {
+            "path": "Sources/SwiftPreprocessing/Core/StandardScaler.swift",
+            "merge": "214ac373d20ae6f3c93d70d9a182608ee01fcab6",
+            "line": 170,
+            "end_line": 227,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/214ac373d20ae6f3c93d70d9a182608ee01fcab6/Sources/SwiftPreprocessing/Core/StandardScaler.swift#L170-L227"
+          },
+          {
+            "path": "Sources/SwiftPreprocessing/Core/MinMaxScaler.swift",
+            "merge": "214ac373d20ae6f3c93d70d9a182608ee01fcab6",
+            "line": 178,
+            "end_line": 200,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/214ac373d20ae6f3c93d70d9a182608ee01fcab6/Sources/SwiftPreprocessing/Core/MinMaxScaler.swift#L178-L200"
+          },
+          {
+            "path": "Sources/SwiftPreprocessing/Core/PreparedFloatPacking.swift",
+            "merge": "214ac373d20ae6f3c93d70d9a182608ee01fcab6",
+            "line": 5,
+            "end_line": 28,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/214ac373d20ae6f3c93d70d9a182608ee01fcab6/Sources/SwiftPreprocessing/Core/PreparedFloatPacking.swift#L5-L28"
+          },
+          {
+            "path": "Sources/SwiftML/Core/LinearRegression.swift",
+            "merge": "214ac373d20ae6f3c93d70d9a182608ee01fcab6",
+            "line": 438,
+            "end_line": 446,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/214ac373d20ae6f3c93d70d9a182608ee01fcab6/Sources/SwiftML/Core/LinearRegression.swift#L438-L446"
+          }
+        ],
+        "evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/device-production-20261007/comparison/paired.json",
+          "/Users/crabel/local-ai/spl/swiftsci/device-production-20261007/comparison/summary.json",
+          "/Users/crabel/local-ai/spl/swiftsci/cpu-gpu-closeout-20261007/comparison/paired.json",
+          "Documentation/EngineeringNotes/benchmarks/2026-10-07-device-production.md",
+          "Documentation/EngineeringNotes/benchmarks/2026-10-07-cpu-gpu-closeout.md",
+          "Documentation/EngineeringNotes/benchmarks/2026-10-07-imputed-regression-integration.md"
+        ]
+      }
+    },
+    {
+      "number": 65,
+      "title": "Add scoped Core ML inference with reusable prepared inputs",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/65",
+      "merge": "9f56b0e1c257cbd578ab32abb930fb77828bef07",
+      "first_parent": "214ac373d20ae6f3c93d70d9a182608ee01fcab6",
+      "assessment": {
+        "pr": 65,
+        "title": "Add scoped Core ML inference with reusable prepared inputs",
+        "pr_url": "https://github.com/Nodibell/SwiftSci/pull/65",
+        "merge": "9f56b0e1c257cbd578ab32abb930fb77828bef07",
+        "first_parent": "214ac373d20ae6f3c93d70d9a182608ee01fcab6",
+        "introduced_source_count": 9,
+        "change": "Add explicit scalar/vector/fixed-matrix Core ML adapter, admitted scoped prediction pool, exclusive reusable slot buffers and optional immutable model-typed prepared input.",
+        "default_scope": "New API only. CoreMLPredictor defaults to examples, one example per call and computeUnits .all; scoped matrix pool defaults to one slot. Prepared retention is explicitly selected through prepare. Existing MLX/CPU estimators are not redirected.",
+        "classifications": [
+          "explicit_resource_tradeoff",
+          "structurally_reduced_repeated_conversion",
+          "correctness_required_cost",
+          "missing_total_cpu_and_device_work_evidence"
+        ],
+        "cpu_time": {
+          "status": "not_measured_in_reviewed_evidence",
+          "details": "Final 24-process comparison times one conversion plus prediction burst; excludes model load, source construction, validation and final async reservation release. Neural-policy 1024-row one-use direct/prepared medians 0.227/0.236 ms; 8192 rows with 64 uses 76.682/50.228 ms. Elapsed amortization is not total CPU reduction."
+        },
+        "memory": {
+          "benefit": "Pool reuses exclusive input/output storage; repeated prepared requests avoid repeated scalar conversion.",
+          "new_work_or_retention": "Retains model, slot pairs, a separate page-rounded converted input, owned row indices and metadata; prepared copies share that storage. Every prediction still memcpy-copies the immutable source into its exclusive slot and copies output to owned Double columns. One fallback result is budgeted because Core ML output backing is advisory. Extra prepared reservation is 0.189 MiB at 1024 rows and 1.033 MiB at 8192 rows.",
+          "limitations": "Public CoreMLPredictor loads before per-request admission, so its model state is separately caller-accounted. withPool admits before loading. Queued inputs and escaped output lifetimes remain caller-accounted. Max sampled RSS 144.5 MiB does not establish physical savings, peak allocation or leak freedom. Core ML may make internal copies."
+        },
+        "correctness": "Exclusive slots, owned output and immutable retained input prevent concurrent mutation/alias reuse. Shape/name/type/finite checks and drain-before-release remain required. Float16 requires macOS15, has separate accuracy limitations, and CPU/Neural-Engine permission does not prove placement. Direct/prepared parity is within a policy/artifact, not Double-reference equivalence.",
+        "disposition": "Retain as an explicit reuse option. One-use overhead and retained storage are documented costs; no automatic preparation threshold or existing-path regression is introduced.",
+        "next_test": "At the same model/precision/compute policy and correctness target, report full-lifetime CPU seconds, conversion/memcpy allocations and retained owned bytes across reuse counts; measure device work separately and include model load/release as distinct phases.",
+        "sources": [
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLPredictor.swift",
+            "merge": "9f56b0e1c257cbd578ab32abb930fb77828bef07",
+            "line": 52,
+            "end_line": 56,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/9f56b0e1c257cbd578ab32abb930fb77828bef07/Sources/SwiftML/Serialization/CoreMLPredictor.swift#L52-L56"
+          },
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLMatrixPool.swift",
+            "merge": "9f56b0e1c257cbd578ab32abb930fb77828bef07",
+            "line": 59,
+            "end_line": 95,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/9f56b0e1c257cbd578ab32abb930fb77828bef07/Sources/SwiftML/Serialization/CoreMLMatrixPool.swift#L59-L95"
+          },
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLPreparedMatrix.swift",
+            "merge": "9f56b0e1c257cbd578ab32abb930fb77828bef07",
+            "line": 23,
+            "end_line": 80,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/9f56b0e1c257cbd578ab32abb930fb77828bef07/Sources/SwiftML/Serialization/CoreMLPreparedMatrix.swift#L23-L80"
+          },
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLMatrixBuffers.swift",
+            "merge": "9f56b0e1c257cbd578ab32abb930fb77828bef07",
+            "line": 55,
+            "end_line": 76,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/9f56b0e1c257cbd578ab32abb930fb77828bef07/Sources/SwiftML/Serialization/CoreMLMatrixBuffers.swift#L55-L76"
+          }
+        ],
+        "evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/coreml-closeout-20261009/comparison/REPORT.md",
+          "/Users/crabel/local-ai/spl/swiftsci/coreml-closeout-20261009/comparison/results.json",
+          "/Users/crabel/local-ai/spl/swiftsci/coreml-closeout-20261009/comparison/02-8192-neural-1.json"
+        ]
+      }
+    },
+    {
+      "number": 66,
+      "title": "Add fitted preprocessing for owned Core ML matrix inputs",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/66",
+      "merge": "f901a9a8ef79b588c2616ec5673886d7d337273b",
+      "first_parent": "9f56b0e1c257cbd578ab32abb930fb77828bef07",
+      "assessment": {
+        "pr": 66,
+        "title": "Add fitted preprocessing for owned Core ML matrix inputs",
+        "pr_url": "https://github.com/Nodibell/SwiftSci/pull/66",
+        "merge": "f901a9a8ef79b588c2616ec5673886d7d337273b",
+        "first_parent": "9f56b0e1c257cbd578ab32abb930fb77828bef07",
+        "introduced_source_count": 6,
+        "change": "Fit immutable imputation/scaling state once and fill model-typed owned storage directly, with concrete typed entry points and atomic reservation reduction after temporary work ends.",
+        "default_scope": "New fitted preparation API only. Prior preparation/prediction calls remain; package-only copied packing is a benchmark reference, not a dispatch default.",
+        "classifications": [
+          "structurally_reduced_work_and_storage",
+          "correctness_required_cost",
+          "explicit_resource_tradeoff",
+          "missing_total_cpu_time_evidence"
+        ],
+        "cpu_time": {
+          "status": "not_measured_in_reviewed_evidence",
+          "details": "Two workflow sweeps report 1.19 to 1.32x single-caller throughput versus native consuming preprocessing across sizes/policies. They include preprocessing, packing, prediction, owned outputs and reservation cleanup; exclude fitting/model load. Integrated path was about 3% slower than lighter prototype in a targeted comparison after temporary-workspace admission was added. None establishes CPU seconds."
+        },
+        "memory": {
+          "benefit": "Avoids full transformed-column intermediates and a temporary packed array/copy, fills final model-typed storage outside pool actor, then releases temporary workspace quota before returning output owner. Immutable preparation metadata retains no model or slots.",
+          "new_work_or_retention": "Fitted imputer/scaler statistics live with the plan. Preparation owns a bounded Double tile plus two row-width arrays, performs finite/overflow checks, retains one model-typed output and row mapping, then still copies input into pool slot.",
+          "limitations": "Maximum sampled RSS 209.5 MiB is a process observation, not peak allocation or an allocated-byte saving. Source and fitted plan require separate accounting. The approximately 3% prototype comparison has different admission behavior and is not a default-path regression."
+        },
+        "correctness": "Training-only fitted statistics, exact feature/row identity, Double imputation/scaling before reduced-precision conversion, and row-width vDSP division order are unchanged. Full/partial tile tests and Float16/Float32/Double parity matter; dropping rounding-preserving scratch would change the contract.",
+        "disposition": "Keep. Structural elimination of batch intermediates is supported, while total CPU/device resource savings remain unmeasured.",
+        "next_test": "Collect same-policy total CPU seconds and allocation/copy inventory for native consuming, copied fused and direct fitted APIs; include temporary workspace and partial tiles, preserving exact per-policy outputs.",
+        "sources": [
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLMatrixInputPreparation.swift",
+            "merge": "f901a9a8ef79b588c2616ec5673886d7d337273b",
+            "line": 24,
+            "end_line": 45,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/f901a9a8ef79b588c2616ec5673886d7d337273b/Sources/SwiftML/Serialization/CoreMLMatrixInputPreparation.swift#L24-L45"
+          },
+          {
+            "path": "Sources/SwiftPreprocessing/Core/StandardPreprocessingPlan.swift",
+            "merge": "f901a9a8ef79b588c2616ec5673886d7d337273b",
+            "line": 53,
+            "end_line": 100,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/f901a9a8ef79b588c2616ec5673886d7d337273b/Sources/SwiftPreprocessing/Core/StandardPreprocessingPlan.swift#L53-L100"
+          },
+          {
+            "path": "Sources/SwiftPreprocessing/Core/MemoryBudget.swift",
+            "merge": "f901a9a8ef79b588c2616ec5673886d7d337273b",
+            "line": 95,
+            "end_line": 102,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/f901a9a8ef79b588c2616ec5673886d7d337273b/Sources/SwiftPreprocessing/Core/MemoryBudget.swift#L95-L102"
+          }
+        ],
+        "evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/fused-integration-20261009/workflow-01/report.md",
+          "/Users/crabel/local-ai/spl/swiftsci/fused-integration-20261009/workflow-02/report.md",
+          "/Users/crabel/local-ai/spl/swiftsci/fused-integration-20261009/workflow-01/8192-cpu-1-result.json",
+          "/Users/crabel/local-ai/spl/swiftsci/fused-integration-20261009/variance-check"
+        ]
+      }
+    },
+    {
+      "number": 67,
+      "title": "Bound Core ML inference from loading through consumption",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/67",
+      "merge": "e9deb310c51dd5f440e4e7047f70a8fdb3858a57",
+      "first_parent": "f901a9a8ef79b588c2616ec5673886d7d337273b",
+      "assessment": {
+        "pr": 67,
+        "title": "Bound Core ML inference from loading through consumption",
+        "pr_url": "https://github.com/Nodibell/SwiftSci/pull/67",
+        "merge": "e9deb310c51dd5f440e4e7047f70a8fdb3858a57",
+        "first_parent": "f901a9a8ef79b588c2616ec5673886d7d337273b",
+        "introduced_source_count": 4,
+        "change": "Reserve a complete pull-source workflow before model/source loading, bound all loaded-but-unconsumed batches and hold quota through ordered awaited consumption. Subdivide admitted capacity using private preparation budgets.",
+        "default_scope": "New explicitly configured CoreMLBatchPipeline.run only. Window and native-slot widths have no automatic policy. Existing reusable prepared inputs remain unchanged.",
+        "classifications": [
+          "bounded_resource_benefit",
+          "explicit_resource_tradeoff",
+          "correctness_required_cost",
+          "missing_total_cpu_and_device_work_evidence"
+        ],
+        "cpu_time": {
+          "status": "not_measured_in_reviewed_evidence",
+          "details": "Sustained benchmark provides steady rows/s, not CPU seconds; includes read/decode/preprocess/inference/hash/consume, excludes model load and first 32 completions. 8192-row CPU serial/window2-slot1/window4-slot2 medians are 2.52/5.14/5.36 million rows/s. Greater overlap is not proof of less total work. Source replays one held-out cycle with cache reuse."
+        },
+        "memory": {
+          "benefit": "A single count includes queued inputs, running tasks and out-of-order completed outputs until consumption. Private budgets avoid reacquiring a fully held parent quota. Pipeline-only input owners free storage/reservations deterministically after prediction.",
+          "new_work_or_retention": "Holds whole-run quota for source duration; allows up to configured window batches, tasks and completed-output dictionary entries. Larger windows increase potential live inputs/results. Row-index metadata also costs work: source capacity checks materialize originalRowIndices for identity inputs; prepared ownership separately copies row mapping.",
+          "observations": "32-case peak sampled RSS 163.75 MiB, largest second-half range 1.72 MiB; 4096-batch confirmations peak 152.64 MiB CPU and 130.92 MiB CPU+Neural-Engine policy. Traces show allocation steps followed by plateaus. File adapter autorelease correction reduced 128-read growth 436 MiB to 0.59 MiB, but belongs to benchmark tooling, not production pipeline.",
+          "limitations": "These are bounded-run observations, not leak proof or allocator-enforced RSS caps. Caller retained results/source/consumer workspace still require estimates. More concurrent loaded batches deliberately retain more storage."
+        },
+        "correctness": "Awaited ordered consumption preserves sequence and original row identity. Fixed model batches must match exactly; no padding/truncation/retries. Structured child/native drain before quota release remains necessary on error/cancellation; callback-boundary cancellation does not prove device interruption.",
+        "disposition": "Keep as a bounded overlap option. Its benefit is a count/lifetime bound and throughput choice, not established minimum total CPU or device energy.",
+        "next_test": "Measure total CPU seconds and owned live bytes for windows1/2/4 at the same slot count, with slow/out-of-order consumption and long input streams; separate device work and investigate row-index metadata allocations without weakening row provenance.",
+        "sources": [
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLBatchPipeline.swift",
+            "merge": "e9deb310c51dd5f440e4e7047f70a8fdb3858a57",
+            "line": 31,
+            "end_line": 37,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/e9deb310c51dd5f440e4e7047f70a8fdb3858a57/Sources/SwiftML/Serialization/CoreMLBatchPipeline.swift#L31-L37"
+          },
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLBatchPipeline.swift",
+            "merge": "e9deb310c51dd5f440e4e7047f70a8fdb3858a57",
+            "line": 74,
+            "end_line": 92,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/e9deb310c51dd5f440e4e7047f70a8fdb3858a57/Sources/SwiftML/Serialization/CoreMLBatchPipeline.swift#L74-L92"
+          },
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLBatchPipelineWindow.swift",
+            "merge": "e9deb310c51dd5f440e4e7047f70a8fdb3858a57",
+            "line": 14,
+            "end_line": 73,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/e9deb310c51dd5f440e4e7047f70a8fdb3858a57/Sources/SwiftML/Serialization/CoreMLBatchPipelineWindow.swift#L14-L73"
+          },
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLPreparedMatrix.swift",
+            "merge": "e9deb310c51dd5f440e4e7047f70a8fdb3858a57",
+            "line": 92,
+            "end_line": 98,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/e9deb310c51dd5f440e4e7047f70a8fdb3858a57/Sources/SwiftML/Serialization/CoreMLPreparedMatrix.swift#L92-L98"
+          }
+        ],
+        "evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/bounded-sustained-20261010/results-fixed/report.md",
+          "/Users/crabel/local-ai/spl/swiftsci/bounded-sustained-20261010/results-fixed/8192-cpu-delay0-variant4-result.json",
+          "/Users/crabel/local-ai/spl/swiftsci/bounded-sustained-20261010/long-cpu-result.json",
+          "/Users/crabel/local-ai/spl/swiftsci/bounded-sustained-20261010/long-neural-result.json",
+          "/Users/crabel/local-ai/spl/swiftsci/bounded-sustained-20261010/source-lifetime-before.json",
+          "/Users/crabel/local-ai/spl/swiftsci/bounded-sustained-20261010/source-lifetime-after.json"
+        ]
+      }
+    },
+    {
+      "number": 68,
+      "title": "Retain Core ML models across separately admitted batch runs",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/68",
+      "merge": "793afc05249d6da2cbf8cad833539cf1c9fa217b",
+      "first_parent": "309b7f09cca61b6ffc97f9d088d797bd2a4a7ece",
+      "assessment": {
+        "pr": 68,
+        "title": "Retain Core ML models across separately admitted batch runs",
+        "pr_url": "https://github.com/Nodibell/SwiftSci/pull/68",
+        "merge": "793afc05249d6da2cbf8cad833539cf1c9fa217b",
+        "first_parent": "309b7f09cca61b6ffc97f9d088d797bd2a4a7ece",
+        "introduced_source_count": 4,
+        "change": "Retain a model/pool across sequential bounded runs while separately reacquiring the batch-window work partition, sharing the previous rolling scheduler.",
+        "default_scope": "New explicit withSession/session.run option. Caller chooses chunk size and distinct lifetime/work budgets; prior whole-run API remains. No automatic model scheduler or default change.",
+        "classifications": [
+          "explicit_resource_tradeoff",
+          "structurally_reduced_repeated_model_setup",
+          "bounded_resource_benefit",
+          "missing_total_cpu_and_device_work_evidence"
+        ],
+        "cpu_time": {
+          "status": "not_measured_in_reviewed_evidence",
+          "details": "Final 144 measured samples report total elapsed, service/admission/completion time and RSS, not summed CPU seconds. Tight 8192-row neural-policy whole-run/retained 8 medians 1326.58/1387.43ms, while maximum observed peer wait 466.53/23.36ms. Thus eight-batch retained runs trade 4.6% more elapsed for 95% less maximum observed peer wait. They avoid reload 8 total 1707.25ms. Not a CPU/energy reduction claim."
+        },
+        "memory": {
+          "benefit": "Keeps one model/pool setup rather than recreating every short run, while releasing work quota between caller-bounded runs so CPU/GPU peers can enter.",
+          "new_work_or_retention": "Lifetime reservation covers model/pool buffers and context through session scope, even while idle. Final fixture partitions 49 MiB lifetime plus 64/128/192 MiB work; unused lifetime allowance cannot be lent to work. Each run still reserves its entire window.",
+          "observations": "Peak sampled RSS 179.61 MiB across final comparison; every partition drained/reacquired, including 12 active/queued cancellation checks.",
+          "limitations": "Fixed-partition fairness/latency choice, not a universal optimum, starvation guarantee, physical-memory cap or leak certificate. Fixtures are outside reservations but inside RSS. Persistent startup precedes peers; total/first completion include it, admission waits exclude it. Neural policy permits CPU fallback."
+        },
+        "correctness": "Reject overlapping session runs before admission, enforce distinct budgets and sufficient work capacity, preserve failed-run reuse, then drain callbacks and native predictions before releasing lifetime. Sequence numbers restart per run; callers keep cross-run identity if needed.",
+        "disposition": "Keep as an explicit responsiveness option. Longer-lived model retention is intentional, bounded and separately charged; no demonstrated introduced default resource regression.",
+        "next_test": "At equal total allowance and correct per-policy results, compare full-session CPU seconds and retained owned bytes against reload and whole-run options; report startup, idle residency, run chunk size, peer latency and device activity separately.",
+        "sources": [
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLBatchPipelineSession.swift",
+            "merge": "793afc05249d6da2cbf8cad833539cf1c9fa217b",
+            "line": 5,
+            "end_line": 14,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/793afc05249d6da2cbf8cad833539cf1c9fa217b/Sources/SwiftML/Serialization/CoreMLBatchPipelineSession.swift#L5-L14"
+          },
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLBatchPipelineSession.swift",
+            "merge": "793afc05249d6da2cbf8cad833539cf1c9fa217b",
+            "line": 17,
+            "end_line": 64,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/793afc05249d6da2cbf8cad833539cf1c9fa217b/Sources/SwiftML/Serialization/CoreMLBatchPipelineSession.swift#L17-L64"
+          },
+          {
+            "path": "Sources/SwiftML/Serialization/CoreMLBatchSession.swift",
+            "merge": "793afc05249d6da2cbf8cad833539cf1c9fa217b",
+            "line": 23,
+            "end_line": 60,
+            "url": "https://github.com/Nodibell/SwiftSci/blob/793afc05249d6da2cbf8cad833539cf1c9fa217b/Sources/SwiftML/Serialization/CoreMLBatchSession.swift#L23-L60"
+          }
+        ],
+        "evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/retained-session-20261011/reviewed/full/report.md",
+          "/Users/crabel/local-ai/spl/swiftsci/retained-session-20261011/reviewed/full/8192-neural-quantum8-result.json",
+          "/Users/crabel/local-ai/spl/swiftsci/retained-session-20261011/reviewed/full/fingerprint.json",
+          "/Users/crabel/local-ai/spl/swiftsci/retained-session-20261011/reviewed/validation.md"
+        ]
+      }
+    },
+    {
+      "number": 69,
+      "title": "fix(dataframe): preserve schema in empty row selections",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/69",
+      "merge": "e08ebd6a7444e16dc0137b99f0c3ec4ad21f1480",
+      "first_parent": "793afc05249d6da2cbf8cad833539cf1c9fa217b",
+      "assessment": {
+        "number": 69,
+        "url": "https://github.com/Nodibell/SwiftSci/pull/69",
+        "classification": [
+          "correctness-required"
+        ],
+        "change": "Empty row selections preserve typed columns and schema. Existing APIs change behavior for empty results; empty filter returns self.",
+        "resource_effect": "Empty gather now does per-column work instead of returning a schema-less singleton. This is necessary output, not equivalent-work overhead. Nonempty parallel dispatch is unchanged by this PR.",
+        "cpu_evidence": "No before/after operation-scoped CPU measurement established in this review.",
+        "disposition": "Keep. Measure empty wide schemas only if representative; preserve schema contract.",
+        "merge": "e08ebd6a7444e16dc0137b99f0c3ec4ad21f1480",
+        "first_parent": "793afc05249d6da2cbf8cad833539cf1c9fa217b"
+      }
+    },
+    {
+      "number": 70,
+      "title": "perf(ml): batch MLP prediction with bounded per-call scratch",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/70",
+      "merge": "309b7f09cca61b6ffc97f9d088d797bd2a4a7ece",
+      "first_parent": "e9deb310c51dd5f440e4e7047f70a8fdb3858a57",
+      "assessment": {
+        "pr": 70,
+        "title": "perf(ml): batch MLP prediction with bounded per-call scratch",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/70",
+        "merge_sha": "309b7f09cca61b6ffc97f9d088d797bd2a4a7ece",
+        "first_parent": "e9deb310c51dd5f440e4e7047f70a8fdb3858a57",
+        "review_basis": "Complete introduced first-parent production.patch, PR body, merge source and existing local experiment records. No benchmark rerun.",
+        "change": "Existing row-array MLP regression and probability predictors use 32-row BLAS chunks at >=32 rows when the widest layer is <=512. Smaller/wider calls keep the row calculation. Rejects zero-feature training.",
+        "default_impact": "Changed existing default prediction path, including legacy dataframe wrappers that still call toFeatureMatrix and then row prediction. No device routing change.",
+        "resource_labels": [
+          "structurally reduced work/storage with CPU cost unmeasured",
+          "bounded per-call scratch tradeoff",
+          "missing phase CPU evidence"
+        ],
+        "cpu_time": {
+          "status": "No prediction CPU totals in accepted final timing result schema or sampled worker logs.",
+          "scope": "Final-public/final-holdout/final-boundary/final-one-thread measure elapsed prediction including applicable preparation, input copies, validation, computation and allocation. Fitting, fixture creation, checksums and returned-output destruction are outside per-call clock.",
+          "elapsed_evidence": "92 configurations, 368 pairs, 736 fresh workers; >=32-row median speedups 1.62-8.46x. Classification dataframe 4096 rows is 6.5886 to 2.7352 ms."
+        },
+        "memory": "Two zero-initialized arrays of 32 * widest-layer Doubles per call, 512 * width bytes total, at most 262144 bytes. They release on return. Existing inputs, weights, outputs and BLAS workspace remain separate. Representative classification dataframe process peak is 24.5 to 24.8 MiB; maximum final worker 53.4 MiB. Live allocator snapshots do not count cumulative allocations or isolate transient prediction peak.",
+        "added_work_retention_parallelism": "Input copying into scratch and bias writes for each tile. No retained model workspace or new explicit parallel scheduler.",
+        "reduced_work_copies": "For 4096 rows and 3 layers, 12288 BLAS calls become 384. Two scratch arrays replace per-row/per-layer intermediate allocations. Final outputs append directly.",
+        "correctness": "Same Double weights, activations, output shapes, probability conversion and labels. Qualification 2592 cases, max abs difference 1.78e-15; checksum comparisons passed without relaxed tolerances. Width and row dimensions validate before batched copying.",
+        "disposition": "Retain. This is a source-backed reduction in dispatch/allocation work with measured elapsed benefits and a bounded transient-memory cost, not a demonstrated CPU efficiency regression or universal memory saving.",
+        "next_test": "P2: collect user+system CPU deltas and allocation counts around equal completed prediction work, including 31/32/33 rows, width 512/513, and dataframe preparation. Keep the same numerical checks.",
+        "sources": [
+          "https://github.com/Nodibell/SwiftSci/blob/309b7f09cca61b6ffc97f9d088d797bd2a4a7ece/Sources/SwiftML/Core/MLP.swift#L395",
+          "https://github.com/Nodibell/SwiftSci/blob/309b7f09cca61b6ffc97f9d088d797bd2a4a7ece/Sources/SwiftML/Core/MLPBatchedPrediction.swift#L14",
+          "https://github.com/Nodibell/SwiftSci/blob/309b7f09cca61b6ffc97f9d088d797bd2a4a7ece/Sources/SwiftML/Core/DataFrame+ML.swift#L53"
+        ],
+        "local_evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/mlp-timing-20261011/PREDICTION-BENCHMARK.md",
+          "/Users/crabel/local-ai/spl/swiftsci/mlp-timing-20261011/final-public/fingerprint.json",
+          "/Users/crabel/local-ai/spl/swiftsci/mlp-timing-20261011/final-public/classifier-frame-4096-32-r0-candidate.result.json"
+        ]
+      }
+    },
+    {
+      "number": 71,
+      "title": "Prepare dataframe matrices directly for reusable MLP prediction",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/71",
+      "merge": "bf60c6e244e8306a06b944bea7df39c7aab439f8",
+      "first_parent": "e08ebd6a7444e16dc0137b99f0c3ec4ad21f1480",
+      "assessment": {
+        "pr": 71,
+        "title": "Prepare dataframe matrices directly for reusable MLP prediction",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/71",
+        "merge_sha": "bf60c6e244e8306a06b944bea7df39c7aab439f8",
+        "first_parent": "e08ebd6a7444e16dc0137b99f0c3ec4ad21f1480",
+        "review_basis": "Complete introduced first-parent production.patch, PR body, merge source and existing local experiment records. No benchmark rerun.",
+        "change": "Adds direct selected-row dataframe to owned matrix extraction and matrix overloads for MLP regression, class labels and probabilities. Shares the existing bounded CPU batching implementation.",
+        "default_impact": "Opt-in public extraction and overloads. Existing dataframe prediction wrappers still produce nested row arrays; no automatic routing or existing caller migration.",
+        "resource_labels": [
+          "structurally reduced work/storage with CPU cost unmeasured",
+          "opt-in representation",
+          "missing phase CPU evidence"
+        ],
+        "cpu_time": {
+          "status": "No CPU total fields in accepted extraction result records; sampled timing logs are empty.",
+          "scope": "Elapsed complete workflow includes selection, conversion, packing, optional source disposal, prediction/output allocation and final release; fitting, fixtures, warmup and validation excluded. Preprocessing disabled.",
+          "elapsed_evidence": "16384 selected rows x128 features, direct/public speedup 1.43-1.47x for one prediction, 1.09-1.15x for eight. Sparse irregular column-major controls are near parity. Default all-row extraction lacks a dedicated timing comparison."
+        },
+        "memory": "Direct matrix stores one contiguous 8*N*P-byte Double payload, names and selected-row provenance. Observed extra heap at checkpoints for 16384x128 is 41.70 MiB public gathered-column route versus 16.02-16.16 MiB direct. This is sampled live heap, not exact transient peak or cumulative allocations. Source snapshots are preserved through ownership.",
+        "added_work_retention_parallelism": "Allocates/zero-initializes final matrix, validates selection and converts source values. Reused matrix stays live for caller lifetime. Batched prediction still copies tiles; small/wide matrix fallback materializes each row. No new explicit parallel work.",
+        "reduced_work_copies": "Avoids gathered dataframe, selected compact-column intermediates, and complete matrix-to-nested-row conversion for batched predictions. Matrix fallback still has per-row arrays.",
+        "correctness": "Positional features must match fit order; accepts Double/Int64/Bool with existing conversion limits, preserves duplicate columns/rows and provenance, nil/NaN policy and both layouts. All 672 benchmark workers report zero matrix/prediction differences. Source/result release checks are workload checks, not global leak proof.",
+        "disposition": "Retain as explicit representation. Lower sampled heap and elapsed time are measured for stated workflows; CPU cost remains unmeasured. Do not claim legacy dataframe defaults now use it.",
+        "next_test": "P2: compare CPU time and live owned bytes for direct matrix versus lean selected columns at both layouts and all-row/irregular selections, including small/wide fallback and repeated reuse.",
+        "sources": [
+          "https://github.com/Nodibell/SwiftSci/blob/bf60c6e244e8306a06b944bea7df39c7aab439f8/Sources/SwiftDataFrame/Core/DataFrame+Matrix.swift#L68",
+          "https://github.com/Nodibell/SwiftSci/blob/bf60c6e244e8306a06b944bea7df39c7aab439f8/Sources/SwiftML/Core/MLP.swift#L736",
+          "https://github.com/Nodibell/SwiftSci/blob/bf60c6e244e8306a06b944bea7df39c7aab439f8/Sources/SwiftML/Core/MLPPreparedMatrix.swift#L11",
+          "https://github.com/Nodibell/SwiftSci/blob/bf60c6e244e8306a06b944bea7df39c7aab439f8/Sources/SwiftML/Core/DataFrame+ML.swift#L53"
+        ],
+        "local_evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/direct-matrix-preparation-20261012/REPORT.md",
+          "/Users/crabel/local-ai/spl/swiftsci/direct-matrix-preparation-20261012/extended/fingerprint.json",
+          "/Users/crabel/local-ai/spl/swiftsci/direct-matrix-preparation-20261012/extended/00-timing-0-direct-matrix.json"
+        ]
+      }
+    },
+    {
+      "number": 72,
+      "title": "Transform prepared matrices with fitted preprocessing",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/72",
+      "merge": "5389a5978f4ec4625721ed38a390a2e8c993479a",
+      "first_parent": "bf60c6e244e8306a06b944bea7df39c7aab439f8",
+      "assessment": {
+        "pr": 72,
+        "title": "Transform prepared matrices with fitted preprocessing",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/72",
+        "merge_sha": "5389a5978f4ec4625721ed38a390a2e8c993479a",
+        "first_parent": "bf60c6e244e8306a06b944bea7df39c7aab439f8",
+        "review_basis": "Complete introduced first-parent production.patch, PR body, merge source and existing local experiment records. No benchmark rerun.",
+        "change": "Adds consuming/nonconsuming Imputer and StandardScaler transforms for owned matrices; shares imputation and add-then-divide implementation with existing transforms.",
+        "default_impact": "Opt-in matrix overloads. Existing rows/columns share helpers but retain their algorithms and caller routing. Generic Pipeline is unchanged.",
+        "resource_labels": [
+          "explicit resource tradeoff",
+          "structurally reduced work/storage with CPU cost unmeasured",
+          "correctness-required arithmetic",
+          "missing phase CPU evidence"
+        ],
+        "cpu_time": {
+          "status": "No CPU totals in accepted matrix-preprocessing result schema; sampled timing logs empty.",
+          "scope": "Complete elapsed workflow includes extraction, imputation, scaling, prediction/output allocation and cleanup. Fitting, fixtures, warmup and reference checks excluded. These gains include #71 and must not be multiplied by #71 gains.",
+          "elapsed_evidence": "16384x128 row-major one prediction is 1.16-1.22x faster than public column control, eight 1.05-1.06x. Matched column-major scaled cases take about 9-16% longer. Sparse irregular row-major cases span 0.968-1.005x."
+        },
+        "memory": "Unique consuming matrix transforms can reuse payload; shared snapshots detach on mutation. Clean imputer returns unchanged storage. Scaling allocates negative means, row, shifted and normalized arrays proportional to feature width and copies rows in/out. Sampled extra heap 16384x128 decreases 42.01 to 16.02-16.16 MiB versus public workflow. Maximum process peak 123387904 bytes includes setup and fitting.",
+        "added_work_retention_parallelism": "Imputer scans for any NaN, then traverses full matrix only when needed. Scaler gathers each row, does row-width vDSP add/divide, and scatters normalized row. Matrix aliases require ownership-preserving copy-on-write; no new scheduler.",
+        "reduced_work_copies": "Carries one matrix through preprocessing and prediction, avoiding return to compact columns/nested rows. Final imputation traverses contiguous storage in either layout. Shared helpers replace duplicated loops.",
+        "correctness": "Fitted statistics only; preserve schema/layout/provenance, signed zero and finite bitwise outputs, NaN classification and nonfinite fitted behavior. Array-backed division output deliberately preserves rounding where matrix alignment could select different vDSP arithmetic. Final 1092 workers report zero measured differences.",
+        "disposition": "Retain explicit layout tradeoff. Column-major elapsed loss is measured, but there is no isolated CPU regression measurement. Extra row scratch/copies partly preserve the numerical contract; they are not all removable overhead.",
+        "next_test": "P2: profile equal-work CPU and allocation traffic separately by layout/ownership. Test any column-major alternative against bitwise numerical contract before replacing row-width arithmetic.",
+        "sources": [
+          "https://github.com/Nodibell/SwiftSci/blob/5389a5978f4ec4625721ed38a390a2e8c993479a/Sources/SwiftPreprocessing/Core/Imputer+Matrix.swift#L16",
+          "https://github.com/Nodibell/SwiftSci/blob/5389a5978f4ec4625721ed38a390a2e8c993479a/Sources/SwiftPreprocessing/Core/StandardScaler+Matrix.swift#L17",
+          "https://github.com/Nodibell/SwiftSci/blob/5389a5978f4ec4625721ed38a390a2e8c993479a/Sources/SwiftDataFrame/Core/PreparedNumericBatch.swift#L240"
+        ],
+        "local_evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/matrix-preprocessing-20261012/REPORT.md",
+          "/Users/crabel/local-ai/spl/swiftsci/matrix-preprocessing-20261012/contiguous-extended/fingerprint.json",
+          "/Users/crabel/local-ai/spl/swiftsci/matrix-preprocessing-20261012/contiguous-extended/00-timing-0-direct-matrix.json"
+        ]
+      }
+    },
+    {
+      "number": 81,
+      "title": "fix(vision): decode standard ONNX tensor fields and packed doubles",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/81",
+      "merge": "20efb02161e91d8961af3b6428f59918d209c63b",
+      "first_parent": "7854dbf5985646604816f09791f12f196e5e0d9b",
+      "assessment": {
+        "pr": 81,
+        "title": "fix(vision): decode standard ONNX tensor fields and packed doubles",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/81",
+        "merge_sha": "20efb02161e91d8961af3b6428f59918d209c63b",
+        "first_parent": "7854dbf5985646604816f09791f12f196e5e0d9b",
+        "review_basis": "Complete introduced first-parent production.patch, PR body, merge source and existing local experiment records. No benchmark rerun.",
+        "change": "Repairs ONNX TensorProto field numbers for dimensions, data type, name and doubles; adds packed double decoding.",
+        "default_impact": "Existing ONNXWeightReader model load path changes. Valid corrected exporter files now load weights instead of returning no tensors.",
+        "resource_labels": [
+          "correctness-required cost",
+          "missing performance evidence"
+        ],
+        "cpu_time": {
+          "status": "No resource benchmark for this repair found in body or reviewed evidence.",
+          "scope": "Unit/strict ONNX validation and regression policy are correctness evidence; do not quantify load CPU or memory.",
+          "elapsed_evidence": null
+        },
+        "memory": "Packed double decoding materializes packed Data and a Double array, then existing path maps to Float and creates MLXArray. Raw-data and Float output conversion already exist. Correct loading retains actual model weights that the broken parser omitted. Exact peak live bytes and cumulative copies unmeasured.",
+        "added_work_retention_parallelism": "Decodes and stores previously skipped standard fields and packed double payloads. No parallelism or cache policy added.",
+        "reduced_work_copies": "No intended work/copy reduction. This repair makes the existing loader return correct results.",
+        "correctness": "Official ONNX TensorProto tags and six independently verified float/double/raw fixtures. Preserves existing Float MLX output conversion. Empty/wrong answers are not valid cheaper alternatives.",
+        "disposition": "Retain as correctness repair. Do not count newly loaded weights against a broken no-weights baseline as a resource regression.",
+        "next_test": "P3: only if loader resources matter, measure correct ONNX loads for packed versus raw encodings at representative tensor sizes with identical values and bounded peak live bytes.",
+        "sources": [
+          "https://github.com/Nodibell/SwiftSci/blob/20efb02161e91d8961af3b6428f59918d209c63b/Sources/SwiftVision/YOLO/ONNXWeightReader.swift#L54",
+          "https://github.com/Nodibell/SwiftSci/blob/20efb02161e91d8961af3b6428f59918d209c63b/Sources/SwiftVision/YOLO/ONNXWeightReader.swift#L76",
+          "https://github.com/Nodibell/SwiftSci/blob/20efb02161e91d8961af3b6428f59918d209c63b/Sources/SwiftVision/YOLO/ONNXWeightReader.swift#L111"
+        ],
+        "local_evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/pr-resource-audit-20261018/collected/81/pr-body.md",
+          "/Users/crabel/local-ai/spl/swiftsci/pr-resource-audit-20261018/collected/81/production.patch"
+        ]
+      }
+    },
+    {
+      "number": 82,
+      "title": "perf(dataframe): accelerate compact gathers and matrix preparation",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/82",
+      "merge": "cddc00c81a1c1b3307b83b85767c358337d96235",
+      "first_parent": "20efb02161e91d8961af3b6428f59918d209c63b",
+      "assessment": {
+        "pr": 82,
+        "title": "perf(dataframe): accelerate compact gathers and matrix preparation",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/82",
+        "merge_sha": "cddc00c81a1c1b3307b83b85767c358337d96235",
+        "first_parent": "20efb02161e91d8961af3b6428f59918d209c63b",
+        "review_basis": "Complete introduced first-parent production.patch, PR body, merge source and existing local experiment records. No benchmark rerun.",
+        "change": "Optimizes compact gathers, matrix packing/direct extraction, row-major scaler borrowing and typed-column construction. Existing selectingRows now dispatches bounded parallel column gathers above threshold.",
+        "default_impact": "Changes existing compact selectingRows, matrix(), prepareNumericMatrix and matrix scaler implementation. Parallel policy activates with >=2 columns, >=1024 selected rows and >=262144 selected values. Workers are min(columns,8,activeProcessorCount). Still present at audited upstream e005efcc1dd55bb40f9e1ad63ac29e2d29de5178.",
+        "resource_labels": [
+          "explicit concurrency tradeoff",
+          "observed tail-latency regression under saturation",
+          "structurally reduced work/copies with phase CPU cost unmeasured",
+          "missing equal-work CPU evidence"
+        ],
+        "cpu_time": {
+          "status": "Accepted uninstrumented timing receipts have wall intervals, not CPU totals. Dedicated memory logs contain coarse whole-process user+system CPU, but include setup/validation and unequal completed demand. Fixed-demand timing logs sampled are empty.",
+          "scope": "Example eight dense callers, no ballast, memory probe reports 10.06 to 10.93 process CPU seconds while completing 331 to 523 queries. Both records mark timingValid=false. These totals cannot establish extra CPU per correct result or be compared as equal-work CPU regression.",
+          "elapsed_evidence": "Confirmation dense 16384x128, 16-query loaded speedup 1.760x, construction-inclusive 1.591x. Eight dense callers saturated 1-second windows have P95 speedup 0.913x without ballast and 0.868x with 256 MiB ballast, about 9.5% and 15.2% longer. Without ballast observed range 0.840-1.378x crosses parity; with ballast range 0.788-0.882x stays slower. Throughput improves 1.529-1.530x. Matched scheduled demand at 200/280/320/400 requests per second improves response P95; 400/s no ballast 228.891 to19.829ms, with baseline backlog. Finite deterministic one-second test is not queue stability."
+        },
+        "memory": "Retained compact payload unchanged. Gather allocates selected destination values and validity bitmap only if selected nils require it; worker outputs occupy disjoint slots. Reuse sampled extra heap is essentially identical. Dense 8-caller no-ballast diagnostic extra heap 461.188 to492.292 MiB is a single-process observation while completing different query counts; with ballast it is 732.592 to727.491 MiB. RSS/process peaks are not owned live storage.",
+        "added_work_retention_parallelism": "Up to eight synchronous joined gather workers per call, potentially nested under multiple independent model callers. Threshold detection and contiguous-row scan add bounded routing work. No retained scratch. Dispatch is real, but hardware/cache/scheduling cause of P95 loss remains unproved.",
+        "reduced_work_copies": "Gather combines values and validity traversal for larger selections with unsafe uninitialized destination. Row-major scaler borrows source rows instead of allocating/gathering a row buffer. Packing/direct extraction tile destination to 16KiB without full intermediate matrices; typed nonoptional constructor can inline.",
+        "correctness": "Validates indices before allocations/writes, preserves duplicate order and nil bitmaps. Concurrent workers initialize disjoint columns exactly once and join before borrow ends. Row-width vDSP rounding preserved. Accepted predictions and source/query/cache owner checks pass.",
+        "disposition": "P1 resource qualification target because existing default compact paths now fan out. Keep measured saturated P95 tradeoff visible. Current evidence supports throughput improvement and equal retained payload, but cannot establish CPU per result. Do not infer CPU regression from worker count. Lower worker caps and serial variants already failed to consistently fix dense tails.",
+        "next_test": "P1: equal scheduled/completed requests, user+system CPU deltas over the complete operation and drained backlog, live allocation samples, P95, and outer concurrency 1/4/8. Reuse existing paced callers and compare current eight workers to credible serial/cap alternatives only under the same numerical and latency constraints.",
+        "sources": [
+          "https://github.com/Nodibell/SwiftSci/blob/cddc00c81a1c1b3307b83b85767c358337d96235/Sources/SwiftDataFrame/Core/PreparedNumericBatch+Gather.swift#L5",
+          "https://github.com/Nodibell/SwiftSci/blob/cddc00c81a1c1b3307b83b85767c358337d96235/Sources/SwiftDataFrame/Core/PreparedNumericBatch.swift#L40",
+          "https://github.com/Nodibell/SwiftSci/blob/cddc00c81a1c1b3307b83b85767c358337d96235/Sources/SwiftDataFrame/Core/DataFrame+Matrix.swift#L118",
+          "https://github.com/Nodibell/SwiftSci/blob/cddc00c81a1c1b3307b83b85767c358337d96235/Sources/SwiftPreprocessing/Core/StandardScaler+Matrix.swift#L29"
+        ],
+        "local_evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/compact-delivery-20261016/REPORT.md",
+          "/Users/crabel/local-ai/spl/swiftsci/compact-delivery-20261016/contention-confirmation/comparison.json",
+          "/Users/crabel/local-ai/spl/swiftsci/compact-delivery-20261016/contention-confirmation/case002-baseline-memory0.log",
+          "/Users/crabel/local-ai/spl/swiftsci/compact-delivery-20261016/contention-confirmation/case002-candidate-memory0-result.json",
+          "/Users/crabel/local-ai/spl/swiftsci/compact-tail-latency-20261016/REPORT.md",
+          "/Users/crabel/local-ai/spl/swiftsci/compact-tail-latency-20261016/paced-load/REPORT.md"
+        ]
+      }
+    },
+    {
+      "number": 83,
+      "title": "feat(ml): add reusable standardized CPU prediction snapshots",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/83",
+      "merge": "41d46449a25c7b65a6ac6c42b32466cbb3ba7dc5",
+      "first_parent": "cddc00c81a1c1b3307b83b85767c358337d96235",
+      "assessment": {
+        "pr": 83,
+        "title": "feat(ml): add reusable standardized CPU prediction snapshots",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/83",
+        "merge_sha": "41d46449a25c7b65a6ac6c42b32466cbb3ba7dc5",
+        "first_parent": "cddc00c81a1c1b3307b83b85767c358337d96235",
+        "review_basis": "Complete introduced first-parent production.patch, PR body, merge source and existing local experiment records. No benchmark rerun.",
+        "change": "Adds training-fitted immutable CPU predictor and reusable compact input workflow with deferred selection/edits, source ordering, context identity, finite validation and cooperative memory-budget admission. Adds direct compact batch regressor overload.",
+        "default_impact": "Opt-in fitStandardized/FittedMLPPredictor workflow, not a replacement for legacy row/matrix predictors or automatic cache strategy. Existing StandardPreprocessingPlan fill uses new row-writer helper with same arithmetic. No production call-site migration to fitStandardized found beyond definition and guide.",
+        "resource_labels": [
+          "explicit speed-memory tradeoff",
+          "structurally reduced retained transformed copies with CPU cost unmeasured",
+          "opt-in representation",
+          "correctness-required validation"
+        ],
+        "cpu_time": {
+          "status": "Workflow receipts/results record elapsed seconds, ownership and RSS; no user/system CPU totals in sampled files.",
+          "scope": "312 records, 192 timing,96 qualification,24 separate memory probes. Cold four-entry cache sequences include prepare/admission/predict/consume/evict/destruct, four misses and twelve hits. Fitting and initial data generation excluded.",
+          "elapsed_evidence": "4096x128 hot transformed cache31.0272ms versus compact prepared38.0781ms, paired prepared/transformed speedup0.811x, about23% longer.8192x128 hot61.9056 versus86.1126ms, paired0.721x, about39% longer. Tiny one-shot0.0040 versus0.0079ms; churn43.3559 versus49.8826ms. Compact is about14% faster than raw cache at4096, near parity at8192."
+        },
+        "memory": "Compact inputs retain entire source batch, source positions, optional sorted-to-logical mapping, dense selected copies only for edited columns, and fitted preprocessing. Small selections still pin the whole source. Inputs do not retain fitted predictor/weights/model actor. Predictor owns immutable weight snapshots via COW. Idle owners hold no reservation. Whole-process peaks transformed/prepared54.38/30.42MiB at4096hot and86.61/46.78MiB at8192hot, about44%/46% less. One probe per case/route includes setup/training, not precise retained cache bytes. Capacity estimates conservatively double-charge shared storage and are policy, not allocator measurements.",
+        "added_work_retention_parallelism": "Preparation finite-validates a complete transformed tile pass, materializes occurrence arrays, gathers edited columns and sorts full-batch prefixes; prediction repeats imputation/scaling each reuse and restores logical order when sorted. Per-call local writer tile plus two BLAS buffers. Independent immutable predictors permit caller-chosen concurrent predictions, admitted separately. Training materializes matrix then nested rows and optimizer state outside inference estimates.",
+        "reduced_work_copies": "No full gathered copies for unedited selected columns, no retained transformed matrix per cache entry, and preprocessing fills bounded BLAS tiles directly. Source-order mapping and edited buffers replace full transformed caches. Weights and source snapshots can share immutable storage.",
+        "correctness": "Training-only imputation/scaling, unique names and exact ordered schema, finite targets/statistics/transformed values/weights/results, logical duplicate/edit semantics, exact fitted-context identity. Full prefix sorting preserves original tail batch-size class. Snapshot isolation survives refits; reservations release on failure/cancellation after synchronous work finishes. Qualification compares Double bits to public legacy route.",
+        "disposition": "Retain explicit storage choice. This is a documented slower-but-lower-process-peak alternative to transformed caching, not an existing-default CPU regression. Source retention can outweigh its benefit for sparse selections. Finite validation and ownership charges are deliberate correctness/accounting costs.",
+        "next_test": "P2: equal-work CPU and live owned/cache bytes versus transformed/raw cache across hit rates, source-to-selection ratios, edit density and quotas. Include preparation validation and complete cache destruction. Test preselecting a smaller source when sparse inputs would pin a large batch.",
+        "sources": [
+          "https://github.com/Nodibell/SwiftSci/blob/41d46449a25c7b65a6ac6c42b32466cbb3ba7dc5/Sources/SwiftML/Core/FittedMLPPredictor.swift#L30",
+          "https://github.com/Nodibell/SwiftSci/blob/41d46449a25c7b65a6ac6c42b32466cbb3ba7dc5/Sources/SwiftML/Core/MLPPredictionRequest.swift#L3",
+          "https://github.com/Nodibell/SwiftSci/blob/41d46449a25c7b65a6ac6c42b32466cbb3ba7dc5/Sources/SwiftML/Core/MLPPredictionPreparation.swift#L33",
+          "https://github.com/Nodibell/SwiftSci/blob/41d46449a25c7b65a6ac6c42b32466cbb3ba7dc5/Sources/SwiftML/Core/PreparedMLPInputMemory.swift#L16",
+          "https://github.com/Nodibell/SwiftSci/blob/41d46449a25c7b65a6ac6c42b32466cbb3ba7dc5/Sources/SwiftML/SwiftML.docc/ReusableCPUPrediction.md#L8"
+        ],
+        "local_evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/reusable-cpu-delivery-20261017/REPORT.md",
+          "/Users/crabel/local-ai/spl/swiftsci/reusable-cpu-delivery-20261017/workflows/comparison.json",
+          "/Users/crabel/local-ai/spl/swiftsci/reusable-cpu-delivery-20261017/workflows/fingerprint.json",
+          "/Users/crabel/local-ai/spl/swiftsci/reusable-cpu-delivery-20261017/workflows/case00-preparedCache-timing0-result.json"
+        ]
+      }
+    },
+    {
+      "number": 84,
+      "title": "perf(preprocessing): reduce input packing and normalization overhead",
+      "url": "https://github.com/Nodibell/SwiftSci/pull/84",
+      "merge": "e005efcc1dd55bb40f9e1ad63ac29e2d29de5178",
+      "first_parent": "41d46449a25c7b65a6ac6c42b32466cbb3ba7dc5",
+      "assessment": {
+        "pr": 84,
+        "title": "perf(preprocessing): reduce input packing and normalization overhead",
+        "url": "https://github.com/Nodibell/SwiftSci/pull/84",
+        "merge_sha": "e005efcc1dd55bb40f9e1ad63ac29e2d29de5178",
+        "first_parent": "41d46449a25c7b65a6ac6c42b32466cbb3ba7dc5",
+        "review_basis": "Complete introduced first-parent production.patch, PR body, merge source and existing local experiment records. No benchmark rerun.",
+        "change": "Reduces buffer-borrow and offset overhead, groups dense gathers by four columns, unrolls indexed gathers by four rows, and changes Core ML finite checking to a full nonthrowing reduction followed by one error branch.",
+        "default_impact": "Changes implementations of existing compact CPU and fused Core ML preprocessing paths. No API, retained representation, device policy or automatic routing change. Full finite scan remains at current audited upstream e005efcc1dd55bb40f9e1ad63ac29e2d29de5178.",
+        "resource_labels": [
+          "structurally reduced overhead with phase CPU cost unmeasured",
+          "observed tiny elapsed loss",
+          "explicit invalid-input scan tradeoff",
+          "missing isolated CPU evidence"
+        ],
+        "cpu_time": {
+          "status": "CPU workflow result/receipt schema has no CPU totals. Core ML /usr/bin/time logs provide coarse whole-process user+system totals, not operation-isolated CPU.",
+          "scope": "Confirmation 8 timing logs per variant/case: process CPU median baseline/candidate seconds0.270/0.265 at1024rows1caller;0.320/0.320 at1024rows4callers;0.545/0.540 at8192rows1caller;1.230/1.210 at8192rows4callers2slots. Rounded0.01s totals include compilation/setup/reference checks and all modes, so do not attribute differences to fused preparation or GPU/NPU work. Core ML policy is CPU-only.",
+          "elapsed_evidence": "CPU4096x128hot confirmation1.091x,edited1.113x,churn1.119x;8192x128hot1.069x. CoreML8192single fused-direct1.286x,4callers2slots1.124x. Tiny1x7oneShot confirmation0.914x, about7.0 to7.6 microseconds, about0.6us slower, range0.769-1.100x crosses parity. Same caller choice remains."
+        },
+        "memory": "No new retained-storage design. Same tile/shifted/normalized arrays and destination storage. Separate CPU process peak at4096hot30.42 to30.44MiB;CoreML8192four-callers all-modes182.30 to186.19MiB. Single probes include setup/training or compilation and all modes; no general owned-memory regression or reduction follows.",
+        "added_work_retention_parallelism": "Core ML old allSatisfy could stop at first nonfinite destination value; new allFinite inspects every element to allow vectorized valid-input reduction. Earlier invalid element therefore incurs more validation traversal structurally, but no invalid-position resource benchmark establishes magnitude. Unrolling adds no threads or retained caches.",
+        "reduced_work_copies": "Borrows normalization inputs and scratch once per tile instead of per row; hoists offsets, groups dense writes and unrolls indexed loads. Same arithmetic and memory payload; does not remove finite validation. No measured allocation-count reduction supplied.",
+        "correctness": "Double addition then division, one destination Float/Float16 conversion, existing bounds/stride checks and scalar tails. Nonfinite rejection after destination conversion and reservation release remain.1522 tests each Debug/Release;992 workers and numerical/owner checks pass without relaxed criteria.",
+        "disposition": "Retain larger-workload overhead reductions and expose tiny elapsed loss. P2 qualification of full scan and tiny case is useful; neither current timing variation nor LOC/unrolling proves resource regression. No GPU or Neural Engine conclusion.",
+        "next_test": "P2: equal completed-work CPU per operation and instruction/allocation totals for tiny vs larger valid inputs; Core ML nonfinite-at-first/middle/last positions. Separate compilation/setup from request CPU while preserving converted-type rejection and cleanup.",
+        "sources": [
+          "https://github.com/Nodibell/SwiftSci/blob/e005efcc1dd55bb40f9e1ad63ac29e2d29de5178/Sources/SwiftML/Serialization/CoreMLMatrixInputPreparation.swift#L49",
+          "https://github.com/Nodibell/SwiftSci/blob/e005efcc1dd55bb40f9e1ad63ac29e2d29de5178/Sources/SwiftML/Serialization/CoreMLMatrixInputPreparation.swift#L81",
+          "https://github.com/Nodibell/SwiftSci/blob/e005efcc1dd55bb40f9e1ad63ac29e2d29de5178/Sources/SwiftPreprocessing/Core/PreprocessingTileNormalization.swift#L6",
+          "https://github.com/Nodibell/SwiftSci/blob/e005efcc1dd55bb40f9e1ad63ac29e2d29de5178/Sources/SwiftPreprocessing/Core/StandardPreprocessingRowWriter.swift#L69"
+        ],
+        "local_evidence": [
+          "/Users/crabel/local-ai/spl/swiftsci/preprocessing-throughput-delivery-20261017/REPORT.md",
+          "/Users/crabel/local-ai/spl/swiftsci/preprocessing-throughput-delivery-20261017/mlp-confirmation/comparison.json",
+          "/Users/crabel/local-ai/spl/swiftsci/preprocessing-throughput-delivery-20261017/coreml-confirmation/case03-baseline-timing0.log",
+          "/Users/crabel/local-ai/spl/swiftsci/preprocessing-throughput-delivery-20261017/coreml-confirmation/case03-candidate-timing0.log"
+        ]
+      }
+    }
+  ],
+  "dependency_review": {
+    "url": "https://github.com/ml-explore/mlx/pull/4602",
+    "change": "Load complete NEON float16 comparison and negation lane masks instead of broadcasting the first lane.",
+    "classification": "Correctness-required; no total-resource before/after evidence.",
+    "deployment_scope": "macOS 14 deployment-target fallback, including newer runtime macOS."
+  }
+}

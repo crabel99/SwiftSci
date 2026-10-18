@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Resource-efficiency audit of all 27 authored PRs](benchmarks/2026-10-18-pr-resource-audit/README.md) separates measured costs, explicit caller tradeoffs, correctness requirements, and missing CPU evidence. It prioritizes the CSV and gather defaults for resource qualification.
+
 - [Dataframe evaluation protocol](benchmarks/2026-10-18-dataframe-evaluation/README.md) defines comparable experiments, resource and compatibility gates, complete-workflow checks, and the initial CSV and sorting experiment register. It is a plan, not a claim that the new gates have passed.
 
 - [Shared Metal device production qualification](benchmarks/2026-10-07-device-production.md) records the allocation-path change, 874 Release passes and paired public-pipeline results across four sizes.
