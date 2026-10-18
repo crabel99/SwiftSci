@@ -1,0 +1,152 @@
+{
+  "status": "passed",
+  "artifact_checks": [
+    {
+      "phase": "screen",
+      "cases": 20,
+      "processes": 180,
+      "samples": 900
+    },
+    {
+      "phase": "confirm",
+      "cases": 10,
+      "processes": 100,
+      "samples": 500
+    }
+  ],
+  "verification": [
+    {
+      "variant": "radix",
+      "commit": "5a253f13b72004bcc71981d2609b05a81539e125",
+      "full_tests_per_configuration": 333,
+      "thread_sanitizer_tests": 4
+    },
+    {
+      "variant": "merge",
+      "commit": "f583c3be4e158b62543fc774c43b180cba7727ec",
+      "full_tests_per_configuration": 333,
+      "thread_sanitizer_tests": 4
+    }
+  ],
+  "decisions": {
+    "radix": {
+      "benefit_pass": true,
+      "protected_loss_violations": [],
+      "rss_review": [],
+      "screen_viable": true,
+      "confirmation_pass": true,
+      "confirmation_failures": []
+    },
+    "merge": {
+      "benefit_pass": true,
+      "protected_loss_violations": [
+        {
+          "case": [
+            "sort",
+            131073,
+            4,
+            "random",
+            "numeric",
+            "asc"
+          ],
+          "saving_ms": -2.057751,
+          "bound_ms": 0.1
+        },
+        {
+          "case": [
+            "sort",
+            131073,
+            4,
+            "ties",
+            "numeric",
+            "asc"
+          ],
+          "saving_ms": -1.596501,
+          "bound_ms": 0.1
+        },
+        {
+          "case": [
+            "sort",
+            1000000,
+            4,
+            "ties",
+            "numeric",
+            "asc"
+          ],
+          "saving_ms": -1.169209,
+          "bound_ms": 1
+        }
+      ],
+      "rss_review": [],
+      "screen_viable": false
+    }
+  },
+  "scope": "Trial qualification only; no production policy or external-library ranking",
+  "raw_evidence": "/Users/crabel/local-ai/spl/swiftsci/csv-sort-throughput-20261017/parallel-sort-trial-20261018",
+  "integration": {
+    "checks": [
+      {
+        "case": "workflow-scientific",
+        "status": "passed"
+      },
+      {
+        "case": "workflow-scientific-unique-keys",
+        "status": "passed"
+      },
+      {
+        "case": "workflow-scientific-feature-order",
+        "status": "passed"
+      },
+      {
+        "case": "workflow-scientific-row-order",
+        "status": "passed"
+      },
+      {
+        "case": "workflow-regression-fit",
+        "status": "passed"
+      },
+      {
+        "case": "workflow-regression-fit-heldout-shift",
+        "status": "passed"
+      },
+      {
+        "case": "workflow-regression-native",
+        "status": "passed"
+      },
+      {
+        "case": "workflow-regression-native-heldout-shift",
+        "status": "passed"
+      },
+      {
+        "case": "medium-csv-stream-read",
+        "status": "passed"
+      },
+      {
+        "case": "medium-csv-stream-filter",
+        "status": "passed"
+      },
+      {
+        "case": "medium-csv-stream-group",
+        "status": "passed"
+      },
+      {
+        "case": "mixed-medium-csv-stream-read",
+        "status": "passed"
+      },
+      {
+        "case": "mixed-medium-csv-stream-filter",
+        "status": "passed"
+      },
+      {
+        "case": "mixed-medium-csv-stream-group",
+        "status": "passed"
+      },
+      {
+        "case": "wine-red-pipeline",
+        "status": "passed"
+      }
+    ],
+    "scope": "Existing full-output conformance controls only; no timing comparison",
+    "status": "passed"
+  }
+}
