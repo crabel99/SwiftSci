@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Matched CPU and memory measurements for four merged PRs](benchmarks/2026-10-18-pr-resource-metrics/README.md) records 19 cases and 342 validated workers. CSV, direct target extraction, compact preparation, and batched prediction save CPU; quoted CSV retains additional spare capacity.
+
 - [Resource-efficiency audit of all 27 authored PRs](benchmarks/2026-10-18-pr-resource-audit/README.md) separates measured costs, explicit caller tradeoffs, correctness requirements, and missing CPU evidence. It prioritizes the CSV and gather defaults for resource qualification.
 
 - [Dataframe evaluation protocol](benchmarks/2026-10-18-dataframe-evaluation/README.md) defines comparable experiments, resource and compatibility gates, complete-workflow checks, and the initial CSV and sorting experiment register. It is a plan, not a claim that the new gates have passed.

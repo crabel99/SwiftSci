@@ -2,6 +2,8 @@
 
 Reviewed October 18, 2026 against the [library-wide engineering objective](../../CHARTER.md#resource-efficiency-across-the-library). Scope is all 27 merged `Nodibell/SwiftSci` PRs authored by `crabel99`, plus the separate MLX SIMD repair. The upstream snapshot is `e005efcc1dd55bb40f9e1ad63ac29e2d29de5178`.
 
+Subsequent measurement: the [first matched CPU/memory study](../2026-10-18-pr-resource-metrics/README.md) now qualifies selected workloads from #39, #45, #70, and #82. It records CPU reductions as well as memory gains and two remaining memory tradeoffs. The retrospective findings below retain their original evidence boundary.
+
 ## What the audit establishes
 
 We have made several explicit resource tradeoffs and accepted some workload-specific latency losses. The evidence does not establish that our production changes generally increased CPU cost per correct result. Many changes remove conversions, copies, temporary arrays, repeated device setup, or repeated model loading. Those reductions remain valuable under the revised objective.
