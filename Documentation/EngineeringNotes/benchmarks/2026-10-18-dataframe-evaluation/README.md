@@ -119,7 +119,7 @@ A size-dependent dispatcher needs a stable crossover on confirmation cases, incl
 
 [experiments.tsv](experiments.tsv) owns the initial questions and sequence. Every row is planned work, not an implemented or accepted change. Each experiment gets its own implementation commit and the existing [decision record](../../DECISION-RECORDS.md) before promotion. Combine winners only after separate qualification, then measure the combination and remove one change at a time to identify interactions.
 
-The first item is qualification of the full workflows. The corrected CSV v2 and sort v1 operation comparison does not qualify the separate streaming-CSV or wine-pipeline adapters, which still have unmatched inference responsibilities.
+Q0 now has [matched streaming and wine ingestion evidence](workflow-qualification.md), with complete output validation and scientific/persisted CPU conformance controls. Broader application-scale timing and memory qualification remain open. The next execution experiment is S1; the four-case operation comparison alone does not qualify a new storage or scheduling policy.
 
 ## Check the current operation baseline
 
@@ -134,4 +134,4 @@ python check-tabular-baseline.py --repo /absolute/path/to/implementation \
 
 The qualifying implementation snapshot is local commit `7fb74d1982ae5e80b5896c87d2db211c6595e931`. Its source fingerprint is `886c4dbc723c4f7cf34e20c3a892694e4f02ca13008d17c5fe0368679d0c41f0`. The measured worker receipt retains its original working-tree provenance. Source equivalence was checked when that work was committed.
 
-This record defines the evaluation process. It does not claim that its proposed experiments, expanded coverage, uncertainty analysis, or workflow promotion gates have already been implemented or passed.
+This record defines the evaluation process. The linked Q0 report records the completed ingestion qualification. Execution experiments, expanded application coverage, uncertainty analysis and promotion gates remain open.

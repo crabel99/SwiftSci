@@ -1,0 +1,40 @@
+{
+  "application_scale_coverage_complete": false,
+  "candidate_improvement_demonstrated": false,
+  "complete_outputs_validated": true,
+  "control_samples": 32,
+  "control_workers": 16,
+  "controller_tests": {
+    "discovered": 224,
+    "optional_metal_skips": 4,
+    "passed": 220
+  },
+  "energy_qualified": false,
+  "evidence_root": "/Users/crabel/local-ai/spl/swiftsci/csv-sort-throughput-20261017/workflow-qualification-20261018",
+  "implementation_commit": "d23bf7cac92fe9f9c10bd98046ca8ade354b5a3c",
+  "input_types_observed_before_warmups": true,
+  "memory_tradeoff_qualified": false,
+  "promotion_qualified": false,
+  "qualification_sha256": "1da1d7abf98aeb453e97139e57d2f3d210ca95cb7a08d3c2acf654df41e7555f",
+  "runs": [
+    {
+      "contract_hash": "1c9a9600d23df388ed1e71be88c86201b9bb959fb5c2f41fcde2bb23c50760ea",
+      "observed_schema_receipts": 60,
+      "run": "/Users/crabel/local-ai/spl/swiftsci/csv-sort-throughput-20261017/workflow-qualification-20261018/stream-comparison/run.json",
+      "samples": 300,
+      "source_fingerprint": "761f848cd50811e62f9e13b4089a25d62675020c8f9599415f94da7fe672f9c8",
+      "workers": 60
+    },
+    {
+      "contract_hash": "c0b8829f685b2ece49042484d62aea2ea4c919ee83f5b8d18ead253416b6b2d4",
+      "observed_schema_receipts": 20,
+      "run": "/Users/crabel/local-ai/spl/swiftsci/csv-sort-throughput-20261017/workflow-qualification-20261018/wine-comparison/run.json",
+      "samples": 100,
+      "source_fingerprint": "761f848cd50811e62f9e13b4089a25d62675020c8f9599415f94da7fe672f9c8",
+      "workers": 20
+    }
+  ],
+  "scope": "Matched warm-cache CSV workflow screening",
+  "status": "passed",
+  "worker_checks": 88
+}
