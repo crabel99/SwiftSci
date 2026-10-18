@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "contrasts": [
+    {
+      "phase": "screen",
+      "cases": 20,
+      "processes": 200,
+      "samples": 1000
+    },
+    {
+      "phase": "confirm",
+      "cases": 4,
+      "processes": 80,
+      "samples": 400
+    },
+    {
+      "phase": "protected-followup",
+      "cases": 2,
+      "processes": 40,
+      "samples": 200
+    }
+  ],
+  "source_fingerprint": "2d5771e0ee6c4e37b8cbc35add4322bf776e8eda01ba86a0628e6ca674ce3f0c",
+  "repeatable_screening_losses": [
+    {
+      "phase": "screen",
+      "case": [
+        "sort",
+        129,
+        4,
+        "random",
+        "numeric"
+      ],
+      "saving_ms": -0.000459,
+      "range_ms": [
+        -0.000792,
+        -8.4e-05
+      ]
+    },
+    {
+      "phase": "screen",
+      "case": [
+        "sort",
+        4096,
+        1,
+        "random",
+        "numeric"
+      ],
+      "saving_ms": -0.002791,
+      "range_ms": [
+        -0.007291,
+        -0.002626
+      ]
+    },
+    {
+      "phase": "protected-followup",
+      "case": [
+        "sort",
+        4096,
+        1,
+        "random",
+        "numeric"
+      ],
+      "saving_ms": -0.0025415000000000004,
+      "range_ms": [
+        -0.010583,
+        -0.001293
+      ]
+    }
+  ],
+  "library_patch_coverage": {
+    "status": "passed",
+    "added_executable_lines": 12,
+    "covered_lines": 12,
+    "uncovered": [],
+    "line_numbers": [
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      146
+    ]
+  },
+  "tests_per_configuration": 332,
+  "integration_controls": 15,
+  "limits": "Small-case losses retained; elapsed-time and process-RSS evidence only. No energy, CPU-work, allocation trace or external-library ranking.",
+  "commit": "2196173097b55cb6b15a8d619e6d8032d0e95106",
+  "raw_evidence": "/Users/crabel/local-ai/spl/swiftsci/csv-sort-throughput-20261017/serial-specialization-20261018"
+}
