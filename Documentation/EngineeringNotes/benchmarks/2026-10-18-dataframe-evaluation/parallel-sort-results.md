@@ -4,7 +4,9 @@
 
 ## Decision
 
-Keep the parallel radix branch for combined-workflow evaluation. It passes the registered screening and held-out operation criteria. Reject the current chunk-sort-and-merge dispatcher because it exceeds protected-case slowdown limits. This rejects this implementation and threshold, not comparison sorting as an algorithm family. No production default or public policy changes follow from this trial.
+Decision update after the user clarified the objective on 2026-10-18: park the parallel radix branch as a latency alternative. Its 28.3% increase in accumulated CPU time does not justify replacing the serial default under the [resource-priority evaluation rules](README.md#decision-order). CPU time is a proxy, and no energy conclusion follows.
+
+The original parallel radix trial passes the registered screening and held-out operation criteria. Reject the current chunk-sort-and-merge dispatcher because it exceeds protected-case slowdown limits. This rejects this implementation and threshold, not comparison sorting as an algorithm family. No production default or public policy changes follow from this trial.
 
 Both candidates start at `d23bf7cac92fe9f9c10bd98046ca8ade354b5a3c`. The scalar gather specialization remains separate, so it cannot explain these results. Existing sparse, small, run-adaptive and NaN fallback paths remain in place. Stable ties, missing rows last, signed-zero payloads, both directions and native column types retain the same contract.
 
@@ -107,7 +109,7 @@ Positive paired savings favor the candidate. Negative savings remain visible eve
 
 ## Next decision
 
-Keep the radix and rejected merge commits local and independently reproducible. Next test interaction with the already confirmed scalar gather specialization, including the variable narrow mixed case and complete CSV-to-matrix workflows. Freeze a fresh combined-workflow plan before collecting new data. Do not retune against these held-out cases or infer a new ranking against Polars from this SwiftSci-only trial.
+Keep the radix and rejected merge commits local and independently reproducible. Next measure accumulated CPU time for the scalar gather specialization and prioritize changes that reduce work, copying or retained storage. Combined workflows remain necessary for any candidate advanced under that objective. Freeze a fresh resource-focused plan with workload latency limits before collecting new data. Do not retune against these held-out cases or infer a new ranking against Polars from this SwiftSci-only trial.
 
 Raw evidence and repeatable procedures: `/Users/crabel/local-ai/spl/swiftsci/csv-sort-throughput-20261017/parallel-sort-trial-20261018`. Build, verify, compare, audit and integration scripts remain with the receipts. Use fresh output destinations for a repeat. Frozen source fingerprints are below.
 

@@ -2,7 +2,13 @@
 
 Status: evaluation protocol, recorded 2026-10-18. This record belongs to `codex/engineering-notes` and must not be merged into an implementation PR. It applies the [scientific computing charter](../../CHARTER.md) and the [decision record format](../../DECISION-RECORDS.md).
 
-The objective is lower execution and memory cost for scientific and local-model workflows on Apple silicon. Polars is a reference implementation and an alternative source of algorithms. Beating one Polars timing is not the acceptance criterion.
+The default objective is lower total resource cost per correct scientific or local-model result on Apple silicon. Treat response time as a workload constraint. A shorter elapsed time alone does not justify more accumulated CPU time or memory. Polars is a reference implementation and an alternative source of algorithms; beating one Polars timing is not the acceptance criterion.
+
+The user clarified this priority after the parallel sorting results on 2026-10-18. Preserve the original experiment plans and measurements. Their latency criteria remain historical facts, but passing them does not qualify a resource-efficient default.
+
+Measure process CPU time per completed operation, peak owned live bytes, retained bytes, allocation and copy costs, and elapsed time separately. Measure throughput under a fixed resource budget and bounded concurrency when claiming that an optimization makes room for more useful computation. Native scheduling remains valid, but total CPU time must include all threads. On heterogeneous Apple silicon cores, CPU time is a resource-use proxy rather than an exact measure of instructions, FLOPs or energy.
+
+Prefer fewer passes, fewer allocations, less copied data, compact working storage and removal of repeated setup. Verify the resulting costs. Keep alternatives that trade additional resources for lower latency explicit. Define acceptable latency and resource tradeoffs for the actual workload before measuring; do not invent a universal weighted score or a new threshold after seeing results.
 
 ## Decision order
 
@@ -119,7 +125,7 @@ A size-dependent dispatcher needs a stable crossover on confirmation cases, incl
 
 [experiments.tsv](experiments.tsv) owns the initial questions and sequence. Every row is planned work, not an implemented or accepted change. Each experiment gets its own implementation commit and the existing [decision record](../../DECISION-RECORDS.md) before promotion. Combine winners only after separate qualification, then measure the combination and remove one change at a time to identify interactions.
 
-Q0 now has [matched streaming and wine ingestion evidence](workflow-qualification.md), with complete output validation and scientific/persisted CPU conformance controls. Broader application-scale timing and memory qualification remain open. [S1 screening](row-gather-results.md) found specialization gains and a size-dependent row-parallel result. Its current dispatcher is not promoted. [Serial specialization confirmation](serial-specialization-results.md) isolates a smaller change with held-out mixed-table gains, a recorded small numeric-sort loss, and qualified production coverage. [S2 and S3 results](parallel-sort-results.md) retain the parallel radix candidate after held-out operation checks and reject the current chunk-merge route. Radix trades lower latency for more CPU work; narrow mixed-table behavior remains variable. The four-case operation comparison alone does not qualify a new storage or scheduling policy.
+Q0 now has [matched streaming and wine ingestion evidence](workflow-qualification.md), with complete output validation and scientific/persisted CPU conformance controls. Broader application-scale timing and memory qualification remain open. [S1 screening](row-gather-results.md) found specialization gains and a size-dependent row-parallel result. Its current dispatcher is not promoted. [Serial specialization confirmation](serial-specialization-results.md) isolates a smaller change with held-out mixed-table gains, a recorded small numeric-sort loss, and qualified production coverage. [S2 and S3 results](parallel-sort-results.md) qualify parallel radix against the original latency plan and reject the current chunk-merge route. Under the later resource-priority decision, park radix as an explicit latency alternative instead of promoting it as the default. The serial scalar specialization also needs total CPU-time measurements before a resource-efficiency claim. Narrow mixed-table behavior remains variable. The four-case operation comparison alone does not qualify a new storage or scheduling policy.
 
 ## Check the current operation baseline
 
