@@ -1,6 +1,6 @@
 id	level	question	hypothesis	cost_to_test	constraint	status
 Q0	qualification	Match complete workflow ingestion and establish control evidence	Same responsibilities through final numerical output	Matched v2 ingestion; application-scale timing and memory coverage remain open	Required before workflow performance claims	ingestion-qualified-controls-passed
-S1	execution	Partition output gathering by row ranges as well as columns	More independent work for narrow large tables	Scheduling and destination ownership overhead	Existing storage and public interfaces unchanged	planned
+S1	execution	Partition output gathering by row ranges as well as columns	More independent work for narrow large tables	Scheduling and destination ownership overhead	Existing storage and public interfaces unchanged	screened-specialization-and-crossover-confirmation-open
 S2	algorithm	Parallel stable radix sorting	Reduce serial permutation time with bounded private histograms	Scratch, prefix work, bandwidth, and stable scatter rules	Compare independently with S3 from the same baseline	planned
 S3	algorithm	Stable chunk sorting and parallel merge	Comparison sorting may balance work better on some distributions	Pair storage, merge scratch, and copied bytes	Competing candidate; do not assume the Polars algorithm caused its advantage	planned
 C1	ingestion	Chunk-local typed CSV decoding with final contiguous output	Remove whole-file field descriptors	Builder multiplicity and final consolidation	Keep native column types and current public storage	planned
