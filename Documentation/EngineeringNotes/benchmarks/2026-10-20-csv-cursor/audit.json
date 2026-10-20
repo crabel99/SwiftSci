@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "base_sha": "546510bb7df19fc87a664bded5947c738011ee1d",
+  "changes": {
+    "baseline": [],
+    "active": [
+      "Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ],
+    "cursor": [
+      "Sources/SwiftDataFrame/IO/CSVReader.swift",
+      "Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ],
+    "specialized": [
+      "Sources/SwiftDataFrame/IO/CSVReader.swift",
+      "Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ]
+  },
+  "runs": [
+    {
+      "prefix": "",
+      "reference": "active",
+      "candidate": "cursor",
+      "workers": 80
+    },
+    {
+      "prefix": "heldout-",
+      "reference": "active",
+      "candidate": "cursor",
+      "workers": 80
+    },
+    {
+      "prefix": "specialized-",
+      "reference": "active",
+      "candidate": "specialized",
+      "workers": 80
+    },
+    {
+      "prefix": "heldout-specialized-",
+      "reference": "active",
+      "candidate": "specialized",
+      "workers": 80
+    },
+    {
+      "prefix": "production-",
+      "reference": "baseline",
+      "candidate": "cursor",
+      "workers": 80
+    },
+    {
+      "prefix": "heldout-production-",
+      "reference": "baseline",
+      "candidate": "cursor",
+      "workers": 80
+    }
+  ],
+  "full_api_workers": 480,
+  "timing_samples": 1500,
+  "memory_samples": 180,
+  "diagnostic_workers": 75,
+  "diagnostic_samples": 600,
+  "cursor_offsets_checked": 2800581,
+  "parser_parity_cases": 2022,
+  "existing_csv_tests_per_candidate": 16
+}

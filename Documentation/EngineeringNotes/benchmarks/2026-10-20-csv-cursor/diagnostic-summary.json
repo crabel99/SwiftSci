@@ -1,0 +1,53 @@
+[
+  {
+    "probe": "lookup",
+    "fixture": "/private/tmp/swiftsci-csv-cursor-20261020/fixtures/1000000-2-True.csv",
+    "median_cpu_ns": {
+      "baseline": 1501000.0,
+      "active": 1830500.0,
+      "cursor": 2180500.0
+    }
+  },
+  {
+    "probe": "lookup",
+    "fixture": "/Users/crabel/local-ai/spl/swiftsci/pr-resource-metrics-20261018/fixtures/02-pr39-csv-quoted-1000000-4.csv",
+    "median_cpu_ns": {
+      "baseline": 3261000.0,
+      "active": 3837000.0,
+      "cursor": 4356000.0
+    }
+  },
+  {
+    "probe": "lookup",
+    "fixture": "/private/tmp/swiftsci-csv-cursor-20261020/fixtures/1000000-4-False.csv",
+    "median_cpu_ns": {
+      "baseline": 3257000.0,
+      "active": 3563500.0,
+      "cursor": 4564500.0
+    }
+  },
+  {
+    "probe": "index",
+    "fixture": "/private/tmp/swiftsci-csv-cursor-20261020/fixtures/1000000-2-True.csv",
+    "median_cpu_ns": {
+      "baseline": 9443000,
+      "active": 9356000
+    }
+  },
+  {
+    "probe": "index",
+    "fixture": "/Users/crabel/local-ai/spl/swiftsci/pr-resource-metrics-20261018/fixtures/02-pr39-csv-quoted-1000000-4.csv",
+    "median_cpu_ns": {
+      "baseline": 19330000,
+      "active": 16964000
+    }
+  },
+  {
+    "probe": "index",
+    "fixture": "/private/tmp/swiftsci-csv-cursor-20261020/fixtures/1000000-4-False.csv",
+    "median_cpu_ns": {
+      "baseline": 14077000,
+      "active": 14080000
+    }
+  }
+]

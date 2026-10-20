@@ -1,0 +1,321 @@
+--- a/Sources/SwiftDataFrame/IO/CSVReader.swift
++++ b/Sources/SwiftDataFrame/IO/CSVReader.swift
+@@ -207,9 +207,9 @@
+             switch overrideType {
+             case .int32, .int64:
+                 var values = CSVColumnBuilder<Int64>(capacity: dataRowsToRead)
+-                for r in 0..<dataRowsToRead {
+-                    let rowIdx = startRowIdx + r
+-                    if let offset = records.field(row: rowIdx, column: colIndex) {
++                var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++                for _ in 0..<dataRowsToRead {
++                    if let offset = cursor.next() {
+                         values.append(parseCSVInt64(buffer: buffer, offset: offset, nullMatcher: nullMatcher))
+                     } else {
+                         values.append(nil)
+@@ -218,9 +218,9 @@
+                 return values.column(named: name)
+             case .float32, .float64:
+                 var values = CSVColumnBuilder<Double>(capacity: dataRowsToRead)
+-                for r in 0..<dataRowsToRead {
+-                    let rowIdx = startRowIdx + r
+-                    if let offset = records.field(row: rowIdx, column: colIndex) {
++                var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++                for _ in 0..<dataRowsToRead {
++                    if let offset = cursor.next() {
+                         values.append(parseCSVDouble(buffer: buffer, offset: offset, nullMatcher: nullMatcher))
+                     } else {
+                         values.append(nil)
+@@ -229,9 +229,9 @@
+                 return values.column(named: name)
+             case .boolean:
+                 var values = CSVColumnBuilder<Bool>(capacity: dataRowsToRead)
+-                for r in 0..<dataRowsToRead {
+-                    let rowIdx = startRowIdx + r
+-                    if let offset = records.field(row: rowIdx, column: colIndex) {
++                var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++                for _ in 0..<dataRowsToRead {
++                    if let offset = cursor.next() {
+                         let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+                         values.append(options.nullValues.contains(str) ? nil : Bool.parse(from: str))
+                     } else {
+@@ -241,9 +241,9 @@
+                 return values.column(named: name)
+             case .utf8:
+                 var values = CSVColumnBuilder<String>(capacity: dataRowsToRead)
+-                for r in 0..<dataRowsToRead {
+-                    let rowIdx = startRowIdx + r
+-                    if let offset = records.field(row: rowIdx, column: colIndex) {
++                var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++                for _ in 0..<dataRowsToRead {
++                    if let offset = cursor.next() {
+                         let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+                         values.append(options.nullValues.contains(str) ? nil : str)
+                     } else {
+@@ -253,9 +253,9 @@
+                 return values.column(named: name)
+             case .date32:
+                 var values = CSVColumnBuilder<Date>(capacity: dataRowsToRead)
+-                for r in 0..<dataRowsToRead {
+-                    let rowIdx = startRowIdx + r
+-                    if let offset = records.field(row: rowIdx, column: colIndex) {
++                var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++                for _ in 0..<dataRowsToRead {
++                    if let offset = cursor.next() {
+                         let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+                         values.append(options.nullValues.contains(str) ? nil : Date.parse(from: str))
+                     } else {
+@@ -268,9 +268,9 @@
+ 
+         if !options.inferTypes {
+             var values = CSVColumnBuilder<String>(capacity: dataRowsToRead)
+-            for r in 0..<dataRowsToRead {
+-                let rowIdx = startRowIdx + r
+-                if let offset = records.field(row: rowIdx, column: colIndex) {
++            var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++            for _ in 0..<dataRowsToRead {
++                if let offset = cursor.next() {
+                     let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+                     values.append(options.nullValues.contains(str) ? nil : str)
+                 } else {
+@@ -286,9 +286,9 @@
+         var isDate = true
+         var nonNullCount = 0
+         let sampleRows = min(dataRowsToRead, 1000)
+-        for r in 0..<sampleRows {
+-            let rowIdx = startRowIdx + r
+-            guard let offset = records.field(row: rowIdx, column: colIndex) else { continue }
++        var sampleCursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++        for _ in 0..<sampleRows {
++            guard let offset = sampleCursor.next() else { continue }
+             if offset.length == 0 { continue }
+             let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+             if options.nullValues.contains(str) { continue }
+@@ -307,9 +307,9 @@
+ 
+         if nonNullCount == 0 {
+             var values = CSVColumnBuilder<String>(capacity: dataRowsToRead)
+-            for r in 0..<dataRowsToRead {
+-                let rowIdx = startRowIdx + r
+-                if let offset = records.field(row: rowIdx, column: colIndex) {
++            var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++            for _ in 0..<dataRowsToRead {
++                if let offset = cursor.next() {
+                     let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+                     values.append(options.nullValues.contains(str) ? nil : str)
+                 } else {
+@@ -321,9 +321,9 @@
+ 
+         if isInt64 {
+             var values = CSVColumnBuilder<Int64>(capacity: dataRowsToRead)
+-            for r in 0..<dataRowsToRead {
+-                let rowIdx = startRowIdx + r
+-                if let offset = records.field(row: rowIdx, column: colIndex) {
++            var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++            for _ in 0..<dataRowsToRead {
++                if let offset = cursor.next() {
+                     values.append(parseCSVInt64(buffer: buffer, offset: offset, nullMatcher: nullMatcher))
+                 } else {
+                     values.append(nil)
+@@ -334,9 +334,9 @@
+ 
+         if isDouble {
+             var values = CSVColumnBuilder<Double>(capacity: dataRowsToRead)
+-            for r in 0..<dataRowsToRead {
+-                let rowIdx = startRowIdx + r
+-                if let offset = records.field(row: rowIdx, column: colIndex) {
++            var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++            for _ in 0..<dataRowsToRead {
++                if let offset = cursor.next() {
+                     values.append(parseCSVDouble(buffer: buffer, offset: offset, nullMatcher: nullMatcher))
+                 } else {
+                     values.append(nil)
+@@ -347,9 +347,9 @@
+ 
+         if isBool {
+             var values = CSVColumnBuilder<Bool>(capacity: dataRowsToRead)
+-            for r in 0..<dataRowsToRead {
+-                let rowIdx = startRowIdx + r
+-                if let offset = records.field(row: rowIdx, column: colIndex) {
++            var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++            for _ in 0..<dataRowsToRead {
++                if let offset = cursor.next() {
+                     let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+                     values.append(options.nullValues.contains(str) ? nil : Bool.parse(from: str))
+                 } else {
+@@ -361,9 +361,9 @@
+ 
+         if isDate {
+             var values = CSVColumnBuilder<Date>(capacity: dataRowsToRead)
+-            for r in 0..<dataRowsToRead {
+-                let rowIdx = startRowIdx + r
+-                if let offset = records.field(row: rowIdx, column: colIndex) {
++            var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++            for _ in 0..<dataRowsToRead {
++                if let offset = cursor.next() {
+                     let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+                     values.append(options.nullValues.contains(str) ? nil : Date.parse(from: str))
+                 } else {
+@@ -374,9 +374,9 @@
+         }
+ 
+         var values = CSVColumnBuilder<String>(capacity: dataRowsToRead)
+-        for r in 0..<dataRowsToRead {
+-            let rowIdx = startRowIdx + r
+-            if let offset = records.field(row: rowIdx, column: colIndex) {
++        var cursor = records.columnCursor(column: colIndex, startRow: startRowIdx)
++        for _ in 0..<dataRowsToRead {
++            if let offset = cursor.next() {
+                 let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+                 values.append(options.nullValues.contains(str) ? nil : str)
+             } else {
+--- a/Sources/SwiftDataFrame/IO/CSVRecordIndex.swift
++++ b/Sources/SwiftDataFrame/IO/CSVRecordIndex.swift
+@@ -22,14 +22,35 @@
+ }
+ 
+ internal struct CSVRecordIndex: Sendable {
+-    let fields: [PackedCSVField]
++    private let fields: CSVFieldStorage
++
++    init(fields: [PackedCSVField], rowStarts: [Int]) {
++        self.fields = .flat(fields)
++        self.rowStarts = rowStarts
++    }
++
++    init(blocks: CSVFieldBlocks, rowStarts: [Int]) {
++        self.fields = .blocked(blocks.finished())
++        self.rowStarts = rowStarts
++    }
+     let rowStarts: [Int]
+ 
+     var count: Int { rowStarts.count - 1 }
+     var isEmpty: Bool { count == 0 }
+ 
+     func row(at index: Int) -> [CSVFieldOffset] {
+-        fields[rowStarts[index]..<rowStarts[index + 1]].map(\.offset)
++        (rowStarts[index]..<rowStarts[index + 1]).map { fields[$0].offset }
++    }
++
++    func columnCursor(column: Int, startRow: Int) -> CSVColumnCursor {
++        switch fields {
++        case .flat(let values):
++            return CSVColumnCursor(rowStarts: rowStarts, row: startRow, column: column,
++                                   current: values, blocks: [])
++        case .blocked(let blocks):
++            return CSVColumnCursor(rowStarts: rowStarts, row: startRow, column: column,
++                                   current: blocks.first ?? [], blocks: blocks)
++        }
+     }
+ 
+     func field(row: Int, column: Int) -> CSVFieldOffset? {
+@@ -39,3 +60,82 @@
+         return fields[start + column].offset
+     }
+ }
++
++private enum CSVFieldStorage: Sendable {
++    case flat([PackedCSVField])
++    case blocked([[PackedCSVField]])
++
++    subscript(index: Int) -> PackedCSVField {
++        switch self {
++        case .flat(let values): return values[index]
++        case .blocked(let blocks): return blocks[index >> 14][index & 16383]
++        }
++    }
++}
++
++internal struct CSVFieldBlocks {
++    private var completed = [[PackedCSVField]]()
++    private var current = [PackedCSVField]()
++    private(set) var count = 0
++
++    init(byteCount: Int) {
++        current.reserveCapacity(min(byteCount / 8, 16384))
++    }
++
++    mutating func append(_ field: PackedCSVField) {
++        if current.count == 16384 {
++            completed.append(current)
++            current = []
++            current.reserveCapacity(16384)
++        }
++        current.append(field)
++        count += 1
++    }
++
++    mutating func truncate(to newCount: Int) {
++        while count > newCount {
++            if current.isEmpty { current = completed.removeLast() }
++            let removed = min(count - newCount, current.count)
++            current.removeLast(removed)
++            count -= removed
++        }
++    }
++
++    func finished() -> [[PackedCSVField]] {
++        var result = completed
++        if !current.isEmpty { result.append(current) }
++        return result
++    }
++}
++
++internal struct CSVColumnCursor {
++    let rowStarts: [Int]
++    var row: Int
++    let column: Int
++    var current: [PackedCSVField]
++    let blocks: [[PackedCSVField]]
++    private var blockStart = 0
++
++    init(rowStarts: [Int], row: Int, column: Int,
++         current: [PackedCSVField], blocks: [[PackedCSVField]]) {
++        self.rowStarts = rowStarts
++        self.row = row
++        self.column = column
++        self.current = current
++        self.blocks = blocks
++    }
++
++    mutating func next() -> CSVFieldOffset? {
++        guard row < rowStarts.count - 1 else { return nil }
++        let start = rowStarts[row]
++        let end = rowStarts[row + 1]
++        row += 1
++        guard column < end - start else { return nil }
++        let index = start + column
++        if index >= blockStart + current.count {
++            blockStart = (index >> 14) << 14
++            current = blocks[index >> 14]
++        }
++        return current[index - blockStart].offset
++    }
++}
+--- a/Sources/SwiftDataFrame/IO/SystemsCSVParser.swift
++++ b/Sources/SwiftDataFrame/IO/SystemsCSVParser.swift
+@@ -190,8 +190,7 @@
+     private func scanIndex(
+         buffer: UnsafeBufferPointer<UInt8>, range: Range<Int>
+     ) -> CSVRecordIndex {
+-        var fields = [PackedCSVField]()
+-        fields.reserveCapacity(min(range.count / 8, 100_000))
++        var fields = CSVFieldBlocks(byteCount: range.count)
+         var rowStarts = [0]
+         rowStarts.reserveCapacity(min(range.count / 16, 100_000) + 1)
+ 
+@@ -260,10 +259,10 @@
+             rowStarts.append(fields.count)
+         } else {
+             // Keep the public parser's existing EOF behavior for an unfinished row.
+-            fields.removeSubrange(rowStarts.last!..<fields.count)
+-        }
+-
+-        return CSVRecordIndex(fields: fields, rowStarts: rowStarts)
++            fields.truncate(to: rowStarts.last!)
++        }
++
++        return CSVRecordIndex(blocks: fields, rowStarts: rowStarts)
+     }
+ }
+ 
