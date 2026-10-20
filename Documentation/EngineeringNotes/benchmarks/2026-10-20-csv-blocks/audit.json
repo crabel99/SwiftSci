@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "baseline_sha": "546510bb7df19fc87a664bded5947c738011ee1d",
+  "changes": {
+    "baseline": [],
+    "blocked": [
+      "Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ],
+    "active": [
+      "Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ],
+    "flattened": [
+      "Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ]
+  },
+  "runs": [
+    {
+      "prefix": "",
+      "variant": "blocked",
+      "workers": 80,
+      "timing_samples": 250,
+      "memory_samples": 30
+    },
+    {
+      "prefix": "active-",
+      "variant": "active",
+      "workers": 80,
+      "timing_samples": 250,
+      "memory_samples": 30
+    },
+    {
+      "prefix": "heldout-",
+      "variant": "active",
+      "workers": 80,
+      "timing_samples": 250,
+      "memory_samples": 30
+    },
+    {
+      "prefix": "flattened-",
+      "variant": "flattened",
+      "workers": 80,
+      "timing_samples": 250,
+      "memory_samples": 30
+    }
+  ],
+  "checks": [
+    {
+      "prefix": "",
+      "parity": "cases=2022 fields=207933 sha256=e7742a1f7bb83c0599bb0f6a1f501d61db40650424e90ec30c99634706700cb0",
+      "explicit_fixtures_per_variant": 7
+    },
+    {
+      "prefix": "active-",
+      "parity": "cases=2022 fields=207933 sha256=e7742a1f7bb83c0599bb0f6a1f501d61db40650424e90ec30c99634706700cb0",
+      "explicit_fixtures_per_variant": 7
+    },
+    {
+      "prefix": "flattened-",
+      "parity": "cases=2022 fields=207933 sha256=e7742a1f7bb83c0599bb0f6a1f501d61db40650424e90ec30c99634706700cb0",
+      "explicit_fixtures_per_variant": 7
+    }
+  ],
+  "total_workers": 320,
+  "total_timing_samples": 1000,
+  "total_memory_samples": 120
+}

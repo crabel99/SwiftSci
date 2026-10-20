@@ -1,0 +1,101 @@
+--- a/Sources/SwiftDataFrame/IO/CSVRecordIndex.swift
++++ b/Sources/SwiftDataFrame/IO/CSVRecordIndex.swift
+@@ -22,14 +22,24 @@
+ }
+ 
+ internal struct CSVRecordIndex: Sendable {
+-    let fields: [PackedCSVField]
++    private let fields: CSVFieldStorage
++
++    init(fields: [PackedCSVField], rowStarts: [Int]) {
++        self.fields = .flat(fields)
++        self.rowStarts = rowStarts
++    }
++
++    init(blocks: CSVFieldBlocks, rowStarts: [Int]) {
++        self.fields = .blocked(blocks.blocks)
++        self.rowStarts = rowStarts
++    }
+     let rowStarts: [Int]
+ 
+     var count: Int { rowStarts.count - 1 }
+     var isEmpty: Bool { count == 0 }
+ 
+     func row(at index: Int) -> [CSVFieldOffset] {
+-        fields[rowStarts[index]..<rowStarts[index + 1]].map(\.offset)
++        (rowStarts[index]..<rowStarts[index + 1]).map { fields[$0].offset }
+     }
+ 
+     func field(row: Int, column: Int) -> CSVFieldOffset? {
+@@ -39,3 +49,44 @@
+         return fields[start + column].offset
+     }
+ }
++
++private enum CSVFieldStorage: Sendable {
++    case flat([PackedCSVField])
++    case blocked([[PackedCSVField]])
++
++    subscript(index: Int) -> PackedCSVField {
++        switch self {
++        case .flat(let values): return values[index]
++        case .blocked(let blocks): return blocks[index >> 14][index & 16383]
++        }
++    }
++}
++
++internal struct CSVFieldBlocks {
++    private(set) var blocks = [[PackedCSVField]]()
++    private(set) var count = 0
++    private let initialCapacity: Int
++
++    init(byteCount: Int) {
++        initialCapacity = min(byteCount / 8, 16384)
++    }
++
++    mutating func append(_ field: PackedCSVField) {
++        if count & 16383 == 0 {
++            var block = [PackedCSVField]()
++            block.reserveCapacity(count == 0 ? initialCapacity : 16384)
++            blocks.append(block)
++        }
++        blocks[blocks.count - 1].append(field)
++        count += 1
++    }
++
++    mutating func truncate(to newCount: Int) {
++        while count > newCount {
++            let removed = min(count - newCount, blocks[blocks.count - 1].count)
++            blocks[blocks.count - 1].removeLast(removed)
++            count -= removed
++            if blocks.last!.isEmpty { blocks.removeLast() }
++        }
++    }
++}
+--- a/Sources/SwiftDataFrame/IO/SystemsCSVParser.swift
++++ b/Sources/SwiftDataFrame/IO/SystemsCSVParser.swift
+@@ -190,8 +190,7 @@
+     private func scanIndex(
+         buffer: UnsafeBufferPointer<UInt8>, range: Range<Int>
+     ) -> CSVRecordIndex {
+-        var fields = [PackedCSVField]()
+-        fields.reserveCapacity(min(range.count / 8, 100_000))
++        var fields = CSVFieldBlocks(byteCount: range.count)
+         var rowStarts = [0]
+         rowStarts.reserveCapacity(min(range.count / 16, 100_000) + 1)
+ 
+@@ -260,10 +259,10 @@
+             rowStarts.append(fields.count)
+         } else {
+             // Keep the public parser's existing EOF behavior for an unfinished row.
+-            fields.removeSubrange(rowStarts.last!..<fields.count)
+-        }
+-
+-        return CSVRecordIndex(fields: fields, rowStarts: rowStarts)
++            fields.truncate(to: rowStarts.last!)
++        }
++
++        return CSVRecordIndex(blocks: fields, rowStarts: rowStarts)
+     }
+ }
+ 
