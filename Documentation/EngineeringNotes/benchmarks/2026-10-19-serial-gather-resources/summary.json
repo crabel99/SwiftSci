@@ -1,0 +1,609 @@
+{
+  "processes": 192,
+  "measured_timing_samples": 600,
+  "memory_samples": 72,
+  "validated": true,
+  "rows": [
+    {
+      "case": [
+        "sort",
+        4096,
+        4,
+        "random",
+        "numeric",
+        "asc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 77792,
+          "total_cpu_ns": 79000,
+          "call_ns": 77333,
+          "release_ns": 500,
+          "held_heap_delta_bytes": 328768,
+          "heap_before_bytes": 467520,
+          "heap_after_release_bytes": 467632,
+          "process_peak_before_bytes": 7143424,
+          "process_peak_held_bytes": 7684096
+        },
+        "candidate": {
+          "total_ns": 78958,
+          "total_cpu_ns": 79000,
+          "call_ns": 78458,
+          "release_ns": 500,
+          "held_heap_delta_bytes": 328768,
+          "heap_before_bytes": 467520,
+          "heap_after_release_bytes": 467632,
+          "process_peak_before_bytes": 7143424,
+          "process_peak_held_bytes": 7667712
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 1.005925792042139,
+          "range": [
+            1.0005428813109953,
+            1.0182152406417113
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 1.0126582278481013,
+          "range": [
+            0.9873417721518988,
+            1.025974025974026
+          ]
+        }
+      }
+    },
+    {
+      "case": [
+        "sort",
+        1000000,
+        4,
+        "random",
+        "numeric",
+        "asc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 22785542,
+          "total_cpu_ns": 35218000,
+          "call_ns": 22783000,
+          "release_ns": 3541,
+          "held_heap_delta_bytes": 64029808,
+          "heap_before_bytes": 72131136,
+          "heap_after_release_bytes": 72131296,
+          "process_peak_before_bytes": 82804736,
+          "process_peak_held_bytes": 163233792
+        },
+        "candidate": {
+          "total_ns": 22775501,
+          "total_cpu_ns": 35092000,
+          "call_ns": 22772459,
+          "release_ns": 3667,
+          "held_heap_delta_bytes": 64029808,
+          "heap_before_bytes": 72131136,
+          "heap_after_release_bytes": 72131296,
+          "process_peak_before_bytes": 82804736,
+          "process_peak_held_bytes": 163217408
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 1.0215882528771598,
+          "range": [
+            0.9682246110942107,
+            1.043351944123331
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 1.0186590232113752,
+          "range": [
+            0.9752967232665114,
+            1.0421715371822287
+          ]
+        }
+      }
+    },
+    {
+      "case": [
+        "sort",
+        250003,
+        3,
+        "ties",
+        "mixed",
+        "asc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 15385292,
+          "total_cpu_ns": 21215000,
+          "call_ns": 13086458,
+          "release_ns": 2039042,
+          "held_heap_delta_bytes": 8292464,
+          "heap_before_bytes": 29343232,
+          "heap_after_release_bytes": 29344800,
+          "process_peak_before_bytes": 37158912,
+          "process_peak_held_bytes": 51642368
+        },
+        "candidate": {
+          "total_ns": 9339125,
+          "total_cpu_ns": 9922000,
+          "call_ns": 7008167,
+          "release_ns": 2585417,
+          "held_heap_delta_bytes": 8292464,
+          "heap_before_bytes": 29343232,
+          "heap_after_release_bytes": 29344800,
+          "process_peak_before_bytes": 37158912,
+          "process_peak_held_bytes": 51658752
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 0.6086533944552481,
+          "range": [
+            0.4674802403343151,
+            0.6796601380916426
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 0.5015848444641015,
+          "range": [
+            0.3649311230445949,
+            0.5205279283525808
+          ]
+        }
+      }
+    },
+    {
+      "case": [
+        "sort",
+        250003,
+        8,
+        "ties",
+        "mixed",
+        "asc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 37603125,
+          "total_cpu_ns": 90018000,
+          "call_ns": 23156958,
+          "release_ns": 16079125,
+          "held_heap_delta_bytes": 24611984,
+          "heap_before_bytes": 83557776,
+          "heap_after_release_bytes": 83559312,
+          "process_peak_before_bytes": 91766784,
+          "process_peak_held_bytes": 122732544
+        },
+        "candidate": {
+          "total_ns": 20965501,
+          "total_cpu_ns": 39485000,
+          "call_ns": 9961750,
+          "release_ns": 10954542,
+          "held_heap_delta_bytes": 24611984,
+          "heap_before_bytes": 83557776,
+          "heap_after_release_bytes": 83559312,
+          "process_peak_before_bytes": 91783168,
+          "process_peak_held_bytes": 122781696
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 0.5581237745995195,
+          "range": [
+            0.5341907199746789,
+            0.592367655613729
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 0.43652380634984117,
+          "range": [
+            0.4296983299227672,
+            0.4892015784126084
+          ]
+        }
+      }
+    },
+    {
+      "case": [
+        "sort",
+        1000000,
+        4,
+        "random",
+        "mixed",
+        "asc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 124795417,
+          "total_cpu_ns": 154540000,
+          "call_ns": 107857125,
+          "release_ns": 16716125,
+          "held_heap_delta_bytes": 49039824,
+          "heap_before_bytes": 132929136,
+          "heap_after_release_bytes": 132930672,
+          "process_peak_before_bytes": 144228352,
+          "process_peak_held_bytes": 209715200
+        },
+        "candidate": {
+          "total_ns": 70318667,
+          "total_cpu_ns": 78032000,
+          "call_ns": 53422000,
+          "release_ns": 17202958,
+          "held_heap_delta_bytes": 49039824,
+          "heap_before_bytes": 132929136,
+          "heap_after_release_bytes": 132930672,
+          "process_peak_before_bytes": 144228352,
+          "process_peak_held_bytes": 209731584
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 0.5731279883878723,
+          "range": [
+            0.5469413321327555,
+            0.5982397194209335
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 0.5118705298738901,
+          "range": [
+            0.49913340641707954,
+            0.5315392807405587
+          ]
+        }
+      }
+    },
+    {
+      "case": [
+        "sort",
+        250003,
+        4,
+        "nulls",
+        "mixed",
+        "desc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 19822209,
+          "total_cpu_ns": 26272000,
+          "call_ns": 17215459,
+          "release_ns": 2603333,
+          "held_heap_delta_bytes": 12306896,
+          "heap_before_bytes": 33357744,
+          "heap_after_release_bytes": 33359280,
+          "process_peak_before_bytes": 41222144,
+          "process_peak_held_bytes": 59539456
+        },
+        "candidate": {
+          "total_ns": 11914083,
+          "total_cpu_ns": 13184000,
+          "call_ns": 8733625,
+          "release_ns": 2324250,
+          "held_heap_delta_bytes": 12306896,
+          "heap_before_bytes": 33357744,
+          "heap_after_release_bytes": 33359280,
+          "process_peak_before_bytes": 41222144,
+          "process_peak_held_bytes": 59555840
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 0.5375333286333459,
+          "range": [
+            0.5190558731370454,
+            0.6434565522777443
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 0.4481609898701475,
+          "range": [
+            0.4337317295980512,
+            0.5405563804016567
+          ]
+        }
+      }
+    },
+    {
+      "case": [
+        "gather",
+        250003,
+        3,
+        "ties",
+        "mixed",
+        "asc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 11105500,
+          "total_cpu_ns": 16832000,
+          "call_ns": 9389042,
+          "release_ns": 1736000,
+          "held_heap_delta_bytes": 8292448,
+          "heap_before_bytes": 29343232,
+          "heap_after_release_bytes": 29344784,
+          "process_peak_before_bytes": 37158912,
+          "process_peak_held_bytes": 45481984
+        },
+        "candidate": {
+          "total_ns": 4877792,
+          "total_cpu_ns": 5433000,
+          "call_ns": 3224125,
+          "release_ns": 1637208,
+          "held_heap_delta_bytes": 8292448,
+          "heap_before_bytes": 29343232,
+          "heap_after_release_bytes": 29344784,
+          "process_peak_before_bytes": 37158912,
+          "process_peak_held_bytes": 45498368
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 0.42475584170005853,
+          "range": [
+            0.30789845655470643,
+            0.476048742699047
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 0.313569391634981,
+          "range": [
+            0.2500813272608979,
+            0.3394501081248069
+          ]
+        }
+      }
+    },
+    {
+      "case": [
+        "gather",
+        250003,
+        8,
+        "ties",
+        "mixed",
+        "asc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 32974166,
+          "total_cpu_ns": 81140000,
+          "call_ns": 19313125,
+          "release_ns": 13532416,
+          "held_heap_delta_bytes": 24611968,
+          "heap_before_bytes": 83557776,
+          "heap_after_release_bytes": 83559296,
+          "process_peak_before_bytes": 91766784,
+          "process_peak_held_bytes": 116342784
+        },
+        "candidate": {
+          "total_ns": 19457083,
+          "total_cpu_ns": 38591000,
+          "call_ns": 8525791,
+          "release_ns": 10848333,
+          "held_heap_delta_bytes": 24611968,
+          "heap_before_bytes": 83557776,
+          "heap_after_release_bytes": 83559296,
+          "process_peak_before_bytes": 91783168,
+          "process_peak_held_bytes": 116342784
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 0.590070511563507,
+          "range": [
+            0.5222796684711141,
+            0.6021956083025878
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 0.4756100566921371,
+          "range": [
+            0.42935569779937394,
+            0.49598342848481786
+          ]
+        }
+      }
+    },
+    {
+      "case": [
+        "gather",
+        1000000,
+        4,
+        "random",
+        "mixed",
+        "asc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 101932250,
+          "total_cpu_ns": 129432000,
+          "call_ns": 85492625,
+          "release_ns": 16605125,
+          "held_heap_delta_bytes": 49039808,
+          "heap_before_bytes": 132929136,
+          "heap_after_release_bytes": 132930656,
+          "process_peak_before_bytes": 144228352,
+          "process_peak_held_bytes": 193609728
+        },
+        "candidate": {
+          "total_ns": 54388333,
+          "total_cpu_ns": 61787000,
+          "call_ns": 36941625,
+          "release_ns": 16206958,
+          "held_heap_delta_bytes": 49039808,
+          "heap_before_bytes": 132929136,
+          "heap_after_release_bytes": 132930656,
+          "process_peak_before_bytes": 144228352,
+          "process_peak_held_bytes": 193609728
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 0.5096841689769345,
+          "range": [
+            0.4974393146955115,
+            0.551600862337484
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 0.4589552513296601,
+          "range": [
+            0.44437446886002185,
+            0.4926138821929662
+          ]
+        }
+      }
+    },
+    {
+      "case": [
+        "sort",
+        250003,
+        4,
+        "nulls",
+        "dates",
+        "asc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 6141000,
+          "total_cpu_ns": 11551000,
+          "call_ns": 6138875,
+          "release_ns": 2208,
+          "held_heap_delta_bytes": 16058832,
+          "heap_before_bytes": 18162256,
+          "heap_after_release_bytes": 18163872,
+          "process_peak_before_bytes": 25853952,
+          "process_peak_held_bytes": 47497216
+        },
+        "candidate": {
+          "total_ns": 6703917,
+          "total_cpu_ns": 13434000,
+          "call_ns": 6702209,
+          "release_ns": 1708,
+          "held_heap_delta_bytes": 16058912,
+          "heap_before_bytes": 18162256,
+          "heap_after_release_bytes": 18163872,
+          "process_peak_before_bytes": 25853952,
+          "process_peak_held_bytes": 47513600
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 1.1605196311518553,
+          "range": [
+            1.0781178762165764,
+            1.1757041198501872
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 1.237835534725181,
+          "range": [
+            1.1504631633624793,
+            1.274692666384061
+          ]
+        }
+      }
+    },
+    {
+      "case": [
+        "gather",
+        250003,
+        4,
+        "random",
+        "dates",
+        "asc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 2349375,
+          "total_cpu_ns": 7285000,
+          "call_ns": 2347708,
+          "release_ns": 2000,
+          "held_heap_delta_bytes": 16058816,
+          "heap_before_bytes": 18162256,
+          "heap_after_release_bytes": 18163872,
+          "process_peak_before_bytes": 25853952,
+          "process_peak_held_bytes": 42237952
+        },
+        "candidate": {
+          "total_ns": 3990000,
+          "total_cpu_ns": 11356000,
+          "call_ns": 3987333,
+          "release_ns": 2583,
+          "held_heap_delta_bytes": 16058896,
+          "heap_before_bytes": 18162256,
+          "heap_after_release_bytes": 18163872,
+          "process_peak_before_bytes": 25853952,
+          "process_peak_held_bytes": 42254336
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 1.532821982895397,
+          "range": [
+            1.3036552398387782,
+            1.8121311338611432
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 1.4868065388080833,
+          "range": [
+            1.3345328204491873,
+            1.6434153400868308
+          ]
+        }
+      }
+    },
+    {
+      "case": [
+        "sort",
+        4096,
+        4,
+        "random",
+        "mixed",
+        "asc"
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 281124,
+          "total_cpu_ns": 282000,
+          "call_ns": 259958,
+          "release_ns": 20542,
+          "held_heap_delta_bytes": 252080,
+          "heap_before_bytes": 701040,
+          "heap_after_release_bytes": 701264,
+          "process_peak_before_bytes": 7405568,
+          "process_peak_held_bytes": 7880704
+        },
+        "candidate": {
+          "total_ns": 117917,
+          "total_cpu_ns": 118000,
+          "call_ns": 97458,
+          "release_ns": 20542,
+          "held_heap_delta_bytes": 252080,
+          "heap_before_bytes": 701040,
+          "heap_after_release_bytes": 701264,
+          "process_peak_before_bytes": 7405568,
+          "process_peak_held_bytes": 7880704
+        }
+      },
+      "paired": {
+        "total_ns": {
+          "median_ratio": 0.4184310954063604,
+          "range": [
+            0.412873098470234,
+            0.43359403525683154
+          ]
+        },
+        "total_cpu_ns": {
+          "median_ratio": 0.4169611307420495,
+          "range": [
+            0.41134751773049644,
+            0.4416058394160584
+          ]
+        }
+      }
+    }
+  ],
+  "records_sha256": "5340b70c6885808a07fda9c162edbf9f9ee1c7969d962b905bdd2e1bcded7412"
+}

@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Serial gather CPU and memory qualification](benchmarks/2026-10-19-serial-gather-resources/README.md) retains the String/Bool savings, identifies the Date regression, and validates a narrower local candidate. Both studies and raw evidence remain recorded.
+
 - [Matched CPU and memory measurements for four merged PRs](benchmarks/2026-10-18-pr-resource-metrics/README.md) records 19 cases and 342 validated workers. CSV, direct target extraction, compact preparation, and batched prediction save CPU; quoted CSV retains additional spare capacity.
 
 - [Resource-efficiency audit of all 27 authored PRs](benchmarks/2026-10-18-pr-resource-audit/README.md) separates measured costs, explicit caller tradeoffs, correctness requirements, and missing CPU evidence. It prioritizes the CSV and gather defaults for resource qualification.
