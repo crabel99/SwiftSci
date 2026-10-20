@@ -1,0 +1,117 @@
+{
+  "active": {
+    "commands": [
+      [
+        "xcrun",
+        "nm",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/active/SwiftDataFrame.o"
+      ],
+      [
+        "xcrun",
+        "llvm-objdump",
+        "--reloc",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/active/SwiftDataFrame.o"
+      ],
+      [
+        "xcrun",
+        "size",
+        "-m",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/active/SwiftDataFrame.o"
+      ]
+    ],
+    "object_sha256": "3c73fdbe71349759a3afcfb07679c9ab844524c31dcdd233fe616f25909f2f7a",
+    "lookup_symbols": [],
+    "lookup_call_relocations": [],
+    "text_section_bytes": 550024
+  },
+  "compact": {
+    "commands": [
+      [
+        "xcrun",
+        "nm",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/compact/SwiftDataFrame.o"
+      ],
+      [
+        "xcrun",
+        "llvm-objdump",
+        "--reloc",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/compact/SwiftDataFrame.o"
+      ],
+      [
+        "xcrun",
+        "size",
+        "-m",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/compact/SwiftDataFrame.o"
+      ]
+    ],
+    "object_sha256": "aa4124be769720db6b20acf1dc558cb668a11f9621f82b49d864ccea41a6bd1c",
+    "lookup_symbols": [
+      "00000000000343c0 t _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig"
+    ],
+    "lookup_call_relocations": [
+      "000000000003191c ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig",
+      "000000000003166c ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig",
+      "000000000003127c ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig",
+      "0000000000030eec ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig",
+      "00000000000309c4 ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig",
+      "00000000000306b8 ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig",
+      "0000000000030284 ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig",
+      "000000000002fe38 ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig",
+      "000000000002fab8 ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig",
+      "000000000002f6f4 ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig",
+      "000000000002f3a8 ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig",
+      "000000000002e900 ARM64_RELOC_BRANCH26     _$s14SwiftDataFrame15CSVFieldStorage33_F10D4B2EE380B1EED218133D16F2C10ELLOyAA0D6OffsetVSicig"
+    ],
+    "text_section_bytes": 552836
+  },
+  "inlined": {
+    "commands": [
+      [
+        "xcrun",
+        "nm",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/inlined/SwiftDataFrame.o"
+      ],
+      [
+        "xcrun",
+        "llvm-objdump",
+        "--reloc",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/inlined/SwiftDataFrame.o"
+      ],
+      [
+        "xcrun",
+        "size",
+        "-m",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/inlined/SwiftDataFrame.o"
+      ]
+    ],
+    "object_sha256": "839ebe8e6a953746e98c6ef48b3f78a5a42a9dd20a111f5f584421ac77ff23e0",
+    "lookup_symbols": [],
+    "lookup_call_relocations": [],
+    "text_section_bytes": 552168
+  },
+  "packed": {
+    "commands": [
+      [
+        "xcrun",
+        "nm",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/packed/SwiftDataFrame.o"
+      ],
+      [
+        "xcrun",
+        "llvm-objdump",
+        "--reloc",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/packed/SwiftDataFrame.o"
+      ],
+      [
+        "xcrun",
+        "size",
+        "-m",
+        "/private/tmp/swiftsci-csv-compact-20261020/build/packed/SwiftDataFrame.o"
+      ]
+    ],
+    "object_sha256": "56ef09927aadf528714dbc997cfc6ebfbb39ce1b24b456c2fd302f020120fdb8",
+    "lookup_symbols": [],
+    "lookup_call_relocations": [],
+    "text_section_bytes": 554696
+  }
+}

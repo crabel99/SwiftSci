@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "base_sha": "546510bb7df19fc87a664bded5947c738011ee1d",
+  "changes": {
+    "baseline": [],
+    "active": [
+      "Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ],
+    "compact": [
+      "Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ],
+    "inlined": [
+      "Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ],
+    "packed": [
+      "Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ]
+  },
+  "runs": [
+    {
+      "plan": "compact-active-reference-comparison-plan.json",
+      "reference": "active",
+      "candidate": "compact",
+      "workers": 80
+    },
+    {
+      "plan": "compact-comparison-plan.json",
+      "reference": "baseline",
+      "candidate": "compact",
+      "workers": 80
+    },
+    {
+      "plan": "heldout-active-reference-comparison-plan.json",
+      "reference": "active",
+      "candidate": "compact",
+      "workers": 80
+    },
+    {
+      "plan": "heldout-comparison-plan.json",
+      "reference": "baseline",
+      "candidate": "compact",
+      "workers": 80
+    },
+    {
+      "plan": "heldout-packed-comparison-plan.json",
+      "reference": "baseline",
+      "candidate": "packed",
+      "workers": 80
+    },
+    {
+      "plan": "inlined-comparison-plan.json",
+      "reference": "baseline",
+      "candidate": "inlined",
+      "workers": 80
+    },
+    {
+      "plan": "packed-comparison-plan.json",
+      "reference": "baseline",
+      "candidate": "packed",
+      "workers": 80
+    },
+    {
+      "plan": "return-layout-heldout/plan.json",
+      "reference": "compact",
+      "candidate": "packed",
+      "workers": 80
+    }
+  ],
+  "valid_workers": 640,
+  "timing_samples": 2000,
+  "memory_samples": 240,
+  "excluded_workers": 80,
+  "exclusion": "excluded-heldout/reason.json",
+  "field_parity_checks_per_layout": 505836,
+  "parser_parity_cases": 2022,
+  "existing_tests_per_layout": 16,
+  "automatic_range_offsets": "below 2 GiB, above 2 GiB and above 4 GiB"
+}

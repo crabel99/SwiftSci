@@ -1,0 +1,203 @@
+--- a/Sources/SwiftDataFrame/IO/CSVRecordIndex.swift
++++ b/Sources/SwiftDataFrame/IO/CSVRecordIndex.swift
+@@ -1,12 +1,16 @@
+ import Foundation
+ 
+-internal struct PackedCSVField: Sendable {
++internal struct PackedCSVField: CSVIndexField {
+     let startOffset: Int
+     private let encodedLength: Int
+ 
+     init(startOffset: Int, length: Int, escapedQuotesPresent: Bool) {
+         self.startOffset = startOffset
+         self.encodedLength = escapedQuotesPresent ? ~length : length
++    }
++
++    static func recordIndex(blocks: CSVFieldBlocks<Self>, rowStarts: [Int]) -> CSVRecordIndex {
++        CSVRecordIndex(blocks: blocks, rowStarts: rowStarts)
+     }
+ 
+     var length: Int { encodedLength >= 0 ? encodedLength : ~encodedLength }
+@@ -22,20 +26,116 @@
+ }
+ 
+ internal struct CSVRecordIndex: Sendable {
+-    let fields: [PackedCSVField]
++    private let fields: CSVFieldStorage
++
++    init(fields: [PackedCSVField], rowStarts: [Int]) {
++        self.fields = .flat(fields)
++        self.rowStarts = rowStarts
++    }
++
++    init(blocks: CSVFieldBlocks<PackedCSVField>, rowStarts: [Int]) {
++        self.fields = .blocked(blocks.finished())
++        self.rowStarts = rowStarts
++    }
++    init(blocks: CSVFieldBlocks<CompactCSVField>, rowStarts: [Int]) {
++        self.fields = .compact(blocks.finished())
++        self.rowStarts = rowStarts
++    }
+     let rowStarts: [Int]
+ 
+     var count: Int { rowStarts.count - 1 }
+     var isEmpty: Bool { count == 0 }
+ 
+     func row(at index: Int) -> [CSVFieldOffset] {
+-        fields[rowStarts[index]..<rowStarts[index + 1]].map(\.offset)
++        (rowStarts[index]..<rowStarts[index + 1]).map { fields[$0] }
+     }
+ 
+     func field(row: Int, column: Int) -> CSVFieldOffset? {
+         guard row < count else { return nil }
+         let start = rowStarts[row]
+         guard column < rowStarts[row + 1] - start else { return nil }
+-        return fields[start + column].offset
++        return fields[start + column]
+     }
+ }
++
++private enum CSVFieldStorage: Sendable {
++    case flat([PackedCSVField])
++    case blocked([[PackedCSVField]])
++
++    case compact([[CompactCSVField]])
++
++    @inline(__always)
++    subscript(index: Int) -> CSVFieldOffset {
++        switch self {
++        case .flat(let values): return values[index].offset
++        case .blocked(let blocks): return blocks[index >> 14][index & 16383].offset
++        case .compact(let blocks): return blocks[index >> 14][index & 16383].offset
++        }
++    }
++}
++
++internal struct CSVFieldBlocks<Field: CSVIndexField> {
++    private var completed = [[Field]]()
++    private var current = [Field]()
++    private(set) var count = 0
++
++    init(byteCount: Int) {
++        current.reserveCapacity(min(byteCount / 8, 16384))
++    }
++
++    mutating func append(_ field: Field) {
++        if current.count == 16384 {
++            completed.append(current)
++            current = []
++            current.reserveCapacity(16384)
++        }
++        current.append(field)
++        count += 1
++    }
++
++    mutating func truncate(to newCount: Int) {
++        while count > newCount {
++            if current.isEmpty { current = completed.removeLast() }
++            let removed = min(count - newCount, current.count)
++            current.removeLast(removed)
++            count -= removed
++        }
++    }
++
++    func finished() -> [[Field]] {
++        var result = completed
++        if !current.isEmpty { result.append(current) }
++        return result
++    }
++}
++
++internal protocol CSVIndexField: Sendable {
++    init(startOffset: Int, length: Int, escapedQuotesPresent: Bool)
++    var offset: CSVFieldOffset { get }
++    static func recordIndex(blocks: CSVFieldBlocks<Self>, rowStarts: [Int]) -> CSVRecordIndex
++}
++
++internal struct CompactCSVField: CSVIndexField {
++    private let startOffset: UInt32
++    private let encodedLength: Int32
++
++    static func canRepresent(endOffset: Int) -> Bool {
++        endOffset >= 0 && endOffset <= Int(Int32.max)
++    }
++
++    init(startOffset: Int, length: Int, escapedQuotesPresent: Bool) {
++        self.startOffset = UInt32(startOffset)
++        let length = Int32(length)
++        self.encodedLength = escapedQuotesPresent ? ~length : length
++    }
++
++    var offset: CSVFieldOffset {
++        CSVFieldOffset(startOffset: Int(startOffset),
++            length: Int(encodedLength >= 0 ? encodedLength : ~encodedLength),
++            escapedQuotesPresent: encodedLength < 0)
++    }
++
++    static func recordIndex(blocks: CSVFieldBlocks<Self>, rowStarts: [Int]) -> CSVRecordIndex {
++        CSVRecordIndex(blocks: blocks, rowStarts: rowStarts)
++    }
++}
+--- a/Sources/SwiftDataFrame/IO/SystemsCSVParser.swift
++++ b/Sources/SwiftDataFrame/IO/SystemsCSVParser.swift
+@@ -190,8 +190,16 @@
+     private func scanIndex(
+         buffer: UnsafeBufferPointer<UInt8>, range: Range<Int>
+     ) -> CSVRecordIndex {
+-        var fields = [PackedCSVField]()
+-        fields.reserveCapacity(min(range.count / 8, 100_000))
++        if CompactCSVField.canRepresent(endOffset: range.upperBound) {
++            return scanIndex(buffer: buffer, range: range, fieldType: CompactCSVField.self)
++        }
++        return scanIndex(buffer: buffer, range: range, fieldType: PackedCSVField.self)
++    }
++
++    internal func scanIndex<Field: CSVIndexField>(
++        buffer: UnsafeBufferPointer<UInt8>, range: Range<Int>, fieldType: Field.Type
++    ) -> CSVRecordIndex {
++        var fields = CSVFieldBlocks<Field>(byteCount: range.count)
+         var rowStarts = [0]
+         rowStarts.reserveCapacity(min(range.count / 16, 100_000) + 1)
+ 
+@@ -221,7 +229,7 @@
+                     insideQuotes = true
+                 } else if byte == delimiterByte {
+                     let len = index - fieldStart
+-                    fields.append(PackedCSVField(
++                    fields.append(Field(
+                         startOffset: fieldStart,
+                         length: max(0, len),
+                         escapedQuotesPresent: escapedQuotesFound
+@@ -234,7 +242,7 @@
+                         endPosition -= 1
+                     }
+                     let len = endPosition - fieldStart
+-                    fields.append(PackedCSVField(
++                    fields.append(Field(
+                         startOffset: fieldStart,
+                         length: max(0, len),
+                         escapedQuotesPresent: escapedQuotesFound
+@@ -252,7 +260,7 @@
+         // Handle trailing line without newline
+         if fieldStart < count {
+             let len = count - fieldStart
+-            fields.append(PackedCSVField(
++            fields.append(Field(
+                 startOffset: fieldStart,
+                 length: max(0, len),
+                 escapedQuotesPresent: escapedQuotesFound
+@@ -260,10 +268,10 @@
+             rowStarts.append(fields.count)
+         } else {
+             // Keep the public parser's existing EOF behavior for an unfinished row.
+-            fields.removeSubrange(rowStarts.last!..<fields.count)
+-        }
+-
+-        return CSVRecordIndex(fields: fields, rowStarts: rowStarts)
++            fields.truncate(to: rowStarts.last!)
++        }
++
++        return Field.recordIndex(blocks: fields, rowStarts: rowStarts)
+     }
+ }
+ 
