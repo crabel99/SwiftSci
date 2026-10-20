@@ -1,0 +1,169 @@
+{
+  "workers": 80,
+  "timing_samples": 250,
+  "memory_samples": 30,
+  "validated": true,
+  "rows": [
+    {
+      "case": [
+        "csv-quoted",
+        100000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 2884458,
+          "total_cpu_ns": 5046000,
+          "held_heap_delta_bytes": 6440160,
+          "process_peak_held_bytes": 27344896,
+          "heap_before_bytes": 90208,
+          "heap_after_release_bytes": 107296
+        },
+        "presized": {
+          "total_ns": 4295499,
+          "total_cpu_ns": 6400000,
+          "held_heap_delta_bytes": 6440160,
+          "process_peak_held_bytes": 24117248,
+          "heap_before_bytes": 90208,
+          "heap_after_release_bytes": 107296
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.2551480682486762,
+        "range": [
+          1.2257040309221425,
+          1.3387648360490847
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        250000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 6752250,
+          "total_cpu_ns": 12166000,
+          "held_heap_delta_bytes": 18482400,
+          "process_peak_held_bytes": 68255744,
+          "heap_before_bytes": 90208,
+          "heap_after_release_bytes": 107296
+        },
+        "presized": {
+          "total_ns": 10634750,
+          "total_cpu_ns": 15690000,
+          "held_heap_delta_bytes": 16073952,
+          "process_peak_held_bytes": 49348608,
+          "heap_before_bytes": 90208,
+          "heap_after_release_bytes": 107296
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.2896597073812264,
+        "range": [
+          1.1947669917943955,
+          1.3646559048428206
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        1000000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 26693042,
+          "total_cpu_ns": 47259000,
+          "held_heap_delta_bytes": 73729248,
+          "process_peak_held_bytes": 254672896,
+          "heap_before_bytes": 90288,
+          "heap_after_release_bytes": 107376
+        },
+        "presized": {
+          "total_ns": 41161333,
+          "total_cpu_ns": 60551000,
+          "held_heap_delta_bytes": 64046304,
+          "process_peak_held_bytes": 175079424,
+          "heap_before_bytes": 90288,
+          "heap_after_release_bytes": 107376
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.2765106128038344,
+        "range": [
+          1.2489472904631922,
+          1.3759452646741088
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        1000000,
+        2
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 17261042,
+          "total_cpu_ns": 23071000,
+          "held_heap_delta_bytes": 41714432,
+          "process_peak_held_bytes": 121782272,
+          "heap_before_bytes": 90176,
+          "heap_after_release_bytes": 107264
+        },
+        "presized": {
+          "total_ns": 24396500,
+          "total_cpu_ns": 29673000,
+          "held_heap_delta_bytes": 32031488,
+          "process_peak_held_bytes": 95109120,
+          "heap_before_bytes": 90176,
+          "heap_after_release_bytes": 107264
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.3349979754352814,
+        "range": [
+          1.2745871440336354,
+          1.3685774421195989
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv",
+        1000000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 9399916,
+          "total_cpu_ns": 42352000,
+          "held_heap_delta_bytes": 64046304,
+          "process_peak_held_bytes": 167100416,
+          "heap_before_bytes": 90224,
+          "heap_after_release_bytes": 107312
+        },
+        "presized": {
+          "total_ns": 9435959,
+          "total_cpu_ns": 42718000,
+          "held_heap_delta_bytes": 64046304,
+          "process_peak_held_bytes": 167149568,
+          "heap_before_bytes": 90224,
+          "heap_after_release_bytes": 107312
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.0057140158670193,
+        "range": [
+          0.9956733497257424,
+          1.039675033345459
+        ]
+      }
+    }
+  ],
+  "records_sha256": "966d27588ba84477038914541a9a8330716ff47db3d48c967ac31d7608afc2db"
+}

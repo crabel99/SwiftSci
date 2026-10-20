@@ -1,0 +1,52 @@
+--- a/Sources/SwiftDataFrame/IO/SystemsCSVParser.swift
++++ b/Sources/SwiftDataFrame/IO/SystemsCSVParser.swift
+@@ -187,13 +187,47 @@
+         assert(field == fieldBase + count.fields && row == rowBase + count.rows)
+     }
+ 
++    // Diagnostic trial: include a full structural counting pass before allocation.
++    private func countQuotedIndex(
++        buffer: UnsafeBufferPointer<UInt8>, range: Range<Int>
++    ) -> (fields: Int, rows: Int) {
++        var fields = 0, rows = 0
++        var index = range.lowerBound, fieldStart = range.lowerBound
++        var insideQuotes = false
++        while index < range.upperBound {
++            let byte = buffer[index]
++            if insideQuotes {
++                if byte == quoteByte {
++                    if index + 1 < range.upperBound && buffer[index + 1] == quoteByte {
++                        index += 2
++                        continue
++                    }
++                    insideQuotes = false
++                }
++            } else if byte == quoteByte {
++                insideQuotes = true
++            } else if byte == delimiterByte {
++                fields += 1
++                fieldStart = index + 1
++            } else if byte == lfByte {
++                fields += 1
++                rows += 1
++                fieldStart = index + 1
++            }
++            index += 1
++        }
++        if fieldStart < range.upperBound { fields += 1; rows += 1 }
++        return (fields, rows)
++    }
++
+     private func scanIndex(
+         buffer: UnsafeBufferPointer<UInt8>, range: Range<Int>
+     ) -> CSVRecordIndex {
++        let sizes = countQuotedIndex(buffer: buffer, range: range)
+         var fields = [PackedCSVField]()
+-        fields.reserveCapacity(min(range.count / 8, 100_000))
++        fields.reserveCapacity(sizes.fields)
+         var rowStarts = [0]
+-        rowStarts.reserveCapacity(min(range.count / 16, 100_000) + 1)
++        rowStarts.reserveCapacity(sizes.rows + 1)
+ 
+         let count = range.upperBound
+         var index = range.lowerBound

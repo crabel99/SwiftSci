@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "baseline_sha": "546510bb7df19fc87a664bded5947c738011ee1d",
+  "changes": {
+    "baseline": [],
+    "presized": [
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ],
+    "instrumented": [
+      "Sources/SwiftDataFrame/IO/CSVColumnBuilder.swift",
+      "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift"
+    ]
+  },
+  "reused_parser_blocks": [
+    {
+      "requested": 250000,
+      "capacity": 401406,
+      "pointer": "0x00000079fe808020"
+    }
+  ],
+  "workers": 80,
+  "timing_samples": 250,
+  "memory_samples": 30,
+  "semantic_fixtures_per_variant": 7
+}
