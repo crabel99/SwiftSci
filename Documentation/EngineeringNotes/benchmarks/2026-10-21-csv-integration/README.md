@@ -63,6 +63,10 @@ The original-data numeric-inference defect still converts later fractional parti
 
 Local validation used Apple silicon, Swift 6.4, Xcode 27.0, and macOS 27.0.1, with the reference probe targeting macOS 14. This is the full DataFrame test target plus selected standard integration workloads, not the full SwiftSci all-module suite. Hosted CI and older supported compiler validation have not run for this local branch. No push or PR was made as part of this integration.
 
+## Numeric inference follow-up
+
+The separate [sampled-inference repair](../2026-10-21-csv-inference/README.md), commit `548a783f02678c95c027a733e3cbd51df363dc47`, restores the 398 measurements lost by numeric inference. Its own tests, conformance checks, and resource measurements are recorded there. The date-interpretation defect remains separate. This integration report retains the results for its original head.
+
 ## Evidence
 
 - [Evidence archive](evidence.tar.gz), containing test commands and summaries, logs, local coverage, standard run requests/responses/certificate, final reference oracle checks, bounded resource comparison, source patch, and build receipts.
