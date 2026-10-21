@@ -1,0 +1,145 @@
+{
+  "rows": [
+    {
+      "case": [
+        "csv-quoted",
+        100000,
+        4
+      ],
+      "statistics": {
+        "packed": {
+          "total_ns": 2817209,
+          "total_cpu_ns": 5165000,
+          "held_heap_delta_bytes": 6440272,
+          "process_peak_held_bytes": 21364736
+        },
+        "direct": {
+          "total_ns": 3104500,
+          "total_cpu_ns": 5571000,
+          "held_heap_delta_bytes": 6440272,
+          "process_peak_held_bytes": 21381120
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.0937685459940654,
+        "range": [
+          1.0722014558331694,
+          1.1068111455108358
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        250000,
+        4
+      ],
+      "statistics": {
+        "packed": {
+          "total_ns": 6914500,
+          "total_cpu_ns": 12543000,
+          "held_heap_delta_bytes": 16074064,
+          "process_peak_held_bytes": 42647552
+        },
+        "direct": {
+          "total_ns": 7304167,
+          "total_cpu_ns": 13089000,
+          "held_heap_delta_bytes": 16074064,
+          "process_peak_held_bytes": 42663936
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.0481642321358073,
+        "range": [
+          1.031119514693138,
+          1.0682452363868293
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        1000000,
+        4
+      ],
+      "statistics": {
+        "packed": {
+          "total_ns": 27087125,
+          "total_cpu_ns": 48803000,
+          "held_heap_delta_bytes": 64046352,
+          "process_peak_held_bytes": 157122560
+        },
+        "direct": {
+          "total_ns": 27024959,
+          "total_cpu_ns": 50737000,
+          "held_heap_delta_bytes": 64046416,
+          "process_peak_held_bytes": 157122560
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.024555239191454,
+        "range": [
+          1.0084442800788955,
+          1.076860029096572
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        1000000,
+        2
+      ],
+      "statistics": {
+        "packed": {
+          "total_ns": 17760167,
+          "total_cpu_ns": 24621000,
+          "held_heap_delta_bytes": 32031600,
+          "process_peak_held_bytes": 91013120
+        },
+        "direct": {
+          "total_ns": 17511167,
+          "total_cpu_ns": 24841000,
+          "held_heap_delta_bytes": 32031536,
+          "process_peak_held_bytes": 90996736
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.0019089395231713,
+        "range": [
+          0.9746155053358443,
+          1.0510397755405183
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv",
+        1000000,
+        4
+      ],
+      "statistics": {
+        "packed": {
+          "total_ns": 9767375,
+          "total_cpu_ns": 44582000,
+          "held_heap_delta_bytes": 64046304,
+          "process_peak_held_bytes": 167149568
+        },
+        "direct": {
+          "total_ns": 10275917,
+          "total_cpu_ns": 45938000,
+          "held_heap_delta_bytes": 64046368,
+          "process_peak_held_bytes": 167165952
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.0296897612156295,
+        "range": [
+          1.0072042240916412,
+          1.037324480732134
+        ]
+      }
+    }
+  ],
+  "records_sha256": "816f50852a61d4ca304e2304c38f2e3c799c653c4829aa096b88c5513b4ff358"
+}
