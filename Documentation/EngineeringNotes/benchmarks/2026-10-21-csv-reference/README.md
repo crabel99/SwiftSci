@@ -100,6 +100,10 @@ Do not describe the memory savings as smaller retained DataFrames. Held heap is 
 
 The actual-reference comparison gate is complete for the stated schemas. Production integration still needs a focused code review and its normal validation. Full inference is not cleared: preserve these two defects as separate regression-backed repairs. The previously recorded fallback, sanitizer, parser parity, streaming, and scoped-lifetime evidence remains relevant; this run does not replace full SwiftSci tests or hosted CI.
 
+## Integration follow-up
+
+The [production integration record](../2026-10-21-csv-integration/README.md) documents the local branch, review, Debug/Release/sanitizer results, line coverage, standard conformance checks, and a bounded original-data confirmation on the committed implementation. The inference defects remain separate repairs. The measurements above retain their original source fingerprints.
+
 ## Evidence and replay
 
 - [Evidence archive](evidence.tar.gz): preparation/build/run/validation scripts, Swift probes, source patches, source/build receipts, original-data provenance, independent oracles, all accepted workers, failed-mode diagnostics, parser-path diagnostics, and summary tables.
