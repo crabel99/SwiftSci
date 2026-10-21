@@ -1,0 +1,72 @@
+{
+  "workers": 36,
+  "all_validated": true,
+  "medians": [
+    {
+      "total_cpu_ns": 7479000.0,
+      "total_ns": 1477166.5,
+      "process_peak_held_bytes": 18718720.0,
+      "rss_held_delta_bytes": 10723328.0,
+      "held_heap_delta_bytes": 4750432.0,
+      "case": "bike-hour",
+      "mode": "known",
+      "engine": "indexed",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 6891500.0,
+      "total_ns": 2423271.0,
+      "process_peak_held_bytes": 16523264.0,
+      "rss_held_delta_bytes": 8511488.0,
+      "held_heap_delta_bytes": 4750272.0,
+      "case": "bike-hour",
+      "mode": "known",
+      "engine": "eager",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 456279000.0,
+      "total_ns": 104989833.5,
+      "process_peak_held_bytes": 755187712.0,
+      "rss_held_delta_bytes": 615383040.0,
+      "held_heap_delta_bytes": 298908784.0,
+      "case": "energy",
+      "mode": "known",
+      "engine": "indexed",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 495873500.0,
+      "total_ns": 177465917.0,
+      "process_peak_held_bytes": 757489664.0,
+      "rss_held_delta_bytes": 617668608.0,
+      "held_heap_delta_bytes": 320879680.0,
+      "case": "energy",
+      "mode": "known",
+      "engine": "eager",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 470912000.0,
+      "total_ns": 101412687.5,
+      "process_peak_held_bytes": 755187712.0,
+      "rss_held_delta_bytes": 615399424.0,
+      "held_heap_delta_bytes": 298908976.0,
+      "case": "energy-date-full",
+      "mode": "known",
+      "engine": "indexed",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 566218000.0,
+      "total_ns": 192730395.5,
+      "process_peak_held_bytes": 758349824.0,
+      "rss_held_delta_bytes": 618528768.0,
+      "held_heap_delta_bytes": 320879792.0,
+      "case": "energy-date-full",
+      "mode": "known",
+      "engine": "eager",
+      "workers": 6
+    }
+  ]
+}

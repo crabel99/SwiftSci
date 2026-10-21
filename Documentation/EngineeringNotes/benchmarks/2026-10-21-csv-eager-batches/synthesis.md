@@ -1,0 +1,7 @@
+# Eager assembly decision
+
+Base A, with B's shared replay sweeps and immediate release of rejected builders. Both candidates independently choose concrete generic cell loops, immutable sample eligibility, original-byte replay and geometric output growth. Parent scores A 15/15 and B 13/15. B exposes explicit ownership but six group properties add coordination and remove existing column concurrency without evidence. Keep the column concurrency policy and one enum dispatch per column per batch. Reference-owned builders prevent associated-value Array copies.
+
+Amend A to derive eligibility from the first retained batch, limited to its first 1000 rows. Append that same batch before scanning further. This avoids a separate sample scan. Metadata remains one batch; no source-wide count or inference pass. Shared replay sweeps include only failed columns and keep successful final columns.
+
+First subtract duplicate explicit/inferred loops into shared conversion and prove the existing indexed path. Then replace eager orchestration. Public SystemsCSVParser.parse and JSON inferColumn remain. Independent cross-judge tied both at 14/15 and also chose A as the base. It endorsed the same retained-first-batch and replay-wave grafts. The parent accepts its stronger requirement to measure late-replay CPU and both peak/held RSS, not only ordinary known-schema throughput. Acceptance requires exact public values, Debug/Release/ASan, standard conformance and measured CPU/RSS including failure paths. Production code is not yet changed or benchmarked.
