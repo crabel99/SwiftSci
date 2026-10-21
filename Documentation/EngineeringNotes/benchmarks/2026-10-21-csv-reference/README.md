@@ -34,9 +34,9 @@ Air-quality supplied schemas use Int64 for row number/year/month/day/hour, Doubl
 ### Existing failures retained as failures
 
 - All twelve air-quality files fail full inference in all three variants. Sampling the first 1,000 rows chooses Int64 for particulate columns that contain later fractional values. Those values become null. The total is **398 additional, incorrect nulls** per variant. Wanliu infers PM10 correctly but still loses fractional PM2.5 values. No failed inference timings enter the accepted performance results.
-- A public-read diagnostic on the first 25,000 original energy rows fails the documented day/month/year interpretation in all three variants. A separate direct reproducer shows `2/1/2007` becomes February 1 rather than January 2. All variants return identical incorrect date hashes. Timestamp conversion is excluded from the accepted performance contract by retaining both fields as text. This is an explicit schema choice, not a claim that date inference is correct.
+- A public-read diagnostic on the first 25,000 original energy rows fails the documented day/month/year interpretation in all three variants. A separate direct reproducer shows `2/1/2007` becomes February 1 rather than January 2. All variants return identical hashes that disagree with the UCI schema. Follow-up inspection of `Date.parse(from:)` and `DateTimeTests.testAmbiguousDates` established that month-first precedence is intentional. Calling this a parser defect was incorrect. Timestamp conversion is excluded from the accepted performance contract by retaining both fields as text. This is an explicit schema choice, not a claim that date inference is correct.
 
-`failure-inventory.json`, `audit.jsonl`, `date-audit.jsonl`, and `date-example.json` retain the failures, first fractional source rows, extra null counts, and reproducer results. These failures require separate repairs. They do not originate in the compact index or scoped access changes.
+`failure-inventory.json`, `audit.jsonl`, `date-audit.jsonl`, and `date-example.json` retain the failures, first fractional source rows, extra null counts, and reproducer results. The numeric failures require a repair. The date mismatch requires callers to specify the source convention; the measured default behavior matches its documented contract. They do not originate in the compact index or scoped access changes.
 
 ## Measurement method
 
@@ -98,11 +98,11 @@ Retain the scoped candidate for a focused production integration review. The rea
 
 Do not describe the memory savings as smaller retained DataFrames. Held heap is unchanged on every real file. The prior synthetic held-memory reduction depended on allocator reuse after discarded parser allocations and is not universal. These results do not prove energy savings, SRAM/cache behavior, or a larger-than-2-GiB file benefit.
 
-The actual-reference comparison gate is complete for the stated schemas. Production integration still needs a focused code review and its normal validation. Full inference is not cleared: preserve these two defects as separate regression-backed repairs. The previously recorded fallback, sanitizer, parser parity, streaming, and scoped-lifetime evidence remains relevant; this run does not replace full SwiftSci tests or hosted CI.
+The actual-reference comparison gate is complete for the stated schemas. Production integration still needs a focused code review and its normal validation. Full inference is not cleared. Preserve the numeric defect and the source-date-format mismatch as separate follow-ups. The previously recorded fallback, sanitizer, parser parity, streaming, and scoped-lifetime evidence remains relevant; this run does not replace full SwiftSci tests or hosted CI.
 
 ## Integration follow-up
 
-The [production integration record](../2026-10-21-csv-integration/README.md) documents the local branch, review, Debug/Release/sanitizer results, line coverage, standard conformance checks, and a bounded original-data confirmation on the committed implementation. The inference defects remain separate repairs. The measurements above retain their original source fingerprints.
+The [production integration record](../2026-10-21-csv-integration/README.md) documents the local branch, review, Debug/Release/sanitizer results, line coverage, standard conformance checks, and a bounded original-data confirmation on the committed implementation. The numeric-inference repair and explicit date-format feature remain separate follow-ups. The measurements above retain their original source fingerprints.
 
 ## Evidence and replay
 
@@ -112,3 +112,7 @@ The [production integration record](../2026-10-21-csv-integration/README.md) doc
 - [Previous controlled experiment](../2026-10-21-csv-borrow/README.md): source design, compiler evidence, safety checks, and synthetic controls.
 
 The scripts retain the exact local cache paths used for this measurement. Replay first prepares the three source/module variants from the previous experiment, then runs `download.py`, `oracle.py`, `build.py`, `audit.py`, `date-audit.py`, `path-check.py`, `run.py`, `summarize.py`, and `verify.py` from a fresh experiment directory after adjusting the module-cache root in the scripts. Downloads and module builds must finish before timing. Existing result directories are exclusive so reruns cannot overwrite accepted measurements. This is a reproducible local experiment with recorded toolchain/dependency inputs, not a newly integrated portable benchmark command.
+
+## Date-contract correction
+
+The follow-up [explicit date-format record](../2026-10-21-csv-date-format/README.md) distinguishes the UCI source convention from SwiftSci's documented default. Historical diagnostics, hashes, timings, and archived evidence remain unchanged. A failed comparison against the source convention is still excluded from performance claims.

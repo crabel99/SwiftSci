@@ -59,13 +59,13 @@ The two quoted station files retain a 21.8 to 23.9% paired CPU reduction and abo
 
 ## Remaining boundaries
 
-The original-data numeric-inference defect still converts later fractional particulate values to null after an integer-only initial sample. Across the twelve station files it adds 398 incorrect nulls. The date-inference defect still misinterprets an ambiguous day/month/year value. Both defects precede this parser change and remain separate repairs. Failed inference modes are excluded from performance claims.
+The original-data numeric-inference defect still converts later fractional particulate values to null after an integer-only initial sample. Across the twelve station files it adds 398 incorrect nulls. The date diagnostic expects the UCI day-first convention, while SwiftSci documents month-first precedence for ambiguous values. The earlier classification of that mismatch as a parser defect was incorrect. Numeric inference needs a repair; date interpretation needs an explicit source-format choice. Failed inference modes are excluded from performance claims.
 
 Local validation used Apple silicon, Swift 6.4, Xcode 27.0, and macOS 27.0.1, with the reference probe targeting macOS 14. This is the full DataFrame test target plus selected standard integration workloads, not the full SwiftSci all-module suite. Hosted CI and older supported compiler validation have not run for this local branch. No push or PR was made as part of this integration.
 
 ## Numeric inference follow-up
 
-The separate [sampled-inference repair](../2026-10-21-csv-inference/README.md), commit `548a783f02678c95c027a733e3cbd51df363dc47`, restores the 398 measurements lost by numeric inference. Its own tests, conformance checks, and resource measurements are recorded there. The date-interpretation defect remains separate. This integration report retains the results for its original head.
+The separate [sampled-inference repair](../2026-10-21-csv-inference/README.md), commit `548a783f02678c95c027a733e3cbd51df363dc47`, restores the 398 measurements lost by numeric inference. Its own tests, conformance checks, and resource measurements are recorded there. The date-format capability remains separate. This integration report retains the results for its original head.
 
 ## Evidence
 
@@ -75,3 +75,7 @@ The separate [sampled-inference repair](../2026-10-21-csv-inference/README.md), 
 - [Controlled candidate experiment](../2026-10-21-csv-borrow/README.md), with synthetic controls and compiler inspection.
 
 Replay scripts retain the exact local cache and toolchain paths used. Dataset bytes, compiled binaries, Xcode result bundles, and caches are not committed. This is a recorded local experiment, not a new portable benchmark command.
+
+## Date-contract correction
+
+The follow-up [explicit date-format record](../2026-10-21-csv-date-format/README.md) distinguishes the UCI source convention from SwiftSci's documented default. Historical diagnostics, hashes, timings, and archived evidence remain unchanged. A failed comparison against the source convention is still excluded from performance claims.

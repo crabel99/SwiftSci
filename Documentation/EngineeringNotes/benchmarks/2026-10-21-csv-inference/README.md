@@ -2,7 +2,7 @@
 
 Local branch `codex/csv-inference-validation` fixes silent loss of values after the CSV inference sample. Commit `548a783f02678c95c027a733e3cbd51df363dc47` is based on the compact parser integration at `2be6fc01a80d520d637f85f9f4bbde0a855e309b`. This report remains on `codex/engineering-notes`, outside the production branch.
 
-All twelve original Beijing air-quality station files now pass numeric inference against the independent oracle. The repair restores 398 fractional measurements across 23 columns. All 26 supplied-schema and numeric-inference cases pass. The separate ambiguous-date interpretation defect remains unchanged.
+All twelve original Beijing air-quality station files now pass numeric inference against the independent oracle. The repair restores 398 fractional measurements across 23 columns. All 26 supplied-schema and numeric-inference cases pass. The separate date-prefix diagnostic still disagrees with the UCI day-first schema. Follow-up inspection established that SwiftSci explicitly documents month-first precedence for ambiguous dates; this is a source-schema mismatch, not a violation of its default parsing contract.
 
 ## Cause and repair
 
@@ -12,7 +12,7 @@ The sample now selects candidate types. Each existing conversion loop validates 
 
 Successful typed inference keeps its existing conversion pass and adds a validity check. A rejected candidate can require another pass and another column allocation. There is no unconditional full inference scan, new public option, dependency, or generic parsing abstraction. Explicit type overrides and `inferTypes = false` remain unchanged. The existing numeric conversion rules still govern Double rounding; this is not arbitrary-precision ingestion.
 
-Streaming continues to infer each chunk independently. This change does not establish one schema across all chunks. An all-null initial sample still follows the existing String-column path. Date text that parses successfully to the wrong ambiguous date is outside this repair.
+Streaming continues to infer each chunk independently. This change does not establish one schema across all chunks. An all-null initial sample still follows the existing String-column path. Selecting a source-specific convention for ambiguous dates is outside this repair.
 
 ## Failing-before and passing-after evidence
 
@@ -62,7 +62,7 @@ The identical-binary CPU ratio has median 1.0026 and range 0.9809 to 1.0138. The
 
 Manual review checked that only inferred typed conversions reject candidates, that configured nulls remain accepted, that retries use original bytes rather than converted values, and that partial builders leave scope before the next type allocation. The public options documentation explains widening and the unchanged explicit-override behavior. The tests are small and explicitly typed.
 
-The next separate repair is date interpretation. This branch is committed locally but has not been pushed or submitted as a PR. Hosted CI, its compiler version, and the full SwiftSci all-module suite have not run on this head. The local tests and benchmark worker used Swift 6.4 and Xcode 27.0 on Apple silicon. The reference probe targets macOS 14. Address Sanitizer was not repeated for this repair, which changes no pointer or ownership implementation; the parent integration's sanitizer evidence remains in its own report.
+The next separate feature is explicit per-column date formats, preserving the documented default. This branch is committed locally but has not been pushed or submitted as a PR. Hosted CI, its compiler version, and the full SwiftSci all-module suite have not run on this head. The local tests and benchmark worker used Swift 6.4 and Xcode 27.0 on Apple silicon. The reference probe targets macOS 14. Address Sanitizer was not repeated for this repair, which changes no pointer or ownership implementation; the parent integration's sanitizer evidence remains in its own report.
 
 ## Evidence
 
@@ -72,3 +72,7 @@ The next separate repair is date interpretation. This branch is committed locall
 - [Original reference comparison](../2026-10-21-csv-reference/README.md): dataset attribution, oracles, and failure inventory before this repair.
 
 Scripts retain the exact local cache paths used for replay. Dataset bytes, compiled binaries, Xcode result bundles, and caches are not committed. This is recorded local evidence, not a new portable benchmark command.
+
+## Date-contract correction
+
+The follow-up [explicit date-format record](../2026-10-21-csv-date-format/README.md) distinguishes the UCI source convention from SwiftSci's documented default. Historical diagnostics, hashes, timings, and archived evidence remain unchanged. A failed comparison against the source convention is still excluded from performance claims.
