@@ -1,0 +1,1122 @@
+[
+  {
+    "case": "bike-day",
+    "engine": "baseline",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 39047500.0,
+        "min": 33153000,
+        "max": 51502000
+      },
+      "total_ns": {
+        "median": 44930208.5,
+        "min": 34859500,
+        "max": 58001166
+      },
+      "rss_held_delta_bytes": {
+        "median": 4079616.0,
+        "min": 3997696,
+        "max": 4161536
+      },
+      "process_peak_held_bytes": {
+        "median": 11026432.0,
+        "min": 10944512,
+        "max": 11091968
+      },
+      "held_heap_delta_bytes": {
+        "median": 438960.0,
+        "min": 438960,
+        "max": 438960
+      }
+    }
+  },
+  {
+    "case": "bike-day",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 1449000.0,
+        "min": 1317000,
+        "max": 1557000
+      },
+      "total_ns": {
+        "median": 1229792.0,
+        "min": 990959,
+        "max": 3783542
+      },
+      "rss_held_delta_bytes": {
+        "median": 1335296.0,
+        "min": 1277952,
+        "max": 1392640
+      },
+      "process_peak_held_bytes": {
+        "median": 8265728.0,
+        "min": 8208384,
+        "max": 8323072
+      },
+      "held_heap_delta_bytes": {
+        "median": 211904.0,
+        "min": 211872,
+        "max": 211936
+      }
+    }
+  },
+  {
+    "case": "bike-day",
+    "engine": "pandas",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 7176000.0,
+        "min": 3969000,
+        "max": 8971000
+      },
+      "total_ns": {
+        "median": 12236103.5,
+        "min": 4080875,
+        "max": 34825667
+      },
+      "rss_held_delta_bytes": {
+        "median": 2801664.0,
+        "min": 2572288,
+        "max": 3407872
+      },
+      "process_peak_held_bytes": {
+        "median": 105709568.0,
+        "min": 105103360,
+        "max": 106348544
+      }
+    }
+  },
+  {
+    "case": "bike-day",
+    "engine": "polars",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 5896500.0,
+        "min": 3971000,
+        "max": 7510000
+      },
+      "total_ns": {
+        "median": 5903250.0,
+        "min": 1636125,
+        "max": 61433209
+      },
+      "rss_held_delta_bytes": {
+        "median": 12787712.0,
+        "min": 12271616,
+        "max": 15400960
+      },
+      "process_peak_held_bytes": {
+        "median": 78340096.0,
+        "min": 77152256,
+        "max": 81018880
+      }
+    }
+  },
+  {
+    "case": "bike-day",
+    "engine": "duckdb",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 4080500.0,
+        "min": 3240000,
+        "max": 5613000
+      },
+      "total_ns": {
+        "median": 4871457.5,
+        "min": 2081625,
+        "max": 10687459
+      },
+      "rss_held_delta_bytes": {
+        "median": 7233536.0,
+        "min": 6963200,
+        "max": 7569408
+      },
+      "process_peak_held_bytes": {
+        "median": 86433792.0,
+        "min": 85655552,
+        "max": 86589440
+      }
+    }
+  },
+  {
+    "case": "bike-hour",
+    "engine": "baseline",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 819294000.0,
+        "min": 804002000,
+        "max": 836337000
+      },
+      "total_ns": {
+        "median": 820015125.0,
+        "min": 810487750,
+        "max": 838390750
+      },
+      "rss_held_delta_bytes": {
+        "median": 15523840.0,
+        "min": 15499264,
+        "max": 15532032
+      },
+      "process_peak_held_bytes": {
+        "median": 23560192.0,
+        "min": 23543808,
+        "max": 23576576
+      },
+      "held_heap_delta_bytes": {
+        "median": 4977360.0,
+        "min": 4977360,
+        "max": 5120112
+      }
+    }
+  },
+  {
+    "case": "bike-hour",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 11153500.0,
+        "min": 10879000,
+        "max": 12986000
+      },
+      "total_ns": {
+        "median": 5595854.0,
+        "min": 3594667,
+        "max": 12568208
+      },
+      "rss_held_delta_bytes": {
+        "median": 10575872.0,
+        "min": 10534912,
+        "max": 10665984
+      },
+      "process_peak_held_bytes": {
+        "median": 18595840.0,
+        "min": 18530304,
+        "max": 18694144
+      },
+      "held_heap_delta_bytes": {
+        "median": 4750464.0,
+        "min": 4750304,
+        "max": 4750496
+      }
+    }
+  },
+  {
+    "case": "bike-hour",
+    "engine": "pandas",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 17849000.0,
+        "min": 17142000,
+        "max": 22457000
+      },
+      "total_ns": {
+        "median": 18146333.5,
+        "min": 17275708,
+        "max": 26712292
+      },
+      "rss_held_delta_bytes": {
+        "median": 15474688.0,
+        "min": 14385152,
+        "max": 15859712
+      },
+      "process_peak_held_bytes": {
+        "median": 118497280.0,
+        "min": 117391360,
+        "max": 118833152
+      }
+    }
+  },
+  {
+    "case": "bike-hour",
+    "engine": "polars",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 17865500.0,
+        "min": 13210000,
+        "max": 27548000
+      },
+      "total_ns": {
+        "median": 15973313.0,
+        "min": 8406708,
+        "max": 33052958
+      },
+      "rss_held_delta_bytes": {
+        "median": 26279936.0,
+        "min": 22986752,
+        "max": 26804224
+      },
+      "process_peak_held_bytes": {
+        "median": 91430912.0,
+        "min": 89260032,
+        "max": 92258304
+      }
+    }
+  },
+  {
+    "case": "bike-hour",
+    "engine": "duckdb",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 17714500.0,
+        "min": 12240000,
+        "max": 22579000
+      },
+      "total_ns": {
+        "median": 15922125.0,
+        "min": 11417917,
+        "max": 18440334
+      },
+      "rss_held_delta_bytes": {
+        "median": 13049856.0,
+        "min": 12550144,
+        "max": 15302656
+      },
+      "process_peak_held_bytes": {
+        "median": 92299264.0,
+        "min": 91602944,
+        "max": 94650368
+      }
+    }
+  },
+  {
+    "case": "unique",
+    "engine": "baseline",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 3987225000.0,
+        "min": 3945567000,
+        "max": 4795428000
+      },
+      "total_ns": {
+        "median": 3988408646.0,
+        "min": 3946534125,
+        "max": 4861316458
+      },
+      "rss_held_delta_bytes": {
+        "median": 22880256.0,
+        "min": 22822912,
+        "max": 22953984
+      },
+      "process_peak_held_bytes": {
+        "median": 31473664.0,
+        "min": 31391744,
+        "max": 31522816
+      },
+      "held_heap_delta_bytes": {
+        "median": 15371424.0,
+        "min": 15072608,
+        "max": 15389680
+      }
+    }
+  },
+  {
+    "case": "unique",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 6778000.0,
+        "min": 6534000,
+        "max": 15387000
+      },
+      "total_ns": {
+        "median": 4654083.5,
+        "min": 4099917,
+        "max": 87336958
+      },
+      "rss_held_delta_bytes": {
+        "median": 7995392.0,
+        "min": 7929856,
+        "max": 8044544
+      },
+      "process_peak_held_bytes": {
+        "median": 16572416.0,
+        "min": 16498688,
+        "max": 16613376
+      },
+      "held_heap_delta_bytes": {
+        "median": 3223616.0,
+        "min": 3223616,
+        "max": 3223680
+      }
+    }
+  },
+  {
+    "case": "unique",
+    "engine": "pandas",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 24871000.0,
+        "min": 23527000,
+        "max": 36202000
+      },
+      "total_ns": {
+        "median": 28009230.0,
+        "min": 23719751,
+        "max": 228066709
+      },
+      "rss_held_delta_bytes": {
+        "median": 15253504.0,
+        "min": 14794752,
+        "max": 16269312
+      },
+      "process_peak_held_bytes": {
+        "median": 120905728.0,
+        "min": 120078336,
+        "max": 121847808
+      }
+    }
+  },
+  {
+    "case": "unique",
+    "engine": "polars",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 21771000.0,
+        "min": 19095000,
+        "max": 62184000
+      },
+      "total_ns": {
+        "median": 15516771.0,
+        "min": 2975125,
+        "max": 63968459
+      },
+      "rss_held_delta_bytes": {
+        "median": 19906560.0,
+        "min": 18546688,
+        "max": 21200896
+      },
+      "process_peak_held_bytes": {
+        "median": 85467136.0,
+        "min": 85409792,
+        "max": 86196224
+      }
+    }
+  },
+  {
+    "case": "unique",
+    "engine": "duckdb",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 18939500.0,
+        "min": 18503000,
+        "max": 31574000
+      },
+      "total_ns": {
+        "median": 10052146.0,
+        "min": 9648208,
+        "max": 93988667
+      },
+      "rss_held_delta_bytes": {
+        "median": 9142272.0,
+        "min": 9109504,
+        "max": 9994240
+      },
+      "process_peak_held_bytes": {
+        "median": 88154112.0,
+        "min": 87801856,
+        "max": 88555520
+      }
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "baseline",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 3957685000.0,
+        "min": 3935419000,
+        "max": 3965861000
+      },
+      "total_ns": {
+        "median": 3959392500.0,
+        "min": 3935596625,
+        "max": 3965834876
+      },
+      "rss_held_delta_bytes": {
+        "median": 22945792.0,
+        "min": 22839296,
+        "max": 22970368
+      },
+      "process_peak_held_bytes": {
+        "median": 31514624.0,
+        "min": 31408128,
+        "max": 31539200
+      },
+      "held_heap_delta_bytes": {
+        "median": 15367224.0,
+        "min": 15337936,
+        "max": 15404800
+      }
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 7614500.0,
+        "min": 7433000,
+        "max": 8119000
+      },
+      "total_ns": {
+        "median": 4961854.0,
+        "min": 4792583,
+        "max": 5133626
+      },
+      "rss_held_delta_bytes": {
+        "median": 7913472.0,
+        "min": 7913472,
+        "max": 7946240
+      },
+      "process_peak_held_bytes": {
+        "median": 16498688.0,
+        "min": 16498688,
+        "max": 16531456
+      },
+      "held_heap_delta_bytes": {
+        "median": 3223680.0,
+        "min": 3223616,
+        "max": 3223680
+      }
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "pandas",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 24624500.0,
+        "min": 24390000,
+        "max": 26373000
+      },
+      "total_ns": {
+        "median": 24828708.5,
+        "min": 24640500,
+        "max": 26709417
+      },
+      "rss_held_delta_bytes": {
+        "median": 14196736.0,
+        "min": 14123008,
+        "max": 15319040
+      },
+      "process_peak_held_bytes": {
+        "median": 119242752.0,
+        "min": 119144448,
+        "max": 120799232
+      }
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "polars",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 22581000.0,
+        "min": 21606000,
+        "max": 23120000
+      },
+      "total_ns": {
+        "median": 3168771.0,
+        "min": 3007375,
+        "max": 3320042
+      },
+      "rss_held_delta_bytes": {
+        "median": 20201472.0,
+        "min": 19185664,
+        "max": 20611072
+      },
+      "process_peak_held_bytes": {
+        "median": 85270528.0,
+        "min": 84885504,
+        "max": 85622784
+      }
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "duckdb",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 19170000.0,
+        "min": 18628000,
+        "max": 25760000
+      },
+      "total_ns": {
+        "median": 9946812.5,
+        "min": 9608083,
+        "max": 13253292
+      },
+      "rss_held_delta_bytes": {
+        "median": 9158656.0,
+        "min": 9060352,
+        "max": 10027008
+      },
+      "process_peak_held_bytes": {
+        "median": 87998464.0,
+        "min": 87654400,
+        "max": 88735744
+      }
+    }
+  },
+  {
+    "case": "energy",
+    "engine": "baseline",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 482447500.0,
+        "min": 469151000,
+        "max": 545424000
+      },
+      "total_ns": {
+        "median": 106829061.5,
+        "min": 104825208,
+        "max": 118065124
+      },
+      "rss_held_delta_bytes": {
+        "median": 615350272.0,
+        "min": 615317504,
+        "max": 615366656
+      },
+      "process_peak_held_bytes": {
+        "median": 755154944.0,
+        "min": 755122176,
+        "max": 755171328
+      },
+      "held_heap_delta_bytes": {
+        "median": 298908720.0,
+        "min": 298908720,
+        "max": 298908720
+      }
+    }
+  },
+  {
+    "case": "energy",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 496512500.0,
+        "min": 486949000,
+        "max": 519748000
+      },
+      "total_ns": {
+        "median": 106570542.0,
+        "min": 103852708,
+        "max": 125647834
+      },
+      "rss_held_delta_bytes": {
+        "median": 615350272.0,
+        "min": 615333888,
+        "max": 615383040
+      },
+      "process_peak_held_bytes": {
+        "median": 755130368.0,
+        "min": 755089408,
+        "max": 755154944
+      },
+      "held_heap_delta_bytes": {
+        "median": 298908784.0,
+        "min": 298908720,
+        "max": 298908784
+      }
+    }
+  },
+  {
+    "case": "energy",
+    "engine": "pandas",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 1199041500.0,
+        "min": 1168467000,
+        "max": 1224001000
+      },
+      "total_ns": {
+        "median": 1199689354.0,
+        "min": 1168935459,
+        "max": 1224986792
+      },
+      "rss_held_delta_bytes": {
+        "median": 323592192.0,
+        "min": 322764800,
+        "max": 324091904
+      },
+      "process_peak_held_bytes": {
+        "median": 426033152.0,
+        "min": 425574400,
+        "max": 426459136
+      }
+    }
+  },
+  {
+    "case": "energy",
+    "engine": "polars",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 305138000.0,
+        "min": 294608000,
+        "max": 319820000
+      },
+      "total_ns": {
+        "median": 29059646.0,
+        "min": 26075083,
+        "max": 30118375
+      },
+      "rss_held_delta_bytes": {
+        "median": 361619456.0,
+        "min": 357564416,
+        "max": 362184704
+      },
+      "process_peak_held_bytes": {
+        "median": 427278336.0,
+        "min": 426852352,
+        "max": 428048384
+      }
+    }
+  },
+  {
+    "case": "energy",
+    "engine": "duckdb",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 635018500.0,
+        "min": 626132000,
+        "max": 660360000
+      },
+      "total_ns": {
+        "median": 72955521.0,
+        "min": 65578500,
+        "max": 75929875
+      },
+      "rss_held_delta_bytes": {
+        "median": 520421376.0,
+        "min": 514834432,
+        "max": 522354688
+      },
+      "process_peak_held_bytes": {
+        "median": 599080960.0,
+        "min": 593674240,
+        "max": 601292800
+      }
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "baseline",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 14001000.0,
+        "min": 12218000,
+        "max": 15023000
+      },
+      "total_ns": {
+        "median": 6469749.5,
+        "min": 5788208,
+        "max": 6679958
+      },
+      "rss_held_delta_bytes": {
+        "median": 17375232.0,
+        "min": 17268736,
+        "max": 17465344
+      },
+      "process_peak_held_bytes": {
+        "median": 27082752.0,
+        "min": 26951680,
+        "max": 27148288
+      },
+      "held_heap_delta_bytes": {
+        "median": 10338832.0,
+        "min": 10338832,
+        "max": 10338832
+      }
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 13507000.0,
+        "min": 12629000,
+        "max": 14572000
+      },
+      "total_ns": {
+        "median": 6400062.5,
+        "min": 5891959,
+        "max": 6516125
+      },
+      "rss_held_delta_bytes": {
+        "median": 17440768.0,
+        "min": 17285120,
+        "max": 17481728
+      },
+      "process_peak_held_bytes": {
+        "median": 27107328.0,
+        "min": 26951680,
+        "max": 27148288
+      },
+      "held_heap_delta_bytes": {
+        "median": 10338832.0,
+        "min": 10338832,
+        "max": 10338896
+      }
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "pandas",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 37370000.0,
+        "min": 37135000,
+        "max": 46013000
+      },
+      "total_ns": {
+        "median": 37437812.5,
+        "min": 37191583,
+        "max": 46080375
+      },
+      "rss_held_delta_bytes": {
+        "median": 20520960.0,
+        "min": 18726912,
+        "max": 22134784
+      },
+      "process_peak_held_bytes": {
+        "median": 122888192.0,
+        "min": 121307136,
+        "max": 124698624
+      }
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "polars",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 19563000.0,
+        "min": 13741000,
+        "max": 20598000
+      },
+      "total_ns": {
+        "median": 2662500.0,
+        "min": 2615042,
+        "max": 4069417
+      },
+      "rss_held_delta_bytes": {
+        "median": 19021824.0,
+        "min": 15351808,
+        "max": 19316736
+      },
+      "process_peak_held_bytes": {
+        "median": 84008960.0,
+        "min": 83542016,
+        "max": 84393984
+      }
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "duckdb",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 38107000.0,
+        "min": 36891000,
+        "max": 40104000
+      },
+      "total_ns": {
+        "median": 19092917.5,
+        "min": 18682999,
+        "max": 19782499
+      },
+      "rss_held_delta_bytes": {
+        "median": 21970944.0,
+        "min": 21479424,
+        "max": 22478848
+      },
+      "process_peak_held_bytes": {
+        "median": 100802560.0,
+        "min": 100220928,
+        "max": 101236736
+      }
+    }
+  },
+  {
+    "case": "Wanliu",
+    "engine": "baseline",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 13498000.0,
+        "min": 12943000,
+        "max": 14742000
+      },
+      "total_ns": {
+        "median": 6404458.0,
+        "min": 6204166,
+        "max": 7138333
+      },
+      "rss_held_delta_bytes": {
+        "median": 17367040.0,
+        "min": 17317888,
+        "max": 17448960
+      },
+      "process_peak_held_bytes": {
+        "median": 26869760.0,
+        "min": 26820608,
+        "max": 26984448
+      },
+      "held_heap_delta_bytes": {
+        "median": 10338832.0,
+        "min": 10338832,
+        "max": 10338832
+      }
+    }
+  },
+  {
+    "case": "Wanliu",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 13637000.0,
+        "min": 13113000,
+        "max": 14731000
+      },
+      "total_ns": {
+        "median": 6267854.0,
+        "min": 6051750,
+        "max": 6633833
+      },
+      "rss_held_delta_bytes": {
+        "median": 17432576.0,
+        "min": 17350656,
+        "max": 17498112
+      },
+      "process_peak_held_bytes": {
+        "median": 26918912.0,
+        "min": 26853376,
+        "max": 27000832
+      },
+      "held_heap_delta_bytes": {
+        "median": 10338832.0,
+        "min": 10338832,
+        "max": 10338896
+      }
+    }
+  },
+  {
+    "case": "Wanliu",
+    "engine": "pandas",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 37358500.0,
+        "min": 36314000,
+        "max": 38235000
+      },
+      "total_ns": {
+        "median": 37415396.0,
+        "min": 36513209,
+        "max": 38327041
+      },
+      "rss_held_delta_bytes": {
+        "median": 18554880.0,
+        "min": 17793024,
+        "max": 22577152
+      },
+      "process_peak_held_bytes": {
+        "median": 121470976.0,
+        "min": 120537088,
+        "max": 125009920
+      }
+    }
+  },
+  {
+    "case": "Wanliu",
+    "engine": "polars",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 19090000.0,
+        "min": 17598000,
+        "max": 20394000
+      },
+      "total_ns": {
+        "median": 2740229.5,
+        "min": 2563666,
+        "max": 2872500
+      },
+      "rss_held_delta_bytes": {
+        "median": 18685952.0,
+        "min": 15777792,
+        "max": 19431424
+      },
+      "process_peak_held_bytes": {
+        "median": 84287488.0,
+        "min": 84082688,
+        "max": 84393984
+      }
+    }
+  },
+  {
+    "case": "Wanliu",
+    "engine": "duckdb",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 37957500.0,
+        "min": 36592000,
+        "max": 39494000
+      },
+      "total_ns": {
+        "median": 19348229.5,
+        "min": 18775667,
+        "max": 19722293
+      },
+      "rss_held_delta_bytes": {
+        "median": 21069824.0,
+        "min": 20512768,
+        "max": 21676032
+      },
+      "process_peak_held_bytes": {
+        "median": 100032512.0,
+        "min": 99401728,
+        "max": 100646912
+      }
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "baseline",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 82638275500.0,
+        "min": 82257581000,
+        "max": 95536770000
+      },
+      "total_ns": {
+        "median": 82386913437.0,
+        "min": 81929492042,
+        "max": 96673142417
+      },
+      "rss_held_delta_bytes": {
+        "median": 868950016.0,
+        "min": 868892672,
+        "max": 868990976
+      },
+      "process_peak_held_bytes": {
+        "median": 1008738304.0,
+        "min": 1008697344,
+        "max": 1008779264
+      },
+      "held_heap_delta_bytes": {
+        "median": 548462016.0,
+        "min": 546886992,
+        "max": 548462016
+      }
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 488653500.0,
+        "min": 468817000,
+        "max": 526165000
+      },
+      "total_ns": {
+        "median": 103823562.5,
+        "min": 97882416,
+        "max": 134967125
+      },
+      "rss_held_delta_bytes": {
+        "median": 615358464.0,
+        "min": 615317504,
+        "max": 615415808
+      },
+      "process_peak_held_bytes": {
+        "median": 755138560.0,
+        "min": 755089408,
+        "max": 755187712
+      },
+      "held_heap_delta_bytes": {
+        "median": 298908912.0,
+        "min": 298908912,
+        "max": 298908976
+      }
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "pandas",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 1367364000.0,
+        "min": 1349038000,
+        "max": 1490994000
+      },
+      "total_ns": {
+        "median": 1376012000.0,
+        "min": 1354736834,
+        "max": 1559089041
+      },
+      "rss_held_delta_bytes": {
+        "median": 464068608.0,
+        "min": 463831040,
+        "max": 464355328
+      },
+      "process_peak_held_bytes": {
+        "median": 681435136.0,
+        "min": 681066496,
+        "max": 682164224
+      }
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "polars",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 370112000.0,
+        "min": 331414000,
+        "max": 431165000
+      },
+      "total_ns": {
+        "median": 51488854.0,
+        "min": 27951124,
+        "max": 74588418
+      },
+      "rss_held_delta_bytes": {
+        "median": 261480448.0,
+        "min": 260292608,
+        "max": 263602176
+      },
+      "process_peak_held_bytes": {
+        "median": 428392448.0,
+        "min": 426557440,
+        "max": 434061312
+      }
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "duckdb",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 707032500.0,
+        "min": 682251000,
+        "max": 716492000
+      },
+      "total_ns": {
+        "median": 76670938.0,
+        "min": 75987917,
+        "max": 81030250
+      },
+      "rss_held_delta_bytes": {
+        "median": 483868672.0,
+        "min": 483295232,
+        "max": 484179968
+      },
+      "process_peak_held_bytes": {
+        "median": 562774016.0,
+        "min": 562380800,
+        "max": 563003392
+      }
+    }
+  }
+]

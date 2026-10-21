@@ -1,0 +1,61 @@
+{
+  "engine": "polars",
+  "input": "unique-shuffled",
+  "validated": true,
+  "checks": {
+    "passed": true,
+    "failures": [],
+    "columns": [
+      {
+        "name": "date",
+        "type": "Datetime(time_unit='us', time_zone=None)",
+        "nulls": 0,
+        "sha256": "cba8e5f5001d375e4a32934ac723cf3cd1cce46d62a06ed79e7eef1157eb97ef"
+      },
+      {
+        "name": "value",
+        "type": "Int64",
+        "nulls": 0,
+        "sha256": "7abe573f0a7d19bebf4648c9726e07125cb6c9ec2a394bce3bb044f5ffaa24ff"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "call_ns": 2989542,
+      "call_cpu_ns": 21252000,
+      "release_ns": 36833,
+      "release_cpu_ns": 41000,
+      "total_ns": 3026375,
+      "total_cpu_ns": 21293000,
+      "rss_before_bytes": 65716224,
+      "rss_held_bytes": 85966848,
+      "rss_held_delta_bytes": 20250624,
+      "rss_after_release_bytes": 90341376,
+      "process_peak_before_bytes": 65716224,
+      "process_peak_held_bytes": 85966848
+    }
+  ],
+  "versions": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "numpy": "2.5.3",
+    "polars": "1.44.2"
+  },
+  "pools": {
+    "polars": 16
+  },
+  "options": {
+    "separator": ",",
+    "has_header": true,
+    "schema": {
+      "date": "String",
+      "value": "Int64"
+    },
+    "null_values": [
+      "",
+      "NA"
+    ],
+    "try_parse_dates": false
+  },
+  "scope": "Fresh-process first public read and release, native eager output; validation excluded; memory before validation"
+}

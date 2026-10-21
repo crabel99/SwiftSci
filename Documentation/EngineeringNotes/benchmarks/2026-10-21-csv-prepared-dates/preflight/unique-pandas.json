@@ -1,0 +1,68 @@
+{
+  "engine": "pandas",
+  "input": "unique",
+  "validated": true,
+  "checks": {
+    "passed": true,
+    "failures": [],
+    "columns": [
+      {
+        "name": "date",
+        "type": "datetime64[us]",
+        "nulls": 0,
+        "sha256": "1d4ea4504e0682d4852983cd59d4c293fc02c079f98e001ce28d5df0a69131e9"
+      },
+      {
+        "name": "value",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "57710a9942ad3be9c23408787302b36a40d190f005a2e309465bb856355d33b1"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "call_ns": 32282834,
+      "call_cpu_ns": 23554000,
+      "release_ns": 5833,
+      "release_cpu_ns": 9000,
+      "total_ns": 32288667,
+      "total_cpu_ns": 23563000,
+      "rss_before_bytes": 102219776,
+      "rss_held_bytes": 116457472,
+      "rss_held_delta_bytes": 14237696,
+      "rss_after_release_bytes": 117080064,
+      "process_peak_before_bytes": 102219776,
+      "process_peak_held_bytes": 119226368
+    }
+  ],
+  "versions": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6"
+  },
+  "pools": {},
+  "options": {
+    "sep": ",",
+    "header": 0,
+    "dtype": {
+      "value": "int64"
+    },
+    "na_values": [
+      "",
+      "NA"
+    ],
+    "keep_default_na": false,
+    "encoding": "utf-8",
+    "engine": "c",
+    "float_precision": "round_trip",
+    "parse_dates": [
+      "date"
+    ],
+    "date_format": {
+      "date": "%Y-%m-%d"
+    },
+    "cache_dates": true
+  },
+  "scope": "Fresh-process first public read and release, native eager output; validation excluded; memory before validation"
+}

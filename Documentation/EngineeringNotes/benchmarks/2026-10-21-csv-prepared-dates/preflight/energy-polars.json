@@ -1,0 +1,110 @@
+{
+  "engine": "polars",
+  "input": "energy",
+  "validated": true,
+  "checks": {
+    "passed": true,
+    "failures": [],
+    "columns": [
+      {
+        "name": "Date",
+        "type": "String",
+        "nulls": 0,
+        "sha256": "3f668c84d65fca84e626079f15d3e4d7c7c2fceb6cc6687236094bfc8e32a007"
+      },
+      {
+        "name": "Time",
+        "type": "String",
+        "nulls": 0,
+        "sha256": "7815cb80f2c771ab04a87d8a63a5d3d47d54fed8495e5944aaab41859f7c25a0"
+      },
+      {
+        "name": "Global_active_power",
+        "type": "Float64",
+        "nulls": 25979,
+        "sha256": "53d359ca15123438086ff97e97f52265e7e4cd17dc1783d373b9be22436c7684"
+      },
+      {
+        "name": "Global_reactive_power",
+        "type": "Float64",
+        "nulls": 25979,
+        "sha256": "ae7a878c624c006f23620f7e80b5110442afac4d6fe8d0909b96dbbbb77aecf4"
+      },
+      {
+        "name": "Voltage",
+        "type": "Float64",
+        "nulls": 25979,
+        "sha256": "233829dd762c9a7642bae98b8dce7d0d37c0b7fc7c0f5056a25034b565d21cfb"
+      },
+      {
+        "name": "Global_intensity",
+        "type": "Float64",
+        "nulls": 25979,
+        "sha256": "873b0856d7c347862dfbbc3db4f7e7dbf14d4419960744468bb3f054c4fab2d3"
+      },
+      {
+        "name": "Sub_metering_1",
+        "type": "Float64",
+        "nulls": 25979,
+        "sha256": "6d847664e93f91bc63e1a0a5ec51916e225bcb64a03c1b5ecfe36f4dfbdf0fdf"
+      },
+      {
+        "name": "Sub_metering_2",
+        "type": "Float64",
+        "nulls": 25979,
+        "sha256": "9f459c64eee8858609e0f570deb31920f8c3cbc742d82680e515442475729386"
+      },
+      {
+        "name": "Sub_metering_3",
+        "type": "Float64",
+        "nulls": 25979,
+        "sha256": "bef6678827019d7a31c3ad10220c8ff5433f36aef2fe6785923ef6c340499c24"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "call_ns": 24399792,
+      "call_cpu_ns": 286205000,
+      "release_ns": 996667,
+      "release_cpu_ns": 1009000,
+      "total_ns": 25396459,
+      "total_cpu_ns": 287214000,
+      "rss_before_bytes": 64880640,
+      "rss_held_bytes": 427835392,
+      "rss_held_delta_bytes": 362954752,
+      "rss_after_release_bytes": 312836096,
+      "process_peak_before_bytes": 64995328,
+      "process_peak_held_bytes": 427835392
+    }
+  ],
+  "versions": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "numpy": "2.5.3",
+    "polars": "1.44.2"
+  },
+  "pools": {
+    "polars": 16
+  },
+  "options": {
+    "separator": ";",
+    "has_header": true,
+    "schema": {
+      "Date": "String",
+      "Time": "String",
+      "Global_active_power": "Float64",
+      "Global_reactive_power": "Float64",
+      "Voltage": "Float64",
+      "Global_intensity": "Float64",
+      "Sub_metering_1": "Float64",
+      "Sub_metering_2": "Float64",
+      "Sub_metering_3": "Float64"
+    },
+    "null_values": [
+      "",
+      "?"
+    ],
+    "try_parse_dates": false
+  },
+  "scope": "Fresh-process first public read and release, native eager output; validation excluded; memory before validation"
+}

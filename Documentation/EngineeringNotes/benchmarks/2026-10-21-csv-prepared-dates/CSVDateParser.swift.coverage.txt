@@ -1,0 +1,136 @@
+    1|       |import Foundation
+    2|       |
+    3|       |/// Prepared conversion for one date column. Each column worker owns its parser.
+    4|       |internal final class CSVDateParser {
+    5|       |    private let format: String?
+    6|       |    private let numeric: CSVNumericDateFormat?
+    7|     49|    private lazy var formatter: DateFormatter? = format.map { pattern in
+    8|     49|        let formatter = DateFormatter()
+    9|     49|        formatter.locale = Locale(identifier: "en_US_POSIX")
+   10|     49|        formatter.calendar = Calendar(identifier: .gregorian)
+   11|     49|        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+   12|     49|        formatter.dateFormat = pattern
+   13|     49|        formatter.isLenient = false
+   14|     49|        return formatter
+   15|     49|    }
+   16|       |
+   17|     73|    init(format: String?) {
+   18|     73|        self.format = format
+   19|     73|        numeric = format.flatMap(CSVNumericDateFormat.init)
+   20|     73|    }
+   21|       |
+   22|     11|    func parse(_ text: String) -> Date? {
+   23|     11|        guard format != nil else { return Date.parse(from: text) }
+   24|      9|        let cleaned = Date.cleanDateString(text)
+   25|      9|        if let numeric,
+   26|      9|           let date = cleaned.utf8.withContiguousStorageIfAvailable({
+   27|      8|               numeric.parse(buffer: $0, range: $0.indices)
+   28|      8|           }) ?? nil {
+   29|      4|            return date
+   30|      5|        }
+   31|      5|        return formatter?.date(from: cleaned)
+   32|     11|    }
+   33|       |
+   34|    512|    func parse(buffer: UnsafeBufferPointer<UInt8>, offset: CSVFieldOffset) -> Date? {
+   35|    512|        if let numeric, !offset.escapedQuotesPresent {
+   36|    505|            var start = offset.startOffset
+   37|    505|            var end = start + offset.length
+   38|    505|            if end - start >= 2, buffer[start] == 34, buffer[end - 1] == 34 {
+   39|      5|                start += 1
+   40|      5|                end -= 1
+   41|      5|            }
+   42|    506|            while start < end, Self.isWhitespace(buffer[start]) { start += 1 }
+   43|    506|            while start < end, Self.isWhitespace(buffer[end - 1]) { end -= 1 }
+   44|    505|            if let date = numeric.parse(buffer: buffer, range: start..<end) { return date }
+   45|    239|        }
+   46|    239|        let text = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+   47|    239|        guard format != nil else { return Date.parse(from: text) }
+   48|    232|        return formatter?.date(from: Date.cleanDateString(text))
+   49|    512|    }
+   50|       |
+   51|  1.01k|    private static func isWhitespace(_ byte: UInt8) -> Bool {
+   52|  1.01k|        byte == 32 || byte == 9 || byte == 13 || byte == 10
+   53|  1.01k|    }
+   54|       |}
+   55|       |
+   56|       |/// A conservative numeric subset of Foundation date patterns, with Gregorian UTC output.
+   57|       |internal struct CSVNumericDateFormat {
+   58|       |    private enum Component: UInt8 {
+   59|       |        case year = 121, month = 77, day = 100
+   60|       |    }
+   61|       |    private let components: [Component]
+   62|       |    private let separators: [UInt8]
+   63|       |    private static let monthStarts = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
+   64|       |
+   65|     67|    init?(_ pattern: String) {
+   66|     67|        let bytes = Array(pattern.utf8)
+   67|     67|        var components = [Component]()
+   68|     67|        var separators = [UInt8]()
+   69|     67|        var index = 0
+   70|    266|        while index < bytes.count {
+   71|    201|            guard let component = Component(rawValue: bytes[index]),
+   72|    201|                  !components.contains(component) else { return nil }
+   73|    201|            let start = index
+   74|    629|            while index < bytes.count, bytes[index] == component.rawValue { index += 1 }
+   75|    201|            let width = index - start
+   76|    201|            guard component == .year ? width == 4 : (1...2).contains(width) else { return nil }
+   77|    201|            components.append(component)
+   78|    201|            if index < bytes.count {
+   79|    136|                let separator = bytes[index]
+   80|    136|                guard separator == 45 || separator == 47 || separator == 46 else { return nil }
+   81|    134|                separators.append(separator)
+   82|    134|                index += 1
+   83|    199|            }
+   84|    199|        }
+   85|     65|        guard components.count == 3, separators.count == 2 else { return nil }
+   86|     65|        self.components = components
+   87|     65|        self.separators = separators
+   88|     65|    }
+   89|       |
+   90|    537|    func parse(buffer: UnsafeBufferPointer<UInt8>, range: Range<Int>) -> Date? {
+   91|    537|        var index = range.lowerBound
+   92|    537|        var year = 0
+   93|    537|        var month = 0
+   94|    537|        var day = 0
+   95|  1.51k|        for field in 0..<3 {
+   96|  1.51k|            let component = components[field]
+   97|  1.51k|            let start = index
+   98|  1.51k|            var value = 0
+   99|  1.51k|            let maxDigits = component == .year ? 4 : 2
+  100|  4.90k|            while index < range.upperBound, index - start < maxDigits {
+  101|  3.80k|                let byte = buffer[index]
+  102|  3.80k|                guard byte >= 48, byte <= 57 else { break }
+  103|  3.39k|                value = value * 10 + Int(byte - 48)
+  104|  3.39k|                index += 1
+  105|  3.39k|            }
+  106|  1.51k|            let digits = index - start
+  107|  1.51k|            guard component == .year ? digits == 4 : digits > 0 else { return nil }
+  108|  1.42k|            switch component {
+  109|  1.42k|            case .year: year = value
+  110|  1.42k|            case .month: month = value
+  111|  1.42k|            case .day: day = value
+  112|  1.42k|            }
+  113|  1.42k|            if field < 2 {
+  114|    988|                guard index < range.upperBound, buffer[index] == separators[field] else { return nil }
+  115|    978|                index += 1
+  116|  1.41k|            }
+  117|  1.41k|        }
+  118|    437|        // Earlier years use Foundation's calendar behavior, including the Gregorian cutover.
+  119|    437|        guard index == range.upperBound, year >= 1600, year <= 9999,
+  120|    437|              month >= 1, month <= 12, day >= 1 else { return nil }
+  121|    363|        let leap = year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)
+  122|    363|        let daysInMonth: Int
+  123|    363|        switch month {
+  124|    363|        case 2: daysInMonth = leap ? 29 : 28
+  125|    363|        case 4, 6, 9, 11: daysInMonth = 30
+  126|    363|        default: daysInMonth = 31
+  127|    363|        }
+  128|    363|        guard day <= daysInMonth else { return nil }
+  129|    301|        let priorYear = year - 1
+  130|    301|        let priorDays = 365 * priorYear + priorYear / 4 - priorYear / 100 + priorYear / 400
+  131|    301|        let leapDay = month > 2 && leap ? 1 : 0
+  132|    301|        let days = priorDays + Self.monthStarts[month - 1] + leapDay + day - 1 - 719_162
+  133|    301|        return Date(timeIntervalSince1970: Double(days) * 86_400)
+  134|    537|    }
+  135|       |}
+

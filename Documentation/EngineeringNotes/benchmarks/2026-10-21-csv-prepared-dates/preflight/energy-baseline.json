@@ -1,0 +1,87 @@
+{
+  "checks": {
+    "columns": [
+      {
+        "name": "Date",
+        "nulls": 0,
+        "sha256": "3f668c84d65fca84e626079f15d3e4d7c7c2fceb6cc6687236094bfc8e32a007",
+        "type": "String"
+      },
+      {
+        "name": "Time",
+        "nulls": 0,
+        "sha256": "7815cb80f2c771ab04a87d8a63a5d3d47d54fed8495e5944aaab41859f7c25a0",
+        "type": "String"
+      },
+      {
+        "name": "Global_active_power",
+        "nulls": 25979,
+        "sha256": "53d359ca15123438086ff97e97f52265e7e4cd17dc1783d373b9be22436c7684",
+        "type": "Double"
+      },
+      {
+        "name": "Global_reactive_power",
+        "nulls": 25979,
+        "sha256": "ae7a878c624c006f23620f7e80b5110442afac4d6fe8d0909b96dbbbb77aecf4",
+        "type": "Double"
+      },
+      {
+        "name": "Voltage",
+        "nulls": 25979,
+        "sha256": "233829dd762c9a7642bae98b8dce7d0d37c0b7fc7c0f5056a25034b565d21cfb",
+        "type": "Double"
+      },
+      {
+        "name": "Global_intensity",
+        "nulls": 25979,
+        "sha256": "873b0856d7c347862dfbbc3db4f7e7dbf14d4419960744468bb3f054c4fab2d3",
+        "type": "Double"
+      },
+      {
+        "name": "Sub_metering_1",
+        "nulls": 25979,
+        "sha256": "6d847664e93f91bc63e1a0a5ec51916e225bcb64a03c1b5ecfe36f4dfbdf0fdf",
+        "type": "Double"
+      },
+      {
+        "name": "Sub_metering_2",
+        "nulls": 25979,
+        "sha256": "9f459c64eee8858609e0f570deb31920f8c3cbc742d82680e515442475729386",
+        "type": "Double"
+      },
+      {
+        "name": "Sub_metering_3",
+        "nulls": 25979,
+        "sha256": "bef6678827019d7a31c3ad10220c8ff5433f36aef2fe6785923ef6c340499c24",
+        "type": "Double"
+      }
+    ],
+    "failures": [],
+    "passed": true
+  },
+  "input": "energy",
+  "mode": "known",
+  "phase": "audit",
+  "samples": [
+    {
+      "call_cpu_ns": 675615000,
+      "call_ns": 178706417,
+      "heap_after_release_bytes": 117344,
+      "heap_before_bytes": 96544,
+      "held_heap_bytes": 299005264,
+      "held_heap_delta_bytes": 298908720,
+      "process_peak_before_bytes": 6832128,
+      "process_peak_held_bytes": 755138560,
+      "release_cpu_ns": 16297000,
+      "release_ns": 16320375,
+      "rss_after_release_bytes": 623034368,
+      "rss_before_bytes": 6832128,
+      "rss_held_bytes": 622166016,
+      "rss_held_delta_bytes": 615333888,
+      "total_cpu_ns": 691912000,
+      "total_ns": 195026792
+    }
+  ],
+  "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+  "validated": true
+}

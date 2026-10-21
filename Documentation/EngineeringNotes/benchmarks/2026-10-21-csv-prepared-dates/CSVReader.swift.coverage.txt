@@ -1,0 +1,656 @@
+    1|       |import Foundation
+    2|       |
+    3|       |private struct UnsafeSendableBuffer: @unchecked Sendable {
+    4|       |    let pointer: UnsafeBufferPointer<UInt8>
+    5|       |}
+    6|       |
+    7|       |private struct SendableColumnPointer: @unchecked Sendable {
+    8|       |    let pointer: UnsafeMutablePointer<any AnyColumn>
+    9|       |}
+   10|       |
+   11|       |private struct OptionsBox: @unchecked Sendable {
+   12|       |    let options: CSVReadOptions
+   13|       |}
+   14|       |
+   15|       |private struct HeadersBox: @unchecked Sendable {
+   16|       |    let headers: [String]
+   17|       |}
+   18|       |
+   19|       |/// Reads CSV files into a `DataFrame`.
+   20|       |/// Uses Foundation for file I/O and performs Swift-native type inference.
+   21|       |internal enum CSVReader {
+   22|       |
+   23|     49|    static func read(url: URL, options: CSVReadOptions) async throws -> DataFrame {
+   24|     49|        guard FileManager.default.fileExists(atPath: url.path) else {
+   25|      0|            throw SwiftMLError.fileNotFound(url)
+   26|     49|        }
+   27|     49|
+   28|     49|        let mappedData = try Data(contentsOf: url, options: .alwaysMapped)
+   29|     49|        return try mappedData.withUnsafeBytes { rawBuffer in
+   30|     49|            let buffer = rawBuffer.bindMemory(to: UInt8.self)
+   31|     49|            let delimiter = UInt8(options.delimiter.utf8.first ?? 44)
+   32|     49|            let records = SystemsCSVParser(delimiterByte: delimiter).parseIndex(buffer: buffer)
+   33|     49|            guard !records.isEmpty else { return DataFrame.empty }
+   34|     48|
+   35|     48|            let headers: [String]
+   36|     48|            let startRow: Int
+   37|     48|            if options.hasHeader {
+   38|     97|                let rawHeaders = records.row(at: 0).map {
+   39|     97|                    VectorizedByteParsers.parseString(buffer: buffer, offset: $0)
+   40|     97|                }
+   41|     47|                headers = deduplicateHeaders(rawHeaders)
+   42|     47|                startRow = 1
+   43|     47|            } else {
+   44|      2|                headers = (0..<records.row(at: 0).count).map { "col\($0)" }
+   45|      1|                startRow = 0
+   46|      1|            }
+   47|     48|
+   48|     48|            let dataRowCount = records.count - startRow
+   49|     48|            guard dataRowCount > 0, !headers.isEmpty else { return DataFrame.empty }
+   50|     47|            let rowsToRead = options.maxRows.map { min(dataRowCount, $0) } ?? dataRowCount
+   51|     47|            var columns: [any AnyColumn] = Array(
+   52|     47|                repeating: TypedColumn<String>(name: "", values: []), count: headers.count
+   53|     47|            )
+   54|     47|            let sendableBuffer = UnsafeSendableBuffer(pointer: buffer)
+   55|     47|            let optionsBox = OptionsBox(options: options)
+   56|     47|            let headersBox = HeadersBox(headers: headers)
+   57|     47|
+   58|     47|            columns.withUnsafeMutableBufferPointer { columnBuffer in
+   59|     47|                guard let base = columnBuffer.baseAddress else { return }
+   60|     47|                let output = SendableColumnPointer(pointer: base)
+   61|     96|                DispatchQueue.concurrentPerform(iterations: headers.count) { column in
+   62|     96|                    output.pointer[column] = buildColumn(
+   63|     96|                        buffer: sendableBuffer.pointer,
+   64|     96|                        records: records,
+   65|     96|                        startRowIdx: startRow,
+   66|     96|                        dataRowsToRead: rowsToRead,
+   67|     96|                        colIndex: column,
+   68|     96|                        name: headersBox.headers[column],
+   69|     96|                        options: optionsBox.options
+   70|     96|                    )
+   71|     96|                }
+   72|     47|            }
+   73|     47|            return try DataFrame(columns: columns)
+   74|     49|        }
+   75|     49|    }
+   76|       |
+   77|       |    // MARK: – Core parser
+   78|       |
+   79|      7|    static func parse(_ raw: String, options: CSVReadOptions) throws -> DataFrame {
+   80|      7|        var lines = splitLines(raw)
+   81|      7|
+   82|      7|        // Remove trailing empty line
+   83|      7|        if lines.last?.trimmingCharacters(in: .whitespaces).isEmpty == true {
+   84|      2|            lines.removeLast()
+   85|      2|        }
+   86|      7|
+   87|      7|        guard !lines.isEmpty else { return DataFrame.empty }
+   88|      7|
+   89|      7|        let delim = options.delimiter
+   90|      7|
+   91|      7|        // ── Parse header ─────────────────────────────────────────────────
+   92|      7|        var headers: [String]
+   93|      7|        var dataStartLine: Int
+   94|      7|
+   95|      7|        if options.hasHeader {
+   96|      7|            headers       = parseRow(lines[0], delimiter: delim)
+   97|      7|            dataStartLine = 1
+   98|      7|        } else {
+   99|      0|            let firstRow = parseRow(lines[0], delimiter: delim)
+  100|      0|            headers       = firstRow.indices.map { "col\($0)" }
+  101|      0|            dataStartLine = 0
+  102|      0|        }
+  103|      7|
+  104|      7|        guard !headers.isEmpty else {
+  105|      0|            throw SwiftMLError.parseError(line: 1, description: "Empty header row.")
+  106|      7|        }
+  107|      7|
+  108|      7|        // ── Limit rows ───────────────────────────────────────────────────
+  109|      7|        let dataLines: [String]
+  110|      7|        if let max = options.maxRows {
+  111|      0|            dataLines = Array(lines[dataStartLine...].prefix(max))
+  112|      7|        } else {
+  113|      7|            dataLines = Array(lines[dataStartLine...])
+  114|      7|        }
+  115|      7|
+  116|      7|        // ── Parse cells ──────────────────────────────────────────────────
+  117|      7|        let colCount = headers.count
+  118|      7|        // rawCells[col][row]
+  119|      7|        var rawCells: [[String?]] = Array(repeating: [], count: colCount)
+  120|      7|
+  121|     19|        for (lineOffset, line) in dataLines.enumerated() {
+  122|     19|            let row = parseRow(line, delimiter: delim)
+  123|     19|            let lineNumber = dataStartLine + lineOffset + 1
+  124|     19|
+  125|     19|            guard row.count == colCount else {
+  126|      0|                throw SwiftMLError.parseError(
+  127|      0|                    line: lineNumber,
+  128|      0|                    description: "Expected \(colCount) columns, found \(row.count)."
+  129|      0|                )
+  130|     19|            }
+  131|     19|
+  132|     47|            for (ci, cell) in row.enumerated() {
+  133|     47|                let trimmed = cell.trimmingCharacters(in: .whitespaces)
+  134|     47|                rawCells[ci].append(options.nullValues.contains(trimmed) ? nil : trimmed)
+  135|     47|            }
+  136|     19|        }
+  137|      7|
+  138|      7|        // ── Build columns ────────────────────────────────────────────────
+  139|      7|        var columns: [any AnyColumn] = []
+  140|     17|        for (ci, name) in headers.enumerated() {
+  141|     17|            let cells = rawCells[ci]
+  142|     17|            let col   = options.inferTypes
+  143|     17|                ? inferColumn(name: name, cells: cells, options: options)
+  144|     17|                : TypedColumn<String>(name: name, values: cells)
+  145|     17|            columns.append(col)
+  146|     17|        }
+  147|      7|
+  148|      7|        return try DataFrame(columns: columns)
+  149|      7|    }
+  150|       |
+  151|       |    // MARK: – Type inference
+  152|       |
+  153|       |    /// Infers the best ColumnDType by trying types in priority order or respecting columnTypeOverrides.
+  154|     23|    internal static func inferColumn(name: String, cells: [String?], options: CSVReadOptions = .default) -> any AnyColumn {
+  155|     23|        if let overrideType = options.columnTypeOverrides[name] {
+  156|      9|            switch overrideType {
+  157|      9|            case .int32, .int64:
+  158|      2|                return TypedColumn<Int64>(name: name, values: cells.map { $0.flatMap(Int64.parse) })
+  159|      9|            case .float32, .float64:
+  160|      0|                return TypedColumn<Double>(name: name, values: cells.map { $0.flatMap(Double.parse) })
+  161|      9|            case .boolean:
+  162|      2|                return TypedColumn<Bool>(name: name, values: cells.map { $0.flatMap(Bool.parse) })
+  163|      9|            case .utf8:
+  164|      1|                return TypedColumn<String>(name: name, values: cells)
+  165|      9|            case .date32:
+  166|      6|                let parser = CSVDateParser(format: options.columnDateFormats[name])
+  167|     28|                return TypedColumn<Date>(name: name, values: cells.map { $0.flatMap(parser.parse) })
+  ------------------
+  | $s14SwiftDataFrame9CSVReaderO11inferColumn4name5cells7optionsAA03AnyF0_pSS_SaySSSgGAA14CSVReadOptionsVtFZ10Foundation4DateVSgAIXEfU2_APSScAA13CSVDateParserCYbcfu_:
+  |  167|     18|                return TypedColumn<Date>(name: name, values: cells.map { $0.flatMap(parser.parse) })
+  ------------------
+  | $s14SwiftDataFrame9CSVReaderO11inferColumn4name5cells7optionsAA03AnyF0_pSS_SaySSSgGAA14CSVReadOptionsVtFZ10Foundation4DateVSgAIXEfU2_APSScAA13CSVDateParserCYbcfu_APSScfu0_:
+  |  167|     10|                return TypedColumn<Date>(name: name, values: cells.map { $0.flatMap(parser.parse) })
+  ------------------
+  168|      9|            }
+  169|     14|        }
+  170|     14|
+  171|     38|        let nonNull = cells.compactMap { $0 }
+  172|     14|        guard !nonNull.isEmpty else {
+  173|      0|            return TypedColumn<String>(name: name, values: cells)
+  174|     14|        }
+  175|     14|
+  176|     20|        if nonNull.allSatisfy({ Int64.parse(from: $0) != nil }) {
+  177|     16|            return TypedColumn<Int64>(name: name, values: cells.map { $0.flatMap(Int64.parse) })
+  178|      8|        }
+  179|      8|
+  180|      9|        if nonNull.allSatisfy({ Double.parse(from: $0) != nil }) {
+  181|      3|            return TypedColumn<Double>(name: name, values: cells.map { $0.flatMap(Double.parse) })
+  182|      7|        }
+  183|      7|
+  184|     10|        if nonNull.allSatisfy({ Bool.parse(from: $0) != nil }) {
+  185|      5|            return TypedColumn<Bool>(name: name, values: cells.map { $0.flatMap(Bool.parse) })
+  186|      5|        }
+  187|      5|
+  188|      5|        if nonNull.allSatisfy({ Date.parse(from: $0) != nil }) {
+  189|      1|            return TypedColumn<Date>(name: name, values: cells.map { $0.flatMap(Date.parse) })
+  190|      4|        }
+  191|      4|
+  192|      4|        return TypedColumn<String>(name: name, values: cells)
+  193|     23|    }
+  194|       |
+  195|       |    // MARK: – Column Builder (Column-Parallel)
+  196|       |
+  197|       |    internal static func buildColumn(
+  198|       |        buffer: UnsafeBufferPointer<UInt8>,
+  199|       |        records: CSVRecordIndex,
+  200|       |        startRowIdx: Int,
+  201|       |        dataRowsToRead: Int,
+  202|       |        colIndex: Int,
+  203|       |        name: String,
+  204|       |        options: CSVReadOptions
+  205|    223|    ) -> any AnyColumn {
+  206|    223|        if let column = records.withFlatFields({ view in
+  207|     33|            buildIndexedColumn(buffer: buffer, records: view,
+  208|     33|                startRowIdx: startRowIdx, dataRowsToRead: dataRowsToRead,
+  209|     33|                colIndex: colIndex, name: name, options: options)
+  210|    190|        }) { return column }
+  211|    190|        if let column = records.withCompactFields({ view in
+  212|    186|            buildIndexedColumn(buffer: buffer, records: view,
+  213|    186|                startRowIdx: startRowIdx, dataRowsToRead: dataRowsToRead,
+  214|    186|                colIndex: colIndex, name: name, options: options)
+  215|    186|        }) { return column }
+  216|      4|        return buildIndexedColumn(buffer: buffer, records: records,
+  217|      4|            startRowIdx: startRowIdx, dataRowsToRead: dataRowsToRead,
+  218|      4|            colIndex: colIndex, name: name, options: options)
+  219|    223|    }
+  220|       |
+  221|       |    private static func buildIndexedColumn<Records: CSVRecordAccess>(
+  222|       |        buffer: UnsafeBufferPointer<UInt8>,
+  223|       |        records: Records,
+  224|       |        startRowIdx: Int,
+  225|       |        dataRowsToRead: Int,
+  226|       |        colIndex: Int,
+  227|       |        name: String,
+  228|       |        options: CSVReadOptions
+  229|    224|    ) -> any AnyColumn {
+  230|    224|        let nullMatcher = CSVNullMatcher(options.nullValues)
+  231|    224|        if let overrideType = options.columnTypeOverrides[name] {
+  232|    105|            switch overrideType {
+  233|    105|            case .int32, .int64:
+  234|     25|                var values = CSVColumnBuilder<Int64>(capacity: dataRowsToRead)
+  235|     74|                for r in 0..<dataRowsToRead {
+  236|     74|                    let rowIdx = startRowIdx + r
+  237|     74|                    if let offset = records.field(row: rowIdx, column: colIndex) {
+  238|     72|                        values.append(parseCSVInt64(buffer: buffer, offset: offset, nullMatcher: nullMatcher))
+  239|     72|                    } else {
+  240|      2|                        values.append(nil)
+  241|      2|                    }
+  242|     74|                }
+  243|     25|                return values.column(named: name)
+  244|    105|            case .float32, .float64:
+  245|     12|                var values = CSVColumnBuilder<Double>(capacity: dataRowsToRead)
+  246|     50|                for r in 0..<dataRowsToRead {
+  247|     50|                    let rowIdx = startRowIdx + r
+  248|     50|                    if let offset = records.field(row: rowIdx, column: colIndex) {
+  249|     48|                        values.append(parseCSVDouble(buffer: buffer, offset: offset, nullMatcher: nullMatcher))
+  250|     48|                    } else {
+  251|      2|                        values.append(nil)
+  252|      2|                    }
+  253|     50|                }
+  254|     12|                return values.column(named: name)
+  255|    105|            case .boolean:
+  256|      1|                var values = CSVColumnBuilder<Bool>(capacity: dataRowsToRead)
+  257|      4|                for r in 0..<dataRowsToRead {
+  258|      4|                    let rowIdx = startRowIdx + r
+  259|      4|                    if let offset = records.field(row: rowIdx, column: colIndex) {
+  260|      3|                        let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+  261|      3|                        values.append(options.nullValues.contains(str) ? nil : Bool.parse(from: str))
+  262|      3|                    } else {
+  263|      1|                        values.append(nil)
+  264|      1|                    }
+  265|      4|                }
+  266|      1|                return values.column(named: name)
+  267|    105|            case .utf8:
+  268|      2|                var values = CSVColumnBuilder<String>(capacity: dataRowsToRead)
+  269|     12|                for r in 0..<dataRowsToRead {
+  270|     12|                    let rowIdx = startRowIdx + r
+  271|     12|                    if let offset = records.field(row: rowIdx, column: colIndex) {
+  272|     10|                        let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+  273|     10|                        values.append(options.nullValues.contains(str) ? nil : str)
+  274|     10|                    } else {
+  275|      2|                        values.append(nil)
+  276|      2|                    }
+  277|     12|                }
+  278|      2|                return values.column(named: name)
+  279|    105|            case .date32:
+  280|     65|                let parser = CSVDateParser(format: options.columnDateFormats[name])
+  281|     65|                let nullMatcher = CSVNullMatcher(options.nullValues)
+  282|     65|                var values = CSVColumnBuilder<Date>(capacity: dataRowsToRead)
+  283|    538|                for r in 0..<dataRowsToRead {
+  284|    538|                    let rowIdx = startRowIdx + r
+  285|    538|                    if let offset = records.field(row: rowIdx, column: colIndex) {
+  286|    536|                        values.append(nullMatcher.contains(buffer: buffer, offset: offset)
+  287|    536|                            ? nil : parser.parse(buffer: buffer, offset: offset))
+  288|    536|                    } else {
+  289|      2|                        values.append(nil)
+  290|      2|                    }
+  291|    538|                }
+  292|     65|                return values.column(named: name)
+  293|    105|            }
+  294|    119|        }
+  295|    119|
+  296|    119|        if !options.inferTypes {
+  297|     13|            var values = CSVColumnBuilder<String>(capacity: dataRowsToRead)
+  298|     32|            for r in 0..<dataRowsToRead {
+  299|     32|                let rowIdx = startRowIdx + r
+  300|     32|                if let offset = records.field(row: rowIdx, column: colIndex) {
+  301|     28|                    let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+  302|     28|                    values.append(options.nullValues.contains(str) ? nil : str)
+  303|     28|                } else {
+  304|      4|                    values.append(nil)
+  305|      4|                }
+  306|     32|            }
+  307|     13|            return values.column(named: name)
+  308|    106|        }
+  309|    106|
+  310|    106|        var isBool = true
+  311|    106|        var isInt64 = true
+  312|    106|        var isDouble = true
+  313|    106|        var isDate = true
+  314|    106|        var nonNullCount = 0
+  315|    106|        let sampleRows = min(dataRowsToRead, 1000)
+  316|  30.2k|        for r in 0..<sampleRows {
+  317|  30.2k|            let rowIdx = startRowIdx + r
+  318|  30.2k|            guard let offset = records.field(row: rowIdx, column: colIndex) else { continue }
+  319|  30.2k|            if offset.length == 0 { continue }
+  320|  30.2k|            let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+  321|  30.2k|            if options.nullValues.contains(str) { continue }
+  322|  30.2k|
+  323|  30.2k|            nonNullCount += 1
+  324|  30.2k|
+  325|  30.2k|            if isBool && Bool.parse(from: str) == nil { isBool = false }
+  326|  30.2k|            if isInt64 && Int64.parse(from: str) == nil { isInt64 = false }
+  327|  30.2k|            if isDouble && VectorizedByteParsers.parseDouble(buffer: buffer, offset: offset) == nil && Double.parse(from: str) == nil { isDouble = false }
+  328|  30.2k|            if isDate && Date.parse(from: str) == nil { isDate = false }
+  329|  30.2k|
+  330|  30.2k|            if !isBool && !isInt64 && !isDouble && !isDate {
+  331|     32|                break
+  332|  30.2k|            }
+  333|  30.2k|        }
+  334|    106|
+  335|    106|        if nonNullCount == 0 {
+  336|      1|            var values = CSVColumnBuilder<String>(capacity: dataRowsToRead)
+  337|      1|            for r in 0..<dataRowsToRead {
+  338|      1|                let rowIdx = startRowIdx + r
+  339|      1|                if let offset = records.field(row: rowIdx, column: colIndex) {
+  340|      0|                    let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+  341|      0|                    values.append(options.nullValues.contains(str) ? nil : str)
+  342|      1|                } else {
+  343|      1|                    values.append(nil)
+  344|      1|                }
+  345|      1|            }
+  346|      1|            return values.column(named: name)
+  347|    105|        }
+  348|    105|
+  349|    105|        // The sample selects candidates; conversion must validate the remaining rows.
+  350|    105|        if isInt64 {
+  351|     41|            var values = CSVColumnBuilder<Int64>(capacity: dataRowsToRead)
+  352|  86.0k|            for r in 0..<dataRowsToRead {
+  353|  86.0k|                let rowIdx = startRowIdx + r
+  354|  86.0k|                if let offset = records.field(row: rowIdx, column: colIndex) {
+  355|  86.0k|                    let value = parseCSVInt64(buffer: buffer, offset: offset, nullMatcher: nullMatcher)
+  356|  86.0k|                    if value == nil && !nullMatcher.contains(buffer: buffer, offset: offset) {
+  357|      6|                        isInt64 = false
+  358|      6|                        break
+  359|  86.0k|                    }
+  360|  86.0k|                    values.append(value)
+  361|  86.0k|                } else {
+  362|      0|                    values.append(nil)
+  363|  86.0k|                }
+  364|  86.0k|            }
+  365|     41|            if isInt64 { return values.column(named: name) }
+  366|     69|        }
+  367|     69|
+  368|     69|        if isDouble {
+  369|     29|            var values = CSVColumnBuilder<Double>(capacity: dataRowsToRead)
+  370|  87.0k|            for r in 0..<dataRowsToRead {
+  371|  87.0k|                let rowIdx = startRowIdx + r
+  372|  87.0k|                if let offset = records.field(row: rowIdx, column: colIndex) {
+  373|  87.0k|                    let value = parseCSVDouble(buffer: buffer, offset: offset, nullMatcher: nullMatcher)
+  374|  87.0k|                    if value == nil && !nullMatcher.contains(buffer: buffer, offset: offset) {
+  375|      3|                        isDouble = false
+  376|      3|                        break
+  377|  87.0k|                    }
+  378|  87.0k|                    values.append(value)
+  379|  87.0k|                } else {
+  380|      0|                    values.append(nil)
+  381|  87.0k|                }
+  382|  87.0k|            }
+  383|     29|            if isDouble { return values.column(named: name) }
+  384|     43|        }
+  385|     43|
+  386|     43|        if isBool {
+  387|      2|            var values = CSVColumnBuilder<Bool>(capacity: dataRowsToRead)
+  388|  1.00k|            for r in 0..<dataRowsToRead {
+  389|  1.00k|                let rowIdx = startRowIdx + r
+  390|  1.00k|                if let offset = records.field(row: rowIdx, column: colIndex) {
+  391|  1.00k|                    let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+  392|  1.00k|                    let isNull = options.nullValues.contains(str)
+  393|  1.00k|                    let value = isNull ? nil : Bool.parse(from: str)
+  394|  1.00k|                    if value == nil && !isNull {
+  395|      1|                        isBool = false
+  396|      1|                        break
+  397|  1.00k|                    }
+  398|  1.00k|                    values.append(value)
+  399|  1.00k|                } else {
+  400|      0|                    values.append(nil)
+  401|  1.00k|                }
+  402|  1.00k|            }
+  403|      2|            if isBool { return values.column(named: name) }
+  404|     42|        }
+  405|     42|
+  406|     42|        if isDate {
+  407|      6|            var values = CSVColumnBuilder<Date>(capacity: dataRowsToRead)
+  408|  1.01k|            for r in 0..<dataRowsToRead {
+  409|  1.01k|                let rowIdx = startRowIdx + r
+  410|  1.01k|                if let offset = records.field(row: rowIdx, column: colIndex) {
+  411|  1.01k|                    let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+  412|  1.01k|                    let isNull = options.nullValues.contains(str)
+  413|  1.01k|                    let value = isNull ? nil : Date.parse(from: str)
+  414|  1.01k|                    if value == nil && !isNull {
+  415|      1|                        isDate = false
+  416|      1|                        break
+  417|  1.01k|                    }
+  418|  1.01k|                    values.append(value)
+  419|  1.01k|                } else {
+  420|      1|                    values.append(nil)
+  421|  1.01k|                }
+  422|  1.01k|            }
+  423|      6|            if isDate { return values.column(named: name) }
+  424|     37|        }
+  425|     37|
+  426|     37|        var values = CSVColumnBuilder<String>(capacity: dataRowsToRead)
+  427|  85.0k|        for r in 0..<dataRowsToRead {
+  428|  85.0k|            let rowIdx = startRowIdx + r
+  429|  85.0k|            if let offset = records.field(row: rowIdx, column: colIndex) {
+  430|  85.0k|                let str = VectorizedByteParsers.parseString(buffer: buffer, offset: offset)
+  431|  85.0k|                values.append(options.nullValues.contains(str) ? nil : str)
+  432|  85.0k|            } else {
+  433|      0|                values.append(nil)
+  434|      0|            }
+  435|  85.0k|        }
+  436|     37|        return values.column(named: name)
+  437|    224|    }
+  438|       |
+  439|       |    @inline(__always)
+  440|       |    private static func parseCSVInt64(
+  441|       |        buffer: UnsafeBufferPointer<UInt8>,
+  442|       |        offset: CSVFieldOffset,
+  443|       |        nullMatcher: CSVNullMatcher
+  444|  86.1k|    ) -> Int64? {
+  445|  86.1k|        if !nullMatcher.canSkipNumericMatch && nullMatcher.contains(buffer: buffer, offset: offset) {
+  446|     15|            return nil
+  447|  86.1k|        }
+  448|  86.1k|        if let value = VectorizedByteParsers.parseInt(buffer: buffer, offset: offset) {
+  449|  86.0k|            return Int64(value)
+  450|  86.0k|        }
+  451|     19|        if nullMatcher.canSkipNumericMatch && nullMatcher.contains(buffer: buffer, offset: offset) {
+  452|     11|            return nil
+  453|     11|        }
+  454|      8|        return Int64.parse(from: VectorizedByteParsers.parseString(buffer: buffer, offset: offset))
+  455|  86.1k|    }
+  456|       |
+  457|       |    @inline(__always)
+  458|       |    private static func parseCSVDouble(
+  459|       |        buffer: UnsafeBufferPointer<UInt8>,
+  460|       |        offset: CSVFieldOffset,
+  461|       |        nullMatcher: CSVNullMatcher
+  462|  87.0k|    ) -> Double? {
+  463|  87.0k|        if !nullMatcher.canSkipNumericMatch && nullMatcher.contains(buffer: buffer, offset: offset) {
+  464|     15|            return nil
+  465|  87.0k|        }
+  466|  87.0k|        if let value = VectorizedByteParsers.parseDouble(buffer: buffer, offset: offset) {
+  467|  87.0k|            return value
+  468|  87.0k|        }
+  469|     22|        if nullMatcher.canSkipNumericMatch && nullMatcher.contains(buffer: buffer, offset: offset) {
+  470|     17|            return nil
+  471|     17|        }
+  472|      5|        return Double.parse(from: VectorizedByteParsers.parseString(buffer: buffer, offset: offset))
+  473|  87.0k|    }
+  474|       |
+  475|       |    // MARK: – Streaming CSV Reader (v1.5 mmap-backed)
+  476|       |
+  477|     21|    static func readStream(url: URL, options: CSVReadOptions, chunkSize: Int) -> AsyncThrowingStream<DataFrame, any Error> {
+  478|     21|        AsyncThrowingStream(DataFrame.self) { continuation in
+  479|     21|            let task = Task {
+  480|     21|                do {
+  481|     21|                    guard FileManager.default.fileExists(atPath: url.path) else {
+  482|      0|                        throw SwiftMLError.fileNotFound(url)
+  483|     21|                    }
+  484|     21|
+  485|     21|                    let mappedData = try Data(contentsOf: url, options: .alwaysMapped)
+  486|     21|                    try mappedData.withUnsafeBytes { rawBuffer in
+  487|     21|                        let buffer = rawBuffer.bindMemory(to: UInt8.self)
+  488|     21|                        let delimiter = UInt8(options.delimiter.utf8.first ?? 44)
+  489|     21|                        let records = SystemsCSVParser(delimiterByte: delimiter).parseIndex(buffer: buffer)
+  490|     21|                        guard !records.isEmpty else { return }
+  491|     20|
+  492|     20|                        let headers: [String]
+  493|     20|                        let startRow: Int
+  494|     20|                        if options.hasHeader {
+  495|     33|                            headers = deduplicateHeaders(records.row(at: 0).map {
+  496|     33|                                VectorizedByteParsers.parseString(buffer: buffer, offset: $0)
+  497|     33|                            })
+  498|     19|                            startRow = 1
+  499|     19|                        } else {
+  500|      2|                            headers = (0..<records.row(at: 0).count).map { "col\($0)" }
+  501|      1|                            startRow = 0
+  502|      1|                        }
+  503|     20|                        guard records.count > startRow, !headers.isEmpty else { return }
+  504|     19|
+  505|     19|                        let sendableBuffer = UnsafeSendableBuffer(pointer: buffer)
+  506|     19|                        let optionsBox = OptionsBox(options: options)
+  507|     19|                        let headersBox = HeadersBox(headers: headers)
+  508|     19|                        let rowsToRead = options.maxRows.map { min(records.count - startRow, $0) }
+  509|     19|                            ?? (records.count - startRow)
+  510|     19|                        let endRow = startRow + rowsToRead
+  511|     19|                        var currentOffset = startRow
+  512|     93|                        while currentOffset < endRow && !Task.isCancelled {
+  513|     74|                            let rowsInChunk = min(chunkSize, endRow - currentOffset)
+  514|     74|                            let offset = currentOffset
+  515|     74|                            var columns: [any AnyColumn] = Array(
+  516|     74|                                repeating: TypedColumn<String>(name: "", values: []), count: headers.count
+  517|     74|                            )
+  518|     74|                            columns.withUnsafeMutableBufferPointer { columnBuffer in
+  519|     74|                                guard let base = columnBuffer.baseAddress else { return }
+  520|     74|                                let output = SendableColumnPointer(pointer: base)
+  521|    122|                                DispatchQueue.concurrentPerform(iterations: headers.count) { column in
+  522|    122|                                    output.pointer[column] = buildColumn(
+  523|    122|                                        buffer: sendableBuffer.pointer,
+  524|    122|                                        records: records,
+  525|    122|                                        startRowIdx: offset,
+  526|    122|                                        dataRowsToRead: rowsInChunk,
+  527|    122|                                        colIndex: column,
+  528|    122|                                        name: headersBox.headers[column],
+  529|    122|                                        options: optionsBox.options
+  530|    122|                                    )
+  531|    122|                                }
+  532|     74|                            }
+  533|     74|                            continuation.yield(try DataFrame(columns: columns))
+  534|     74|                            currentOffset += rowsInChunk
+  535|     74|                        }
+  536|     21|                    }
+  537|     21|
+  538|     21|                    continuation.finish()
+  539|     21|                } catch {
+  540|      0|                    continuation.finish(throwing: error)
+  541|     21|                }
+  542|     21|            }
+  543|     21|
+  544|     21|            continuation.onTermination = { termination in
+  545|     21|                if case .cancelled = termination {
+  546|      0|                    task.cancel()
+  547|      0|                }
+  548|     21|            }
+  549|     21|        }
+  550|     21|    }
+  551|       |
+  552|       |    // MARK: – CSV row parser (RFC 4180 compliant)
+  553|       |
+  554|       |    /// Splits a single CSV line respecting quoted fields.
+  555|     26|    static func parseRow(_ line: String, delimiter: Character) -> [String] {
+  556|     26|        var fields: [String] = []
+  557|     26|        var current    = ""
+  558|     26|        var inQuotes   = false
+  559|     26|        var i          = line.startIndex
+  560|     26|
+  561|    407|        while i < line.endIndex {
+  562|    381|            let c = line[i]
+  563|    381|
+  564|    381|            if c == "\"" {
+  565|     26|                if inQuotes {
+  566|     14|                    let next = line.index(after: i)
+  567|     14|                    if next < line.endIndex && line[next] == "\"" {
+  568|      2|                        current.append("\"")
+  569|      2|                        i = line.index(after: next)
+  570|      2|                        continue
+  571|     12|                    } else {
+  572|     12|                        inQuotes = false
+  573|     12|                    }
+  574|     12|                } else {
+  575|     12|                    inQuotes = true
+  576|     24|                }
+  577|    355|            } else if c == delimiter && !inQuotes {
+  578|     38|                fields.append(current)
+  579|     38|                current = ""
+  580|    317|            } else {
+  581|    317|                current.append(c)
+  582|    379|            }
+  583|    379|
+  584|    379|            i = line.index(after: i)
+  585|    379|        }
+  586|     26|
+  587|     26|        fields.append(current)
+  588|     26|        return fields
+  589|     26|    }
+  590|       |
+  591|       |    // MARK: – Line splitter (handles \r\n and \n respecting quoted fields)
+  592|       |
+  593|      7|    private static func splitLines(_ raw: String) -> [String] {
+  594|      7|        var lines: [String] = []
+  595|      7|        var currentLine = ""
+  596|      7|        var inQuotes = false
+  597|      7|        var i = raw.startIndex
+  598|      7|
+  599|    411|        while i < raw.endIndex {
+  600|    404|            let c = raw[i]
+  601|    404|
+  602|    404|            if c == "\"" {
+  603|     28|                inQuotes.toggle()
+  604|     28|                currentLine.append(c)
+  605|    376|            } else if (c == "\n" || c == "\r") && !inQuotes {
+  606|     21|                if c == "\r" {
+  607|      0|                    let next = raw.index(after: i)
+  608|      0|                    if next < raw.endIndex && raw[next] == "\n" {
+  609|      0|                        i = next
+  610|      0|                    }
+  611|      0|                }
+  612|     21|                lines.append(currentLine)
+  613|     21|                currentLine = ""
+  614|    355|            } else {
+  615|    355|                currentLine.append(c)
+  616|    355|            }
+  617|    404|
+  618|    404|            i = raw.index(after: i)
+  619|    404|        }
+  620|      7|
+  621|      7|        if !currentLine.isEmpty || raw.hasSuffix("\n") || raw.hasSuffix("\r") {
+  622|      7|            lines.append(currentLine)
+  623|      7|        }
+  624|      7|
+  625|      7|        return lines
+  626|      7|    }
+  627|       |
+  628|     66|    private static func deduplicateHeaders(_ rawHeaders: [String]) -> [String] {
+  629|     66|        var counts: [String: Int] = [:]
+  630|     66|        var used = Set<String>()
+  631|     66|        var result: [String] = []
+  632|     66|
+  633|    130|        for (i, h) in rawHeaders.enumerated() {
+  634|    130|            let trimmed = h.trimmingCharacters(in: .whitespacesAndNewlines)
+  635|    130|            let baseName = trimmed.isEmpty ? "col_\(i)" : trimmed
+  636|    130|            var name = baseName
+  637|    130|            var count = counts[baseName] ?? 0
+  638|    138|            while used.contains(name) {
+  639|      8|                count += 1
+  640|      8|                name = "\(baseName)_\(count)"
+  641|    130|            }
+  642|    130|            counts[baseName] = count
+  643|    130|            used.insert(name)
+  644|    130|            result.append(name)
+  645|    130|        }
+  646|     66|        return result
+  647|     66|    }
+  648|       |}
+

@@ -1,0 +1,45 @@
+{
+  "checks": {
+    "columns": [
+      {
+        "name": "date",
+        "nulls": 0,
+        "sha256": "1d4ea4504e0682d4852983cd59d4c293fc02c079f98e001ce28d5df0a69131e9",
+        "type": "Date"
+      },
+      {
+        "name": "value",
+        "nulls": 0,
+        "sha256": "57710a9942ad3be9c23408787302b36a40d190f005a2e309465bb856355d33b1",
+        "type": "Int64"
+      }
+    ],
+    "failures": [],
+    "passed": true
+  },
+  "input": "unique",
+  "mode": "known",
+  "phase": "audit",
+  "samples": [
+    {
+      "call_cpu_ns": 6729000,
+      "call_ns": 4179041,
+      "heap_after_release_bytes": 110960,
+      "heap_before_bytes": 96448,
+      "held_heap_bytes": 3320128,
+      "held_heap_delta_bytes": 3223680,
+      "process_peak_before_bytes": 6766592,
+      "process_peak_held_bytes": 16580608,
+      "release_cpu_ns": 2000,
+      "release_ns": 750,
+      "rss_after_release_bytes": 15515648,
+      "rss_before_bytes": 6766592,
+      "rss_held_bytes": 14778368,
+      "rss_held_delta_bytes": 8011776,
+      "total_cpu_ns": 6731000,
+      "total_ns": 4179791
+    }
+  ],
+  "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+  "validated": true
+}

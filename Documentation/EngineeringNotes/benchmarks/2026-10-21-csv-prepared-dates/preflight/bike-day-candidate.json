@@ -1,0 +1,129 @@
+{
+  "checks": {
+    "columns": [
+      {
+        "name": "instant",
+        "nulls": 0,
+        "sha256": "e7bf3c4d6f33c4c7836ebab3c48ec3bcec6a47a405e27cd35604726d723a4112",
+        "type": "Int64"
+      },
+      {
+        "name": "dteday",
+        "nulls": 0,
+        "sha256": "d93573724211e9dcb15292350a9358b418e721eab080ce1f7160e0de9f62d840",
+        "type": "Date"
+      },
+      {
+        "name": "season",
+        "nulls": 0,
+        "sha256": "f250a5f331a53237c870efa9fd935a80136d3724ecd8135ef43592dac65ab98b",
+        "type": "Int64"
+      },
+      {
+        "name": "yr",
+        "nulls": 0,
+        "sha256": "8b3742c92544bb96edde93fde24d0517394a0318a4bdc06eb96162b138aaf66b",
+        "type": "Int64"
+      },
+      {
+        "name": "mnth",
+        "nulls": 0,
+        "sha256": "07b445363da61f437ece6cbad684ab906b3c8dd78ae41218ad445fcc2c6cb9f2",
+        "type": "Int64"
+      },
+      {
+        "name": "holiday",
+        "nulls": 0,
+        "sha256": "aee3b5d80ce2c8d9b129aa81b44208123febcdabf380bee78afea4bf45dfe60d",
+        "type": "Int64"
+      },
+      {
+        "name": "weekday",
+        "nulls": 0,
+        "sha256": "e5d8353c126c03a0752ab73597d22699b2ae82377564583060da8afcc5e3d4b9",
+        "type": "Int64"
+      },
+      {
+        "name": "workingday",
+        "nulls": 0,
+        "sha256": "733c1905a661a65f9e698ebbf39b0d351389ae37474dab78807fc6bab84a4abb",
+        "type": "Int64"
+      },
+      {
+        "name": "weathersit",
+        "nulls": 0,
+        "sha256": "98defb969d05bd7ab914e220f5299c1ca4c446f5b0886716ab1d0a5272bd8c47",
+        "type": "Int64"
+      },
+      {
+        "name": "temp",
+        "nulls": 0,
+        "sha256": "cec1da16121b425bb5f8ee83565f664ab45953e5cf7dbfc72fb5e7e9ab5a7fcc",
+        "type": "Double"
+      },
+      {
+        "name": "atemp",
+        "nulls": 0,
+        "sha256": "63e54f1c5077d86c543058c6810f32a800d19095340dd3b68840e55956c4a124",
+        "type": "Double"
+      },
+      {
+        "name": "hum",
+        "nulls": 0,
+        "sha256": "6ce043e475af297fac8f87646f3bdec93d795dbb759c06b4e334fc3d042a284f",
+        "type": "Double"
+      },
+      {
+        "name": "windspeed",
+        "nulls": 0,
+        "sha256": "34c0766b0a79da7613e26ae802f983d03359d3684194acb53a13b2298b0e395c",
+        "type": "Double"
+      },
+      {
+        "name": "casual",
+        "nulls": 0,
+        "sha256": "a08812fbcf39e651dab9e3087164a35963e9b9e70cd930fe9142e448ad597ce4",
+        "type": "Int64"
+      },
+      {
+        "name": "registered",
+        "nulls": 0,
+        "sha256": "165eca53ed6875dce6af0f3f07b6bc8bd9eac55bfc778e819c78303f199db8bf",
+        "type": "Int64"
+      },
+      {
+        "name": "cnt",
+        "nulls": 0,
+        "sha256": "0a1aaa0d6f572ad17c377ca44d5b9064a4c35e845c56c12873a76bebd1059d51",
+        "type": "Int64"
+      }
+    ],
+    "failures": [],
+    "passed": true
+  },
+  "input": "bike-day",
+  "mode": "known",
+  "phase": "audit",
+  "samples": [
+    {
+      "call_cpu_ns": 1144000,
+      "call_ns": 592875,
+      "heap_after_release_bytes": 123360,
+      "heap_before_bytes": 99280,
+      "held_heap_bytes": 311216,
+      "held_heap_delta_bytes": 211936,
+      "process_peak_before_bytes": 6832128,
+      "process_peak_held_bytes": 8224768,
+      "release_cpu_ns": 3000,
+      "release_ns": 1791,
+      "rss_after_release_bytes": 8765440,
+      "rss_before_bytes": 6832128,
+      "rss_held_bytes": 8159232,
+      "rss_held_delta_bytes": 1327104,
+      "total_cpu_ns": 1147000,
+      "total_ns": 594666
+    }
+  ],
+  "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+  "validated": true
+}

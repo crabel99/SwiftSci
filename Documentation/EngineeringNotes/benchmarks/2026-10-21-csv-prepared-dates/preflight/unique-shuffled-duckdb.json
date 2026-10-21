@@ -1,0 +1,63 @@
+{
+  "engine": "duckdb",
+  "input": "unique-shuffled",
+  "validated": true,
+  "checks": {
+    "passed": true,
+    "failures": [],
+    "columns": [
+      {
+        "name": "date",
+        "type": "timestamp[us]",
+        "nulls": 0,
+        "sha256": "cba8e5f5001d375e4a32934ac723cf3cd1cce46d62a06ed79e7eef1157eb97ef"
+      },
+      {
+        "name": "value",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "7abe573f0a7d19bebf4648c9726e07125cb6c9ec2a394bce3bb044f5ffaa24ff"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "call_ns": 14268291,
+      "call_cpu_ns": 27925000,
+      "release_ns": 14416,
+      "release_cpu_ns": 27000,
+      "total_ns": 14282707,
+      "total_cpu_ns": 27952000,
+      "rss_before_bytes": 78823424,
+      "rss_held_bytes": 88506368,
+      "rss_held_delta_bytes": 9682944,
+      "rss_after_release_bytes": 141148160,
+      "process_peak_before_bytes": 78823424,
+      "process_peak_held_bytes": 88506368
+    }
+  ],
+  "versions": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "numpy": "2.5.3",
+    "duckdb": "1.5.6",
+    "pyarrow": "25.0.1"
+  },
+  "pools": {
+    "duckdb": 16
+  },
+  "options": {
+    "delimiter": ",",
+    "header": true,
+    "columns": {
+      "date": "TIMESTAMP",
+      "value": "BIGINT"
+    },
+    "na_values": [
+      "",
+      "NA"
+    ],
+    "auto_detect": false,
+    "timestamp_format": "%Y-%m-%d"
+  },
+  "scope": "Fresh-process first public read and release, native eager output; validation excluded; memory before validation"
+}

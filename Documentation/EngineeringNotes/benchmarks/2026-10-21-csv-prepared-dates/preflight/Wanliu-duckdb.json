@@ -1,0 +1,174 @@
+{
+  "engine": "duckdb",
+  "input": "Wanliu",
+  "validated": true,
+  "checks": {
+    "passed": true,
+    "failures": [],
+    "columns": [
+      {
+        "name": "No",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db"
+      },
+      {
+        "name": "year",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf"
+      },
+      {
+        "name": "month",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186"
+      },
+      {
+        "name": "day",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078"
+      },
+      {
+        "name": "hour",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce"
+      },
+      {
+        "name": "PM2.5",
+        "type": "double",
+        "nulls": 382,
+        "sha256": "dcfce6aea172aca020bd5e541ecbf92564ca4acc437f0b75ff8e4421ed975b6e"
+      },
+      {
+        "name": "PM10",
+        "type": "double",
+        "nulls": 284,
+        "sha256": "32c00b526e21ba1772c89c6f170785314df73c3f724d8f6e70da8d6c5135553c"
+      },
+      {
+        "name": "SO2",
+        "type": "double",
+        "nulls": 575,
+        "sha256": "d03dda639431d969516990626916f3186903bf9fe6618795fb1ee2d1c226495c"
+      },
+      {
+        "name": "NO2",
+        "type": "double",
+        "nulls": 1070,
+        "sha256": "3de90c9c95133ca003c5b2de46323c03b4ee4bfc052a19c58ab2894b3cb39802"
+      },
+      {
+        "name": "CO",
+        "type": "double",
+        "nulls": 1812,
+        "sha256": "99abad93bd7253f7042e107d69dc23f3dd1e7b371df857bc0e377db4918abd43"
+      },
+      {
+        "name": "O3",
+        "type": "double",
+        "nulls": 2107,
+        "sha256": "3221f2078caea8bdee1ecc3775910f77bc51a6a43be0cdd37087c1cdc217fa5a"
+      },
+      {
+        "name": "TEMP",
+        "type": "double",
+        "nulls": 20,
+        "sha256": "8508bd92858a434f59e6ae35cc3928439de224b999100a423af542f9616d9cb9"
+      },
+      {
+        "name": "PRES",
+        "type": "double",
+        "nulls": 20,
+        "sha256": "ec2c3904ec6f70bbf679d1e40c4af44830ada9799adea70d0278f2b967bad909"
+      },
+      {
+        "name": "DEWP",
+        "type": "double",
+        "nulls": 20,
+        "sha256": "c49fcc7ce6d6c30ec27d8c1b3a4aa4d7474e6d9409c1eb194fb1f5ee5542f490"
+      },
+      {
+        "name": "RAIN",
+        "type": "double",
+        "nulls": 20,
+        "sha256": "45114c75bbdf14b50b233c2f81256e45c61bed5a8f1ddd848a843ab5352874c6"
+      },
+      {
+        "name": "wd",
+        "type": "string",
+        "nulls": 123,
+        "sha256": "824d5bca73192835bbbb493c74bf92fa3a012219a1a7e4d57ac5911e4846d87b"
+      },
+      {
+        "name": "WSPM",
+        "type": "double",
+        "nulls": 14,
+        "sha256": "80184b0a5e00b74272860c492344c5c239181104825a4042e9f2fc6b545f0d9c"
+      },
+      {
+        "name": "station",
+        "type": "string",
+        "nulls": 0,
+        "sha256": "8f828f7ee371b81e23a0cb56a11e7ea437fbf3cfe9d58e80459a309ebba8a689"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "call_ns": 18295833,
+      "call_cpu_ns": 35871000,
+      "release_ns": 15125,
+      "release_cpu_ns": 27000,
+      "total_ns": 18310958,
+      "total_cpu_ns": 35898000,
+      "rss_before_bytes": 78741504,
+      "rss_held_bytes": 100220928,
+      "rss_held_delta_bytes": 21479424,
+      "rss_after_release_bytes": 150159360,
+      "process_peak_before_bytes": 78741504,
+      "process_peak_held_bytes": 100220928
+    }
+  ],
+  "versions": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "numpy": "2.5.3",
+    "duckdb": "1.5.6",
+    "pyarrow": "25.0.1"
+  },
+  "pools": {
+    "duckdb": 16
+  },
+  "options": {
+    "delimiter": ",",
+    "header": true,
+    "columns": {
+      "No": "BIGINT",
+      "year": "BIGINT",
+      "month": "BIGINT",
+      "day": "BIGINT",
+      "hour": "BIGINT",
+      "PM2.5": "DOUBLE",
+      "PM10": "DOUBLE",
+      "SO2": "DOUBLE",
+      "NO2": "DOUBLE",
+      "CO": "DOUBLE",
+      "O3": "DOUBLE",
+      "TEMP": "DOUBLE",
+      "PRES": "DOUBLE",
+      "DEWP": "DOUBLE",
+      "RAIN": "DOUBLE",
+      "wd": "VARCHAR",
+      "WSPM": "DOUBLE",
+      "station": "VARCHAR"
+    },
+    "na_values": [
+      "",
+      "NA"
+    ],
+    "auto_detect": false
+  },
+  "scope": "Fresh-process first public read and release, native eager output; validation excluded; memory before validation"
+}

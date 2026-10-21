@@ -1,0 +1,141 @@
+{
+  "checks": {
+    "columns": [
+      {
+        "name": "No",
+        "nulls": 0,
+        "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+        "type": "Int64"
+      },
+      {
+        "name": "year",
+        "nulls": 0,
+        "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+        "type": "Int64"
+      },
+      {
+        "name": "month",
+        "nulls": 0,
+        "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+        "type": "Int64"
+      },
+      {
+        "name": "day",
+        "nulls": 0,
+        "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+        "type": "Int64"
+      },
+      {
+        "name": "hour",
+        "nulls": 0,
+        "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+        "type": "Int64"
+      },
+      {
+        "name": "PM2.5",
+        "nulls": 925,
+        "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+        "type": "Double"
+      },
+      {
+        "name": "PM10",
+        "nulls": 718,
+        "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+        "type": "Double"
+      },
+      {
+        "name": "SO2",
+        "nulls": 935,
+        "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+        "type": "Double"
+      },
+      {
+        "name": "NO2",
+        "nulls": 1023,
+        "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+        "type": "Double"
+      },
+      {
+        "name": "CO",
+        "nulls": 1776,
+        "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+        "type": "Double"
+      },
+      {
+        "name": "O3",
+        "nulls": 1719,
+        "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+        "type": "Double"
+      },
+      {
+        "name": "TEMP",
+        "nulls": 20,
+        "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+        "type": "Double"
+      },
+      {
+        "name": "PRES",
+        "nulls": 20,
+        "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+        "type": "Double"
+      },
+      {
+        "name": "DEWP",
+        "nulls": 20,
+        "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+        "type": "Double"
+      },
+      {
+        "name": "RAIN",
+        "nulls": 20,
+        "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+        "type": "Double"
+      },
+      {
+        "name": "wd",
+        "nulls": 81,
+        "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+        "type": "String"
+      },
+      {
+        "name": "WSPM",
+        "nulls": 14,
+        "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+        "type": "Double"
+      },
+      {
+        "name": "station",
+        "nulls": 0,
+        "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+        "type": "String"
+      }
+    ],
+    "failures": [],
+    "passed": true
+  },
+  "input": "Aotizhongxin",
+  "mode": "known",
+  "phase": "audit",
+  "samples": [
+    {
+      "call_cpu_ns": 12613000,
+      "call_ns": 6012833,
+      "heap_after_release_bytes": 124880,
+      "heap_before_bytes": 97776,
+      "held_heap_bytes": 10436672,
+      "held_heap_delta_bytes": 10338896,
+      "process_peak_before_bytes": 6832128,
+      "process_peak_held_bytes": 27049984,
+      "release_cpu_ns": 284000,
+      "release_ns": 278583,
+      "rss_after_release_bytes": 25083904,
+      "rss_before_bytes": 6832128,
+      "rss_held_bytes": 24199168,
+      "rss_held_delta_bytes": 17367040,
+      "total_cpu_ns": 12897000,
+      "total_ns": 6291416
+    }
+  ],
+  "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+  "validated": true
+}

@@ -1,0 +1,111 @@
+{
+  "engine": "duckdb",
+  "input": "energy",
+  "validated": true,
+  "checks": {
+    "passed": true,
+    "failures": [],
+    "columns": [
+      {
+        "name": "Date",
+        "type": "string",
+        "nulls": 0,
+        "sha256": "3f668c84d65fca84e626079f15d3e4d7c7c2fceb6cc6687236094bfc8e32a007"
+      },
+      {
+        "name": "Time",
+        "type": "string",
+        "nulls": 0,
+        "sha256": "7815cb80f2c771ab04a87d8a63a5d3d47d54fed8495e5944aaab41859f7c25a0"
+      },
+      {
+        "name": "Global_active_power",
+        "type": "double",
+        "nulls": 25979,
+        "sha256": "53d359ca15123438086ff97e97f52265e7e4cd17dc1783d373b9be22436c7684"
+      },
+      {
+        "name": "Global_reactive_power",
+        "type": "double",
+        "nulls": 25979,
+        "sha256": "ae7a878c624c006f23620f7e80b5110442afac4d6fe8d0909b96dbbbb77aecf4"
+      },
+      {
+        "name": "Voltage",
+        "type": "double",
+        "nulls": 25979,
+        "sha256": "233829dd762c9a7642bae98b8dce7d0d37c0b7fc7c0f5056a25034b565d21cfb"
+      },
+      {
+        "name": "Global_intensity",
+        "type": "double",
+        "nulls": 25979,
+        "sha256": "873b0856d7c347862dfbbc3db4f7e7dbf14d4419960744468bb3f054c4fab2d3"
+      },
+      {
+        "name": "Sub_metering_1",
+        "type": "double",
+        "nulls": 25979,
+        "sha256": "6d847664e93f91bc63e1a0a5ec51916e225bcb64a03c1b5ecfe36f4dfbdf0fdf"
+      },
+      {
+        "name": "Sub_metering_2",
+        "type": "double",
+        "nulls": 25979,
+        "sha256": "9f459c64eee8858609e0f570deb31920f8c3cbc742d82680e515442475729386"
+      },
+      {
+        "name": "Sub_metering_3",
+        "type": "double",
+        "nulls": 25979,
+        "sha256": "bef6678827019d7a31c3ad10220c8ff5433f36aef2fe6785923ef6c340499c24"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "call_ns": 72437250,
+      "call_cpu_ns": 642656000,
+      "release_ns": 3178584,
+      "release_cpu_ns": 3196000,
+      "total_ns": 75615834,
+      "total_cpu_ns": 645852000,
+      "rss_before_bytes": 79052800,
+      "rss_held_bytes": 595345408,
+      "rss_held_delta_bytes": 516292608,
+      "rss_after_release_bytes": 401375232,
+      "process_peak_before_bytes": 79052800,
+      "process_peak_held_bytes": 595345408
+    }
+  ],
+  "versions": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "numpy": "2.5.3",
+    "duckdb": "1.5.6",
+    "pyarrow": "25.0.1"
+  },
+  "pools": {
+    "duckdb": 16
+  },
+  "options": {
+    "delimiter": ";",
+    "header": true,
+    "columns": {
+      "Date": "VARCHAR",
+      "Time": "VARCHAR",
+      "Global_active_power": "DOUBLE",
+      "Global_reactive_power": "DOUBLE",
+      "Voltage": "DOUBLE",
+      "Global_intensity": "DOUBLE",
+      "Sub_metering_1": "DOUBLE",
+      "Sub_metering_2": "DOUBLE",
+      "Sub_metering_3": "DOUBLE"
+    },
+    "na_values": [
+      "",
+      "?"
+    ],
+    "auto_detect": false
+  },
+  "scope": "Fresh-process first public read and release, native eager output; validation excluded; memory before validation"
+}

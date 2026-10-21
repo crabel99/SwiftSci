@@ -1,0 +1,173 @@
+{
+  "engine": "pandas",
+  "input": "bike-hour",
+  "validated": true,
+  "checks": {
+    "passed": true,
+    "failures": [],
+    "columns": [
+      {
+        "name": "instant",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "04df118c27d7a0d90c98abea1d16f1ec32160a0e3d2e5cc50a6bbc049764d79b"
+      },
+      {
+        "name": "dteday",
+        "type": "datetime64[us]",
+        "nulls": 0,
+        "sha256": "b2351d119ae3e1af9d5b2017ae26df384aa36aceb8874aeb2d3bb3b5b709bfb4"
+      },
+      {
+        "name": "season",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "58d83ae39a08278ae40dd6fc453c1f929dc82365c153141e5cb659cad92554ab"
+      },
+      {
+        "name": "yr",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "964c12fc8fc08438be08487a0be4678c81f6d82d6d6c01402565e05554014237"
+      },
+      {
+        "name": "mnth",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "d03b0b5201600f7e7b5eea544433fdfcc758bd876775bc6a1995f52abf725d22"
+      },
+      {
+        "name": "hr",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "212607c4c53ed557612c79c4411c0cf038871b5426a119da8cb945b5787d2950"
+      },
+      {
+        "name": "holiday",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "6711e9f1acb99864eac0eefca3589104cef2b2c395a6e22deaeb66b572454ebc"
+      },
+      {
+        "name": "weekday",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "819abd40b0c8883c1ffc91ad13b73131116419338be1336da8a8661d7d793aae"
+      },
+      {
+        "name": "workingday",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "468bbcc9a5f5ba30db2fd8db265b9941e8d54f8193b9d356805d06b4188bb6b2"
+      },
+      {
+        "name": "weathersit",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "a741ddf0e803d6bccf16f65ce374b661a9eae558ce2c3bbfc019f332cd92bb23"
+      },
+      {
+        "name": "temp",
+        "type": "float64",
+        "nulls": 0,
+        "sha256": "368846574bbb4bc176eb062b5d84c180280c55ef372abadb419119755b4f3ea3"
+      },
+      {
+        "name": "atemp",
+        "type": "float64",
+        "nulls": 0,
+        "sha256": "e553f3590639f6495dd75a06bffe0d96611768813b84020de19c5fc42ae75341"
+      },
+      {
+        "name": "hum",
+        "type": "float64",
+        "nulls": 0,
+        "sha256": "406fe43c5d9e4a7ea2f696f28123ccac92dd6738bc7274fcbb43939722e848fb"
+      },
+      {
+        "name": "windspeed",
+        "type": "float64",
+        "nulls": 0,
+        "sha256": "456843a2113bf05928cef623f2b156e1f54c16558f5cafa808b204b159a89a41"
+      },
+      {
+        "name": "casual",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "1218c38e65530ba7713c6595e4a6de1504b8ddab6f906624aeb54e313b7969b3"
+      },
+      {
+        "name": "registered",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "9e4719de4791029527c22229ae22ef201f989e1211f9b909aa522cf1ce54fec3"
+      },
+      {
+        "name": "cnt",
+        "type": "int64",
+        "nulls": 0,
+        "sha256": "19b51c1b0f4dda890d4f39851d369128e24ff68ee64f3f7d66dc9d65edf3fc18"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "call_ns": 21561208,
+      "call_cpu_ns": 15511000,
+      "release_ns": 8292,
+      "release_cpu_ns": 10000,
+      "total_ns": 21569500,
+      "total_cpu_ns": 15521000,
+      "rss_before_bytes": 102907904,
+      "rss_held_bytes": 118308864,
+      "rss_held_delta_bytes": 15400960,
+      "rss_after_release_bytes": 119062528,
+      "process_peak_before_bytes": 102907904,
+      "process_peak_held_bytes": 118308864
+    }
+  ],
+  "versions": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6"
+  },
+  "pools": {},
+  "options": {
+    "sep": ",",
+    "header": 0,
+    "dtype": {
+      "instant": "int64",
+      "season": "int64",
+      "yr": "int64",
+      "mnth": "int64",
+      "hr": "int64",
+      "holiday": "int64",
+      "weekday": "int64",
+      "workingday": "int64",
+      "weathersit": "int64",
+      "temp": "float64",
+      "atemp": "float64",
+      "hum": "float64",
+      "windspeed": "float64",
+      "casual": "int64",
+      "registered": "int64",
+      "cnt": "int64"
+    },
+    "na_values": [
+      "",
+      "NA"
+    ],
+    "keep_default_na": false,
+    "encoding": "utf-8",
+    "engine": "c",
+    "float_precision": "round_trip",
+    "parse_dates": [
+      "dteday"
+    ],
+    "date_format": {
+      "dteday": "%Y-%m-%d"
+    },
+    "cache_dates": true
+  },
+  "scope": "Fresh-process first public read and release, native eager output; validation excluded; memory before validation"
+}
