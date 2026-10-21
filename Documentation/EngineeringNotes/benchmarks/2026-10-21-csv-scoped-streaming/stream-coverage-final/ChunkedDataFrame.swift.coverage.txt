@@ -1,0 +1,318 @@
+    1|       |import Foundation
+    2|       |
+    3|       |/// A sequence of `DataFrame` chunks for out-of-core and memory-efficient streaming data processing.
+    4|       |///
+    5|       |/// `ChunkedDataFrame` conforms to `AsyncSequence` and enables lazy streaming, batch filtering,
+    6|       |/// column selection, and transformations without loading the entire dataset into memory at once.
+    7|       |public struct ChunkedDataFrame: AsyncSequence, Sendable {
+    8|       |    /// The element type of each streamed chunk.
+    9|       |    public typealias Element = DataFrame
+   10|       |
+   11|       |    private let iteratorProducer: @Sendable () -> AsyncIterator
+   12|       |
+   13|       |    /// Initializes a `ChunkedDataFrame` from a stream generator closure.
+   14|       |    ///
+   15|       |    /// - Parameter streamProducer: A closure returning a new `AsyncThrowingStream` of `DataFrame` chunks.
+   16|     14|    public init(streamProducer: @escaping @Sendable () -> AsyncThrowingStream<DataFrame, any Error>) {
+   17|     14|        self.iteratorProducer = { AsyncIterator(iterator: streamProducer().makeAsyncIterator()) }
+   18|     14|    }
+   19|       |
+   20|     10|    private init(iteratorProducer: @escaping @Sendable () -> AsyncIterator) {
+   21|     10|        self.iteratorProducer = iteratorProducer
+   22|     10|    }
+   23|       |
+   24|       |    /// Initializes a `ChunkedDataFrame` from an in-memory array of `DataFrame` chunks.
+   25|       |    ///
+   26|       |    /// - Parameter chunks: An array of `DataFrame` chunks.
+   27|      7|    public init(chunks: [DataFrame]) {
+   28|      7|        self.init(streamProducer: {
+   29|      6|            AsyncThrowingStream { continuation in
+   30|     14|                for chunk in chunks {
+   31|     14|                    continuation.yield(chunk)
+   32|     14|                }
+   33|      6|                continuation.finish()
+   34|      6|            }
+   35|      6|        })
+   36|      7|    }
+   37|       |
+   38|       |    /// Initializes a `ChunkedDataFrame` from a single `DataFrame`.
+   39|       |    ///
+   40|       |    /// - Parameter dataFrame: The base DataFrame.
+   41|      1|    public init(dataFrame: DataFrame) {
+   42|      1|        self.init(chunks: [dataFrame])
+   43|      1|    }
+   44|       |
+   45|       |    // MARK: – AsyncSequence Conformance
+   46|       |
+   47|       |    /// The async iterator for streaming DataFrame chunks.
+   48|       |    public struct AsyncIterator: AsyncIteratorProtocol {
+   49|       |        private indirect enum State {
+   50|       |            case source(AsyncThrowingStream<DataFrame, any Error>.Iterator)
+   51|       |            case transformed(AsyncIterator, @Sendable (DataFrame) async throws -> DataFrame?)
+   52|       |            case finished
+   53|       |        }
+   54|       |
+   55|       |        private var state: State
+   56|       |
+   57|     12|        init(iterator: AsyncThrowingStream<DataFrame, any Error>.Iterator) {
+   58|     12|            state = .source(iterator)
+   59|     12|        }
+   60|       |
+   61|       |        fileprivate init(upstream: AsyncIterator,
+   62|     10|                         transform: @escaping @Sendable (DataFrame) async throws -> DataFrame?) {
+   63|     10|            state = .transformed(upstream, transform)
+   64|     10|        }
+   65|       |
+   66|       |        /// Fetches the next DataFrame chunk in the sequence.
+   67|       |        /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+   68|       |        /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+   69|     59|        public mutating func next() async throws -> DataFrame? {
+   70|     59|            let current = state
+   71|     59|            state = .finished
+   72|     59|            try Task.checkCancellation()
+   73|     59|            switch current {
+   74|     59|            case .finished: return nil
+   75|     59|            case .source(var iterator):
+   76|     29|                let result = try await iterator.next()
+   77|     25|                try Task.checkCancellation()
+   78|     25|                if result != nil { state = .source(iterator) }
+   79|     25|                return result
+   80|     59|            case .transformed(var upstream, let transform):
+   81|     29|                while let chunk = try await upstream.next() {
+   82|     22|                    try Task.checkCancellation()
+   83|     22|                    if let result = try await transform(chunk) {
+   84|     19|                        try Task.checkCancellation()
+   85|     19|                        state = .transformed(upstream, transform)
+   86|     19|                        return result
+   87|     19|                    }
+   88|      9|                }
+   89|      9|                return nil
+   90|     59|            }
+   91|     59|        }
+   92|       |    }
+   93|       |
+   94|       |    /// Creates an asynchronous iterator over the DataFrame chunks.
+   95|       |    /// - Returns: The computed AsyncIterator result instance.
+   96|     12|    public func makeAsyncIterator() -> AsyncIterator {
+   97|     12|        iteratorProducer()
+   98|     12|    }
+   99|       |
+  100|       |    // MARK: – Factory Methods
+  101|       |
+  102|       |    /// Creates a `ChunkedDataFrame` by streaming a CSV file in chunks.
+  103|       |    ///
+  104|       |    /// - Parameters:
+  105|       |    ///   - url: The file URL of the CSV file.
+  106|       |    ///   - chunkSize: The number of rows per chunk (default: 10,000).
+  107|       |    ///   - options: CSV parsing options.
+  108|       |    /// - Returns: A `ChunkedDataFrame` streaming the CSV file.
+  109|       |    public static func fromCSV(
+  110|       |        url: URL,
+  111|       |        chunkSize: Int = 10_000,
+  112|       |        options: CSVReadOptions = .default
+  113|      0|    ) -> ChunkedDataFrame {
+  114|      0|        ChunkedDataFrame {
+  115|      0|            DataFrame.readCSVStream(contentsOf: url, chunkSize: chunkSize, options: options)
+  116|      0|        }
+  117|      0|    }
+  118|       |
+  119|       |    // MARK: – Transformations
+  120|       |
+  121|       |    /// Lazily filters rows across all chunks using a predicate.
+  122|       |    ///
+  123|       |    /// - Parameter predicate: A closure evaluating each row.
+  124|       |    /// - Returns: A new `ChunkedDataFrame` emitting filtered chunks.
+  125|      2|    public func filter(_ predicate: @escaping @Sendable (DataFrameRow) -> Bool) -> ChunkedDataFrame {
+  126|      6|        transformed { chunk in
+  127|      6|            let filtered = chunk.filter(predicate)
+  128|      6|            return filtered.rowCount > 0 ? filtered : nil
+  129|      6|        }
+  130|      2|    }
+  131|       |
+  132|       |    /// Lazily selects a subset of columns from each chunk.
+  133|       |    ///
+  134|       |    /// - Parameter columns: The column names to retain.
+  135|       |    /// - Returns: A new `ChunkedDataFrame` emitting chunks with the selected columns.
+  136|      2|    public func select(_ columns: [String]) -> ChunkedDataFrame {
+  137|      4|        transformed { try $0.select(columns) }
+  138|      2|    }
+  139|       |
+  140|       |    /// Lazily selects a subset of columns from each chunk via variadic arguments.
+  141|       |    ///
+  142|       |    /// - Parameter columns: The column names to retain.
+  143|       |    /// - Returns: A new `ChunkedDataFrame` emitting chunks with the selected columns.
+  144|      2|    public func select(_ columns: String...) -> ChunkedDataFrame {
+  145|      2|        select(columns)
+  146|      2|    }
+  147|       |
+  148|       |    /// Transforms each chunk using an asynchronous mapping closure.
+  149|       |    ///
+  150|       |    /// - Parameter transform: An asynchronous closure transforming each `DataFrame` chunk.
+  151|       |    /// - Returns: A new `ChunkedDataFrame` emitting transformed chunks.
+  152|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  153|       |    public func mapChunk(
+  154|       |        _ transform: @escaping @Sendable (DataFrame) async throws -> DataFrame
+  155|      3|    ) -> ChunkedDataFrame {
+  156|      6|        transformed { try await transform($0) }
+  157|      3|    }
+  158|       |
+  159|       |    private func transformed(
+  160|       |        _ transform: @escaping @Sendable (DataFrame) async throws -> DataFrame?
+  161|     10|    ) -> ChunkedDataFrame {
+  162|     10|        let upstream = iteratorProducer
+  163|     10|        return ChunkedDataFrame(iteratorProducer: {
+  164|     10|            AsyncIterator(upstream: upstream(), transform: transform)
+  165|     10|        })
+  166|     10|    }
+  167|       |
+  168|       |    // MARK: – Terminal Operations
+  169|       |
+  170|       |    /// Collects and concatenates all chunks into a single unified `DataFrame`.
+  171|       |    ///
+  172|       |    /// > [!WARNING]
+  173|       |    /// > `collect()` is an eager in-memory materialization operation that loads all partitions into RAM.
+  174|       |    /// > For datasets exceeding available host memory, avoid `collect()` and process partitions via
+  175|       |    /// > `forEachChunk(_:)` or streaming sinks.
+  176|       |    ///
+  177|       |    /// - Returns: A single `DataFrame` containing all rows from all chunks.
+  178|       |    /// - Throws: Any error thrown during streaming or schema alignment.
+  179|      7|    public func collect() async throws -> DataFrame {
+  180|      7|        var collectedChunks: [DataFrame] = []
+  181|     11|        for try await chunk in self {
+  182|     11|            if chunk.rowCount > 0 {
+  183|     11|                collectedChunks.append(chunk)
+  184|     11|            }
+  185|     11|        }
+  186|      7|        return try DataFrame.concat(collectedChunks)
+  187|      7|    }
+  188|       |
+  189|       |    /// Computes the total number of rows across all chunks without retaining all chunks in memory.
+  190|       |    ///
+  191|       |    /// - Returns: Total row count.
+  192|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  193|      1|    public func rowCount() async throws -> Int {
+  194|      1|        var total = 0
+  195|      2|        for try await chunk in self {
+  196|      2|            let (newTotal, overflow) = total.addingReportingOverflow(chunk.rowCount)
+  197|      2|            guard !overflow else {
+  198|      0|                throw SwiftMLError.invalidParameter("ChunkedDataFrame total row count overflows Int")
+  199|      2|            }
+  200|      2|            total = newTotal
+  201|      2|        }
+  202|      1|        return total
+  203|      1|    }
+  204|       |
+  205|       |    /// Iterates over every chunk in the stream.
+  206|       |    ///
+  207|       |    /// - Parameter body: An asynchronous closure executed for each chunk.
+  208|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  209|       |    public func forEachChunk(
+  210|       |        _ body: @escaping @Sendable (DataFrame) async throws -> Void
+  211|      0|    ) async throws {
+  212|      0|        for try await chunk in self {
+  213|      0|            try await body(chunk)
+  214|      0|        }
+  215|      0|    }
+  216|       |    /// Performs an out-of-core hash join between each chunk in this sequence and an in-memory right `DataFrame`.
+  217|       |    ///
+  218|       |    /// - Parameters:
+  219|       |    ///   - other: The right-side `DataFrame` (typically smaller or pre-loaded dimension table).
+  220|       |    ///   - key: The common join column name.
+  221|       |    ///   - how: The kind of join (.inner, .left).
+  222|       |    /// - Returns: A new `ChunkedDataFrame` yielding the joined partitions.
+  223|       |    public func join(
+  224|       |        _ other: DataFrame,
+  225|       |        on key: String,
+  226|       |        how: JoinKind = .inner
+  227|      7|    ) -> ChunkedDataFrame {
+  228|      7|        guard how == .inner || how == .left else {
+  229|      4|            return ChunkedDataFrame {
+  230|      4|                AsyncThrowingStream(unfolding: {
+  231|      4|                    throw SwiftMLError.unsupportedOperation(
+  232|      4|                        "Streaming join only supports .inner and .left against an in-memory dimension table. " +
+  233|      4|                        "(.right and .outer require global tracking of right-side matches to avoid duplicating unmatched rows per chunk)"
+  234|      4|                    )
+  235|      4|                })
+  236|      4|            }
+  237|      4|        }
+  238|      6|        return transformed { try $0.join(other, on: key, how: how) }
+  239|      7|    }
+  240|       |}
+  241|       |
+  242|       |extension DataFrame {
+  243|       |    /// Converts an eager `DataFrame` into a `ChunkedDataFrame` with a single chunk.
+  244|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  245|      1|    public func chunked() -> ChunkedDataFrame {
+  246|      1|        ChunkedDataFrame(dataFrame: self)
+  247|      1|    }
+  248|       |
+  249|       |    /// Splits the `DataFrame` into a `ChunkedDataFrame` with batches of specified size.
+  250|       |    ///
+  251|       |    /// - Parameter chunkSize: The maximum number of rows per chunk.
+  252|       |    /// - Returns: A `ChunkedDataFrame` emitting the sliced chunks.
+  253|      2|    public func chunked(by chunkSize: Int) -> ChunkedDataFrame {
+  254|      2|        guard chunkSize > 0 else { return ChunkedDataFrame(dataFrame: self) }
+  255|      2|        let total = self.rowCount
+  256|      2|        guard total > 0 else { return ChunkedDataFrame(dataFrame: self) }
+  257|      2|
+  258|      2|        var chunks: [DataFrame] = []
+  259|      2|        var start = 0
+  260|      8|        while start < total {
+  261|      6|            let end = min(start + chunkSize, total)
+  262|      6|            let indices = Array(start..<end)
+  263|     12|            let slicedCols = self.columns.map { $0.gathered(at: indices) }
+  264|      6|            if let slicedDF = try? DataFrame(columns: slicedCols) {
+  265|      6|                chunks.append(slicedDF)
+  266|      6|            }
+  267|      6|            start = end
+  268|      6|        }
+  269|      2|        return ChunkedDataFrame(chunks: chunks)
+  270|      2|    }
+  271|       |
+  272|       |    /// Concatenates multiple DataFrames with compatible schemas into a single unified DataFrame.
+  273|       |    ///
+  274|       |    /// - Parameter dataFrames: An array of DataFrames to concatenate.
+  275|       |    /// - Returns: A single unified DataFrame containing all rows.
+  276|       |    /// - Throws: `SwiftMLError.emptySchema` if the list is empty, or `SwiftMLError.columnNotFound` if column schemas mismatch.
+  277|      8|    public static func concat(_ dataFrames: [DataFrame]) throws -> DataFrame {
+  278|      8|        guard let first = dataFrames.first(where: { $0.rowCount > 0 || $0.columnNames.count > 0 }) else {
+  279|      1|            return DataFrame.empty
+  280|      7|        }
+  281|      7|
+  282|     16|        let nonEmpties = dataFrames.filter { $0.rowCount > 0 }
+  283|      7|        guard !nonEmpties.isEmpty else { return first }
+  284|      7|        if nonEmpties.count == 1 { return nonEmpties[0] }
+  285|      7|
+  286|      7|        let schemaColumns = first.columnNames
+  287|     16|        let totalRows = nonEmpties.reduce(0) { $0 + $1.rowCount }
+  288|      7|
+  289|      7|        var combinedColumns: [any AnyColumn] = []
+  290|      7|        combinedColumns.reserveCapacity(schemaColumns.count)
+  291|      7|
+  292|     14|        for colName in schemaColumns {
+  293|     14|            guard let firstCol = first[column: colName] else {
+  294|      0|                throw SwiftMLError.columnNotFound(colName)
+  295|     14|            }
+  296|     14|
+  297|     14|            var mergedValues: [Any?] = []
+  298|     14|            mergedValues.reserveCapacity(totalRows)
+  299|     14|
+  300|     31|            for df in nonEmpties {
+  301|     31|                guard let col = df[column: colName] else {
+  302|      1|                    throw SwiftMLError.columnNotFound(colName)
+  303|     30|                }
+  304|     48|                for r in 0..<col.count {
+  305|     48|                    mergedValues.append(col.value(at: r))
+  306|     48|                }
+  307|     30|            }
+  308|     13|
+  309|     13|            let combinedCol = makeColumn(name: colName, dtype: firstCol.dtype, rawValues: mergedValues)
+  310|     13|            combinedColumns.append(combinedCol)
+  311|     13|        }
+  312|      6|
+  313|      6|        return try DataFrame(columns: combinedColumns)
+  314|      8|    }
+  315|       |
+  316|       |
+  317|       |}
+

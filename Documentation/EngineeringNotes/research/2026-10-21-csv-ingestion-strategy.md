@@ -2,7 +2,7 @@
 
 Proposal, 2026-10-21. Source baseline `a5f6e78a751365ec360efdd4ae8f028db04b441b`. No implementation, dependency change, new performance result, or upstream submission accompanies this strategy. Keep this decision record on `codex/engineering-notes`.
 
-Implementation progress and measurements are recorded in the [prepared-date report](../benchmarks/2026-10-21-csv-prepared-dates/README.md). The proposal below remains the architectural reference.
+Implementation progress and measurements are recorded in the [prepared-date report](../benchmarks/2026-10-21-csv-prepared-dates/README.md). The proposal below remains the architectural reference. The [scoped streaming report](../benchmarks/2026-10-21-csv-scoped-streaming/README.md) records the scalar tradeoff, the SIMD follow-on, and the remaining eager-inference gate.
 
 ## Decision and purpose
 

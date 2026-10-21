@@ -1,0 +1,115 @@
+{
+  "builds": {
+    "candidate": {
+      "commit": "85f240ef707e59486f87177103928786b36db56e",
+      "binary_sha256": "0097d622997ea9e2897cdebdaa8e69ca16eb76bf62669c2ee91b53bea0ef0d6c",
+      "build_receipt_sha256": "c4ce7052fb1db666214ed5c6d03fd384b93290592006e60a8bad8d3e85271349",
+      "link_receipt_sha256": "80813522053c656c5a7909ba476bc799d985a60722cb6e8539cf5cd67c6dfcfb"
+    },
+    "scoped": {
+      "commit": "762650aadb1bc6baa16e7a451fdcb32fdeac5386",
+      "binary_sha256": "5d562e1a778fcd02cf80389b15bcc250c5dd89d741967f1fd0553e919d11724e",
+      "build_receipt_sha256": "ae536c3f71ca1a5ef29515fda3344124a0c7fb0ba8cb5355a6740cbdff86bbe3",
+      "link_receipt_sha256": "34b3cc4d31c7888ec80afc2f48ef21ce95c30df257e865b75a7dcefbde476787"
+    }
+  },
+  "cases": [
+    "bike-hour",
+    "unique-shuffled",
+    "Aotizhongxin",
+    "energy",
+    "energy-date-full"
+  ],
+  "engines": [
+    "candidate",
+    "scoped"
+  ],
+  "rounds": 6,
+  "chunk_size": 10000,
+  "orders": [
+    [
+      "candidate",
+      "scoped"
+    ],
+    [
+      "scoped",
+      "candidate"
+    ],
+    [
+      "candidate",
+      "scoped"
+    ],
+    [
+      "scoped",
+      "candidate"
+    ],
+    [
+      "candidate",
+      "scoped"
+    ],
+    [
+      "scoped",
+      "candidate"
+    ]
+  ],
+  "power_start": {
+    "source": "AC",
+    "settings": "Battery Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         2\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           1\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         30\n womp                 1\n networkoversleep     0\n sleep                0\n tcpkeepalive         1\n disksleep            10"
+  },
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "policy": {
+    "schema_version": 1,
+    "mode": "production-default",
+    "thread_environment": {},
+    "cleared_environment": [
+      "BLIS_NUM_THREADS",
+      "GOTO_NUM_THREADS",
+      "MKL_DOMAIN_NUM_THREADS",
+      "MKL_DYNAMIC",
+      "MKL_NUM_THREADS",
+      "NUMEXPR_MAX_THREADS",
+      "NUMEXPR_NUM_THREADS",
+      "OMP_DYNAMIC",
+      "OMP_MAX_ACTIVE_LEVELS",
+      "OMP_NUM_THREADS",
+      "OMP_PLACES",
+      "OMP_PROC_BIND",
+      "OMP_THREAD_LIMIT",
+      "OPENBLAS_DEFAULT_NUM_THREADS",
+      "OPENBLAS_NUM_THREADS",
+      "POLARS_ASYNC_THREAD_COUNT",
+      "POLARS_MAX_THREADS",
+      "RAYON_NUM_THREADS",
+      "VECLIB_MAXIMUM_THREADS",
+      "VECLIB_NUM_THREADS"
+    ],
+    "cleared_prefixes": [
+      "OMP_",
+      "MKL_",
+      "OPENBLAS_",
+      "VECLIB_",
+      "NUMEXPR_"
+    ],
+    "duckdb_threads": "engine-default",
+    "minimum_process_rounds": 5,
+    "order": "rotating-engines-v1",
+    "active_threads_measured": false
+  },
+  "controller_sha256": "6641eaf23ed42ead91fe32a40bcc9d14f84cf1ee7c5cedcfd123ed53dbe9eeca",
+  "harness_sha256": "2bea260c6d65c1830b534c35f31227702f8a1c1b646d82f3d3424bcf25d9d5ae",
+  "criteria": {
+    "correctness": "Every worker must validate all per-column hashes, native types, row and column order and total rows in a separate untimed repeat; timed pass checks total rows.",
+    "cpu": "Review any median CPU regression above10percent, not automatically hidden by elapsed speed or memory savings.",
+    "memory": "The large-file prototype should lower median peak RSS by at least50percent to justify a material memory improvement. RSS includes mapped file pages and is not allocation count.",
+    "scope": "Natural native parallelism on matching CPU backend. No build/tests run by this task during measurements. No caller retention; one consumer requests immediately after each owned frame is released. No universal weighted efficiency score."
+  }
+}

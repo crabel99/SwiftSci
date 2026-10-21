@@ -10,7 +10,7 @@ Each column prepares its numeric format once. Recognized ASCII year, month, and 
 
 Unsupported forms keep Foundation conversion, including short years, historical dates, alternate separators accepted by Foundation, Unicode digits, timestamps, and format directives outside this subset. The fallback formatter is created only when needed. Default parsing and its month-first ambiguity rule are unchanged. Null matching occurs before conversion. Explicit invalid conversions still become null.
 
-Separate commits repair three reproduced defects before the optimization: streaming row limits, streaming header normalization, and generated header-name collisions. Contract tests also retain chunk-local inference, late-value validation, and the existing direct numerical handoff. The independent standalone date diagnostic checks 6,720 Foundation comparisons, including 4,264 direct conversions.
+Separate commits repair three reproduced defects before the optimization: streaming row limits, streaming header normalization, and generated header-name collisions. Contract tests also retain chunk-local inference, late-value validation, and the existing direct numerical handoff. The independent [standalone date diagnostic](date-parity) checks 6,720 Foundation comparisons, including 4,264 direct conversions.
 
 ## Matched resource results
 

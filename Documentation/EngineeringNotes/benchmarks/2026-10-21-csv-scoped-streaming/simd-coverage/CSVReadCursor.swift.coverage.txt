@@ -1,0 +1,115 @@
+    1|       |import Foundation
+    2|       |
+    3|       |/// Owns the mapping between requests; pointers and record metadata stay inside one request.
+    4|       |internal final class CSVReadCursor: @unchecked Sendable {
+    5|       |    private struct Input {
+    6|       |        let data: Data
+    7|       |        let headers: [String]
+    8|       |        var offset: Int
+    9|       |        var remainingRows: Int?
+   10|       |    }
+   11|       |
+   12|       |    private enum State {
+   13|       |        case unopened
+   14|       |        case reading(Input)
+   15|       |        case finished
+   16|       |    }
+   17|       |
+   18|     27|    private let lock = NSLock()
+   19|       |    private let url: URL
+   20|       |    private let options: CSVReadOptions
+   21|       |    private let chunkSize: Int
+   22|     27|    private var state: State = .unopened
+   23|       |
+   24|     27|    init(url: URL, options: CSVReadOptions, chunkSize: Int) {
+   25|     27|        self.url = url
+   26|     27|        self.options = options
+   27|     27|        self.chunkSize = chunkSize
+   28|     27|    }
+   29|       |
+   30|    109|    func next() throws -> DataFrame? {
+   31|    109|        try lock.withLock {
+   32|    109|            do {
+   33|    109|                try Task.checkCancellation()
+   34|    108|                let input: Input
+   35|    108|                switch state {
+   36|    108|                case .finished: return nil
+   37|    108|                case .unopened:
+   38|     27|                    guard chunkSize > 0 else {
+   39|      2|                        throw SwiftMLError.invalidParameter("CSV chunk size must be positive")
+   40|     25|                    }
+   41|     25|                    guard let opened = try open() else {
+   42|      3|                        state = .finished
+   43|      3|                        return nil
+   44|     21|                    }
+   45|     21|                    input = opened
+   46|    108|                case .reading(let current): input = current
+   47|    108|                }
+   48|     79|                return try read(input)
+   49|    109|            } catch {
+   50|      4|                state = .finished
+   51|      4|                throw error
+   52|      4|            }
+   53|    109|        }
+   54|    105|    }
+   55|       |
+   56|     25|    private func open() throws -> Input? {
+   57|     25|        guard FileManager.default.fileExists(atPath: url.path) else {
+   58|      1|            throw SwiftMLError.fileNotFound(url)
+   59|     24|        }
+   60|     24|        let data = try Data(contentsOf: url, options: .alwaysMapped)
+   61|     24|        return try data.withUnsafeBytes { rawBuffer in
+   62|     24|            let buffer = rawBuffer.bindMemory(to: UInt8.self)
+   63|     24|            let first = try parser.scanBatch(buffer: buffer, maximumRows: 1)
+   64|     24|            guard !first.records.isEmpty else { return nil }
+   65|     23|            let headers: [String]
+   66|     23|            let offset: Int
+   67|     23|            if options.hasHeader {
+   68|     37|                headers = CSVReader.deduplicateHeaders(first.records.row(at: 0).map {
+   69|     37|                    VectorizedByteParsers.parseString(buffer: buffer, offset: $0)
+   70|     37|                })
+   71|     22|                offset = first.nextOffset
+   72|     22|            } else {
+   73|      2|                headers = (0..<first.records.row(at: 0).count).map { "col\($0)" }
+   74|      1|                offset = 0
+   75|      1|            }
+   76|     23|            guard !headers.isEmpty, offset < data.count, options.maxRows != 0 else { return nil }
+   77|     21|            return Input(data: data, headers: headers, offset: offset, remainingRows: options.maxRows)
+   78|     24|        }
+   79|     25|    }
+   80|       |
+   81|    103|    private var parser: SystemsCSVParser {
+   82|    103|        SystemsCSVParser(delimiterByte: UInt8(options.delimiter.utf8.first ?? 44))
+   83|    103|    }
+   84|       |
+   85|     79|    private func read(_ current: Input) throws -> DataFrame? {
+   86|     79|        var input = current
+   87|     79|        let rows = min(chunkSize, input.remainingRows ?? chunkSize)
+   88|     79|        guard rows > 0 else {
+   89|      0|            state = .finished
+   90|      0|            return nil
+   91|     79|        }
+   92|     79|        let data = input.data
+   93|     79|        let frame = try data.withUnsafeBytes { rawBuffer -> DataFrame? in
+   94|     79|            let bytes = rawBuffer.bindMemory(to: UInt8.self)
+   95|     79|            let buffer = UnsafeBufferPointer(rebasing: bytes[input.offset...])
+   96|     79|            let batch = try parser.scanBatch(buffer: buffer, maximumRows: rows)
+   97|     79|            input.offset += batch.nextOffset
+   98|     79|            guard !batch.records.isEmpty else { return nil }
+   99|     79|            let result = try CSVReader.buildFrame(buffer: buffer, records: batch.records,
+  100|     79|                startRow: 0, rowCount: batch.records.count, headers: input.headers, options: options)
+  101|     79|            if let remaining = input.remainingRows {
+  102|      6|                input.remainingRows = remaining - batch.records.count
+  103|      6|            }
+  104|     79|            return result
+  105|     79|        }
+  106|     79|        try Task.checkCancellation()
+  107|     79|        if frame == nil || input.offset == input.data.count || input.remainingRows == 0 {
+  108|     19|            state = .finished
+  109|     60|        } else {
+  110|     60|            state = .reading(input)
+  111|     60|        }
+  112|     79|        return frame
+  113|     79|    }
+  114|       |}
+

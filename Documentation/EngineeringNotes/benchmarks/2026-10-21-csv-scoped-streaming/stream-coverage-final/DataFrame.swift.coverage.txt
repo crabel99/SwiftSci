@@ -1,0 +1,778 @@
+    1|       |import Foundation
+    2|       |
+    3|       |/// A tabular data structure with named, typed columns.
+    4|       |/// Columns are stored in-order; all columns must have the same `count`.
+    5|       |/// `DataFrame` is a value type — all mutations return new instances.
+    6|       |public struct DataFrame: Sendable {
+    7|       |
+    8|       |    // MARK: – Internal storage
+    9|       |
+   10|       |    /// Ordered columns (order preserved from initialisation).
+   11|       |    internal let _columns: [String: any AnyColumn]
+   12|       |    internal let _columnOrder: [String]
+   13|       |
+   14|       |    // MARK: – Static helpers
+   15|       |
+   16|       |    /// A dataframe with no rows and no columns.
+   17|       |    public static let empty = DataFrame(_columns: [:], _columnOrder: [])
+   18|       |
+   19|     40|    private init(_columns: [String: any AnyColumn], _columnOrder: [String]) {
+   20|     40|        self._columns      = _columns
+   21|     40|        self._columnOrder  = _columnOrder
+   22|     40|    }
+   23|       |
+   24|       |    // MARK: – Initialisation
+   25|       |
+   26|       |    /// Creates an empty DataFrame.
+   27|      0|    public init() {
+   28|      0|        self._columns = [:]
+   29|      0|        self._columnOrder = []
+   30|      0|    }
+   31|       |
+   32|       |    /// Creates a DataFrame from an ordered list of columns.
+   33|       |    /// - Throws: `DataFrameError.emptySchema` if `columns` is empty.
+   34|       |    ///           `DataFrameError.columnLengthMismatch` if columns differ in length.
+   35|       |    ///           `DataFrameError.duplicateColumnName` if two columns share a name.
+   36|  2.72k|    public init(columns: [any AnyColumn]) throws {
+   37|  2.72k|        guard !columns.isEmpty else { throw SwiftMLError.emptySchema }
+   38|  2.72k|
+   39|  2.72k|        let expectedCount = columns[0].count
+   40|  2.72k|        var colMap: [String: any AnyColumn] = [:]
+   41|  2.72k|        var colOrder: [String] = []
+   42|  2.72k|
+   43|  6.53k|        for col in columns {
+   44|  6.53k|            guard col.count == expectedCount else {
+   45|      1|                throw SwiftMLError.columnLengthMismatch(
+   46|      1|                    expected: expectedCount, got: col.count, column: col.name
+   47|      1|                )
+   48|  6.52k|            }
+   49|  6.52k|            guard colMap[col.name] == nil else {
+   50|      1|                throw SwiftMLError.duplicateColumnName(col.name)
+   51|  6.52k|            }
+   52|  6.52k|            colMap[col.name] = col
+   53|  6.52k|            colOrder.append(col.name)
+   54|  6.52k|        }
+   55|  2.71k|
+   56|  2.71k|        self._columns     = colMap
+   57|  2.71k|        self._columnOrder = colOrder
+   58|  2.71k|    }
+   59|       |
+   60|       |    /// Creates a DataFrame by reading a CSV file.
+   61|     50|    public init(csv url: URL, options: CSVReadOptions = .default) async throws {
+   62|     50|        let df = try await CSVReader.read(url: url, options: options)
+   63|     50|        self = df
+   64|     50|    }
+   65|       |
+   66|       |    /// Reads a CSV file as owned chunks, creating each chunk on consumer demand.
+   67|       |    /// The unfinished stream retains its mapped source. Returned chunks own their values.
+   68|       |    /// Row counts limit each chunk, not its byte size. Retaining chunks retains their storage.
+   69|       |    /// - Parameters:
+   70|       |    ///   - url: The CSV file URL.
+   71|       |    ///   - chunkSize: Maximum rows per chunk. Must be positive.
+   72|       |    ///   - options: CSV parsing, type inference, and row-limit options.
+   73|       |    /// - Returns: A stream of frames that can throw file, parameter, or cancellation errors.
+   74|       |    public static func readCSVStream(
+   75|       |        contentsOf url: URL,
+   76|       |        chunkSize: Int = 10000,
+   77|       |        options: CSVReadOptions = .default
+   78|     22|    ) -> AsyncThrowingStream<DataFrame, any Error> {
+   79|     22|        CSVReader.readStream(url: url, options: options, chunkSize: chunkSize)
+   80|     22|    }
+   81|       |
+   82|       |    /// Creates a DataFrame by reading a JSON file (array of objects).
+   83|      1|    public init(json url: URL) async throws {
+   84|      1|        let df = try await JSONReader.read(url: url)
+   85|      1|        self = df
+   86|      1|    }
+   87|       |
+   88|       |    /// Creates a DataFrame by reading a Feather / Arrow IPC binary file.
+   89|      1|    public init(feather url: URL) async throws {
+   90|      1|        let df = try await FeatherReader.read(url: url)
+   91|      1|        self = df
+   92|      1|    }
+   93|       |
+   94|       |    /// Reads a Feather / Arrow IPC binary file into a DataFrame.
+   95|       |    /// - Parameters:
+   96|       |    ///   - url: File or network URL endpoint.
+   97|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+   98|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+   99|      0|    public static func readFeather(from url: URL) async throws -> DataFrame {
+  100|      0|        try await FeatherReader.read(url: url)
+  101|      0|    }
+  102|       |
+  103|       |    /// Creates a DataFrame by reading an Apache Parquet binary file.
+  104|      2|    public init(parquet url: URL) async throws {
+  105|      2|        let df = try await ParquetReader.read(url: url)
+  106|      2|        self = df
+  107|      2|    }
+  108|       |
+  109|       |    /// Reads an Apache Parquet binary file into a DataFrame.
+  110|       |    /// - Parameters:
+  111|       |    ///   - url: File or network URL endpoint.
+  112|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  113|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  114|      0|    public static func readParquet(from url: URL) async throws -> DataFrame {
+  115|      0|        try await ParquetReader.read(url: url)
+  116|      0|    }
+  117|       |
+  118|       |    /// Reads an Apache Parquet binary file into a DataFrame from a file system path.
+  119|       |    /// - Parameter path: File system path string.
+  120|       |    /// - Returns: Ingested DataFrame.
+  121|      0|    public static func readParquet(_ path: String) async throws -> DataFrame {
+  122|      0|        try await readParquet(from: URL(fileURLWithPath: path))
+  123|      0|    }
+  124|       |
+  125|       |
+  126|       |    /// Downloads a dataset directly from an HTTP/HTTPS URL into a DataFrame.
+  127|       |    /// - Parameters:
+  128|       |    ///   - url: Remote URL pointing to a CSV or JSON dataset.
+  129|       |    ///   - options: CSV reading options.
+  130|       |    /// - Returns: Ingested DataFrame.
+  131|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  132|      1|    public static func readURL(_ url: URL, options: CSVReadOptions = .default) async throws -> DataFrame {
+  133|      1|        if url.isFileURL {
+  134|      1|            if url.pathExtension.lowercased() == "json" {
+  135|      0|                return try await DataFrame(json: url)
+  136|      1|            }
+  137|      1|            return try await DataFrame(csv: url, options: options)
+  138|      1|        }
+  139|      0|        let (data, response) = try await URLSession.shared.data(from: url)
+  140|      0|        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+  141|      0|            throw SwiftMLError.parseError(line: 0, description: "Failed to download dataset from URL: \(url.absoluteString)")
+  142|      0|        }
+  143|      0|        
+  144|      0|        let isJSON = url.pathExtension.lowercased() == "json" || (httpResponse.mimeType?.contains("json") ?? false)
+  145|      0|        let ext = isJSON ? ".json" : ".csv"
+  146|      0|        
+  147|      0|        let tempDir = FileManager.default.temporaryDirectory
+  148|      0|        let tempFile = tempDir.appendingPathComponent(UUID().uuidString + ext)
+  149|      0|        try data.write(to: tempFile)
+  150|      0|        defer { try? FileManager.default.removeItem(at: tempFile) }
+  151|      0|        
+  152|      0|        if isJSON {
+  153|      0|            return try await DataFrame(json: tempFile)
+  154|      0|        } else {
+  155|      0|            return try await DataFrame(csv: tempFile, options: options)
+  156|      0|        }
+  157|      0|    }
+  158|       |
+  159|       |    /// Creates a DataFrame by downloading dataset content directly from a remote HTTP/HTTPS URL.
+  160|      0|    public init(remoteURL url: URL, options: CSVReadOptions = .default) async throws {
+  161|      0|        let df = try await DataFrame.readURL(url, options: options)
+  162|      0|        self = df
+  163|      0|    }
+  164|       |
+  165|       |    // MARK: – Metadata
+  166|       |
+  167|       |    /// The shape.
+  168|  2.33k|    public var shape: (rows: Int, columns: Int) {
+  169|  2.33k|        (rows: _columns.first.map { $0.value.count } ?? 0,
+  170|  2.33k|         columns: _columnOrder.count)
+  171|  2.33k|    }
+  172|       |
+  173|       |    /// The row count.
+  174|  1.26k|    public var rowCount: Int { shape.rows }
+  175|       |
+  176|       |    /// The column names.
+  177|    146|    public var columnNames: [String] { _columnOrder }
+  178|       |
+  179|       |    /// The dtypes.
+  180|      0|    public var dtypes: [String: ColumnDType] {
+  181|      0|        _columns.mapValues { $0.dtype }
+  182|      0|    }
+  183|       |
+  184|       |    /// All columns in their original order.
+  185|  1.85k|    public var columns: [any AnyColumn] {
+  186|  4.09k|        _columnOrder.compactMap { _columns[$0] }
+  187|  1.85k|    }
+  188|       |
+  189|       |    /// Schema.
+  190|       |    /// - Returns: A `Schema` result.
+  191|      0|    public func schema() -> Schema {
+  192|      0|        Schema(fields: columns.map { col in
+  193|      0|            Schema.Field(name: col.name, dtype: col.dtype, nullable: col.nullCount > 0)
+  194|      0|        })
+  195|      0|    }
+  196|       |
+  197|       |    // MARK: – Subscript access
+  198|       |
+  199|       |    /// Accesses the element at the given index.
+  200|  13.7k|    public subscript(column name: String) -> (any AnyColumn)? {
+  201|  13.7k|        _columns[name]
+  202|  13.7k|    }
+  203|       |
+  204|       |    /// Accesses the column with the given name.
+  205|      0|    public subscript(_ name: String) -> (any AnyColumn)? {
+  206|      0|        _columns[name]
+  207|      0|    }
+  208|       |
+  209|       |    /// Accesses the element at the given index.
+  210|  25.5k|    public subscript<T: SupportedType>(column name: String, as type: T.Type) -> TypedColumn<T>? {
+  211|  25.5k|        _columns[name] as? TypedColumn<T>
+  212|  25.5k|    }
+  213|       |
+  214|       |    /// Returns the row at `index` as a dictionary.
+  215|       |    /// - Parameters:
+  216|       |    ///   - index: Zero-based integer index position.
+  217|       |    /// - Returns: The computed [String: Any?] result instance.
+  218|      3|    public func rowDictionary(at index: Int) -> [String: Any?] {
+  219|      3|        guard index >= 0 && index < shape.rows else { return [:] }
+  220|      1|        var result: [String: Any?] = [:]
+  221|      2|        for col in columns { result[col.name] = col.value(at: index) }
+  222|      1|        return result
+  223|      3|    }
+  224|       |
+  225|       |    // MARK: – Selection
+  226|       |
+  227|       |    /// Returns a new DataFrame with only the specified columns.
+  228|       |    /// - Parameters:
+  229|       |    ///   - names: Array of column identifiers or feature names.
+  230|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  231|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  232|     16|    public func select(_ names: String...) throws -> DataFrame {
+  233|     16|        try selectArray(names)
+  234|     15|    }
+  235|       |
+  236|       |    /// Selects specified columns by an array of column names.
+  237|       |    /// - Parameter names: Array of column names to select.
+  238|       |    /// - Throws: `DataFrameError.columnNotFound` if any column is missing.
+  239|       |    /// - Returns: A new `DataFrame` containing only the requested columns.
+  240|      6|    public func select(_ names: [String]) throws -> DataFrame {
+  241|      6|        try selectArray(names)
+  242|      6|    }
+  243|       |
+  244|     22|    private func selectArray(_ names: [String]) throws -> DataFrame {
+  245|     22|        var cols: [any AnyColumn] = []
+  246|     40|        for name in names {
+  247|     40|            guard let col = _columns[name] else {
+  248|      1|                throw SwiftMLError.columnNotFound(name)
+  249|     39|            }
+  250|     39|            cols.append(col)
+  251|     39|        }
+  252|     21|        return try DataFrame(columns: cols)
+  253|     22|    }
+  254|       |
+  255|       |    /// Returns a new DataFrame without the specified columns.
+  256|       |    /// - Parameters:
+  257|       |    ///   - names: Array of column identifiers or feature names.
+  258|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  259|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  260|      1|    public func drop(_ names: String...) throws -> DataFrame {
+  261|      1|        try dropArray(names)
+  262|      1|    }
+  263|       |
+  264|       |    /// Drops specified columns by an array of column names.
+  265|       |    /// - Parameter names: Array of column names to drop.
+  266|       |    /// - Throws: `DataFrameError.columnNotFound` if any column is missing.
+  267|       |    /// - Returns: A new `DataFrame` without the specified columns.
+  268|      1|    public func drop(_ names: [String]) throws -> DataFrame {
+  269|      1|        try dropArray(names)
+  270|      1|    }
+  271|       |
+  272|      2|    private func dropArray(_ names: [String]) throws -> DataFrame {
+  273|      2|        let nameSet = Set(names)
+  274|      5|        for n in names {
+  275|      5|            guard _columns[n] != nil else { throw SwiftMLError.columnNotFound(n) }
+  276|      5|        }
+  277|      7|        let remaining = _columnOrder.filter { !nameSet.contains($0) }
+  278|      2|        let cols = remaining.compactMap { _columns[$0] }
+  279|      2|        guard !cols.isEmpty else { return DataFrame.empty }
+  280|      1|        return try DataFrame(columns: cols)
+  281|      2|    }
+  282|       |
+  283|       |    /// Returns the first `n` rows.
+  284|       |    /// - Parameters:
+  285|       |    ///   - n: Sample size, count, or dimension parameter.
+  286|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  287|      5|    public func head(_ n: Int = 5) -> DataFrame {
+  288|      5|        slice(from: 0, count: n)
+  289|      5|    }
+  290|       |
+  291|       |    /// Returns the last `n` rows.
+  292|       |    /// - Parameters:
+  293|       |    ///   - n: Sample size, count, or dimension parameter.
+  294|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  295|      4|    public func tail(_ n: Int = 5) -> DataFrame {
+  296|      4|        let total = shape.rows
+  297|      4|        let from  = Swift.max(0, total - n)
+  298|      4|        return slice(from: from, count: total - from)
+  299|      4|    }
+  300|       |
+  301|       |    /// Returns a random sample of `n` rows.
+  302|       |    /// - Parameters:
+  303|       |    ///   - n: Number of rows to sample.
+  304|       |    ///   - seed: Optional random seed for reproducible sampling.
+  305|       |    ///   - ordered: If `true`, returns sampled rows in their original index order. If `false` (default), returns rows in randomized shuffle order.
+  306|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  307|      6|    public func sample(n: Int, seed: UInt64? = nil, ordered: Bool = false) -> DataFrame {
+  308|      6|        let total = shape.rows
+  309|      6|        guard n > 0 && total > 0 else { return gathered(at: []) }
+  310|      3|        let actualN = Swift.min(n, total)
+  311|      3|
+  312|      3|        var rng = SeededRNG(seed: seed ?? UInt64(Date().timeIntervalSince1970 * 1000))
+  313|      3|        var indices = Array(0..<total)
+  314|      3|        // Fisher-Yates shuffle first `actualN` elements
+  315|      7|        for i in 0..<actualN {
+  316|      7|            let j = i + Int(rng.next() % UInt64(total - i))
+  317|      7|            indices.swapAt(i, j)
+  318|      7|        }
+  319|      3|        let selectedPrefix = Array(indices.prefix(actualN))
+  320|      3|        let selected = ordered ? selectedPrefix.sorted() : selectedPrefix
+  321|      3|        return gathered(at: selected)
+  322|      6|    }
+  323|       |
+  324|       |    /// Returns a new `DataFrame` containing only unique rows (deduplicated), preserving order of first appearance.
+  325|      2|    public var unique: DataFrame {
+  326|      2|        guard shape.rows > 0 else { return self }
+  327|      1|        
+  328|      1|        var seenRows = Set<String>()
+  329|      1|        var keepIndices: [Int] = []
+  330|      1|        keepIndices.reserveCapacity(shape.rows)
+  331|      1|        
+  332|      5|        for i in 0..<shape.rows {
+  333|      5|            var rowRepresentation = ""
+  334|     10|            for colName in _columnOrder {
+  335|     10|                if let col = _columns[colName] {
+  336|     10|                    if let val = col.value(at: i) {
+  337|     10|                        rowRepresentation.append("\(val)|")
+  338|     10|                    } else {
+  339|      0|                        rowRepresentation.append("nil|")
+  340|      0|                    }
+  341|     10|                }
+  342|     10|            }
+  343|      5|            if seenRows.insert(rowRepresentation).inserted {
+  344|      4|                keepIndices.append(i)
+  345|      4|            }
+  346|      5|        }
+  347|      1|        
+  348|      1|        return gathered(at: keepIndices)
+  349|      2|    }
+  350|       |
+  351|       |    // MARK: – Filtering
+  352|       |
+  353|       |    /// Filters rows using a predicate closure over raw row index (zero allocation).
+  354|       |    /// - Parameters:
+  355|       |    ///   - predicate: Filtering boolean closure applied to elements.
+  356|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  357|      5|    public func filterRows(by predicate: (Int) -> Bool) -> DataFrame {
+  358|      5|        let rows = shape.rows
+  359|      5|        guard rows > 0 else { return self }
+  360|      2|        var passingIndices = [Int]()
+  361|      2|        passingIndices.reserveCapacity(rows)
+  362|      8|        for i in 0..<rows {
+  363|      8|            if predicate(i) {
+  364|      3|                passingIndices.append(i)
+  365|      3|            }
+  366|      8|        }
+  367|      2|        return gathered(at: passingIndices)
+  368|      5|    }
+  369|       |
+  370|       |    /// Filters rows using a predicate closure.
+  371|       |    ///
+  372|       |    /// The row view resolves column values lazily, so predicates that only
+  373|       |    /// read one or two columns avoid materializing the full row.
+  374|       |    /// - Parameters:
+  375|       |    ///   - predicate: Filtering boolean closure applied to elements.
+  376|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  377|     19|    public func filter(_ predicate: (DataFrameRow) -> Bool) -> DataFrame {
+  378|     19|        guard shape.rows > 0 else { return self }
+  379|     15|        let map = _columns
+  380|     15|        let names = columnNames
+  381|     15|        var mask = [Bool](repeating: false, count: shape.rows)
+  382|     15|        var row = DataFrameRow(columnNames: names, index: 0, columnMap: map)
+  383|   100k|        for i in 0..<shape.rows {
+  384|   100k|            row.index = i
+  385|   100k|            mask[i] = predicate(row)
+  386|   100k|        }
+  387|     15|        return applyMask(mask)
+  388|     19|    }
+  389|       |
+  390|       |    /// Returns a zero-allocation lightweight row view at the specified index.
+  391|       |    /// - Parameters:
+  392|       |    ///   - index: Zero-based integer index position.
+  393|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  394|      3|    public func row(at index: Int) -> DataFrameRow {
+  395|      3|        DataFrameRow(columnNames: columnNames, index: index, columnMap: _columns)
+  396|      3|    }
+  397|       |
+  398|       |    /// Returns a zero-allocation lazy sequence over the DataFrame's rows.
+  399|      2|    public var rows: DataFrameRowSequence {
+  400|      2|        DataFrameRowSequence(count: shape.rows, columnNames: columnNames, columnMap: _columns)
+  401|      2|    }
+  402|       |
+  403|       |    /// Filters rows by a condition on a single column.
+  404|       |    /// - Parameters:
+  405|       |    ///   - name: Name or identifier string.
+  406|       |    ///   - condition: Boolean evaluation filter condition.
+  407|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  408|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  409|    438|    public func filter(column name: String, where condition: FilterCondition) throws -> DataFrame {
+  410|    438|        guard let col = _columns[name] else {
+  411|      0|            throw SwiftMLError.columnNotFound(name)
+  412|    438|        }
+  413|    438|
+  414|    438|        // Bitmap-free fast path for direct index filtering
+  415|    438|        if let indices = col.filteredIndices(matching: condition) {
+  416|    426|            return gathered(at: indices)
+  417|    426|        }
+  418|     12|
+  419|     12|        // Fallback mask path
+  420|     12|        var mask = [Bool](repeating: false, count: shape.rows)
+  421|     52|        for i in 0..<shape.rows {
+  422|     52|            mask[i] = condition.evaluate(value: col.value(at: i))
+  423|     52|        }
+  424|     12|        return applyMask(mask)
+  425|    438|    }
+  426|       |
+  427|       |    // MARK: – Transformation
+  428|       |
+  429|       |    /// Returns a new DataFrame with the column replaced or added.
+  430|       |    /// - Parameters:
+  431|       |    ///   - name: Name or identifier string.
+  432|       |    ///   - column: Target column identifier.
+  433|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  434|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  435|     38|    public func withColumn(_ name: String, column: any AnyColumn) throws -> DataFrame {
+  436|     38|        let expectedRows = _columnOrder.isEmpty ? column.count : shape.rows
+  437|     38|        guard column.count == expectedRows else {
+  438|      0|            throw SwiftMLError.columnLengthMismatch(
+  439|      0|                expected: expectedRows, got: column.count, column: name
+  440|      0|            )
+  441|     38|        }
+  442|     38|        let newCol = column.renamed(to: name)
+  443|     38|        var newMap   = _columns
+  444|     38|        var newOrder = _columnOrder
+  445|     38|
+  446|     38|        newMap[name] = newCol
+  447|     38|        if !newOrder.contains(name) { newOrder.append(name) }
+  448|     38|
+  449|     38|        return DataFrame(_columns: newMap, _columnOrder: newOrder)
+  450|     38|    }
+  451|       |
+  452|       |    /// Returns a new DataFrame with a lagged column added.
+  453|       |    /// - Parameters:
+  454|       |    ///   - name: Name or identifier string.
+  455|       |    ///   - offset: Byte or element offset within the buffer.
+  456|       |    ///   - newName: Replacement column name identifier.
+  457|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  458|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  459|      2|    public func withLaggedColumn(column name: String, by offset: Int, newName: String) throws -> DataFrame {
+  460|      2|        guard let col = _columns[name] else { throw SwiftMLError.columnNotFound(name) }
+  461|      2|        let laggedCol = col.lagged(by: offset).renamed(to: newName)
+  462|      2|        return try withColumn(newName, column: laggedCol)
+  463|      2|    }
+  464|       |
+  465|       |    /// Returns a new DataFrame with a column renamed.
+  466|       |    /// - Parameters:
+  467|       |    ///   - old: Original identifier or substring to be replaced.
+  468|       |    ///   - new: New replacement identifier or substring.
+  469|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  470|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  471|      1|    public func renameColumn(_ old: String, to new: String) throws -> DataFrame {
+  472|      1|        guard let col = _columns[old] else { throw SwiftMLError.columnNotFound(old) }
+  473|      1|        var newMap   = _columns
+  474|      1|        var newOrder = _columnOrder
+  475|      1|
+  476|      1|        newMap.removeValue(forKey: old)
+  477|      1|        newMap[new] = col.renamed(to: new)
+  478|      1|        if let idx = newOrder.firstIndex(of: old) { newOrder[idx] = new }
+  479|      1|
+  480|      1|        return DataFrame(_columns: newMap, _columnOrder: newOrder)
+  481|      1|    }
+  482|       |
+  483|       |    /// Adds a new column computed using a row-level closure.
+  484|       |    /// - Parameters:
+  485|       |    ///   - name: Name or identifier string.
+  486|       |    ///   - type: Data type or category specification.
+  487|       |    ///   - closure: Processing closure to execute.
+  488|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  489|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  490|      1|    public func addColumn<T: SupportedType>(_ name: String, as type: T.Type = T.self, using closure: (DataFrameRow) -> T?) throws -> DataFrame {
+  491|      1|        let names = columnNames
+  492|      1|        let map = _columns
+  493|      1|        let total = shape.rows
+  494|      1|        var values = [T?]()
+  495|      1|        values.reserveCapacity(total)
+  496|      1|        
+  497|      5|        for i in 0..<total {
+  498|      5|            let row = DataFrameRow(columnNames: names, index: i, columnMap: map)
+  499|      5|            values.append(closure(row))
+  500|      5|        }
+  501|      1|        
+  502|      1|        let newCol = TypedColumn<T>(name: name, values: values)
+  503|      1|        return try withColumn(name, column: newCol)
+  504|      1|    }
+  505|       |
+  506|       |    /// Casts a column to a new type.
+  507|       |    /// - Parameters:
+  508|       |    ///   - name: Name or identifier string.
+  509|       |    ///   - type: Data type or category specification.
+  510|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  511|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  512|      4|    public func castColumn<T: SupportedType>(_ name: String, to type: T.Type = T.self) throws -> DataFrame {
+  513|      4|        guard let col = _columns[name] else { throw SwiftMLError.columnNotFound(name) }
+  514|      4|
+  515|      4|        var failedCount = 0
+  516|      4|        var sourceNonNull = 0
+  517|      4|
+  518|     14|        let newValues: [T?] = (0..<col.count).map { i in
+  519|     14|            guard let v = col.value(at: i) else { return nil }
+  520|     13|            sourceNonNull += 1
+  521|     13|            if let direct = v as? T { return direct }
+  522|     13|            let str = "\(v)"
+  523|     13|            if let parsed = T.parse(from: str) {
+  524|     12|                return parsed
+  525|     12|            } else {
+  526|      1|                failedCount += 1
+  527|      1|                return nil
+  528|      1|            }
+  529|     13|        }
+  530|      4|
+  531|      4|        if sourceNonNull > 0 && failedCount == sourceNonNull {
+  532|      0|            throw SwiftMLError.castFailed(column: name, targetType: "\(T.self)")
+  533|      4|        }
+  534|      4|        if failedCount > 0 {
+  535|      1|            throw SwiftMLError.partialCastFailure(column: name, targetType: "\(T.self)", failed: failedCount, total: sourceNonNull)
+  536|      3|        }
+  537|      3|
+  538|      3|        let newCol = TypedColumn<T>(name: name, values: newValues)
+  539|      3|        return try withColumn(name, column: newCol)
+  540|      4|    }
+  541|       |
+  542|       |    /// Casts a column to the specified `ColumnDType`.
+  543|       |    /// - Parameters:
+  544|       |    ///   - name: Name of the column to cast.
+  545|       |    ///   - dtype: Target `ColumnDType`.
+  546|       |    /// - Throws: `SwiftMLError` if column is not found or cast fails.
+  547|       |    /// - Returns: A new `DataFrame` with the casted column.
+  548|      2|    public func cast(column name: String, to dtype: ColumnDType) throws -> DataFrame {
+  549|      2|        switch dtype {
+  550|      2|        case .int32:   return try castColumn(name, to: Int32.self)
+  551|      2|        case .int64:   return try castColumn(name, to: Int64.self)
+  552|      2|        case .float32: return try castColumn(name, to: Float.self)
+  553|      2|        case .float64: return try castColumn(name, to: Double.self)
+  554|      2|        case .boolean: return try castColumn(name, to: Bool.self)
+  555|      2|        case .utf8:    return try castColumn(name, to: String.self)
+  556|      2|        case .date32:  return try castColumn(name, to: Date.self)
+  557|      2|        }
+  558|      2|    }
+  559|       |
+  560|       |    /// Returns a new DataFrame sorted by the given column.
+  561|       |    /// - Parameters:
+  562|       |    ///   - column: Target column identifier.
+  563|       |    ///   - ascending: Whether sorting is performed in ascending order.
+  564|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  565|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  566|    163|    public func sortBy(_ column: String, ascending: Bool = true) throws -> DataFrame {
+  567|    163|        guard let col = _columns[column] else { throw SwiftMLError.columnNotFound(column) }
+  568|    163|        let indices = col.sortedIndices(ascending: ascending)
+  569|    163|        return gathered(at: indices)
+  570|    163|    }
+  571|       |
+  572|       |    /// Returns a `GroupedDataFrame` for aggregation.
+  573|       |    /// - Parameters:
+  574|       |    ///   - columns: List of column names to select or transform.
+  575|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  576|    529|    public func groupBy(_ columns: String...) -> GroupedDataFrame {
+  577|    529|        GroupedDataFrame(dataFrame: self, groupColumns: columns)
+  578|    529|    }
+  579|       |
+  580|       |    // MARK: – I/O
+  581|       |
+  582|       |    /// Writes the DataFrame to a CSV file.
+  583|       |    /// - Parameters:
+  584|       |    ///   - url: File or network URL endpoint.
+  585|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  586|      3|    public func writeCSV(to url: URL) async throws {
+  587|      3|        try await CSVWriter.write(self, to: url)
+  588|      3|    }
+  589|       |
+  590|       |    /// Writes the DataFrame to a Feather / Arrow IPC binary file.
+  591|       |    /// - Parameters:
+  592|       |    ///   - url: File or network URL endpoint.
+  593|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  594|      2|    public func writeFeather(to url: URL) async throws {
+  595|      2|        try await FeatherWriter.write(self, to: url)
+  596|      2|    }
+  597|       |
+  598|       |    /// Serializes the DataFrame into Feather / Arrow IPC binary Data.
+  599|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  600|       |    /// - Returns: Raw serialized binary data representation.
+  601|      1|    public func writeFeatherData() throws -> Data {
+  602|      1|        try FeatherWriter.write(self)
+  603|      1|    }
+  604|       |
+  605|       |    /// Writes the DataFrame to an Apache Parquet binary file.
+  606|       |    /// - Parameters:
+  607|       |    ///   - url: File or network URL endpoint.
+  608|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  609|      3|    public func writeParquet(to url: URL) async throws {
+  610|      3|        try await ParquetWriter.write(dataFrame: self, to: url)
+  611|      3|    }
+  612|       |
+  613|       |    /// Writes the DataFrame to an Apache Parquet binary file at the specified file system path.
+  614|       |    /// - Parameter path: File system path string.
+  615|      0|    public func writeParquet(to path: String) async throws {
+  616|      0|        try await writeParquet(to: URL(fileURLWithPath: path))
+  617|      0|    }
+  618|       |
+  619|       |
+  620|       |    /// Prints a formatted table to stdout.
+  621|       |    /// - Parameters:
+  622|       |    ///   - maxRows: Maximum number of rows to format or process.
+  623|      0|    public func debugPrint(maxRows: Int = 20) {
+  624|      0|        let names  = columnNames
+  625|      0|        let rows   = Swift.min(shape.rows, maxRows)
+  626|      0|
+  627|      0|        // Column widths
+  628|      0|        var widths = names.map { $0.count }
+  629|      0|        for i in 0..<rows {
+  630|      0|            for (ci, col) in columns.enumerated() {
+  631|      0|                let s = col.value(at: i).map { "\($0)" } ?? "null"
+  632|      0|                widths[ci] = Swift.max(widths[ci], s.count)
+  633|      0|            }
+  634|      0|        }
+  635|      0|
+  636|      0|        func pad(_ s: String, _ w: Int) -> String { s + String(repeating: " ", count: w - s.count) }
+  637|      0|        let header = names.enumerated().map { pad($0.element, widths[$0.offset]) }.joined(separator: " | ")
+  638|      0|        let sep    = widths.map { String(repeating: "-", count: $0) }.joined(separator: "-+-")
+  639|      0|
+  640|      0|        print(header)
+  641|      0|        print(sep)
+  642|      0|        for i in 0..<rows {
+  643|      0|            let row = columns.enumerated().map { (ci, col) in
+  644|      0|                pad(col.value(at: i).map { "\($0)" } ?? "null", widths[ci])
+  645|      0|            }.joined(separator: " | ")
+  646|      0|            print(row)
+  647|      0|        }
+  648|      0|        if shape.rows > maxRows {
+  649|      0|            print("... (\(shape.rows - maxRows) more rows)")
+  650|      0|        }
+  651|      0|        print("\n[\(shape.rows) rows × \(shape.columns) columns]")
+  652|      0|    }
+  653|       |
+  654|       |    // MARK: – Private helpers
+  655|       |
+  656|      9|    private func slice(from start: Int, count n: Int) -> DataFrame {
+  657|      9|        let total  = shape.rows
+  658|      9|        guard total > 0, n > 0 else { return gathered(at: []) }
+  659|      2|        let upper  = Swift.min(start + n, total)
+  660|      2|        let indices = Array(start..<upper)
+  661|      2|        return gathered(at: indices)
+  662|      9|    }
+  663|       |
+  664|       |    /// Gathers rows at specified row indices (supports concurrent parallel gather for large datasets).
+  665|       |    /// Preserves column names, order, and types, including when the selection is empty.
+  666|       |    /// - Parameter indices: Array of row indices to include in the resulting DataFrame.
+  667|       |    /// - Returns: A new `DataFrame` containing the gathered rows in the given index order.
+  668|  1.10k|    public func gathered(at indices: [Int]) -> DataFrame {
+  669|  1.10k|        let sourceColumns = columns
+  670|  1.10k|        guard !sourceColumns.isEmpty else { return self }
+  671|  1.09k|        let numCols = sourceColumns.count
+  672|  2.37k|        let rowBytes = sourceColumns.reduce(0) { bytes, column in
+  673|  2.37k|            switch column.dtype {
+  674|  2.37k|            case .int32: return bytes + MemoryLayout<Int32?>.stride
+  675|  2.37k|            case .int64: return bytes + MemoryLayout<Int64?>.stride
+  676|  2.37k|            case .float32: return bytes + MemoryLayout<Float?>.stride
+  677|  2.37k|            case .float64: return bytes + MemoryLayout<Double?>.stride
+  678|  2.37k|            case .boolean: return bytes + MemoryLayout<Bool?>.stride
+  679|  2.37k|            case .utf8: return bytes + MemoryLayout<String?>.stride
+  680|  2.37k|            case .date32: return bytes + MemoryLayout<Date?>.stride
+  681|  2.37k|            }
+  682|  2.37k|        }
+  683|  1.09k|        // Estimate output work without multiplying potentially large dimensions.
+  684|  1.09k|        let parallelRows = (512 * 1024) / max(rowBytes, 1)
+  685|  1.09k|        if numCols >= 2 && indices.count >= max(parallelRows, 1) {
+  686|     11|            // Each iteration writes to a unique index — no data race.
+  687|     11|            var newCols: [(any AnyColumn)?] = Array(repeating: nil, count: numCols)
+  688|     11|            newCols.withUnsafeMutableBufferPointer { buf in
+  689|     11|                guard let base = buf.baseAddress else { return }
+  690|     11|                let address = Int(bitPattern: base)
+  691|     31|                DispatchQueue.concurrentPerform(iterations: numCols) { colIdx in
+  692|     31|                    let ptr = UnsafeMutablePointer<(any AnyColumn)?>(bitPattern: address)!
+  693|     31|                    ptr[colIdx] = sourceColumns[colIdx].gathered(at: indices)
+  694|     31|                }
+  695|     11|            }
+  696|     11|            do {
+  697|     31|                return try DataFrame(columns: newCols.compactMap { $0 })
+  698|     11|            } catch {
+  699|      0|                preconditionFailure("Failed to gather rows concurrently: \(error)")
+  700|      0|            }
+  701|  1.08k|        } else {
+  702|  2.33k|            let newCols: [any AnyColumn] = sourceColumns.map { $0.gathered(at: indices) }
+  703|  1.08k|            do {
+  704|  1.08k|                return try DataFrame(columns: newCols)
+  705|  1.08k|            } catch {
+  706|      0|                preconditionFailure("Failed to gather rows for indices: \(error)")
+  707|      0|            }
+  708|      0|        }
+  709|      0|    }
+  710|       |
+  711|     27|    private func applyMask(_ mask: [Bool]) -> DataFrame {
+  712|     27|        var indices: [Int] = []
+  713|     27|        indices.reserveCapacity(mask.count / 2)
+  714|  50.0k|        for (i, keep) in mask.enumerated() where keep {
+  715|  50.0k|            indices.append(i)
+  716|  50.0k|        }
+  717|     27|        return gathered(at: indices)
+  718|     27|    }
+  719|       |
+  720|       |    /// Transforms values of a typed column functional-style, returning a new DataFrame.
+  721|       |    /// - Parameters:
+  722|       |    ///   - name: Name or identifier string.
+  723|       |    ///   - type: Data type or category specification.
+  724|       |    ///   - transform: Transformation closure or mapping function.
+  725|       |    /// - Throws: `SwiftMLError` or `DataFrameError` if column lengths mismatch, names collide, or I/O fails.
+  726|       |    /// - Returns: A new `DataFrame` containing the transformed columns and computed results.
+  727|       |    public func mapColumn<T: SupportedType>(
+  728|       |        _ name: String,
+  729|       |        as type: T.Type = T.self,
+  730|       |        transform: (T?) -> T?
+  731|      1|    ) throws -> DataFrame {
+  732|      1|        guard let col = _columns[name] as? TypedColumn<T> else {
+  733|      0|            throw SwiftMLError.columnNotFound(name)
+  734|      1|        }
+  735|      3|        let newValues = col.values.map { transform($0) }
+  736|      1|        return try withColumn(name, column: TypedColumn<T>(name: name, values: newValues))
+  737|      1|    }
+  738|       |}
+  739|       |
+  740|       |// MARK: – Factory helper
+  741|       |
+  742|       |/// Reconstruct a typed AnyColumn from raw Any? values.
+  743|     46|internal func makeColumn(name: String, dtype: ColumnDType, rawValues: [Any?]) -> any AnyColumn {
+  744|     46|    switch dtype {
+  745|     46|    case .int64:
+  746|    558|        return TypedColumn<Int64>(name: name, values: rawValues.map { $0 as? Int64 })
+  747|     46|    case .int32:
+  748|      5|        return TypedColumn<Int32>(name: name, values: rawValues.map { $0 as? Int32 })
+  749|     46|    case .float64:
+  750|    290|        return TypedColumn<Double>(name: name, values: rawValues.map { $0 as? Double })
+  751|     46|    case .float32:
+  752|      0|        return TypedColumn<Float>(name: name, values: rawValues.map { $0 as? Float })
+  753|     46|    case .boolean:
+  754|    521|        return TypedColumn<Bool>(name: name, values: rawValues.map { $0 as? Bool })
+  755|     46|    case .date32:
+  756|      0|        return TypedColumn<Date>(name: name, values: rawValues.map { $0 as? Date })
+  757|     46|    case .utf8:
+  758|     15|        return TypedColumn<String>(name: name,
+  759|    554|            values: rawValues.map { v in v.map { "\($0)" } })
+  760|     46|    }
+  761|     46|}
+  762|       |
+  763|       |// MARK: – Seeded RNG (for reproducible sample)
+  764|       |
+  765|       |private struct SeededRNG {
+  766|       |    private var state: UInt64
+  767|       |
+  768|      3|    init(seed: UInt64) { self.state = seed == 0 ? 1 : seed }
+  769|       |
+  770|      7|    mutating func next() -> UInt64 {
+  771|      7|        // xorshift64
+  772|      7|        state ^= state << 13
+  773|      7|        state ^= state >> 7
+  774|      7|        state ^= state << 17
+  775|      7|        return state
+  776|      7|    }
+  777|       |}
+

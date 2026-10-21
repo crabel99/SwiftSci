@@ -1,0 +1,312 @@
+[
+  {
+    "case": "bike-hour",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 7616000.0,
+        "min": 7143000,
+        "max": 7972000
+      },
+      "total_ns": {
+        "median": 1450854.0,
+        "min": 1390917,
+        "max": 1572292
+      },
+      "peak_after_bytes": {
+        "median": 17375232.0,
+        "min": 16809984,
+        "max": 18448384
+      },
+      "rss_growth_bytes": {
+        "median": 9396224.0,
+        "min": 8830976,
+        "max": 10469376
+      },
+      "heap_after_bytes": {
+        "median": 124976.0,
+        "min": 124912,
+        "max": 124976
+      }
+    }
+  },
+  {
+    "case": "bike-hour",
+    "engine": "scoped",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 6152500.0,
+        "min": 5833000,
+        "max": 6396000
+      },
+      "total_ns": {
+        "median": 3130229.0,
+        "min": 3058583,
+        "max": 3211750
+      },
+      "peak_after_bytes": {
+        "median": 13606912.0,
+        "min": 13500416,
+        "max": 14073856
+      },
+      "rss_growth_bytes": {
+        "median": 5603328.0,
+        "min": 5505024,
+        "max": 6045696
+      },
+      "heap_after_bytes": {
+        "median": 112496.0,
+        "min": 112496,
+        "max": 112624
+      }
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 7460500.0,
+        "min": 7216000,
+        "max": 7569000
+      },
+      "total_ns": {
+        "median": 4636438.0,
+        "min": 4514417,
+        "max": 4666542
+      },
+      "peak_after_bytes": {
+        "median": 14139392.0,
+        "min": 14123008,
+        "max": 14270464
+      },
+      "rss_growth_bytes": {
+        "median": 5570560.0,
+        "min": 5554176,
+        "max": 5701632
+      },
+      "heap_after_bytes": {
+        "median": 121888.0,
+        "min": 119424,
+        "max": 123584
+      }
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "scoped",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 7752500.0,
+        "min": 7433000,
+        "max": 8011000
+      },
+      "total_ns": {
+        "median": 7041250.0,
+        "min": 6756250,
+        "max": 8259875
+      },
+      "peak_after_bytes": {
+        "median": 9953280.0,
+        "min": 9879552,
+        "max": 10518528
+      },
+      "rss_growth_bytes": {
+        "median": 1351680.0,
+        "min": 1277952,
+        "max": 1900544
+      },
+      "heap_after_bytes": {
+        "median": 109472.0,
+        "min": 109408,
+        "max": 109536
+      }
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 13883500.0,
+        "min": 12806000,
+        "max": 15004000
+      },
+      "total_ns": {
+        "median": 6168000.5,
+        "min": 5668208,
+        "max": 6485625
+      },
+      "peak_after_bytes": {
+        "median": 21569536.0,
+        "min": 20824064,
+        "max": 22446080
+      },
+      "rss_growth_bytes": {
+        "median": 11902976.0,
+        "min": 11157504,
+        "max": 12779520
+      },
+      "heap_after_bytes": {
+        "median": 128848.0,
+        "min": 128784,
+        "max": 132880
+      }
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "scoped",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 14723500.0,
+        "min": 14221000,
+        "max": 15023000
+      },
+      "total_ns": {
+        "median": 6881854.0,
+        "min": 6739125,
+        "max": 7009625
+      },
+      "peak_after_bytes": {
+        "median": 16793600.0,
+        "min": 15581184,
+        "max": 17219584
+      },
+      "rss_growth_bytes": {
+        "median": 7102464.0,
+        "min": 5898240,
+        "max": 7536640
+      },
+      "heap_after_bytes": {
+        "median": 112240.0,
+        "min": 112208,
+        "max": 112272
+      }
+    }
+  },
+  {
+    "case": "energy",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 437938000.0,
+        "min": 435423000,
+        "max": 442205000
+      },
+      "total_ns": {
+        "median": 90839500.0,
+        "min": 90316666,
+        "max": 92038209
+      },
+      "peak_after_bytes": {
+        "median": 460759040.0,
+        "min": 460570624,
+        "max": 461160448
+      },
+      "rss_growth_bytes": {
+        "median": 445669376.0,
+        "min": 420200448,
+        "max": 454344704
+      },
+      "heap_after_bytes": {
+        "median": 149760.0,
+        "min": 149696,
+        "max": 149760
+      }
+    }
+  },
+  {
+    "case": "energy",
+    "engine": "scoped",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 484541000.0,
+        "min": 477805000,
+        "max": 493170000
+      },
+      "total_ns": {
+        "median": 298703146.0,
+        "min": 295219833,
+        "max": 301752375
+      },
+      "peak_after_bytes": {
+        "median": 146153472.0,
+        "min": 145850368,
+        "max": 146472960
+      },
+      "rss_growth_bytes": {
+        "median": 6316032.0,
+        "min": 6029312,
+        "max": 6651904
+      },
+      "heap_after_bytes": {
+        "median": 110944.0,
+        "min": 110944,
+        "max": 111008
+      }
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 454260000.0,
+        "min": 445408000,
+        "max": 468242000
+      },
+      "total_ns": {
+        "median": 91185000.0,
+        "min": 88925292,
+        "max": 98292625
+      },
+      "peak_after_bytes": {
+        "median": 460996608.0,
+        "min": 460423168,
+        "max": 461668352
+      },
+      "rss_growth_bytes": {
+        "median": 445972480.0,
+        "min": 445235200,
+        "max": 454836224
+      },
+      "heap_after_bytes": {
+        "median": 150192.0,
+        "min": 150032,
+        "max": 154320
+      }
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "scoped",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 499818500.0,
+        "min": 491866000,
+        "max": 517242000
+      },
+      "total_ns": {
+        "median": 298595208.5,
+        "min": 290437334,
+        "max": 304522000
+      },
+      "peak_after_bytes": {
+        "median": 146096128.0,
+        "min": 145113088,
+        "max": 146833408
+      },
+      "rss_growth_bytes": {
+        "median": 6291456.0,
+        "min": 5308416,
+        "max": 7028736
+      },
+      "heap_after_bytes": {
+        "median": 111536.0,
+        "min": 111472,
+        "max": 111600
+      }
+    }
+  }
+]

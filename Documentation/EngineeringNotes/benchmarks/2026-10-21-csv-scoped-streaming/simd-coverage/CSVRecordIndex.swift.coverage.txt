@@ -1,0 +1,213 @@
+    1|       |import Foundation
+    2|       |
+    3|       |internal struct CSVRecordBatch: Sendable {
+    4|       |    let records: CSVRecordIndex
+    5|       |    let nextOffset: Int
+    6|       |}
+    7|       |
+    8|       |internal struct PackedCSVField: CSVIndexField {
+    9|   147k|    static var maximumEndOffset: Int { Int.max }
+   10|       |    let startOffset: Int
+   11|       |    private let encodedLength: Int
+   12|       |
+   13|  1.92M|    init(startOffset: Int, length: Int, escapedQuotesPresent: Bool) {
+   14|  1.92M|        self.startOffset = startOffset
+   15|  1.92M|        self.encodedLength = escapedQuotesPresent ? ~length : length
+   16|  1.92M|    }
+   17|       |
+   18|  15.4M|    init(startOffset: Int, encodedLength: Int) {
+   19|  15.4M|        self.startOffset = startOffset
+   20|  15.4M|        self.encodedLength = encodedLength
+   21|  15.4M|    }
+   22|       |
+   23|     15|    static func recordIndex(blocks: CSVFieldBlocks<Self>, rowStarts: [Int]) -> CSVRecordIndex {
+   24|     15|        CSVRecordIndex(blocks: blocks, rowStarts: rowStarts)
+   25|     15|    }
+   26|       |
+   27|  19.6M|    var length: Int { encodedLength >= 0 ? encodedLength : ~encodedLength }
+   28|  19.6M|    var escapedQuotesPresent: Bool { encodedLength < 0 }
+   29|       |
+   30|  19.6M|    var offset: CSVFieldOffset {
+   31|  19.6M|        CSVFieldOffset(
+   32|  19.6M|            startOffset: startOffset,
+   33|  19.6M|            length: length,
+   34|  19.6M|            escapedQuotesPresent: escapedQuotesPresent
+   35|  19.6M|        )
+   36|  19.6M|    }
+   37|       |}
+   38|       |
+   39|       |internal struct CSVRecordIndex: Sendable, CSVRecordAccess {
+   40|       |    private let fields: CSVFieldStorage
+   41|       |
+   42|  5.43k|    init(fields: [PackedCSVField], rowStarts: [Int]) {
+   43|  5.43k|        self.fields = .flat(fields)
+   44|  5.43k|        self.rowStarts = rowStarts
+   45|  5.43k|    }
+   46|       |
+   47|     15|    init(blocks: CSVFieldBlocks<PackedCSVField>, rowStarts: [Int]) {
+   48|     15|        self.fields = .blocked(blocks.finished())
+   49|     15|        self.rowStarts = rowStarts
+   50|     15|    }
+   51|       |
+   52|  6.20k|    init(blocks: CSVFieldBlocks<CompactCSVField>, rowStarts: [Int]) {
+   53|  6.20k|        self.fields = .compact(blocks.finished())
+   54|  6.20k|        self.rowStarts = rowStarts
+   55|  6.20k|    }
+   56|       |
+   57|       |    let rowStarts: [Int]
+   58|       |
+   59|   220k|    var count: Int { rowStarts.count - 1 }
+   60|    156|    var isEmpty: Bool { count == 0 }
+   61|       |
+   62|       |    // The borrowed view is valid only during this synchronous closure.
+   63|       |    // It must not be returned, retained, or passed to asynchronous work.
+   64|    243|    func withFlatFields<Result>(_ body: (CSVFlatRecordView) -> Result) -> Result? {
+   65|    243|        guard case .flat(let values) = fields else { return nil }
+   66|      5|        return values.withUnsafeBufferPointer { fields in
+   67|      5|            rowStarts.withUnsafeBufferPointer { starts in
+   68|      5|                body(CSVFlatRecordView(fields: fields, rowStarts: starts))
+   69|      5|            }
+   70|      5|        }
+   71|    243|    }
+   72|       |
+   73|       |    // The borrowed block view has the same synchronous lifetime as withFlatFields.
+   74|    246|    func withCompactFields<Result>(_ body: (CSVCompactRecordView) -> Result) -> Result? {
+   75|    246|        guard case .compact(let values) = fields else { return nil }
+   76|    233|        return values.withUnsafeBufferPointer { blocks in
+   77|    234|            rowStarts.withUnsafeBufferPointer { starts in
+   78|    234|                body(CSVCompactRecordView(blocks: blocks, rowStarts: starts))
+   79|    234|            }
+   80|    232|        }
+   81|    246|    }
+   82|       |
+   83|  6.46M|    func row(at index: Int) -> [CSVFieldOffset] {
+   84|  19.0M|        (rowStarts[index]..<rowStarts[index + 1]).map { fields[$0].offset }
+   85|  6.46M|    }
+   86|       |
+   87|       |    @inline(__always)
+   88|   196k|    func field(row: Int, column: Int) -> CSVFieldOffset? {
+   89|   196k|        guard row < count else { return nil }
+   90|   196k|        let start = rowStarts[row]
+   91|   196k|        guard column < rowStarts[row + 1] - start else { return nil }
+   92|   196k|        return fields[start + column].offset
+   93|   196k|    }
+   94|       |}
+   95|       |
+   96|       |private enum CSVFieldBlockLayout {
+   97|  37.5M|    static var shift: Int { 14 }
+   98|  21.8M|    static var capacity: Int { 1 << shift }
+   99|  15.6M|    static var mask: Int { capacity - 1 }
+  100|       |}
+  101|       |
+  102|       |private enum CSVFieldStorage: Sendable {
+  103|       |    case flat([PackedCSVField])
+  104|       |    case blocked([[PackedCSVField]])
+  105|       |    case compact([[CompactCSVField]])
+  106|       |
+  107|  19.2M|    subscript(index: Int) -> PackedCSVField {
+  108|  19.2M|        switch self {
+  109|  19.2M|        case .flat(let values): return values[index]
+  110|  19.2M|        case .blocked(let blocks): return blocks[index >> CSVFieldBlockLayout.shift][index & CSVFieldBlockLayout.mask]
+  111|  19.2M|        case .compact(let blocks): return blocks[index >> CSVFieldBlockLayout.shift][index & CSVFieldBlockLayout.mask].expanded
+  112|  19.2M|        }
+  113|  19.2M|    }
+  114|       |}
+  115|       |
+  116|       |internal struct CSVFieldBlocks<Field: CSVIndexField> {
+  117|  6.21k|    private var completed = [[Field]]()
+  118|  6.21k|    private var current = [Field]()
+  119|  6.21k|    private(set) var count = 0
+  120|       |
+  121|  6.21k|    init(byteCount: Int) {
+  122|  6.21k|        current.reserveCapacity(min(byteCount / 8, CSVFieldBlockLayout.capacity))
+  123|  6.21k|    }
+  124|       |
+  125|  6.18M|    mutating func append(_ field: Field) {
+  126|  6.18M|        if current.count == CSVFieldBlockLayout.capacity {
+  127|    322|            completed.append(current)
+  128|    322|            current = []
+  129|    322|            current.reserveCapacity(CSVFieldBlockLayout.capacity)
+  130|    322|        }
+  131|  6.18M|        current.append(field)
+  132|  6.18M|        count += 1
+  133|  6.18M|    }
+  134|       |
+  135|  5.55k|    mutating func truncate(to newCount: Int) {
+  136|  5.65k|        while count > newCount {
+  137|     99|            if current.isEmpty { current = completed.removeLast() }
+  138|     99|            let removed = min(count - newCount, current.count)
+  139|     99|            current.removeLast(removed)
+  140|     99|            count -= removed
+  141|  5.55k|        }
+  142|  5.55k|    }
+  143|       |
+  144|  6.21k|    func finished() -> [[Field]] {
+  145|  6.21k|        var result = completed
+  146|  6.21k|        if !current.isEmpty { result.append(current) }
+  147|  6.21k|        return result
+  148|  6.21k|    }
+  149|       |}
+  150|       |
+  151|       |internal protocol CSVIndexField: Sendable {
+  152|       |    static var maximumEndOffset: Int { get }
+  153|       |    init(startOffset: Int, length: Int, escapedQuotesPresent: Bool)
+  154|       |    static func recordIndex(blocks: CSVFieldBlocks<Self>, rowStarts: [Int]) -> CSVRecordIndex
+  155|       |}
+  156|       |
+  157|       |internal struct CompactCSVField: CSVIndexField {
+  158|  5.57M|    static var maximumEndOffset: Int { Int(Int32.max) }
+  159|       |    private let startOffset: UInt32
+  160|       |    private let encodedLength: Int32
+  161|       |
+  162|  6.03k|    static func canRepresent(endOffset: Int) -> Bool {
+  163|  6.03k|        endOffset >= 0 && endOffset <= Int(Int32.max)
+  164|  6.03k|    }
+  165|       |
+  166|  5.80M|    init(startOffset: Int, length: Int, escapedQuotesPresent: Bool) {
+  167|  5.80M|        self.startOffset = UInt32(startOffset)
+  168|  5.80M|        let length = Int32(length)
+  169|  5.80M|        self.encodedLength = escapedQuotesPresent ? ~length : length
+  170|  5.80M|    }
+  171|       |
+  172|  15.4M|    var expanded: PackedCSVField {
+  173|  15.4M|        PackedCSVField(startOffset: Int(startOffset), encodedLength: Int(encodedLength))
+  174|  15.4M|    }
+  175|       |
+  176|   268k|    var offset: CSVFieldOffset { expanded.offset }
+  177|       |
+  178|  6.20k|    static func recordIndex(blocks: CSVFieldBlocks<Self>, rowStarts: [Int]) -> CSVRecordIndex {
+  179|  6.20k|        CSVRecordIndex(blocks: blocks, rowStarts: rowStarts)
+  180|  6.20k|    }
+  181|       |}
+  182|       |
+  183|       |internal protocol CSVRecordAccess {
+  184|       |    func field(row: Int, column: Int) -> CSVFieldOffset?
+  185|       |}
+  186|       |
+  187|       |internal struct CSVFlatRecordView: CSVRecordAccess {
+  188|       |    let fields: UnsafeBufferPointer<PackedCSVField>
+  189|       |    let rowStarts: UnsafeBufferPointer<Int>
+  190|       |
+  191|       |    @inline(__always)
+  192|   110k|    func field(row: Int, column: Int) -> CSVFieldOffset? {
+  193|   110k|        guard row < rowStarts.count - 1 else { return nil }
+  194|   110k|        let start = rowStarts[row]
+  195|   110k|        guard column < rowStarts[row + 1] - start else { return nil }
+  196|   110k|        return fields[start + column].offset
+  197|   110k|    }
+  198|       |}
+  199|       |
+  200|       |internal struct CSVCompactRecordView: CSVRecordAccess {
+  201|       |    let blocks: UnsafeBufferPointer<[CompactCSVField]>
+  202|       |    let rowStarts: UnsafeBufferPointer<Int>
+  203|       |
+  204|       |    @inline(__always)
+  205|   266k|    func field(row: Int, column: Int) -> CSVFieldOffset? {
+  206|   266k|        guard row < rowStarts.count - 1 else { return nil }
+  207|   266k|        let start = rowStarts[row]
+  208|   266k|        guard column < rowStarts[row + 1] - start else { return nil }
+  209|   266k|        let index = start + column
+  210|   266k|        return blocks[index >> CSVFieldBlockLayout.shift][index & CSVFieldBlockLayout.mask].offset
+  211|   266k|    }
+  212|       |}
+

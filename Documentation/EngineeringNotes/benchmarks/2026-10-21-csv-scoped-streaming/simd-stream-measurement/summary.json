@@ -1,0 +1,467 @@
+[
+  {
+    "case": "bike-hour",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 7343500.0,
+        "min": 6535000,
+        "max": 7775000
+      },
+      "total_ns": {
+        "median": 1517208.0,
+        "min": 1440209,
+        "max": 1693833
+      },
+      "peak_after_bytes": {
+        "median": 18661376.0,
+        "min": 16908288,
+        "max": 18874368
+      },
+      "rss_growth_bytes": {
+        "median": 10682368.0,
+        "min": 8929280,
+        "max": 10895360
+      },
+      "heap_after_bytes": {
+        "median": 124912.0,
+        "min": 120880,
+        "max": 124976
+      }
+    }
+  },
+  {
+    "case": "bike-hour",
+    "engine": "scoped",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 5938000.0,
+        "min": 5390000,
+        "max": 6531000
+      },
+      "total_ns": {
+        "median": 2972583.5,
+        "min": 2963334,
+        "max": 3057416
+      },
+      "peak_after_bytes": {
+        "median": 13500416.0,
+        "min": 13484032,
+        "max": 13533184
+      },
+      "rss_growth_bytes": {
+        "median": 5505024.0,
+        "min": 5488640,
+        "max": 5537792
+      },
+      "heap_after_bytes": {
+        "median": 112496.0,
+        "min": 112496,
+        "max": 112624
+      }
+    }
+  },
+  {
+    "case": "bike-hour",
+    "engine": "simd",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 4962500.0,
+        "min": 4638000,
+        "max": 5232000
+      },
+      "total_ns": {
+        "median": 2066167.0,
+        "min": 1950417,
+        "max": 2220375
+      },
+      "peak_after_bytes": {
+        "median": 13434880.0,
+        "min": 13385728,
+        "max": 13500416
+      },
+      "rss_growth_bytes": {
+        "median": 5455872.0,
+        "min": 5406720,
+        "max": 5521408
+      },
+      "heap_after_bytes": {
+        "median": 112496.0,
+        "min": 112496,
+        "max": 112624
+      }
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 7149000.0,
+        "min": 6963000,
+        "max": 7517000
+      },
+      "total_ns": {
+        "median": 4599791.5,
+        "min": 4473750,
+        "max": 4885500
+      },
+      "peak_after_bytes": {
+        "median": 14082048.0,
+        "min": 14008320,
+        "max": 14188544
+      },
+      "rss_growth_bytes": {
+        "median": 5513216.0,
+        "min": 5439488,
+        "max": 5619712
+      },
+      "heap_after_bytes": {
+        "median": 121856.0,
+        "min": 117728,
+        "max": 123584
+      }
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "scoped",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 7521500.0,
+        "min": 7403000,
+        "max": 7580000
+      },
+      "total_ns": {
+        "median": 6896500.0,
+        "min": 6763334,
+        "max": 7099666
+      },
+      "peak_after_bytes": {
+        "median": 9895936.0,
+        "min": 9879552,
+        "max": 9945088
+      },
+      "rss_growth_bytes": {
+        "median": 1294336.0,
+        "min": 1277952,
+        "max": 1343488
+      },
+      "heap_after_bytes": {
+        "median": 109472.0,
+        "min": 109408,
+        "max": 109536
+      }
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "simd",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 5552500.0,
+        "min": 5513000,
+        "max": 5599000
+      },
+      "total_ns": {
+        "median": 4898937.0,
+        "min": 4870250,
+        "max": 4945708
+      },
+      "peak_after_bytes": {
+        "median": 9830400.0,
+        "min": 9797632,
+        "max": 9846784
+      },
+      "rss_growth_bytes": {
+        "median": 1245184.0,
+        "min": 1212416,
+        "max": 1277952
+      },
+      "heap_after_bytes": {
+        "median": 109472.0,
+        "min": 109408,
+        "max": 109536
+      }
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 12883000.0,
+        "min": 12371000,
+        "max": 13965000
+      },
+      "total_ns": {
+        "median": 6210604.0,
+        "min": 5839208,
+        "max": 6383750
+      },
+      "peak_after_bytes": {
+        "median": 21331968.0,
+        "min": 21004288,
+        "max": 21643264
+      },
+      "rss_growth_bytes": {
+        "median": 11665408.0,
+        "min": 11337728,
+        "max": 11976704
+      },
+      "heap_after_bytes": {
+        "median": 128816.0,
+        "min": 124688,
+        "max": 132944
+      }
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "scoped",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 14025500.0,
+        "min": 13404000,
+        "max": 14682000
+      },
+      "total_ns": {
+        "median": 6832979.0,
+        "min": 6756500,
+        "max": 6918833
+      },
+      "peak_after_bytes": {
+        "median": 16662528.0,
+        "min": 15695872,
+        "max": 18284544
+      },
+      "rss_growth_bytes": {
+        "median": 6979584.0,
+        "min": 6012928,
+        "max": 8601600
+      },
+      "heap_after_bytes": {
+        "median": 112272.0,
+        "min": 112272,
+        "max": 112272
+      }
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "simd",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 11089000.0,
+        "min": 10499000,
+        "max": 11910000
+      },
+      "total_ns": {
+        "median": 4652563.0,
+        "min": 4559250,
+        "max": 5060125
+      },
+      "peak_after_bytes": {
+        "median": 16482304.0,
+        "min": 16334848,
+        "max": 16908288
+      },
+      "rss_growth_bytes": {
+        "median": 6815744.0,
+        "min": 6668288,
+        "max": 7241728
+      },
+      "heap_after_bytes": {
+        "median": 112272.0,
+        "min": 112208,
+        "max": 112272
+      }
+    }
+  },
+  {
+    "case": "energy",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 466141500.0,
+        "min": 432343000,
+        "max": 547380000
+      },
+      "total_ns": {
+        "median": 91084896.0,
+        "min": 87389167,
+        "max": 174757125
+      },
+      "peak_after_bytes": {
+        "median": 460750848.0,
+        "min": 460259328,
+        "max": 461520896
+      },
+      "rss_growth_bytes": {
+        "median": 416309248.0,
+        "min": 412205056,
+        "max": 420167680
+      },
+      "heap_after_bytes": {
+        "median": 149760.0,
+        "min": 149696,
+        "max": 153792
+      }
+    }
+  },
+  {
+    "case": "energy",
+    "engine": "scoped",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 487913000.0,
+        "min": 471909000,
+        "max": 491923000
+      },
+      "total_ns": {
+        "median": 303094208.5,
+        "min": 290005375,
+        "max": 309429625
+      },
+      "peak_after_bytes": {
+        "median": 145276928.0,
+        "min": 144556032,
+        "max": 146767872
+      },
+      "rss_growth_bytes": {
+        "median": 5447680.0,
+        "min": 4734976,
+        "max": 6946816
+      },
+      "heap_after_bytes": {
+        "median": 110976.0,
+        "min": 110944,
+        "max": 111008
+      }
+    }
+  },
+  {
+    "case": "energy",
+    "engine": "simd",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 323598500.0,
+        "min": 320245000,
+        "max": 335109000
+      },
+      "total_ns": {
+        "median": 151299375.0,
+        "min": 149597375,
+        "max": 157035458
+      },
+      "peak_after_bytes": {
+        "median": 145735680.0,
+        "min": 144539648,
+        "max": 145932288
+      },
+      "rss_growth_bytes": {
+        "median": 5931008.0,
+        "min": 4751360,
+        "max": 6144000
+      },
+      "heap_after_bytes": {
+        "median": 110976.0,
+        "min": 110944,
+        "max": 111008
+      }
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "candidate",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 462703500.0,
+        "min": 455964000,
+        "max": 489383000
+      },
+      "total_ns": {
+        "median": 93613458.0,
+        "min": 90602042,
+        "max": 94691542
+      },
+      "peak_after_bytes": {
+        "median": 460816384.0,
+        "min": 460406784,
+        "max": 461111296
+      },
+      "rss_growth_bytes": {
+        "median": 445276160.0,
+        "min": 420593664,
+        "max": 445710336
+      },
+      "heap_after_bytes": {
+        "median": 150224.0,
+        "min": 150160,
+        "max": 154320
+      }
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "scoped",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 516236000.0,
+        "min": 507429000,
+        "max": 523280000
+      },
+      "total_ns": {
+        "median": 302132750.0,
+        "min": 300690500,
+        "max": 304825625
+      },
+      "peak_after_bytes": {
+        "median": 146251776.0,
+        "min": 145342464,
+        "max": 146817024
+      },
+      "rss_growth_bytes": {
+        "median": 6447104.0,
+        "min": 5537792,
+        "max": 7012352
+      },
+      "heap_after_bytes": {
+        "median": 111600.0,
+        "min": 111472,
+        "max": 111600
+      }
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "simd",
+    "metrics": {
+      "total_cpu_ns": {
+        "median": 345934000.0,
+        "min": 342425000,
+        "max": 349677000
+      },
+      "total_ns": {
+        "median": 149568271.0,
+        "min": 143787333,
+        "max": 152004083
+      },
+      "peak_after_bytes": {
+        "median": 145350656.0,
+        "min": 144752640,
+        "max": 146292736
+      },
+      "rss_growth_bytes": {
+        "median": 5562368.0,
+        "min": 4964352,
+        "max": 6504448
+      },
+      "heap_after_bytes": {
+        "median": 111472.0,
+        "min": 111472,
+        "max": 111472
+      }
+    }
+  }
+]
