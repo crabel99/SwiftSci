@@ -58,3 +58,7 @@ The standard smoke suite checks existing tabular workflows and does not independ
 The archive contains the production patch, test and compiler receipts, coverage text, independent oracle, original-data audit outputs, standard benchmark requests and responses, and certificate. It excludes source datasets, executables, module caches, and Xcode result bundles. Every archive member is hash-verified.
 
 Scripts preserve the local cache paths used for this experiment. Replay requires the recorded parent and feature commits, resolved dependencies, existing benchmark Python environment, and original UCI file. Adjust the scratch paths, then run `verify.py` for Debug with coverage and Release, `coverage.py`, `reference/date-oracle.py`, `reference/build.py explicit`, and `reference/audit.py`. Build the standard worker, prepare and certify `tabular-smoke` for SwiftSci and pandas, audit its certificate, and run `verify-evidence.py`. Use a fresh evidence directory; the runners reject existing result bundles. This is recorded local validation, not a new portable benchmark command.
+
+## Matched reference comparison
+
+The subsequent [CSV resource comparison](../2026-10-21-csv-matched-reference/README.md) measures this exact head against pandas, Polars, and DuckDB with matching source schemas. All outputs pass. Date conversion remains expensive, and the report identifies bounded reuse as the next experiment. The correctness results above remain unchanged.
