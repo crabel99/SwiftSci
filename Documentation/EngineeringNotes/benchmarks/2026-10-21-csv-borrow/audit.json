@@ -1,0 +1,53 @@
+{
+  "base_sha": "546510bb7df19fc87a664bded5947c738011ee1d",
+  "sets": {
+    "borrowed-primary": {
+      "workers": 80,
+      "records_sha256": "bf3e0fa94577960af690d7c7fa81868dc40d3457faade3d977226c8e71c0bf0c",
+      "plan_sha256": "9d838d056f581eccccfe0febd3c473f6b402228c72ea562388e9e1eddf1f0803"
+    },
+    "inlined-primary": {
+      "workers": 80,
+      "records_sha256": "5d8d7034c9da6d6d2f1b1e90db97e50060f4fd8d54c61b0f6d64867d808629e4",
+      "plan_sha256": "a063826ecda033dffb8763e45435f5335695131233881ed7e91767f068674a0a"
+    },
+    "scoped-primary": {
+      "workers": 80,
+      "records_sha256": "9c9a440f00e46d9a0de625345d8fe7eaa402b83e0b39c33a01a6fe27e9b712be",
+      "plan_sha256": "943e787b0a2eb1bd3b2b7f4821efbba128bf39e99c5e7c9313b750a4badb50e2"
+    },
+    "scoped-flat": {
+      "workers": 80,
+      "records_sha256": "f0ab84ddc959d72974d7a40ffdced40001e9512752fb1c1c4942dae8e3c6bb49",
+      "plan_sha256": "d46e4ee67f08d97d6e5b8579da923643505f0dc8a1e121e85e2a534406627bb4"
+    },
+    "array-control": {
+      "workers": 80,
+      "records_sha256": "c56b2208e91a95714f76759bd7a6a6abdd85b3c7acccb599d9d562ca82b17618",
+      "plan_sha256": "d00eac5350dd90cf5aa7d7d256633296363a69479ee9ff6db3f9eba87193c32f"
+    },
+    "scoped-diverse": {
+      "workers": 128,
+      "records_sha256": "494e29faa83eebe7002c4ebbaf6b1d3bfd8a566d7cfd2755d36bee2b8ccc4d48",
+      "plan_sha256": "ddce2ab579bdfb6b3bcc4e28177146a724d865b58bf38a6af787ad50db53b126"
+    },
+    "packed-to-scoped": {
+      "workers": 80,
+      "records_sha256": "5b83b52ec4664ce1f49b20b7bef9691de76353c6572e8834c6043ee860539f31",
+      "plan_sha256": "07c9dcc60b1e3a745ea87d542b92778e2dc08cba3df6ab6cf6573e5f75ae1a10"
+    },
+    "scoped-heldout": {
+      "workers": 80,
+      "records_sha256": "bc5770ab7138d1d1e84457bd7ca034323282f2b802e5e56ddd183d600259237c",
+      "plan_sha256": "137129265ef50987a2878b3c530fbaea1c1599c132265ef1cb550f542d953298"
+    }
+  },
+  "workers": 688,
+  "timing_samples": 2150,
+  "memory_samples": 258,
+  "smoke_workers": 48,
+  "streaming_fields_per_variant": 4176384,
+  "asan_public_workloads": 9,
+  "flat_bounds_checks": 349650,
+  "production_files_changed": 0
+}

@@ -1,0 +1,145 @@
+{
+  "rows": [
+    {
+      "case": [
+        "csv-quoted",
+        100000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 2836834,
+          "total_cpu_ns": 5065000,
+          "held_heap_delta_bytes": 6440160,
+          "process_peak_held_bytes": 27426816
+        },
+        "borrowed": {
+          "total_ns": 2895417,
+          "total_cpu_ns": 5278000,
+          "held_heap_delta_bytes": 6440336,
+          "process_peak_held_bytes": 21397504
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.0420533070088844,
+        "range": [
+          0.997173011684885,
+          1.0518503859093609
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        250000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 7039042,
+          "total_cpu_ns": 12450000,
+          "held_heap_delta_bytes": 18482464,
+          "process_peak_held_bytes": 68304896
+        },
+        "borrowed": {
+          "total_ns": 7177001,
+          "total_cpu_ns": 13050000,
+          "held_heap_delta_bytes": 16074064,
+          "process_peak_held_bytes": 42663936
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.061493411420205,
+        "range": [
+          1.0183132530120482,
+          1.0735071354540382
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        1000000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 29126083,
+          "total_cpu_ns": 49847000,
+          "held_heap_delta_bytes": 73729312,
+          "process_peak_held_bytes": 253100032
+        },
+        "borrowed": {
+          "total_ns": 28174167,
+          "total_cpu_ns": 51762000,
+          "held_heap_delta_bytes": 64046480,
+          "process_peak_held_bytes": 157089792
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.039668989896961,
+        "range": [
+          1.0166410599197877,
+          1.0683748669652
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        1000000,
+        2
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 17585250,
+          "total_cpu_ns": 24326000,
+          "held_heap_delta_bytes": 41714432,
+          "process_peak_held_bytes": 121815040
+        },
+        "borrowed": {
+          "total_ns": 18840251,
+          "total_cpu_ns": 26154000,
+          "held_heap_delta_bytes": 32031664,
+          "process_peak_held_bytes": 90996736
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.0752281509496013,
+        "range": [
+          1.0321902563679828,
+          1.1172625913110341
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv",
+        1000000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 9382417,
+          "total_cpu_ns": 43538000,
+          "held_heap_delta_bytes": 64046368,
+          "process_peak_held_bytes": 167149568
+        },
+        "borrowed": {
+          "total_ns": 9791209,
+          "total_cpu_ns": 44295000,
+          "held_heap_delta_bytes": 64046368,
+          "process_peak_held_bytes": 167149568
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.020387007601935,
+        "range": [
+          1.003347680535629,
+          1.0523892827548107
+        ]
+      }
+    }
+  ],
+  "records_sha256": "bf3e0fa94577960af690d7c7fa81868dc40d3457faade3d977226c8e71c0bf0c"
+}

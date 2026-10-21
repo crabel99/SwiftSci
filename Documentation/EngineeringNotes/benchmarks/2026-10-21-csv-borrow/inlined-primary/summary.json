@@ -1,0 +1,145 @@
+{
+  "rows": [
+    {
+      "case": [
+        "csv-quoted",
+        100000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 2943375,
+          "total_cpu_ns": 5210000,
+          "held_heap_delta_bytes": 6440224,
+          "process_peak_held_bytes": 27377664
+        },
+        "inlined": {
+          "total_ns": 3131751,
+          "total_cpu_ns": 5495000,
+          "held_heap_delta_bytes": 6440336,
+          "process_peak_held_bytes": 21364736
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.0571482459449264,
+        "range": [
+          1.007869481765835,
+          1.080204442697071
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        250000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 7263041,
+          "total_cpu_ns": 12593000,
+          "held_heap_delta_bytes": 18482464,
+          "process_peak_held_bytes": 68288512
+        },
+        "inlined": {
+          "total_ns": 7256416,
+          "total_cpu_ns": 13098000,
+          "held_heap_delta_bytes": 16074128,
+          "process_peak_held_bytes": 42680320
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.0401016437703485,
+        "range": [
+          1.0077720207253886,
+          1.0586810880619906
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        1000000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 28483874,
+          "total_cpu_ns": 48943000,
+          "held_heap_delta_bytes": 73729248,
+          "process_peak_held_bytes": 253116416
+        },
+        "inlined": {
+          "total_ns": 28904500,
+          "total_cpu_ns": 51702000,
+          "held_heap_delta_bytes": 64046416,
+          "process_peak_held_bytes": 157089792
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.0551813681733344,
+        "range": [
+          1.0088713451482287,
+          1.0704538437789441
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv-quoted",
+        1000000,
+        2
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 17231875,
+          "total_cpu_ns": 23816000,
+          "held_heap_delta_bytes": 41714496,
+          "process_peak_held_bytes": 121815040
+        },
+        "inlined": {
+          "total_ns": 17056875,
+          "total_cpu_ns": 24226000,
+          "held_heap_delta_bytes": 32031664,
+          "process_peak_held_bytes": 90996736
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 1.017215317433658,
+        "range": [
+          0.9871258712587125,
+          1.0662199448167127
+        ]
+      }
+    },
+    {
+      "case": [
+        "csv",
+        1000000,
+        4
+      ],
+      "statistics": {
+        "baseline": {
+          "total_ns": 9472250,
+          "total_cpu_ns": 43543000,
+          "held_heap_delta_bytes": 64046304,
+          "process_peak_held_bytes": 167149568
+        },
+        "inlined": {
+          "total_ns": 8709875,
+          "total_cpu_ns": 41069000,
+          "held_heap_delta_bytes": 64046304,
+          "process_peak_held_bytes": 167165952
+        }
+      },
+      "cpu_paired": {
+        "median_ratio": 0.9432909182782856,
+        "range": [
+          0.9405967823257093,
+          0.9713846083182142
+        ]
+      }
+    }
+  ],
+  "records_sha256": "5d8d7034c9da6d6d2f1b1e90db97e50060f4fd8d54c61b0f6d64867d808629e4"
+}
