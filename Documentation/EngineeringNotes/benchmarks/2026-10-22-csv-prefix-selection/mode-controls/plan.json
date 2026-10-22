@@ -1,0 +1,158 @@
+{
+  "binaries": {
+    "parent-parallel": {
+      "path": "/private/tmp/swiftsci-csv-local-builder-20261022/build/production/ResourceProbe",
+      "sha256": "6982a1246c3fb3b7c2c217700ef581334a53a5ee2236adb6bf030f4e1cd4f591"
+    },
+    "parallel": {
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/production/ResourceProbe",
+      "sha256": "a1adbdbfabe02870f6073b73dca0b2fa9c08411373a20b5ef4bdaee7cad13e94"
+    },
+    "parent-serial": {
+      "path": "/private/tmp/swiftsci-csv-local-builder-20261022/build/production/ResourceProbe",
+      "sha256": "6982a1246c3fb3b7c2c217700ef581334a53a5ee2236adb6bf030f4e1cd4f591"
+    },
+    "serial": {
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/production/ResourceProbe",
+      "sha256": "a1adbdbfabe02870f6073b73dca0b2fa9c08411373a20b5ef4bdaee7cad13e94"
+    }
+  },
+  "orders": [
+    [
+      "parent-parallel",
+      "parallel",
+      "parent-serial",
+      "serial"
+    ],
+    [
+      "parallel",
+      "parent-serial",
+      "serial",
+      "parent-parallel"
+    ],
+    [
+      "parent-serial",
+      "serial",
+      "parent-parallel",
+      "parallel"
+    ],
+    [
+      "serial",
+      "parent-parallel",
+      "parallel",
+      "parent-serial"
+    ],
+    [
+      "serial",
+      "parent-serial",
+      "parallel",
+      "parent-parallel"
+    ],
+    [
+      "parent-parallel",
+      "serial",
+      "parent-serial",
+      "parallel"
+    ],
+    [
+      "parallel",
+      "parent-parallel",
+      "serial",
+      "parent-serial"
+    ],
+    [
+      "parent-serial",
+      "parallel",
+      "parent-parallel",
+      "serial"
+    ]
+  ],
+  "cases": [
+    [
+      "width-1-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-1-rows-257.json",
+      "known"
+    ],
+    [
+      "width-2-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-2-rows-257.json",
+      "known"
+    ],
+    [
+      "width-4-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-4-rows-257.json",
+      "known"
+    ],
+    [
+      "width-8-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-8-rows-257.json",
+      "known"
+    ],
+    [
+      "width-18-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-18-rows-257.json",
+      "known"
+    ],
+    [
+      "width-64-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-64-rows-257.json",
+      "known"
+    ],
+    [
+      "width-1-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-1-rows-32769.json",
+      "known"
+    ],
+    [
+      "width-2-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-2-rows-32769.json",
+      "known"
+    ],
+    [
+      "width-4-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-4-rows-32769.json",
+      "known"
+    ],
+    [
+      "width-8-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-8-rows-32769.json",
+      "known"
+    ],
+    [
+      "width-18-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-18-rows-32769.json",
+      "known"
+    ],
+    [
+      "width-64-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-64-rows-32769.json",
+      "known"
+    ],
+    [
+      "nullable-0-infer",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/nullable-0.json",
+      "infer"
+    ],
+    [
+      "nullable-50-infer",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/nullable-50.json",
+      "infer"
+    ],
+    [
+      "nullable-90-infer",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/nullable-90.json",
+      "infer"
+    ],
+    [
+      "nullable-50-known",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/nullable-50.json",
+      "known"
+    ],
+    [
+      "nullable-90-known",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/nullable-90.json",
+      "known"
+    ]
+  ],
+  "controller_sha256": "2624e6a6b3ef87f6fdb14de3ce4c040e203510d8a381a0ae1f7cf6120f6dd040"
+}

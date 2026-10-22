@@ -1,0 +1,28 @@
+{
+  "commit": "167d9a4e6f8cb923342dea3236721c8722015bf3",
+  "branch": "codex/csv-prepared-string-membership",
+  "parent": "c906c3fbbb0baf1357438a7079921a6448e0c9e5",
+  "cleanup": "f9a99ce54c77909bdd6f95fadd5fa3b5d15490f2",
+  "resource_workers": {
+    "acceptance": 608,
+    "mode-controls": 544,
+    "text-controls": 1024,
+    "long-key-controls": 256,
+    "crossover": 6048,
+    "setup": 576,
+    "preflight-screen": 1656,
+    "steady-boundaries": 1440
+  },
+  "semantic_suites": {
+    "Release": 394,
+    "Debug": 394,
+    "AddressSanitizer": 394
+  },
+  "grammar_cases": 30720,
+  "unicode_cells_per_policy": 3336243,
+  "standard_responses": 190,
+  "source_clean": true,
+  "promotion_allowed": false,
+  "decision": "Keep cleanup independently reviewable. Preserve the selected decoder as an experimental local commit. Metadata-preflight remains a snapshot trial. Neither admission policy meets resource acceptance across boundary controls; no tolerances changed and no flags waived. No push or PR.",
+  "next_step": "Isolate preparation and unchanged fallback-loop costs separately on recurring boundary cases. Do not tune a row cutoff or assume metadata admission resolves the measured CPU differences."
+}

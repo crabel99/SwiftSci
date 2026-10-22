@@ -1,0 +1,130 @@
+[
+  {
+    "label": "unicode",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/run-unicode.py"
+    ],
+    "start": 1792710476.330084,
+    "exit_code": 0,
+    "elapsed_seconds": 0.8391928672790527
+  },
+  {
+    "label": "crossover",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/run-crossover.py",
+      "crossover",
+      "1",
+      "cleanup",
+      "production",
+      "byte-only"
+    ],
+    "start": 1792710477.169653,
+    "exit_code": 0,
+    "elapsed_seconds": 97.72212886810303
+  },
+  {
+    "label": "setup",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/run-setup.py",
+      "setup",
+      "2",
+      "cleanup",
+      "production",
+      "byte-only"
+    ],
+    "start": 1792710574.892094,
+    "exit_code": 0,
+    "elapsed_seconds": 10.10307502746582
+  },
+  {
+    "label": "standardized-prepare",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "prepare",
+      "--profile",
+      "tabular-smoke"
+    ],
+    "start": 1792710584.995469,
+    "exit_code": 0,
+    "elapsed_seconds": 0.073760986328125
+  },
+  {
+    "label": "standardized-run",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "run",
+      "--profile",
+      "tabular-smoke",
+      "--mode",
+      "production-default",
+      "--engines",
+      "swiftsci,pandas",
+      "--swift-worker",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/standard-worker/SwiftSciBenchmarkWorker",
+      "--python",
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "--output",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/standardized"
+    ],
+    "start": 1792710585.069528,
+    "exit_code": 0,
+    "elapsed_seconds": 90.7317008972168
+  },
+  {
+    "label": "standardized-audit",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "audit",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/standardized"
+    ],
+    "start": 1792710675.8015208,
+    "exit_code": 0,
+    "elapsed_seconds": 0.07782506942749023
+  },
+  {
+    "label": "acceptance",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/run-acceptance.py"
+    ],
+    "start": 1792710675.879613,
+    "exit_code": 0,
+    "elapsed_seconds": 215.82147002220154
+  },
+  {
+    "label": "mode-controls",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/run-mode-controls.py"
+    ],
+    "start": 1792710891.701468,
+    "exit_code": 0,
+    "elapsed_seconds": 13.40109896659851
+  },
+  {
+    "label": "text-controls",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/run-text-controls.py"
+    ],
+    "start": 1792710905.1031098,
+    "exit_code": 0,
+    "elapsed_seconds": 19.801570177078247
+  },
+  {
+    "label": "long-key-controls",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/run-long-key-controls.py"
+    ],
+    "start": 1792710924.905063,
+    "exit_code": 0,
+    "elapsed_seconds": 12.540267944335938
+  }
+]

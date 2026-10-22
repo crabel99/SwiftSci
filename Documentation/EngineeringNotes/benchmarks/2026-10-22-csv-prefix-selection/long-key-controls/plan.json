@@ -1,0 +1,113 @@
+{
+  "binaries": {
+    "parent-parallel": {
+      "path": "/private/tmp/swiftsci-csv-local-builder-20261022/build/production/ResourceProbe",
+      "sha256": "6982a1246c3fb3b7c2c217700ef581334a53a5ee2236adb6bf030f4e1cd4f591"
+    },
+    "parallel": {
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/production/ResourceProbe",
+      "sha256": "a1adbdbfabe02870f6073b73dca0b2fa9c08411373a20b5ef4bdaee7cad13e94"
+    },
+    "parent-serial": {
+      "path": "/private/tmp/swiftsci-csv-local-builder-20261022/build/production/ResourceProbe",
+      "sha256": "6982a1246c3fb3b7c2c217700ef581334a53a5ee2236adb6bf030f4e1cd4f591"
+    },
+    "serial": {
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/production/ResourceProbe",
+      "sha256": "a1adbdbfabe02870f6073b73dca0b2fa9c08411373a20b5ef4bdaee7cad13e94"
+    }
+  },
+  "orders": [
+    [
+      "parent-parallel",
+      "parallel",
+      "parent-serial",
+      "serial"
+    ],
+    [
+      "parallel",
+      "parent-serial",
+      "serial",
+      "parent-parallel"
+    ],
+    [
+      "parent-serial",
+      "serial",
+      "parent-parallel",
+      "parallel"
+    ],
+    [
+      "serial",
+      "parent-parallel",
+      "parallel",
+      "parent-serial"
+    ],
+    [
+      "serial",
+      "parent-serial",
+      "parallel",
+      "parent-parallel"
+    ],
+    [
+      "parent-parallel",
+      "serial",
+      "parent-serial",
+      "parallel"
+    ],
+    [
+      "parallel",
+      "parent-parallel",
+      "serial",
+      "parent-serial"
+    ],
+    [
+      "parent-serial",
+      "parallel",
+      "parent-parallel",
+      "serial"
+    ]
+  ],
+  "cases": [
+    [
+      "one-long-nulls-0",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/long-key-inputs/one-long-nulls-0.json",
+      "known"
+    ],
+    [
+      "one-long-nulls-50",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/long-key-inputs/one-long-nulls-50.json",
+      "known"
+    ],
+    [
+      "pair-long-nulls-0",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/long-key-inputs/pair-long-nulls-0.json",
+      "known"
+    ],
+    [
+      "pair-long-nulls-50",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/long-key-inputs/pair-long-nulls-50.json",
+      "known"
+    ],
+    [
+      "pair-unicode-nulls-0",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/long-key-inputs/pair-unicode-nulls-0.json",
+      "known"
+    ],
+    [
+      "pair-unicode-nulls-50",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/long-key-inputs/pair-unicode-nulls-50.json",
+      "known"
+    ],
+    [
+      "three-long-nulls-0",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/long-key-inputs/three-long-nulls-0.json",
+      "known"
+    ],
+    [
+      "three-long-nulls-50",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/long-key-inputs/three-long-nulls-50.json",
+      "known"
+    ]
+  ],
+  "controller_sha256": "aa69165b529e11e4d07109aa51dbaec6a162f3c1926d5bce9c7dfdac57acd91e"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "engine": "production",
+    "policy": "parallel",
+    "validated": true,
+    "command": [
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/production/ResourceProbe",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/unicode/all-scalars.json",
+      "known",
+      "fresh",
+      "1",
+      "parallel"
+    ],
+    "binary_sha256": "a1adbdbfabe02870f6073b73dca0b2fa9c08411373a20b5ef4bdaee7cad13e94",
+    "cells": 3336243
+  },
+  {
+    "engine": "production",
+    "policy": "serial",
+    "validated": true,
+    "command": [
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/production/ResourceProbe",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/unicode/all-scalars.json",
+      "known",
+      "fresh",
+      "1",
+      "serial"
+    ],
+    "binary_sha256": "a1adbdbfabe02870f6073b73dca0b2fa9c08411373a20b5ef4bdaee7cad13e94",
+    "cells": 3336243
+  }
+]

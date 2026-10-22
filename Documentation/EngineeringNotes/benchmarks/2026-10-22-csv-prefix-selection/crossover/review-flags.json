@@ -1,0 +1,596 @@
+[
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "short-keys-3-rows-19-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 352500.0,
+        "total_ns": 324646.0,
+        "process_peak_held_bytes": 7430144.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "short-keys-3-rows-19-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 303000.0,
+        "total_ns": 284625.5,
+        "process_peak_held_bytes": 7397376.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-3-rows-105-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 339500.0,
+        "total_ns": 382021.0,
+        "process_peak_held_bytes": 7364608.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-3-rows-105-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 301000.0,
+        "total_ns": 326999.5,
+        "process_peak_held_bytes": 7389184.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "short-keys-10-rows-90-nulls-90",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 297000.0,
+        "total_ns": 291875.0,
+        "process_peak_held_bytes": 7430144.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "short-keys-10-rows-90-nulls-90",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 259500.0,
+        "total_ns": 253666.0,
+        "process_peak_held_bytes": 7405568.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "short-keys-10-rows-91-nulls-0",
+      "policy": "serial",
+      "engine": "byte-only",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 294500.0,
+        "total_ns": 294083.0,
+        "process_peak_held_bytes": 7405568.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "short-keys-10-rows-91-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 267500.0,
+        "total_ns": 263375.0,
+        "process_peak_held_bytes": 7405568.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-10-rows-467-nulls-0",
+      "policy": "parallel",
+      "engine": "byte-only",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 619500.0,
+        "total_ns": 453187.5,
+        "process_peak_held_bytes": 7520256.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-10-rows-467-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 525500.0,
+        "total_ns": 409813.0,
+        "process_peak_held_bytes": 7520256.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-10-rows-468-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 606500.0,
+        "total_ns": 447833.0,
+        "process_peak_held_bytes": 7520256.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-10-rows-468-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 532000.0,
+        "total_ns": 408979.5,
+        "process_peak_held_bytes": 7520256.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-10-rows-469-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 412000.0,
+        "total_ns": 419457.5,
+        "process_peak_held_bytes": 7471104.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-10-rows-469-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 370500.0,
+        "total_ns": 375083.5,
+        "process_peak_held_bytes": 7471104.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "short-keys-64-rows-619-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 440500.0,
+        "total_ns": 465666.5,
+        "peak_after_bytes": 7503872.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "short-keys-64-rows-619-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 397500.0,
+        "total_ns": 422396.0,
+        "peak_after_bytes": 7536640.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "short-keys-64-rows-620-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 419500.0,
+        "total_ns": 413083.5,
+        "process_peak_held_bytes": 7454720.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "short-keys-64-rows-620-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 377000.0,
+        "total_ns": 374833.0,
+        "process_peak_held_bytes": 7471104.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "short-keys-64-rows-620-nulls-90",
+      "policy": "serial",
+      "engine": "byte-only",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 367000.0,
+        "total_ns": 370625.0,
+        "process_peak_held_bytes": 7454720.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "short-keys-64-rows-620-nulls-90",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 330500.0,
+        "total_ns": 322750.0,
+        "process_peak_held_bytes": 7487488.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "short-keys-64-rows-621-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 464500.0,
+        "total_ns": 480521.0,
+        "peak_after_bytes": 7528448.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "short-keys-64-rows-621-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 419500.0,
+        "total_ns": 422500.0,
+        "peak_after_bytes": 7569408.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "parallel",
+      "engine": "byte-only",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 2202000.0,
+        "total_ns": 1295625.0,
+        "process_peak_held_bytes": 7864320.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1776500.0,
+        "total_ns": 1093500.0,
+        "process_peak_held_bytes": 7897088.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1264500.0,
+        "total_ns": 1273479.5,
+        "peak_after_bytes": 7847936.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1106500.0,
+        "total_ns": 1115875.0,
+        "peak_after_bytes": 7897088.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-90",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1020500.0,
+        "total_ns": 1076333.5,
+        "peak_after_bytes": 8036352.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-90",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 925000.0,
+        "total_ns": 929875.0,
+        "peak_after_bytes": 8060928.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3329-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1813500.0,
+        "total_ns": 1099790.5,
+        "process_peak_held_bytes": 7897088.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3329-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1374000.0,
+        "total_ns": 866042.0,
+        "process_peak_held_bytes": 7929856.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3330-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1762000.0,
+        "total_ns": 1072813.0,
+        "process_peak_held_bytes": 7913472.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3330-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1346000.0,
+        "total_ns": 872729.0,
+        "process_peak_held_bytes": 7929856.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3330-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1757000.0,
+        "total_ns": 1083750.0,
+        "peak_after_bytes": 7897088.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3330-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1311000.0,
+        "total_ns": 887187.5,
+        "peak_after_bytes": 8011776.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1566500.0,
+        "total_ns": 976354.0,
+        "process_peak_held_bytes": 7864320.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1395500.0,
+        "total_ns": 890563.0,
+        "process_peak_held_bytes": 7921664.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1708500.0,
+        "total_ns": 1049728.5,
+        "peak_after_bytes": 7913472.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1388000.0,
+        "total_ns": 889000.5,
+        "peak_after_bytes": 7979008.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "byte-only",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1554500.0,
+        "total_ns": 1009271.0,
+        "peak_after_bytes": 7921664.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1388000.0,
+        "total_ns": 889000.5,
+        "peak_after_bytes": 7979008.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3393-nulls-90",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1704000.0,
+        "total_ns": 1043708.0,
+        "peak_after_bytes": 8118272.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3393-nulls-90",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1493000.0,
+        "total_ns": 960625.0,
+        "peak_after_bytes": 8175616.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3393-nulls-90",
+      "policy": "parallel",
+      "engine": "byte-only",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1665000.0,
+        "total_ns": 1031333.0,
+        "peak_after_bytes": 8110080.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3393-nulls-90",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 6,
+      "medians": {
+        "total_cpu_ns": 1493000.0,
+        "total_ns": 960625.0,
+        "peak_after_bytes": 8175616.0
+      }
+    },
+    "reason": "CPU review limit"
+  }
+]

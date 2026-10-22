@@ -1,0 +1,70 @@
+# text controls results
+
+CPU is process user-plus-system time. Peak RSS is a whole-process high-water mark. Elapsed time is separate.
+
+| Scope / case | Policy / candidate | CPU before ms | CPU after ms | Change | Elapsed before / after ms | Peak before / after MiB |
+|---|---|---:|---:|---:|---:|---:|
+| eager / none-nulls-0 |  parallel | 1.506 | 1.516 | +0.6% | 1.325 / 1.334 | 9.06 / 9.05 |
+| eager / none-nulls-0 |  serial | 1.431 | 1.425 | -0.3% | 1.448 / 1.440 | 9.03 / 9.02 |
+| eager / one-nulls-0 |  parallel | 1.798 | 1.784 | -0.8% | 1.612 / 1.603 | 9.11 / 9.06 |
+| eager / one-nulls-0 |  serial | 1.730 | 1.708 | -1.2% | 1.748 / 1.725 | 9.05 / 9.02 |
+| eager / one-nulls-50 |  parallel | 1.741 | 1.736 | -0.3% | 1.559 / 1.559 | 9.06 / 9.05 |
+| eager / one-nulls-50 |  serial | 1.669 | 1.647 | -1.3% | 1.688 / 1.667 | 9.02 / 9.00 |
+| eager / pair-nulls-0 |  parallel | 1.845 | 1.839 | -0.4% | 1.661 / 1.657 | 9.08 / 9.08 |
+| eager / pair-nulls-0 |  serial | 1.751 | 1.752 | +0.1% | 1.768 / 1.770 | 9.05 / 9.02 |
+| eager / pair-nulls-50 |  parallel | 1.795 | 1.790 | -0.3% | 1.614 / 1.614 | 9.05 / 9.03 |
+| eager / pair-nulls-50 |  serial | 1.712 | 1.688 | -1.4% | 1.729 / 1.712 | 9.00 / 8.98 |
+| eager / four-nulls-0 |  parallel | 3.844 | 3.833 | -0.3% | 2.626 / 2.595 | 9.08 / 9.09 |
+| eager / four-nulls-0 |  serial | 3.660 | 3.700 | +1.1% | 3.672 / 3.721 | 9.05 / 9.02 |
+| eager / four-nulls-50 |  parallel | 3.643 | 3.596 | -1.3% | 2.360 / 2.369 | 9.05 / 9.03 |
+| eager / four-nulls-50 |  serial | 3.483 | 3.470 | -0.4% | 3.502 / 3.488 | 9.00 / 8.98 |
+| eager / default-nulls-0 |  parallel | 2.688 | 1.909 | -29.0% | 2.509 / 1.733 | 9.09 / 9.08 |
+| eager / default-nulls-0 |  serial | 2.831 | 1.560 | -44.9% | 2.849 / 1.579 | 9.05 / 9.05 |
+| eager / default-nulls-50 |  parallel | 2.538 | 2.014 | -20.6% | 2.356 / 1.838 | 9.09 / 9.08 |
+| eager / default-nulls-50 |  serial | 2.591 | 1.968 | -24.0% | 2.609 / 1.988 | 9.03 / 9.05 |
+| eager / default-nulls-90 |  parallel | 2.093 | 2.025 | -3.2% | 1.913 / 1.846 | 9.09 / 9.09 |
+| eager / default-nulls-90 |  serial | 2.018 | 1.944 | -3.6% | 2.036 / 1.960 | 9.02 / 9.03 |
+| eager / sixteen-nulls-0 |  parallel | 3.784 | 3.767 | -0.4% | 2.568 / 2.544 | 9.11 / 9.08 |
+| eager / sixteen-nulls-0 |  serial | 3.736 | 3.678 | -1.6% | 3.754 / 3.695 | 9.06 / 9.05 |
+| eager / sixteen-nulls-50 |  parallel | 3.752 | 3.753 | +0.0% | 2.517 / 2.536 | 9.14 / 9.16 |
+| eager / sixteen-nulls-50 |  serial | 3.630 | 3.626 | -0.1% | 3.649 / 3.647 | 9.09 / 9.11 |
+| eager / seventeen-nulls-0 |  parallel | 2.905 | 2.004 | -31.0% | 2.406 / 1.521 | 9.12 / 9.08 |
+| eager / seventeen-nulls-0 |  serial | 3.417 | 1.946 | -43.0% | 3.434 / 1.966 | 9.06 / 9.05 |
+| eager / seventeen-nulls-50 |  parallel | 2.816 | 2.313 | -17.8% | 2.322 / 1.860 | 9.20 / 9.20 |
+| eager / seventeen-nulls-50 |  serial | 2.788 | 2.271 | -18.5% | 2.806 / 2.287 | 9.14 / 9.14 |
+| eager / large-nulls-0 |  parallel | 21.971 | 19.575 | -10.9% | 20.544 / 18.711 | 9.58 / 9.47 |
+| eager / large-nulls-0 |  serial | 21.979 | 19.389 | -11.8% | 22.019 / 19.442 | 9.56 / 9.44 |
+| eager / large-nulls-50 |  parallel | 22.032 | 19.899 | -9.7% | 20.654 / 18.902 | 9.72 / 9.59 |
+| eager / large-nulls-50 |  serial | 22.015 | 19.852 | -9.8% | 22.052 / 19.894 | 9.67 / 9.56 |
+| eager / all-string-none-nulls-0 |  parallel | 1.869 | 1.883 | +0.7% | 1.464 / 1.463 | 9.08 / 9.06 |
+| eager / all-string-none-nulls-0 |  serial | 1.778 | 1.794 | +0.9% | 1.810 / 1.819 | 9.03 / 9.00 |
+| eager / all-string-one-nulls-0 |  parallel | 2.177 | 2.167 | -0.4% | 1.770 / 1.782 | 9.06 / 9.08 |
+| eager / all-string-one-nulls-0 |  serial | 2.104 | 2.079 | -1.2% | 2.160 / 2.135 | 9.03 / 9.00 |
+| eager / all-string-one-nulls-50 |  parallel | 2.125 | 2.142 | +0.8% | 1.715 / 1.730 | 9.08 / 9.08 |
+| eager / all-string-one-nulls-50 |  serial | 2.027 | 2.052 | +1.2% | 2.080 / 2.102 | 9.02 / 8.98 |
+| eager / all-string-pair-nulls-0 |  parallel | 2.263 | 2.261 | -0.1% | 1.808 / 1.830 | 9.08 / 9.05 |
+| eager / all-string-pair-nulls-0 |  serial | 2.179 | 2.173 | -0.3% | 2.230 / 2.218 | 9.05 / 9.00 |
+| eager / all-string-pair-nulls-50 |  parallel | 2.211 | 2.230 | +0.9% | 1.765 / 1.778 | 9.05 / 9.05 |
+| eager / all-string-pair-nulls-50 |  serial | 2.106 | 2.107 | +0.0% | 2.164 / 2.163 | 8.98 / 8.98 |
+| eager / all-string-four-nulls-0 |  parallel | 3.832 | 3.736 | -2.5% | 2.767 / 2.707 | 9.08 / 9.06 |
+| eager / all-string-four-nulls-0 |  serial | 3.754 | 3.697 | -1.5% | 3.801 / 3.754 | 9.03 / 9.00 |
+| eager / all-string-four-nulls-50 |  parallel | 3.487 | 3.548 | +1.7% | 2.439 / 2.462 | 9.05 / 9.08 |
+| eager / all-string-four-nulls-50 |  serial | 3.433 | 3.456 | +0.7% | 3.469 / 3.471 | 8.98 / 8.98 |
+| eager / all-string-default-nulls-0 |  parallel | 4.005 | 2.111 | -47.3% | 2.863 / 1.673 | 9.07 / 9.11 |
+| eager / all-string-default-nulls-0 |  serial | 3.763 | 2.172 | -42.3% | 3.792 / 2.185 | 9.02 / 9.05 |
+| eager / all-string-default-nulls-50 |  parallel | 3.762 | 2.490 | -33.8% | 2.577 / 2.047 | 9.08 / 9.11 |
+| eager / all-string-default-nulls-50 |  serial | 3.534 | 2.305 | -34.8% | 3.551 / 2.322 | 9.02 / 9.05 |
+| eager / all-string-default-nulls-90 |  parallel | 3.209 | 2.414 | -24.8% | 2.207 / 1.989 | 9.03 / 9.11 |
+| eager / all-string-default-nulls-90 |  serial | 3.079 | 2.284 | -25.8% | 3.097 / 2.299 | 9.00 / 9.03 |
+| eager / all-string-sixteen-nulls-0 |  parallel | 3.857 | 3.804 | -1.4% | 2.733 / 2.709 | 9.06 / 9.11 |
+| eager / all-string-sixteen-nulls-0 |  serial | 3.661 | 3.675 | +0.4% | 3.698 / 3.694 | 9.02 / 9.05 |
+| eager / all-string-sixteen-nulls-50 |  parallel | 3.777 | 3.816 | +1.0% | 2.684 / 2.693 | 9.14 / 9.19 |
+| eager / all-string-sixteen-nulls-50 |  serial | 3.592 | 3.654 | +1.7% | 3.611 / 3.671 | 9.08 / 9.11 |
+| eager / all-string-seventeen-nulls-0 |  parallel | 3.704 | 2.057 | -44.5% | 2.607 / 1.623 | 9.09 / 9.08 |
+| eager / all-string-seventeen-nulls-0 |  serial | 3.671 | 2.045 | -44.3% | 3.692 / 2.069 | 9.03 / 9.05 |
+| eager / all-string-seventeen-nulls-50 |  parallel | 3.621 | 2.474 | -31.7% | 2.516 / 2.068 | 9.17 / 9.20 |
+| eager / all-string-seventeen-nulls-50 |  serial | 3.500 | 2.409 | -31.2% | 3.520 / 2.425 | 9.12 / 9.15 |
+| eager / all-string-large-nulls-0 |  parallel | 3.890 | 2.114 | -45.7% | 2.711 / 1.658 | 9.45 / 9.36 |
+| eager / all-string-large-nulls-0 |  serial | 4.541 | 2.006 | -55.8% | 4.557 / 2.021 | 9.41 / 9.30 |
+| eager / all-string-large-nulls-50 |  parallel | 3.833 | 2.566 | -33.1% | 2.677 / 2.137 | 9.61 / 9.50 |
+| eager / all-string-large-nulls-50 |  serial | 3.852 | 2.482 | -35.6% | 3.872 / 2.502 | 9.55 / 9.44 |

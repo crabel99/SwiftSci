@@ -1,0 +1,30 @@
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/Swift.swiftmodule/arm64e.x1-apple-macos.swiftinterface
+
+SHA256 a2dc1fa1b242e55d719e32dd0beca6f561e5bf6b60c97bbe15d7b9c42f8d3600
+
+public var isContiguousUTF8: Swift::Bool {
+    get {
+    if _guts.isFastUTF8 {
+      return true
+    }
+    return false
+  }
+  }
+  @_alwaysEmitIntoClient public mutating func makeContiguousUTF8() {
+
+
+inable @inline(__always) public init(_ utf8: Swift::String.Swift::UTF8View) {
+    self = String(utf8._guts)
+  }
+}
+extension Swift::String.Swift::UTF8View {
+  @inlinable @inline(__always) public var count: Swift::Int {
+    get {
+    if _fastPath(_guts.isFastUTF8) {
+      return _guts.count
+    }
+    return _foreignCount()
+  }
+  }
+}
+@available(any

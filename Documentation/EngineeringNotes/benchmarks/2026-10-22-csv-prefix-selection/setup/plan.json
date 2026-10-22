@@ -1,0 +1,158 @@
+{
+  "started": 1792710575.046894,
+  "binaries": {
+    "cleanup": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/cleanup/ResourceProbe",
+        "sha256": "43ebc34c9a11644e3f836562d77b92c388a790539d385f1de97597071ec502de"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/cleanup/StreamProbe",
+        "sha256": "73a38c5066ed9a3b6620f2a4539a6ecc541b1383b65bbd2865aabfe7a4a89f5e"
+      }
+    },
+    "production": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/production/ResourceProbe",
+        "sha256": "a1adbdbfabe02870f6073b73dca0b2fa9c08411373a20b5ef4bdaee7cad13e94"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/production/StreamProbe",
+        "sha256": "5a5109fd24c11690b7b424c7b9b5a9cf769995d8cc146a9dc5a1671ad935869a"
+      }
+    },
+    "byte-only": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/byte-only/ResourceProbe",
+        "sha256": "a9b9ae5a1c04e1812e7b3f97725abd4a82e82c53509627d7634736a7e84bd556"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/byte-only/StreamProbe",
+        "sha256": "92e4e8174fc9528ffe53aa0f76659bd16cb01b4da504179a7d97d2947f696a7b"
+      }
+    }
+  },
+  "sources": {
+    "cleanup": "/private/tmp/swiftsci-csv-prefix-selection-20261022/variants/cleanup",
+    "production": "/private/tmp/swiftsci-csv-count-only-scan-20261021",
+    "byte-only": "/private/tmp/swiftsci-csv-prefix-selection-20261022/variants/byte-only"
+  },
+  "orders": [
+    [
+      "cleanup",
+      "production",
+      "byte-only"
+    ],
+    [
+      "production",
+      "byte-only",
+      "cleanup"
+    ],
+    [
+      "byte-only",
+      "cleanup",
+      "production"
+    ],
+    [
+      "byte-only",
+      "production",
+      "cleanup"
+    ],
+    [
+      "cleanup",
+      "byte-only",
+      "production"
+    ],
+    [
+      "production",
+      "cleanup",
+      "byte-only"
+    ],
+    [
+      "cleanup",
+      "production",
+      "byte-only"
+    ],
+    [
+      "production",
+      "byte-only",
+      "cleanup"
+    ],
+    [
+      "byte-only",
+      "cleanup",
+      "production"
+    ],
+    [
+      "byte-only",
+      "production",
+      "cleanup"
+    ],
+    [
+      "cleanup",
+      "byte-only",
+      "production"
+    ],
+    [
+      "production",
+      "cleanup",
+      "byte-only"
+    ]
+  ],
+  "cases": [
+    [
+      "eager",
+      "setup-8-0",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/setup-inputs/setup-8-0.json"
+    ],
+    [
+      "eager",
+      "setup-8-10",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/setup-inputs/setup-8-10.json"
+    ],
+    [
+      "eager",
+      "setup-8-2048",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/setup-inputs/setup-8-2048.json"
+    ],
+    [
+      "eager",
+      "setup-8-32768",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/setup-inputs/setup-8-32768.json"
+    ],
+    [
+      "eager",
+      "setup-257-0",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/setup-inputs/setup-257-0.json"
+    ],
+    [
+      "eager",
+      "setup-257-10",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/setup-inputs/setup-257-10.json"
+    ],
+    [
+      "eager",
+      "setup-257-2048",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/setup-inputs/setup-257-2048.json"
+    ],
+    [
+      "eager",
+      "setup-257-32768",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/setup-inputs/setup-257-32768.json"
+    ]
+  ],
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "controller_sha256": "c52baa9fdee293e78baf79615ae90ed9798dd445b9bd8020bb77d3aa5691765c",
+  "argv0": "same executable name per scope for every engine",
+  "scope": "Native output hashes, values, types and null counts checked. Same native parallel/serial policies, native CPU scheduling and hash randomization. No builds, tests or profiling during timings."
+}

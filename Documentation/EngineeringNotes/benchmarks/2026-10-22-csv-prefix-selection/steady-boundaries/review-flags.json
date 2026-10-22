@@ -1,0 +1,353 @@
+[
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-10-rows-467-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 215500.0,
+        "total_ns": 253583.5,
+        "process_peak_held_bytes": 7880704.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-10-rows-467-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 182000.0,
+        "total_ns": 237458.0,
+        "process_peak_held_bytes": 7962624.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-10-rows-469-nulls-0",
+      "policy": "parallel",
+      "engine": "preflight",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 341000.0,
+        "total_ns": 240895.5,
+        "process_peak_held_bytes": 7979008.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-10-rows-469-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 264500.0,
+        "total_ns": 209792.0,
+        "process_peak_held_bytes": 8028160.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1072500.0,
+        "total_ns": 667188.0,
+        "process_peak_held_bytes": 8470528.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 812500.0,
+        "total_ns": 520583.0,
+        "process_peak_held_bytes": 8585216.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 829500.0,
+        "total_ns": 864500.0,
+        "process_peak_held_bytes": 8372224.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 685000.0,
+        "total_ns": 720500.0,
+        "process_peak_held_bytes": 8470528.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3329-nulls-0",
+      "policy": "serial",
+      "engine": "preflight",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1012000.0,
+        "total_ns": 1050062.0,
+        "process_peak_held_bytes": 8437760.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3329-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 761000.0,
+        "total_ns": 821084.0,
+        "process_peak_held_bytes": 8470528.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3330-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1040500.0,
+        "total_ns": 662604.5,
+        "process_peak_held_bytes": 8486912.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3330-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 879000.0,
+        "total_ns": 552687.5,
+        "process_peak_held_bytes": 8536064.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3330-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 780500.0,
+        "total_ns": 859250.0,
+        "process_peak_held_bytes": 8372224.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3330-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 708500.0,
+        "total_ns": 760062.5,
+        "process_peak_held_bytes": 8470528.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3330-nulls-0",
+      "policy": "serial",
+      "engine": "preflight",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1045500.0,
+        "total_ns": 1077646.0,
+        "process_peak_held_bytes": 8421376.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3330-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 708500.0,
+        "total_ns": 760062.5,
+        "process_peak_held_bytes": 8470528.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1000000.0,
+        "total_ns": 631604.5,
+        "process_peak_held_bytes": 8486912.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 794000.0,
+        "total_ns": 510812.5,
+        "process_peak_held_bytes": 8577024.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 893000.0,
+        "total_ns": 930771.5,
+        "process_peak_held_bytes": 8372224.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 652000.0,
+        "total_ns": 706770.5,
+        "process_peak_held_bytes": 8470528.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "serial",
+      "engine": "preflight",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 988000.0,
+        "total_ns": 1041646.5,
+        "process_peak_held_bytes": 8421376.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 652000.0,
+        "total_ns": 706770.5,
+        "process_peak_held_bytes": 8470528.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 977500.0,
+        "total_ns": 1008896.0,
+        "peak_after_bytes": 7880704.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 660500.0,
+        "total_ns": 694562.5,
+        "peak_after_bytes": 7946240.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "short-keys-64-rows-619-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 219000.0,
+        "total_ns": 251104.5,
+        "peak_after_bytes": 7553024.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "short-keys-64-rows-619-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 199000.0,
+        "total_ns": 229479.5,
+        "peak_after_bytes": 7618560.0
+      }
+    },
+    "reason": "CPU review limit"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1048000.0,
+        "total_ns": 1071729.0,
+        "peak_after_bytes": 7831552.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 876000.0,
+        "total_ns": 898708.5,
+        "peak_after_bytes": 7880704.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "preflight",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1076500.0,
+        "total_ns": 1101354.0,
+        "peak_after_bytes": 7831552.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 876000.0,
+        "total_ns": 898708.5,
+        "peak_after_bytes": 7880704.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1701000.0,
+        "total_ns": 1029166.5,
+        "peak_after_bytes": 7872512.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1280500.0,
+        "total_ns": 824084.0,
+        "peak_after_bytes": 7962624.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "preflight",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1448500.0,
+        "total_ns": 911250.0,
+        "peak_after_bytes": 7880704.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1280500.0,
+        "total_ns": 824084.0,
+        "peak_after_bytes": 7962624.0
+      }
+    },
+    "reason": "CPU review limit"
+  }
+]

@@ -1,0 +1,218 @@
+{
+  "started": 1792711254.55321,
+  "binaries": {
+    "cleanup": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/cleanup/ResourceProbe",
+        "sha256": "43ebc34c9a11644e3f836562d77b92c388a790539d385f1de97597071ec502de"
+      },
+      "StreamRepeatProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/cleanup/StreamRepeatProbe",
+        "sha256": "7894fc8982d204745184d3967d81daf930971f2d4bd775ea353ac8585aefb640"
+      }
+    },
+    "production": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/production/ResourceProbe",
+        "sha256": "a1adbdbfabe02870f6073b73dca0b2fa9c08411373a20b5ef4bdaee7cad13e94"
+      },
+      "StreamRepeatProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/production/StreamRepeatProbe",
+        "sha256": "43ec4059881e1e430a9fb50874027111828f92ed7426fe8a69b06fc0ccf21d2c"
+      }
+    },
+    "preflight": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/preflight/ResourceProbe",
+        "sha256": "cf72e1901006d7e2a0fbbab746cf60fac6b001d858ae239a4a9b2e13901bd1e9"
+      },
+      "StreamRepeatProbe": {
+        "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/preflight/StreamRepeatProbe",
+        "sha256": "826b1a167011c40e46727fcc169e9f774aa8b0661983dd56afb9380e70615e4d"
+      }
+    }
+  },
+  "sources": {
+    "cleanup": "/private/tmp/swiftsci-csv-prefix-selection-20261022/variants/cleanup",
+    "production": "/private/tmp/swiftsci-csv-count-only-scan-20261021",
+    "preflight": "/private/tmp/swiftsci-csv-prefix-selection-20261022/variants/preflight"
+  },
+  "orders": [
+    [
+      "cleanup",
+      "production",
+      "preflight"
+    ],
+    [
+      "production",
+      "preflight",
+      "cleanup"
+    ],
+    [
+      "preflight",
+      "cleanup",
+      "production"
+    ],
+    [
+      "preflight",
+      "production",
+      "cleanup"
+    ],
+    [
+      "cleanup",
+      "preflight",
+      "production"
+    ],
+    [
+      "production",
+      "cleanup",
+      "preflight"
+    ],
+    [
+      "cleanup",
+      "production",
+      "preflight"
+    ],
+    [
+      "production",
+      "preflight",
+      "cleanup"
+    ],
+    [
+      "preflight",
+      "cleanup",
+      "production"
+    ],
+    [
+      "preflight",
+      "production",
+      "cleanup"
+    ],
+    [
+      "cleanup",
+      "preflight",
+      "production"
+    ],
+    [
+      "production",
+      "cleanup",
+      "preflight"
+    ]
+  ],
+  "cases": [
+    [
+      "eager",
+      "long-keys-10-rows-467-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-10-rows-467-nulls-0.json"
+    ],
+    [
+      "eager",
+      "long-keys-10-rows-468-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-10-rows-468-nulls-0.json"
+    ],
+    [
+      "eager",
+      "long-keys-10-rows-469-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-10-rows-469-nulls-0.json"
+    ],
+    [
+      "eager",
+      "long-keys-3-rows-105-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-3-rows-105-nulls-0.json"
+    ],
+    [
+      "eager",
+      "long-keys-64-rows-3328-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3328-nulls-0.json"
+    ],
+    [
+      "eager",
+      "long-keys-64-rows-3329-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3329-nulls-0.json"
+    ],
+    [
+      "eager",
+      "long-keys-64-rows-3330-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3330-nulls-0.json"
+    ],
+    [
+      "eager",
+      "long-keys-64-rows-3392-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json"
+    ],
+    [
+      "eager",
+      "short-keys-10-rows-90-nulls-90",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/short-keys-10-rows-90-nulls-90.json"
+    ],
+    [
+      "eager",
+      "short-keys-10-rows-91-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/short-keys-10-rows-91-nulls-0.json"
+    ],
+    [
+      "eager",
+      "short-keys-3-rows-19-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/short-keys-3-rows-19-nulls-0.json"
+    ],
+    [
+      "eager",
+      "short-keys-64-rows-620-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/short-keys-64-rows-620-nulls-0.json"
+    ],
+    [
+      "eager",
+      "short-keys-64-rows-620-nulls-90",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/short-keys-64-rows-620-nulls-90.json"
+    ],
+    [
+      "stream",
+      "long-keys-64-rows-3328-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3328-nulls-0.json"
+    ],
+    [
+      "stream",
+      "long-keys-64-rows-3328-nulls-90",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3328-nulls-90.json"
+    ],
+    [
+      "stream",
+      "long-keys-64-rows-3330-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3330-nulls-0.json"
+    ],
+    [
+      "stream",
+      "long-keys-64-rows-3392-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json"
+    ],
+    [
+      "stream",
+      "long-keys-64-rows-3393-nulls-90",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3393-nulls-90.json"
+    ],
+    [
+      "stream",
+      "short-keys-64-rows-619-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/short-keys-64-rows-619-nulls-0.json"
+    ],
+    [
+      "stream",
+      "short-keys-64-rows-621-nulls-0",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/short-keys-64-rows-621-nulls-0.json"
+    ]
+  ],
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "controller_sha256": "23c47dbf40036ce987675b0eef1362f44d7a5085e26aec2594585bd32ec422e0",
+  "argv0": "same executable name per scope for every engine",
+  "scope": "Two warmups plus five reads; per-worker medians, peak includes earlier reads. Native output hashes, values, types and null counts checked. Same native parallel/serial policies, native CPU scheduling and hash randomization. No builds, tests or profiling during timings."
+}
