@@ -1,0 +1,67 @@
+# CSV String null keys at column construction
+
+This experiment tests whether selecting a concrete decoder once per column reduces CPU work beyond the bounded Array lookup in `680ac74b96ab6c6968d83a9511ebdce69d30093b`.
+
+## Decision
+
+FINAL_DECISION
+
+The source change is local on `codex/csv-inline-null-keys` at `FINAL_HEAD`. Its parent remains preserved on `codex/csv-small-null-lookup`. No source branch was pushed by this experiment. Engineering evidence stays on `codex/engineering-notes`.
+
+## Implementation
+
+`CSVColumnPlan.conversion` selects `CSVSmallStringDecoder` only for one or two distinct null tokens. The decoder holds an owned `String` and an optional second `String`. It constructs the decoded field once and compares with normal Swift String equality. Empty and larger token sets use the original concrete `CSVStringDecoder` with hashed Set lookup. The parser, default tokens, public options, row bound, numeric conversion, inference, and worker selection are unchanged.
+
+The previous private lookup-strategy enum and its Array allocation are removed. The existing column-conversion enum gains one case. The decision happens at column construction, rather than at each String field. No unsafe references or new public API are introduced.
+
+## Matched comparison
+
+The final comparison uses frozen parent `680ac74b96ab6c6968d83a9511ebdce69d30093b` and the final source head. Both use the same production compiler flags, dependency objects, input bytes, explicit schemas or inference, null sets, and native scheduling policy. Parallel compares with parallel. Serial compares with serial. Serial disables only column-conversion workers.
+
+Each fresh-process response validates all native values, types, null positions, and row and column order against an independent contract. Streaming uses a separate untimed validation read. Warm input, AC power, eight balanced implementation orders, and no outlier removal match the previous studies. No builds, tests, or profilers run during accepted timings.
+
+CPU is process user-plus-system time per complete read. Elapsed time is separate. Peak RSS includes the whole worker and is not an allocation counter. Metadata loses one per-column Array for eligible null sets, but this study does not measure allocation counts, energy, cache occupancy, or hardware performance counters.
+
+REFERENCE_TABLE
+
+See the [complete controls](controls.md) for widths from 1 to 64, small and large row counts, numeric null densities, Unicode fields, all-String inputs, token sets from empty through 2,048 entries, and long owned String keys and values. CPU_REVIEW_STATUS
+
+FOLLOWUP_STATUS See the [384-observation follow-up](followup.md). Its original trigger and all earlier observations remain visible.
+
+## Rejected alternatives and ownership diagnosis
+
+The [initial screen](pilot/summary.json) contains 1,400 validated reads across the original hashed implementation, the committed Array lookup, separate concrete Array decoding, tiny Set iteration, and byte matching before String construction. The [ownership screen](ownership-screen/summary.json) contains 1,792 validated reads, including direct keys and independent per-column Sets.
+
+Tiny Set iteration adds a retain and release of the Set owner in the generated field decoder. The linked decoder retains `x21`, then releases that same owner on each exit from the iteration branch. The parallel profile spends most sampled active stacks in `swift_retain` and `swift_release`. Rebuilding an independent Set per column removes that dominant hotspot and most of the parallel CPU penalty. Serial behavior stays close. This intervention supports contention on shared reference ownership. It does not identify a hardware-cache mechanism or establish a cache-miss count.
+
+The profiles are diagnostic runs, not accepted timings. Their leaf counts are samples across threads, not percentages of a single CPU or instruction counts. Profiles run separately from the final comparisons. The unchanged parser functions are not blamed for a slowdown confined to a rejected lookup strategy.
+
+Byte matching before String construction helps the default-token screen but scales poorly with large custom sets. It also repeats String construction when the matcher's Unicode or escaped-field fallback returns false. This unqualified strategy is rejected. A future bounded ASCII path would need a match/miss/fallback result and broad controls before production use.
+
+## Remaining streaming question
+
+The [streaming profiles](stream-profiles/leaf-summary.json) do not show the dominant retain/release hotspot seen in the rejected Set-iteration design. The parallel streaming penalty therefore remains unresolved. Sampling counts alone do not explain it. The next experiment should isolate the indexed-record conversion and per-chunk dispatch from scanning and asynchronous delivery, with the same native-output contracts. Do not add a reader-specific shortcut or change scheduling to hide this cost.
+
+## Correctness and limits
+
+VALIDATION_STATUS
+
+The new 42-line test file uses explicit fixture types. It checks decoder eligibility and String membership after mutation of the original Set. Existing eager and streamed tests exercise both column policies, Unicode equivalence, invalid UTF-8 repair, quotes, whitespace, and empty tokens. Passing this machine's compiler does not establish compatibility with every CI compiler.
+
+These results qualify this decoder arrangement on this machine and toolchain. They do not claim a general improvement in every CSV workload. Small increases remain in the complete observations. The standard regression policy is not full numerical certification.
+
+## Evidence
+
+- [Artifact hashes](artifact-sha256.json)
+- [Complete resource controls](controls.md)
+- [Streaming resource follow-up](followup.md)
+- [Rejected-design screens](screens.md)
+- [Ownership profile leaf summary](ownership-profiles/leaf-summary.json)
+- [Shared Set decoder assembly](ownership-profiles/set-iteration-decoder-linked.txt.gz)
+- [Final build receipt](build-receipts/production/build.json)
+- [Grammar comparison](grammar-result.json)
+- [Standard benchmark artifacts](standardized-artifacts.tar.gz)
+- [Source change](source-change.patch.gz)
+- [Trial patches and frozen parent sources](experiments.tar.gz)
+
+The archived controllers retain their original absolute input paths and file hashes. The experiments archive contains input contracts and trial patches. Reference datasets remain in their existing benchmark cache and named source records. To reproduce on another checkout, resolve those paths while keeping byte hashes, policies, and native output contracts unchanged.

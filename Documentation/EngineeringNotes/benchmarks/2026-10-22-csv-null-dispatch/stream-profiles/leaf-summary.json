@@ -1,0 +1,606 @@
+[
+  {
+    "profile": "candidate-parallel.sample",
+    "sha256": "fde53cc77621e91d021bb662fa94eefa614035c464550bfefd0c29381fb4fe51",
+    "leaf_frames": [
+      {
+        "symbol": "__workq_kernreturn",
+        "image": "libsystem_kernel.dylib",
+        "samples": 8501
+      },
+      {
+        "symbol": "mach_msg2_trap",
+        "image": "libsystem_kernel.dylib",
+        "samples": 1065
+      },
+      {
+        "symbol": "specialized SystemsCSVParser.scanRecords<A, B>(buffer:range:fieldType:maximumRows:output:)",
+        "image": "candidate",
+        "samples": 571
+      },
+      {
+        "symbol": "specialized static VectorizedByteParsers.parseDouble(buffer:offset:)",
+        "image": "candidate",
+        "samples": 522
+      },
+      {
+        "symbol": "specialized CSVColumnAttempt.append<A>(_:_:_:_:_:sourceOffset:)",
+        "image": "candidate",
+        "samples": 130
+      },
+      {
+        "symbol": "start_wqthread",
+        "image": "libsystem_pthread.dylib",
+        "samples": 109
+      },
+      {
+        "symbol": "destroy for ClosedRange<>.Index",
+        "image": "libswiftCore.dylib",
+        "samples": 107
+      },
+      {
+        "symbol": "specialized CSVColumnConversion.append<A>(buffer:records:startRow:rowCount:column:sourceOffset:)",
+        "image": "candidate",
+        "samples": 72
+      },
+      {
+        "symbol": "specialized static VectorizedByteParsers.parseString(buffer:offset:)",
+        "image": "candidate",
+        "samples": 65
+      },
+      {
+        "symbol": "DYLD-STUB$$swift_isUniquelyReferenced_nonNull_native",
+        "image": "candidate",
+        "samples": 64
+      },
+      {
+        "symbol": "specialized static String._uncheckedFromUTF8(_:asciiPreScanResult:)",
+        "image": "libswiftCore.dylib",
+        "samples": 61
+      },
+      {
+        "symbol": "swift_bridgeObjectRelease",
+        "image": "libswiftCore.dylib",
+        "samples": 53
+      },
+      {
+        "symbol": "_stringCompareWithSmolCheck(_:_:expecting:)",
+        "image": "libswiftCore.dylib",
+        "samples": 51
+      },
+      {
+        "symbol": "_allASCII(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 48
+      },
+      {
+        "symbol": "swift_isUniquelyReferenced_nonNull_native",
+        "image": "libswiftCore.dylib",
+        "samples": 38
+      },
+      {
+        "symbol": "swift_arrayDestroy",
+        "image": "libswiftCore.dylib",
+        "samples": 29
+      },
+      {
+        "symbol": "static String._fromUTF8Repairing(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 28
+      },
+      {
+        "symbol": "getEnumTagSinglePayload for Character",
+        "image": "libswiftCore.dylib",
+        "samples": 23
+      },
+      {
+        "symbol": "validateUTF8(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 17
+      },
+      {
+        "symbol": "mach_absolute_time",
+        "image": "libsystem_kernel.dylib",
+        "samples": 16
+      },
+      {
+        "symbol": "___chkstk_darwin",
+        "image": "libsystem_pthread.dylib",
+        "samples": 14
+      },
+      {
+        "symbol": "syscall_thread_switch",
+        "image": "libsystem_kernel.dylib",
+        "samples": 14
+      },
+      {
+        "symbol": "swift_bridgeObjectRetain",
+        "image": "libswiftCore.dylib",
+        "samples": 11
+      },
+      {
+        "symbol": "__ulock_wait",
+        "image": "libsystem_kernel.dylib",
+        "samples": 10
+      },
+      {
+        "symbol": "type metadata accessor for String.Encoding",
+        "image": "Foundation",
+        "samples": 10
+      },
+      {
+        "symbol": "DYLD-STUB$$_stringCompareWithSmolCheck(_:_:expecting:)",
+        "image": "candidate",
+        "samples": 9
+      },
+      {
+        "symbol": "DYLD-STUB$$type metadata accessor for String.Encoding",
+        "image": "candidate",
+        "samples": 9
+      },
+      {
+        "symbol": "DYLD-STUB$$static String._fromUTF8Repairing(_:)",
+        "image": "candidate",
+        "samples": 7
+      },
+      {
+        "symbol": "CSVNullMatcher.contains(buffer:offset:)",
+        "image": "candidate",
+        "samples": 5
+      },
+      {
+        "symbol": "DYLD-STUB$$swift_bridgeObjectRetain",
+        "image": "candidate",
+        "samples": 5
+      },
+      {
+        "symbol": "_xzm_xzone_malloc_tiny",
+        "image": "libsystem_malloc.dylib",
+        "samples": 5
+      }
+    ]
+  },
+  {
+    "profile": "candidate-serial.sample",
+    "sha256": "d0c31ebbfbd94e6e4d3aeab4528bf8a565b2fee3da3cd9fd56c1364df0016e2e",
+    "leaf_frames": [
+      {
+        "symbol": "mach_msg2_trap",
+        "image": "libsystem_kernel.dylib",
+        "samples": 2368
+      },
+      {
+        "symbol": "specialized static VectorizedByteParsers.parseDouble(buffer:offset:)",
+        "image": "candidate",
+        "samples": 678
+      },
+      {
+        "symbol": "specialized SystemsCSVParser.scanRecords<A, B>(buffer:range:fieldType:maximumRows:output:)",
+        "image": "candidate",
+        "samples": 625
+      },
+      {
+        "symbol": "specialized CSVColumnAttempt.append<A>(_:_:_:_:_:sourceOffset:)",
+        "image": "candidate",
+        "samples": 202
+      },
+      {
+        "symbol": "destroy for ClosedRange<>.Index",
+        "image": "libswiftCore.dylib",
+        "samples": 140
+      },
+      {
+        "symbol": "DYLD-STUB$$swift_isUniquelyReferenced_nonNull_native",
+        "image": "candidate",
+        "samples": 90
+      },
+      {
+        "symbol": "specialized static String._uncheckedFromUTF8(_:asciiPreScanResult:)",
+        "image": "libswiftCore.dylib",
+        "samples": 76
+      },
+      {
+        "symbol": "specialized static VectorizedByteParsers.parseString(buffer:offset:)",
+        "image": "candidate",
+        "samples": 59
+      },
+      {
+        "symbol": "swift_bridgeObjectRelease",
+        "image": "libswiftCore.dylib",
+        "samples": 58
+      },
+      {
+        "symbol": "specialized CSVColumnConversion.append<A>(buffer:records:startRow:rowCount:column:sourceOffset:)",
+        "image": "candidate",
+        "samples": 57
+      },
+      {
+        "symbol": "swift_isUniquelyReferenced_nonNull_native",
+        "image": "libswiftCore.dylib",
+        "samples": 55
+      },
+      {
+        "symbol": "_allASCII(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 48
+      },
+      {
+        "symbol": "_stringCompareWithSmolCheck(_:_:expecting:)",
+        "image": "libswiftCore.dylib",
+        "samples": 47
+      },
+      {
+        "symbol": "getEnumTagSinglePayload for Character",
+        "image": "libswiftCore.dylib",
+        "samples": 43
+      },
+      {
+        "symbol": "swift_arrayDestroy",
+        "image": "libswiftCore.dylib",
+        "samples": 34
+      },
+      {
+        "symbol": "static String._fromUTF8Repairing(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 27
+      },
+      {
+        "symbol": "validateUTF8(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 16
+      },
+      {
+        "symbol": "___chkstk_darwin",
+        "image": "libsystem_pthread.dylib",
+        "samples": 14
+      },
+      {
+        "symbol": "DYLD-STUB$$_stringCompareWithSmolCheck(_:_:expecting:)",
+        "image": "candidate",
+        "samples": 12
+      },
+      {
+        "symbol": "swift_bridgeObjectRetain",
+        "image": "libswiftCore.dylib",
+        "samples": 12
+      },
+      {
+        "symbol": "type metadata accessor for String.Encoding",
+        "image": "Foundation",
+        "samples": 10
+      },
+      {
+        "symbol": "DYLD-STUB$$static String._fromUTF8Repairing(_:)",
+        "image": "candidate",
+        "samples": 7
+      },
+      {
+        "symbol": "DYLD-STUB$$swift_bridgeObjectRetain",
+        "image": "candidate",
+        "samples": 7
+      },
+      {
+        "symbol": "DYLD-STUB$$type metadata accessor for String.Encoding",
+        "image": "candidate",
+        "samples": 7
+      },
+      {
+        "symbol": "mach_absolute_time",
+        "image": "libsystem_kernel.dylib",
+        "samples": 5
+      }
+    ]
+  },
+  {
+    "profile": "parent-parallel.sample",
+    "sha256": "87d570c9a374c40ea41bf36f73730337a37212ba841f47004179e16c5754a316",
+    "leaf_frames": [
+      {
+        "symbol": "__workq_kernreturn",
+        "image": "libsystem_kernel.dylib",
+        "samples": 8240
+      },
+      {
+        "symbol": "mach_msg2_trap",
+        "image": "libsystem_kernel.dylib",
+        "samples": 1113
+      },
+      {
+        "symbol": "specialized static VectorizedByteParsers.parseDouble(buffer:offset:)",
+        "image": "parent",
+        "samples": 777
+      },
+      {
+        "symbol": "specialized SystemsCSVParser.scanRecords<A, B>(buffer:range:fieldType:maximumRows:output:)",
+        "image": "parent",
+        "samples": 545
+      },
+      {
+        "symbol": "start_wqthread",
+        "image": "libsystem_pthread.dylib",
+        "samples": 277
+      },
+      {
+        "symbol": "specialized CSVColumnAttempt.append<A>(_:_:_:_:_:sourceOffset:)",
+        "image": "parent",
+        "samples": 202
+      },
+      {
+        "symbol": "DYLD-STUB$$swift_isUniquelyReferenced_nonNull_native",
+        "image": "parent",
+        "samples": 105
+      },
+      {
+        "symbol": "specialized static String._uncheckedFromUTF8(_:asciiPreScanResult:)",
+        "image": "libswiftCore.dylib",
+        "samples": 100
+      },
+      {
+        "symbol": "_stringCompareWithSmolCheck(_:_:expecting:)",
+        "image": "libswiftCore.dylib",
+        "samples": 94
+      },
+      {
+        "symbol": "destroy for ClosedRange<>.Index",
+        "image": "libswiftCore.dylib",
+        "samples": 82
+      },
+      {
+        "symbol": "specialized static VectorizedByteParsers.parseString(buffer:offset:)",
+        "image": "parent",
+        "samples": 75
+      },
+      {
+        "symbol": "swift_isUniquelyReferenced_nonNull_native",
+        "image": "libswiftCore.dylib",
+        "samples": 71
+      },
+      {
+        "symbol": "specialized Sequence<>.contains(_:)",
+        "image": "parent",
+        "samples": 70
+      },
+      {
+        "symbol": "_allASCII(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 61
+      },
+      {
+        "symbol": "specialized static CSVColumnAttempt.appendRows<A>(_:_:_:_:_:decoder:validates:into:)",
+        "image": "parent",
+        "samples": 53
+      },
+      {
+        "symbol": "swift_bridgeObjectRelease",
+        "image": "libswiftCore.dylib",
+        "samples": 43
+      },
+      {
+        "symbol": "static String._fromUTF8Repairing(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 39
+      },
+      {
+        "symbol": "validateUTF8(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 28
+      },
+      {
+        "symbol": "DYLD-STUB$$_stringCompareWithSmolCheck(_:_:expecting:)",
+        "image": "parent",
+        "samples": 24
+      },
+      {
+        "symbol": "swift_arrayDestroy",
+        "image": "libswiftCore.dylib",
+        "samples": 24
+      },
+      {
+        "symbol": "getEnumTagSinglePayload for Character",
+        "image": "libswiftCore.dylib",
+        "samples": 19
+      },
+      {
+        "symbol": "swift_bridgeObjectRetain",
+        "image": "libswiftCore.dylib",
+        "samples": 19
+      },
+      {
+        "symbol": "DYLD-STUB$$type metadata accessor for String.Encoding",
+        "image": "parent",
+        "samples": 15
+      },
+      {
+        "symbol": "__ulock_wait",
+        "image": "libsystem_kernel.dylib",
+        "samples": 15
+      },
+      {
+        "symbol": "mach_absolute_time",
+        "image": "libsystem_kernel.dylib",
+        "samples": 15
+      },
+      {
+        "symbol": "DYLD-STUB$$static String._fromUTF8Repairing(_:)",
+        "image": "parent",
+        "samples": 14
+      },
+      {
+        "symbol": "___chkstk_darwin",
+        "image": "libsystem_pthread.dylib",
+        "samples": 14
+      },
+      {
+        "symbol": "DYLD-STUB$$swift_bridgeObjectRetain",
+        "image": "parent",
+        "samples": 13
+      },
+      {
+        "symbol": "type metadata accessor for String.Encoding",
+        "image": "Foundation",
+        "samples": 13
+      },
+      {
+        "symbol": "DYLD-STUB$$swift_bridgeObjectRelease",
+        "image": "parent",
+        "samples": 11
+      },
+      {
+        "symbol": "syscall_thread_switch",
+        "image": "libsystem_kernel.dylib",
+        "samples": 7
+      },
+      {
+        "symbol": "__ulock_wake",
+        "image": "libsystem_kernel.dylib",
+        "samples": 6
+      }
+    ]
+  },
+  {
+    "profile": "parent-serial.sample",
+    "sha256": "9c2c9c26acad49ee4a2abd894fc4ff5706efa4212c11c77cfa92b2a50e650cd3",
+    "leaf_frames": [
+      {
+        "symbol": "mach_msg2_trap",
+        "image": "libsystem_kernel.dylib",
+        "samples": 2346
+      },
+      {
+        "symbol": "specialized static VectorizedByteParsers.parseDouble(buffer:offset:)",
+        "image": "parent",
+        "samples": 680
+      },
+      {
+        "symbol": "specialized SystemsCSVParser.scanRecords<A, B>(buffer:range:fieldType:maximumRows:output:)",
+        "image": "parent",
+        "samples": 502
+      },
+      {
+        "symbol": "specialized CSVColumnAttempt.append<A>(_:_:_:_:_:sourceOffset:)",
+        "image": "parent",
+        "samples": 206
+      },
+      {
+        "symbol": "DYLD-STUB$$swift_isUniquelyReferenced_nonNull_native",
+        "image": "parent",
+        "samples": 97
+      },
+      {
+        "symbol": "specialized static String._uncheckedFromUTF8(_:asciiPreScanResult:)",
+        "image": "libswiftCore.dylib",
+        "samples": 95
+      },
+      {
+        "symbol": "specialized static VectorizedByteParsers.parseString(buffer:offset:)",
+        "image": "parent",
+        "samples": 82
+      },
+      {
+        "symbol": "destroy for ClosedRange<>.Index",
+        "image": "libswiftCore.dylib",
+        "samples": 79
+      },
+      {
+        "symbol": "_stringCompareWithSmolCheck(_:_:expecting:)",
+        "image": "libswiftCore.dylib",
+        "samples": 74
+      },
+      {
+        "symbol": "_allASCII(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 65
+      },
+      {
+        "symbol": "specialized Sequence<>.contains(_:)",
+        "image": "parent",
+        "samples": 64
+      },
+      {
+        "symbol": "swift_isUniquelyReferenced_nonNull_native",
+        "image": "libswiftCore.dylib",
+        "samples": 59
+      },
+      {
+        "symbol": "specialized static CSVColumnAttempt.appendRows<A>(_:_:_:_:_:decoder:validates:into:)",
+        "image": "parent",
+        "samples": 56
+      },
+      {
+        "symbol": "swift_bridgeObjectRelease",
+        "image": "libswiftCore.dylib",
+        "samples": 44
+      },
+      {
+        "symbol": "static String._fromUTF8Repairing(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 41
+      },
+      {
+        "symbol": "getEnumTagSinglePayload for Character",
+        "image": "libswiftCore.dylib",
+        "samples": 27
+      },
+      {
+        "symbol": "validateUTF8(_:)",
+        "image": "libswiftCore.dylib",
+        "samples": 25
+      },
+      {
+        "symbol": "swift_arrayDestroy",
+        "image": "libswiftCore.dylib",
+        "samples": 17
+      },
+      {
+        "symbol": "DYLD-STUB$$type metadata accessor for String.Encoding",
+        "image": "parent",
+        "samples": 15
+      },
+      {
+        "symbol": "DYLD-STUB$$_stringCompareWithSmolCheck(_:_:expecting:)",
+        "image": "parent",
+        "samples": 14
+      },
+      {
+        "symbol": "DYLD-STUB$$static String._fromUTF8Repairing(_:)",
+        "image": "parent",
+        "samples": 13
+      },
+      {
+        "symbol": "swift_bridgeObjectRetain",
+        "image": "libswiftCore.dylib",
+        "samples": 13
+      },
+      {
+        "symbol": "DYLD-STUB$$swift_bridgeObjectRelease",
+        "image": "parent",
+        "samples": 12
+      },
+      {
+        "symbol": "___chkstk_darwin",
+        "image": "libsystem_pthread.dylib",
+        "samples": 12
+      },
+      {
+        "symbol": "type metadata accessor for String.Encoding",
+        "image": "Foundation",
+        "samples": 10
+      },
+      {
+        "symbol": "DYLD-STUB$$swift_bridgeObjectRetain",
+        "image": "parent",
+        "samples": 5
+      },
+      {
+        "symbol": "mach_absolute_time",
+        "image": "libsystem_kernel.dylib",
+        "samples": 5
+      },
+      {
+        "symbol": "specialized static VectorizedByteParsers.parseLongDouble(buffer:start:end:)",
+        "image": "parent",
+        "samples": 5
+      }
+    ]
+  }
+]

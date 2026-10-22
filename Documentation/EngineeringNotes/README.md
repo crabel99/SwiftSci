@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [CSV null-decoder dispatch experiment](benchmarks/2026-10-22-csv-null-dispatch/README.md) records the local direct-key trial, eager CPU gains, reproduced parallel-streaming cost, ownership diagnosis, and the decision to defer promotion.
+
 - [Bounded CSV String null lookup](benchmarks/2026-10-22-csv-small-null-lookup/README.md) records the conditional two-token CPU benefit, default-set costs, rejected alternatives, 2,080 validated reads, and 2,052 follow-up observations.
 
 - [CSV vector mask reduction](benchmarks/2026-10-22-csv-vector-mask-reduction/README.md) records exact platform reductions, 1,344 validated reference and control reads, and the measured CPU benefit with unchanged storage policy.

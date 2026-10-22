@@ -1,0 +1,90 @@
+[
+  {
+    "label": "standardized-prepare",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "prepare",
+      "--profile",
+      "tabular-smoke"
+    ],
+    "start": 1792700141.735444,
+    "exit_code": 0,
+    "elapsed_seconds": 0.07717585563659668
+  },
+  {
+    "label": "standardized-run",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "run",
+      "--profile",
+      "tabular-smoke",
+      "--mode",
+      "production-default",
+      "--engines",
+      "swiftsci,pandas",
+      "--swift-worker",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/standard-worker/SwiftSciBenchmarkWorker",
+      "--python",
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "--output",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/standardized"
+    ],
+    "start": 1792700141.812916,
+    "exit_code": 0,
+    "elapsed_seconds": 90.4688868522644
+  },
+  {
+    "label": "standardized-audit",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "audit",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/standardized"
+    ],
+    "start": 1792700232.2821271,
+    "exit_code": 0,
+    "elapsed_seconds": 0.07502388954162598
+  },
+  {
+    "label": "acceptance",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/run-acceptance.py"
+    ],
+    "start": 1792700232.35745,
+    "exit_code": 0,
+    "elapsed_seconds": 149.91380190849304
+  },
+  {
+    "label": "mode-controls",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/run-mode-controls.py"
+    ],
+    "start": 1792700382.271698,
+    "exit_code": 0,
+    "elapsed_seconds": 13.60908579826355
+  },
+  {
+    "label": "text-controls",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/run-text-controls.py"
+    ],
+    "start": 1792700395.881239,
+    "exit_code": 0,
+    "elapsed_seconds": 19.761477947235107
+  },
+  {
+    "label": "long-key-controls",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/run-long-key-controls.py"
+    ],
+    "start": 1792700415.643189,
+    "exit_code": 0,
+    "elapsed_seconds": 12.653422117233276
+  }
+]

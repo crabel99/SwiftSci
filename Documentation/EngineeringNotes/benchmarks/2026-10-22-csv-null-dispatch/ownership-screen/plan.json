@@ -1,0 +1,231 @@
+{
+  "binaries": {
+    "current": {
+      "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/ResourceProbe",
+      "sha256": "4a5f12e221d837b27f2292f0710a4af665edca68023065c2c165b21c42fdcf44"
+    },
+    "inline-pair": {
+      "path": "/private/tmp/swiftsci-csv-null-dispatch-20261022/build/inline-pair/ResourceProbe",
+      "sha256": "5ffa9fdd7306416d87517f2501dfdc86b8e004b27e4256d104063cf21b8b78fc"
+    },
+    "set-iteration": {
+      "path": "/private/tmp/swiftsci-csv-null-dispatch-20261022/build/set-iteration/ResourceProbe",
+      "sha256": "fbe83bb4712a153f1c704fcde03fbe339ebb0b82215465e71c024b2a487c73b9"
+    },
+    "set-isolated": {
+      "path": "/private/tmp/swiftsci-csv-null-dispatch-20261022/build/set-isolated/ResourceProbe",
+      "sha256": "0065c6992d34e65d7750057fb8981800dc1c55945c8884db9cf747f34dd33dd1"
+    }
+  },
+  "sources": {
+    "current": "/private/tmp/swiftsci-csv-count-only-scan-20261021",
+    "inline-pair": "/private/tmp/swiftsci-csv-null-dispatch-20261022/inline-pair-trial",
+    "set-iteration": "/private/tmp/swiftsci-csv-null-dispatch-20261022/set-iteration-trial",
+    "set-isolated": "/private/tmp/swiftsci-csv-null-dispatch-20261022/set-isolated-trial"
+  },
+  "orders": [
+    [
+      "current",
+      "inline-pair",
+      "set-iteration",
+      "set-isolated"
+    ],
+    [
+      "inline-pair",
+      "set-iteration",
+      "set-isolated",
+      "current"
+    ],
+    [
+      "set-iteration",
+      "set-isolated",
+      "current",
+      "inline-pair"
+    ],
+    [
+      "set-isolated",
+      "current",
+      "inline-pair",
+      "set-iteration"
+    ],
+    [
+      "set-isolated",
+      "set-iteration",
+      "inline-pair",
+      "current"
+    ],
+    [
+      "current",
+      "set-isolated",
+      "set-iteration",
+      "inline-pair"
+    ],
+    [
+      "inline-pair",
+      "current",
+      "set-isolated",
+      "set-iteration"
+    ],
+    [
+      "set-iteration",
+      "inline-pair",
+      "current",
+      "set-isolated"
+    ]
+  ],
+  "cases": [
+    [
+      "Aotizhongxin",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/Aotizhongxin.json",
+      "known"
+    ],
+    [
+      "Wanliu",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/Wanliu.json",
+      "known"
+    ],
+    [
+      "energy",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json",
+      "known"
+    ],
+    [
+      "energy",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json",
+      "infer"
+    ],
+    [
+      "energy-date-full",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy-date-full.json",
+      "known"
+    ],
+    [
+      "late-text",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/late-text.json",
+      "infer"
+    ],
+    [
+      "none-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/none-nulls-0.json",
+      "known"
+    ],
+    [
+      "pair-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/pair-nulls-0.json",
+      "known"
+    ],
+    [
+      "pair-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/pair-nulls-50.json",
+      "known"
+    ],
+    [
+      "four-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/four-nulls-0.json",
+      "known"
+    ],
+    [
+      "four-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/four-nulls-50.json",
+      "known"
+    ],
+    [
+      "default-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/default-nulls-0.json",
+      "known"
+    ],
+    [
+      "default-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/default-nulls-50.json",
+      "known"
+    ],
+    [
+      "default-nulls-90",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/default-nulls-90.json",
+      "known"
+    ],
+    [
+      "large-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/large-nulls-0.json",
+      "known"
+    ],
+    [
+      "large-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/large-nulls-50.json",
+      "known"
+    ],
+    [
+      "all-string-none-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-none-nulls-0.json",
+      "known"
+    ],
+    [
+      "all-string-pair-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-pair-nulls-0.json",
+      "known"
+    ],
+    [
+      "all-string-pair-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-pair-nulls-50.json",
+      "known"
+    ],
+    [
+      "all-string-four-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-four-nulls-0.json",
+      "known"
+    ],
+    [
+      "all-string-four-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-four-nulls-50.json",
+      "known"
+    ],
+    [
+      "all-string-default-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-0.json",
+      "known"
+    ],
+    [
+      "all-string-default-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-50.json",
+      "known"
+    ],
+    [
+      "all-string-default-nulls-90",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-90.json",
+      "known"
+    ],
+    [
+      "all-string-large-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-large-nulls-0.json",
+      "known"
+    ],
+    [
+      "all-string-large-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-large-nulls-50.json",
+      "known"
+    ],
+    [
+      "width-64-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-64-rows-257.json",
+      "known"
+    ],
+    [
+      "width-64-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-64-rows-32769.json",
+      "known"
+    ]
+  ],
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "controller_sha256": "33558f021995f37ae42eaa1b35e4ef0fe9ffa9e3961e8cd0a62f397f7600072d",
+  "scope": "Screening only. Native hash randomization; warmed input, matched native outputs and policies. Eight rotated and reversed orders. No source edits/builds/tests during samples."
+}

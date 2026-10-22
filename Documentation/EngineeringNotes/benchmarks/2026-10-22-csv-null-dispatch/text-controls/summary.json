@@ -1,0 +1,1154 @@
+[
+  {
+    "case": "none-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 1515000.0,
+      "total_ns": 1334750.0,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "none-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 1508000.0,
+      "total_ns": 1333145.5,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "none-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 1441500.0,
+      "total_ns": 1458604.5,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "none-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 1436000.0,
+      "total_ns": 1457396.5,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "one-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 1847000.0,
+      "total_ns": 1667874.5,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "one-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 1812500.0,
+      "total_ns": 1626937.5,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "one-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 1768500.0,
+      "total_ns": 1786875.0,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "one-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 1725500.0,
+      "total_ns": 1741146.0,
+      "process_peak_held_bytes": 9519104.0
+    }
+  },
+  {
+    "case": "one-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 1799000.0,
+      "total_ns": 1618104.0,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "one-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 1764000.0,
+      "total_ns": 1582938.0,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "one-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 1735500.0,
+      "total_ns": 1756479.5,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "one-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 1696500.0,
+      "total_ns": 1715417.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "pair-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 1897000.0,
+      "total_ns": 1716895.5,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "pair-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 1845500.0,
+      "total_ns": 1667729.5,
+      "process_peak_held_bytes": 9584640.0
+    }
+  },
+  {
+    "case": "pair-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 1835000.0,
+      "total_ns": 1849458.0,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "pair-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 1767000.0,
+      "total_ns": 1786750.0,
+      "process_peak_held_bytes": 9519104.0
+    }
+  },
+  {
+    "case": "pair-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 1842500.0,
+      "total_ns": 1663771.0,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "pair-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 1791000.0,
+      "total_ns": 1615333.5,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "pair-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 1777000.0,
+      "total_ns": 1796542.5,
+      "process_peak_held_bytes": 9469952.0
+    }
+  },
+  {
+    "case": "pair-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 1723000.0,
+      "total_ns": 1741416.5,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "four-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3855500.0,
+      "total_ns": 2636292.0,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "four-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3811000.0,
+      "total_ns": 2573770.0,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "four-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3744500.0,
+      "total_ns": 3771521.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "four-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3780500.0,
+      "total_ns": 3802250.0,
+      "process_peak_held_bytes": 9519104.0
+    }
+  },
+  {
+    "case": "four-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3760000.0,
+      "total_ns": 2460396.0,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "case": "four-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3665500.0,
+      "total_ns": 2394666.5,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "four-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3526000.0,
+      "total_ns": 3545583.5,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "four-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3524000.0,
+      "total_ns": 3542208.0,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "default-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 2790000.0,
+      "total_ns": 2613979.0,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "default-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 2823000.0,
+      "total_ns": 2638791.0,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "default-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 2853500.0,
+      "total_ns": 2874354.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "default-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 2572000.0,
+      "total_ns": 2590667.0,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "case": "default-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 2539500.0,
+      "total_ns": 2399000.5,
+      "process_peak_held_bytes": 9592832.0
+    }
+  },
+  {
+    "case": "default-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 2541500.0,
+      "total_ns": 2381063.0,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "default-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 2522500.0,
+      "total_ns": 2550479.0,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "case": "default-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 2465000.0,
+      "total_ns": 2499417.0,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "case": "default-nulls-90",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 2079000.0,
+      "total_ns": 1930708.0,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "default-nulls-90",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 2075500.0,
+      "total_ns": 1924208.5,
+      "process_peak_held_bytes": 9584640.0
+    }
+  },
+  {
+    "case": "default-nulls-90",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 1997000.0,
+      "total_ns": 2043896.0,
+      "process_peak_held_bytes": 9519104.0
+    }
+  },
+  {
+    "case": "default-nulls-90",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 2003500.0,
+      "total_ns": 2045250.0,
+      "process_peak_held_bytes": 9519104.0
+    }
+  },
+  {
+    "case": "sixteen-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3837000.0,
+      "total_ns": 2584542.0,
+      "process_peak_held_bytes": 9584640.0
+    }
+  },
+  {
+    "case": "sixteen-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3846000.0,
+      "total_ns": 2593917.0,
+      "process_peak_held_bytes": 9601024.0
+    }
+  },
+  {
+    "case": "sixteen-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3647000.0,
+      "total_ns": 3664104.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "sixteen-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3747500.0,
+      "total_ns": 3766395.5,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "case": "sixteen-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3870500.0,
+      "total_ns": 2581437.5,
+      "process_peak_held_bytes": 9666560.0
+    }
+  },
+  {
+    "case": "sixteen-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3773500.0,
+      "total_ns": 2543750.0,
+      "process_peak_held_bytes": 9650176.0
+    }
+  },
+  {
+    "case": "sixteen-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3652500.0,
+      "total_ns": 3671729.5,
+      "process_peak_held_bytes": 9584640.0
+    }
+  },
+  {
+    "case": "sixteen-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3714500.0,
+      "total_ns": 3737167.0,
+      "process_peak_held_bytes": 9601024.0
+    }
+  },
+  {
+    "case": "seventeen-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 2984500.0,
+      "total_ns": 2505187.5,
+      "process_peak_held_bytes": 9584640.0
+    }
+  },
+  {
+    "case": "seventeen-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 2824000.0,
+      "total_ns": 2345833.5,
+      "process_peak_held_bytes": 9584640.0
+    }
+  },
+  {
+    "case": "seventeen-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 2659000.0,
+      "total_ns": 2672417.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "seventeen-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 2836500.0,
+      "total_ns": 2853833.5,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "seventeen-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 2965500.0,
+      "total_ns": 2472896.0,
+      "process_peak_held_bytes": 9699328.0
+    }
+  },
+  {
+    "case": "seventeen-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 2793000.0,
+      "total_ns": 2319167.0,
+      "process_peak_held_bytes": 9666560.0
+    }
+  },
+  {
+    "case": "seventeen-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 2688500.0,
+      "total_ns": 2704916.0,
+      "process_peak_held_bytes": 9617408.0
+    }
+  },
+  {
+    "case": "seventeen-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 2821000.0,
+      "total_ns": 2849729.5,
+      "process_peak_held_bytes": 9633792.0
+    }
+  },
+  {
+    "case": "large-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 20464000.0,
+      "total_ns": 18906395.5,
+      "process_peak_held_bytes": 10076160.0
+    }
+  },
+  {
+    "case": "large-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 20541000.0,
+      "total_ns": 18926770.5,
+      "process_peak_held_bytes": 10108928.0
+    }
+  },
+  {
+    "case": "large-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 20941000.0,
+      "total_ns": 20998584.0,
+      "process_peak_held_bytes": 10027008.0
+    }
+  },
+  {
+    "case": "large-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 20304500.0,
+      "total_ns": 20343791.5,
+      "process_peak_held_bytes": 10076160.0
+    }
+  },
+  {
+    "case": "large-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 20480500.0,
+      "total_ns": 18974437.5,
+      "process_peak_held_bytes": 10223616.0
+    }
+  },
+  {
+    "case": "large-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 20637000.0,
+      "total_ns": 19114478.5,
+      "process_peak_held_bytes": 10256384.0
+    }
+  },
+  {
+    "case": "large-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 20449000.0,
+      "total_ns": 20497770.5,
+      "process_peak_held_bytes": 10158080.0
+    }
+  },
+  {
+    "case": "large-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 20301000.0,
+      "total_ns": 20334875.5,
+      "process_peak_held_bytes": 10207232.0
+    }
+  },
+  {
+    "case": "all-string-none-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 1881500.0,
+      "total_ns": 1473125.0,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "all-string-none-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 1877000.0,
+      "total_ns": 1463229.5,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "case": "all-string-none-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 1796000.0,
+      "total_ns": 1812270.5,
+      "process_peak_held_bytes": 9469952.0
+    }
+  },
+  {
+    "case": "all-string-none-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 1808000.0,
+      "total_ns": 1826936.5,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "all-string-one-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 2263500.0,
+      "total_ns": 1787916.5,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "all-string-one-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 2200000.0,
+      "total_ns": 1743709.0,
+      "process_peak_held_bytes": 9519104.0
+    }
+  },
+  {
+    "case": "all-string-one-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 2178500.0,
+      "total_ns": 2196209.0,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "all-string-one-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 2136000.0,
+      "total_ns": 2155729.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "all-string-one-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 2222000.0,
+      "total_ns": 1731103.5,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "all-string-one-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 2153500.0,
+      "total_ns": 1697770.5,
+      "process_peak_held_bytes": 9519104.0
+    }
+  },
+  {
+    "case": "all-string-one-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 2123000.0,
+      "total_ns": 2139895.5,
+      "process_peak_held_bytes": 9453568.0
+    }
+  },
+  {
+    "case": "all-string-one-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 2072000.0,
+      "total_ns": 2093479.5,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "all-string-pair-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 2427000.0,
+      "total_ns": 1870125.0,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "all-string-pair-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 2301500.0,
+      "total_ns": 1789999.5,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "all-string-pair-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 2308000.0,
+      "total_ns": 2323875.5,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "all-string-pair-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 2185000.0,
+      "total_ns": 2203958.5,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "all-string-pair-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 2317000.0,
+      "total_ns": 1792792.5,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "all-string-pair-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 2195000.0,
+      "total_ns": 1713271.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "all-string-pair-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 2237500.0,
+      "total_ns": 2270771.0,
+      "process_peak_held_bytes": 9420800.0
+    }
+  },
+  {
+    "case": "all-string-pair-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 2121000.0,
+      "total_ns": 2152541.0,
+      "process_peak_held_bytes": 9469952.0
+    }
+  },
+  {
+    "case": "all-string-four-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3928000.0,
+      "total_ns": 2807042.0,
+      "process_peak_held_bytes": 9584640.0
+    }
+  },
+  {
+    "case": "all-string-four-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3749500.0,
+      "total_ns": 2667333.5,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "case": "all-string-four-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3805000.0,
+      "total_ns": 3818500.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "all-string-four-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3642000.0,
+      "total_ns": 3663458.5,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "all-string-four-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3587000.0,
+      "total_ns": 2468750.0,
+      "process_peak_held_bytes": 9519104.0
+    }
+  },
+  {
+    "case": "all-string-four-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3660000.0,
+      "total_ns": 2539958.5,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "case": "all-string-four-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3388000.0,
+      "total_ns": 3418875.0,
+      "process_peak_held_bytes": 9437184.0
+    }
+  },
+  {
+    "case": "all-string-four-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3489000.0,
+      "total_ns": 3523978.5,
+      "process_peak_held_bytes": 9469952.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3850000.0,
+      "total_ns": 2659500.0,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3866000.0,
+      "total_ns": 2644937.5,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 4048000.0,
+      "total_ns": 4063874.5,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 4196500.0,
+      "total_ns": 4216479.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3665000.0,
+      "total_ns": 2523687.5,
+      "process_peak_held_bytes": 9519104.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3667000.0,
+      "total_ns": 2503417.0,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3623000.0,
+      "total_ns": 3635604.5,
+      "process_peak_held_bytes": 9469952.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3644000.0,
+      "total_ns": 3664979.0,
+      "process_peak_held_bytes": 9519104.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-90",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3149000.0,
+      "total_ns": 2170250.5,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-90",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3272500.0,
+      "total_ns": 2285624.0,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-90",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3039000.0,
+      "total_ns": 3057749.5,
+      "process_peak_held_bytes": 9453568.0
+    }
+  },
+  {
+    "case": "all-string-default-nulls-90",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3120000.0,
+      "total_ns": 3153937.5,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "all-string-sixteen-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3748500.0,
+      "total_ns": 2667208.5,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "case": "all-string-sixteen-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3818000.0,
+      "total_ns": 2684937.5,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "all-string-sixteen-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3694000.0,
+      "total_ns": 3711896.0,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "all-string-sixteen-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3694000.0,
+      "total_ns": 3711396.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "all-string-sixteen-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3737000.0,
+      "total_ns": 2639916.5,
+      "process_peak_held_bytes": 9601024.0
+    }
+  },
+  {
+    "case": "all-string-sixteen-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3766500.0,
+      "total_ns": 2635313.0,
+      "process_peak_held_bytes": 9617408.0
+    }
+  },
+  {
+    "case": "all-string-sixteen-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3568000.0,
+      "total_ns": 3588166.5,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "case": "all-string-sixteen-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3655000.0,
+      "total_ns": 3675749.5,
+      "process_peak_held_bytes": 9584640.0
+    }
+  },
+  {
+    "case": "all-string-seventeen-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3761000.0,
+      "total_ns": 2621625.0,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "all-string-seventeen-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3745000.0,
+      "total_ns": 2547416.5,
+      "process_peak_held_bytes": 9551872.0
+    }
+  },
+  {
+    "case": "all-string-seventeen-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 4011000.0,
+      "total_ns": 4028437.5,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "case": "all-string-seventeen-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3829000.0,
+      "total_ns": 3861750.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "case": "all-string-seventeen-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3639000.0,
+      "total_ns": 2549750.0,
+      "process_peak_held_bytes": 9617408.0
+    }
+  },
+  {
+    "case": "all-string-seventeen-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 3615500.0,
+      "total_ns": 2578520.5,
+      "process_peak_held_bytes": 9650176.0
+    }
+  },
+  {
+    "case": "all-string-seventeen-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3595000.0,
+      "total_ns": 3657083.5,
+      "process_peak_held_bytes": 9568256.0
+    }
+  },
+  {
+    "case": "all-string-seventeen-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3520500.0,
+      "total_ns": 3573479.5,
+      "process_peak_held_bytes": 9617408.0
+    }
+  },
+  {
+    "case": "all-string-large-nulls-0",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3906000.0,
+      "total_ns": 2740042.0,
+      "process_peak_held_bytes": 9953280.0
+    }
+  },
+  {
+    "case": "all-string-large-nulls-0",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 4114000.0,
+      "total_ns": 2895271.0,
+      "process_peak_held_bytes": 9994240.0
+    }
+  },
+  {
+    "case": "all-string-large-nulls-0",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3843500.0,
+      "total_ns": 3860125.5,
+      "process_peak_held_bytes": 9879552.0
+    }
+  },
+  {
+    "case": "all-string-large-nulls-0",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3844500.0,
+      "total_ns": 3866521.0,
+      "process_peak_held_bytes": 9928704.0
+    }
+  },
+  {
+    "case": "all-string-large-nulls-50",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 3946500.0,
+      "total_ns": 2769187.0,
+      "process_peak_held_bytes": 10092544.0
+    }
+  },
+  {
+    "case": "all-string-large-nulls-50",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 4122000.0,
+      "total_ns": 2956250.0,
+      "process_peak_held_bytes": 10125312.0
+    }
+  },
+  {
+    "case": "all-string-large-nulls-50",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3897000.0,
+      "total_ns": 3915896.0,
+      "process_peak_held_bytes": 10010624.0
+    }
+  },
+  {
+    "case": "all-string-large-nulls-50",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3765000.0,
+      "total_ns": 3783563.0,
+      "process_peak_held_bytes": 10076160.0
+    }
+  }
+]
