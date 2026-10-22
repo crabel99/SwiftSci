@@ -55,3 +55,5 @@ Plans, worker records, input hashes, receipts and summaries are retained alongsi
 ## Decision and next gate
 
 Keep the experiment isolated. Do not waive the CPU review limits or average away the adverse cases. Next profile framing/counting, compact-record access and per-batch scheduling independently on the wider and late-replay cases. A count-only scanner must share the existing grammar rather than introduce a second quote parser. Any retained-index versus replay choice needs an explicit memory bound and workload evidence. No cache-capacity or hardware-affinity claim follows from these timings.
+
+The subsequent [CPU investigation](../2026-10-21-csv-cpu-discovery/README.md) reduces late-type fallback costs and retains the memory benefit. The wider eager case and inherited streaming regressions still prevent default promotion.

@@ -1,0 +1,261 @@
+{
+  "all_native_workers_validated": true,
+  "eager_workers": 162,
+  "stream_workers": 90,
+  "cpu_comparisons": [
+    {
+      "scope": "eager",
+      "case": "bike-day",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 0.8576349024110218,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "bike-day",
+      "mode": "known",
+      "control": "counted",
+      "cpu_ratio": 1.0367800138792505,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "bike-hour",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 0.741159552911955,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "bike-hour",
+      "mode": "known",
+      "control": "counted",
+      "cpu_ratio": 1.0071948836383016,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "unique-shuffled",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 1.0010135135135134,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "unique-shuffled",
+      "mode": "known",
+      "control": "counted",
+      "cpu_ratio": 0.992031605731887,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "Aotizhongxin",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 1.1752373091209245,
+      "review_limit": 1.1,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "eager",
+      "case": "Aotizhongxin",
+      "mode": "known",
+      "control": "counted",
+      "cpu_ratio": 1.0275322051022986,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "energy",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 0.8823694908001711,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "energy",
+      "mode": "known",
+      "control": "counted",
+      "cpu_ratio": 0.9860868858318877,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "energy",
+      "mode": "infer",
+      "control": "indexed",
+      "cpu_ratio": 0.9296824197655222,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "energy",
+      "mode": "infer",
+      "control": "counted",
+      "cpu_ratio": 0.9645564005290471,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "energy-date-full",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 0.9824891470984749,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "energy-date-full",
+      "mode": "known",
+      "control": "counted",
+      "cpu_ratio": 0.9565346633103239,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "late-bool",
+      "mode": "infer",
+      "control": "indexed",
+      "cpu_ratio": 1.0234773991920116,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "late-bool",
+      "mode": "infer",
+      "control": "counted",
+      "cpu_ratio": 0.8783854507392386,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "late-text",
+      "mode": "infer",
+      "control": "indexed",
+      "cpu_ratio": 0.622542735042735,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "eager",
+      "case": "late-text",
+      "mode": "infer",
+      "control": "counted",
+      "cpu_ratio": 0.5898370280392752,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "stream",
+      "case": "bike-hour",
+      "mode": null,
+      "control": "indexed",
+      "cpu_ratio": 1.1007480352239372,
+      "review_limit": 1.1,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "stream",
+      "case": "bike-hour",
+      "mode": null,
+      "control": "counted",
+      "cpu_ratio": 0.9980254120879121,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "stream",
+      "case": "unique-shuffled",
+      "mode": null,
+      "control": "indexed",
+      "cpu_ratio": 1.239206849932402,
+      "review_limit": 1.1,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "stream",
+      "case": "unique-shuffled",
+      "mode": null,
+      "control": "counted",
+      "cpu_ratio": 1.006957668082613,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "stream",
+      "case": "Aotizhongxin",
+      "mode": null,
+      "control": "indexed",
+      "cpu_ratio": 1.1121261419096484,
+      "review_limit": 1.1,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "stream",
+      "case": "Aotizhongxin",
+      "mode": null,
+      "control": "counted",
+      "cpu_ratio": 1.041852286049238,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "stream",
+      "case": "energy",
+      "mode": null,
+      "control": "indexed",
+      "cpu_ratio": 1.1169934910220731,
+      "review_limit": 1.1,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "stream",
+      "case": "energy",
+      "mode": null,
+      "control": "counted",
+      "cpu_ratio": 0.9952218718170777,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "stream",
+      "case": "energy-date-full",
+      "mode": null,
+      "control": "indexed",
+      "cpu_ratio": 1.1873323798253193,
+      "review_limit": 1.1,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "stream",
+      "case": "energy-date-full",
+      "mode": null,
+      "control": "counted",
+      "cpu_ratio": 1.0371560773410586,
+      "review_limit": 1.1,
+      "cpu_review_required": false
+    }
+  ],
+  "ready_for_default_promotion": false,
+  "interpretation": "Late-type pruning clears the former late-Boolean CPU review limit. Eager Beijing and broader inherited streaming regressions still block replacing the original reader. No failures or resource regressions are waived."
+}

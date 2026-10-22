@@ -1,0 +1,156 @@
+{
+  "workers": 90,
+  "all_validated": true,
+  "medians": [
+    {
+      "total_cpu_ns": 5280500.0,
+      "total_ns": 1992146.0,
+      "peak_after_bytes": 13434880.0,
+      "rss_after_bytes": 12271616.0,
+      "heap_after_bytes": 112256.0,
+      "case": "bike-hour",
+      "engine": "indexed",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 5824000.0,
+      "total_ns": 2257208.5,
+      "peak_after_bytes": 14049280.0,
+      "rss_after_bytes": 12886016.0,
+      "heap_after_bytes": 112400.0,
+      "case": "bike-hour",
+      "engine": "counted",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 5812500.0,
+      "total_ns": 2252146.0,
+      "peak_after_bytes": 13541376.0,
+      "rss_after_bytes": 12378112.0,
+      "heap_after_bytes": 112432.0,
+      "case": "bike-hour",
+      "engine": "count-only",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 5547500.0,
+      "total_ns": 4904354.0,
+      "peak_after_bytes": 9822208.0,
+      "rss_after_bytes": 8019968.0,
+      "heap_after_bytes": 109248.0,
+      "case": "unique-shuffled",
+      "engine": "indexed",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 6827000.0,
+      "total_ns": 6202375.5,
+      "peak_after_bytes": 9912320.0,
+      "rss_after_bytes": 8110080.0,
+      "heap_after_bytes": 109216.0,
+      "case": "unique-shuffled",
+      "engine": "counted",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 6874500.0,
+      "total_ns": 6269791.5,
+      "peak_after_bytes": 9912320.0,
+      "rss_after_bytes": 8110080.0,
+      "heap_after_bytes": 109312.0,
+      "case": "unique-shuffled",
+      "engine": "count-only",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 11986500.0,
+      "total_ns": 4514583.0,
+      "peak_after_bytes": 15638528.0,
+      "rss_after_bytes": 12787712.0,
+      "heap_after_bytes": 111904.0,
+      "case": "Aotizhongxin",
+      "engine": "indexed",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 12795000.0,
+      "total_ns": 4469000.0,
+      "peak_after_bytes": 16531456.0,
+      "rss_after_bytes": 13680640.0,
+      "heap_after_bytes": 112112.0,
+      "case": "Aotizhongxin",
+      "engine": "counted",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 13330500.0,
+      "total_ns": 4583312.5,
+      "peak_after_bytes": 16908288.0,
+      "rss_after_bytes": 14057472.0,
+      "heap_after_bytes": 112112.0,
+      "case": "Aotizhongxin",
+      "engine": "count-only",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 327163500.0,
+      "total_ns": 152273125.0,
+      "peak_after_bytes": 145416192.0,
+      "rss_after_bytes": 12443648.0,
+      "heap_after_bytes": 110656.0,
+      "case": "energy",
+      "engine": "indexed",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 367194000.0,
+      "total_ns": 153049270.5,
+      "peak_after_bytes": 145686528.0,
+      "rss_after_bytes": 12713984.0,
+      "heap_after_bytes": 110800.0,
+      "case": "energy",
+      "engine": "counted",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 365439500.0,
+      "total_ns": 149423937.0,
+      "peak_after_bytes": 145580032.0,
+      "rss_after_bytes": 12607488.0,
+      "heap_after_bytes": 110832.0,
+      "case": "energy",
+      "engine": "count-only",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 344342500.0,
+      "total_ns": 145799895.5,
+      "peak_after_bytes": 145489920.0,
+      "rss_after_bytes": 12517376.0,
+      "heap_after_bytes": 111184.0,
+      "case": "energy-date-full",
+      "engine": "indexed",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 394202000.0,
+      "total_ns": 170643416.5,
+      "peak_after_bytes": 145711104.0,
+      "rss_after_bytes": 12738560.0,
+      "heap_after_bytes": 111376.0,
+      "case": "energy-date-full",
+      "engine": "counted",
+      "workers": 6
+    },
+    {
+      "total_cpu_ns": 408849000.0,
+      "total_ns": 172698562.5,
+      "peak_after_bytes": 145612800.0,
+      "rss_after_bytes": 12640256.0,
+      "heap_after_bytes": 111376.0,
+      "case": "energy-date-full",
+      "engine": "count-only",
+      "workers": 6
+    }
+  ]
+}
