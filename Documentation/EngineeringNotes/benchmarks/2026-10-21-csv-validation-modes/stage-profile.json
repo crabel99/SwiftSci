@@ -1,0 +1,2162 @@
+[
+  {
+    "case": "date-100000-1",
+    "engine": "original",
+    "round": 0,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182592,
+      "heap_before_bytes": 95968,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10141696,
+      "peak_before_bytes": 6766592,
+      "rows": 100000,
+      "rss_after_bytes": 10141696,
+      "rss_before_bytes": 6766592,
+      "rss_growth_bytes": 3375104,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 6021000,
+      "total_ns": 7558083,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 3924000,
+          "framing": 436000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4122000,
+          "framing": 460000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "date-100000-1",
+    "engine": "current",
+    "round": 0,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182592,
+      "heap_before_bytes": 95936,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10158080,
+      "peak_before_bytes": 6848512,
+      "rows": 100000,
+      "rss_after_bytes": 10158080,
+      "rss_before_bytes": 6848512,
+      "rss_growth_bytes": 3309568,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7274000,
+      "total_ns": 8661958,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5155000,
+          "framing": 455000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5298000,
+          "framing": 434000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "date-100000-1",
+    "engine": "current",
+    "round": 1,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182592,
+      "heap_before_bytes": 95936,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10141696,
+      "peak_before_bytes": 6848512,
+      "rows": 100000,
+      "rss_after_bytes": 10141696,
+      "rss_before_bytes": 6848512,
+      "rss_growth_bytes": 3293184,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7195000,
+      "total_ns": 8534000,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5345000,
+          "framing": 435000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5140000,
+          "framing": 452000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "date-100000-1",
+    "engine": "original",
+    "round": 1,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182528,
+      "heap_before_bytes": 95968,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10076160,
+      "peak_before_bytes": 6766592,
+      "rows": 100000,
+      "rss_after_bytes": 10076160,
+      "rss_before_bytes": 6766592,
+      "rss_growth_bytes": 3309568,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 5899000,
+      "total_ns": 7361333,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4071000,
+          "framing": 471000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 3908000,
+          "framing": 457000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "date-100000-1",
+    "engine": "original",
+    "round": 2,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182592,
+      "heap_before_bytes": 95968,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10141696,
+      "peak_before_bytes": 6766592,
+      "rows": 100000,
+      "rss_after_bytes": 10141696,
+      "rss_before_bytes": 6766592,
+      "rss_growth_bytes": 3375104,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 5990000,
+      "total_ns": 7376166,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4144000,
+          "framing": 454000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4019000,
+          "framing": 455000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "date-100000-1",
+    "engine": "current",
+    "round": 2,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182592,
+      "heap_before_bytes": 95936,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10141696,
+      "peak_before_bytes": 6848512,
+      "rows": 100000,
+      "rss_after_bytes": 10141696,
+      "rss_before_bytes": 6848512,
+      "rss_growth_bytes": 3293184,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7191000,
+      "total_ns": 8534416,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5349000,
+          "framing": 449000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5455000,
+          "framing": 429000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "date-100000-1",
+    "engine": "current",
+    "round": 3,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182592,
+      "heap_before_bytes": 95936,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10158080,
+      "peak_before_bytes": 6848512,
+      "rows": 100000,
+      "rss_after_bytes": 10158080,
+      "rss_before_bytes": 6848512,
+      "rss_growth_bytes": 3309568,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7295000,
+      "total_ns": 8657000,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5440000,
+          "framing": 445000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5401000,
+          "framing": 427000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "date-100000-1",
+    "engine": "original",
+    "round": 3,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182528,
+      "heap_before_bytes": 95968,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10141696,
+      "peak_before_bytes": 6766592,
+      "rows": 100000,
+      "rss_after_bytes": 10141696,
+      "rss_before_bytes": 6766592,
+      "rss_growth_bytes": 3375104,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 5936000,
+      "total_ns": 7338875,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4033000,
+          "framing": 476000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4097000,
+          "framing": 456000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "date-100000-1",
+    "engine": "original",
+    "round": 4,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182528,
+      "heap_before_bytes": 95968,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10141696,
+      "peak_before_bytes": 6766592,
+      "rows": 100000,
+      "rss_after_bytes": 10141696,
+      "rss_before_bytes": 6766592,
+      "rss_growth_bytes": 3375104,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 6071000,
+      "total_ns": 7448083,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4201000,
+          "framing": 474000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4119000,
+          "framing": 447000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "date-100000-1",
+    "engine": "current",
+    "round": 4,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182592,
+      "heap_before_bytes": 95936,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10125312,
+      "peak_before_bytes": 6848512,
+      "rows": 100000,
+      "rss_after_bytes": 10125312,
+      "rss_before_bytes": 6848512,
+      "rss_growth_bytes": 3276800,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7165000,
+      "total_ns": 8453041,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5367000,
+          "framing": 445000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5236000,
+          "framing": 443000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "date-100000-1",
+    "engine": "current",
+    "round": 5,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182592,
+      "heap_before_bytes": 95936,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10158080,
+      "peak_before_bytes": 6848512,
+      "rows": 100000,
+      "rss_after_bytes": 10158080,
+      "rss_before_bytes": 6848512,
+      "rss_growth_bytes": 3309568,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7183000,
+      "total_ns": 8499833,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5396000,
+          "framing": 439000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5451000,
+          "framing": 445000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "date-100000-1",
+    "engine": "original",
+    "round": 5,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182528,
+      "heap_before_bytes": 95968,
+      "input": "date-100000-1",
+      "peak_after_bytes": 10092544,
+      "peak_before_bytes": 6766592,
+      "rows": 100000,
+      "rss_after_bytes": 10092544,
+      "rss_before_bytes": 6766592,
+      "rss_growth_bytes": 3325952,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 5907000,
+      "total_ns": 7350666,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4051000,
+          "framing": 478000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4165000,
+          "framing": 449000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "original",
+    "round": 0,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182880,
+      "heap_before_bytes": 96192,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10256384,
+      "peak_before_bytes": 6799360,
+      "rows": 100000,
+      "rss_after_bytes": 10256384,
+      "rss_before_bytes": 6799360,
+      "rss_growth_bytes": 3457024,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7346000,
+      "total_ns": 9924041,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4997000,
+          "framing": 882000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4703000,
+          "framing": 890000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "current",
+    "round": 0,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182864,
+      "heap_before_bytes": 96160,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10338304,
+      "peak_before_bytes": 6864896,
+      "rows": 100000,
+      "rss_after_bytes": 10338304,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 3473408,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7999000,
+      "total_ns": 8554000,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5773000,
+          "framing": 842000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 6037000,
+          "framing": 839000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "current",
+    "round": 1,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182864,
+      "heap_before_bytes": 96160,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10305536,
+      "peak_before_bytes": 6864896,
+      "rows": 100000,
+      "rss_after_bytes": 10305536,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 3440640,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 8617000,
+      "total_ns": 9280708,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 6291000,
+          "framing": 877000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 6064000,
+          "framing": 860000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "original",
+    "round": 1,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182880,
+      "heap_before_bytes": 96192,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10305536,
+      "peak_before_bytes": 6799360,
+      "rows": 100000,
+      "rss_after_bytes": 10305536,
+      "rss_before_bytes": 6799360,
+      "rss_growth_bytes": 3506176,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7116000,
+      "total_ns": 7732958,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4801000,
+          "framing": 923000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4745000,
+          "framing": 897000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "original",
+    "round": 2,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182880,
+      "heap_before_bytes": 96192,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10256384,
+      "peak_before_bytes": 6799360,
+      "rows": 100000,
+      "rss_after_bytes": 10256384,
+      "rss_before_bytes": 6799360,
+      "rss_growth_bytes": 3457024,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7150000,
+      "total_ns": 7874666,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4877000,
+          "framing": 883000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4806000,
+          "framing": 854000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "current",
+    "round": 2,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182864,
+      "heap_before_bytes": 96160,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10305536,
+      "peak_before_bytes": 6864896,
+      "rows": 100000,
+      "rss_after_bytes": 10305536,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 3440640,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 8337000,
+      "total_ns": 9075292,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 6144000,
+          "framing": 823000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 6120000,
+          "framing": 839000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "current",
+    "round": 3,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182864,
+      "heap_before_bytes": 96160,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10321920,
+      "peak_before_bytes": 6864896,
+      "rows": 100000,
+      "rss_after_bytes": 10321920,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 3457024,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 8345000,
+      "total_ns": 9166625,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 6153000,
+          "framing": 835000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 6266000,
+          "framing": 866000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "original",
+    "round": 3,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182816,
+      "heap_before_bytes": 96192,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10321920,
+      "peak_before_bytes": 6799360,
+      "rows": 100000,
+      "rss_after_bytes": 10321920,
+      "rss_before_bytes": 6799360,
+      "rss_growth_bytes": 3522560,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7231000,
+      "total_ns": 7943584,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4942000,
+          "framing": 865000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4879000,
+          "framing": 847000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "original",
+    "round": 4,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182880,
+      "heap_before_bytes": 96192,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10338304,
+      "peak_before_bytes": 6799360,
+      "rows": 100000,
+      "rss_after_bytes": 10338304,
+      "rss_before_bytes": 6799360,
+      "rss_growth_bytes": 3538944,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 7135000,
+      "total_ns": 7723709,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4817000,
+          "framing": 922000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4818000,
+          "framing": 877000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "current",
+    "round": 4,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182864,
+      "heap_before_bytes": 96160,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10289152,
+      "peak_before_bytes": 6864896,
+      "rows": 100000,
+      "rss_after_bytes": 10289152,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 3424256,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 8165000,
+      "total_ns": 8942208,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5986000,
+          "framing": 845000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5889000,
+          "framing": 817000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "current",
+    "round": 5,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182864,
+      "heap_before_bytes": 96160,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10321920,
+      "peak_before_bytes": 6864896,
+      "rows": 100000,
+      "rss_after_bytes": 10321920,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 3457024,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 8246000,
+      "total_ns": 8932958,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 5993000,
+          "framing": 831000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 6154000,
+          "framing": 843000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "unique-shuffled",
+    "engine": "original",
+    "round": 5,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182816,
+      "heap_before_bytes": 96192,
+      "input": "unique-shuffled",
+      "peak_after_bytes": 10305536,
+      "peak_before_bytes": 6799360,
+      "rows": 100000,
+      "rss_after_bytes": 10305536,
+      "rss_before_bytes": 6799360,
+      "rss_growth_bytes": 3506176,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 6830000,
+      "total_ns": 7497125,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4575000,
+          "framing": 865000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 10,
+          "framing": 10
+        },
+        "cpu_ns": {
+          "conversion": 4706000,
+          "framing": 873000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "original",
+    "round": 0,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185600,
+      "heap_before_bytes": 99072,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 16531456,
+      "peak_before_bytes": 6832128,
+      "rows": 35064,
+      "rss_after_bytes": 15794176,
+      "rss_before_bytes": 6832128,
+      "rss_growth_bytes": 8962048,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 14235000,
+      "total_ns": 7499917,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 9930000,
+          "framing": 2569000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 8723000,
+          "framing": 2494000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "current",
+    "round": 0,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185728,
+      "heap_before_bytes": 99040,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 16941056,
+      "peak_before_bytes": 6864896,
+      "rows": 35064,
+      "rss_after_bytes": 16220160,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 9355264,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 14218000,
+      "total_ns": 7626750,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 9838000,
+          "framing": 2574000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 10199000,
+          "framing": 2350000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "current",
+    "round": 1,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185728,
+      "heap_before_bytes": 99040,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 16924672,
+      "peak_before_bytes": 6864896,
+      "rows": 35064,
+      "rss_after_bytes": 16220160,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 9355264,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 13603000,
+      "total_ns": 7208084,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 9386000,
+          "framing": 2500000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 9889000,
+          "framing": 2390000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "original",
+    "round": 1,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185600,
+      "heap_before_bytes": 99072,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 15876096,
+      "peak_before_bytes": 6832128,
+      "rows": 35064,
+      "rss_after_bytes": 15171584,
+      "rss_before_bytes": 6832128,
+      "rss_growth_bytes": 8339456,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 13361000,
+      "total_ns": 7463083,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 8806000,
+          "framing": 2652000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 8483000,
+          "framing": 2612000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "original",
+    "round": 2,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185600,
+      "heap_before_bytes": 99072,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 16646144,
+      "peak_before_bytes": 6832128,
+      "rows": 35064,
+      "rss_after_bytes": 15941632,
+      "rss_before_bytes": 6832128,
+      "rss_growth_bytes": 9109504,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 13778000,
+      "total_ns": 7507125,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 9352000,
+          "framing": 2683000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 8743000,
+          "framing": 2565000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "current",
+    "round": 2,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185728,
+      "heap_before_bytes": 99040,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 16728064,
+      "peak_before_bytes": 6864896,
+      "rows": 35064,
+      "rss_after_bytes": 16039936,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 9175040,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 15666000,
+      "total_ns": 7415750,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 11424000,
+          "framing": 2503000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 10196000,
+          "framing": 2443000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "current",
+    "round": 3,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185728,
+      "heap_before_bytes": 99040,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 18300928,
+      "peak_before_bytes": 6864896,
+      "rows": 35064,
+      "rss_after_bytes": 17596416,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 10731520,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 14691000,
+      "total_ns": 7640542,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 10363000,
+          "framing": 2488000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 10126000,
+          "framing": 2443000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "original",
+    "round": 3,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185600,
+      "heap_before_bytes": 99072,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 16629760,
+      "peak_before_bytes": 6832128,
+      "rows": 35064,
+      "rss_after_bytes": 15908864,
+      "rss_before_bytes": 6832128,
+      "rss_growth_bytes": 9076736,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 13744000,
+      "total_ns": 7328458,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 9428000,
+          "framing": 2647000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 9020000,
+          "framing": 2509000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "original",
+    "round": 4,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185600,
+      "heap_before_bytes": 99072,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 18333696,
+      "peak_before_bytes": 6832128,
+      "rows": 35064,
+      "rss_after_bytes": 17596416,
+      "rss_before_bytes": 6832128,
+      "rss_growth_bytes": 10764288,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 13845000,
+      "total_ns": 7704333,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 9413000,
+          "framing": 2657000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 8372000,
+          "framing": 2515000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "current",
+    "round": 4,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185728,
+      "heap_before_bytes": 99040,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 18268160,
+      "peak_before_bytes": 6864896,
+      "rows": 35064,
+      "rss_after_bytes": 17596416,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 10731520,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 14702000,
+      "total_ns": 7688041,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 10209000,
+          "framing": 2601000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 9993000,
+          "framing": 2399000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "current",
+    "round": 5,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185728,
+      "heap_before_bytes": 99040,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 17301504,
+      "peak_before_bytes": 6864896,
+      "rows": 35064,
+      "rss_after_bytes": 16646144,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 9781248,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 14297000,
+      "total_ns": 7238958,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 9979000,
+          "framing": 2451000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 10233000,
+          "framing": 2427000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "Aotizhongxin",
+    "engine": "original",
+    "round": 5,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 185600,
+      "heap_before_bytes": 99072,
+      "input": "Aotizhongxin",
+      "peak_after_bytes": 15777792,
+      "peak_before_bytes": 6832128,
+      "rows": 35064,
+      "rss_after_bytes": 15089664,
+      "rss_before_bytes": 6832128,
+      "rss_growth_bytes": 8257536,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 13384000,
+      "total_ns": 7436917,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 8889000,
+          "framing": 2634000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 4,
+          "framing": 4
+        },
+        "cpu_ns": {
+          "conversion": 7840000,
+          "framing": 2473000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "original",
+    "round": 0,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 184944,
+      "heap_before_bytes": 98112,
+      "input": "energy-date-full",
+      "peak_after_bytes": 144588800,
+      "peak_before_bytes": 6832128,
+      "rows": 2075259,
+      "rss_after_bytes": 13664256,
+      "rss_before_bytes": 6832128,
+      "rss_growth_bytes": 6832128,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 398701000,
+      "total_ns": 271163583,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 302134000,
+          "framing": 85364000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 303935000,
+          "framing": 71806000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "current",
+    "round": 0,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 184960,
+      "heap_before_bytes": 98080,
+      "input": "energy-date-full",
+      "peak_after_bytes": 146128896,
+      "peak_before_bytes": 6881280,
+      "rows": 2075259,
+      "rss_after_bytes": 15220736,
+      "rss_before_bytes": 6881280,
+      "rss_growth_bytes": 8339456,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 408179000,
+      "total_ns": 183288750,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 328373000,
+          "framing": 67919000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 336955000,
+          "framing": 65694000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "current",
+    "round": 1,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 184960,
+      "heap_before_bytes": 98080,
+      "input": "energy-date-full",
+      "peak_after_bytes": 144949248,
+      "peak_before_bytes": 6864896,
+      "rows": 2075259,
+      "rss_after_bytes": 14073856,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 7208960,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 409590000,
+      "total_ns": 179108708,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 332745000,
+          "framing": 65591000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 353491000,
+          "framing": 64905000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "original",
+    "round": 1,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 184880,
+      "heap_before_bytes": 98112,
+      "input": "energy-date-full",
+      "peak_after_bytes": 144670720,
+      "peak_before_bytes": 6832128,
+      "rows": 2075259,
+      "rss_after_bytes": 13778944,
+      "rss_before_bytes": 6832128,
+      "rss_growth_bytes": 6946816,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 354496000,
+      "total_ns": 156336833,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 270832000,
+          "framing": 71833000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 274585000,
+          "framing": 71879000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "original",
+    "round": 2,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 184880,
+      "heap_before_bytes": 98112,
+      "input": "energy-date-full",
+      "peak_after_bytes": 145391616,
+      "peak_before_bytes": 6864896,
+      "rows": 2075259,
+      "rss_after_bytes": 14483456,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 7618560,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 354807000,
+      "total_ns": 159510416,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 271907000,
+          "framing": 70847000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 308762000,
+          "framing": 71949000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "current",
+    "round": 2,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 182400,
+      "heap_before_bytes": 98080,
+      "input": "energy-date-full",
+      "peak_after_bytes": 145686528,
+      "peak_before_bytes": 6864896,
+      "rows": 2075259,
+      "rss_after_bytes": 14794752,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 7929856,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 422149000,
+      "total_ns": 180847250,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 344491000,
+          "framing": 65762000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 368002000,
+          "framing": 66356000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "current",
+    "round": 3,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 184960,
+      "heap_before_bytes": 98080,
+      "input": "energy-date-full",
+      "peak_after_bytes": 145850368,
+      "peak_before_bytes": 6864896,
+      "rows": 2075259,
+      "rss_after_bytes": 14991360,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 8126464,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 410750000,
+      "total_ns": 177339625,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 335028000,
+          "framing": 64135000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 361529000,
+          "framing": 66276000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "original",
+    "round": 3,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 184944,
+      "heap_before_bytes": 98112,
+      "input": "energy-date-full",
+      "peak_after_bytes": 144539648,
+      "peak_before_bytes": 6832128,
+      "rows": 2075259,
+      "rss_after_bytes": 13631488,
+      "rss_before_bytes": 6832128,
+      "rss_growth_bytes": 6799360,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 359378000,
+      "total_ns": 158388125,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 276124000,
+          "framing": 72045000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 302376000,
+          "framing": 72125000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "original",
+    "round": 4,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 184944,
+      "heap_before_bytes": 98112,
+      "input": "energy-date-full",
+      "peak_after_bytes": 145899520,
+      "peak_before_bytes": 6832128,
+      "rows": 2075259,
+      "rss_after_bytes": 14991360,
+      "rss_before_bytes": 6832128,
+      "rss_growth_bytes": 8159232,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 352203000,
+      "total_ns": 155665625,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 269769000,
+          "framing": 71216000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 300310000,
+          "framing": 72032000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "current",
+    "round": 4,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 184960,
+      "heap_before_bytes": 98080,
+      "input": "energy-date-full",
+      "peak_after_bytes": 145408000,
+      "peak_before_bytes": 6864896,
+      "rows": 2075259,
+      "rss_after_bytes": 14516224,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 7651328,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 414031000,
+      "total_ns": 176160792,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 336215000,
+          "framing": 66701000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 370098000,
+          "framing": 66714000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "current",
+    "round": 5,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 184960,
+      "heap_before_bytes": 98080,
+      "input": "energy-date-full",
+      "peak_after_bytes": 144703488,
+      "peak_before_bytes": 6864896,
+      "rows": 2075259,
+      "rss_after_bytes": 13811712,
+      "rss_before_bytes": 6864896,
+      "rss_growth_bytes": 6946816,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 417656000,
+      "total_ns": 180274750,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 338643000,
+          "framing": 67444000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 367273000,
+          "framing": 67948000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  },
+  {
+    "case": "energy-date-full",
+    "engine": "original",
+    "round": 5,
+    "result": {
+      "chunk_size": 10000,
+      "heap_after_bytes": 184944,
+      "heap_before_bytes": 98112,
+      "input": "energy-date-full",
+      "peak_after_bytes": 145489920,
+      "peak_before_bytes": 6832128,
+      "rows": 2075259,
+      "rss_after_bytes": 14581760,
+      "rss_before_bytes": 6832128,
+      "rss_growth_bytes": 7749632,
+      "scope": "One public stream consumed and released, no consumer retention, exact row count; separate untimed repeat verifies native types and all per-column value/null hashes. Peak captured before validation. Includes source mapping, framing, conversion, per-chunk scheduling and output release.",
+      "total_cpu_ns": 370787000,
+      "total_ns": 160134750,
+      "validated": true
+    },
+    "phases": [
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 286735000,
+          "framing": 72250000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      },
+      {
+        "calls": {
+          "conversion": 208,
+          "framing": 208
+        },
+        "cpu_ns": {
+          "conversion": 311874000,
+          "framing": 71574000
+        },
+        "tag": "CSV-CONVERSION-20261021"
+      }
+    ]
+  }
+]
