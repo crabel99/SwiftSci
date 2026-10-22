@@ -1,0 +1,80 @@
+[
+  {
+    "label": "standardized-prepare",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "prepare",
+      "--profile",
+      "tabular-smoke"
+    ],
+    "start": 1792663107.40703,
+    "exit_code": 0,
+    "elapsed_seconds": 0.07799386978149414
+  },
+  {
+    "label": "standardized-run",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "run",
+      "--profile",
+      "tabular-smoke",
+      "--mode",
+      "production-default",
+      "--engines",
+      "swiftsci,pandas",
+      "--swift-worker",
+      "/private/tmp/swiftsci-csv-batch-profile-20261022/standard-worker/SwiftSciBenchmarkWorker",
+      "--python",
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "--output",
+      "/private/tmp/swiftsci-csv-batch-profile-20261022/standardized"
+    ],
+    "start": 1792663107.485337,
+    "exit_code": 0,
+    "elapsed_seconds": 86.84282207489014
+  },
+  {
+    "label": "standardized-audit",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "audit",
+      "/private/tmp/swiftsci-csv-batch-profile-20261022/standardized"
+    ],
+    "start": 1792663194.328585,
+    "exit_code": 0,
+    "elapsed_seconds": 0.08053207397460938
+  },
+  {
+    "label": "eager",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-batch-profile-20261022/run-final.py"
+    ],
+    "start": 1792663194.409475,
+    "exit_code": 0,
+    "elapsed_seconds": 46.67536687850952
+  },
+  {
+    "label": "stream",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-batch-profile-20261022/run-final-stream.py"
+    ],
+    "start": 1792663241.085473,
+    "exit_code": 0,
+    "elapsed_seconds": 41.80593991279602
+  },
+  {
+    "label": "null",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-batch-profile-20261022/run-final-null.py"
+    ],
+    "start": 1792663282.8918242,
+    "exit_code": 0,
+    "elapsed_seconds": 3.3642117977142334
+  }
+]

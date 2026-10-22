@@ -1,0 +1,25 @@
+{
+  "command": [
+    "xcrun",
+    "swiftc",
+    "-swift-version",
+    "6",
+    "-O",
+    "-parse-as-library",
+    "/private/tmp/swiftsci-csv-numeric-decode-control-20261022/Sources/SwiftDataFrame/IO/SystemsCSVParser.swift",
+    "/private/tmp/swiftsci-csv-numeric-decode-control-20261022/Sources/SwiftDataFrame/IO/CSVRecordIndex.swift",
+    "/private/tmp/swiftsci-csv-batch-profile-20261022/CountParity.swift",
+    "-o",
+    "/private/tmp/swiftsci-csv-batch-profile-20261022/CountParity-before"
+  ],
+  "sources": {
+    "/private/tmp/swiftsci-csv-numeric-decode-control-20261022/Sources/SwiftDataFrame/IO/SystemsCSVParser.swift": "12c907667fd07f4864284098d0b1a95dee5abda12d9bae12ef6f228ca54ee38b",
+    "/private/tmp/swiftsci-csv-numeric-decode-control-20261022/Sources/SwiftDataFrame/IO/CSVRecordIndex.swift": "d43c55a3171dc1cd604d50bff218b30f8784467ecf0fcbe8a7998eb27a2d559d",
+    "/private/tmp/swiftsci-csv-batch-profile-20261022/CountParity.swift": "36b75cd8512ceba4f64c349a2bbba4b4687395e7c9c0497d8858fbce81ae986a"
+  },
+  "result": {
+    "fixtures": 30729,
+    "checks": 153645,
+    "passed": true
+  }
+}

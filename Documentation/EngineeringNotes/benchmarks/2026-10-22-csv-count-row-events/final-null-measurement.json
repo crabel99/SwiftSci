@@ -1,0 +1,4640 @@
+{
+  "records": [
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 0,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2705000,
+            "call_ns": 2092958,
+            "heap_after_release_bytes": 110288,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319376,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 2000,
+            "release_ns": 833,
+            "rss_after_release_bytes": 13910016,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13271040,
+            "rss_held_delta_bytes": 6471680,
+            "total_cpu_ns": 2707000,
+            "total_ns": 2093791
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 0,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3000000,
+            "call_ns": 2521708,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12304384,
+            "release_cpu_ns": 2000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 11943936,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 3002000,
+            "total_ns": 2522500
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 0,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2831000,
+            "call_ns": 2367709,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12304384,
+            "release_cpu_ns": 2000,
+            "release_ns": 666,
+            "rss_after_release_bytes": 11960320,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 2833000,
+            "total_ns": 2368375
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 1,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2988000,
+            "call_ns": 2558959,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12304384,
+            "release_cpu_ns": 2000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 11943936,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 2990000,
+            "total_ns": 2559751
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 1,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2885000,
+            "call_ns": 2431917,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12304384,
+            "release_cpu_ns": 3000,
+            "release_ns": 1083,
+            "rss_after_release_bytes": 11960320,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 2888000,
+            "total_ns": 2433000
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 1,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2535000,
+            "call_ns": 1941584,
+            "heap_after_release_bytes": 110288,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319376,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 13910016,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13271040,
+            "rss_held_delta_bytes": 6471680,
+            "total_cpu_ns": 2537000,
+            "total_ns": 1942334
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 2,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2827000,
+            "call_ns": 2375625,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12271616,
+            "release_cpu_ns": 2000,
+            "release_ns": 917,
+            "rss_after_release_bytes": 11927552,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11304960,
+            "rss_held_delta_bytes": 4505600,
+            "total_cpu_ns": 2829000,
+            "total_ns": 2376542
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 2,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2503000,
+            "call_ns": 1866792,
+            "heap_after_release_bytes": 110288,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319376,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 1000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 13910016,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13271040,
+            "rss_held_delta_bytes": 6471680,
+            "total_cpu_ns": 2504000,
+            "total_ns": 1867542
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 2,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3002000,
+            "call_ns": 2536958,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12304384,
+            "release_cpu_ns": 1000,
+            "release_ns": 833,
+            "rss_after_release_bytes": 11943936,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 3003000,
+            "total_ns": 2537791
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 3,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2829000,
+            "call_ns": 2379584,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12271616,
+            "release_cpu_ns": 2000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 11927552,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11304960,
+            "rss_held_delta_bytes": 4505600,
+            "total_cpu_ns": 2831000,
+            "total_ns": 2380376
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 3,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2967000,
+            "call_ns": 2507750,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12271616,
+            "release_cpu_ns": 2000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 11911168,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11304960,
+            "rss_held_delta_bytes": 4505600,
+            "total_cpu_ns": 2969000,
+            "total_ns": 2508542
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 3,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2506000,
+            "call_ns": 1870833,
+            "heap_after_release_bytes": 110288,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319376,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 2000,
+            "release_ns": 667,
+            "rss_after_release_bytes": 13910016,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13271040,
+            "rss_held_delta_bytes": 6471680,
+            "total_cpu_ns": 2508000,
+            "total_ns": 1871500
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 4,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2495000,
+            "call_ns": 1888625,
+            "heap_after_release_bytes": 110288,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319376,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 2000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 13910016,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13271040,
+            "rss_held_delta_bytes": 6471680,
+            "total_cpu_ns": 2497000,
+            "total_ns": 1889417
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 4,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2869000,
+            "call_ns": 2396625,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12304384,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 11960320,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 2871000,
+            "total_ns": 2397375
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 4,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2968000,
+            "call_ns": 2510833,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12271616,
+            "release_cpu_ns": 2000,
+            "release_ns": 791,
+            "rss_after_release_bytes": 11911168,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11304960,
+            "rss_held_delta_bytes": 4505600,
+            "total_cpu_ns": 2970000,
+            "total_ns": 2511624
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 5,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3008000,
+            "call_ns": 2547666,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12304384,
+            "release_cpu_ns": 2000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 11943936,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 3010000,
+            "total_ns": 2548458
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 5,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2452000,
+            "call_ns": 1859750,
+            "heap_after_release_bytes": 110288,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319376,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 1000,
+            "release_ns": 666,
+            "rss_after_release_bytes": 13910016,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13271040,
+            "rss_held_delta_bytes": 6471680,
+            "total_cpu_ns": 2453000,
+            "total_ns": 1860416
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 0,
+      "mode": "infer",
+      "round": 5,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 0,
+              "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 0,
+              "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-0",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2864000,
+            "call_ns": 2407708,
+            "heap_after_release_bytes": 110352,
+            "heap_before_bytes": 94288,
+            "held_heap_bytes": 3319488,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12304384,
+            "release_cpu_ns": 2000,
+            "release_ns": 917,
+            "rss_after_release_bytes": 11960320,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 2866000,
+            "total_ns": 2408625
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 0,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3178000,
+            "call_ns": 2279750,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14893056,
+            "release_cpu_ns": 1000,
+            "release_ns": 917,
+            "rss_after_release_bytes": 14778368,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 14106624,
+            "rss_held_delta_bytes": 7307264,
+            "total_cpu_ns": 3179000,
+            "total_ns": 2280667
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 0,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3590000,
+            "call_ns": 2930750,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 2000,
+            "release_ns": 959,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11354112,
+            "rss_held_delta_bytes": 4554752,
+            "total_cpu_ns": 3592000,
+            "total_ns": 2931709
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 0,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3530000,
+            "call_ns": 2847542,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12124160,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 11993088,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 3532000,
+            "total_ns": 2848292
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 1,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3555000,
+            "call_ns": 2911292,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 2000,
+            "release_ns": 875,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11354112,
+            "rss_held_delta_bytes": 4554752,
+            "total_cpu_ns": 3557000,
+            "total_ns": 2912167
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 1,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3428000,
+            "call_ns": 2757250,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12091392,
+            "release_cpu_ns": 1000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 11960320,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11304960,
+            "rss_held_delta_bytes": 4505600,
+            "total_cpu_ns": 3429000,
+            "total_ns": 2758042
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 1,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3193000,
+            "call_ns": 2258375,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14893056,
+            "release_cpu_ns": 2000,
+            "release_ns": 959,
+            "rss_after_release_bytes": 14778368,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 14106624,
+            "rss_held_delta_bytes": 7307264,
+            "total_cpu_ns": 3195000,
+            "total_ns": 2259334
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 2,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3477000,
+            "call_ns": 2823083,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12124160,
+            "release_cpu_ns": 2000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 11993088,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 3479000,
+            "total_ns": 2823875
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 2,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3313000,
+            "call_ns": 2328250,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14893056,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 14778368,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 14106624,
+            "rss_held_delta_bytes": 7307264,
+            "total_cpu_ns": 3315000,
+            "total_ns": 2329000
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 2,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3593000,
+            "call_ns": 2939791,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 2000,
+            "release_ns": 625,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11354112,
+            "rss_held_delta_bytes": 4554752,
+            "total_cpu_ns": 3595000,
+            "total_ns": 2940416
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 3,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3529000,
+            "call_ns": 2845125,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12124160,
+            "release_cpu_ns": 2000,
+            "release_ns": 875,
+            "rss_after_release_bytes": 11993088,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 3531000,
+            "total_ns": 2846000
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 3,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3618000,
+            "call_ns": 2965334,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 2000,
+            "release_ns": 667,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11354112,
+            "rss_held_delta_bytes": 4554752,
+            "total_cpu_ns": 3620000,
+            "total_ns": 2966001
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 3,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3110000,
+            "call_ns": 2170750,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14893056,
+            "release_cpu_ns": 2000,
+            "release_ns": 666,
+            "rss_after_release_bytes": 14778368,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 14106624,
+            "rss_held_delta_bytes": 7307264,
+            "total_cpu_ns": 3112000,
+            "total_ns": 2171416
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 4,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3302000,
+            "call_ns": 2302292,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14893056,
+            "release_cpu_ns": 2000,
+            "release_ns": 833,
+            "rss_after_release_bytes": 14778368,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 14106624,
+            "rss_held_delta_bytes": 7307264,
+            "total_cpu_ns": 3304000,
+            "total_ns": 2303125
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 4,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3543000,
+            "call_ns": 2867084,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12124160,
+            "release_cpu_ns": 2000,
+            "release_ns": 833,
+            "rss_after_release_bytes": 11993088,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 3545000,
+            "total_ns": 2867917
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 4,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3663000,
+            "call_ns": 2964541,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 1000,
+            "release_ns": 541,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11354112,
+            "rss_held_delta_bytes": 4554752,
+            "total_cpu_ns": 3664000,
+            "total_ns": 2965082
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 5,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3641000,
+            "call_ns": 2981125,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11354112,
+            "rss_held_delta_bytes": 4554752,
+            "total_cpu_ns": 3643000,
+            "total_ns": 2981875
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 5,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3193000,
+            "call_ns": 2257208,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14893056,
+            "release_cpu_ns": 1000,
+            "release_ns": 667,
+            "rss_after_release_bytes": 14778368,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 14106624,
+            "rss_held_delta_bytes": 7307264,
+            "total_cpu_ns": 3194000,
+            "total_ns": 2257875
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "infer",
+      "round": 5,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3392000,
+            "call_ns": 2732083,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12124160,
+            "release_cpu_ns": 2000,
+            "release_ns": 1042,
+            "rss_after_release_bytes": 11993088,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11337728,
+            "rss_held_delta_bytes": 4538368,
+            "total_cpu_ns": 3394000,
+            "total_ns": 2733125
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 0,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2896000,
+            "call_ns": 2116500,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14860288,
+            "release_cpu_ns": 0,
+            "release_ns": 667,
+            "rss_after_release_bytes": 14761984,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 14073856,
+            "rss_held_delta_bytes": 7274496,
+            "total_cpu_ns": 2896000,
+            "total_ns": 2117167
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 0,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3174000,
+            "call_ns": 2505375,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12107776,
+            "release_cpu_ns": 1000,
+            "release_ns": 708,
+            "rss_after_release_bytes": 11976704,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11321344,
+            "rss_held_delta_bytes": 4521984,
+            "total_cpu_ns": 3175000,
+            "total_ns": 2506083
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 0,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3078000,
+            "call_ns": 2373583,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12075008,
+            "release_cpu_ns": 2000,
+            "release_ns": 709,
+            "rss_after_release_bytes": 11943936,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11288576,
+            "rss_held_delta_bytes": 4489216,
+            "total_cpu_ns": 3080000,
+            "total_ns": 2374292
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 1,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3118000,
+            "call_ns": 2435625,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12107776,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 11976704,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11321344,
+            "rss_held_delta_bytes": 4521984,
+            "total_cpu_ns": 3120000,
+            "total_ns": 2436375
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 1,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2970000,
+            "call_ns": 2290542,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12075008,
+            "release_cpu_ns": 2000,
+            "release_ns": 667,
+            "rss_after_release_bytes": 11943936,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11288576,
+            "rss_held_delta_bytes": 4489216,
+            "total_cpu_ns": 2972000,
+            "total_ns": 2291209
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 1,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2871000,
+            "call_ns": 2148541,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6782976,
+            "process_peak_held_bytes": 14843904,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 14745600,
+            "rss_before_bytes": 6782976,
+            "rss_held_bytes": 14057472,
+            "rss_held_delta_bytes": 7274496,
+            "total_cpu_ns": 2873000,
+            "total_ns": 2149291
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 2,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3100000,
+            "call_ns": 2376458,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12042240,
+            "release_cpu_ns": 2000,
+            "release_ns": 875,
+            "rss_after_release_bytes": 11911168,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11255808,
+            "rss_held_delta_bytes": 4456448,
+            "total_cpu_ns": 3102000,
+            "total_ns": 2377333
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 2,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2762000,
+            "call_ns": 2036167,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14860288,
+            "release_cpu_ns": 2000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 14761984,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 14073856,
+            "rss_held_delta_bytes": 7274496,
+            "total_cpu_ns": 2764000,
+            "total_ns": 2036959
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 2,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3157000,
+            "call_ns": 2475083,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12107776,
+            "release_cpu_ns": 7000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 11976704,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11321344,
+            "rss_held_delta_bytes": 4521984,
+            "total_cpu_ns": 3164000,
+            "total_ns": 2475875
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 3,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3060000,
+            "call_ns": 2393750,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12075008,
+            "release_cpu_ns": 1000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 11943936,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11288576,
+            "rss_held_delta_bytes": 4489216,
+            "total_cpu_ns": 3061000,
+            "total_ns": 2394500
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 3,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3071000,
+            "call_ns": 2409334,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12075008,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 11943936,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11288576,
+            "rss_held_delta_bytes": 4489216,
+            "total_cpu_ns": 3073000,
+            "total_ns": 2410084
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 3,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2860000,
+            "call_ns": 2114792,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14860288,
+            "release_cpu_ns": 1000,
+            "release_ns": 916,
+            "rss_after_release_bytes": 14761984,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 14073856,
+            "rss_held_delta_bytes": 7274496,
+            "total_cpu_ns": 2861000,
+            "total_ns": 2115708
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 4,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2777000,
+            "call_ns": 2059625,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14860288,
+            "release_cpu_ns": 2000,
+            "release_ns": 958,
+            "rss_after_release_bytes": 14761984,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 14073856,
+            "rss_held_delta_bytes": 7274496,
+            "total_cpu_ns": 2779000,
+            "total_ns": 2060583
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 4,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3019000,
+            "call_ns": 2335875,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12107776,
+            "release_cpu_ns": 2000,
+            "release_ns": 833,
+            "rss_after_release_bytes": 11976704,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11321344,
+            "rss_held_delta_bytes": 4521984,
+            "total_cpu_ns": 3021000,
+            "total_ns": 2336708
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 4,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3151000,
+            "call_ns": 2476833,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 3000,
+            "release_ns": 1125,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11354112,
+            "rss_held_delta_bytes": 4554752,
+            "total_cpu_ns": 3154000,
+            "total_ns": 2477958
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 5,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3218000,
+            "call_ns": 2529375,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 1000,
+            "release_ns": 875,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11354112,
+            "rss_held_delta_bytes": 4554752,
+            "total_cpu_ns": 3219000,
+            "total_ns": 2530250
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 5,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2780000,
+            "call_ns": 2084958,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14860288,
+            "release_cpu_ns": 2000,
+            "release_ns": 917,
+            "rss_after_release_bytes": 14761984,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 14073856,
+            "rss_held_delta_bytes": 7274496,
+            "total_cpu_ns": 2782000,
+            "total_ns": 2085875
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 50,
+      "mode": "known",
+      "round": 5,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 50000,
+              "sha256": "ea2b67c5a464d0f57b362430410804c044df1ee402ee31b15df89b2b0d820681",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 50000,
+              "sha256": "d65f487afc754f153354855f2962c1549a9502af9570a1748c73e869e93b36c4",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-50",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2869000,
+            "call_ns": 2213542,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12042240,
+            "release_cpu_ns": 2000,
+            "release_ns": 833,
+            "rss_after_release_bytes": 11911168,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11255808,
+            "rss_held_delta_bytes": 4456448,
+            "total_cpu_ns": 2871000,
+            "total_ns": 2214375
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 0,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3713000,
+            "call_ns": 2537250,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 14155776,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13598720,
+            "rss_held_delta_bytes": 6799360,
+            "total_cpu_ns": 3715000,
+            "total_ns": 2538000
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 0,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3596000,
+            "call_ns": 2784084,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12124160,
+            "release_cpu_ns": 2000,
+            "release_ns": 667,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11485184,
+            "rss_held_delta_bytes": 4685824,
+            "total_cpu_ns": 3598000,
+            "total_ns": 2784751
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 0,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3454000,
+            "call_ns": 2699125,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 0,
+            "release_ns": 625,
+            "rss_after_release_bytes": 12042240,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11501568,
+            "rss_held_delta_bytes": 4702208,
+            "total_cpu_ns": 3454000,
+            "total_ns": 2699750
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 1,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3607000,
+            "call_ns": 2783125,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12124160,
+            "release_cpu_ns": 1000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11485184,
+            "rss_held_delta_bytes": 4685824,
+            "total_cpu_ns": 3608000,
+            "total_ns": 2783875
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 1,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3747000,
+            "call_ns": 2896625,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12173312,
+            "release_cpu_ns": 2000,
+            "release_ns": 1208,
+            "rss_after_release_bytes": 12075008,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11534336,
+            "rss_held_delta_bytes": 4734976,
+            "total_cpu_ns": 3749000,
+            "total_ns": 2897833
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 1,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3664000,
+            "call_ns": 2433000,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 1000,
+            "release_ns": 666,
+            "rss_after_release_bytes": 14155776,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13598720,
+            "rss_held_delta_bytes": 6799360,
+            "total_cpu_ns": 3665000,
+            "total_ns": 2433666
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 2,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3421000,
+            "call_ns": 2638500,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 1000,
+            "release_ns": 708,
+            "rss_after_release_bytes": 12042240,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11501568,
+            "rss_held_delta_bytes": 4702208,
+            "total_cpu_ns": 3422000,
+            "total_ns": 2639208
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 2,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3666000,
+            "call_ns": 2445375,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6782976,
+            "process_peak_held_bytes": 14221312,
+            "release_cpu_ns": 1000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 14139392,
+            "rss_before_bytes": 6782976,
+            "rss_held_bytes": 13582336,
+            "rss_held_delta_bytes": 6799360,
+            "total_cpu_ns": 3667000,
+            "total_ns": 2446125
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 2,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3540000,
+            "call_ns": 2760833,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12156928,
+            "release_cpu_ns": 0,
+            "release_ns": 750,
+            "rss_after_release_bytes": 12042240,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11517952,
+            "rss_held_delta_bytes": 4718592,
+            "total_cpu_ns": 3540000,
+            "total_ns": 2761583
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 3,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3467000,
+            "call_ns": 2645458,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12173312,
+            "release_cpu_ns": 2000,
+            "release_ns": 834,
+            "rss_after_release_bytes": 12075008,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11534336,
+            "rss_held_delta_bytes": 4734976,
+            "total_cpu_ns": 3469000,
+            "total_ns": 2646292
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 3,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3491000,
+            "call_ns": 2738708,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12156928,
+            "release_cpu_ns": 1000,
+            "release_ns": 708,
+            "rss_after_release_bytes": 12042240,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11517952,
+            "rss_held_delta_bytes": 4718592,
+            "total_cpu_ns": 3492000,
+            "total_ns": 2739416
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 3,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3551000,
+            "call_ns": 2412958,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 1000,
+            "release_ns": 625,
+            "rss_after_release_bytes": 14155776,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13598720,
+            "rss_held_delta_bytes": 6799360,
+            "total_cpu_ns": 3552000,
+            "total_ns": 2413583
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 4,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3478000,
+            "call_ns": 2355792,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 0,
+            "release_ns": 583,
+            "rss_after_release_bytes": 14155776,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13598720,
+            "rss_held_delta_bytes": 6799360,
+            "total_cpu_ns": 3478000,
+            "total_ns": 2356375
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 4,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3516000,
+            "call_ns": 2739042,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 2000,
+            "release_ns": 667,
+            "rss_after_release_bytes": 12042240,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11501568,
+            "rss_held_delta_bytes": 4702208,
+            "total_cpu_ns": 3518000,
+            "total_ns": 2739709
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 4,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3638000,
+            "call_ns": 2834208,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12124160,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11485184,
+            "rss_held_delta_bytes": 4685824,
+            "total_cpu_ns": 3640000,
+            "total_ns": 2834958
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 5,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3682000,
+            "call_ns": 2868916,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12156928,
+            "release_cpu_ns": 2000,
+            "release_ns": 625,
+            "rss_after_release_bytes": 12042240,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11517952,
+            "rss_held_delta_bytes": 4718592,
+            "total_cpu_ns": 3684000,
+            "total_ns": 2869541
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 5,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3511000,
+            "call_ns": 2385375,
+            "heap_after_release_bytes": 110304,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319392,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 1000,
+            "release_ns": 667,
+            "rss_after_release_bytes": 14155776,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13598720,
+            "rss_held_delta_bytes": 6799360,
+            "total_cpu_ns": 3512000,
+            "total_ns": 2386042
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "infer",
+      "round": 5,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "infer",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3474000,
+            "call_ns": 2664875,
+            "heap_after_release_bytes": 110368,
+            "heap_before_bytes": 94304,
+            "held_heap_bytes": 3319504,
+            "held_heap_delta_bytes": 3225200,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12107776,
+            "release_cpu_ns": 2000,
+            "release_ns": 666,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11468800,
+            "rss_held_delta_bytes": 4669440,
+            "total_cpu_ns": 3476000,
+            "total_ns": 2665541
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 0,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2903000,
+            "call_ns": 2048083,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14204928,
+            "release_cpu_ns": 0,
+            "release_ns": 583,
+            "rss_after_release_bytes": 14139392,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13565952,
+            "rss_held_delta_bytes": 6766592,
+            "total_cpu_ns": 2903000,
+            "total_ns": 2048666
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 0,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3321000,
+            "call_ns": 2498250,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6782976,
+            "process_peak_held_bytes": 12140544,
+            "release_cpu_ns": 2000,
+            "release_ns": 709,
+            "rss_after_release_bytes": 12025856,
+            "rss_before_bytes": 6782976,
+            "rss_held_bytes": 11501568,
+            "rss_held_delta_bytes": 4718592,
+            "total_cpu_ns": 3323000,
+            "total_ns": 2498959
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 0,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3253000,
+            "call_ns": 2455083,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12058624,
+            "release_cpu_ns": 1000,
+            "release_ns": 708,
+            "rss_after_release_bytes": 11960320,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11419648,
+            "rss_held_delta_bytes": 4620288,
+            "total_cpu_ns": 3254000,
+            "total_ns": 2455791
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 1,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3342000,
+            "call_ns": 2523375,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12124160,
+            "release_cpu_ns": 2000,
+            "release_ns": 791,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11485184,
+            "rss_held_delta_bytes": 4685824,
+            "total_cpu_ns": 3344000,
+            "total_ns": 2524166
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 1,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3187000,
+            "call_ns": 2406083,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12058624,
+            "release_cpu_ns": 2000,
+            "release_ns": 833,
+            "rss_after_release_bytes": 11960320,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11419648,
+            "rss_held_delta_bytes": 4620288,
+            "total_cpu_ns": 3189000,
+            "total_ns": 2406916
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 1,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2872000,
+            "call_ns": 2043584,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14204928,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 14139392,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13565952,
+            "rss_held_delta_bytes": 6766592,
+            "total_cpu_ns": 2874000,
+            "total_ns": 2044334
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 2,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3277000,
+            "call_ns": 2467917,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12058624,
+            "release_cpu_ns": 1000,
+            "release_ns": 625,
+            "rss_after_release_bytes": 11960320,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11419648,
+            "rss_held_delta_bytes": 4620288,
+            "total_cpu_ns": 3278000,
+            "total_ns": 2468542
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 2,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3000000,
+            "call_ns": 2114792,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14204928,
+            "release_cpu_ns": 2000,
+            "release_ns": 542,
+            "rss_after_release_bytes": 14139392,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13565952,
+            "rss_held_delta_bytes": 6766592,
+            "total_cpu_ns": 3002000,
+            "total_ns": 2115334
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 2,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3229000,
+            "call_ns": 2453500,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12091392,
+            "release_cpu_ns": 0,
+            "release_ns": 667,
+            "rss_after_release_bytes": 11976704,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11452416,
+            "rss_held_delta_bytes": 4653056,
+            "total_cpu_ns": 3229000,
+            "total_ns": 2454167
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 3,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3133000,
+            "call_ns": 2344291,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12091392,
+            "release_cpu_ns": 1000,
+            "release_ns": 666,
+            "rss_after_release_bytes": 11993088,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11452416,
+            "rss_held_delta_bytes": 4653056,
+            "total_cpu_ns": 3134000,
+            "total_ns": 2344957
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 3,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3374000,
+            "call_ns": 2609667,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12124160,
+            "release_cpu_ns": 1000,
+            "release_ns": 708,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11485184,
+            "rss_held_delta_bytes": 4685824,
+            "total_cpu_ns": 3375000,
+            "total_ns": 2610375
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 3,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3088000,
+            "call_ns": 2122208,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14237696,
+            "release_cpu_ns": 2000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 14172160,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13598720,
+            "rss_held_delta_bytes": 6799360,
+            "total_cpu_ns": 3090000,
+            "total_ns": 2123000
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 4,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2989000,
+            "call_ns": 2094791,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14204928,
+            "release_cpu_ns": 4000,
+            "release_ns": 792,
+            "rss_after_release_bytes": 14139392,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13565952,
+            "rss_held_delta_bytes": 6766592,
+            "total_cpu_ns": 2993000,
+            "total_ns": 2095583
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 4,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3075000,
+            "call_ns": 2300208,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12091392,
+            "release_cpu_ns": 0,
+            "release_ns": 708,
+            "rss_after_release_bytes": 11993088,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11452416,
+            "rss_held_delta_bytes": 4653056,
+            "total_cpu_ns": 3075000,
+            "total_ns": 2300916
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 4,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3260000,
+            "call_ns": 2458833,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12091392,
+            "release_cpu_ns": 2000,
+            "release_ns": 750,
+            "rss_after_release_bytes": 11976704,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11452416,
+            "rss_held_delta_bytes": 4653056,
+            "total_cpu_ns": 3262000,
+            "total_ns": 2459583
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 5,
+      "engine": "before",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3254000,
+            "call_ns": 2481458,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12124160,
+            "release_cpu_ns": 1000,
+            "release_ns": 666,
+            "rss_after_release_bytes": 12009472,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11485184,
+            "rss_held_delta_bytes": 4685824,
+            "total_cpu_ns": 3255000,
+            "total_ns": 2482124
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 5,
+      "engine": "original",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 2834000,
+            "call_ns": 1987542,
+            "heap_after_release_bytes": 110400,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319424,
+            "held_heap_delta_bytes": 3224912,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 14204928,
+            "release_cpu_ns": 2000,
+            "release_ns": 625,
+            "rss_after_release_bytes": 14139392,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 13565952,
+            "rss_held_delta_bytes": 6766592,
+            "total_cpu_ns": 2836000,
+            "total_ns": 1988167
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    },
+    {
+      "null_percent": 90,
+      "mode": "known",
+      "round": 5,
+      "engine": "production",
+      "result": {
+        "checks": {
+          "columns": [
+            {
+              "name": "integer",
+              "nulls": 90000,
+              "sha256": "e19e865a64274b8da6d7c82909c8cef5923e5a3aa0d8d3daa7382895ccf06a43",
+              "type": "Int64"
+            },
+            {
+              "name": "double",
+              "nulls": 90000,
+              "sha256": "c6a7ad7d13a962c5bd10e1a5a5e6e4043ccdb45669a3f9522efb919098d239ed",
+              "type": "Double"
+            }
+          ],
+          "failures": [],
+          "passed": true
+        },
+        "input": "nullable-90",
+        "mode": "known",
+        "phase": "fresh",
+        "samples": [
+          {
+            "call_cpu_ns": 3164000,
+            "call_ns": 2363000,
+            "heap_after_release_bytes": 110464,
+            "heap_before_bytes": 94512,
+            "held_heap_bytes": 3319600,
+            "held_heap_delta_bytes": 3225088,
+            "process_peak_before_bytes": 6799360,
+            "process_peak_held_bytes": 12091392,
+            "release_cpu_ns": 2000,
+            "release_ns": 667,
+            "rss_after_release_bytes": 11993088,
+            "rss_before_bytes": 6799360,
+            "rss_held_bytes": 11452416,
+            "rss_held_delta_bytes": 4653056,
+            "total_cpu_ns": 3166000,
+            "total_ns": 2363667
+          }
+        ],
+        "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+        "validated": true
+      }
+    }
+  ],
+  "orders": [
+    [
+      "original",
+      "before",
+      "production"
+    ],
+    [
+      "before",
+      "production",
+      "original"
+    ],
+    [
+      "production",
+      "original",
+      "before"
+    ],
+    [
+      "production",
+      "before",
+      "original"
+    ],
+    [
+      "original",
+      "production",
+      "before"
+    ],
+    [
+      "before",
+      "original",
+      "production"
+    ]
+  ],
+  "binaries": {
+    "original": {
+      "path": "/private/tmp/swiftsci-csv-eager-checks-20261021/build/indexed/ResourceProbe",
+      "sha256": "fecc6ca7f4738b77974ee7c0534cc8595bd1e3d65d6bee2bff8bf96102369aac"
+    },
+    "before": {
+      "path": "/private/tmp/swiftsci-csv-cell-profile-20261021/build/production/ResourceProbe",
+      "sha256": "0a94165fdd9d577577911b2f6b8169b1218e6a843620e989aa328ed9f5589560"
+    },
+    "production": {
+      "path": "/private/tmp/swiftsci-csv-batch-profile-20261022/build/production/ResourceProbe",
+      "sha256": "eca8a8f052eaf14b6b3d942b4972e5168a0fa533280eadb2f06ecf31a0f4def0"
+    }
+  }
+}
