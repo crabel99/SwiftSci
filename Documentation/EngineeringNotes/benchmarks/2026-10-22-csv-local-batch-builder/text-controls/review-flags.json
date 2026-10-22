@@ -1,0 +1,23 @@
+[
+  {
+    "candidate": {
+      "case": "all-string-default-nulls-0",
+      "engine": "parallel",
+      "medians": {
+        "total_cpu_ns": 4351000.0,
+        "total_ns": 3225062.0,
+        "process_peak_held_bytes": 9486336.0
+      }
+    },
+    "parent": {
+      "case": "all-string-default-nulls-0",
+      "engine": "parent-parallel",
+      "medians": {
+        "total_cpu_ns": 3892000.0,
+        "total_ns": 2771208.0,
+        "process_peak_held_bytes": 9551872.0
+      }
+    },
+    "reason": "CPU review limit"
+  }
+]

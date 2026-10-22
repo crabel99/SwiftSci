@@ -1,0 +1,73 @@
+# CSV worker-local batch builder
+
+This experiment follows the [CSV streaming layout investigation](../2026-10-22-csv-stream-layout/README.md). It moves the existing mutable column builder into a local value for each batch, then returns it to the column object.
+
+## Decision
+
+FINAL_DECISION
+
+The local source branch is `codex/csv-local-batch-builder` at `FINAL_HEAD`. Its parent is direct-key head `1c15702331ed68ea1bd214daf844d1c9d571dacd`. The unqualified compiler-marker branch remains separate and is not included. Nothing was pushed in this experiment. Raw measurements and engineering records stay on `codex/engineering-notes`.
+
+## Implementation
+
+Before the field loop, `CSVColumnAttempt.append` swaps its builder with an empty local builder. The loop mutates the local value. A second swap restores the completed builder before rejection handling. The validating Double method uses the same ownership sequence.
+
+The transfer includes the existing array and null counter. It preserves array capacity across batches. The empty placeholder has zero reserved capacity. No data-buffer copy, parser change, worker change, cache, or new public option is requested by the implementation. The final resource results qualify observed costs rather than treating source-level ownership as an allocation measurement.
+
+The row loop no longer mutates the builder through a class property. The same column object still owns the completed state between calls. Rejection discards the restored partial output, and draining a column resets the builder as before.
+
+## Why the compiler-only trial was rejected
+
+The prior screen appeared to fix the streaming regression with an inlining marker. Full source-path qualification contradicted that result. The screened and production selected executables had byte-identical instructions and constants. Explicit versus default parallel selection did not explain the difference. Changing only the program-name argument shifted CPU medians for one unchanged executable.
+
+That setup sensitivity made the compiler marker insufficient evidence. The current branch omits it. The separate report preserves failed qualifications, the excluded build-overlapped quick reproduction, and all diagnostic controls.
+
+The worker-local builder trial tests a structural alternative. It changes the location of repeated mutable bookkeeping while preserving parsing, output buffers, and scheduling. Shared cache-line traffic is a possible explanation for the improvement. No hardware cache-coherency counter was measured, so that physical mechanism remains unproven.
+
+## Source-path and launcher check
+
+The current source was compiled at the actual implementation checkout before the new lifecycle tests. Each worker checks every native output value and type against the household reference contract. Parent and candidate receive identical program-name arguments for each launcher form. Three forms vary the caller's setup. Twelve balanced orders produce 72 validated observations.
+
+SOURCE_PATH_TABLE
+
+See [all source-path observations](screens.md). This diagnostic does not replace the full comparison below.
+
+## Matched final comparison
+
+The combined change compares with frozen Array-lookup head `680ac74b96ab6c6968d83a9511ebdce69d30093b`. Both use identical compiler flags, dependency objects, input bytes, schemas or inference, null tokens, and native scheduling. Parallel compares with parallel. Serial disables only column-conversion workers.
+
+Every fresh-process worker validates native values, types, null positions, and row and column order. Streaming validates through a separate untimed complete read. Input is warmed, power is AC, and orders rotate and reverse. No outlier is removed. No task build, test, or profiler runs during accepted timing.
+
+CPU is process user-plus-system time per complete read. Elapsed time is separate. Peak RSS includes the whole worker and is not an allocation count. No energy, FLOP, cache-occupancy, or hardware-counter conclusion follows from these observations.
+
+REFERENCE_TABLE
+
+The [complete controls](controls.md) include widths from 1 to 64, small and large row counts, numeric null density, all-String inputs, empty through 2,048 null tokens, long String keys and values, and Unicode-equivalent null matching.
+
+REVIEW_STATUS
+
+See the [640-observation default-token follow-up](default-followup.md). The next optimization target is the default hashed String decoder. Investigate whether the optional-value path can avoid classified-result conversion, then qualify it separately across defaults, Unicode, large null sets, and both column policies. Do not change null semantics or add a dataset-specific shortcut.
+
+## Verification
+
+VALIDATION_STATUS
+
+The new 62-line test file uses explicit types. Integer and validated-Double tests check accumulation across calls, null counts, draining, preservation of prior output, and rejection followed by another append. Existing parser, eager, streaming, and Unicode tests remain unchanged.
+
+No timing assertion enters unit tests. The resource controller retains the targeted 3% parallel-household-streaming CPU detector, alongside the broader review triggers. It does not relax the benchmark policy or numerical tolerances. Passing this compiler does not establish compatibility with every CI compiler. The standard regression run is not full numerical certification.
+
+## Evidence
+
+- [Artifact hashes](artifact-sha256.json)
+- [Complete resource controls](controls.md)
+- [Source-path launcher results](screens.md)
+- [Default-token follow-up](default-followup.md)
+- [Final build receipt](build-receipts/production/build.json)
+- [Final identity check](final-attestation.json)
+- [Grammar comparison](grammar-result.json)
+- [Standard benchmark artifacts](standardized-artifacts.tar.gz)
+- [Combined source change](source-change.patch.gz)
+- [Incremental builder change](incremental-change.patch.gz)
+- [Frozen parent sources and inputs](experiments.tar.gz)
+
+Controllers retain original absolute paths and hashes. Generated text inputs and input contracts are archived. Resolve reference-data paths on another checkout while retaining byte hashes, schemas, null policies, and native output contracts.
