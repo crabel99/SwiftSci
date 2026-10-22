@@ -1,0 +1,90 @@
+[
+  {
+    "label": "numeric-profile",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/sample-final.py"
+    ],
+    "start": 1792671078.025686,
+    "exit_code": 0,
+    "elapsed_seconds": 5.780616998672485
+  },
+  {
+    "label": "standardized-prepare",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "prepare",
+      "--profile",
+      "tabular-smoke"
+    ],
+    "start": 1792671083.806617,
+    "exit_code": 0,
+    "elapsed_seconds": 0.1292581558227539
+  },
+  {
+    "label": "standardized-run",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "run",
+      "--profile",
+      "tabular-smoke",
+      "--mode",
+      "production-default",
+      "--engines",
+      "swiftsci,pandas",
+      "--swift-worker",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/standard-worker/SwiftSciBenchmarkWorker",
+      "--python",
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "--output",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/standardized"
+    ],
+    "start": 1792671083.936278,
+    "exit_code": 0,
+    "elapsed_seconds": 102.88902187347412
+  },
+  {
+    "label": "standardized-audit",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "audit",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/standardized"
+    ],
+    "start": 1792671186.825769,
+    "exit_code": 0,
+    "elapsed_seconds": 0.13273119926452637
+  },
+  {
+    "label": "eager",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/run-final.py"
+    ],
+    "start": 1792671186.9589188,
+    "exit_code": 0,
+    "elapsed_seconds": 52.42248320579529
+  },
+  {
+    "label": "stream",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/run-final-stream.py"
+    ],
+    "start": 1792671239.381695,
+    "exit_code": 0,
+    "elapsed_seconds": 43.67880296707153
+  },
+  {
+    "label": "null",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/run-final-null.py"
+    ],
+    "start": 1792671283.060802,
+    "exit_code": 0,
+    "elapsed_seconds": 3.425995111465454
+  }
+]

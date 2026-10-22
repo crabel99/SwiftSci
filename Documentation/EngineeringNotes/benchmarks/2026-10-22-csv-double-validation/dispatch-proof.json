@@ -1,0 +1,53 @@
+{
+  "excerpts": {
+    "current": [
+      "0000000100032cb0\tsub\tx8, x29, #0xa0",
+      "0000000100032cb4\tsub\tx20, x29, #0x90",
+      "0000000100032cb8\tmov\tx0, x26",
+      "0000000100032cbc\tldur\tx1, [x29, #-0xb8]",
+      "0000000100032cc0\tmov\tx2, x28",
+      "0000000100032cc4\tmov\tx3, x24",
+      "0000000100032cc8\tmov\tx4, x25",
+      "0000000100032ccc\tadrp\tx5, 228 ; 0x100116000",
+      "0000000100032cd0\tadd\tx5, x5, #0x5e0",
+      "0000000100032cd4\tadrp\tx6, 243 ; 0x100125000",
+      "0000000100032cd8\tadd\tx6, x6, #0x438",
+      "0000000100032cdc\tldur\tx9, [x29, #-0xd0]",
+      "0000000100032ce0\tblr\tx9",
+      "0000000100032ce4\tldur\tx26, [x29, #-0xa0]",
+      "0000000100032ce8\tldurb\tw8, [x29, #-0x98]",
+      "0000000100032cec\tcmp\tw8, #0x1",
+      "0000000100032cf0\tb.ne\t0x100032d9c",
+      "0000000100032cf4\tcbnz\tx26, 0x100033244",
+      "0000000100032cf8\tldur\tx20, [x19, #0x28]"
+    ],
+    "production": [
+      "00000001000324d0\tcmp\tx9, x10",
+      "00000001000324d4\tb.hs\t0x1000329d0",
+      "00000001000324d8\tadd\tx8, x8, x9, lsl #3",
+      "00000001000324dc\tldp\tw28, w21, [x8, #0x20]",
+      "00000001000324e0\teor\tw8, w21, w21, asr #31",
+      "00000001000324e4\tsxtw\tx19, w8",
+      "00000001000324e8\tldur\tw8, [x29, #-0xf8]",
+      "00000001000324ec\ttbz\tw8, #0x0, 0x100032598",
+      "00000001000324f0\tldur\tx20, [x29, #-0xe0]",
+      "00000001000324f4\tmov\tx0, x20",
+      "00000001000324f8\tmov\tx1, x28",
+      "00000001000324fc\tmov\tx2, x19",
+      "0000000100032500\tbl\t_$s14SwiftDataFrame21VectorizedByteParsersO11parseDouble6buffer6offsetSdSgSRys5UInt8VG_AA14CSVFieldOffsetVtFZTf4nnd_nTf4xx_n",
+      "0000000100032504\tstur\tx0, [x29, #-0xd0]",
+      "0000000100032508\tand\tw8, w1, #0xff",
+      "000000010003250c\tcmp\tw8, #0x1",
+      "0000000100032510\tb.ne\t0x1000326f8",
+      "0000000100032514\tlsr\tw4, w21, #31",
+      "0000000100032518\tsub\tx8, x29, #0x14",
+      "000000010003251c\tldur\tw8, [x8, #-0x100]",
+      "0000000100032520\torr\tw7, w8, #0x100",
+      "0000000100032524\tmov\tx0, x20",
+      "0000000100032528\tmov\tx2, x28",
+      "000000010003252c\tmov\tx3, x19"
+    ]
+  },
+  "harness_sha256": "1c6c0c03e7a9fbb4d789d799e24fa10a8217c728886d52c41f728cbf7e36117c",
+  "note": "Pinned binary offsets map to the hot inferred-Double frames. The parent branches through a decoder witness; the candidate calls the byte parser directly. This is not a CPU ratio derived from sample counts. A different compiler or build requires new symbol mapping."
+}
