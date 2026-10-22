@@ -5,8 +5,12 @@ assert subprocess.check_output(['git','branch','--show-current'],cwd=N,text=True
 assert not subprocess.check_output(['git','status','--porcelain'],cwd=S)
 D=N/'Documentation/EngineeringNotes/benchmarks/2026-10-21-csv-validation-modes';D.mkdir(parents=True,exist_ok=True)
 for p in R.glob('*.py'):shutil.copy2(p,D/p.name)
-for name in ['ResourceProbe.swift','StreamProbe.swift','GrammarProbe.swift','SamplingMatched.swift','variants.json','repro.json','minimization.json','stage-profile.json','pilot.json','result-pilot.json','optional-pilot.json','explicit-pilot.json','final-null-measurement.json','final-null-summary.json','optional-null-retest.json','optional-null-retest.log','finish-status.json','grammar-result.json','gate-verdict.json','standardized-run.log','standardized-audit.log','null.log','eager.log','stream.log','reviews.md','matched-sample-before.txt','matched-sample-after.txt','matched-sample-before-receipt.json','matched-sample-after-receipt.json','matched-sample-before-build.json','matched-sample-after-build.json','standard-worker-build-result.json']:
+for name in ['ResourceProbe.swift','StreamProbe.swift','GrammarProbe.swift','SamplingMatched.swift','variants.json','repro.json','minimization.json','stage-profile.json','pilot.json','result-pilot.json','optional-pilot.json','explicit-pilot.json','final-null-measurement.json','final-null-summary.json','optional-null-retest.json','optional-null-retest.log','finish-status.json','grammar-result.json','gate-verdict.json','standardized-run.log','standardized-audit.log','null.log','eager.log','stream.log','reviews.md','matched-sample-before-receipt.json','matched-sample-after-receipt.json','matched-sample-before-build.json','matched-sample-after-build.json','standard-worker-build-result.json']:
  if (R/name).is_file():shutil.copy2(R/name,D/name)
+for label in ['before','after']:
+ raw=R/('matched-sample-'+label+'.txt')
+ with gzip.open(D/(raw.name+'.gz'),'wb') as out:out.write(raw.read_bytes())
+ (D/raw.name).unlink(missing_ok=True)
 for p in [*R.glob('validation-modes-*-summary.json'),*R.glob('validation-modes-*-command.json')]:shutil.copy2(p,D/p.name)
 for name in ['final-measurement','final-stream-measurement']:
  out=D/name;out.mkdir(exist_ok=True)
