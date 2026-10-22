@@ -1,0 +1,278 @@
+{
+  "receipts": {
+    "parent-parallel": {
+      "commit": "680ac74b96ab6c6968d83a9511ebdce69d30093b",
+      "module_receipt_sha256": "63ea87d089ae2869697ea53846d5b0a475704070501f0c5defc7424dfb97fdc0",
+      "binaries": {
+        "eager": {
+          "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/ResourceProbe",
+          "sha256": "4a5f12e221d837b27f2292f0710a4af665edca68023065c2c165b21c42fdcf44"
+        },
+        "stream": {
+          "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/StreamProbe",
+          "sha256": "3ff9230a5933a49e50803fd303a95e52e3900221573fb6763e12018c44d62a55"
+        }
+      }
+    },
+    "parallel": {
+      "commit": "1c15702331ed68ea1bd214daf844d1c9d571dacd",
+      "module_receipt_sha256": "83c887eba96117d37e3201f2829efb2dbc7ee8ffbef0e2f9472e1303d31ad217",
+      "binaries": {
+        "eager": {
+          "path": "/private/tmp/swiftsci-csv-null-dispatch-20261022/build/production/ResourceProbe",
+          "sha256": "5ffa9fdd7306416d87517f2501dfdc86b8e004b27e4256d104063cf21b8b78fc"
+        },
+        "stream": {
+          "path": "/private/tmp/swiftsci-csv-null-dispatch-20261022/build/production/StreamProbe",
+          "sha256": "e0ce2f9166e5b7eeeee9427ac5bf1c51955d006d5abab4db0dd6d0c377624275"
+        }
+      }
+    },
+    "parent-serial": {
+      "commit": "680ac74b96ab6c6968d83a9511ebdce69d30093b",
+      "module_receipt_sha256": "63ea87d089ae2869697ea53846d5b0a475704070501f0c5defc7424dfb97fdc0",
+      "binaries": {
+        "eager": {
+          "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/ResourceProbe",
+          "sha256": "4a5f12e221d837b27f2292f0710a4af665edca68023065c2c165b21c42fdcf44"
+        },
+        "stream": {
+          "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/StreamProbe",
+          "sha256": "3ff9230a5933a49e50803fd303a95e52e3900221573fb6763e12018c44d62a55"
+        }
+      }
+    },
+    "serial": {
+      "commit": "1c15702331ed68ea1bd214daf844d1c9d571dacd",
+      "module_receipt_sha256": "83c887eba96117d37e3201f2829efb2dbc7ee8ffbef0e2f9472e1303d31ad217",
+      "binaries": {
+        "eager": {
+          "path": "/private/tmp/swiftsci-csv-null-dispatch-20261022/build/production/ResourceProbe",
+          "sha256": "5ffa9fdd7306416d87517f2501dfdc86b8e004b27e4256d104063cf21b8b78fc"
+        },
+        "stream": {
+          "path": "/private/tmp/swiftsci-csv-null-dispatch-20261022/build/production/StreamProbe",
+          "sha256": "e0ce2f9166e5b7eeeee9427ac5bf1c51955d006d5abab4db0dd6d0c377624275"
+        }
+      }
+    }
+  },
+  "inputs": {
+    "energy": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/inputs/energy.json",
+      "contract": {
+        "id": "energy",
+        "path": "/private/tmp/swiftsci-csv-reference-20261021/235/household_power_consumption.txt",
+        "rows": 2075259,
+        "names": [
+          "Date",
+          "Time",
+          "Global_active_power",
+          "Global_reactive_power",
+          "Voltage",
+          "Global_intensity",
+          "Sub_metering_1",
+          "Sub_metering_2",
+          "Sub_metering_3"
+        ],
+        "types": [
+          "String",
+          "String",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double"
+        ],
+        "hashes": [
+          "3f668c84d65fca84e626079f15d3e4d7c7c2fceb6cc6687236094bfc8e32a007",
+          "7815cb80f2c771ab04a87d8a63a5d3d47d54fed8495e5944aaab41859f7c25a0",
+          "53d359ca15123438086ff97e97f52265e7e4cd17dc1783d373b9be22436c7684",
+          "ae7a878c624c006f23620f7e80b5110442afac4d6fe8d0909b96dbbbb77aecf4",
+          "233829dd762c9a7642bae98b8dce7d0d37c0b7fc7c0f5056a25034b565d21cfb",
+          "873b0856d7c347862dfbbc3db4f7e7dbf14d4419960744468bb3f054c4fab2d3",
+          "6d847664e93f91bc63e1a0a5ec51916e225bcb64a03c1b5ecfe36f4dfbdf0fdf",
+          "9f459c64eee8858609e0f570deb31920f8c3cbc742d82680e515442475729386",
+          "bef6678827019d7a31c3ad10220c8ff5433f36aef2fe6785923ef6c340499c24"
+        ],
+        "null_counts": [
+          0,
+          0,
+          25979,
+          25979,
+          25979,
+          25979,
+          25979,
+          25979,
+          25979
+        ],
+        "integral": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true
+        ],
+        "first_fraction": {
+          "Global_active_power": {
+            "row": 0,
+            "value": "4.216"
+          },
+          "Global_reactive_power": {
+            "row": 0,
+            "value": "0.418"
+          },
+          "Voltage": {
+            "row": 0,
+            "value": "234.840"
+          },
+          "Global_intensity": {
+            "row": 0,
+            "value": "18.400"
+          }
+        },
+        "null_tokens": [
+          "",
+          "?"
+        ],
+        "observed_null_tokens": {
+          "?": 155874,
+          "": 25979
+        },
+        "delimiter": ";",
+        "bytes": 132960755,
+        "sha256": "4259c9d7ece5dbee9ab8d53682baac68d791c864f0f64a52b4043cb3b90894b7",
+        "quote_bytes": 0,
+        "crlf": 2075260,
+        "lf": 2075260,
+        "encoding": "UTF-8, ASCII subset",
+        "expected_index_path": "flat-unquoted",
+        "inference_timestamp_policy": "Date and Time explicitly UTF-8; numeric columns inferred",
+        "reference_date_formats": {}
+      }
+    }
+  },
+  "orders": [
+    [
+      "parent-parallel",
+      "parallel",
+      "parent-serial",
+      "serial"
+    ],
+    [
+      "parallel",
+      "parent-serial",
+      "serial",
+      "parent-parallel"
+    ],
+    [
+      "parent-serial",
+      "serial",
+      "parent-parallel",
+      "parallel"
+    ],
+    [
+      "serial",
+      "parent-parallel",
+      "parallel",
+      "parent-serial"
+    ],
+    [
+      "serial",
+      "parent-serial",
+      "parallel",
+      "parent-parallel"
+    ],
+    [
+      "parent-parallel",
+      "serial",
+      "parent-serial",
+      "parallel"
+    ],
+    [
+      "parallel",
+      "parent-parallel",
+      "serial",
+      "parent-serial"
+    ],
+    [
+      "parent-serial",
+      "parallel",
+      "parent-parallel",
+      "serial"
+    ]
+  ],
+  "cases": [
+    [
+      "stream",
+      "energy",
+      "known"
+    ]
+  ],
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "policy": {
+    "schema_version": 1,
+    "mode": "production-default",
+    "thread_environment": {},
+    "cleared_environment": [
+      "BLIS_NUM_THREADS",
+      "GOTO_NUM_THREADS",
+      "MKL_DOMAIN_NUM_THREADS",
+      "MKL_DYNAMIC",
+      "MKL_NUM_THREADS",
+      "NUMEXPR_MAX_THREADS",
+      "NUMEXPR_NUM_THREADS",
+      "OMP_DYNAMIC",
+      "OMP_MAX_ACTIVE_LEVELS",
+      "OMP_NUM_THREADS",
+      "OMP_PLACES",
+      "OMP_PROC_BIND",
+      "OMP_THREAD_LIMIT",
+      "OPENBLAS_DEFAULT_NUM_THREADS",
+      "OPENBLAS_NUM_THREADS",
+      "POLARS_ASYNC_THREAD_COUNT",
+      "POLARS_MAX_THREADS",
+      "RAYON_NUM_THREADS",
+      "VECLIB_MAXIMUM_THREADS",
+      "VECLIB_NUM_THREADS"
+    ],
+    "cleared_prefixes": [
+      "OMP_",
+      "MKL_",
+      "OPENBLAS_",
+      "VECLIB_",
+      "NUMEXPR_"
+    ],
+    "duckdb_threads": "engine-default",
+    "minimum_process_rounds": 5,
+    "order": "rotating-engines-v1",
+    "active_threads_measured": false
+  },
+  "power_start": {
+    "source": "AC",
+    "settings": "Battery Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         2\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           1\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         30\n womp                 1\n networkoversleep     0\n sleep                0\n tcpkeepalive         1\n disksleep            10"
+  },
+  "controller_sha256": "697e20fac83f0b5ac9026e086409ebaf1a2222bb37d0b169e3e4b1c51181ea6b",
+  "criteria": {
+    "output": "Every value, native type, null position and row/column order must match each independent input contract. Streaming uses a separate untimed full-output repeat.",
+    "cpu": "Process user+system time. Review both final modes against their matching parent conversion policy. Review CPU median increases above10percent.",
+    "memory": "Same internal16384-row bound. Review peak-RSS increase above5percent+8MiB. RSS is not allocation count.",
+    "conditions": "AC, CPU backend, native system scheduling in default mode; serial selector disables only column-conversion workers. Fresh processes, warmed input, no task builds/tests/profilers during acceptance. No outlier trimming. No energy claim."
+  }
+}

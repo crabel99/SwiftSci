@@ -1,0 +1,90 @@
+{
+  "binaries": {
+    "short": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/production/ResourceProbe",
+        "sha256": "336871667f055a5d285112abffb92b6f37544c1638a40db0a2c199e939a210f7"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/production/StreamProbe",
+        "sha256": "86a6fc73988d475b30e3f6c2fa37ab2359ea07497efc25295053365999950e6a"
+      }
+    },
+    "production-name": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/production/ResourceProbe",
+        "sha256": "336871667f055a5d285112abffb92b6f37544c1638a40db0a2c199e939a210f7"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/production/StreamProbe",
+        "sha256": "86a6fc73988d475b30e3f6c2fa37ab2359ea07497efc25295053365999950e6a"
+      }
+    },
+    "screen-name": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/production/ResourceProbe",
+        "sha256": "336871667f055a5d285112abffb92b6f37544c1638a40db0a2c199e939a210f7"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/production/StreamProbe",
+        "sha256": "86a6fc73988d475b30e3f6c2fa37ab2359ea07497efc25295053365999950e6a"
+      }
+    }
+  },
+  "sources": {
+    "short": "/private/tmp/swiftsci-csv-count-only-scan-20261021",
+    "production-name": "/private/tmp/swiftsci-csv-count-only-scan-20261021",
+    "screen-name": "/private/tmp/swiftsci-csv-count-only-scan-20261021"
+  },
+  "orders": [
+    [
+      "short",
+      "production-name",
+      "screen-name"
+    ],
+    [
+      "production-name",
+      "screen-name",
+      "short"
+    ],
+    [
+      "screen-name",
+      "short",
+      "production-name"
+    ],
+    [
+      "screen-name",
+      "production-name",
+      "short"
+    ],
+    [
+      "short",
+      "screen-name",
+      "production-name"
+    ],
+    [
+      "production-name",
+      "short",
+      "screen-name"
+    ]
+  ],
+  "cases": [
+    [
+      "stream",
+      "energy"
+    ]
+  ],
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "controller_sha256": "72e2da8b1d7f94ad950616bf0e95fbf185a82131dc60ca2b26b4c4b93c9c650f",
+  "scope": "Diagnostic screening of three independent changes. Matched policies, native scheduling and hash randomization. No source edits, builds, tests or profiling during measurements. Complete independent native-output validation."
+}

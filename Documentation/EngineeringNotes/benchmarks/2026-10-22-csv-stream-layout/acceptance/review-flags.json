@@ -1,0 +1,52 @@
+[
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "energy",
+      "mode": "known",
+      "engine": "parallel",
+      "medians": {
+        "total_cpu_ns": 300067000.0,
+        "total_ns": 117345270.5,
+        "peak_after_bytes": 145801216.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "energy",
+      "mode": "known",
+      "engine": "parent-parallel",
+      "medians": {
+        "total_cpu_ns": 264587500.0,
+        "total_ns": 116187624.5,
+        "peak_after_bytes": 145776640.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "energy",
+      "mode": "known",
+      "engine": "parallel",
+      "medians": {
+        "total_cpu_ns": 300067000.0,
+        "total_ns": 117345270.5,
+        "peak_after_bytes": 145801216.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "energy",
+      "mode": "known",
+      "engine": "parent-parallel",
+      "medians": {
+        "total_cpu_ns": 264587500.0,
+        "total_ns": 116187624.5,
+        "peak_after_bytes": 145776640.0
+      }
+    },
+    "reason": "Targeted streaming CPU regression above3percent"
+  }
+]

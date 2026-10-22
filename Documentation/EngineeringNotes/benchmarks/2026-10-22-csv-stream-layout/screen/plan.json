@@ -1,0 +1,164 @@
+{
+  "binaries": {
+    "parent": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/ResourceProbe",
+        "sha256": "4a5f12e221d837b27f2292f0710a4af665edca68023065c2c165b21c42fdcf44"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/StreamProbe",
+        "sha256": "3ff9230a5933a49e50803fd303a95e52e3900221573fb6763e12018c44d62a55"
+      }
+    },
+    "candidate": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-null-dispatch-20261022/build/production/ResourceProbe",
+        "sha256": "5ffa9fdd7306416d87517f2501dfdc86b8e004b27e4256d104063cf21b8b78fc"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-null-dispatch-20261022/build/production/StreamProbe",
+        "sha256": "e0ce2f9166e5b7eeeee9427ac5bf1c51955d006d5abab4db0dd6d0c377624275"
+      }
+    },
+    "dispatch-inline": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/dispatch-inline/ResourceProbe",
+        "sha256": "b583e05b90bcfe047199364a40a8251a3e64541a1d3f151daab6e0d7f1ae9025"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/dispatch-inline/StreamProbe",
+        "sha256": "51090edd08ce6ef11a879e98dc9d5eeb31fd6779a94a0ef723a69e3a22723b6e"
+      }
+    },
+    "attempt-outline": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/attempt-outline/ResourceProbe",
+        "sha256": "336871667f055a5d285112abffb92b6f37544c1638a40db0a2c199e939a210f7"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/attempt-outline/StreamProbe",
+        "sha256": "86a6fc73988d475b30e3f6c2fa37ab2359ea07497efc25295053365999950e6a"
+      }
+    },
+    "direct-value": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/direct-value/ResourceProbe",
+        "sha256": "d7952658c0b6a68fcc74d717bd8bf42bc3fbf227056d1f04f5d1891a6b90c69f"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/direct-value/StreamProbe",
+        "sha256": "9e4b69c0788a08220d2b4f204e8bb23fbd94bf1ce199f27d17b354623f896ffe"
+      }
+    }
+  },
+  "sources": {
+    "parent": "/private/tmp/swiftsci-csv-small-null-control-20261022",
+    "candidate": "/private/tmp/swiftsci-csv-inline-null-control-20261022",
+    "dispatch-inline": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/dispatch-inline-trial",
+    "attempt-outline": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/attempt-outline-trial",
+    "direct-value": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/direct-value-trial"
+  },
+  "orders": [
+    [
+      "parent",
+      "candidate",
+      "dispatch-inline",
+      "attempt-outline",
+      "direct-value"
+    ],
+    [
+      "candidate",
+      "dispatch-inline",
+      "attempt-outline",
+      "direct-value",
+      "parent"
+    ],
+    [
+      "dispatch-inline",
+      "attempt-outline",
+      "direct-value",
+      "parent",
+      "candidate"
+    ],
+    [
+      "attempt-outline",
+      "direct-value",
+      "parent",
+      "candidate",
+      "dispatch-inline"
+    ],
+    [
+      "direct-value",
+      "parent",
+      "candidate",
+      "dispatch-inline",
+      "attempt-outline"
+    ],
+    [
+      "direct-value",
+      "attempt-outline",
+      "dispatch-inline",
+      "candidate",
+      "parent"
+    ],
+    [
+      "parent",
+      "direct-value",
+      "attempt-outline",
+      "dispatch-inline",
+      "candidate"
+    ],
+    [
+      "candidate",
+      "parent",
+      "direct-value",
+      "attempt-outline",
+      "dispatch-inline"
+    ],
+    [
+      "dispatch-inline",
+      "candidate",
+      "parent",
+      "direct-value",
+      "attempt-outline"
+    ],
+    [
+      "attempt-outline",
+      "dispatch-inline",
+      "candidate",
+      "parent",
+      "direct-value"
+    ]
+  ],
+  "cases": [
+    [
+      "eager",
+      "energy"
+    ],
+    [
+      "stream",
+      "energy"
+    ],
+    [
+      "stream",
+      "energy-date-full"
+    ],
+    [
+      "stream",
+      "Aotizhongxin"
+    ]
+  ],
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "controller_sha256": "9da443055b384058ec3df8ef9709c4ac5fe50f7eaf81c011126c2e1863cfcc05",
+  "scope": "Diagnostic screening of three independent changes. Matched policies, native scheduling and hash randomization. No source edits, builds, tests or profiling during measurements. Complete independent native-output validation."
+}

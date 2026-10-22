@@ -1,0 +1,77 @@
+# CSV streaming layout sensitivity
+
+This experiment addresses the parallel-streaming CPU cost in the [direct null-key trial](../2026-10-22-csv-null-dispatch/README.md). It keeps the direct String keys and separates the typed field loop from the outer column dispatcher.
+
+## Decision
+
+FINAL_DECISION
+
+The final source is local on `codex/csv-typed-conversion-boundary` at `FINAL_HEAD`, based on experimental head `1c15702331ed68ea1bd214daf844d1c9d571dacd`. The earlier direct-key and Array-lookup branches remain preserved. No source branch was pushed in this experiment. Engineering reports and raw evidence stay on `codex/engineering-notes`.
+
+## What changes
+
+`CSVColumnAttempt.append` receives `@inline(never)`. This is the existing batch method around the typed field loop. The method handles one column batch. The method retains the existing rejected-field check and borrows its builder for the whole batch.
+
+The marker prevents the compiler from folding those typed loops into the outer column dispatcher. No parser, value representation, null semantics, inference, batch size, allocation policy, or worker selector changes. The inner decoder and row loop remain available for specialization inside the typed method. The incremental source diff is two lines, including its intent comment.
+
+## Diagnosis
+
+The previous uncontaminated comparison and its 384-observation follow-up both showed higher parallel household streaming CPU with the direct-key decoder. Serial streaming and eager reads improved.
+
+The first quick reproduction in this session overlapped a trial build. Its 32 native-output validations are retained, but its timing and resource ratios are excluded. See the [conditions exception](repro/conditions-exception.json). The subsequent 400-observation screen and final comparisons start after all builds finish.
+
+Three independent trials test compiler boundaries. One forces the column dispatcher to inline. One keeps the typed batch method separate. One gives the small String decoder an optional-value method. All retain native output contracts, scheduling, and parsing. The [screen](screen/summary.json) records all results, including regressions and small differences. The typed-method boundary gives the best household parallel-streaming CPU result in that screen and requires no duplicate decoder implementation.
+
+The [assembly record](assembly/summary.json) shows 868 static instruction entries in the parent's compact-record dispatcher and 1,515 in the unadjusted direct-key trial. The selected trial has no standalone specialization for that dispatcher. Instead, six typed compact-record append methods remain separate. Static entries describe emitted code, not executed instructions, FLOPs, or cache misses.
+
+The same key-construction code remains in the selected trial. Its improved CPU result argues against key construction as the sole cause. The intervention supports a compiler inlining and specialization explanation. It does not prove the hardware-cache mechanism or rule out interaction with worker-pool timing.
+
+## Qualification contradicts the compiler-only screen
+
+The source-path build reproduces the streaming cost. Its selected trial and production executables have identical bytes in every TEXT section, including instructions and constants. See [section hashes](binary-sections.json). Static specialization differs from the older Array baseline, but it does not explain why the screened and production selected executables time differently.
+
+The [additional controls](layout-controls.md) separate setup from code. Explicit versus default parallel selection produces nearly identical timings for each executable. A same-binary launcher experiment changes only the program-name argument and reports different CPU medians. That result suggests setup sensitivity. It does not isolate allocator placement, cache coherence, or scheduler behavior.
+
+A further trial swaps the mutable builder out of the column object into a local value for each batch. It swaps the completed state back before rejection handling. This changes where the field loop mutates bookkeeping, without changing parsing, row bounds, worker policy, or data-buffer capacity. The plain local-builder trial improves household parallel streaming in the controlled screen, but its eager and serial results are mixed. It remains a research result until a source-path build and launcher variation pass.
+
+The earlier static code-size observation therefore does not justify shipping the compiler marker. No hardware-counter claim follows from these experiments.
+
+## Matched final comparison
+
+Final measurements compare the combined change with frozen Array-lookup head `680ac74b96ab6c6968d83a9511ebdce69d30093b`. Each source version uses identical compiler flags, dependency objects, input bytes, schema or inference, null tokens, and native scheduling. Parallel compares with parallel. Serial disables only column-conversion workers.
+
+Every worker validates native values, types, null positions, and row and column order against independent contracts. Streaming uses a separate untimed validation read. Processes are fresh, input is warmed, power is AC, and implementation orders rotate and reverse. No outlier is removed. No task build, test, or profiler runs during accepted measurements.
+
+CPU is process user-plus-system time per complete read. Elapsed time is reported separately. Peak RSS includes the whole worker and is not an allocation count. These measurements do not establish energy use, cache occupancy, or hardware performance counters.
+
+REFERENCE_TABLE
+
+The [complete controls](controls.md) cover widths from 1 to 64, two row counts, numeric null density, empty through 2,048 null tokens, all-String data, long keys and values, and Unicode-equivalent null matching.
+
+REVIEW_STATUS
+
+## Verification
+
+VALIDATION_STATUS
+
+The existing small, explicitly typed String-null tests exercise eligibility, ownership, Unicode equality, malformed UTF-8 repair, quoting, eager reads, and streaming under both column policies. No noisy wall-clock assertion is added to unit tests. The experiment controller separately detects a household parallel-streaming CPU increase above 3%, in addition to the existing broader CPU and memory review triggers. This stricter diagnostic detects the specific regression under investigation. It does not replace the library's benchmark policy or waive failures.
+
+A passing local compiler does not establish compatibility with every CI compiler. The standard regression run is not full numerical certification.
+
+## Evidence
+
+- [Artifact hashes](artifact-sha256.json)
+- [Complete resource controls](controls.md)
+- [Trial screening table](screens.md)
+- [Additional layout controls](layout-controls.md)
+- [Ranked hypotheses](hypotheses.json)
+- [Static assembly observations](assembly/summary.json)
+- [Final build receipt](build-receipts/production/build.json)
+- [Final identity check](final-attestation.json)
+- [Grammar comparison](grammar-result.json)
+- [Standard benchmark artifacts](standardized-artifacts.tar.gz)
+- [Combined source change](source-change.patch.gz)
+- [Incremental boundary change](incremental-change.patch.gz)
+- [Trial patches and frozen parent sources](experiments.tar.gz)
+
+Archived controllers retain their original absolute paths and hashes. Generated text inputs and input contracts are preserved in the experiments archive. Resolve reference-data paths on another checkout while retaining byte hashes, schemas, null policies, and output contracts.

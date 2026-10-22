@@ -1,0 +1,42 @@
+[
+  {
+    "rank": 1,
+    "hypothesis": "Added decoder changes indexed-record inlining and specialization",
+    "prediction": "Changing only the batch dispatcher or attempt boundary changes the parallel-streaming regression while retaining decoder semantics.",
+    "probes": [
+      "dispatch-inline",
+      "attempt-outline",
+      "direct-value"
+    ],
+    "evidence": "Compact-record dispatcher has 868 assembly instructions in the parent and 1515 in the candidate. Instruction count is static code size, not executed work.",
+    "screen_result": "Supported by all three independent compiler-boundary interventions. The selected no-inline batch boundary has the lowest household parallel-streaming CPU median in the uncontaminated 400-observation screen. Exact physical mechanism is unproven.",
+    "qualification_result": "Not sufficient. The source-path qualification reproduces a streaming regression despite byte-identical TEXT code and constants between the screened and production selected binaries. The compiler-boundary-only fix remains unqualified."
+  },
+  {
+    "rank": 2,
+    "hypothesis": "Key construction adds shared ownership work in column workers",
+    "prediction": "Preparing conversion plans before worker dispatch removes the cost if construction is responsible.",
+    "probes": [],
+    "evidence": "Not yet isolated. Earlier whole-stream profile has no dominant retain/release hotspot.",
+    "screen_result": "Unchanged key construction with improved timing argues against this as the sole cause. Construction was not independently removed."
+  },
+  {
+    "rank": 3,
+    "hypothesis": "Chunk delivery and worker-pool scheduling amplify changed conversion duration",
+    "prediction": "The regression disappears in a synchronous indexed-frame driver while remaining in the public asynchronous stream.",
+    "probes": [],
+    "evidence": "Both previous uncontaminated studies have a parallel streaming cost with a serial benefit.",
+    "screen_result": "Not independently isolated. Scheduling code and native worker policy remain unchanged in every trial."
+  },
+  {
+    "rank": 4,
+    "hypothesis": "Repeated builder mutation in heap-resident column objects is sensitive to physical allocation layout.",
+    "prediction": "Swapping the builder to a local value for each batch removes the streaming cost across launcher layouts, with unchanged framing, buffers, decoder and scheduling.",
+    "probes": [
+      "local-builder",
+      "local-builder-inline",
+      "local-builder-parent"
+    ],
+    "evidence": "Builder array and null counter currently mutate through a stored class property. This is a hypothesis; no cache-coherency counter has been measured."
+  }
+]

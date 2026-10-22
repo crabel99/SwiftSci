@@ -1,0 +1,1123 @@
+{
+  "receipts": {
+    "parent-parallel": {
+      "commit": "680ac74b96ab6c6968d83a9511ebdce69d30093b",
+      "module_receipt_sha256": "63ea87d089ae2869697ea53846d5b0a475704070501f0c5defc7424dfb97fdc0",
+      "binaries": {
+        "eager": {
+          "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/ResourceProbe",
+          "sha256": "4a5f12e221d837b27f2292f0710a4af665edca68023065c2c165b21c42fdcf44"
+        },
+        "stream": {
+          "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/StreamProbe",
+          "sha256": "3ff9230a5933a49e50803fd303a95e52e3900221573fb6763e12018c44d62a55"
+        }
+      }
+    },
+    "parallel": {
+      "commit": "5db047d23e9262fa7d1e396525ab7c3f5e147baa",
+      "module_receipt_sha256": "931145c18aa65b37a7bb5d954f9725e118177a7b995002a02387aebdbdfcd512",
+      "binaries": {
+        "eager": {
+          "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/production/ResourceProbe",
+          "sha256": "336871667f055a5d285112abffb92b6f37544c1638a40db0a2c199e939a210f7"
+        },
+        "stream": {
+          "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/production/StreamProbe",
+          "sha256": "86a6fc73988d475b30e3f6c2fa37ab2359ea07497efc25295053365999950e6a"
+        }
+      }
+    },
+    "parent-serial": {
+      "commit": "680ac74b96ab6c6968d83a9511ebdce69d30093b",
+      "module_receipt_sha256": "63ea87d089ae2869697ea53846d5b0a475704070501f0c5defc7424dfb97fdc0",
+      "binaries": {
+        "eager": {
+          "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/ResourceProbe",
+          "sha256": "4a5f12e221d837b27f2292f0710a4af665edca68023065c2c165b21c42fdcf44"
+        },
+        "stream": {
+          "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/StreamProbe",
+          "sha256": "3ff9230a5933a49e50803fd303a95e52e3900221573fb6763e12018c44d62a55"
+        }
+      }
+    },
+    "serial": {
+      "commit": "5db047d23e9262fa7d1e396525ab7c3f5e147baa",
+      "module_receipt_sha256": "931145c18aa65b37a7bb5d954f9725e118177a7b995002a02387aebdbdfcd512",
+      "binaries": {
+        "eager": {
+          "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/production/ResourceProbe",
+          "sha256": "336871667f055a5d285112abffb92b6f37544c1638a40db0a2c199e939a210f7"
+        },
+        "stream": {
+          "path": "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/production/StreamProbe",
+          "sha256": "86a6fc73988d475b30e3f6c2fa37ab2359ea07497efc25295053365999950e6a"
+        }
+      }
+    }
+  },
+  "inputs": {
+    "bike-day": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/inputs/bike-day.json",
+      "contract": {
+        "id": "bike-day",
+        "path": "/private/tmp/swiftsci-csv-ingestion-checks-20261021/reference/day.csv",
+        "rows": 731,
+        "names": [
+          "instant",
+          "dteday",
+          "season",
+          "yr",
+          "mnth",
+          "holiday",
+          "weekday",
+          "workingday",
+          "weathersit",
+          "temp",
+          "atemp",
+          "hum",
+          "windspeed",
+          "casual",
+          "registered",
+          "cnt"
+        ],
+        "types": [
+          "Int64",
+          "Date",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Int64",
+          "Int64",
+          "Int64"
+        ],
+        "hashes": [
+          "e7bf3c4d6f33c4c7836ebab3c48ec3bcec6a47a405e27cd35604726d723a4112",
+          "d93573724211e9dcb15292350a9358b418e721eab080ce1f7160e0de9f62d840",
+          "f250a5f331a53237c870efa9fd935a80136d3724ecd8135ef43592dac65ab98b",
+          "8b3742c92544bb96edde93fde24d0517394a0318a4bdc06eb96162b138aaf66b",
+          "07b445363da61f437ece6cbad684ab906b3c8dd78ae41218ad445fcc2c6cb9f2",
+          "aee3b5d80ce2c8d9b129aa81b44208123febcdabf380bee78afea4bf45dfe60d",
+          "e5d8353c126c03a0752ab73597d22699b2ae82377564583060da8afcc5e3d4b9",
+          "733c1905a661a65f9e698ebbf39b0d351389ae37474dab78807fc6bab84a4abb",
+          "98defb969d05bd7ab914e220f5299c1ca4c446f5b0886716ab1d0a5272bd8c47",
+          "cec1da16121b425bb5f8ee83565f664ab45953e5cf7dbfc72fb5e7e9ab5a7fcc",
+          "63e54f1c5077d86c543058c6810f32a800d19095340dd3b68840e55956c4a124",
+          "6ce043e475af297fac8f87646f3bdec93d795dbb759c06b4e334fc3d042a284f",
+          "34c0766b0a79da7613e26ae802f983d03359d3684194acb53a13b2298b0e395c",
+          "a08812fbcf39e651dab9e3087164a35963e9b9e70cd930fe9142e448ad597ce4",
+          "165eca53ed6875dce6af0f3f07b6bc8bd9eac55bfc778e819c78303f199db8bf",
+          "0a1aaa0d6f572ad17c377ca44d5b9064a4c35e845c56c12873a76bebd1059d51"
+        ],
+        "null_tokens": [
+          "",
+          "NA"
+        ],
+        "null_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "integral": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true
+        ],
+        "delimiter": ",",
+        "date_formats": {
+          "dteday": "yyyy-MM-dd"
+        },
+        "max_rows": null,
+        "source_sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+        "reference_date_formats": {
+          "dteday": "%Y-%m-%d"
+        }
+      }
+    },
+    "bike-hour": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/inputs/bike-hour.json",
+      "contract": {
+        "id": "bike-hour",
+        "path": "/private/tmp/swiftsci-csv-ingestion-checks-20261021/reference/hour.csv",
+        "rows": 17379,
+        "names": [
+          "instant",
+          "dteday",
+          "season",
+          "yr",
+          "mnth",
+          "hr",
+          "holiday",
+          "weekday",
+          "workingday",
+          "weathersit",
+          "temp",
+          "atemp",
+          "hum",
+          "windspeed",
+          "casual",
+          "registered",
+          "cnt"
+        ],
+        "types": [
+          "Int64",
+          "Date",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Int64",
+          "Int64",
+          "Int64"
+        ],
+        "hashes": [
+          "04df118c27d7a0d90c98abea1d16f1ec32160a0e3d2e5cc50a6bbc049764d79b",
+          "b2351d119ae3e1af9d5b2017ae26df384aa36aceb8874aeb2d3bb3b5b709bfb4",
+          "58d83ae39a08278ae40dd6fc453c1f929dc82365c153141e5cb659cad92554ab",
+          "964c12fc8fc08438be08487a0be4678c81f6d82d6d6c01402565e05554014237",
+          "d03b0b5201600f7e7b5eea544433fdfcc758bd876775bc6a1995f52abf725d22",
+          "212607c4c53ed557612c79c4411c0cf038871b5426a119da8cb945b5787d2950",
+          "6711e9f1acb99864eac0eefca3589104cef2b2c395a6e22deaeb66b572454ebc",
+          "819abd40b0c8883c1ffc91ad13b73131116419338be1336da8a8661d7d793aae",
+          "468bbcc9a5f5ba30db2fd8db265b9941e8d54f8193b9d356805d06b4188bb6b2",
+          "a741ddf0e803d6bccf16f65ce374b661a9eae558ce2c3bbfc019f332cd92bb23",
+          "368846574bbb4bc176eb062b5d84c180280c55ef372abadb419119755b4f3ea3",
+          "e553f3590639f6495dd75a06bffe0d96611768813b84020de19c5fc42ae75341",
+          "406fe43c5d9e4a7ea2f696f28123ccac92dd6738bc7274fcbb43939722e848fb",
+          "456843a2113bf05928cef623f2b156e1f54c16558f5cafa808b204b159a89a41",
+          "1218c38e65530ba7713c6595e4a6de1504b8ddab6f906624aeb54e313b7969b3",
+          "9e4719de4791029527c22229ae22ef201f989e1211f9b909aa522cf1ce54fec3",
+          "19b51c1b0f4dda890d4f39851d369128e24ff68ee64f3f7d66dc9d65edf3fc18"
+        ],
+        "null_tokens": [
+          "",
+          "NA"
+        ],
+        "null_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "integral": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true
+        ],
+        "delimiter": ",",
+        "date_formats": {
+          "dteday": "yyyy-MM-dd"
+        },
+        "max_rows": null,
+        "source_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+        "reference_date_formats": {
+          "dteday": "%Y-%m-%d"
+        }
+      }
+    },
+    "unique-shuffled": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/inputs/unique-shuffled.json",
+      "contract": {
+        "id": "unique-shuffled",
+        "path": "/private/tmp/swiftsci-csv-ingestion-checks-20261021/data/unique-shuffled.csv",
+        "rows": 100000,
+        "names": [
+          "date",
+          "value"
+        ],
+        "types": [
+          "Date",
+          "Int64"
+        ],
+        "hashes": [
+          "cba8e5f5001d375e4a32934ac723cf3cd1cce46d62a06ed79e7eef1157eb97ef",
+          "7abe573f0a7d19bebf4648c9726e07125cb6c9ec2a394bce3bb044f5ffaa24ff"
+        ],
+        "null_tokens": [
+          "",
+          "NA"
+        ],
+        "null_counts": [
+          0,
+          0
+        ],
+        "integral": [
+          false,
+          true
+        ],
+        "delimiter": ",",
+        "date_formats": {
+          "date": "yyyy-MM-dd"
+        },
+        "max_rows": null,
+        "source_sha256": "838ae83a118024e7a7297b833f4c4b9f2ccf5a93b810f0acb2224e2e3f264ce4",
+        "reference_date_formats": {
+          "date": "%Y-%m-%d"
+        }
+      }
+    },
+    "Aotizhongxin": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/inputs/Aotizhongxin.json",
+      "contract": {
+        "id": "Aotizhongxin",
+        "path": "/private/tmp/swiftsci-csv-reference-20261021/501/PRSA_Data_20130301-20170228/PRSA_Data_Aotizhongxin_20130301-20170228.csv",
+        "rows": 35064,
+        "names": [
+          "No",
+          "year",
+          "month",
+          "day",
+          "hour",
+          "PM2.5",
+          "PM10",
+          "SO2",
+          "NO2",
+          "CO",
+          "O3",
+          "TEMP",
+          "PRES",
+          "DEWP",
+          "RAIN",
+          "wd",
+          "WSPM",
+          "station"
+        ],
+        "types": [
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "String",
+          "Double",
+          "String"
+        ],
+        "hashes": [
+          "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+          "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+          "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+          "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+          "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+          "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+          "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+          "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+          "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+          "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+          "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+          "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+          "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+          "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+          "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+          "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+          "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+          "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d"
+        ],
+        "null_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          925,
+          718,
+          935,
+          1023,
+          1776,
+          1719,
+          20,
+          20,
+          20,
+          20,
+          81,
+          14,
+          0
+        ],
+        "integral": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        "first_fraction": {
+          "TEMP": {
+            "row": 0,
+            "value": "-0.7"
+          },
+          "DEWP": {
+            "row": 0,
+            "value": "-18.8"
+          },
+          "WSPM": {
+            "row": 0,
+            "value": "4.4"
+          },
+          "PRES": {
+            "row": 1,
+            "value": "1023.2"
+          },
+          "SO2": {
+            "row": 124,
+            "value": "83.6808"
+          },
+          "NO2": {
+            "row": 124,
+            "value": "140.4252"
+          },
+          "RAIN": {
+            "row": 267,
+            "value": "0.1"
+          },
+          "O3": {
+            "row": 571,
+            "value": "49.266"
+          },
+          "PM10": {
+            "row": 6303,
+            "value": "10.5"
+          },
+          "PM2.5": {
+            "row": 10706,
+            "value": "87.8"
+          }
+        },
+        "null_tokens": [
+          "",
+          "NA"
+        ],
+        "observed_null_tokens": {
+          "NA": 7271
+        },
+        "delimiter": ",",
+        "bytes": 2835916,
+        "sha256": "a94fbcfc71708b6ffdc033360163d91efb7f675e496f6b5860929aa96b96351b",
+        "quote_bytes": 140130,
+        "crlf": 35065,
+        "lf": 35065,
+        "encoding": "UTF-8, ASCII subset",
+        "expected_index_path": "fallback-compact-in-candidates",
+        "reference_date_formats": {}
+      }
+    },
+    "Wanliu": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/inputs/Wanliu.json",
+      "contract": {
+        "id": "Wanliu",
+        "path": "/private/tmp/swiftsci-csv-reference-20261021/501/PRSA_Data_20130301-20170228/PRSA_Data_Wanliu_20130301-20170228.csv",
+        "rows": 35064,
+        "names": [
+          "No",
+          "year",
+          "month",
+          "day",
+          "hour",
+          "PM2.5",
+          "PM10",
+          "SO2",
+          "NO2",
+          "CO",
+          "O3",
+          "TEMP",
+          "PRES",
+          "DEWP",
+          "RAIN",
+          "wd",
+          "WSPM",
+          "station"
+        ],
+        "types": [
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Int64",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "String",
+          "Double",
+          "String"
+        ],
+        "hashes": [
+          "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+          "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+          "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+          "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+          "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+          "dcfce6aea172aca020bd5e541ecbf92564ca4acc437f0b75ff8e4421ed975b6e",
+          "32c00b526e21ba1772c89c6f170785314df73c3f724d8f6e70da8d6c5135553c",
+          "d03dda639431d969516990626916f3186903bf9fe6618795fb1ee2d1c226495c",
+          "3de90c9c95133ca003c5b2de46323c03b4ee4bfc052a19c58ab2894b3cb39802",
+          "99abad93bd7253f7042e107d69dc23f3dd1e7b371df857bc0e377db4918abd43",
+          "3221f2078caea8bdee1ecc3775910f77bc51a6a43be0cdd37087c1cdc217fa5a",
+          "8508bd92858a434f59e6ae35cc3928439de224b999100a423af542f9616d9cb9",
+          "ec2c3904ec6f70bbf679d1e40c4af44830ada9799adea70d0278f2b967bad909",
+          "c49fcc7ce6d6c30ec27d8c1b3a4aa4d7474e6d9409c1eb194fb1f5ee5542f490",
+          "45114c75bbdf14b50b233c2f81256e45c61bed5a8f1ddd848a843ab5352874c6",
+          "824d5bca73192835bbbb493c74bf92fa3a012219a1a7e4d57ac5911e4846d87b",
+          "80184b0a5e00b74272860c492344c5c239181104825a4042e9f2fc6b545f0d9c",
+          "8f828f7ee371b81e23a0cb56a11e7ea437fbf3cfe9d58e80459a309ebba8a689"
+        ],
+        "null_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          382,
+          284,
+          575,
+          1070,
+          1812,
+          2107,
+          20,
+          20,
+          20,
+          20,
+          123,
+          14,
+          0
+        ],
+        "integral": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        "first_fraction": {
+          "TEMP": {
+            "row": 0,
+            "value": "-0.7"
+          },
+          "DEWP": {
+            "row": 0,
+            "value": "-18.8"
+          },
+          "WSPM": {
+            "row": 0,
+            "value": "4.4"
+          },
+          "PRES": {
+            "row": 1,
+            "value": "1023.2"
+          },
+          "SO2": {
+            "row": 178,
+            "value": "122.2368"
+          },
+          "NO2": {
+            "row": 178,
+            "value": "188.6707"
+          },
+          "RAIN": {
+            "row": 267,
+            "value": "0.1"
+          },
+          "O3": {
+            "row": 571,
+            "value": "45.6246"
+          },
+          "PM10": {
+            "row": 683,
+            "value": "107.5"
+          },
+          "PM2.5": {
+            "row": 10705,
+            "value": "125.7"
+          }
+        },
+        "null_tokens": [
+          "",
+          "NA"
+        ],
+        "observed_null_tokens": {
+          "NA": 6447
+        },
+        "delimiter": ",",
+        "bytes": 2659544,
+        "sha256": "0b1a6d754a07f0def2f55434ddfa3870dcd0063b7f766a6f66b6c11bb05a377a",
+        "quote_bytes": 140046,
+        "crlf": 35065,
+        "lf": 35065,
+        "encoding": "UTF-8, ASCII subset",
+        "expected_index_path": "fallback-compact-in-candidates",
+        "reference_date_formats": {}
+      }
+    },
+    "energy": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/inputs/energy.json",
+      "contract": {
+        "id": "energy",
+        "path": "/private/tmp/swiftsci-csv-reference-20261021/235/household_power_consumption.txt",
+        "rows": 2075259,
+        "names": [
+          "Date",
+          "Time",
+          "Global_active_power",
+          "Global_reactive_power",
+          "Voltage",
+          "Global_intensity",
+          "Sub_metering_1",
+          "Sub_metering_2",
+          "Sub_metering_3"
+        ],
+        "types": [
+          "String",
+          "String",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double"
+        ],
+        "hashes": [
+          "3f668c84d65fca84e626079f15d3e4d7c7c2fceb6cc6687236094bfc8e32a007",
+          "7815cb80f2c771ab04a87d8a63a5d3d47d54fed8495e5944aaab41859f7c25a0",
+          "53d359ca15123438086ff97e97f52265e7e4cd17dc1783d373b9be22436c7684",
+          "ae7a878c624c006f23620f7e80b5110442afac4d6fe8d0909b96dbbbb77aecf4",
+          "233829dd762c9a7642bae98b8dce7d0d37c0b7fc7c0f5056a25034b565d21cfb",
+          "873b0856d7c347862dfbbc3db4f7e7dbf14d4419960744468bb3f054c4fab2d3",
+          "6d847664e93f91bc63e1a0a5ec51916e225bcb64a03c1b5ecfe36f4dfbdf0fdf",
+          "9f459c64eee8858609e0f570deb31920f8c3cbc742d82680e515442475729386",
+          "bef6678827019d7a31c3ad10220c8ff5433f36aef2fe6785923ef6c340499c24"
+        ],
+        "null_counts": [
+          0,
+          0,
+          25979,
+          25979,
+          25979,
+          25979,
+          25979,
+          25979,
+          25979
+        ],
+        "integral": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true
+        ],
+        "first_fraction": {
+          "Global_active_power": {
+            "row": 0,
+            "value": "4.216"
+          },
+          "Global_reactive_power": {
+            "row": 0,
+            "value": "0.418"
+          },
+          "Voltage": {
+            "row": 0,
+            "value": "234.840"
+          },
+          "Global_intensity": {
+            "row": 0,
+            "value": "18.400"
+          }
+        },
+        "null_tokens": [
+          "",
+          "?"
+        ],
+        "observed_null_tokens": {
+          "?": 155874,
+          "": 25979
+        },
+        "delimiter": ";",
+        "bytes": 132960755,
+        "sha256": "4259c9d7ece5dbee9ab8d53682baac68d791c864f0f64a52b4043cb3b90894b7",
+        "quote_bytes": 0,
+        "crlf": 2075260,
+        "lf": 2075260,
+        "encoding": "UTF-8, ASCII subset",
+        "expected_index_path": "flat-unquoted",
+        "inference_timestamp_policy": "Date and Time explicitly UTF-8; numeric columns inferred",
+        "reference_date_formats": {}
+      }
+    },
+    "energy-date-full": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/inputs/energy-date-full.json",
+      "contract": {
+        "path": "/private/tmp/swiftsci-csv-reference-20261021/235/household_power_consumption.txt",
+        "names": [
+          "Date",
+          "Time",
+          "Global_active_power",
+          "Global_reactive_power",
+          "Voltage",
+          "Global_intensity",
+          "Sub_metering_1",
+          "Sub_metering_2",
+          "Sub_metering_3"
+        ],
+        "delimiter": ";",
+        "null_tokens": [
+          "",
+          "?"
+        ],
+        "integral": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true
+        ],
+        "sha256": "4259c9d7ece5dbee9ab8d53682baac68d791c864f0f64a52b4043cb3b90894b7",
+        "bytes": 132960755,
+        "id": "energy-date-full",
+        "rows": 2075259,
+        "max_rows": null,
+        "types": [
+          "Date",
+          "String",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "Double"
+        ],
+        "hashes": [
+          "1a25623a935f486225610f3ff35821cd7c05687ae607766f8b284154f9a2daef",
+          "7815cb80f2c771ab04a87d8a63a5d3d47d54fed8495e5944aaab41859f7c25a0",
+          "53d359ca15123438086ff97e97f52265e7e4cd17dc1783d373b9be22436c7684",
+          "ae7a878c624c006f23620f7e80b5110442afac4d6fe8d0909b96dbbbb77aecf4",
+          "233829dd762c9a7642bae98b8dce7d0d37c0b7fc7c0f5056a25034b565d21cfb",
+          "873b0856d7c347862dfbbc3db4f7e7dbf14d4419960744468bb3f054c4fab2d3",
+          "6d847664e93f91bc63e1a0a5ec51916e225bcb64a03c1b5ecfe36f4dfbdf0fdf",
+          "9f459c64eee8858609e0f570deb31920f8c3cbc742d82680e515442475729386",
+          "bef6678827019d7a31c3ad10220c8ff5433f36aef2fe6785923ef6c340499c24"
+        ],
+        "null_counts": [
+          0,
+          0,
+          25979,
+          25979,
+          25979,
+          25979,
+          25979,
+          25979,
+          25979
+        ],
+        "date_format": "d/M/yyyy",
+        "time_zone": "UTC",
+        "reference_date_formats": {
+          "Date": "%d/%m/%Y"
+        }
+      }
+    },
+    "late-bool": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/inputs/late-bool.json",
+      "contract": {
+        "id": "late-bool",
+        "path": "/private/tmp/swiftsci-csv-eager-checks-20261021/inputs/late-bool.csv",
+        "delimiter": ",",
+        "rows": 100001,
+        "names": [
+          "value"
+        ],
+        "types": [
+          "Bool"
+        ],
+        "hashes": [
+          "e878125967f0af55194bc04429aafcab4f12db79f724f8a733b195550917a563"
+        ],
+        "null_tokens": [
+          "",
+          "NA"
+        ],
+        "integral": [
+          false
+        ],
+        "null_counts": [
+          0
+        ],
+        "sha256": "843c97644237ed5684c78d6b38a7c7d6e14af871a92d904a3d3118595bc6cd61"
+      }
+    },
+    "late-text": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/inputs/late-text.json",
+      "contract": {
+        "id": "late-text",
+        "path": "/private/tmp/swiftsci-csv-eager-checks-20261021/inputs/late-text.csv",
+        "delimiter": ",",
+        "rows": 100001,
+        "names": [
+          "value"
+        ],
+        "types": [
+          "String"
+        ],
+        "hashes": [
+          "7cf89733aa9c282b8190395da3c5142236e5ef7347545ee5e01021e67f61679b"
+        ],
+        "null_tokens": [
+          "",
+          "NA"
+        ],
+        "integral": [
+          false
+        ],
+        "null_counts": [
+          0
+        ],
+        "sha256": "438f674f1c09b24ae410f64f8d689257287eccf06a287557d852dd71901da7c5"
+      }
+    },
+    "date-100000-1": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/inputs/date-100000-1.json",
+      "contract": {
+        "id": "date-100000-1",
+        "path": "/private/tmp/swiftsci-csv-conversion-profile-20261021/date-100000-1.csv",
+        "rows": 100000,
+        "names": [
+          "date"
+        ],
+        "types": [
+          "Date"
+        ],
+        "hashes": [
+          "cba8e5f5001d375e4a32934ac723cf3cd1cce46d62a06ed79e7eef1157eb97ef"
+        ],
+        "null_tokens": [
+          "",
+          "NA"
+        ],
+        "null_counts": [
+          0
+        ],
+        "integral": [
+          false
+        ],
+        "delimiter": ",",
+        "date_formats": {
+          "date": "yyyy-MM-dd"
+        },
+        "max_rows": null,
+        "source_sha256": "ec3fe508eacaaa65eb3432fd7ad1c0bf7f66161fba815711a20e003a0de202d8",
+        "reference_date_formats": {
+          "date": "%Y-%m-%d"
+        }
+      }
+    }
+  },
+  "orders": [
+    [
+      "parent-parallel",
+      "parallel",
+      "parent-serial",
+      "serial"
+    ],
+    [
+      "parallel",
+      "parent-serial",
+      "serial",
+      "parent-parallel"
+    ],
+    [
+      "parent-serial",
+      "serial",
+      "parent-parallel",
+      "parallel"
+    ],
+    [
+      "serial",
+      "parent-parallel",
+      "parallel",
+      "parent-serial"
+    ],
+    [
+      "serial",
+      "parent-serial",
+      "parallel",
+      "parent-parallel"
+    ],
+    [
+      "parent-parallel",
+      "serial",
+      "parent-serial",
+      "parallel"
+    ],
+    [
+      "parallel",
+      "parent-parallel",
+      "serial",
+      "parent-serial"
+    ],
+    [
+      "parent-serial",
+      "parallel",
+      "parent-parallel",
+      "serial"
+    ]
+  ],
+  "cases": [
+    [
+      "eager",
+      "bike-day",
+      "known"
+    ],
+    [
+      "eager",
+      "bike-hour",
+      "known"
+    ],
+    [
+      "eager",
+      "unique-shuffled",
+      "known"
+    ],
+    [
+      "eager",
+      "Aotizhongxin",
+      "known"
+    ],
+    [
+      "eager",
+      "Wanliu",
+      "known"
+    ],
+    [
+      "eager",
+      "energy",
+      "known"
+    ],
+    [
+      "eager",
+      "energy",
+      "infer"
+    ],
+    [
+      "eager",
+      "energy-date-full",
+      "known"
+    ],
+    [
+      "eager",
+      "late-bool",
+      "infer"
+    ],
+    [
+      "eager",
+      "late-text",
+      "infer"
+    ],
+    [
+      "stream",
+      "date-100000-1",
+      "known"
+    ],
+    [
+      "stream",
+      "bike-hour",
+      "known"
+    ],
+    [
+      "stream",
+      "unique-shuffled",
+      "known"
+    ],
+    [
+      "stream",
+      "Aotizhongxin",
+      "known"
+    ],
+    [
+      "stream",
+      "energy",
+      "known"
+    ],
+    [
+      "stream",
+      "energy-date-full",
+      "known"
+    ]
+  ],
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "policy": {
+    "schema_version": 1,
+    "mode": "production-default",
+    "thread_environment": {},
+    "cleared_environment": [
+      "BLIS_NUM_THREADS",
+      "GOTO_NUM_THREADS",
+      "MKL_DOMAIN_NUM_THREADS",
+      "MKL_DYNAMIC",
+      "MKL_NUM_THREADS",
+      "NUMEXPR_MAX_THREADS",
+      "NUMEXPR_NUM_THREADS",
+      "OMP_DYNAMIC",
+      "OMP_MAX_ACTIVE_LEVELS",
+      "OMP_NUM_THREADS",
+      "OMP_PLACES",
+      "OMP_PROC_BIND",
+      "OMP_THREAD_LIMIT",
+      "OPENBLAS_DEFAULT_NUM_THREADS",
+      "OPENBLAS_NUM_THREADS",
+      "POLARS_ASYNC_THREAD_COUNT",
+      "POLARS_MAX_THREADS",
+      "RAYON_NUM_THREADS",
+      "VECLIB_MAXIMUM_THREADS",
+      "VECLIB_NUM_THREADS"
+    ],
+    "cleared_prefixes": [
+      "OMP_",
+      "MKL_",
+      "OPENBLAS_",
+      "VECLIB_",
+      "NUMEXPR_"
+    ],
+    "duckdb_threads": "engine-default",
+    "minimum_process_rounds": 5,
+    "order": "rotating-engines-v1",
+    "active_threads_measured": false
+  },
+  "power_start": {
+    "source": "AC",
+    "settings": "Battery Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         2\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           1\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         30\n womp                 1\n networkoversleep     0\n sleep                0\n tcpkeepalive         1\n disksleep            10"
+  },
+  "controller_sha256": "31663f97c51d1148406dae35d57fdbf2c2212f4903a9e946e180ae559074d7dc",
+  "criteria": {
+    "output": "Every value, native type, null position and row/column order must match each independent input contract. Streaming uses a separate untimed full-output repeat.",
+    "cpu": "Process user+system time. Review both final modes against their matching parent conversion policy. Review CPU median increases above10percent.",
+    "memory": "Same internal16384-row bound. Review peak-RSS increase above5percent+8MiB. RSS is not allocation count.",
+    "conditions": "AC, CPU backend, native system scheduling in default mode; serial selector disables only column-conversion workers. Fresh processes, warmed input, no task builds/tests/profilers during acceptance. No outlier trimming. No energy claim."
+  }
+}

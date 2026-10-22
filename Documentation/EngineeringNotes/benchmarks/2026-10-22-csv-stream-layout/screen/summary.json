@@ -1,0 +1,482 @@
+[
+  {
+    "scope": "eager",
+    "case": "energy",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 284810500.0,
+      "total_ns": 126814354.0,
+      "process_peak_held_bytes": 442605568.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "policy": "parallel",
+    "engine": "candidate",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 271311000.0,
+      "total_ns": 122939291.5,
+      "process_peak_held_bytes": 442777600.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "policy": "parallel",
+    "engine": "dispatch-inline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 278775000.0,
+      "total_ns": 125547645.5,
+      "process_peak_held_bytes": 441278464.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "policy": "parallel",
+    "engine": "attempt-outline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 276366500.0,
+      "total_ns": 123166812.5,
+      "process_peak_held_bytes": 441253888.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "policy": "parallel",
+    "engine": "direct-value",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 274103500.0,
+      "total_ns": 123705875.5,
+      "process_peak_held_bytes": 442769408.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 249401500.0,
+      "total_ns": 249480333.5,
+      "process_peak_held_bytes": 441008128.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "policy": "serial",
+    "engine": "candidate",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 240224000.0,
+      "total_ns": 240352375.5,
+      "process_peak_held_bytes": 440958976.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "policy": "serial",
+    "engine": "dispatch-inline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 242373500.0,
+      "total_ns": 242796479.0,
+      "process_peak_held_bytes": 440942592.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "policy": "serial",
+    "engine": "attempt-outline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 244809500.0,
+      "total_ns": 244862499.5,
+      "process_peak_held_bytes": 440926208.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "policy": "serial",
+    "engine": "direct-value",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 246773000.0,
+      "total_ns": 246843167.0,
+      "process_peak_held_bytes": 440909824.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 276660000.0,
+      "total_ns": 116563688.0,
+      "peak_after_bytes": 145539072.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "policy": "parallel",
+    "engine": "candidate",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 294715000.0,
+      "total_ns": 119439896.0,
+      "peak_after_bytes": 146096128.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "policy": "parallel",
+    "engine": "dispatch-inline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 264489500.0,
+      "total_ns": 113080063.0,
+      "peak_after_bytes": 145645568.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "policy": "parallel",
+    "engine": "attempt-outline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 260592000.0,
+      "total_ns": 112743562.0,
+      "peak_after_bytes": 145760256.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "policy": "parallel",
+    "engine": "direct-value",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 263123000.0,
+      "total_ns": 114494833.0,
+      "peak_after_bytes": 145948672.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 234135000.0,
+      "total_ns": 234180562.5,
+      "peak_after_bytes": 143081472.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "policy": "serial",
+    "engine": "candidate",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 221749500.0,
+      "total_ns": 221832041.5,
+      "peak_after_bytes": 143171584.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "policy": "serial",
+    "engine": "dispatch-inline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 226134000.0,
+      "total_ns": 226178187.5,
+      "peak_after_bytes": 143065088.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "policy": "serial",
+    "engine": "attempt-outline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 221334000.0,
+      "total_ns": 221368333.0,
+      "peak_after_bytes": 143097856.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "policy": "serial",
+    "engine": "direct-value",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 219194500.0,
+      "total_ns": 219271000.0,
+      "peak_after_bytes": 143065088.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 305533000.0,
+      "total_ns": 141147791.5,
+      "peak_after_bytes": 145588224.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "policy": "parallel",
+    "engine": "candidate",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 295716000.0,
+      "total_ns": 142481104.5,
+      "peak_after_bytes": 145162240.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "policy": "parallel",
+    "engine": "dispatch-inline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 300459000.0,
+      "total_ns": 141880916.5,
+      "peak_after_bytes": 145506304.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "policy": "parallel",
+    "engine": "attempt-outline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 298511500.0,
+      "total_ns": 141600145.5,
+      "peak_after_bytes": 145588224.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "policy": "parallel",
+    "engine": "direct-value",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 298468000.0,
+      "total_ns": 139943917.0,
+      "peak_after_bytes": 145891328.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 265750000.0,
+      "total_ns": 265808812.5,
+      "peak_after_bytes": 144277504.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "policy": "serial",
+    "engine": "candidate",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 255565500.0,
+      "total_ns": 255652979.5,
+      "peak_after_bytes": 143294464.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "policy": "serial",
+    "engine": "dispatch-inline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 256584000.0,
+      "total_ns": 256646583.0,
+      "peak_after_bytes": 143048704.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "policy": "serial",
+    "engine": "attempt-outline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 252816000.0,
+      "total_ns": 252895437.5,
+      "peak_after_bytes": 144285696.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "policy": "serial",
+    "engine": "direct-value",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 258106000.0,
+      "total_ns": 258145458.0,
+      "peak_after_bytes": 143130624.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 11868500.0,
+      "total_ns": 4206604.0,
+      "peak_after_bytes": 16441344.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "policy": "parallel",
+    "engine": "candidate",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 11552000.0,
+      "total_ns": 4131250.0,
+      "peak_after_bytes": 16564224.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "policy": "parallel",
+    "engine": "dispatch-inline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 11521500.0,
+      "total_ns": 4127895.5,
+      "peak_after_bytes": 16449536.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "policy": "parallel",
+    "engine": "attempt-outline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 11979500.0,
+      "total_ns": 4150583.0,
+      "peak_after_bytes": 16449536.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "policy": "parallel",
+    "engine": "direct-value",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 11823000.0,
+      "total_ns": 4089896.0,
+      "peak_after_bytes": 16498688.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 7841000.0,
+      "total_ns": 7893708.0,
+      "peak_after_bytes": 18653184.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "policy": "serial",
+    "engine": "candidate",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 7540500.0,
+      "total_ns": 7599521.0,
+      "peak_after_bytes": 15155200.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "policy": "serial",
+    "engine": "dispatch-inline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 7583500.0,
+      "total_ns": 7635833.0,
+      "peak_after_bytes": 15040512.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "policy": "serial",
+    "engine": "attempt-outline",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 7468000.0,
+      "total_ns": 7510771.0,
+      "peak_after_bytes": 15081472.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "policy": "serial",
+    "engine": "direct-value",
+    "samples": 10,
+    "medians": {
+      "total_cpu_ns": 7495000.0,
+      "total_ns": 7550812.5,
+      "peak_after_bytes": 15089664.0
+    }
+  }
+]

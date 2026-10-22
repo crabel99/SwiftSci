@@ -1,0 +1,192 @@
+[
+  {
+    "implementation": "parent",
+    "functions": [
+      {
+        "symbol": "_$s14SwiftDataFrame19CSVColumnConversionO6append6buffer7records8startRow8rowCount6column12sourceOffsetySRys5UInt8VG_xS4itAA15CSVRecordAccessRzlFAA20CSVCompactRecordViewV_Tg5:",
+        "instruction_entries": 868,
+        "typed_attempt_calls": [
+          "00000001000379e0\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA14CSVDateDecoderV_AA20CSVCompactRecordViewVTg5",
+          "0000000100037a24\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA17CSVIntegerDecoderV_AA20CSVCompactRecordViewVTg5",
+          "0000000100037e24\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC10appendRows33_424B645C314D23D8E63FA63778F4EE52LL_____7decoder9validates4intoAA14CSVFieldOffsetVSgSRys5UInt8VG_qd__S3ixSbAA0D7BuilderVy5ValueQzGztAA15CSVRecordAccessRd__lFZAA16CSVStringDecoderV_AA20CSVCompactRecordViewVTt7g5Tf4xxnnnnnn_n",
+          "0000000100038330\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA16CSVDoubleDecoderV_AA20CSVCompactRecordViewVTg5"
+        ]
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA17CSVIntegerDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 467,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA14CSVDateDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 763,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA16CSVDoubleDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 501,
+        "typed_attempt_calls": []
+      }
+    ],
+    "binary_sha256": "3ff9230a5933a49e50803fd303a95e52e3900221573fb6763e12018c44d62a55",
+    "command": [
+      "xcrun",
+      "otool",
+      "-tvV",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/StreamProbe"
+    ],
+    "scope": "Static disassembly entries and calls. Missing standalone symbols can mean inlining or elimination. Not executed instruction count, FLOPs, or cache evidence."
+  },
+  {
+    "implementation": "candidate",
+    "functions": [
+      {
+        "symbol": "_$s14SwiftDataFrame19CSVColumnConversionO6append6buffer7records8startRow8rowCount6column12sourceOffsetySRys5UInt8VG_xS4itAA15CSVRecordAccessRzlFAA20CSVCompactRecordViewV_Tg5:",
+        "instruction_entries": 1515,
+        "typed_attempt_calls": [
+          "0000000100037f8c\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA17CSVIntegerDecoderV_AA20CSVCompactRecordViewVTg5",
+          "0000000100037fc8\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA14CSVDateDecoderV_AA20CSVCompactRecordViewVTg5",
+          "00000001000386a8\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA16CSVDoubleDecoderV_AA20CSVCompactRecordViewVTg5"
+        ]
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA17CSVIntegerDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 467,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA14CSVDateDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 763,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA16CSVDoubleDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 501,
+        "typed_attempt_calls": []
+      }
+    ],
+    "binary_sha256": "e0ce2f9166e5b7eeeee9427ac5bf1c51955d006d5abab4db0dd6d0c377624275",
+    "command": [
+      "xcrun",
+      "otool",
+      "-tvV",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/build/production/StreamProbe"
+    ],
+    "scope": "Static disassembly entries and calls. Missing standalone symbols can mean inlining or elimination. Not executed instruction count, FLOPs, or cache evidence."
+  },
+  {
+    "implementation": "dispatch-inline",
+    "functions": [
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA17CSVIntegerDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 467,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA14CSVDateDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 763,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA16CSVDoubleDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 501,
+        "typed_attempt_calls": []
+      }
+    ],
+    "binary_sha256": "51090edd08ce6ef11a879e98dc9d5eeb31fd6779a94a0ef723a69e3a22723b6e",
+    "command": [
+      "xcrun",
+      "otool",
+      "-tvV",
+      "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/dispatch-inline/StreamProbe"
+    ],
+    "scope": "Static disassembly entries and calls. Missing standalone symbols can mean inlining or elimination. Not executed instruction count, FLOPs, or cache evidence."
+  },
+  {
+    "implementation": "attempt-outline",
+    "functions": [
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA17CSVIntegerDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 467,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA17CSVBooleanDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 423,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA14CSVDateDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 763,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA16CSVStringDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 377,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA16CSVDoubleDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 501,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA21CSVSmallStringDecoderV_AA20CSVCompactRecordViewVTg5Tf4nnnnndn_n:",
+        "instruction_entries": 346,
+        "typed_attempt_calls": []
+      }
+    ],
+    "binary_sha256": "86a6fc73988d475b30e3f6c2fa37ab2359ea07497efc25295053365999950e6a",
+    "command": [
+      "xcrun",
+      "otool",
+      "-tvV",
+      "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/attempt-outline/StreamProbe"
+    ],
+    "scope": "Static disassembly entries and calls. Missing standalone symbols can mean inlining or elimination. Not executed instruction count, FLOPs, or cache evidence."
+  },
+  {
+    "implementation": "direct-value",
+    "functions": [
+      {
+        "symbol": "_$s14SwiftDataFrame19CSVColumnConversionO6append6buffer7records8startRow8rowCount6column12sourceOffsetySRys5UInt8VG_xS4itAA15CSVRecordAccessRzlFAA20CSVCompactRecordViewV_Tg5:",
+        "instruction_entries": 881,
+        "typed_attempt_calls": [
+          "0000000100037d64\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC10appendRows33_424B645C314D23D8E63FA63778F4EE52LL_____7decoder9validates4intoAA14CSVFieldOffsetVSgSRys5UInt8VG_qd__S3ixSbAA0D7BuilderVy5ValueQzGztAA15CSVRecordAccessRd__lFZAA16CSVStringDecoderV_AA20CSVCompactRecordViewVTt7g5Tf4xxnnnnnn_n",
+          "0000000100037dac\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA17CSVIntegerDecoderV_AA20CSVCompactRecordViewVTg5",
+          "0000000100037dec\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA14CSVDateDecoderV_AA20CSVCompactRecordViewVTg5",
+          "00000001000381a8\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA21CSVSmallStringDecoderV_AA20CSVCompactRecordViewVTg5Tf4nnnnndn_n",
+          "00000001000381e8\tbl\t_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA16CSVDoubleDecoderV_AA20CSVCompactRecordViewVTg5"
+        ]
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA17CSVIntegerDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 467,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA14CSVDateDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 763,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA16CSVDoubleDecoderV_AA20CSVCompactRecordViewVTg5:",
+        "instruction_entries": 501,
+        "typed_attempt_calls": []
+      },
+      {
+        "symbol": "_$s14SwiftDataFrame16CSVColumnAttemptC6append_____12sourceOffsetySRys5UInt8VG_qd__S4itAA15CSVRecordAccessRd__lFAA21CSVSmallStringDecoderV_AA20CSVCompactRecordViewVTg5Tf4nnnnndn_n:",
+        "instruction_entries": 354,
+        "typed_attempt_calls": []
+      }
+    ],
+    "binary_sha256": "9e4b69c0788a08220d2b4f204e8bb23fbd94bf1ce199f27d17b354623f896ffe",
+    "command": [
+      "xcrun",
+      "otool",
+      "-tvV",
+      "/private/tmp/swiftsci-csv-stream-dispatch-20261022/build/direct-value/StreamProbe"
+    ],
+    "scope": "Static disassembly entries and calls. Missing standalone symbols can mean inlining or elimination. Not executed instruction count, FLOPs, or cache evidence."
+  }
+]
