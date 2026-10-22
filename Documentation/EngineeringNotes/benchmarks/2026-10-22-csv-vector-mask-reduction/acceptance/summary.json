@@ -1,0 +1,882 @@
+[
+  {
+    "scope": "eager",
+    "case": "bike-day",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 871000.0,
+      "total_ns": 401604.5,
+      "process_peak_held_bytes": 8175616.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "bike-day",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 710000.0,
+      "total_ns": 425188.5,
+      "process_peak_held_bytes": 8085504.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "bike-day",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 680000.0,
+      "total_ns": 432750.0,
+      "process_peak_held_bytes": 8060928.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "bike-day",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 404500.0,
+      "total_ns": 452145.5,
+      "process_peak_held_bytes": 7897088.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "bike-day",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 394000.0,
+      "total_ns": 437145.5,
+      "process_peak_held_bytes": 7864320.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "bike-hour",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 7907500.0,
+      "total_ns": 1487999.5,
+      "process_peak_held_bytes": 18612224.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "bike-hour",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 5330000.0,
+      "total_ns": 2067916.5,
+      "process_peak_held_bytes": 16523264.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "bike-hour",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 5274500.0,
+      "total_ns": 2026396.0,
+      "process_peak_held_bytes": 16506880.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "bike-hour",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3586500.0,
+      "total_ns": 3619854.0,
+      "process_peak_held_bytes": 16269312.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "bike-hour",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3565000.0,
+      "total_ns": 3593750.0,
+      "process_peak_held_bytes": 16236544.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "unique-shuffled",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 7396000.0,
+      "total_ns": 4915459.0,
+      "process_peak_held_bytes": 16523264.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "unique-shuffled",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 6012000.0,
+      "total_ns": 5385624.5,
+      "process_peak_held_bytes": 12926976.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "unique-shuffled",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 5793000.0,
+      "total_ns": 5148937.0,
+      "process_peak_held_bytes": 12894208.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "unique-shuffled",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 5841000.0,
+      "total_ns": 5901520.5,
+      "process_peak_held_bytes": 12894208.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "unique-shuffled",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 5658000.0,
+      "total_ns": 5695437.0,
+      "process_peak_held_bytes": 12861440.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 12029000.0,
+      "total_ns": 4738750.0,
+      "process_peak_held_bytes": 26984448.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 12438500.0,
+      "total_ns": 4994375.0,
+      "process_peak_held_bytes": 24190976.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 12234500.0,
+      "total_ns": 4791959.0,
+      "process_peak_held_bytes": 24166400.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 9082500.0,
+      "total_ns": 9113312.0,
+      "process_peak_held_bytes": 23887872.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 8861000.0,
+      "total_ns": 8909729.5,
+      "process_peak_held_bytes": 23871488.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Wanliu",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 12083500.0,
+      "total_ns": 4574874.5,
+      "process_peak_held_bytes": 26779648.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Wanliu",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 12563500.0,
+      "total_ns": 4991792.0,
+      "process_peak_held_bytes": 24027136.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Wanliu",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 12264000.0,
+      "total_ns": 4794333.5,
+      "process_peak_held_bytes": 23969792.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Wanliu",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 9013000.0,
+      "total_ns": 9053374.5,
+      "process_peak_held_bytes": 23707648.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Wanliu",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 8816500.0,
+      "total_ns": 8866791.5,
+      "process_peak_held_bytes": 23691264.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 450505000.0,
+      "total_ns": 101608666.5,
+      "process_peak_held_bytes": 755171328.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 352239000.0,
+      "total_ns": 172968541.5,
+      "process_peak_held_bytes": 441286656.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 325462000.0,
+      "total_ns": 155165979.5,
+      "process_peak_held_bytes": 442777600.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 314868000.0,
+      "total_ns": 314984854.5,
+      "process_peak_held_bytes": 442433536.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 298877000.0,
+      "total_ns": 298975937.5,
+      "process_peak_held_bytes": 442384384.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "mode": "infer",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 445812000.0,
+      "total_ns": 100657187.5,
+      "process_peak_held_bytes": 755228672.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "mode": "infer",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 351505500.0,
+      "total_ns": 173098624.5,
+      "process_peak_held_bytes": 441335808.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "mode": "infer",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 334833500.0,
+      "total_ns": 156873562.0,
+      "process_peak_held_bytes": 442023936.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "mode": "infer",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 310992500.0,
+      "total_ns": 311047645.5,
+      "process_peak_held_bytes": 441729024.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy",
+    "mode": "infer",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 295382000.0,
+      "total_ns": 295441041.5,
+      "process_peak_held_bytes": 440909824.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy-date-full",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 470457500.0,
+      "total_ns": 96604958.5,
+      "process_peak_held_bytes": 755195904.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy-date-full",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 365307000.0,
+      "total_ns": 169274500.0,
+      "process_peak_held_bytes": 442761216.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy-date-full",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 343308500.0,
+      "total_ns": 150530187.5,
+      "process_peak_held_bytes": 442007552.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy-date-full",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 330153000.0,
+      "total_ns": 330244354.0,
+      "process_peak_held_bytes": 442466304.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy-date-full",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 314522500.0,
+      "total_ns": 314580187.0,
+      "process_peak_held_bytes": 441720832.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "late-bool",
+    "mode": "infer",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 6716000.0,
+      "total_ns": 6780646.0,
+      "process_peak_held_bytes": 11075584.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "late-bool",
+    "mode": "infer",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 6814500.0,
+      "total_ns": 6868166.5,
+      "process_peak_held_bytes": 10141696.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "late-bool",
+    "mode": "infer",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 6844000.0,
+      "total_ns": 6893750.5,
+      "process_peak_held_bytes": 10108928.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "late-bool",
+    "mode": "infer",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 6789000.0,
+      "total_ns": 6819187.5,
+      "process_peak_held_bytes": 10141696.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "late-bool",
+    "mode": "infer",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 6801000.0,
+      "total_ns": 6840437.5,
+      "process_peak_held_bytes": 10108928.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "late-text",
+    "mode": "infer",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 14475000.0,
+      "total_ns": 13247333.0,
+      "process_peak_held_bytes": 19816448.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "late-text",
+    "mode": "infer",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 8712000.0,
+      "total_ns": 8762958.5,
+      "process_peak_held_bytes": 17694720.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "late-text",
+    "mode": "infer",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 8354500.0,
+      "total_ns": 8414312.5,
+      "process_peak_held_bytes": 17645568.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "late-text",
+    "mode": "infer",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 8836000.0,
+      "total_ns": 8871021.0,
+      "process_peak_held_bytes": 17694720.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "late-text",
+    "mode": "infer",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 8443500.0,
+      "total_ns": 8479521.0,
+      "process_peak_held_bytes": 17645568.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "date-100000-1",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 4498000.0,
+      "total_ns": 4540208.0,
+      "peak_after_bytes": 8912896.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "date-100000-1",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 4432000.0,
+      "total_ns": 4482000.0,
+      "peak_after_bytes": 8994816.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "date-100000-1",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 4369500.0,
+      "total_ns": 4416291.5,
+      "peak_after_bytes": 8994816.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "date-100000-1",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 4394000.0,
+      "total_ns": 4429479.0,
+      "peak_after_bytes": 8994816.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "date-100000-1",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 4359000.0,
+      "total_ns": 4418146.0,
+      "peak_after_bytes": 8962048.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "bike-hour",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 5385000.0,
+      "total_ns": 2026271.0,
+      "peak_after_bytes": 13434880.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "bike-hour",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 5236500.0,
+      "total_ns": 2138125.0,
+      "peak_after_bytes": 13508608.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "bike-hour",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 5244000.0,
+      "total_ns": 2014417.0,
+      "peak_after_bytes": 13516800.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "bike-hour",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 3495000.0,
+      "total_ns": 3540750.0,
+      "peak_after_bytes": 13205504.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "bike-hour",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 3453000.0,
+      "total_ns": 3487271.0,
+      "peak_after_bytes": 13172736.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "unique-shuffled",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 5583000.0,
+      "total_ns": 4962916.5,
+      "peak_after_bytes": 9822208.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "unique-shuffled",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 5500000.0,
+      "total_ns": 4884937.0,
+      "peak_after_bytes": 9895936.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "unique-shuffled",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 5520000.0,
+      "total_ns": 4894771.0,
+      "peak_after_bytes": 9912320.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "unique-shuffled",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 5454500.0,
+      "total_ns": 5491291.5,
+      "peak_after_bytes": 9871360.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "unique-shuffled",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 5416000.0,
+      "total_ns": 5460729.0,
+      "peak_after_bytes": 9863168.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 11933500.0,
+      "total_ns": 4551708.0,
+      "peak_after_bytes": 16908288.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 12006000.0,
+      "total_ns": 4601270.5,
+      "peak_after_bytes": 16367616.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 11999000.0,
+      "total_ns": 4506250.0,
+      "peak_after_bytes": 17072128.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 8696000.0,
+      "total_ns": 8716041.0,
+      "peak_after_bytes": 18718720.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 8444500.0,
+      "total_ns": 8464021.0,
+      "peak_after_bytes": 18677760.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 334353500.0,
+      "total_ns": 151523374.5,
+      "peak_after_bytes": 144891904.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 331257000.0,
+      "total_ns": 150886833.0,
+      "peak_after_bytes": 145563648.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 320460000.0,
+      "total_ns": 148346875.0,
+      "peak_after_bytes": 145072128.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 272181000.0,
+      "total_ns": 272212916.5,
+      "peak_after_bytes": 143065088.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 270663500.0,
+      "total_ns": 271352729.0,
+      "peak_after_bytes": 143032320.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "mode": "known",
+    "engine": "original",
+    "medians": {
+      "total_cpu_ns": 340495000.0,
+      "total_ns": 144696937.0,
+      "peak_after_bytes": 145244160.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "mode": "known",
+    "engine": "parent-parallel",
+    "medians": {
+      "total_cpu_ns": 338501500.0,
+      "total_ns": 143432166.5,
+      "peak_after_bytes": 144801792.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "mode": "known",
+    "engine": "parallel",
+    "medians": {
+      "total_cpu_ns": 326731000.0,
+      "total_ns": 140949646.0,
+      "peak_after_bytes": 145145856.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "mode": "known",
+    "engine": "parent-serial",
+    "medians": {
+      "total_cpu_ns": 287876000.0,
+      "total_ns": 287939145.5,
+      "peak_after_bytes": 143130624.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-date-full",
+    "mode": "known",
+    "engine": "serial",
+    "medians": {
+      "total_cpu_ns": 288309000.0,
+      "total_ns": 288341729.5,
+      "peak_after_bytes": 143081472.0
+    }
+  }
+]

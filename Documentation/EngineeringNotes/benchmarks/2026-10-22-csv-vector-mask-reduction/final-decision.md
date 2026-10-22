@@ -1,0 +1,5 @@
+The matched final reads support this small production change. Household eager reads use 4.7–7.6% less process CPU time across the tested schema and scheduling choices. Quoted air-quality eager reads use 1.6–2.4% less. Streaming benefits are smaller and mixed, including a 0.15% CPU increase for serial household date parsing. The largest reference CPU increase is 0.43% on late-Bool inference.
+
+The largest control increase is 3.3%, about 10 microseconds, on a 257-row, four-column parallel read. Serial explicit-schema conversion with 90% nulls increases 2.2%, about 67 microseconds. These observations remain in the accepted results. They are not hidden by a single aggregate score.
+
+The largest observed median peak-RSS increase is 1.42 MiB on the full household eager parallel read. The control matrix's largest increase is 0.33 MiB. The patch does not change retained metadata or column allocation policy, but this study does not count individual final-build allocations. It does not claim a memory reduction.

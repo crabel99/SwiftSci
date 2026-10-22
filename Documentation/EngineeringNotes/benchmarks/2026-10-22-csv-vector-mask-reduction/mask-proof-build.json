@@ -1,0 +1,33 @@
+{
+  "command": [
+    "xcrun",
+    "swiftc",
+    "-package-name",
+    "SwiftSci",
+    "-O",
+    "-whole-module-optimization",
+    "-swift-version",
+    "6",
+    "-enable-upcoming-feature",
+    "ExistentialAny",
+    "-target",
+    "arm64-apple-macos14.0",
+    "-sdk",
+    "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+    "-I",
+    "/Users/crabel/Library/Caches/SwiftSci/mixed-workloads-derived/Build/Products/Release",
+    "-Xcc",
+    "-fmodule-map-file=/Users/crabel/Library/Caches/SwiftSci/mixed-workloads-derived/Build/Intermediates.noindex/GeneratedModuleMaps/ArrowC.modulemap",
+    "-Xcc",
+    "-fmodule-map-file=/Users/crabel/Library/Caches/SwiftSci/xcode-packages/checkouts/swift-atomics/Sources/_AtomicsShims/include/module.modulemap",
+    "-module-cache-path",
+    "/private/tmp/swiftsci-csv-wide-profile-20261022/module-cache",
+    "-parse-as-library",
+    "MaskProof.swift",
+    "-o",
+    "MaskProof"
+  ],
+  "source_sha256": "e81b83ca59f507e5df3da0eb8e0e3509bf2d6bda30df39555c0bc9219a18fe75",
+  "binary_sha256": "c9bc8aad7aa8e61ead021e378ee1a1f0c7092c21a84fad0797a1a697ac4d3c32",
+  "stdout": "65536 masks passed for all five expressions\n"
+}

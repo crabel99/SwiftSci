@@ -1,0 +1,1282 @@
+[
+  {
+    "case": "bike-day",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 746500.0,
+      "total_ns": 459249.5,
+      "process_peak_held_bytes": 8118272.0
+    }
+  },
+  {
+    "case": "bike-day",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 722500.0,
+      "total_ns": 432687.5,
+      "process_peak_held_bytes": 8110080.0
+    },
+    "cpu_ratio": 0.9678499665103818,
+    "wall_ratio": 0.9421621580426326
+  },
+  {
+    "case": "bike-day",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 748500.0,
+      "total_ns": 446750.5,
+      "process_peak_held_bytes": 8134656.0
+    },
+    "cpu_ratio": 1.0026791694574682,
+    "wall_ratio": 0.9727838571408353
+  },
+  {
+    "case": "bike-day",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 434000.0,
+      "total_ns": 437354.5,
+      "process_peak_held_bytes": 7946240.0
+    }
+  },
+  {
+    "case": "bike-day",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 421500.0,
+      "total_ns": 424395.0,
+      "process_peak_held_bytes": 7872512.0
+    },
+    "cpu_ratio": 0.9711981566820277,
+    "wall_ratio": 0.9703684311010862
+  },
+  {
+    "case": "bike-day",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 425500.0,
+      "total_ns": 429146.0,
+      "process_peak_held_bytes": 7880704.0
+    },
+    "cpu_ratio": 0.9804147465437788,
+    "wall_ratio": 0.9812314724096813
+  },
+  {
+    "case": "bike-hour",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 5427000.0,
+      "total_ns": 2043625.5,
+      "process_peak_held_bytes": 16572416.0
+    }
+  },
+  {
+    "case": "bike-hour",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 5266500.0,
+      "total_ns": 2010188.0,
+      "process_peak_held_bytes": 16523264.0
+    },
+    "cpu_ratio": 0.9704256495301271,
+    "wall_ratio": 0.9836381470088331
+  },
+  {
+    "case": "bike-hour",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 5393000.0,
+      "total_ns": 2043624.5,
+      "process_peak_held_bytes": 16531456.0
+    },
+    "cpu_ratio": 0.9937350285608992,
+    "wall_ratio": 0.9999995106735554
+  },
+  {
+    "case": "bike-hour",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 3697500.0,
+      "total_ns": 3726437.5,
+      "process_peak_held_bytes": 16269312.0
+    }
+  },
+  {
+    "case": "bike-hour",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 3609500.0,
+      "total_ns": 3637541.5,
+      "process_peak_held_bytes": 16236544.0
+    },
+    "cpu_ratio": 0.9762001352265044,
+    "wall_ratio": 0.9761445079918823
+  },
+  {
+    "case": "bike-hour",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 3693500.0,
+      "total_ns": 3725688.0,
+      "process_peak_held_bytes": 16252928.0
+    },
+    "cpu_ratio": 0.9989181879648411,
+    "wall_ratio": 0.999798869563759
+  },
+  {
+    "case": "unique-shuffled",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 6256500.0,
+      "total_ns": 5554688.0,
+      "process_peak_held_bytes": 12959744.0
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 6041500.0,
+      "total_ns": 5339541.0,
+      "process_peak_held_bytes": 12926976.0
+    },
+    "cpu_ratio": 0.9656357388316151,
+    "wall_ratio": 0.9612674915314775
+  },
+  {
+    "case": "unique-shuffled",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 6093000.0,
+      "total_ns": 5360312.5,
+      "process_peak_held_bytes": 12926976.0
+    },
+    "cpu_ratio": 0.9738671781347399,
+    "wall_ratio": 0.9650069454846069
+  },
+  {
+    "case": "unique-shuffled",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 6010000.0,
+      "total_ns": 6021478.5,
+      "process_peak_held_bytes": 12894208.0
+    }
+  },
+  {
+    "case": "unique-shuffled",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 5754000.0,
+      "total_ns": 5773896.0,
+      "process_peak_held_bytes": 12861440.0
+    },
+    "cpu_ratio": 0.9574043261231281,
+    "wall_ratio": 0.9588834370163407
+  },
+  {
+    "case": "unique-shuffled",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 5869500.0,
+      "total_ns": 5875021.0,
+      "process_peak_held_bytes": 12861440.0
+    },
+    "cpu_ratio": 0.976622296173045,
+    "wall_ratio": 0.9756774851890612
+  },
+  {
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 12577500.0,
+      "total_ns": 4984771.5,
+      "process_peak_held_bytes": 24207360.0
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 12350000.0,
+      "total_ns": 4761312.5,
+      "process_peak_held_bytes": 24174592.0
+    },
+    "cpu_ratio": 0.9819121447028424,
+    "wall_ratio": 0.9551716663441845
+  },
+  {
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 12320000.0,
+      "total_ns": 4799520.5,
+      "process_peak_held_bytes": 24182784.0
+    },
+    "cpu_ratio": 0.9795269330153051,
+    "wall_ratio": 0.9628366114675467
+  },
+  {
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 9094500.0,
+      "total_ns": 9123875.0,
+      "process_peak_held_bytes": 23904256.0
+    }
+  },
+  {
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 8790000.0,
+      "total_ns": 8829166.5,
+      "process_peak_held_bytes": 23871488.0
+    },
+    "cpu_ratio": 0.9665182253010061,
+    "wall_ratio": 0.967699195791262
+  },
+  {
+    "case": "Aotizhongxin",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 8853500.0,
+      "total_ns": 8879271.0,
+      "process_peak_held_bytes": 23871488.0
+    },
+    "cpu_ratio": 0.9735004673154104,
+    "wall_ratio": 0.9731907769451028
+  },
+  {
+    "case": "Wanliu",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 12480000.0,
+      "total_ns": 4917791.5,
+      "process_peak_held_bytes": 24010752.0
+    }
+  },
+  {
+    "case": "Wanliu",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 12253500.0,
+      "total_ns": 4754812.5,
+      "process_peak_held_bytes": 23986176.0
+    },
+    "cpu_ratio": 0.9818509615384615,
+    "wall_ratio": 0.9668593107292166
+  },
+  {
+    "case": "Wanliu",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 12339000.0,
+      "total_ns": 4772291.5,
+      "process_peak_held_bytes": 24018944.0
+    },
+    "cpu_ratio": 0.9887019230769231,
+    "wall_ratio": 0.9704135484393757
+  },
+  {
+    "case": "Wanliu",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 8918000.0,
+      "total_ns": 8942645.5,
+      "process_peak_held_bytes": 23724032.0
+    }
+  },
+  {
+    "case": "Wanliu",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 8719000.0,
+      "total_ns": 8746396.0,
+      "process_peak_held_bytes": 23715840.0
+    },
+    "cpu_ratio": 0.977685579726396,
+    "wall_ratio": 0.978054648369993
+  },
+  {
+    "case": "Wanliu",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 8866000.0,
+      "total_ns": 8889167.0,
+      "process_peak_held_bytes": 23691264.0
+    },
+    "cpu_ratio": 0.9941690962099126,
+    "wall_ratio": 0.9940198345109398
+  },
+  {
+    "case": "energy",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 349889000.0,
+      "total_ns": 171829479.5,
+      "process_peak_held_bytes": 442818560.0
+    }
+  },
+  {
+    "case": "energy",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 326958500.0,
+      "total_ns": 156554229.0,
+      "process_peak_held_bytes": 442015744.0
+    },
+    "cpu_ratio": 0.9344635012818351,
+    "wall_ratio": 0.9111022710163071
+  },
+  {
+    "case": "energy",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 339940000.0,
+      "total_ns": 154314146.0,
+      "process_peak_held_bytes": 442810368.0
+    },
+    "cpu_ratio": 0.9715652678420871,
+    "wall_ratio": 0.8980656081193565
+  },
+  {
+    "case": "energy",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 304949000.0,
+      "total_ns": 304976541.5,
+      "process_peak_held_bytes": 440942592.0
+    }
+  },
+  {
+    "case": "energy",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 290640500.0,
+      "total_ns": 290677937.5,
+      "process_peak_held_bytes": 440901632.0
+    },
+    "cpu_ratio": 0.9530790394459402,
+    "wall_ratio": 0.9531157251319279
+  },
+  {
+    "case": "energy",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 289845500.0,
+      "total_ns": 289894104.5,
+      "process_peak_held_bytes": 440893440.0
+    },
+    "cpu_ratio": 0.950472046145421,
+    "wall_ratio": 0.9505455831920109
+  },
+  {
+    "case": "energy",
+    "mode": "infer",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 351920500.0,
+      "total_ns": 172855688.0,
+      "process_peak_held_bytes": 441319424.0
+    }
+  },
+  {
+    "case": "energy",
+    "mode": "infer",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 334404000.0,
+      "total_ns": 156303416.0,
+      "process_peak_held_bytes": 441245696.0
+    },
+    "cpu_ratio": 0.9502259743322711,
+    "wall_ratio": 0.90424224859757
+  },
+  {
+    "case": "energy",
+    "mode": "infer",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 338283000.0,
+      "total_ns": 149915500.5,
+      "process_peak_held_bytes": 441278464.0
+    },
+    "cpu_ratio": 0.9612483501245309,
+    "wall_ratio": 0.8672870545052588
+  },
+  {
+    "case": "energy",
+    "mode": "infer",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 310751500.0,
+      "total_ns": 310784500.0,
+      "process_peak_held_bytes": 440958976.0
+    }
+  },
+  {
+    "case": "energy",
+    "mode": "infer",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 292132000.0,
+      "total_ns": 292158875.0,
+      "process_peak_held_bytes": 440909824.0
+    },
+    "cpu_ratio": 0.9400823487577695,
+    "wall_ratio": 0.9400690027977586
+  },
+  {
+    "case": "energy",
+    "mode": "infer",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 300169000.0,
+      "total_ns": 300205937.5,
+      "process_peak_held_bytes": 440893440.0
+    },
+    "cpu_ratio": 0.9659454580267512,
+    "wall_ratio": 0.9659617435875985
+  },
+  {
+    "case": "energy-date-full",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 366576500.0,
+      "total_ns": 167975625.5,
+      "process_peak_held_bytes": 441286656.0
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 342817500.0,
+      "total_ns": 148508395.5,
+      "process_peak_held_bytes": 442023936.0
+    },
+    "cpu_ratio": 0.9351867891149597,
+    "wall_ratio": 0.884106816438079
+  },
+  {
+    "case": "energy-date-full",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 352394000.0,
+      "total_ns": 148796417.0,
+      "process_peak_held_bytes": 442744832.0
+    },
+    "cpu_ratio": 0.961310940554018,
+    "wall_ratio": 0.8858214789026042
+  },
+  {
+    "case": "energy-date-full",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 323339500.0,
+      "total_ns": 323374833.5,
+      "process_peak_held_bytes": 440958976.0
+    }
+  },
+  {
+    "case": "energy-date-full",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 307780000.0,
+      "total_ns": 307986999.5,
+      "process_peak_held_bytes": 440958976.0
+    },
+    "cpu_ratio": 0.95187875282791,
+    "wall_ratio": 0.9524148684254367
+  },
+  {
+    "case": "energy-date-full",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 311449500.0,
+      "total_ns": 311488375.0,
+      "process_peak_held_bytes": 440909824.0
+    },
+    "cpu_ratio": 0.9632275054547929,
+    "wall_ratio": 0.9632424750827123
+  },
+  {
+    "case": "late-bool",
+    "mode": "infer",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 6582500.0,
+      "total_ns": 6613125.5,
+      "process_peak_held_bytes": 10141696.0
+    }
+  },
+  {
+    "case": "late-bool",
+    "mode": "infer",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 6660000.0,
+      "total_ns": 6683333.5,
+      "process_peak_held_bytes": 10108928.0
+    },
+    "cpu_ratio": 1.011773642233194,
+    "wall_ratio": 1.0106164626695804
+  },
+  {
+    "case": "late-bool",
+    "mode": "infer",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 6754500.0,
+      "total_ns": 6781062.0,
+      "process_peak_held_bytes": 10108928.0
+    },
+    "cpu_ratio": 1.026129889859476,
+    "wall_ratio": 1.0253944220474873
+  },
+  {
+    "case": "late-bool",
+    "mode": "infer",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 6690500.0,
+      "total_ns": 6715708.0,
+      "process_peak_held_bytes": 10141696.0
+    }
+  },
+  {
+    "case": "late-bool",
+    "mode": "infer",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 6630000.0,
+      "total_ns": 6655083.5,
+      "process_peak_held_bytes": 10108928.0
+    },
+    "cpu_ratio": 0.9909573275539945,
+    "wall_ratio": 0.9909727313933244
+  },
+  {
+    "case": "late-bool",
+    "mode": "infer",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 6518500.0,
+      "total_ns": 6547604.5,
+      "process_peak_held_bytes": 10108928.0
+    },
+    "cpu_ratio": 0.9742919064344967,
+    "wall_ratio": 0.9749686109044646
+  },
+  {
+    "case": "late-text",
+    "mode": "infer",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 8612500.0,
+      "total_ns": 8631604.0,
+      "process_peak_held_bytes": 17694720.0
+    }
+  },
+  {
+    "case": "late-text",
+    "mode": "infer",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 8481000.0,
+      "total_ns": 8514562.5,
+      "process_peak_held_bytes": 17645568.0
+    },
+    "cpu_ratio": 0.9847314949201742,
+    "wall_ratio": 0.9864403533804378
+  },
+  {
+    "case": "late-text",
+    "mode": "infer",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 8394000.0,
+      "total_ns": 8421500.0,
+      "process_peak_held_bytes": 17661952.0
+    },
+    "cpu_ratio": 0.9746298984034834,
+    "wall_ratio": 0.9756587535758128
+  },
+  {
+    "case": "late-text",
+    "mode": "infer",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 8764000.0,
+      "total_ns": 8791333.5,
+      "process_peak_held_bytes": 17694720.0
+    }
+  },
+  {
+    "case": "late-text",
+    "mode": "infer",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 8355500.0,
+      "total_ns": 8383125.0,
+      "process_peak_held_bytes": 17645568.0
+    },
+    "cpu_ratio": 0.9533888635326335,
+    "wall_ratio": 0.9535669418069511
+  },
+  {
+    "case": "late-text",
+    "mode": "infer",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 8243500.0,
+      "total_ns": 8270417.0,
+      "process_peak_held_bytes": 17661952.0
+    },
+    "cpu_ratio": 0.9406093108169785,
+    "wall_ratio": 0.940746588671673
+  },
+  {
+    "case": "width-1-rows-257",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 222500.0,
+      "total_ns": 247521.5,
+      "process_peak_held_bytes": 7389184.0
+    }
+  },
+  {
+    "case": "width-1-rows-257",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 220000.0,
+      "total_ns": 242146.5,
+      "process_peak_held_bytes": 7372800.0
+    },
+    "cpu_ratio": 0.9887640449438202,
+    "wall_ratio": 0.9782847146611506
+  },
+  {
+    "case": "width-1-rows-257",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 221000.0,
+      "total_ns": 239229.0,
+      "process_peak_held_bytes": 7372800.0
+    },
+    "cpu_ratio": 0.9932584269662922,
+    "wall_ratio": 0.9664978597818775
+  },
+  {
+    "case": "width-1-rows-257",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 219500.0,
+      "total_ns": 240000.0,
+      "process_peak_held_bytes": 7372800.0
+    }
+  },
+  {
+    "case": "width-1-rows-257",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 212500.0,
+      "total_ns": 237542.0,
+      "process_peak_held_bytes": 7356416.0
+    },
+    "cpu_ratio": 0.9681093394077449,
+    "wall_ratio": 0.9897583333333333
+  },
+  {
+    "case": "width-1-rows-257",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 211500.0,
+      "total_ns": 232521.5,
+      "process_peak_held_bytes": 7356416.0
+    },
+    "cpu_ratio": 0.9635535307517085,
+    "wall_ratio": 0.9688395833333333
+  },
+  {
+    "case": "width-18-rows-257",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 647500.0,
+      "total_ns": 395000.0,
+      "process_peak_held_bytes": 7864320.0
+    }
+  },
+  {
+    "case": "width-18-rows-257",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 656500.0,
+      "total_ns": 381000.0,
+      "process_peak_held_bytes": 7839744.0
+    },
+    "cpu_ratio": 1.013899613899614,
+    "wall_ratio": 0.9645569620253165
+  },
+  {
+    "case": "width-18-rows-257",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 659000.0,
+      "total_ns": 377708.5,
+      "process_peak_held_bytes": 7815168.0
+    },
+    "cpu_ratio": 1.0177606177606178,
+    "wall_ratio": 0.9562240506329114
+  },
+  {
+    "case": "width-18-rows-257",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 356000.0,
+      "total_ns": 380479.0,
+      "process_peak_held_bytes": 7667712.0
+    }
+  },
+  {
+    "case": "width-18-rows-257",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 358000.0,
+      "total_ns": 385750.0,
+      "process_peak_held_bytes": 7643136.0
+    },
+    "cpu_ratio": 1.0056179775280898,
+    "wall_ratio": 1.0138535898170464
+  },
+  {
+    "case": "width-18-rows-257",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 354000.0,
+      "total_ns": 383521.0,
+      "process_peak_held_bytes": 7618560.0
+    },
+    "cpu_ratio": 0.9943820224719101,
+    "wall_ratio": 1.0079951850167814
+  },
+  {
+    "case": "width-64-rows-257",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 1262500.0,
+      "total_ns": 656562.5,
+      "process_peak_held_bytes": 8577024.0
+    }
+  },
+  {
+    "case": "width-64-rows-257",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 1243000.0,
+      "total_ns": 645396.0,
+      "process_peak_held_bytes": 8593408.0
+    },
+    "cpu_ratio": 0.9845544554455445,
+    "wall_ratio": 0.9829924797715374
+  },
+  {
+    "case": "width-64-rows-257",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 1248500.0,
+      "total_ns": 651229.0,
+      "process_peak_held_bytes": 8552448.0
+    },
+    "cpu_ratio": 0.9889108910891089,
+    "wall_ratio": 0.9918766301761066
+  },
+  {
+    "case": "width-64-rows-257",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 687000.0,
+      "total_ns": 713437.5,
+      "process_peak_held_bytes": 8339456.0
+    }
+  },
+  {
+    "case": "width-64-rows-257",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 671500.0,
+      "total_ns": 701104.0,
+      "process_peak_held_bytes": 8323072.0
+    },
+    "cpu_ratio": 0.9774381368267832,
+    "wall_ratio": 0.9827125711782742
+  },
+  {
+    "case": "width-64-rows-257",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 671000.0,
+      "total_ns": 702021.0,
+      "process_peak_held_bytes": 8306688.0
+    },
+    "cpu_ratio": 0.9767103347889374,
+    "wall_ratio": 0.9839978975032851
+  },
+  {
+    "case": "width-4-rows-32769",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 3046500.0,
+      "total_ns": 2256979.0,
+      "process_peak_held_bytes": 11517952.0
+    }
+  },
+  {
+    "case": "width-4-rows-32769",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 2958000.0,
+      "total_ns": 2161437.5,
+      "process_peak_held_bytes": 11493376.0
+    },
+    "cpu_ratio": 0.9709502708025604,
+    "wall_ratio": 0.9576684142829862
+  },
+  {
+    "case": "width-4-rows-32769",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 2923500.0,
+      "total_ns": 2096145.5,
+      "process_peak_held_bytes": 11501568.0
+    },
+    "cpu_ratio": 0.9596258000984736,
+    "wall_ratio": 0.9287394787457038
+  },
+  {
+    "case": "width-4-rows-32769",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 2823500.0,
+      "total_ns": 2848312.0,
+      "process_peak_held_bytes": 11419648.0
+    }
+  },
+  {
+    "case": "width-4-rows-32769",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 2700000.0,
+      "total_ns": 2721895.5,
+      "process_peak_held_bytes": 11386880.0
+    },
+    "cpu_ratio": 0.9562599610412609,
+    "wall_ratio": 0.9556170461662907
+  },
+  {
+    "case": "width-4-rows-32769",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 2713500.0,
+      "total_ns": 2733021.0,
+      "process_peak_held_bytes": 11403264.0
+    },
+    "cpu_ratio": 0.9610412608464671,
+    "wall_ratio": 0.9595230438238508
+  },
+  {
+    "case": "width-18-rows-32769",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 18998500.0,
+      "total_ns": 6531479.0,
+      "process_peak_held_bytes": 26705920.0
+    }
+  },
+  {
+    "case": "width-18-rows-32769",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 18984000.0,
+      "total_ns": 6104750.0,
+      "process_peak_held_bytes": 26632192.0
+    },
+    "cpu_ratio": 0.9992367818511988,
+    "wall_ratio": 0.9346657931534343
+  },
+  {
+    "case": "width-18-rows-32769",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 18795500.0,
+      "total_ns": 6047375.0,
+      "process_peak_held_bytes": 26632192.0
+    },
+    "cpu_ratio": 0.9893149459167829,
+    "wall_ratio": 0.9258814121579507
+  },
+  {
+    "case": "width-18-rows-32769",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 14614000.0,
+      "total_ns": 14631583.5,
+      "process_peak_held_bytes": 26361856.0
+    }
+  },
+  {
+    "case": "width-18-rows-32769",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 14091000.0,
+      "total_ns": 14122979.0,
+      "process_peak_held_bytes": 26329088.0
+    },
+    "cpu_ratio": 0.9642123990693855,
+    "wall_ratio": 0.965239271607205
+  },
+  {
+    "case": "width-18-rows-32769",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 14172500.0,
+      "total_ns": 14203417.0,
+      "process_peak_held_bytes": 26312704.0
+    },
+    "cpu_ratio": 0.9697892431914602,
+    "wall_ratio": 0.9707368310477127
+  },
+  {
+    "case": "width-64-rows-32769",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 80774000.0,
+      "total_ns": 20675958.5,
+      "process_peak_held_bytes": 81338368.0
+    }
+  },
+  {
+    "case": "width-64-rows-32769",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 80187000.0,
+      "total_ns": 19159562.5,
+      "process_peak_held_bytes": 81281024.0
+    },
+    "cpu_ratio": 0.9927328100626439,
+    "wall_ratio": 0.9266589744799497
+  },
+  {
+    "case": "width-64-rows-32769",
+    "mode": "known",
+    "policy": "parallel",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 79794000.0,
+      "total_ns": 18933166.5,
+      "process_peak_held_bytes": 76709888.0
+    },
+    "cpu_ratio": 0.9878673830688093,
+    "wall_ratio": 0.9157092523667041
+  },
+  {
+    "case": "width-64-rows-32769",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "parent",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 59682000.0,
+      "total_ns": 59707583.5,
+      "process_peak_held_bytes": 76365824.0
+    }
+  },
+  {
+    "case": "width-64-rows-32769",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-full",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 58478000.0,
+      "total_ns": 58498292.0,
+      "process_peak_held_bytes": 76316672.0
+    },
+    "cpu_ratio": 0.9798264133239503,
+    "wall_ratio": 0.9797464337172513
+  },
+  {
+    "case": "width-64-rows-32769",
+    "mode": "known",
+    "policy": "serial",
+    "engine": "apple-wide",
+    "samples": 6,
+    "medians": {
+      "total_cpu_ns": 58061500.0,
+      "total_ns": 58082750.0,
+      "process_peak_held_bytes": 76333056.0
+    },
+    "cpu_ratio": 0.9728477597935726,
+    "wall_ratio": 0.9727868152627547
+  }
+]

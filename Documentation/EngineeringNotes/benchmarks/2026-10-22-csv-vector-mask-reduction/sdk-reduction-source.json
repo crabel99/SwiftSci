@@ -1,0 +1,23 @@
+{
+  "path": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/simd/common.h",
+  "sha256": "93e0f0101cc7beb90e1b1ce3b4f27d94e0ad6ab634e86b61b5acd5e94eebcc95",
+  "excerpts": [
+    {
+      "line": 1620,
+      "excerpt": " *  @discussion This computation may overflow; especial for 8-bit types you\n *  may need to convert to a wider type before reducing.                      */\nstatic inline SIMD_CFUNC unsigned char simd_reduce_add(simd_uchar8 x);\n/*! @abstract Sum of elements in x.\n *  @discussion This computation may overflow; especial for 8-bit types you\n *  may need to convert to a wider type before reducing.                      */\nstatic inline SIMD_CFUNC unsigned char simd_reduce_add(simd_uchar16 x);\n/*! @abstract Sum of elements in x.\n *  @discussion This computation may overflow; especial for 8-bit types you\n *  may need to convert to a wider type before reducing.                      */\nstatic inline SIMD_CFUNC unsigned char simd_reduce_add(simd_uchar32 x);\n/*! @abstract Sum of elements in x.\n *  @discussion This computation may overflow; especial for 8-bit types you\n *  may need to convert to a wider type before reducing.                      */"
+    },
+    {
+      "line": 1624,
+      "excerpt": " *  @discussion This computation may overflow; especial for 8-bit types you\n *  may need to convert to a wider type before reducing.                      */\nstatic inline SIMD_CFUNC unsigned char simd_reduce_add(simd_uchar16 x);\n/*! @abstract Sum of elements in x.\n *  @discussion This computation may overflow; especial for 8-bit types you\n *  may need to convert to a wider type before reducing.                      */\nstatic inline SIMD_CFUNC unsigned char simd_reduce_add(simd_uchar32 x);\n/*! @abstract Sum of elements in x.\n *  @discussion This computation may overflow; especial for 8-bit types you\n *  may need to convert to a wider type before reducing.                      */\nstatic inline SIMD_CFUNC unsigned char simd_reduce_add(simd_uchar64 x);\n/*! @abstract Sum of elements in x.\n *  @discussion This computation may overflow; especial for 8-bit types you\n *  may need to convert to a wider type before reducing.                      */"
+    },
+    {
+      "line": 4845,
+      "excerpt": "}\n\nstatic inline SIMD_CFUNC unsigned char simd_reduce_add(simd_uchar8 x) {\n  return simd_reduce_add(x.lo + x.hi);\n}\n\nstatic inline SIMD_CFUNC unsigned char simd_reduce_add(simd_uchar16 x) {\n#if defined __arm64__ || defined __aarch64__\n  return vaddvq_u8(x);\n#else\n  return simd_reduce_add(x.lo + x.hi);\n#endif\n}\n"
+    },
+    {
+      "line": 4849,
+      "excerpt": "}\n\nstatic inline SIMD_CFUNC unsigned char simd_reduce_add(simd_uchar16 x) {\n#if defined __arm64__ || defined __aarch64__\n  return vaddvq_u8(x);\n#else\n  return simd_reduce_add(x.lo + x.hi);\n#endif\n}\n\nstatic inline SIMD_CFUNC unsigned char simd_reduce_add(simd_uchar32 x) {\n  return simd_reduce_add(x.lo + x.hi);\n}\n"
+    }
+  ],
+  "swift_version": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0\n"
+}

@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [CSV vector mask reduction](benchmarks/2026-10-22-csv-vector-mask-reduction/README.md) records exact platform reductions, 1,344 validated reference and control reads, and the measured CPU benefit with unchanged storage policy.
+
 - [CSV ingestion and numerical handoff strategy](research/2026-10-21-csv-ingestion-strategy.md) proposes prepared conversion, scoped record batches, demand-driven streaming and staged numerical handoff. It defines compatibility and CPU/memory gates; no implementation benefit is claimed.
 
 - [CSV reference source comparison](research/2026-10-21-csv-date-source-comparison.md) traces the benchmarked pandas, Polars and DuckDB paths and distinguishes parsing cost, value reuse and output storage.
