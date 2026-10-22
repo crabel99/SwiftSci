@@ -1,0 +1,108 @@
+{
+  "binaries": {
+    "parent": {
+      "path": "/private/tmp/swiftsci-csv-loop-profile-20261022/build/production/ResourceProbe",
+      "sha256": "eefe36c2d628afc19beced9aea45a7d7841353175906a62be3f8f370a3b37d26"
+    },
+    "row-null": {
+      "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/ResourceProbe",
+      "sha256": "4a5f12e221d837b27f2292f0710a4af665edca68023065c2c165b21c42fdcf44"
+    },
+    "batch-null": {
+      "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/batch-null/ResourceProbe",
+      "sha256": "05c2c573321c743fc5e0b4212f6f5ce736a173111577705cb70d5479a02e7958"
+    }
+  },
+  "orders": [
+    [
+      "parent",
+      "row-null",
+      "batch-null"
+    ],
+    [
+      "row-null",
+      "batch-null",
+      "parent"
+    ],
+    [
+      "batch-null",
+      "parent",
+      "row-null"
+    ],
+    [
+      "batch-null",
+      "row-null",
+      "parent"
+    ],
+    [
+      "parent",
+      "batch-null",
+      "row-null"
+    ],
+    [
+      "row-null",
+      "parent",
+      "batch-null"
+    ]
+  ],
+  "cases": [
+    [
+      "all-string-default-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-0.json",
+      42
+    ],
+    [
+      "all-string-default-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-50.json",
+      42
+    ],
+    [
+      "all-string-default-nulls-90",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-90.json",
+      42
+    ],
+    [
+      "default-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/default-nulls-0.json",
+      42
+    ],
+    [
+      "four-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/four-nulls-50.json",
+      42
+    ],
+    [
+      "large-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/large-nulls-0.json",
+      42
+    ],
+    [
+      "all-string-large-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-large-nulls-0.json",
+      42
+    ],
+    [
+      "all-string-none-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-none-nulls-0.json",
+      42
+    ],
+    [
+      "Aotizhongxin-default",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/Aotizhongxin-default.json",
+      6
+    ]
+  ],
+  "controller_sha256": "63e0f11f503ccfff55a86fec6bb09ce53d5a2ad200399e5528c69e490467d591",
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "scope": "Follow-up of default/large-set CPU variation. Additional fresh-process samples, native hash randomization. All original results retained. No source or policy changes."
+}

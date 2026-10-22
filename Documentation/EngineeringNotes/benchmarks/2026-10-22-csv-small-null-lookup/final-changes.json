@@ -1,0 +1,1172 @@
+[
+  {
+    "scope": "acceptance",
+    "case": "bike-day",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": -0.5322294500295643,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "acceptance",
+    "case": "bike-day",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": -1.538461538461533,
+    "peak_change_mib": 0.0859375
+  },
+  {
+    "scope": "acceptance",
+    "case": "bike-hour",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": 2.2769865067466366,
+    "peak_change_mib": 0.0703125
+  },
+  {
+    "scope": "acceptance",
+    "case": "bike-hour",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": 2.975942149909616,
+    "peak_change_mib": 0.1015625
+  },
+  {
+    "scope": "acceptance",
+    "case": "unique-shuffled",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": 0.9217780840799383,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "acceptance",
+    "case": "unique-shuffled",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": 2.199542495161011,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "acceptance",
+    "case": "Aotizhongxin",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": -4.505989227429863,
+    "peak_change_mib": 0.0546875
+  },
+  {
+    "scope": "acceptance",
+    "case": "Aotizhongxin",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": -6.928651059085844,
+    "peak_change_mib": 0.0859375
+  },
+  {
+    "scope": "acceptance",
+    "case": "Wanliu",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": -0.46371725780173234,
+    "peak_change_mib": 0.2421875
+  },
+  {
+    "scope": "acceptance",
+    "case": "Wanliu",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": -6.8815741273745346,
+    "peak_change_mib": 0.0859375
+  },
+  {
+    "scope": "acceptance",
+    "case": "energy",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": -15.576747114123402,
+    "peak_change_mib": 0.0390625
+  },
+  {
+    "scope": "acceptance",
+    "case": "energy",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": -13.360798616121262,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "acceptance",
+    "case": "energy",
+    "read_scope": "eager",
+    "mode": "infer",
+    "policy": "parallel",
+    "cpu_change_percent": -15.487861142689995,
+    "peak_change_mib": 0.0546875
+  },
+  {
+    "scope": "acceptance",
+    "case": "energy",
+    "read_scope": "eager",
+    "mode": "infer",
+    "policy": "serial",
+    "cpu_change_percent": -13.724267102594057,
+    "peak_change_mib": 0.125
+  },
+  {
+    "scope": "acceptance",
+    "case": "energy-date-full",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": -7.854486749521361,
+    "peak_change_mib": -0.0078125
+  },
+  {
+    "scope": "acceptance",
+    "case": "energy-date-full",
+    "read_scope": "eager",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": -11.338360499207367,
+    "peak_change_mib": 0.015625
+  },
+  {
+    "scope": "acceptance",
+    "case": "late-bool",
+    "read_scope": "eager",
+    "mode": "infer",
+    "policy": "parallel",
+    "cpu_change_percent": 1.4723926380368013,
+    "peak_change_mib": 0.140625
+  },
+  {
+    "scope": "acceptance",
+    "case": "late-bool",
+    "read_scope": "eager",
+    "mode": "infer",
+    "policy": "serial",
+    "cpu_change_percent": 1.4939242315940016,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "acceptance",
+    "case": "late-text",
+    "read_scope": "eager",
+    "mode": "infer",
+    "policy": "parallel",
+    "cpu_change_percent": -4.567067801584967,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "acceptance",
+    "case": "late-text",
+    "read_scope": "eager",
+    "mode": "infer",
+    "policy": "serial",
+    "cpu_change_percent": -3.039441783454555,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "acceptance",
+    "case": "date-100000-1",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": 0.29285875197115896,
+    "peak_change_mib": 0.0078125
+  },
+  {
+    "scope": "acceptance",
+    "case": "date-100000-1",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": 0.3599145203014187,
+    "peak_change_mib": 0.0
+  },
+  {
+    "scope": "acceptance",
+    "case": "bike-hour",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": -0.6382022471910109,
+    "peak_change_mib": 0.0
+  },
+  {
+    "scope": "acceptance",
+    "case": "bike-hour",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": 0.38848920863310266,
+    "peak_change_mib": 0.0
+  },
+  {
+    "scope": "acceptance",
+    "case": "unique-shuffled",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": 1.8716094032549702,
+    "peak_change_mib": -0.0078125
+  },
+  {
+    "scope": "acceptance",
+    "case": "unique-shuffled",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": 1.4643188137164032,
+    "peak_change_mib": 0.015625
+  },
+  {
+    "scope": "acceptance",
+    "case": "Aotizhongxin",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": 0.016208112160143173,
+    "peak_change_mib": 0.015625
+  },
+  {
+    "scope": "acceptance",
+    "case": "Aotizhongxin",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": -6.3201174743025,
+    "peak_change_mib": -0.03125
+  },
+  {
+    "scope": "acceptance",
+    "case": "energy",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": -16.081034485424528,
+    "peak_change_mib": 0.1484375
+  },
+  {
+    "scope": "acceptance",
+    "case": "energy",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": -12.28938876303003,
+    "peak_change_mib": -0.1875
+  },
+  {
+    "scope": "acceptance",
+    "case": "energy-date-full",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "parallel",
+    "cpu_change_percent": -8.144911196840798,
+    "peak_change_mib": 0.28125
+  },
+  {
+    "scope": "acceptance",
+    "case": "energy-date-full",
+    "read_scope": "stream",
+    "mode": "known",
+    "policy": "serial",
+    "cpu_change_percent": -11.023356284595653,
+    "peak_change_mib": -0.015625
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-1-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 2.4390243902439046,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-1-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 2.3255813953488413,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-2-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -6.118881118881115,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-2-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 4.191616766467066,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-4-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -3.409090909090906,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-4-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -2.1015761821365997,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-8-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -10.992529348986125,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-8-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -2.197802197802201,
+    "peak_change_mib": 0.1015625
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-18-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -12.028150991682661,
+    "peak_change_mib": 0.0546875
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-18-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -6.826801517067005,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-64-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -7.071097372488411,
+    "peak_change_mib": 0.0703125
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-64-rows-257",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -12.173913043478258,
+    "peak_change_mib": 0.1015625
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-1-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 1.6618497109826658,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-1-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 2.1913805697589384,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-2-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 0.8620689655172376,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-2-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -0.9847806624888045,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-4-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -13.41595662277304,
+    "peak_change_mib": -0.625
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-4-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -16.211105380780467,
+    "peak_change_mib": 0.0859375
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-8-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -16.6955017301038,
+    "peak_change_mib": 0.0859375
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-8-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -18.665267208956525,
+    "peak_change_mib": 0.0859375
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-18-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -14.134304650271122,
+    "peak_change_mib": -0.609375
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-18-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -20.54529698020132,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-64-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -10.574417439238282,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "mode-controls",
+    "case": "width-64-rows-32769",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -19.206281498333254,
+    "peak_change_mib": 0.0859375
+  },
+  {
+    "scope": "mode-controls",
+    "case": "nullable-0-infer",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 1.7293233082706694,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "mode-controls",
+    "case": "nullable-0-infer",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 0.8998200359928044,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "mode-controls",
+    "case": "nullable-50-infer",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -0.9247448979591844,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "mode-controls",
+    "case": "nullable-50-infer",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 0.6092401421560423,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "mode-controls",
+    "case": "nullable-90-infer",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 5.5710715860649795,
+    "peak_change_mib": 0.3046875
+  },
+  {
+    "scope": "mode-controls",
+    "case": "nullable-90-infer",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 1.0565669700910219,
+    "peak_change_mib": 0.0390625
+  },
+  {
+    "scope": "mode-controls",
+    "case": "nullable-50-known",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 0.8578027053777637,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "mode-controls",
+    "case": "nullable-50-known",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 0.03529204164460786,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "mode-controls",
+    "case": "nullable-90-known",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 0.7093292212798863,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "mode-controls",
+    "case": "nullable-90-known",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 1.9455252918287869,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "text-controls",
+    "case": "none-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 0.9505703422053147,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "none-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 0.79155672823219,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "one-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -22.334924423229907,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "text-controls",
+    "case": "one-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -24.99503278362806,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "one-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -21.3459516298633,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "one-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -20.53842813721233,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "pair-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -23.469583573210517,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "text-controls",
+    "case": "pair-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -20.59430458109781,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "pair-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -15.110246433203633,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "pair-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -17.08860759493671,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "four-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 2.4179620034542326,
+    "peak_change_mib": 0.03125
+  },
+  {
+    "scope": "text-controls",
+    "case": "four-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 1.0261672652642329,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "text-controls",
+    "case": "four-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 0.05319856363878994,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "four-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 7.339197361187466,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "default-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -11.88344457105649,
+    "peak_change_mib": 0.03125
+  },
+  {
+    "scope": "text-controls",
+    "case": "default-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 1.1801344041960427,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "default-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 1.3980729265067104,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "default-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -3.4240060871219336,
+    "peak_change_mib": 0.0703125
+  },
+  {
+    "scope": "text-controls",
+    "case": "default-nulls-90",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 0.8106282368835815,
+    "peak_change_mib": 0.109375
+  },
+  {
+    "scope": "text-controls",
+    "case": "default-nulls-90",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -0.09153318077803618,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "sixteen-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 0.5524861878453136,
+    "peak_change_mib": 0.015625
+  },
+  {
+    "scope": "text-controls",
+    "case": "sixteen-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -0.7162603669263579,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "sixteen-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 4.766879979104077,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "text-controls",
+    "case": "sixteen-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -1.3433024965150198,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "seventeen-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -4.681647940074907,
+    "peak_change_mib": 0.0
+  },
+  {
+    "scope": "text-controls",
+    "case": "seventeen-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -3.8770466481309884,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "seventeen-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 1.3504611330698246,
+    "peak_change_mib": -0.046875
+  },
+  {
+    "scope": "text-controls",
+    "case": "seventeen-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -0.11473528929684118,
+    "peak_change_mib": 0.0703125
+  },
+  {
+    "scope": "text-controls",
+    "case": "large-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -0.9585253456221188,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "text-controls",
+    "case": "large-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 0.38297176750812234,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "text-controls",
+    "case": "large-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 1.6067702295386121,
+    "peak_change_mib": -0.1875
+  },
+  {
+    "scope": "text-controls",
+    "case": "large-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 1.4775481934664603,
+    "peak_change_mib": 0.0390625
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-none-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -1.6687116564417126,
+    "peak_change_mib": 0.03125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-none-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 0.3393369877316532,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-one-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -29.96052054393917,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-one-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -29.547828682286227,
+    "peak_change_mib": 0.1171875
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-one-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -27.652733118971064,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-one-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -28.438373176032282,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-pair-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -29.096005606166784,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-pair-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -29.948950652297224,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-pair-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -25.899387968353484,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-pair-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -26.847177604405694,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-four-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -5.878795209870569,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-four-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 2.960865087538611,
+    "peak_change_mib": 0.125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-four-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 0.8243584629703538,
+    "peak_change_mib": 0.0390625
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-four-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -3.1933449617603693,
+    "peak_change_mib": 0.125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-default-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -2.089876781831357,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-default-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 6.286640888112771,
+    "peak_change_mib": 0.1015625
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-default-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 0.9039256198347001,
+    "peak_change_mib": 0.0546875
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-default-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -2.0944451671653486,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-default-nulls-90",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -2.2720566538802056,
+    "peak_change_mib": 0.03125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-default-nulls-90",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 0.12042751768779336,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-sixteen-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -2.9932137663596703,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-sixteen-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": 2.083866018920988,
+    "peak_change_mib": 0.09375
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-sixteen-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -0.17946417126009084,
+    "peak_change_mib": 0.03125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-sixteen-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -1.264026828324516,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-seventeen-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 1.1895321173671647,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-seventeen-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -4.865070315469399,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-seventeen-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 0.8954437713984742,
+    "peak_change_mib": 0.0
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-seventeen-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -0.3816291617318113,
+    "peak_change_mib": 0.0625
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-large-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": -5.537843901287043,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-large-nulls-0",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -1.4186977082575436,
+    "peak_change_mib": 0.078125
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-large-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "parallel",
+    "cpu_change_percent": 3.2709701400074342,
+    "peak_change_mib": 0.046875
+  },
+  {
+    "scope": "text-controls",
+    "case": "all-string-large-nulls-50",
+    "read_scope": null,
+    "mode": null,
+    "policy": "serial",
+    "cpu_change_percent": -1.2164579606440018,
+    "peak_change_mib": 0.078125
+  }
+]

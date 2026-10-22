@@ -1,0 +1,14 @@
+{
+  "path": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/lib/swift/Swift.swiftmodule/arm64e-apple-macos.swiftinterface",
+  "sha256": "ccd1c05df90165f805e7de278ca3f6945f1a1544e9b8b3da0297ebfcc80f3669",
+  "excerpts": [
+    {
+      "line": 20930,
+      "text": "}\nextension Swift::Sequence where Self.Element : Swift::Equatable {\n  @inlinable public func contains(_ element: Self.Element) -> Swift::Bool {\n    if let result = _customContainsEquatableElement(element) {\n      return result\n    } else {\n      return self.contains { $0 == element }\n    }\n  }\n}\nextension Swift::Sequence {"
+    },
+    {
+      "line": 21044,
+      "text": "  @inlinable @inline(__always) public func _customContainsEquatableElement(_ member: Element) -> Swift::Bool? {\n    return contains(member)\n  }\n}\nextension Swift::Set {\n  @available(swift 4.0)\n  @_alwaysEmitIntoClient public consuming func filter<E>(_ isIncluded: (Element) throws(E) -> Swift::Bool) throws(E) -> Swift::Set<Element> where E : Swift::Error {\n    try Set(_native: _variant.filter(isIncluded))"
+    }
+  ]
+}

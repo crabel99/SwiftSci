@@ -1,0 +1,225 @@
+{
+  "orders": [
+    [
+      "parent",
+      "lazy-null",
+      "linear-null",
+      "pair-null"
+    ],
+    [
+      "lazy-null",
+      "linear-null",
+      "pair-null",
+      "parent"
+    ],
+    [
+      "linear-null",
+      "pair-null",
+      "parent",
+      "lazy-null"
+    ],
+    [
+      "pair-null",
+      "parent",
+      "lazy-null",
+      "linear-null"
+    ]
+  ],
+  "binaries": {
+    "parent": {
+      "path": "/private/tmp/swiftsci-csv-loop-profile-20261022/build/production/ResourceProbe",
+      "sha256": "eefe36c2d628afc19beced9aea45a7d7841353175906a62be3f8f370a3b37d26"
+    },
+    "lazy-null": {
+      "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/lazy-null/ResourceProbe",
+      "sha256": "0f2ae74506d1bcd21bca8fd30b3b6bf78534679014807e4ebf21bfcd5bd36703"
+    },
+    "linear-null": {
+      "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/linear-null/ResourceProbe",
+      "sha256": "133c565a8d6b18a408701a5400643d49849898a1c501e46dbcfa949980371a08"
+    },
+    "pair-null": {
+      "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/pair-null/ResourceProbe",
+      "sha256": "f2567d0743124657f455b9a989e4b501973d9ed593599d074b91e2ba75f3b65f"
+    }
+  },
+  "cases": [
+    [
+      "bike-day",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/bike-day.json",
+      "known"
+    ],
+    [
+      "bike-hour",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/bike-hour.json",
+      "known"
+    ],
+    [
+      "unique-shuffled",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/unique-shuffled.json",
+      "known"
+    ],
+    [
+      "Aotizhongxin",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/Aotizhongxin.json",
+      "known"
+    ],
+    [
+      "Wanliu",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/Wanliu.json",
+      "known"
+    ],
+    [
+      "energy",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json",
+      "known"
+    ],
+    [
+      "energy",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json",
+      "infer"
+    ],
+    [
+      "energy-date-full",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy-date-full.json",
+      "known"
+    ],
+    [
+      "late-bool",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/late-bool.json",
+      "infer"
+    ],
+    [
+      "late-text",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/late-text.json",
+      "infer"
+    ],
+    [
+      "width1-rows257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-1-rows-257.json",
+      "known"
+    ],
+    [
+      "width18-rows257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-18-rows-257.json",
+      "known"
+    ],
+    [
+      "width64-rows257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-64-rows-257.json",
+      "known"
+    ],
+    [
+      "width4-rows32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-4-rows-32769.json",
+      "known"
+    ],
+    [
+      "width18-rows32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-18-rows-32769.json",
+      "known"
+    ],
+    [
+      "width64-rows32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-64-rows-32769.json",
+      "known"
+    ],
+    [
+      "none-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/none-nulls-0.json",
+      "known"
+    ],
+    [
+      "none-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/none-nulls-50.json",
+      "known"
+    ],
+    [
+      "one-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/one-nulls-0.json",
+      "known"
+    ],
+    [
+      "one-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/one-nulls-50.json",
+      "known"
+    ],
+    [
+      "pair-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/pair-nulls-0.json",
+      "known"
+    ],
+    [
+      "pair-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/pair-nulls-50.json",
+      "known"
+    ],
+    [
+      "four-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/four-nulls-0.json",
+      "known"
+    ],
+    [
+      "four-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/four-nulls-50.json",
+      "known"
+    ],
+    [
+      "default-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/default-nulls-0.json",
+      "known"
+    ],
+    [
+      "default-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/default-nulls-50.json",
+      "known"
+    ],
+    [
+      "default-nulls-90",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/default-nulls-90.json",
+      "known"
+    ],
+    [
+      "sixteen-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/sixteen-nulls-0.json",
+      "known"
+    ],
+    [
+      "sixteen-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/sixteen-nulls-50.json",
+      "known"
+    ],
+    [
+      "seventeen-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/seventeen-nulls-0.json",
+      "known"
+    ],
+    [
+      "seventeen-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/seventeen-nulls-50.json",
+      "known"
+    ],
+    [
+      "large-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/large-nulls-0.json",
+      "known"
+    ],
+    [
+      "large-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/large-nulls-50.json",
+      "known"
+    ]
+  ],
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "controller_sha256": "bbab4d14f51f2ea9e760992236e54b2a92c389a20f5526daa9ec0d9a1e50da44"
+}

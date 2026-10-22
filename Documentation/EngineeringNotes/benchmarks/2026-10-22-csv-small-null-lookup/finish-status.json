@@ -1,0 +1,80 @@
+[
+  {
+    "label": "standardized-prepare",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "prepare",
+      "--profile",
+      "tabular-smoke"
+    ],
+    "start": 1792696436.943773,
+    "exit_code": 0,
+    "elapsed_seconds": 0.13259577751159668
+  },
+  {
+    "label": "standardized-run",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "run",
+      "--profile",
+      "tabular-smoke",
+      "--mode",
+      "production-default",
+      "--engines",
+      "swiftsci,pandas",
+      "--swift-worker",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/standard-worker/SwiftSciBenchmarkWorker",
+      "--python",
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "--output",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/standardized"
+    ],
+    "start": 1792696437.076632,
+    "exit_code": 0,
+    "elapsed_seconds": 91.67748403549194
+  },
+  {
+    "label": "standardized-audit",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "audit",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/standardized"
+    ],
+    "start": 1792696528.754654,
+    "exit_code": 0,
+    "elapsed_seconds": 0.12977099418640137
+  },
+  {
+    "label": "acceptance",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/run-acceptance.py"
+    ],
+    "start": 1792696528.8850482,
+    "exit_code": 0,
+    "elapsed_seconds": 158.27857875823975
+  },
+  {
+    "label": "mode-controls",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/run-mode-controls.py"
+    ],
+    "start": 1792696687.164036,
+    "exit_code": 0,
+    "elapsed_seconds": 14.739104986190796
+  },
+  {
+    "label": "text-controls",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/run-text-controls.py"
+    ],
+    "start": 1792696701.903477,
+    "exit_code": 0,
+    "elapsed_seconds": 21.929834127426147
+  }
+]
