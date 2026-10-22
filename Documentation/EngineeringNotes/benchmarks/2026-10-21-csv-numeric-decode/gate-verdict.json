@@ -1,0 +1,360 @@
+{
+  "validated_resource_workers": 360,
+  "comparisons": [
+    {
+      "scope": "final-measurement",
+      "case": "bike-day",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 0.8066516347237881,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "bike-day",
+      "mode": "known",
+      "control": "before",
+      "cpu_ratio": 0.9714867617107943,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "bike-hour",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 0.7130498436148266,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "bike-hour",
+      "mode": "known",
+      "control": "before",
+      "cpu_ratio": 1.0074276043625423,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "unique-shuffled",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 0.8311873180200582,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "unique-shuffled",
+      "mode": "known",
+      "control": "before",
+      "cpu_ratio": 1.0046140611558614,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "Aotizhongxin",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 1.1430514722015008,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "final-measurement",
+      "case": "Aotizhongxin",
+      "mode": "known",
+      "control": "before",
+      "cpu_ratio": 0.9523966216957332,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "energy",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 0.8059871222581179,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "energy",
+      "mode": "known",
+      "control": "before",
+      "cpu_ratio": 0.9127584531773422,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "energy",
+      "mode": "infer",
+      "control": "indexed",
+      "cpu_ratio": 0.8929704144131638,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "energy",
+      "mode": "infer",
+      "control": "before",
+      "cpu_ratio": 0.9943032089014543,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "energy-date-full",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 0.8152567921810945,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "energy-date-full",
+      "mode": "known",
+      "control": "before",
+      "cpu_ratio": 0.9040666234047156,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "late-bool",
+      "mode": "infer",
+      "control": "indexed",
+      "cpu_ratio": 1.061526540100736,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "late-bool",
+      "mode": "infer",
+      "control": "before",
+      "cpu_ratio": 0.9942662215125563,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "late-text",
+      "mode": "infer",
+      "control": "indexed",
+      "cpu_ratio": 0.6351169859334135,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-measurement",
+      "case": "late-text",
+      "mode": "infer",
+      "control": "before",
+      "cpu_ratio": 1.0064971434972556,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "date-100000-1",
+      "mode": null,
+      "control": "indexed",
+      "cpu_ratio": 0.9767467734757455,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "date-100000-1",
+      "mode": null,
+      "control": "before",
+      "cpu_ratio": 0.9872919478182636,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "bike-hour",
+      "mode": null,
+      "control": "indexed",
+      "cpu_ratio": 0.9974261201143947,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "bike-hour",
+      "mode": null,
+      "control": "before",
+      "cpu_ratio": 0.9396497530309834,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "unique-shuffled",
+      "mode": null,
+      "control": "indexed",
+      "cpu_ratio": 0.9829136690647482,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "unique-shuffled",
+      "mode": null,
+      "control": "before",
+      "cpu_ratio": 0.9860171402796571,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "Aotizhongxin",
+      "mode": null,
+      "control": "indexed",
+      "cpu_ratio": 1.0032402280464296,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "Aotizhongxin",
+      "mode": null,
+      "control": "before",
+      "cpu_ratio": 0.9420736404252041,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "energy",
+      "mode": null,
+      "control": "indexed",
+      "cpu_ratio": 0.9592227376455423,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "energy",
+      "mode": null,
+      "control": "before",
+      "cpu_ratio": 0.8627299602688911,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "energy-date-full",
+      "mode": null,
+      "control": "indexed",
+      "cpu_ratio": 0.9679646771396971,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "final-stream-measurement",
+      "case": "energy-date-full",
+      "mode": null,
+      "control": "before",
+      "cpu_ratio": 0.8514086361579349,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "null",
+      "case": "0",
+      "mode": "infer",
+      "control": "original",
+      "cpu_ratio": 1.1794972505891594,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "null",
+      "case": "0",
+      "mode": "infer",
+      "control": "before",
+      "cpu_ratio": 1.013841998649561,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "null",
+      "case": "50",
+      "mode": "infer",
+      "control": "original",
+      "cpu_ratio": 1.1332501170229365,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "null",
+      "case": "50",
+      "mode": "infer",
+      "control": "before",
+      "cpu_ratio": 1.0479007358245565,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "null",
+      "case": "50",
+      "mode": "known",
+      "control": "original",
+      "cpu_ratio": 1.1071746483888196,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "null",
+      "case": "50",
+      "mode": "known",
+      "control": "before",
+      "cpu_ratio": 0.9533956768358117,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "null",
+      "case": "90",
+      "mode": "infer",
+      "control": "original",
+      "cpu_ratio": 0.9713164659721283,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "null",
+      "case": "90",
+      "mode": "infer",
+      "control": "before",
+      "cpu_ratio": 0.9686951828363244,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "null",
+      "case": "90",
+      "mode": "known",
+      "control": "original",
+      "cpu_ratio": 1.0942381992272803,
+      "cpu_review_required": false
+    },
+    {
+      "scope": "null",
+      "case": "90",
+      "mode": "known",
+      "control": "before",
+      "cpu_ratio": 0.9429646786334684,
+      "cpu_review_required": false
+    }
+  ],
+  "new_cpu_regressions_above_review_limit": [],
+  "default_promotion_blockers": [
+    {
+      "scope": "final-measurement",
+      "case": "Aotizhongxin",
+      "mode": "known",
+      "control": "indexed",
+      "cpu_ratio": 1.1430514722015008,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "null",
+      "case": "0",
+      "mode": "infer",
+      "control": "original",
+      "cpu_ratio": 1.1794972505891594,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "null",
+      "case": "50",
+      "mode": "infer",
+      "control": "original",
+      "cpu_ratio": 1.1332501170229365,
+      "cpu_review_required": true
+    },
+    {
+      "scope": "null",
+      "case": "50",
+      "mode": "known",
+      "control": "original",
+      "cpu_ratio": 1.1071746483888196,
+      "cpu_review_required": true
+    }
+  ]
+}

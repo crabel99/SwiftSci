@@ -1,0 +1,80 @@
+[
+  {
+    "label": "standardized-prepare",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "prepare",
+      "--profile",
+      "tabular-smoke"
+    ],
+    "start": 1792637014.7178628,
+    "exit_code": 0,
+    "elapsed_seconds": 0.09073209762573242
+  },
+  {
+    "label": "standardized-run",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "run",
+      "--profile",
+      "tabular-smoke",
+      "--mode",
+      "production-default",
+      "--engines",
+      "swiftsci,pandas",
+      "--swift-worker",
+      "/private/tmp/swiftsci-csv-cell-profile-20261021/standard-worker/SwiftSciBenchmarkWorker",
+      "--python",
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "--output",
+      "/private/tmp/swiftsci-csv-cell-profile-20261021/standardized"
+    ],
+    "start": 1792637014.80894,
+    "exit_code": 0,
+    "elapsed_seconds": 88.72752499580383
+  },
+  {
+    "label": "standardized-audit",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "audit",
+      "/private/tmp/swiftsci-csv-cell-profile-20261021/standardized"
+    ],
+    "start": 1792637103.537017,
+    "exit_code": 0,
+    "elapsed_seconds": 0.08975791931152344
+  },
+  {
+    "label": "eager",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-cell-profile-20261021/run-final.py"
+    ],
+    "start": 1792637103.62715,
+    "exit_code": 0,
+    "elapsed_seconds": 46.22103691101074
+  },
+  {
+    "label": "stream",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-cell-profile-20261021/run-final-stream.py"
+    ],
+    "start": 1792637149.848525,
+    "exit_code": 0,
+    "elapsed_seconds": 42.33517599105835
+  },
+  {
+    "label": "null",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-cell-profile-20261021/run-final-null.py"
+    ],
+    "start": 1792637192.18408,
+    "exit_code": 0,
+    "elapsed_seconds": 3.499366044998169
+  }
+]
