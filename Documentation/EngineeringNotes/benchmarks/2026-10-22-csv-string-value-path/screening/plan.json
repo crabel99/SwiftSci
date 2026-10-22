@@ -1,0 +1,182 @@
+{
+  "started": 1792706766.242928,
+  "binaries": {
+    "production": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-local-builder-20261022/build/production/ResourceProbe",
+        "sha256": "6982a1246c3fb3b7c2c217700ef581334a53a5ee2236adb6bf030f4e1cd4f591"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-local-builder-20261022/build/production/StreamProbe",
+        "sha256": "a05b827eb34b24b7dc7f181e4a73ff912b0b7d2d1a1974bf6db9f81e01b41c7e"
+      }
+    },
+    "control": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-string-value-20261022/build/control/ResourceProbe",
+        "sha256": "6982a1246c3fb3b7c2c217700ef581334a53a5ee2236adb6bf030f4e1cd4f591"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-string-value-20261022/build/control/StreamProbe",
+        "sha256": "a05b827eb34b24b7dc7f181e4a73ff912b0b7d2d1a1974bf6db9f81e01b41c7e"
+      }
+    },
+    "hashed-optional": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-string-value-20261022/build/hashed-optional/ResourceProbe",
+        "sha256": "6982a1246c3fb3b7c2c217700ef581334a53a5ee2236adb6bf030f4e1cd4f591"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-string-value-20261022/build/hashed-optional/StreamProbe",
+        "sha256": "a05b827eb34b24b7dc7f181e4a73ff912b0b7d2d1a1974bf6db9f81e01b41c7e"
+      }
+    },
+    "both-optional": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-string-value-20261022/build/both-optional/ResourceProbe",
+        "sha256": "ef78dca813bec031dc002cf894170d1dbd489abdb7e1e0fec8033afda33e4767"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-string-value-20261022/build/both-optional/StreamProbe",
+        "sha256": "0809b961e421b65f6b9d4d057052e9c0f429c15330f3278fb38bf75a099009fb"
+      }
+    }
+  },
+  "sources": {
+    "production": "/private/tmp/swiftsci-csv-count-only-scan-20261021",
+    "control": "/private/tmp/swiftsci-csv-string-value-20261022/variants/control",
+    "hashed-optional": "/private/tmp/swiftsci-csv-string-value-20261022/variants/hashed-optional",
+    "both-optional": "/private/tmp/swiftsci-csv-string-value-20261022/variants/both-optional"
+  },
+  "orders": [
+    [
+      "production",
+      "control",
+      "hashed-optional",
+      "both-optional"
+    ],
+    [
+      "control",
+      "hashed-optional",
+      "both-optional",
+      "production"
+    ],
+    [
+      "hashed-optional",
+      "both-optional",
+      "production",
+      "control"
+    ],
+    [
+      "both-optional",
+      "production",
+      "control",
+      "hashed-optional"
+    ],
+    [
+      "both-optional",
+      "hashed-optional",
+      "control",
+      "production"
+    ],
+    [
+      "production",
+      "both-optional",
+      "hashed-optional",
+      "control"
+    ],
+    [
+      "control",
+      "production",
+      "both-optional",
+      "hashed-optional"
+    ],
+    [
+      "hashed-optional",
+      "control",
+      "production",
+      "both-optional"
+    ]
+  ],
+  "cases": [
+    [
+      "eager",
+      "all-string-default-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-0.json"
+    ],
+    [
+      "eager",
+      "all-string-default-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-50.json"
+    ],
+    [
+      "eager",
+      "all-string-default-nulls-90",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-90.json"
+    ],
+    [
+      "eager",
+      "default-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/default-nulls-0.json"
+    ],
+    [
+      "eager",
+      "all-string-one-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-one-nulls-0.json"
+    ],
+    [
+      "eager",
+      "all-string-pair-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-pair-nulls-50.json"
+    ],
+    [
+      "eager",
+      "all-string-seventeen-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-seventeen-nulls-0.json"
+    ],
+    [
+      "eager",
+      "all-string-large-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-large-nulls-0.json"
+    ],
+    [
+      "eager",
+      "all-string-large-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-large-nulls-50.json"
+    ],
+    [
+      "eager",
+      "Aotizhongxin-default",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/Aotizhongxin-default.json"
+    ],
+    [
+      "eager",
+      "three-long-nulls-0",
+      "/private/tmp/swiftsci-csv-null-dispatch-20261022/long-key-inputs/three-long-nulls-0.json"
+    ],
+    [
+      "eager",
+      "energy",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json"
+    ],
+    [
+      "stream",
+      "energy",
+      "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json"
+    ]
+  ],
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "controller_sha256": "d9e02886deef64591273a7d18d749c42ea95be0189877cc18a0b94d73965bbeb",
+  "argv0": "same executable name per scope for every engine",
+  "scope": "Native output hashes, values, types and null counts checked. Same native parallel/serial policies, native CPU scheduling and hash randomization. No builds, tests or profiling during timings."
+}

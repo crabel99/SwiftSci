@@ -1,0 +1,56 @@
+[
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "all-string-seventeen-nulls-0",
+      "policy": "serial",
+      "engine": "control",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 4061500.0,
+        "total_ns": 4376062.5,
+        "process_peak_held_bytes": 9486336.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "all-string-seventeen-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 3636500.0,
+        "total_ns": 3680541.5,
+        "process_peak_held_bytes": 9469952.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "all-string-seventeen-nulls-0",
+      "policy": "serial",
+      "engine": "hashed-optional",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 4429000.0,
+        "total_ns": 4458729.0,
+        "process_peak_held_bytes": 9469952.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "all-string-seventeen-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 3636500.0,
+        "total_ns": 3680541.5,
+        "process_peak_held_bytes": 9469952.0
+      }
+    },
+    "reason": "CPU review limit"
+  }
+]

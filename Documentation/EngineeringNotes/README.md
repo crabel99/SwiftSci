@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [CSV String optional-return trial](benchmarks/2026-10-22-csv-string-value-path/README.md) rules out redundant result conversion with identical generated instructions, retains 1,152 validated observations, and rejects both trials without a source change.
+
 - [CSV worker-local batch builder](benchmarks/2026-10-22-csv-local-batch-builder/README.md) records the streaming CPU improvement, 391-test configurations, 3,048 validated observations, and the remaining mixed default-token costs.
 
 - [CSV streaming layout sensitivity](benchmarks/2026-10-22-csv-stream-layout/README.md) records the failed compiler-only qualification, identical code with different setup timings, and worker-local builder trials.

@@ -1,0 +1,146 @@
+{
+  "binaries": {
+    "parent-parallel": {
+      "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/ResourceProbe",
+      "sha256": "4a5f12e221d837b27f2292f0710a4af665edca68023065c2c165b21c42fdcf44"
+    },
+    "parallel": {
+      "path": "/private/tmp/swiftsci-csv-local-builder-20261022/build/production/ResourceProbe",
+      "sha256": "6982a1246c3fb3b7c2c217700ef581334a53a5ee2236adb6bf030f4e1cd4f591"
+    },
+    "parent-serial": {
+      "path": "/private/tmp/swiftsci-csv-number-loop-20261022/build/production/ResourceProbe",
+      "sha256": "4a5f12e221d837b27f2292f0710a4af665edca68023065c2c165b21c42fdcf44"
+    },
+    "serial": {
+      "path": "/private/tmp/swiftsci-csv-local-builder-20261022/build/production/ResourceProbe",
+      "sha256": "6982a1246c3fb3b7c2c217700ef581334a53a5ee2236adb6bf030f4e1cd4f591"
+    }
+  },
+  "orders": [
+    [
+      "parent-parallel",
+      "parallel",
+      "parent-serial",
+      "serial"
+    ],
+    [
+      "parallel",
+      "parent-serial",
+      "serial",
+      "parent-parallel"
+    ],
+    [
+      "parent-serial",
+      "serial",
+      "parent-parallel",
+      "parallel"
+    ],
+    [
+      "serial",
+      "parent-parallel",
+      "parallel",
+      "parent-serial"
+    ],
+    [
+      "serial",
+      "parent-serial",
+      "parallel",
+      "parent-parallel"
+    ],
+    [
+      "parent-parallel",
+      "serial",
+      "parent-serial",
+      "parallel"
+    ],
+    [
+      "parallel",
+      "parent-parallel",
+      "serial",
+      "parent-serial"
+    ],
+    [
+      "parent-serial",
+      "parallel",
+      "parent-parallel",
+      "serial"
+    ],
+    [
+      "parent-parallel",
+      "parallel",
+      "parent-serial",
+      "serial"
+    ],
+    [
+      "parallel",
+      "parent-serial",
+      "serial",
+      "parent-parallel"
+    ],
+    [
+      "parent-serial",
+      "serial",
+      "parent-parallel",
+      "parallel"
+    ],
+    [
+      "serial",
+      "parent-parallel",
+      "parallel",
+      "parent-serial"
+    ],
+    [
+      "serial",
+      "parent-serial",
+      "parallel",
+      "parent-parallel"
+    ],
+    [
+      "parent-parallel",
+      "serial",
+      "parent-serial",
+      "parallel"
+    ],
+    [
+      "parallel",
+      "parent-parallel",
+      "serial",
+      "parent-serial"
+    ],
+    [
+      "parent-serial",
+      "parallel",
+      "parent-parallel",
+      "serial"
+    ]
+  ],
+  "cases": [
+    [
+      "all-string-default-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-0.json",
+      "known"
+    ],
+    [
+      "all-string-default-nulls-50",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-50.json",
+      "known"
+    ],
+    [
+      "all-string-default-nulls-90",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-90.json",
+      "known"
+    ],
+    [
+      "default-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/default-nulls-0.json",
+      "known"
+    ],
+    [
+      "Aotizhongxin-default",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/Aotizhongxin-default.json",
+      "known"
+    ]
+  ],
+  "controller_sha256": "2b94b44ef217ce202f7c95f46af0385503a21b1d89dee64086319935257a5e13"
+}
