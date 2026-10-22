@@ -1,0 +1,158 @@
+{
+  "binaries": {
+    "parent": {
+      "path": "/private/tmp/swiftsci-csv-plan-profile-20261022/build/production/ResourceProbe",
+      "sha256": "1763ccc7a1ab2315f94827bd75f851e3de66adfdebeb4d63e226e220f72b14a3"
+    },
+    "parallel": {
+      "path": "/private/tmp/swiftsci-csv-wide-profile-20261022/build/production/ResourceProbe",
+      "sha256": "4af34b15642af5f97521b0e05f0c3efb18549ba2684461da6cc04574bfe18d43"
+    },
+    "serial": {
+      "path": "/private/tmp/swiftsci-csv-wide-profile-20261022/build/production/ResourceProbe",
+      "sha256": "4af34b15642af5f97521b0e05f0c3efb18549ba2684461da6cc04574bfe18d43"
+    },
+    "prototype": {
+      "path": "/private/tmp/swiftsci-csv-wide-profile-20261022/build/serial/ResourceProbe",
+      "sha256": "cec4ecdfbfcfea8c9f312950d5623199c9c2a27875b13b4393aad32251d537f2"
+    }
+  },
+  "orders": [
+    [
+      "parent",
+      "parallel",
+      "serial",
+      "prototype"
+    ],
+    [
+      "parallel",
+      "serial",
+      "prototype",
+      "parent"
+    ],
+    [
+      "serial",
+      "prototype",
+      "parent",
+      "parallel"
+    ],
+    [
+      "prototype",
+      "parent",
+      "parallel",
+      "serial"
+    ],
+    [
+      "prototype",
+      "serial",
+      "parallel",
+      "parent"
+    ],
+    [
+      "parent",
+      "prototype",
+      "serial",
+      "parallel"
+    ],
+    [
+      "parallel",
+      "parent",
+      "prototype",
+      "serial"
+    ],
+    [
+      "serial",
+      "parallel",
+      "parent",
+      "prototype"
+    ]
+  ],
+  "cases": [
+    [
+      "width-1-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-1-rows-257.json",
+      "known"
+    ],
+    [
+      "width-2-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-2-rows-257.json",
+      "known"
+    ],
+    [
+      "width-4-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-4-rows-257.json",
+      "known"
+    ],
+    [
+      "width-8-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-8-rows-257.json",
+      "known"
+    ],
+    [
+      "width-18-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-18-rows-257.json",
+      "known"
+    ],
+    [
+      "width-64-rows-257",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-64-rows-257.json",
+      "known"
+    ],
+    [
+      "width-1-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-1-rows-32769.json",
+      "known"
+    ],
+    [
+      "width-2-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-2-rows-32769.json",
+      "known"
+    ],
+    [
+      "width-4-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-4-rows-32769.json",
+      "known"
+    ],
+    [
+      "width-8-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-8-rows-32769.json",
+      "known"
+    ],
+    [
+      "width-18-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-18-rows-32769.json",
+      "known"
+    ],
+    [
+      "width-64-rows-32769",
+      "/private/tmp/swiftsci-csv-wide-profile-20261022/width-inputs/width-64-rows-32769.json",
+      "known"
+    ],
+    [
+      "nullable-0-infer",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/nullable-0.json",
+      "infer"
+    ],
+    [
+      "nullable-50-infer",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/nullable-50.json",
+      "infer"
+    ],
+    [
+      "nullable-90-infer",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/nullable-90.json",
+      "infer"
+    ],
+    [
+      "nullable-50-known",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/nullable-50.json",
+      "known"
+    ],
+    [
+      "nullable-90-known",
+      "/private/tmp/swiftsci-csv-plan-profile-20261022/nullable-90.json",
+      "known"
+    ]
+  ],
+  "controller_sha256": "45002b591848b70d9f559d490f482ec1eec04b4e79001ab3834962d2610e2100"
+}

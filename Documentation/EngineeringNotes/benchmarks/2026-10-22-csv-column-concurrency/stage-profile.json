@@ -1,0 +1,2882 @@
+[
+  {
+    "case": "wide",
+    "round": 0,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 13811000,
+          "call_ns": 7843375,
+          "heap_after_release_bytes": 198880,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10510608,
+          "held_heap_delta_bytes": 10412880,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 26247168,
+          "release_cpu_ns": 271000,
+          "release_ns": 269000,
+          "rss_after_release_bytes": 24133632,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 23396352,
+          "rss_held_delta_bytes": 16580608,
+          "total_cpu_ns": 14082000,
+          "total_ns": 8112375
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 9034000,
+        "attempt-setup": 43000,
+        "count": 479000,
+        "dataframe": 31000,
+        "finish": 23000,
+        "framing": 2398000,
+        "header": 79000,
+        "plans": 10000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "wide",
+    "round": 1,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 12983000,
+          "call_ns": 7741875,
+          "heap_after_release_bytes": 198880,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10510608,
+          "held_heap_delta_bytes": 10412880,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 26312704,
+          "release_cpu_ns": 299000,
+          "release_ns": 292917,
+          "rss_after_release_bytes": 24281088,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 23461888,
+          "rss_held_delta_bytes": 16646144,
+          "total_cpu_ns": 13282000,
+          "total_ns": 8034792
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 8437000,
+        "attempt-setup": 43000,
+        "count": 478000,
+        "dataframe": 17000,
+        "finish": 16000,
+        "framing": 2451000,
+        "header": 20000,
+        "plans": 11000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "wide",
+    "round": 2,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 13317000,
+          "call_ns": 7619250,
+          "heap_after_release_bytes": 198880,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10510608,
+          "held_heap_delta_bytes": 10412880,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 29048832,
+          "release_cpu_ns": 278000,
+          "release_ns": 274375,
+          "rss_after_release_bytes": 26935296,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 26198016,
+          "rss_held_delta_bytes": 19382272,
+          "total_cpu_ns": 13595000,
+          "total_ns": 7893625
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 8770000,
+        "attempt-setup": 54000,
+        "count": 488000,
+        "dataframe": 16000,
+        "finish": 14000,
+        "framing": 2453000,
+        "header": 25000,
+        "plans": 12000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "wide",
+    "round": 3,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 13138000,
+          "call_ns": 7910167,
+          "heap_after_release_bytes": 198880,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10510608,
+          "held_heap_delta_bytes": 10412880,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 26755072,
+          "release_cpu_ns": 297000,
+          "release_ns": 292792,
+          "rss_after_release_bytes": 24641536,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 23904256,
+          "rss_held_delta_bytes": 17088512,
+          "total_cpu_ns": 13435000,
+          "total_ns": 8202959
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 8401000,
+        "attempt-setup": 46000,
+        "count": 504000,
+        "dataframe": 20000,
+        "finish": 22000,
+        "framing": 2535000,
+        "header": 22000,
+        "plans": 11000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "wide",
+    "round": 4,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 13788000,
+          "call_ns": 7717917,
+          "heap_after_release_bytes": 196320,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10508048,
+          "held_heap_delta_bytes": 10410320,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 26312704,
+          "release_cpu_ns": 276000,
+          "release_ns": 273458,
+          "rss_after_release_bytes": 24199168,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 23461888,
+          "rss_held_delta_bytes": 16646144,
+          "total_cpu_ns": 14064000,
+          "total_ns": 7991375
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 9262000,
+        "attempt-setup": 45000,
+        "count": 493000,
+        "dataframe": 19000,
+        "finish": 19000,
+        "framing": 2425000,
+        "header": 23000,
+        "plans": 11000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "wide",
+    "round": 5,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 13218000,
+          "call_ns": 7342417,
+          "heap_after_release_bytes": 198880,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10510608,
+          "held_heap_delta_bytes": 10412880,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 26312704,
+          "release_cpu_ns": 270000,
+          "release_ns": 268084,
+          "rss_after_release_bytes": 24182784,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 23461888,
+          "rss_held_delta_bytes": 16646144,
+          "total_cpu_ns": 13488000,
+          "total_ns": 7610501
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 8759000,
+        "attempt-setup": 51000,
+        "count": 486000,
+        "dataframe": 15000,
+        "finish": 16000,
+        "framing": 2422000,
+        "header": 20000,
+        "plans": 10000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "wide",
+    "round": 6,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 13485000,
+          "call_ns": 7673625,
+          "heap_after_release_bytes": 196320,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10508048,
+          "held_heap_delta_bytes": 10410320,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 26296320,
+          "release_cpu_ns": 270000,
+          "release_ns": 267958,
+          "rss_after_release_bytes": 24182784,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 23445504,
+          "rss_held_delta_bytes": 16629760,
+          "total_cpu_ns": 13755000,
+          "total_ns": 7941583
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 9049000,
+        "attempt-setup": 56000,
+        "count": 468000,
+        "dataframe": 13000,
+        "finish": 12000,
+        "framing": 2373000,
+        "header": 19000,
+        "plans": 13000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "wide",
+    "round": 7,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 13207000,
+          "call_ns": 7686875,
+          "heap_after_release_bytes": 198880,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10510608,
+          "held_heap_delta_bytes": 10412880,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 26312704,
+          "release_cpu_ns": 276000,
+          "release_ns": 273416,
+          "rss_after_release_bytes": 24182784,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 23461888,
+          "rss_held_delta_bytes": 16646144,
+          "total_cpu_ns": 13483000,
+          "total_ns": 7960291
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 8797000,
+        "attempt-setup": 43000,
+        "count": 478000,
+        "dataframe": 14000,
+        "finish": 11000,
+        "framing": 2406000,
+        "header": 18000,
+        "plans": 10000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "wide",
+    "round": 8,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 13774000,
+          "call_ns": 7921792,
+          "heap_after_release_bytes": 198880,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10510608,
+          "held_heap_delta_bytes": 10412880,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 26312704,
+          "release_cpu_ns": 272000,
+          "release_ns": 268416,
+          "rss_after_release_bytes": 24199168,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 23461888,
+          "rss_held_delta_bytes": 16646144,
+          "total_cpu_ns": 14046000,
+          "total_ns": 8190208
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 9150000,
+        "attempt-setup": 44000,
+        "count": 482000,
+        "dataframe": 17000,
+        "finish": 18000,
+        "framing": 2514000,
+        "header": 21000,
+        "plans": 9000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "wide",
+    "round": 9,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 13712000,
+          "call_ns": 7939750,
+          "heap_after_release_bytes": 198880,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10510608,
+          "held_heap_delta_bytes": 10412880,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 26329088,
+          "release_cpu_ns": 295000,
+          "release_ns": 292375,
+          "rss_after_release_bytes": 24199168,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 23478272,
+          "rss_held_delta_bytes": 16662528,
+          "total_cpu_ns": 14007000,
+          "total_ns": 8232125
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 9243000,
+        "attempt-setup": 57000,
+        "count": 485000,
+        "dataframe": 13000,
+        "finish": 16000,
+        "framing": 2411000,
+        "header": 18000,
+        "plans": 10000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "wide",
+    "round": 10,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 13695000,
+          "call_ns": 7771833,
+          "heap_after_release_bytes": 198880,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10510608,
+          "held_heap_delta_bytes": 10412880,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 26329088,
+          "release_cpu_ns": 320000,
+          "release_ns": 313750,
+          "rss_after_release_bytes": 24199168,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 23478272,
+          "rss_held_delta_bytes": 16662528,
+          "total_cpu_ns": 14015000,
+          "total_ns": 8085583
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 9247000,
+        "attempt-setup": 46000,
+        "count": 474000,
+        "dataframe": 13000,
+        "finish": 14000,
+        "framing": 2461000,
+        "header": 20000,
+        "plans": 11000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "wide",
+    "round": 11,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "No",
+            "nulls": 0,
+            "sha256": "2c8d910ceea0f0da1e1f6c095a8c96fac513e22b1b40c41dd86d845d1eea16db",
+            "type": "Int64"
+          },
+          {
+            "name": "year",
+            "nulls": 0,
+            "sha256": "e159c15a7271afd7792ac4d9bc8b255e2fa6d7d75418f4e46ee512497ad970bf",
+            "type": "Int64"
+          },
+          {
+            "name": "month",
+            "nulls": 0,
+            "sha256": "248110801e415587b697e300ceb14345b7a653f3a7c1aba842442172d3218186",
+            "type": "Int64"
+          },
+          {
+            "name": "day",
+            "nulls": 0,
+            "sha256": "c5626d30e1da90716565566974901c10d880c33e9c66ad1c2f3eb38d1e055078",
+            "type": "Int64"
+          },
+          {
+            "name": "hour",
+            "nulls": 0,
+            "sha256": "768decc88a83f10cb5cbfa252692785891ed32ad55d1fd9201ba47857eba95ce",
+            "type": "Int64"
+          },
+          {
+            "name": "PM2.5",
+            "nulls": 925,
+            "sha256": "dee930aa4d2e4a780a4288d457d3e74f44690ce1aa8df99668a4d0ed1c48dffb",
+            "type": "Double"
+          },
+          {
+            "name": "PM10",
+            "nulls": 718,
+            "sha256": "e0ed66f0ff9792d9b94e804c14d7ca7123e1ebeaa714e5be8d030c56297a6e41",
+            "type": "Double"
+          },
+          {
+            "name": "SO2",
+            "nulls": 935,
+            "sha256": "5ac8b2d3c4eff2838ae0b0887d256f83c18bb06eb4ff2ecaa808cc86255a29cf",
+            "type": "Double"
+          },
+          {
+            "name": "NO2",
+            "nulls": 1023,
+            "sha256": "d66a25759934c6b37b14c91fa3a2c3af5af43e0d6d6a9a8e0cd5af3d44987022",
+            "type": "Double"
+          },
+          {
+            "name": "CO",
+            "nulls": 1776,
+            "sha256": "0c45728529b0b2f5c8954966c6e7040e332f15dfc738635ddcca7ef098671b4b",
+            "type": "Double"
+          },
+          {
+            "name": "O3",
+            "nulls": 1719,
+            "sha256": "a86f9f332b6496c5e3bca4721d928bf8f18754aff75a393461f34dbfa5e95c4d",
+            "type": "Double"
+          },
+          {
+            "name": "TEMP",
+            "nulls": 20,
+            "sha256": "77fcc6d69c67f3bb7f7ca273f212d1c5eba63680d4de755500b2283c6127eff2",
+            "type": "Double"
+          },
+          {
+            "name": "PRES",
+            "nulls": 20,
+            "sha256": "f781cb76615d6698f1f58913c57ccd3465ed8e1c3d4a382ea4280af12c8016b2",
+            "type": "Double"
+          },
+          {
+            "name": "DEWP",
+            "nulls": 20,
+            "sha256": "0302c1acd443624249a6188cef169992fb9e660cf53398569569de1059db9df6",
+            "type": "Double"
+          },
+          {
+            "name": "RAIN",
+            "nulls": 20,
+            "sha256": "93dfa128999990f8b4f9b0d717da865ee3bc44f800356d44721d6962483dd2d1",
+            "type": "Double"
+          },
+          {
+            "name": "wd",
+            "nulls": 81,
+            "sha256": "f8444009bbad79eb22c3d6690c12cbab686837ac0444ab9e390ab739ee0dc5ca",
+            "type": "String"
+          },
+          {
+            "name": "WSPM",
+            "nulls": 14,
+            "sha256": "7083dd343a373b16e3c69126b59adb892e94ab02d1ba3ab30dfe2e5038cce68a",
+            "type": "Double"
+          },
+          {
+            "name": "station",
+            "nulls": 0,
+            "sha256": "d9eba556994be63d685568e6d7d9d0609a7755e3c03ad3578bafb4c67282f87d",
+            "type": "String"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "Aotizhongxin",
+      "mode": "known",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 13570000,
+          "call_ns": 8099917,
+          "heap_after_release_bytes": 196320,
+          "heap_before_bytes": 97728,
+          "held_heap_bytes": 10508048,
+          "held_heap_delta_bytes": 10410320,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 26787840,
+          "release_cpu_ns": 271000,
+          "release_ns": 268875,
+          "rss_after_release_bytes": 24674304,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 23937024,
+          "rss_held_delta_bytes": 17121280,
+          "total_cpu_ns": 13841000,
+          "total_ns": 8368792
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 3,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 3,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 8928000,
+        "attempt-setup": 39000,
+        "count": 480000,
+        "dataframe": 16000,
+        "finish": 23000,
+        "framing": 2434000,
+        "header": 18000,
+        "plans": 9000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 0,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 3818000,
+          "call_ns": 5013667,
+          "heap_after_release_bytes": 184128,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3393440,
+          "held_heap_delta_bytes": 3299168,
+          "process_peak_before_bytes": 6799360,
+          "process_peak_held_bytes": 14434304,
+          "release_cpu_ns": 3000,
+          "release_ns": 1042,
+          "rss_after_release_bytes": 14041088,
+          "rss_before_bytes": 6799360,
+          "rss_held_bytes": 13467648,
+          "rss_held_delta_bytes": 6668288,
+          "total_cpu_ns": 3821000,
+          "total_ns": 5014709
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1304000,
+        "attempt-setup": 19000,
+        "count": 270000,
+        "dataframe": 10000,
+        "finish": 8000,
+        "framing": 710000,
+        "header": 19000,
+        "plans": 123000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 1,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 3795000,
+          "call_ns": 5206084,
+          "heap_after_release_bytes": 184128,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3393440,
+          "held_heap_delta_bytes": 3299168,
+          "process_peak_before_bytes": 6799360,
+          "process_peak_held_bytes": 14434304,
+          "release_cpu_ns": 1000,
+          "release_ns": 1042,
+          "rss_after_release_bytes": 14041088,
+          "rss_before_bytes": 6799360,
+          "rss_held_bytes": 13467648,
+          "rss_held_delta_bytes": 6668288,
+          "total_cpu_ns": 3796000,
+          "total_ns": 5207126
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1278000,
+        "attempt-setup": 19000,
+        "count": 268000,
+        "dataframe": 9000,
+        "finish": 8000,
+        "framing": 692000,
+        "header": 20000,
+        "plans": 124000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 2,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 4015000,
+          "call_ns": 5239083,
+          "heap_after_release_bytes": 184128,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3393440,
+          "held_heap_delta_bytes": 3299168,
+          "process_peak_before_bytes": 6799360,
+          "process_peak_held_bytes": 14467072,
+          "release_cpu_ns": 1000,
+          "release_ns": 750,
+          "rss_after_release_bytes": 14073856,
+          "rss_before_bytes": 6799360,
+          "rss_held_bytes": 13500416,
+          "rss_held_delta_bytes": 6701056,
+          "total_cpu_ns": 4016000,
+          "total_ns": 5239833
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1332000,
+        "attempt-setup": 18000,
+        "count": 280000,
+        "dataframe": 8000,
+        "finish": 8000,
+        "framing": 728000,
+        "header": 20000,
+        "plans": 162000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 3,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 3779000,
+          "call_ns": 4978667,
+          "heap_after_release_bytes": 184128,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3393440,
+          "held_heap_delta_bytes": 3299168,
+          "process_peak_before_bytes": 6799360,
+          "process_peak_held_bytes": 14467072,
+          "release_cpu_ns": 2000,
+          "release_ns": 1000,
+          "rss_after_release_bytes": 14073856,
+          "rss_before_bytes": 6799360,
+          "rss_held_bytes": 13500416,
+          "rss_held_delta_bytes": 6701056,
+          "total_cpu_ns": 3781000,
+          "total_ns": 4979667
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1312000,
+        "attempt-setup": 18000,
+        "count": 254000,
+        "dataframe": 11000,
+        "finish": 9000,
+        "framing": 708000,
+        "header": 17000,
+        "plans": 123000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 4,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 3782000,
+          "call_ns": 5113250,
+          "heap_after_release_bytes": 184128,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3393440,
+          "held_heap_delta_bytes": 3299168,
+          "process_peak_before_bytes": 6799360,
+          "process_peak_held_bytes": 14499840,
+          "release_cpu_ns": 2000,
+          "release_ns": 792,
+          "rss_after_release_bytes": 14106624,
+          "rss_before_bytes": 6799360,
+          "rss_held_bytes": 13533184,
+          "rss_held_delta_bytes": 6733824,
+          "total_cpu_ns": 3784000,
+          "total_ns": 5114042
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1318000,
+        "attempt-setup": 18000,
+        "count": 253000,
+        "dataframe": 11000,
+        "finish": 12000,
+        "framing": 721000,
+        "header": 18000,
+        "plans": 123000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 5,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 3821000,
+          "call_ns": 4993791,
+          "heap_after_release_bytes": 184128,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3393440,
+          "held_heap_delta_bytes": 3299168,
+          "process_peak_before_bytes": 6799360,
+          "process_peak_held_bytes": 14467072,
+          "release_cpu_ns": 1000,
+          "release_ns": 833,
+          "rss_after_release_bytes": 14073856,
+          "rss_before_bytes": 6799360,
+          "rss_held_bytes": 13500416,
+          "rss_held_delta_bytes": 6701056,
+          "total_cpu_ns": 3822000,
+          "total_ns": 4994624
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1332000,
+        "attempt-setup": 17000,
+        "count": 275000,
+        "dataframe": 11000,
+        "finish": 10000,
+        "framing": 710000,
+        "header": 19000,
+        "plans": 124000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 6,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 3738000,
+          "call_ns": 4974542,
+          "heap_after_release_bytes": 184128,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3393440,
+          "held_heap_delta_bytes": 3299168,
+          "process_peak_before_bytes": 6799360,
+          "process_peak_held_bytes": 14467072,
+          "release_cpu_ns": 2000,
+          "release_ns": 1125,
+          "rss_after_release_bytes": 14073856,
+          "rss_before_bytes": 6799360,
+          "rss_held_bytes": 13500416,
+          "rss_held_delta_bytes": 6701056,
+          "total_cpu_ns": 3740000,
+          "total_ns": 4975667
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1305000,
+        "attempt-setup": 20000,
+        "count": 260000,
+        "dataframe": 9000,
+        "finish": 8000,
+        "framing": 688000,
+        "header": 19000,
+        "plans": 124000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 7,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 4579000,
+          "call_ns": 5627583,
+          "heap_after_release_bytes": 184128,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3393440,
+          "held_heap_delta_bytes": 3299168,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 14925824,
+          "release_cpu_ns": 4000,
+          "release_ns": 1459,
+          "rss_after_release_bytes": 14532608,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 13959168,
+          "rss_held_delta_bytes": 7143424,
+          "total_cpu_ns": 4583000,
+          "total_ns": 5629042
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1746000,
+        "attempt-setup": 23000,
+        "count": 273000,
+        "dataframe": 13000,
+        "finish": 14000,
+        "framing": 715000,
+        "header": 20000,
+        "plans": 129000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 8,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 4159000,
+          "call_ns": 5466375,
+          "heap_after_release_bytes": 184128,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3393440,
+          "held_heap_delta_bytes": 3299168,
+          "process_peak_before_bytes": 6815744,
+          "process_peak_held_bytes": 14598144,
+          "release_cpu_ns": 4000,
+          "release_ns": 1625,
+          "rss_after_release_bytes": 14286848,
+          "rss_before_bytes": 6815744,
+          "rss_held_bytes": 13631488,
+          "rss_held_delta_bytes": 6815744,
+          "total_cpu_ns": 4163000,
+          "total_ns": 5468000
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1381000,
+        "attempt-setup": 22000,
+        "count": 285000,
+        "dataframe": 9000,
+        "finish": 10000,
+        "framing": 730000,
+        "header": 29000,
+        "plans": 132000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 9,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 4472000,
+          "call_ns": 5589541,
+          "heap_after_release_bytes": 184128,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3393440,
+          "held_heap_delta_bytes": 3299168,
+          "process_peak_before_bytes": 6799360,
+          "process_peak_held_bytes": 14942208,
+          "release_cpu_ns": 4000,
+          "release_ns": 1584,
+          "rss_after_release_bytes": 14548992,
+          "rss_before_bytes": 6799360,
+          "rss_held_bytes": 13975552,
+          "rss_held_delta_bytes": 7176192,
+          "total_cpu_ns": 4476000,
+          "total_ns": 5591125
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1689000,
+        "attempt-setup": 27000,
+        "count": 272000,
+        "dataframe": 13000,
+        "finish": 12000,
+        "framing": 668000,
+        "header": 22000,
+        "plans": 130000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 10,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 4150000,
+          "call_ns": 5643458,
+          "heap_after_release_bytes": 181568,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3390880,
+          "held_heap_delta_bytes": 3296608,
+          "process_peak_before_bytes": 6799360,
+          "process_peak_held_bytes": 14499840,
+          "release_cpu_ns": 3000,
+          "release_ns": 1709,
+          "rss_after_release_bytes": 14106624,
+          "rss_before_bytes": 6799360,
+          "rss_held_bytes": 13533184,
+          "rss_held_delta_bytes": 6733824,
+          "total_cpu_ns": 4153000,
+          "total_ns": 5645167
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1357000,
+        "attempt-setup": 24000,
+        "count": 282000,
+        "dataframe": 11000,
+        "finish": 14000,
+        "framing": 716000,
+        "header": 26000,
+        "plans": 137000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  },
+  {
+    "case": "numeric",
+    "round": 11,
+    "result": {
+      "checks": {
+        "columns": [
+          {
+            "name": "integer",
+            "nulls": 0,
+            "sha256": "92d1c924ce82eac996da2eba316e9e7cfbd5560f7628f01416d14f958c859561",
+            "type": "Int64"
+          },
+          {
+            "name": "double",
+            "nulls": 0,
+            "sha256": "a6d92907358d1e2406dbba7394666539bec34842df4cb8f681309fc9ef8191ea",
+            "type": "Double"
+          }
+        ],
+        "failures": [],
+        "passed": true
+      },
+      "input": "nullable-0",
+      "mode": "infer",
+      "phase": "fresh",
+      "samples": [
+        {
+          "call_cpu_ns": 4037000,
+          "call_ns": 4951958,
+          "heap_after_release_bytes": 184128,
+          "heap_before_bytes": 94272,
+          "held_heap_bytes": 3393440,
+          "held_heap_delta_bytes": 3299168,
+          "process_peak_before_bytes": 6799360,
+          "process_peak_held_bytes": 14532608,
+          "release_cpu_ns": 2000,
+          "release_ns": 834,
+          "rss_after_release_bytes": 14139392,
+          "rss_before_bytes": 6799360,
+          "rss_held_bytes": 13565952,
+          "rss_held_delta_bytes": 6766592,
+          "total_cpu_ns": 4039000,
+          "total_ns": 4952792
+        }
+      ],
+      "scope": "Public CSV read plus release; full independent per-column SHA256 validation excluded from CPU/wall. Peak/held memory captured before validation. Date-format cases explicitly use d/M/yyyy and keep Time as text.",
+      "validated": true
+    },
+    "phase": {
+      "calls": {
+        "append": 7,
+        "attempt-setup": 1,
+        "count": 1,
+        "dataframe": 1,
+        "finish": 1,
+        "framing": 7,
+        "header": 1,
+        "plans": 1
+      },
+      "cpu_ns": {
+        "append": 1369000,
+        "attempt-setup": 25000,
+        "count": 294000,
+        "dataframe": 10000,
+        "finish": 11000,
+        "framing": 700000,
+        "header": 24000,
+        "plans": 148000
+      },
+      "tag": "CSV-CPU-20261022"
+    }
+  }
+]
