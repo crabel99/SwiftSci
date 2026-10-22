@@ -1,0 +1,29 @@
+[
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "all-string-default-nulls-90",
+      "policy": "serial",
+      "engine": "ascii-prefix",
+      "samples": 16,
+      "medians": {
+        "total_cpu_ns": 5412000.0,
+        "total_ns": 6377979.0,
+        "process_peak_held_bytes": 9535488.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "all-string-default-nulls-90",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 16,
+      "medians": {
+        "total_cpu_ns": 4881500.0,
+        "total_ns": 6893874.5,
+        "process_peak_held_bytes": 9469952.0
+      }
+    },
+    "reason": "CPU review limit"
+  }
+]

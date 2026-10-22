@@ -1,0 +1,338 @@
+[
+  {
+    "scope": "eager",
+    "case": "all-string-default-nulls-0",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 7954000.0,
+      "total_ns": 9473375.5,
+      "process_peak_held_bytes": 10043392.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "all-string-default-nulls-0",
+    "policy": "parallel",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 4522000.0,
+      "total_ns": 7504229.5,
+      "process_peak_held_bytes": 10076160.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "all-string-default-nulls-0",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 4568000.0,
+      "total_ns": 6541812.5,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "all-string-default-nulls-0",
+    "policy": "serial",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 3635500.0,
+      "total_ns": 4720332.5,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "all-string-default-nulls-90",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 6145000.0,
+      "total_ns": 4982396.0,
+      "process_peak_held_bytes": 9543680.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "all-string-default-nulls-90",
+    "policy": "parallel",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 4642500.0,
+      "total_ns": 4228709.0,
+      "process_peak_held_bytes": 9625600.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "all-string-default-nulls-90",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 4881500.0,
+      "total_ns": 6893874.5,
+      "process_peak_held_bytes": 9469952.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "all-string-default-nulls-90",
+    "policy": "serial",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 5412000.0,
+      "total_ns": 6377979.0,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Aotizhongxin-default",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 21295500.0,
+      "total_ns": 11827792.0,
+      "process_peak_held_bytes": 26689536.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Aotizhongxin-default",
+    "policy": "parallel",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 19983000.0,
+      "total_ns": 10812250.0,
+      "process_peak_held_bytes": 26664960.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Aotizhongxin-default",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 16905500.0,
+      "total_ns": 22042395.5,
+      "process_peak_held_bytes": 25092096.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "Aotizhongxin-default",
+    "policy": "serial",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 16121500.0,
+      "total_ns": 21028916.5,
+      "process_peak_held_bytes": 25337856.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "all-string-none-nulls-0",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 4079500.0,
+      "total_ns": 6558250.5,
+      "process_peak_held_bytes": 9535488.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "all-string-none-nulls-0",
+    "policy": "parallel",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 4297500.0,
+      "total_ns": 4725646.0,
+      "process_peak_held_bytes": 9502720.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "all-string-none-nulls-0",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 1976500.0,
+      "total_ns": 1993167.0,
+      "process_peak_held_bytes": 9486336.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "all-string-none-nulls-0",
+    "policy": "serial",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 2044500.0,
+      "total_ns": 2066812.0,
+      "process_peak_held_bytes": 9469952.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "three-unicode-nulls-0",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 88112500.0,
+      "total_ns": 28367813.0,
+      "process_peak_held_bytes": 34676736.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "three-unicode-nulls-0",
+    "policy": "parallel",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 68164500.0,
+      "total_ns": 22361812.5,
+      "process_peak_held_bytes": 35020800.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "three-unicode-nulls-0",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 65024000.0,
+      "total_ns": 65081771.0,
+      "process_peak_held_bytes": 34152448.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "three-unicode-nulls-0",
+    "policy": "serial",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 65737500.0,
+      "total_ns": 65774667.0,
+      "process_peak_held_bytes": 34177024.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy-default",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 514836500.0,
+      "total_ns": 200175812.5,
+      "process_peak_held_bytes": 443015168.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy-default",
+    "policy": "parallel",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 415853500.0,
+      "total_ns": 148610375.0,
+      "process_peak_held_bytes": 443023360.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy-default",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 335594500.0,
+      "total_ns": 335711687.5,
+      "process_peak_held_bytes": 442490880.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "energy-default",
+    "policy": "serial",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 256404500.0,
+      "total_ns": 256600312.0,
+      "process_peak_held_bytes": 442531840.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-default",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 474822000.0,
+      "total_ns": 185164708.5,
+      "peak_after_bytes": 145784832.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-default",
+    "policy": "parallel",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 372045500.0,
+      "total_ns": 136001146.0,
+      "peak_after_bytes": 145973248.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-default",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 308862500.0,
+      "total_ns": 309109604.0,
+      "peak_after_bytes": 145637376.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "energy-default",
+    "policy": "serial",
+    "engine": "ascii-prefix",
+    "samples": 16,
+    "medians": {
+      "total_cpu_ns": 235875000.0,
+      "total_ns": 236013166.5,
+      "peak_after_bytes": 145620992.0
+    }
+  }
+]

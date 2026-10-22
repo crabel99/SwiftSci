@@ -1,0 +1,191 @@
+[
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "setup-8-2048",
+      "policy": "parallel",
+      "engine": "ascii-prefix",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 500000.0,
+        "total_ns": 528250.0,
+        "process_peak_held_bytes": 7847936.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "setup-8-2048",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 424500.0,
+        "total_ns": 465395.0,
+        "process_peak_held_bytes": 7815168.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "setup-8-2048",
+      "policy": "serial",
+      "engine": "ascii-prefix",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 476000.0,
+        "total_ns": 503791.0,
+        "process_peak_held_bytes": 7831552.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "setup-8-2048",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 407000.0,
+        "total_ns": 437396.0,
+        "process_peak_held_bytes": 7798784.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "setup-8-32768",
+      "policy": "parallel",
+      "engine": "ascii-prefix",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 4126500.0,
+        "total_ns": 4164541.5,
+        "process_peak_held_bytes": 12959744.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "setup-8-32768",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 3026000.0,
+        "total_ns": 3065583.5,
+        "process_peak_held_bytes": 12943360.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "setup-8-32768",
+      "policy": "serial",
+      "engine": "ascii-prefix",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 4105000.0,
+        "total_ns": 4210042.5,
+        "process_peak_held_bytes": 12976128.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "setup-8-32768",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 3004500.0,
+        "total_ns": 3046625.5,
+        "process_peak_held_bytes": 12984320.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "setup-257-2048",
+      "policy": "serial",
+      "engine": "ascii-prefix",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 546000.0,
+        "total_ns": 546187.5,
+        "process_peak_held_bytes": 7913472.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "setup-257-2048",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 478500.0,
+        "total_ns": 486124.0,
+        "process_peak_held_bytes": 7864320.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "setup-257-32768",
+      "policy": "parallel",
+      "engine": "ascii-prefix",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 4294000.0,
+        "total_ns": 4293062.5,
+        "process_peak_held_bytes": 13099008.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "setup-257-32768",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 3271000.0,
+        "total_ns": 3252958.0,
+        "process_peak_held_bytes": 13058048.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "eager",
+      "case": "setup-257-32768",
+      "policy": "serial",
+      "engine": "ascii-prefix",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 4178500.0,
+        "total_ns": 4174624.5,
+        "process_peak_held_bytes": 13008896.0
+      }
+    },
+    "parent": {
+      "scope": "eager",
+      "case": "setup-257-32768",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 8,
+      "medians": {
+        "total_cpu_ns": 3225500.0,
+        "total_ns": 3229104.5,
+        "process_peak_held_bytes": 13025280.0
+      }
+    },
+    "reason": "CPU review limit"
+  }
+]

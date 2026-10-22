@@ -1,0 +1,578 @@
+[
+  {
+    "scope": "eager",
+    "case": "setup-8-0",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 253000.0,
+      "total_ns": 252041.5,
+      "process_peak_held_bytes": 7389184.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-0",
+    "policy": "parallel",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 261500.0,
+      "total_ns": 258083.5,
+      "process_peak_held_bytes": 7389184.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-0",
+    "policy": "parallel",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 252500.0,
+      "total_ns": 251208.5,
+      "process_peak_held_bytes": 7372800.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-0",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 227000.0,
+      "total_ns": 224666.5,
+      "process_peak_held_bytes": 7340032.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-0",
+    "policy": "serial",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 223500.0,
+      "total_ns": 228291.5,
+      "process_peak_held_bytes": 7340032.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-0",
+    "policy": "serial",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 226500.0,
+      "total_ns": 233895.5,
+      "process_peak_held_bytes": 7323648.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-10",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 248000.0,
+      "total_ns": 242479.5,
+      "process_peak_held_bytes": 7372800.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-10",
+    "policy": "parallel",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 240500.0,
+      "total_ns": 240270.5,
+      "process_peak_held_bytes": 7405568.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-10",
+    "policy": "parallel",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 246000.0,
+      "total_ns": 245250.0,
+      "process_peak_held_bytes": 7389184.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-10",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 232500.0,
+      "total_ns": 236166.5,
+      "process_peak_held_bytes": 7340032.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-10",
+    "policy": "serial",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 229000.0,
+      "total_ns": 239167.5,
+      "process_peak_held_bytes": 7348224.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-10",
+    "policy": "serial",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 226500.0,
+      "total_ns": 227437.5,
+      "process_peak_held_bytes": 7356416.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-2048",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 462000.0,
+      "total_ns": 459437.0,
+      "process_peak_held_bytes": 7847936.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-2048",
+    "policy": "parallel",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 262000.0,
+      "total_ns": 261188.0,
+      "process_peak_held_bytes": 7700480.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-2048",
+    "policy": "parallel",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 368500.0,
+      "total_ns": 353416.0,
+      "process_peak_held_bytes": 7716864.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-2048",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 427500.0,
+      "total_ns": 426437.0,
+      "process_peak_held_bytes": 7798784.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-2048",
+    "policy": "serial",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 242500.0,
+      "total_ns": 238104.0,
+      "process_peak_held_bytes": 7651328.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-2048",
+    "policy": "serial",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 316500.0,
+      "total_ns": 316854.0,
+      "process_peak_held_bytes": 7667712.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-32768",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 3152500.0,
+      "total_ns": 3160979.5,
+      "process_peak_held_bytes": 12976128.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-32768",
+    "policy": "parallel",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 302500.0,
+      "total_ns": 296354.5,
+      "process_peak_held_bytes": 11354112.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-32768",
+    "policy": "parallel",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 1393500.0,
+      "total_ns": 1392771.5,
+      "process_peak_held_bytes": 11370496.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-32768",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 3132500.0,
+      "total_ns": 3143604.0,
+      "process_peak_held_bytes": 12959744.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-32768",
+    "policy": "serial",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 292500.0,
+      "total_ns": 288937.5,
+      "process_peak_held_bytes": 11321344.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-8-32768",
+    "policy": "serial",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 1365500.0,
+      "total_ns": 1368750.5,
+      "process_peak_held_bytes": 11345920.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-0",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 267500.0,
+      "total_ns": 263395.5,
+      "process_peak_held_bytes": 7454720.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-0",
+    "policy": "parallel",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 277500.0,
+      "total_ns": 274479.5,
+      "process_peak_held_bytes": 7471104.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-0",
+    "policy": "parallel",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 280500.0,
+      "total_ns": 280417.0,
+      "process_peak_held_bytes": 7438336.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-0",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 258000.0,
+      "total_ns": 263750.0,
+      "process_peak_held_bytes": 7421952.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-0",
+    "policy": "serial",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 251500.0,
+      "total_ns": 259375.0,
+      "process_peak_held_bytes": 7421952.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-0",
+    "policy": "serial",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 260000.0,
+      "total_ns": 266229.0,
+      "process_peak_held_bytes": 7405568.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-10",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 367500.0,
+      "total_ns": 359666.0,
+      "process_peak_held_bytes": 7528448.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-10",
+    "policy": "parallel",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 370500.0,
+      "total_ns": 366562.5,
+      "process_peak_held_bytes": 7528448.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-10",
+    "policy": "parallel",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 329000.0,
+      "total_ns": 323479.0,
+      "process_peak_held_bytes": 7462912.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-10",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 317000.0,
+      "total_ns": 324374.0,
+      "process_peak_held_bytes": 7471104.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-10",
+    "policy": "serial",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 296000.0,
+      "total_ns": 302562.5,
+      "process_peak_held_bytes": 7430144.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-10",
+    "policy": "serial",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 293500.0,
+      "total_ns": 297417.0,
+      "process_peak_held_bytes": 7413760.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-2048",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 529000.0,
+      "total_ns": 515312.0,
+      "process_peak_held_bytes": 7929856.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-2048",
+    "policy": "parallel",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 326000.0,
+      "total_ns": 320458.0,
+      "process_peak_held_bytes": 7782400.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-2048",
+    "policy": "parallel",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 369500.0,
+      "total_ns": 366688.0,
+      "process_peak_held_bytes": 7749632.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-2048",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 483500.0,
+      "total_ns": 485917.5,
+      "process_peak_held_bytes": 7864320.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-2048",
+    "policy": "serial",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 294500.0,
+      "total_ns": 298354.5,
+      "process_peak_held_bytes": 7749632.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-2048",
+    "policy": "serial",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 341500.0,
+      "total_ns": 342500.0,
+      "process_peak_held_bytes": 7733248.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-32768",
+    "policy": "parallel",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 3231000.0,
+      "total_ns": 3218687.5,
+      "process_peak_held_bytes": 13090816.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-32768",
+    "policy": "parallel",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 429500.0,
+      "total_ns": 413708.0,
+      "process_peak_held_bytes": 11476992.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-32768",
+    "policy": "parallel",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 1488000.0,
+      "total_ns": 1475625.5,
+      "process_peak_held_bytes": 11460608.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-32768",
+    "policy": "serial",
+    "engine": "production",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 3255500.0,
+      "total_ns": 3324042.0,
+      "process_peak_held_bytes": 13156352.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-32768",
+    "policy": "serial",
+    "engine": "required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 418500.0,
+      "total_ns": 422375.0,
+      "process_peak_held_bytes": 11460608.0
+    }
+  },
+  {
+    "scope": "eager",
+    "case": "setup-257-32768",
+    "policy": "serial",
+    "engine": "prefix-required-prep",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 1429500.0,
+      "total_ns": 1474333.5,
+      "process_peak_held_bytes": 11468800.0
+    }
+  }
+]

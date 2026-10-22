@@ -1,0 +1,146 @@
+{
+  "started": 1792707975.308212,
+  "binaries": {
+    "production": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-local-builder-20261022/build/production/ResourceProbe",
+        "sha256": "6982a1246c3fb3b7c2c217700ef581334a53a5ee2236adb6bf030f4e1cd4f591"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-local-builder-20261022/build/production/StreamProbe",
+        "sha256": "a05b827eb34b24b7dc7f181e4a73ff912b0b7d2d1a1974bf6db9f81e01b41c7e"
+      }
+    },
+    "ascii-prefix": {
+      "ResourceProbe": {
+        "path": "/private/tmp/swiftsci-csv-string-cost-20261022/build/ascii-prefix/ResourceProbe",
+        "sha256": "0c9e82f7c1f5649d3d328c8772b3f61d197254613a846c8d4768d7ad24a9c560"
+      },
+      "StreamProbe": {
+        "path": "/private/tmp/swiftsci-csv-string-cost-20261022/build/ascii-prefix/StreamProbe",
+        "sha256": "503651a26bd845a56fac4ab4e3f7722a3a46312b1c5afcad25272f9f96dde9d3"
+      }
+    }
+  },
+  "sources": {
+    "production": "/private/tmp/swiftsci-csv-count-only-scan-20261021",
+    "ascii-prefix": "/private/tmp/swiftsci-csv-string-cost-20261022/variants/ascii-prefix"
+  },
+  "orders": [
+    [
+      "production",
+      "ascii-prefix"
+    ],
+    [
+      "ascii-prefix",
+      "production"
+    ],
+    [
+      "ascii-prefix",
+      "production"
+    ],
+    [
+      "production",
+      "ascii-prefix"
+    ],
+    [
+      "production",
+      "ascii-prefix"
+    ],
+    [
+      "ascii-prefix",
+      "production"
+    ],
+    [
+      "ascii-prefix",
+      "production"
+    ],
+    [
+      "production",
+      "ascii-prefix"
+    ],
+    [
+      "production",
+      "ascii-prefix"
+    ],
+    [
+      "ascii-prefix",
+      "production"
+    ],
+    [
+      "ascii-prefix",
+      "production"
+    ],
+    [
+      "production",
+      "ascii-prefix"
+    ],
+    [
+      "production",
+      "ascii-prefix"
+    ],
+    [
+      "ascii-prefix",
+      "production"
+    ],
+    [
+      "ascii-prefix",
+      "production"
+    ],
+    [
+      "production",
+      "ascii-prefix"
+    ]
+  ],
+  "cases": [
+    [
+      "eager",
+      "all-string-default-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-0.json"
+    ],
+    [
+      "eager",
+      "all-string-default-nulls-90",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-default-nulls-90.json"
+    ],
+    [
+      "eager",
+      "Aotizhongxin-default",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/Aotizhongxin-default.json"
+    ],
+    [
+      "eager",
+      "all-string-none-nulls-0",
+      "/private/tmp/swiftsci-csv-number-loop-20261022/text-inputs/all-string-none-nulls-0.json"
+    ],
+    [
+      "eager",
+      "three-unicode-nulls-0",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/three-unicode-nulls-0.json"
+    ],
+    [
+      "eager",
+      "energy-default",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json"
+    ],
+    [
+      "stream",
+      "energy-default",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json"
+    ]
+  ],
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "controller_sha256": "1fe862a4228cb82c909b7f01579ff9181bead2949c9e50182b151efc8f32df99",
+  "argv0": "same executable name per scope for every engine",
+  "scope": "Native output hashes, values, types and null counts checked. Same native parallel/serial policies, native CPU scheduling and hash randomization. No builds, tests or profiling during timings."
+}
