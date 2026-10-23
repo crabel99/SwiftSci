@@ -1,0 +1,44 @@
+{
+  "branch": "codex/csv-lazy-sort-cache",
+  "current_head": "b982028c59c89f615688882ee71be19a0eccd8f2",
+  "base": "e1f5f8c30500e1511b0700bcffe10efb7ac8e88b",
+  "all_outputs_match": true,
+  "strict_eager_reads": 28,
+  "strict_stream_reads": 28,
+  "workflow_preflights": 96,
+  "measured_processes": 768,
+  "case_combinations": 24,
+  "replicates_per_label": 8,
+  "quality_passed": true,
+  "quality_flags": [],
+  "tests": {
+    "final-release": {
+      "result": "Passed",
+      "totalTestCount": 427,
+      "passedTests": 427,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-debug": {
+      "result": "Passed",
+      "totalTestCount": 427,
+      "passedTests": 427,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-asan": {
+      "result": "Passed",
+      "totalTestCount": 427,
+      "passedTests": 427,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "before_semantic_tests_passed": 3,
+  "production_promotion": false,
+  "shape_preflights": 192,
+  "shape_measured_processes": 1536,
+  "shape_quality_passed": true,
+  "shape_quality_flags": [],
+  "promotion_decision": "retain_local_trial: dense_nearly_ordered_cpu_and_peak_improve; sparse_admission_and_small_control_costs_remain"
+}
