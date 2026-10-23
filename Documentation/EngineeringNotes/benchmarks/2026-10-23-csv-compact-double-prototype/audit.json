@@ -1,0 +1,30 @@
+{
+  "all_outputs_match": true,
+  "strict_reference_reads": 14,
+  "strict_stream_reference_reads": 14,
+  "preflight_workflow_reads": 96,
+  "measured_workers": 1152,
+  "quality_flags": [],
+  "quality_passed": true,
+  "tests": {
+    "final-release": {
+      "passedTests": 399,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-debug": {
+      "passedTests": 399,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-asan": {
+      "passedTests": 399,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "source_branch": "codex/csv-compact-double-prototype",
+  "baseline_commit": "5d1f89a961106104757f2d8d0b8faba79487d100",
+  "production_promotion": false,
+  "scope": "Experimental direct compact Double CSV construction with optional-array bulk consumers, direct scalar access, and storage-preserving renaming. CPU is process user plus system time. Native CPU scheduling; AC power."
+}
