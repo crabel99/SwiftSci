@@ -1,0 +1,44 @@
+{
+  "branch": "codex/csv-monotonic-permutations",
+  "current_head": "e1f5f8c30500e1511b0700bcffe10efb7ac8e88b",
+  "base": "42f0633fd52e8e6ece961465880050ebc16db60e",
+  "all_outputs_match": true,
+  "strict_eager_reads": 28,
+  "strict_stream_reads": 28,
+  "workflow_preflights": 96,
+  "measured_processes": 768,
+  "case_combinations": 24,
+  "replicates_per_label": 8,
+  "quality_passed": true,
+  "quality_flags": [],
+  "tests": {
+    "final-release": {
+      "result": "Passed",
+      "totalTestCount": 424,
+      "passedTests": 424,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-debug": {
+      "result": "Passed",
+      "totalTestCount": 424,
+      "passedTests": 424,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-asan": {
+      "result": "Passed",
+      "totalTestCount": 424,
+      "passedTests": 424,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "before_semantic_tests_passed": 2,
+  "production_promotion": false,
+  "shape_preflights": 64,
+  "shape_measured_processes": 512,
+  "shape_quality_passed": true,
+  "shape_quality_flags": [],
+  "promotion_decision": "isolated_monotonic_path_only; nearby-swaps remain comparison controls"
+}
