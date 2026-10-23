@@ -1,0 +1,35 @@
+{
+  "all_outputs_match": true,
+  "strict_csv_reads": 14,
+  "strict_stream_reads": 14,
+  "preflight_workflows": 96,
+  "measured_workers": 768,
+  "case_combinations": 24,
+  "replicates_per_label": 8,
+  "quality_passed": true,
+  "quality_flags": [],
+  "tests": {
+    "final-release": {
+      "passedTests": 409,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-debug": {
+      "passedTests": 409,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-asan": {
+      "passedTests": 409,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "branch": "codex/csv-compact-join",
+  "prototype_base": "9c329614ad",
+  "change": "compact nullable gathering and joined-key construction",
+  "production_promotion": false,
+  "current_head": "a95ef036982e91d87dcddf50f972a64a27f20a74",
+  "red_tests": 2,
+  "green_tests": 2
+}
