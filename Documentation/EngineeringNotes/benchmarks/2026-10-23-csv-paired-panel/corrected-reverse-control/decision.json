@@ -1,0 +1,27 @@
+{
+  "validated_workers": 360,
+  "timed_reads": 34560,
+  "quality_passed": true,
+  "cpu_flags": [
+    {
+      "input": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "table_mode": "independent",
+      "comparison": "change",
+      "workers": 60,
+      "median_paired_cpu_ratio": 1.1142758320606607,
+      "median_ratio_bootstrap_95": [
+        0.9292472233648704,
+        1.2565765765765766
+      ],
+      "median_paired_elapsed_ratio": 1.0800541794807674,
+      "median_paired_mean_cpu_ratio": 1.1116337085852732,
+      "a_median_cpu_ns": 1119500.0,
+      "b_median_cpu_ns": 974000.0,
+      "cpu_review": true
+    }
+  ],
+  "promotion_allowed": false,
+  "reason": "Diagnostic module aliases and shared-process memory limits do not qualify production. Earlier native flags remain recorded.",
+  "completed_unix": 1792758604.1635919
+}

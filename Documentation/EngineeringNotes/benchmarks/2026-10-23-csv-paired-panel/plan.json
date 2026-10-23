@@ -1,0 +1,424 @@
+{
+  "source_head": "5d1f89a961106104757f2d8d0b8faba79487d100",
+  "baseline": "f9a99ce54c77909bdd6f95fadd5fa3b5d15490f2",
+  "cases": [
+    {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-0.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-0.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-0.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-0.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-90.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-90.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-90.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-90.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-0.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-0.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-0.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-0.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-90.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-90.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-90.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-90.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-0.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-0.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-0.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-0.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-90.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-90.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-90.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-90.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3328-nulls-0.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3328,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3392,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy",
+      "path": "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy",
+      "path": "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "prediction": "Shared immutable null tables keep same-source namespace and same-implementation CPU controls within 10 percent across boundary and reference reads."
+    },
+    {
+      "rank": 2,
+      "prediction": "Admitted prefix decoding reduces CPU when non-null field prefixes reject tokens, while high-null inputs remain within the existing CPU review limit."
+    },
+    {
+      "rank": 3,
+      "prediction": "Standalone candidate peak RSS stays within 5 percent plus 8 MiB of cleanup, with an identical-binary memory control passing in both directions."
+    }
+  ],
+  "criteria": {
+    "cpu": "Median worker paired ratio, candidate divided by cleanup. Review increases above 10 percent. Same-source and same-implementation controls are two-sided 10 percent. Native global hashing, one immutable shared Set, native scheduling.",
+    "memory": "Fresh standalone processes. 8 workers per label per case. Identical cleanup/twin binary, candidate actual-head binary. Native hash setup independent. Review median peak RSS above 5 percent plus 8 MiB; identical-binary control is two-sided. CPU from this stage is recorded, not a causal source-regression verdict.",
+    "validation": "Exact public API outputs, independent native types/values/null/order digests outside timing before and after each paired worker; row count on every timed read. Standalone memory capture precedes validation.",
+    "scope": "All 26 previous prospective boundary combinations, plus both policies and scopes for Aotizhongxin-default and full household-energy default tokens. Original two-token household stream retained as specialization control.",
+    "conditions": "AC power, sequential workers, no task build/test/profiler overlaps. No fixed hashing, worker caps, outlier deletion, changed tolerances, or dataset-specific production changes.",
+    "limits": "Aliases change linked code layout. Shared-process peak memory is not attribution. No production changes or promotion solely from these diagnostic modules."
+  }
+}

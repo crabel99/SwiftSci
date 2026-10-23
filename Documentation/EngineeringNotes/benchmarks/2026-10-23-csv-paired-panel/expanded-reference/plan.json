@@ -1,0 +1,133 @@
+{
+  "cases": [
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy",
+      "path": "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy",
+      "path": "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    }
+  ],
+  "source_plan_sha256": "b09207c814742fc113b0a797ff1b15e818425b6710bf0cb80c9f0a03f25f9646",
+  "build_receipt_sha256": "cdb66d34796a280432187f144b9ab816c7bb30c84d948dacb0e9fc4fc9bf3e93",
+  "controller_sha256": "cc7ce2523163ca8d7cf6acf0b423b533fdf2e632034c8e4135b4ab08ef6d32ad",
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "power": {
+    "source": "AC",
+    "settings": "Battery Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         2\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           1\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         30\n womp                 1\n networkoversleep     0\n sleep                0\n tcpkeepalive         1\n disksleep            10"
+  },
+  "started_unix": 1792758780.272039
+}

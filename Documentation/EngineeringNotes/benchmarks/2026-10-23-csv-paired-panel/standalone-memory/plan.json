@@ -1,0 +1,472 @@
+{
+  "source_plan_sha256": "b09207c814742fc113b0a797ff1b15e818425b6710bf0cb80c9f0a03f25f9646",
+  "controller_sha256": "57a2898bb6535c072cc810d3bfb5222ee83086ac57e412f0eacda94cd7703b2e",
+  "cases": [
+    {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-0.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-0.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-0.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-0.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-90.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-90.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-90.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3456-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-90.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3456,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-0.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-0.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-0.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-0.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-90.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-90.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-90.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3457-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3457-nulls-90.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3457,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-0.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-0.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-0.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-0.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-90.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-90.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-90.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3458-nulls-90",
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3458-nulls-90.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3458,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3328-nulls-0.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 3328,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 3392,
+      "blocks": 8,
+      "warmups": 2,
+      "workers": 24,
+      "group": "boundary"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "eager",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "eager",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy-default",
+      "path": "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/energy-default.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy",
+      "path": "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json",
+      "scope": "stream",
+      "policy": "parallel",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    },
+    {
+      "case": "energy",
+      "path": "/private/tmp/swiftsci-csv-cpu-profile-20261021/inputs/energy.json",
+      "scope": "stream",
+      "policy": "serial",
+      "chunk": 10000,
+      "blocks": 2,
+      "warmups": 1,
+      "workers": 8,
+      "group": "reference"
+    }
+  ],
+  "workers_per_label_case": 8,
+  "receipts": {
+    "cleanup": {
+      "module_build_receipt_sha256": "6ffda6d87597aa0849ba8a719a98289774aa8f8c6951100ea8704ff3452a594d",
+      "binaries": {
+        "ResourceProbe": {
+          "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/build/cleanup/ResourceProbe",
+          "sha256": "43ebc34c9a11644e3f836562d77b92c388a790539d385f1de97597071ec502de",
+          "first_module_import": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/cleanup",
+          "original_build_receipt_sha256": "6ffda6d87597aa0849ba8a719a98289774aa8f8c6951100ea8704ff3452a594d"
+        },
+        "StreamProbe": {
+          "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/build/cleanup/StreamProbe",
+          "sha256": "73a38c5066ed9a3b6620f2a4539a6ecc541b1383b65bbd2865aabfe7a4a89f5e",
+          "first_module_import": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/cleanup",
+          "original_build_receipt_sha256": "14dd905eed8f310473e9098c1d3de2b4c52432ff9154b21cb0fc122da5e34d7f"
+        }
+      }
+    },
+    "twin": {
+      "module_build_receipt_sha256": "6ffda6d87597aa0849ba8a719a98289774aa8f8c6951100ea8704ff3452a594d",
+      "binaries": {
+        "ResourceProbe": {
+          "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/build/cleanup/ResourceProbe",
+          "sha256": "43ebc34c9a11644e3f836562d77b92c388a790539d385f1de97597071ec502de",
+          "first_module_import": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/cleanup",
+          "original_build_receipt_sha256": "6ffda6d87597aa0849ba8a719a98289774aa8f8c6951100ea8704ff3452a594d"
+        },
+        "StreamProbe": {
+          "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/build/cleanup/StreamProbe",
+          "sha256": "73a38c5066ed9a3b6620f2a4539a6ecc541b1383b65bbd2865aabfe7a4a89f5e",
+          "first_module_import": "/private/tmp/swiftsci-csv-prefix-selection-20261022/build/cleanup",
+          "original_build_receipt_sha256": "14dd905eed8f310473e9098c1d3de2b4c52432ff9154b21cb0fc122da5e34d7f"
+        }
+      }
+    },
+    "candidate": {
+      "module_build_receipt_sha256": "9d56626fa37b0343f66ca2e6b7dfb5aacf45e6e96b59567f69af262fe5ef6c53",
+      "binaries": {
+        "ResourceProbe": {
+          "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/build/metadata/ResourceProbe",
+          "sha256": "cf72e1901006d7e2a0fbbab746cf60fac6b001d858ae239a4a9b2e13901bd1e9",
+          "first_module_import": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/build/metadata",
+          "original_build_receipt_sha256": "9d56626fa37b0343f66ca2e6b7dfb5aacf45e6e96b59567f69af262fe5ef6c53"
+        },
+        "StreamProbe": {
+          "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/build/metadata/StreamProbe",
+          "sha256": "8dfd16a6776ec159b4d04bf1f96547240550511c51c242ed326c9543009dc94d",
+          "first_module_import": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/build/metadata",
+          "original_build_receipt_sha256": "fd1c2549ae237daeddef929baf2fdd6e0444078b3ef41a70d37b813d8f242314"
+        }
+      }
+    }
+  },
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "power": {
+    "source": "AC",
+    "settings": "Battery Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         2\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           1\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         30\n womp                 1\n networkoversleep     0\n sleep                0\n tcpkeepalive         1\n disksleep            10"
+  },
+  "started_unix": 1792759465.5584562
+}

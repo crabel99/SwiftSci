@@ -1,0 +1,39 @@
+{
+  "results": [
+    {
+      "stage": "expanded-boundary",
+      "validated_workers": 624,
+      "timed_reads": 59904,
+      "warmup_reads": 14976,
+      "full_native_validation_reads": 3744,
+      "quality_passed": true,
+      "candidate_cpu_passed": true,
+      "flags": []
+    },
+    {
+      "stage": "expanded-reference",
+      "validated_workers": 80,
+      "timed_reads": 1920,
+      "warmup_reads": 960,
+      "full_native_validation_reads": 480,
+      "quality_passed": true,
+      "candidate_cpu_passed": true,
+      "flags": []
+    },
+    {
+      "stage": "standalone-memory",
+      "validated_workers": 864,
+      "quality_passed": true,
+      "candidate_memory_passed": true,
+      "flags": []
+    }
+  ],
+  "corrected_control_workers": 900,
+  "expanded_native_fingerprint_count": 704,
+  "total_new_worker_responses": 2468,
+  "all_new_summaries_recomputed": true,
+  "expanded_resource_gates_passed": true,
+  "production_changed": false,
+  "promotion_allowed": false,
+  "limits": "Aliases and compiled-client context remain diagnostic limitations. No push or PR authorization inferred. Prior warnings and the prior module-import mistake remain recorded."
+}

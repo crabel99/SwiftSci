@@ -1,5 +1,7 @@
 # Paired CSV reads and native hash-table controls
 
+Correction, 2026-10-23: A follow-up found that these diagnostic link commands could load a cached module interface ahead of the interface matching the linked reader object. The original observations remain preserved. Use [the corrected repeats and expanded qualification](../2026-10-23-csv-paired-panel/README.md) for actual-head performance conclusions. The earlier aggregate 14.5% control warning is not a corrected-build qualification result.
+
 The remaining small-read CPU warning does not reproduce when the readers share the same immutable native null-token Set. Across three paired experiments, candidate CPU differs from cleanup by at most 0.6% on the targeted cases. Separate native tables produce large differences even in same-source controls. That is evidence against treating the earlier unpaired warning as a demonstrated source regression.
 
 Production remains unchanged at `5d1f89a961106104757f2d8d0b8faba79487d100`. The baseline is cleanup commit `f9a99ce54c77909bdd6f95fadd5fa3b5d15490f2`, after removal of unused matcher preparation and before the prefix-decoder selection. These comparisons do not measure the complete branch against its earlier parent.
