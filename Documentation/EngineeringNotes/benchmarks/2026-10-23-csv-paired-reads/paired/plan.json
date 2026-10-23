@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      "policy": "parallel",
+      "id": "long-keys-64-rows-3392-nulls-0"
+    },
+    {
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      "policy": "serial",
+      "id": "long-keys-64-rows-3392-nulls-0"
+    },
+    {
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-0.json",
+      "policy": "parallel",
+      "id": "long-keys-64-rows-3456-nulls-0"
+    }
+  ],
+  "workers_per_case": 60,
+  "source_plan_sha256": "2eefb3af377cf35e12799e56492874f664f394cf85971338cef4e734f5c66c3b",
+  "build_receipt_sha256": "63f8cc22995140c98e66a3d8d63b306b4dff0c8ab1a3d64d3c768f65c5aee2ed",
+  "controller_sha256": "7764992032575128388b3970f0bd8b58371e5ae47215d47266f1dfa2f999c147",
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "power": {
+    "source": "AC",
+    "settings": "Battery Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         2\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           1\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         30\n womp                 1\n networkoversleep     0\n sleep                0\n tcpkeepalive         1\n disksleep            10"
+  },
+  "started_unix": 1792757064.442504
+}

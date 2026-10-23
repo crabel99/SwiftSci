@@ -1,0 +1,71 @@
+{
+  "validated_workers": 900,
+  "timed_reads": 86400,
+  "warmup_reads": 21600,
+  "full_native_validation_streams": 5400,
+  "unique_native_hash_fingerprints": 900,
+  "results": [
+    {
+      "stage": "paired",
+      "mode": "shared",
+      "workers": 180,
+      "quality_passed": true,
+      "flag_count": 0,
+      "flags": []
+    },
+    {
+      "stage": "table-control",
+      "mode": "independent",
+      "workers": 180,
+      "quality_passed": false,
+      "flag_count": 2,
+      "flags": [
+        {
+          "input": "long-keys-64-rows-3392-nulls-0",
+          "policy": "serial",
+          "comparison": "namespace",
+          "ratio": 0.8910258215443041
+        },
+        {
+          "input": "long-keys-64-rows-3456-nulls-0",
+          "policy": "parallel",
+          "comparison": "namespace",
+          "ratio": 1.1338041058100725
+        }
+      ]
+    },
+    {
+      "stage": "table-control",
+      "mode": "shared",
+      "workers": 180,
+      "quality_passed": true,
+      "flag_count": 0,
+      "flags": []
+    },
+    {
+      "stage": "reverse-control",
+      "mode": "independent",
+      "workers": 180,
+      "quality_passed": false,
+      "flag_count": 1,
+      "flags": [
+        {
+          "input": "long-keys-64-rows-3392-nulls-0",
+          "policy": "serial",
+          "comparison": "namespace",
+          "ratio": 0.8552643901276189
+        }
+      ]
+    },
+    {
+      "stage": "reverse-control",
+      "mode": "shared",
+      "workers": 180,
+      "quality_passed": true,
+      "flag_count": 0,
+      "flags": []
+    }
+  ],
+  "all_raw_summaries_recomputed": true,
+  "promotion_allowed": false
+}

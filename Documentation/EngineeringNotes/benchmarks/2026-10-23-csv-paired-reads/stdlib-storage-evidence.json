@@ -1,0 +1,19 @@
+{
+  "interface": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/Swift.swiftmodule/arm64e-apple-macos.swiftinterface",
+  "interface_sha256": "ccd1c05df90165f805e7de278ca3f6945f1a1544e9b8b3da0297ebfcc80f3669",
+  "toolchain": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+  "excerpts": [
+    {
+      "line": 16265,
+      "source": "@frozen @safe internal struct _NativeSet<Element> where Element : Swift::Hashable {\n  @usableFromInline\n  internal var _storage: Swift::__RawSetStorage\n  @inlinable @inline(__always) internal init() {\n    self._storage = __RawSetStorage.empty\n  }"
+    },
+    {
+      "line": 20999,
+      "source": "@frozen @_eagerMove public struct Set<Element> where Element : Swift::Hashable {\n  @usableFromInline\n  internal var _variant: Swift::Set<Element>.Swift::_Variant\n  public init(minimumCapacity: Swift::Int)\n  @inlinable internal init(_native: __owned Swift::_NativeSet<Element>) {\n    _variant = _Variant(native: _native)"
+    },
+    {
+      "line": 21857,
+      "source": "@_fixed_layout @_objc_non_lazy_realization @unsafe internal class __RawSetStorage : Swift::__SwiftNativeNSSet {\n  @usableFromInline\n  @nonobjc final internal var _count: Swift::Int\n  @usableFromInline\n  @nonobjc final internal var _capacity: Swift::Int\n  @usableFromInline"
+    }
+  ]
+}

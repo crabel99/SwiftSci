@@ -1,0 +1,55 @@
+{
+  "purpose": "Diagnose the recurring 3392-row parallel streaming CPU difference, not replace prior acceptance results.",
+  "hypotheses": [
+    {
+      "rank": 1,
+      "cause": "Independent native hash-table setup",
+      "prediction": "Paired native workers sharing one immutable token Set reduce the variation compared with independent workers."
+    },
+    {
+      "rank": 2,
+      "cause": "Module identity or generated-code layout",
+      "prediction": "An actual-versus-same-source-alias control differs while actual-versus-actual does not."
+    },
+    {
+      "rank": 3,
+      "cause": "Order, allocator, asynchronous scheduling or carry-over state",
+      "prediction": "ABBA and BAAB observations differ by position or both same-implementation labels show a warning."
+    },
+    {
+      "rank": 4,
+      "cause": "Production implementation regression",
+      "prediction": "Candidate remains over 10 percent more CPU than cleanup while both same-implementation and same-source module controls pass."
+    }
+  ],
+  "prospective_cases": [
+    {
+      "rows": 3392,
+      "nulls": 0,
+      "policy": "parallel"
+    },
+    {
+      "rows": 3392,
+      "nulls": 0,
+      "policy": "serial"
+    },
+    {
+      "rows": 3456,
+      "nulls": 0,
+      "policy": "parallel"
+    }
+  ],
+  "controls": [
+    "actual versus actual, identical adapter function",
+    "actual versus same-source CSVClone alias",
+    "actual versus cleanup CSVBaseline alias"
+  ],
+  "sampling": "Each worker constructs one immutable native Set and all options retain copies without mutation. Two warmup ABBA blocks, then eight balanced ABBA/BAAB blocks per comparison. Every timed stream checks row count. Full native output digests checked before and after timings per module. Independent native-hash workers, native scheduling. No fixed hashing. Comparison order rotates per worker.",
+  "thresholds": {
+    "cpu_relative": 0.1,
+    "memory_relative": 0.05,
+    "memory_absolute_bytes": 8388608
+  },
+  "memory_limit": "Single-process high water cannot isolate implementation peak memory. RSS and heap observations describe shared-process state only. No promotion from paired timing alone.",
+  "namespace_limit": "Recompiling snapshots under aliases changes mangled names and linked layout. Same-source alias control is mandatory. Actual candidate object remains unmodified."
+}

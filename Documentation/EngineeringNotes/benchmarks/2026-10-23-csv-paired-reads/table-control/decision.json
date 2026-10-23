@@ -1,0 +1,44 @@
+{
+  "validated_workers": 360,
+  "timed_reads": 34560,
+  "quality_passed": false,
+  "cpu_flags": [
+    {
+      "input": "long-keys-64-rows-3392-nulls-0",
+      "policy": "serial",
+      "table_mode": "independent",
+      "comparison": "namespace",
+      "workers": 60,
+      "median_paired_cpu_ratio": 0.8910258215443041,
+      "median_ratio_bootstrap_95": [
+        0.7899938488191807,
+        0.9955257270693513
+      ],
+      "median_paired_elapsed_ratio": 0.8934286264008388,
+      "median_paired_mean_cpu_ratio": 0.8885264966650139,
+      "a_median_cpu_ns": 811500.0,
+      "b_median_cpu_ns": 907500.0,
+      "cpu_review": true
+    },
+    {
+      "input": "long-keys-64-rows-3456-nulls-0",
+      "policy": "parallel",
+      "table_mode": "independent",
+      "comparison": "namespace",
+      "workers": 60,
+      "median_paired_cpu_ratio": 1.1338041058100725,
+      "median_ratio_bootstrap_95": [
+        0.9967259120673526,
+        1.2335823395301413
+      ],
+      "median_paired_elapsed_ratio": 1.1177541299835099,
+      "median_paired_mean_cpu_ratio": 1.139307604312886,
+      "a_median_cpu_ns": 1001500.0,
+      "b_median_cpu_ns": 927500.0,
+      "cpu_review": true
+    }
+  ],
+  "promotion_allowed": false,
+  "reason": "Diagnostic module aliases and shared-process memory limits do not qualify production. Earlier native flags remain recorded.",
+  "completed_unix": 1792757252.3990211
+}

@@ -1,0 +1,7 @@
+{
+  "purpose": "Reciprocal module identity control. Actual SwiftDataFrame is now the frozen cleanup object, CSVBaseline is the same-source baseline alias, CSVClone is the candidate alias.",
+  "prediction": "If module naming or code layout explains the original warning, reversing which implementation keeps its production name changes the candidate-to-baseline ratio. Shared-table same-implementation and baseline-namespace controls must pass.",
+  "sampling": "Same interleaved 60 workers per case and table mode. All three cases, native global hashing and scheduling.",
+  "ratio": "Summary normalizes candidate-to-baseline CPU for the change comparison by swapping A and B during reduction. Controls stay A divided by B.",
+  "limits": "Diagnostic evidence only. Retain earlier warnings and independent memory limitations."
+}

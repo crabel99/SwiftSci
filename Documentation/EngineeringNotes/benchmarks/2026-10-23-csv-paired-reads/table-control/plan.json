@@ -1,0 +1,60 @@
+{
+  "cases": [
+    {
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      "policy": "parallel",
+      "table_mode": "shared",
+      "id": "long-keys-64-rows-3392-nulls-0"
+    },
+    {
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      "policy": "parallel",
+      "table_mode": "independent",
+      "id": "long-keys-64-rows-3392-nulls-0"
+    },
+    {
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      "policy": "serial",
+      "table_mode": "shared",
+      "id": "long-keys-64-rows-3392-nulls-0"
+    },
+    {
+      "path": "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      "policy": "serial",
+      "table_mode": "independent",
+      "id": "long-keys-64-rows-3392-nulls-0"
+    },
+    {
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-0.json",
+      "policy": "parallel",
+      "table_mode": "shared",
+      "id": "long-keys-64-rows-3456-nulls-0"
+    },
+    {
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-boundary-inputs/long-keys-64-rows-3456-nulls-0.json",
+      "policy": "parallel",
+      "table_mode": "independent",
+      "id": "long-keys-64-rows-3456-nulls-0"
+    }
+  ],
+  "workers_per_case": 60,
+  "source_plan_sha256": "50bb828b56606c9ffcd8903fa537984e1b82a92b1e5fef04bbc0da02cb802531",
+  "build_receipt_sha256": "6c6c563a8431af0c948e5555fc96491b69d17a769608db2b2693eac491c1b3d6",
+  "controller_sha256": "bac9f9e9eda72f08d222ffa91b0f296cd1da805a78331e1dabff1f8cfbbd42ee",
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "power": {
+    "source": "AC",
+    "settings": "Battery Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         2\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           1\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             0\n hibernatefile        /var/vm/sleepimage\n displaysleep         30\n womp                 1\n networkoversleep     0\n sleep                0\n tcpkeepalive         1\n disksleep            10"
+  },
+  "started_unix": 1792757199.975117
+}
