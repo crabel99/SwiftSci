@@ -1,0 +1,46 @@
+{
+  "branch": "codex/csv-sort-buffer-allocation",
+  "current_head": "42f0633fd52e8e6ece961465880050ebc16db60e",
+  "base": "91c0ff09b7810b57cabdd953f8bc67791b1008f5",
+  "all_outputs_match": true,
+  "strict_eager_reads": 28,
+  "strict_stream_reads": 28,
+  "workflow_preflights": 96,
+  "measured_processes": 768,
+  "case_combinations": 24,
+  "replicates_per_label": 8,
+  "quality_passed": true,
+  "quality_flags": [],
+  "tests": {
+    "final-release": {
+      "result": "Passed",
+      "totalTestCount": 422,
+      "passedTests": 422,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-debug": {
+      "result": "Passed",
+      "totalTestCount": 422,
+      "passedTests": 422,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-asan": {
+      "result": "Passed",
+      "totalTestCount": 422,
+      "passedTests": 422,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "before_semantic_tests_passed": 2,
+  "production_promotion": false,
+  "capacity_diagnostic_processes": 18,
+  "shape_preflights": 64,
+  "shape_measured_processes": 512,
+  "shape_quality_passed": true,
+  "shape_quality_flags": [],
+  "traced_buffer_reuse": true,
+  "promotion_decision": "trial_only_ordered_input_cpu_regression"
+}
