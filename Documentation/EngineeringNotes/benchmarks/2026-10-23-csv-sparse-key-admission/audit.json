@@ -1,0 +1,44 @@
+{
+  "branch": "codex/csv-shared-keys-sparse-admission",
+  "current_head": "940353d441c5b2b1bcec69344629452b4ac65b7c",
+  "base": "b982028c59c89f615688882ee71be19a0eccd8f2",
+  "all_outputs_match": true,
+  "strict_eager_reads": 28,
+  "strict_stream_reads": 28,
+  "workflow_preflights": 96,
+  "measured_processes": 768,
+  "case_combinations": 24,
+  "replicates_per_label": 8,
+  "quality_passed": true,
+  "quality_flags": [],
+  "tests": {
+    "final-release": {
+      "result": "Passed",
+      "totalTestCount": 429,
+      "passedTests": 429,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-debug": {
+      "result": "Passed",
+      "totalTestCount": 429,
+      "passedTests": 429,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-asan": {
+      "result": "Passed",
+      "totalTestCount": 429,
+      "passedTests": 429,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "before_semantic_tests_passed": 2,
+  "production_promotion": false,
+  "shape_preflights": 320,
+  "shape_measured_processes": 2560,
+  "shape_quality_passed": true,
+  "shape_quality_flags": [],
+  "promotion_decision": "retain_isolated_candidate: sparse_nearly_ordered_cpu_and_peak_improve; small_control_and_full_path_cpu_costs_remain"
+}

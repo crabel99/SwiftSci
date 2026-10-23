@@ -1,0 +1,13 @@
+{
+  "current_head": "940353d441c5b2b1bcec69344629452b4ac65b7c",
+  "base": "b982028c59c89f615688882ee71be19a0eccd8f2",
+  "qualified_checkpoint": "91c0ff09b7810b57cabdd953f8bc67791b1008f5",
+  "expected_dataframe_test_functions": 429,
+  "replicates_per_label": 8,
+  "real_case_count": 24,
+  "shape_case_count": 80,
+  "source_representations": "Remove the 50% component-only bound. Shared key bytes are 8*N; prior valid tuples plus missing-row indices are 16*V+8*(N-V). Existing 1024-valid minimum and 5% sparse bypass remain unchanged.",
+  "quality_policy_unchanged": true,
+  "accepted_timing_requires_finished_validation_and_builds": true,
+  "no_push_or_pr": true
+}
