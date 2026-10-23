@@ -76,10 +76,10 @@ Measure those changes against the same complete workflows, including optional-ar
 
 - [Resource results](results.md).
 - [Audit](audit.json).
-- [Experimental patch](prototype.patch).
+- [Experimental patch](prototype.patch.gz).
 - [Experiment archive](experiments.tar.gz), containing controllers, source snapshots, input contracts, compiler module-loading receipts, test receipts and logs, the interrupted trial, and all raw measured outputs.
 - [Artifact hashes](artifact-sha256.json).
 
-Restore the recorded base, apply the patch on an isolated branch, rebuild its dependencies, and update the archived scripts' absolute roots for the machine. Every new standalone client asserts that its imported module interface matches the linked object. The baseline uses its previously qualified module and object; the experiment builds all 50 dataframe source files with the same optimized whole-module compiler flags and macOS 14 deployment target. Native binaries, caches, result bundles and large reference files are excluded.
+Restore the recorded base, decompress the patch, apply it on an isolated branch, rebuild its dependencies, and update the archived scripts' absolute roots for the machine. Every new standalone client asserts that its imported module interface matches the linked object. The baseline uses its previously qualified module and object; the experiment builds all 50 dataframe source files with the same optimized whole-module compiler flags and macOS 14 deployment target. Native binaries, caches, result bundles and large reference files are excluded.
 
 The reproducible edit recipe captures the initial implementation. The final patch is the authoritative corrected experiment. `verify.py` drives the restricted dataframe test scheme, `build.py` and `link-workflows.py` produce matched clients, `run-panel.py` performs exact preflights and the balanced panel, and `audit.py` independently recomputes summaries and control flags. Engineering records stay on `codex/engineering-notes`; source changes stay on the experimental branch. Nothing is pushed.
