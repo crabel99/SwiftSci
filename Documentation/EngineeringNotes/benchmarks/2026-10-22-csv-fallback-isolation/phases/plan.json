@@ -1,0 +1,130 @@
+{
+  "receipts": {
+    "diagnostic-cleanup": {
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/build/diagnostic-cleanup/PreparationProbe",
+      "sha256": "96538ff1a62a299b05e81a19529ca99fedd7516b4945465c21de975ed04cf9b9",
+      "receipt_sha256": "519d9cf08d96301190307a7e55c42ec5a570c52cdb89f5ca1b2ccbd9cb05272a"
+    },
+    "diagnostic-selected": {
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/build/diagnostic-selected/PreparationProbe",
+      "sha256": "9ba7a698f1bfe52b3fc6438b59455a55d49eeb5c0abd6393d6a32997f233c7c6",
+      "receipt_sha256": "7700662d951a63a2189086839a1a12ed01a7554bc92395fdb4c4bfa843c97960"
+    },
+    "diagnostic-preflight": {
+      "path": "/private/tmp/swiftsci-csv-fallback-isolation-20261022/build/diagnostic-preflight/PreparationProbe",
+      "sha256": "93331c1be0a0aa1ba171d32e6819a6b1ed931f7e52bcaef75ee906bb56634cc0",
+      "receipt_sha256": "0b3ffeeb36b7b1300d020433af8868154e5738686ce34e1e4a176d1eccc6ca39"
+    }
+  },
+  "cases": [
+    [
+      "long-8",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      8
+    ],
+    [
+      "long-3328",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      3328
+    ],
+    [
+      "long-3392",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      3392
+    ],
+    [
+      "long-3393",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      3393
+    ],
+    [
+      "long-3394",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      3394
+    ],
+    [
+      "long-3456",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      3456
+    ],
+    [
+      "long-3457",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      3457
+    ],
+    [
+      "long-3458",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      3458
+    ],
+    [
+      "long-13572",
+      "/private/tmp/swiftsci-csv-prefix-selection-20261022/crossover-inputs/long-keys-64-rows-3392-nulls-0.json",
+      13572
+    ],
+    [
+      "default-8",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      8
+    ],
+    [
+      "default-38",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      38
+    ],
+    [
+      "default-48",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      48
+    ],
+    [
+      "default-4096",
+      "/private/tmp/swiftsci-csv-string-cost-20261022/inputs/Aotizhongxin-default.json",
+      4096
+    ]
+  ],
+  "orders": [
+    [
+      "diagnostic-cleanup",
+      "diagnostic-selected",
+      "diagnostic-preflight"
+    ],
+    [
+      "diagnostic-selected",
+      "diagnostic-preflight",
+      "diagnostic-cleanup"
+    ],
+    [
+      "diagnostic-preflight",
+      "diagnostic-cleanup",
+      "diagnostic-selected"
+    ],
+    [
+      "diagnostic-preflight",
+      "diagnostic-selected",
+      "diagnostic-cleanup"
+    ],
+    [
+      "diagnostic-cleanup",
+      "diagnostic-preflight",
+      "diagnostic-selected"
+    ],
+    [
+      "diagnostic-selected",
+      "diagnostic-cleanup",
+      "diagnostic-preflight"
+    ]
+  ],
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "host": "Cals-MacBook-Pro-2.local",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "chip": "Apple M4 Max",
+    "memory_bytes": "137438953472",
+    "os_build": "26A434",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode": "Xcode 27.0\nBuild version 27A266a"
+  },
+  "scope": "Separate phases, native hash randomization. Constructor/factory10000repeatsperworker. Hash100fullvalue-arrayloopsperworker; native output SHA256 checked. Phases are diagnostic, not additive portions of a public CSV read. No production source changes."
+}

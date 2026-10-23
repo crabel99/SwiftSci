@@ -1,0 +1,35 @@
+{
+  "passed": false,
+  "flags": [
+    {
+      "control": {
+        "case": "long-keys-64-rows-3456-nulls-0",
+        "scope": "stream",
+        "policy": "parallel",
+        "engine": "twin",
+        "workers": 120,
+        "medians": {
+          "total_cpu_ns": 1146500.0,
+          "total_ns": 670625.0,
+          "peak_after_bytes": 8060928.0
+        },
+        "mean_cpu_ns": 1195525
+      },
+      "reference": {
+        "case": "long-keys-64-rows-3456-nulls-0",
+        "scope": "stream",
+        "policy": "parallel",
+        "engine": "cleanup",
+        "workers": 120,
+        "medians": {
+          "total_cpu_ns": 1025500.0,
+          "total_ns": 627249.5,
+          "peak_after_bytes": 8060928.0
+        },
+        "mean_cpu_ns": 1160891.6666666667
+      },
+      "reason": "Identical-binary CPU deviation exceeds10percent in either direction"
+    }
+  ],
+  "scope": "Additional two-sided A/A quality gate. Keeps every original directional review flag. Does not waive candidate limits or treat fixed hashing as production acceptance."
+}

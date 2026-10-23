@@ -1,0 +1,50 @@
+[
+  {
+    "scope": "stream",
+    "case": "long-keys-64-rows-3328-nulls-0",
+    "policy": "serial",
+    "engine": "cleanup",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 1539500.0,
+      "total_ns": 1563687.5,
+      "peak_after_bytes": 7979008.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "long-keys-64-rows-3328-nulls-0",
+    "policy": "serial",
+    "engine": "cleanup-twin",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 1927500.0,
+      "total_ns": 1966833.0,
+      "peak_after_bytes": 7995392.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "long-keys-64-rows-3392-nulls-0",
+    "policy": "parallel",
+    "engine": "cleanup",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 1945000.0,
+      "total_ns": 1192687.5,
+      "peak_after_bytes": 8339456.0
+    }
+  },
+  {
+    "scope": "stream",
+    "case": "long-keys-64-rows-3392-nulls-0",
+    "policy": "parallel",
+    "engine": "cleanup-twin",
+    "samples": 12,
+    "medians": {
+      "total_cpu_ns": 2319000.0,
+      "total_ns": 1386979.0,
+      "peak_after_bytes": 8306688.0
+    }
+  }
+]

@@ -1,0 +1,109 @@
+{
+  "reason": "Earlier focus.py tested only the last engine for its CLI verdict. Raw per-engine review flags were correct. This audit checks every flag before interpretation.",
+  "stages": [
+    {
+      "stage": "aa-native-1",
+      "review_passed": false,
+      "flags": 1,
+      "flagged_engines": [
+        "cleanup-twin"
+      ]
+    },
+    {
+      "stage": "aa-native-2",
+      "review_passed": false,
+      "flags": 1,
+      "flagged_engines": [
+        "cleanup-twin"
+      ]
+    },
+    {
+      "stage": "aa-native-3",
+      "review_passed": false,
+      "flags": 2,
+      "flagged_engines": [
+        "cleanup-twin"
+      ]
+    },
+    {
+      "stage": "aa-native-4",
+      "review_passed": true,
+      "flags": 0,
+      "flagged_engines": []
+    },
+    {
+      "stage": "fixed-aa-1",
+      "review_passed": true,
+      "flags": 0,
+      "flagged_engines": []
+    },
+    {
+      "stage": "fixed-aa-2",
+      "review_passed": true,
+      "flags": 0,
+      "flagged_engines": []
+    },
+    {
+      "stage": "fixed-ab-1",
+      "review_passed": true,
+      "flags": 0,
+      "flagged_engines": []
+    },
+    {
+      "stage": "fixed-ab-2",
+      "review_passed": false,
+      "flags": 1,
+      "flagged_engines": [
+        "production"
+      ]
+    },
+    {
+      "stage": "fixed-ab-3",
+      "review_passed": true,
+      "flags": 0,
+      "flagged_engines": []
+    },
+    {
+      "stage": "fixed-ab-4",
+      "review_passed": true,
+      "flags": 0,
+      "flagged_engines": []
+    },
+    {
+      "stage": "native-1",
+      "review_passed": true,
+      "flags": 0,
+      "flagged_engines": []
+    },
+    {
+      "stage": "native-2",
+      "review_passed": false,
+      "flags": 1,
+      "flagged_engines": [
+        "production"
+      ]
+    },
+    {
+      "stage": "native-3",
+      "review_passed": false,
+      "flags": 2,
+      "flagged_engines": [
+        "production"
+      ]
+    },
+    {
+      "stage": "native-4",
+      "review_passed": true,
+      "flags": 0,
+      "flagged_engines": []
+    },
+    {
+      "stage": "native-calibration-128",
+      "review_passed": false,
+      "flags": 1,
+      "flagged_engines": [
+        "production"
+      ]
+    }
+  ]
+}

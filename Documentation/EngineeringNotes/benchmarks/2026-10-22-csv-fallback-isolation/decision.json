@@ -1,0 +1,50 @@
+{
+  "commit": "5d1f89a961106104757f2d8d0b8faba79487d100",
+  "branch": "codex/csv-prepared-string-membership",
+  "parent": "167d9a4e6f8cb923342dea3236721c8722015bf3",
+  "comparison_parent": "c906c3fbbb0baf1357438a7079921a6448e0c9e5",
+  "cleanup": "f9a99ce54c77909bdd6f95fadd5fa3b5d15490f2",
+  "source_clean": true,
+  "semantic_tests": {
+    "Release": 394,
+    "Debug": 394,
+    "AddressSanitizer": 394
+  },
+  "standard_responses": 190,
+  "worker_counts": {
+    "aa-native-1": 48,
+    "aa-native-2": 48,
+    "aa-native-3": 48,
+    "aa-native-4": 48,
+    "acceptance": 608,
+    "fixed-aa-1": 48,
+    "fixed-aa-2": 48,
+    "fixed-ab-1": 48,
+    "fixed-ab-2": 48,
+    "fixed-ab-3": 48,
+    "fixed-ab-4": 48,
+    "interleaved-120": 2400,
+    "long-key-controls": 256,
+    "metadata-boundary-correctness": 480,
+    "metadata-calibration": 9360,
+    "mode-controls": 544,
+    "native-1": 48,
+    "native-2": 48,
+    "native-3": 48,
+    "native-4": 48,
+    "native-calibration-128": 1024,
+    "phases": 540,
+    "text-controls": 1024
+  },
+  "review_flags": {
+    "metadata-calibration": 3,
+    "acceptance": 0,
+    "mode-controls": 0,
+    "text-controls": 0,
+    "long-key-controls": 0
+  },
+  "measurement_quality_passed": false,
+  "promotion_allowed": false,
+  "decision": "Metadata preflight is a locally committed, semantically verified preparation improvement. Broad reference matrices pass. Two calibrated candidate CPU flags and one identical-binary CPU flag remain; the two-sided quality gate fails. Historical flags stay; no thresholds relaxed and no production claim based on fixed hashing.",
+  "next_step": "Pair public reads within one process using the same native null-token Set, with identical-binary and namespace/code-generation controls. Preserve native hashing and scheduling. Use the recurring3392-row parallel stream case to separate implementation cost from per-worker hash setup and runtime variation."
+}

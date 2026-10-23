@@ -1,0 +1,120 @@
+[
+  {
+    "label": "metadata-unicode",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-unicode.py"
+    ],
+    "start": 1792714976.7827451,
+    "exit_code": 0,
+    "elapsed_seconds": 0.782585859298706
+  },
+  {
+    "label": "metadata-boundary-correctness",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-correctness.py"
+    ],
+    "start": 1792714977.5656471,
+    "exit_code": 0,
+    "elapsed_seconds": 4.728182792663574
+  },
+  {
+    "label": "metadata-calibration",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-fallback-isolation-20261022/metadata-calibration.py"
+    ],
+    "start": 1792714982.294174,
+    "exit_code": 0,
+    "elapsed_seconds": 219.4678499698639
+  },
+  {
+    "label": "standardized-prepare",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "prepare",
+      "--profile",
+      "tabular-smoke"
+    ],
+    "start": 1792715201.762919,
+    "exit_code": 0,
+    "elapsed_seconds": 0.07848906517028809
+  },
+  {
+    "label": "standardized-run",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "run",
+      "--profile",
+      "tabular-smoke",
+      "--mode",
+      "production-default",
+      "--engines",
+      "swiftsci,pandas",
+      "--swift-worker",
+      "/private/tmp/swiftsci-csv-fallback-isolation-20261022/standard-worker/SwiftSciBenchmarkWorker",
+      "--python",
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "--output",
+      "/private/tmp/swiftsci-csv-fallback-isolation-20261022/standardized"
+    ],
+    "start": 1792715201.8417778,
+    "exit_code": 0,
+    "elapsed_seconds": 91.92496824264526
+  },
+  {
+    "label": "standardized-audit",
+    "command": [
+      "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "Benchmarks/Tools/bench.py",
+      "audit",
+      "/private/tmp/swiftsci-csv-fallback-isolation-20261022/standardized"
+    ],
+    "start": 1792715293.7672791,
+    "exit_code": 0,
+    "elapsed_seconds": 0.1300339698791504
+  },
+  {
+    "label": "acceptance",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-fallback-isolation-20261022/run-acceptance.py"
+    ],
+    "start": 1792715293.8977542,
+    "exit_code": 0,
+    "elapsed_seconds": 212.053053855896
+  },
+  {
+    "label": "mode-controls",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-fallback-isolation-20261022/run-mode-controls.py"
+    ],
+    "start": 1792715505.951089,
+    "exit_code": 0,
+    "elapsed_seconds": 13.984630107879639
+  },
+  {
+    "label": "text-controls",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-fallback-isolation-20261022/run-text-controls.py"
+    ],
+    "start": 1792715519.9361868,
+    "exit_code": 0,
+    "elapsed_seconds": 21.88746428489685
+  },
+  {
+    "label": "long-key-controls",
+    "command": [
+      "python3",
+      "/private/tmp/swiftsci-csv-fallback-isolation-20261022/run-long-key-controls.py"
+    ],
+    "start": 1792715541.823927,
+    "exit_code": 0,
+    "elapsed_seconds": 13.42704701423645
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "candidate": {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "scope": "stream",
+      "policy": "parallel",
+      "engine": "twin",
+      "workers": 120,
+      "medians": {
+        "total_cpu_ns": 1146500.0,
+        "total_ns": 670625.0,
+        "peak_after_bytes": 8060928.0
+      },
+      "mean_cpu_ns": 1195525
+    },
+    "parent": {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "scope": "stream",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "workers": 120,
+      "medians": {
+        "total_cpu_ns": 1025500.0,
+        "total_ns": 627249.5,
+        "peak_after_bytes": 8060928.0
+      },
+      "mean_cpu_ns": 1160891.6666666667
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "scope": "stream",
+      "policy": "parallel",
+      "engine": "metadata",
+      "workers": 120,
+      "medians": {
+        "total_cpu_ns": 1189000.0,
+        "total_ns": 699521.0,
+        "peak_after_bytes": 7913472.0
+      },
+      "mean_cpu_ns": 1231383.3333333333
+    },
+    "parent": {
+      "case": "long-keys-64-rows-3456-nulls-0",
+      "scope": "stream",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "workers": 120,
+      "medians": {
+        "total_cpu_ns": 1025500.0,
+        "total_ns": 627249.5,
+        "peak_after_bytes": 8060928.0
+      },
+      "mean_cpu_ns": 1160891.6666666667
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "scope": "stream",
+      "policy": "parallel",
+      "engine": "metadata",
+      "workers": 120,
+      "medians": {
+        "total_cpu_ns": 1267500.0,
+        "total_ns": 761063.0,
+        "peak_after_bytes": 7913472.0
+      },
+      "mean_cpu_ns": 1336841.6666666667
+    },
+    "parent": {
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "scope": "stream",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "workers": 120,
+      "medians": {
+        "total_cpu_ns": 999000.0,
+        "total_ns": 636729.5,
+        "peak_after_bytes": 8044544.0
+      },
+      "mean_cpu_ns": 1098391.6666666667
+    },
+    "reason": "CPU review limit"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 988000.0,
+        "total_ns": 1003729.5,
+        "peak_after_bytes": 7888896.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3328-nulls-0",
+      "policy": "serial",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 855500.0,
+        "total_ns": 874500.0,
+        "peak_after_bytes": 7946240.0
+      }
+    },
+    "reason": "CPU review limit"
+  },
+  {
+    "candidate": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "production",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 1182500.0,
+        "total_ns": 701666.5,
+        "peak_after_bytes": 8028160.0
+      }
+    },
+    "parent": {
+      "scope": "stream",
+      "case": "long-keys-64-rows-3392-nulls-0",
+      "policy": "parallel",
+      "engine": "cleanup",
+      "samples": 12,
+      "medians": {
+        "total_cpu_ns": 884000.0,
+        "total_ns": 556771.0,
+        "peak_after_bytes": 8077312.0
+      }
+    },
+    "reason": "CPU review limit"
+  }
+]

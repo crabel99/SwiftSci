@@ -1,0 +1,27 @@
+{
+  "loop": "focus.py",
+  "source_head": "167d9a4e6f8cb923342dea3236721c8722015bf3",
+  "observed_native_reproduction": "2 of 4 initial runs; each48validatedworkers",
+  "hypotheses": [
+    {
+      "rank": 1,
+      "cause": "Short-call runtime/scheduler variation",
+      "prediction": "Identical-binary A/A can cross the same review limit"
+    },
+    {
+      "rank": 2,
+      "cause": "String hash randomization",
+      "prediction": "Diagnostic deterministic hashing reduces spread; not production acceptance"
+    },
+    {
+      "rank": 3,
+      "cause": "Unamortized constructor work",
+      "prediction": "Separate constructor CPU approaches the whole-read delta, and skipping preparation removes it"
+    },
+    {
+      "rank": 4,
+      "cause": "Compiler reshaping of hashed fallback",
+      "prediction": "Retaining enum shape but skipping construction still regresses; normalized fallback instructions differ"
+    }
+  ]
+}
