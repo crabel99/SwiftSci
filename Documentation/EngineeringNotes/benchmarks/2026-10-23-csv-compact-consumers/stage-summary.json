@@ -1,0 +1,107 @@
+[
+  {
+    "flow": "materialize",
+    "engine": "original",
+    "read_ms": 226.168,
+    "operations_ms": 0.0315,
+    "release_ms": 15.8515
+  },
+  {
+    "flow": "materialize",
+    "engine": "prior",
+    "read_ms": 234.721,
+    "operations_ms": 1119.2315,
+    "release_ms": 16.6695
+  },
+  {
+    "flow": "materialize",
+    "engine": "current",
+    "read_ms": 235.315,
+    "operations_ms": 35.009,
+    "release_ms": 15.653
+  },
+  {
+    "flow": "matrix",
+    "engine": "original",
+    "read_ms": 217.757,
+    "operations_ms": 16.0665,
+    "release_ms": 15.465
+  },
+  {
+    "flow": "matrix",
+    "engine": "prior",
+    "read_ms": 230.586,
+    "operations_ms": 50.0745,
+    "release_ms": 15.3865
+  },
+  {
+    "flow": "matrix",
+    "engine": "current",
+    "read_ms": 229.096,
+    "operations_ms": 21.9135,
+    "release_ms": 15.426
+  },
+  {
+    "flow": "batch",
+    "engine": "original",
+    "read_ms": 219.373,
+    "operations_ms": 13.837,
+    "release_ms": 15.0245
+  },
+  {
+    "flow": "batch",
+    "engine": "prior",
+    "read_ms": 233.9905,
+    "operations_ms": 47.6925,
+    "release_ms": 15.4515
+  },
+  {
+    "flow": "batch",
+    "engine": "current",
+    "read_ms": 228.0075,
+    "operations_ms": 0.032,
+    "release_ms": 15.2385
+  },
+  {
+    "flow": "lag-matrix",
+    "engine": "original",
+    "read_ms": 224.8135,
+    "operations_ms": 156.6865,
+    "release_ms": 15.99
+  },
+  {
+    "flow": "lag-matrix",
+    "engine": "prior",
+    "read_ms": 233.489,
+    "operations_ms": 182.8885,
+    "release_ms": 15.502
+  },
+  {
+    "flow": "lag-matrix",
+    "engine": "current",
+    "read_ms": 230.749,
+    "operations_ms": 155.5965,
+    "release_ms": 15.4845
+  },
+  {
+    "flow": "join-matrix",
+    "engine": "original",
+    "read_ms": 219.545,
+    "operations_ms": 475.7105,
+    "release_ms": 15.4725
+  },
+  {
+    "flow": "join-matrix",
+    "engine": "prior",
+    "read_ms": 237.1495,
+    "operations_ms": 1591.6595,
+    "release_ms": 16.455
+  },
+  {
+    "flow": "join-matrix",
+    "engine": "current",
+    "read_ms": 229.7925,
+    "operations_ms": 1578.791,
+    "release_ms": 14.8725
+  }
+]

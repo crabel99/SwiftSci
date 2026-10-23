@@ -1,0 +1,32 @@
+{
+  "all_outputs_match": true,
+  "strict_csv_reads": 14,
+  "strict_stream_reads": 14,
+  "preflight_workflows": 160,
+  "measured_workers": 1280,
+  "case_combinations": 40,
+  "replicates_per_label": 8,
+  "quality_passed": true,
+  "quality_flags": [],
+  "tests": {
+    "final-release": {
+      "passedTests": 403,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-debug": {
+      "passedTests": 403,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-asan": {
+      "passedTests": 403,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "branch": "codex/csv-compact-consumers",
+  "prototype_base": "6af4b8f071443779964ce77ac0856c48127657c6",
+  "inline_fix": "764c01bc6d",
+  "production_promotion": false
+}
