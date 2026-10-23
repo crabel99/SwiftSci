@@ -1,0 +1,35 @@
+{
+  "all_outputs_match": true,
+  "strict_csv_reads": 28,
+  "strict_stream_reads": 28,
+  "preflight_workflows": 64,
+  "measured_workers": 512,
+  "case_combinations": 16,
+  "replicates_per_label": 8,
+  "quality_passed": true,
+  "quality_flags": [],
+  "tests": {
+    "final-release": {
+      "passedTests": 413,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-debug": {
+      "passedTests": 413,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-asan": {
+      "passedTests": 413,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "branch": "codex/csv-double-storage-choice",
+  "prototype_base": "a95ef03698",
+  "change": "explicit optional/compact Double storage selected per CSV column",
+  "production_promotion": false,
+  "current_head": "2c18d9833a7567c8b2ef6480f4a2467302d7d453",
+  "red_tests": 1,
+  "green_tests": 1
+}
