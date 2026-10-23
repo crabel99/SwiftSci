@@ -1,0 +1,1150 @@
+{
+  "accepted_timing": false,
+  "source_changed": false,
+  "lifecycle_runs": 7,
+  "native_snapshots": 36,
+  "profiles": [
+    {
+      "run": "00-actual-serial-energy-common",
+      "columns": [
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Date",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Time",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_active_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_reactive_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Voltage",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_intensity",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_1",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_2",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_3",
+          "payload_bytes": 33204144
+        }
+      ],
+      "logical_payload_bytes": 298837296,
+      "capacity_bytes": 298893024,
+      "excess_capacity_bytes": 55728,
+      "native": [
+        {
+          "stage": "baseline",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         2737K",
+            "Physical footprint (peak):  2737K"
+          ],
+          "large_allocation_summary": []
+        },
+        {
+          "stage": "held",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         291.5M",
+            "Physical footprint (peak):  291.5M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large                     285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        },
+        {
+          "stage": "released",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         292.1M",
+            "Physical footprint (peak):  292.1M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large (empty)             285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        },
+        {
+          "stage": "pressure_relief",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         292.1M",
+            "Physical footprint (peak):  292.1M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large (empty)             285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "heap_bytes": 95184,
+          "peak_bytes": 6832128,
+          "rss_bytes": 6832128,
+          "stage": "baseline"
+        },
+        {
+          "heap_bytes": 299109696,
+          "peak_bytes": 444579840,
+          "rss_bytes": 312082432,
+          "stage": "held"
+        },
+        {
+          "heap_bytes": 232592,
+          "peak_bytes": 444579840,
+          "rss_bytes": 312819712,
+          "stage": "released"
+        },
+        {
+          "allocator_reported_relieved_bytes": 0,
+          "heap_bytes": 230848,
+          "peak_bytes": 444579840,
+          "rss_bytes": 312868864,
+          "stage": "pressure_relief"
+        }
+      ]
+    },
+    {
+      "run": "01-diagnostic-serial-energy-common",
+      "columns": [
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Date",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Time",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_active_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_reactive_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Voltage",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_intensity",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_1",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_2",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_3",
+          "payload_bytes": 33204144
+        }
+      ],
+      "logical_payload_bytes": 298837296,
+      "capacity_bytes": 298893024,
+      "excess_capacity_bytes": 55728,
+      "native": [
+        {
+          "stage": "baseline",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         2753K",
+            "Physical footprint (peak):  2753K"
+          ],
+          "large_allocation_summary": []
+        },
+        {
+          "stage": "mapped_output",
+          "input_mapping_regions": [
+            "mapped file                 110000000-117ed0000    [126.8M 126.8M     0K     0K] r--/rwx SM=COW          /private/tmp/swiftsci-csv-reference-20261021/235/household_power_consumption.txt"
+          ],
+          "footprint_lines": [
+            "Physical footprint:         291.1M",
+            "Physical footprint (peak):  291.1M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large                     285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        },
+        {
+          "stage": "held",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         291.5M",
+            "Physical footprint (peak):  291.5M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large                     285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        },
+        {
+          "stage": "released",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         292.1M",
+            "Physical footprint (peak):  292.1M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large (empty)             285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        },
+        {
+          "stage": "pressure_relief",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         292.1M",
+            "Physical footprint (peak):  292.1M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large (empty)             285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "heap_bytes": 95216,
+          "peak_bytes": 6815744,
+          "rss_bytes": 6815744,
+          "stage": "baseline"
+        },
+        {
+          "stage": "mapped_output"
+        },
+        {
+          "heap_bytes": 299109824,
+          "peak_bytes": 444579840,
+          "rss_bytes": 312082432,
+          "stage": "held"
+        },
+        {
+          "heap_bytes": 232464,
+          "peak_bytes": 444579840,
+          "rss_bytes": 312836096,
+          "stage": "released"
+        },
+        {
+          "allocator_reported_relieved_bytes": 0,
+          "heap_bytes": 230720,
+          "peak_bytes": 444579840,
+          "rss_bytes": 312868864,
+          "stage": "pressure_relief"
+        }
+      ]
+    },
+    {
+      "run": "02-actual-parallel-energy-common",
+      "columns": [
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Date",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Time",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_active_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_reactive_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Voltage",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_intensity",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_1",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_2",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_3",
+          "payload_bytes": 33204144
+        }
+      ],
+      "logical_payload_bytes": 298837296,
+      "capacity_bytes": 298893024,
+      "excess_capacity_bytes": 55728,
+      "native": [
+        {
+          "stage": "baseline",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         2689K",
+            "Physical footprint (peak):  2689K"
+          ],
+          "large_allocation_summary": []
+        },
+        {
+          "stage": "held",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         291.7M",
+            "Physical footprint (peak):  291.7M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large                     285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        },
+        {
+          "stage": "released",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         292.4M",
+            "Physical footprint (peak):  292.4M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large (empty)             285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        },
+        {
+          "stage": "pressure_relief",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         292.4M",
+            "Physical footprint (peak):  292.4M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large (empty)             285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "heap_bytes": 95184,
+          "peak_bytes": 6832128,
+          "rss_bytes": 6832128,
+          "stage": "baseline"
+        },
+        {
+          "heap_bytes": 299109728,
+          "peak_bytes": 444891136,
+          "rss_bytes": 312410112,
+          "stage": "held"
+        },
+        {
+          "heap_bytes": 232368,
+          "peak_bytes": 444891136,
+          "rss_bytes": 313180160,
+          "stage": "released"
+        },
+        {
+          "allocator_reported_relieved_bytes": 0,
+          "heap_bytes": 230624,
+          "peak_bytes": 444891136,
+          "rss_bytes": 313212928,
+          "stage": "pressure_relief"
+        }
+      ]
+    },
+    {
+      "run": "03-diagnostic-parallel-energy-common",
+      "columns": [
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Date",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Time",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_active_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_reactive_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Voltage",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_intensity",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_1",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_2",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_3",
+          "payload_bytes": 33204144
+        }
+      ],
+      "logical_payload_bytes": 298837296,
+      "capacity_bytes": 298893024,
+      "excess_capacity_bytes": 55728,
+      "native": [
+        {
+          "stage": "baseline",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         2785K",
+            "Physical footprint (peak):  2785K"
+          ],
+          "large_allocation_summary": []
+        },
+        {
+          "stage": "mapped_output",
+          "input_mapping_regions": [
+            "mapped file                 114000000-11bed0000    [126.8M 126.8M     0K     0K] r--/rwx SM=COW          /private/tmp/swiftsci-csv-reference-20261021/235/household_power_consumption.txt"
+          ],
+          "footprint_lines": [
+            "Physical footprint:         291.5M",
+            "Physical footprint (peak):  291.5M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large                     285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        },
+        {
+          "stage": "held",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         291.9M",
+            "Physical footprint (peak):  291.9M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large                     285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        },
+        {
+          "stage": "released",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         292.6M",
+            "Physical footprint (peak):  292.6M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large (empty)             285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        },
+        {
+          "stage": "pressure_relief",
+          "input_mapping_regions": [],
+          "footprint_lines": [
+            "Physical footprint:         292.4M",
+            "Physical footprint (peak):  292.6M"
+          ],
+          "large_allocation_summary": [
+            "Malloc Large (empty)             285.8M   285.0M   285.0M       0K       0K       0K       0K        9         see MALLOC ZONE table below"
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "heap_bytes": 95216,
+          "peak_bytes": 6815744,
+          "rss_bytes": 6815744,
+          "stage": "baseline"
+        },
+        {
+          "stage": "mapped_output"
+        },
+        {
+          "heap_bytes": 299109856,
+          "peak_bytes": 445054976,
+          "rss_bytes": 312557568,
+          "stage": "held"
+        },
+        {
+          "heap_bytes": 232496,
+          "peak_bytes": 445054976,
+          "rss_bytes": 313327616,
+          "stage": "released"
+        },
+        {
+          "allocator_reported_relieved_bytes": 0,
+          "heap_bytes": 230752,
+          "peak_bytes": 445054976,
+          "rss_bytes": 313229312,
+          "stage": "pressure_relief"
+        }
+      ]
+    },
+    {
+      "run": "04-actual-serial-Aotizhongxin-default",
+      "columns": [
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "No",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "year",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "month",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "day",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "hour",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "PM2.5",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "PM10",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "SO2",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "NO2",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "CO",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "O3",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "TEMP",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "PRES",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "DEWP",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "RAIN",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "wd",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "WSPM",
+          "payload_bytes": 561024
+        },
+        {
+          "capacity": 35838,
+          "capacity_bytes": 573408,
+          "count": 35064,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "station",
+          "payload_bytes": 561024
+        }
+      ],
+      "logical_payload_bytes": 10098432,
+      "capacity_bytes": 10321344,
+      "excess_capacity_bytes": 222912,
+      "native": [],
+      "stages": [
+        {
+          "heap_bytes": 96416,
+          "peak_bytes": 6832128,
+          "rss_bytes": 6832128,
+          "stage": "baseline"
+        },
+        {
+          "heap_bytes": 10541008,
+          "peak_bytes": 26050560,
+          "rss_bytes": 23199744,
+          "stage": "held"
+        },
+        {
+          "heap_bytes": 246912,
+          "peak_bytes": 26050560,
+          "rss_bytes": 24035328,
+          "stage": "released"
+        },
+        {
+          "allocator_reported_relieved_bytes": 0,
+          "heap_bytes": 243024,
+          "peak_bytes": 26050560,
+          "rss_bytes": 24084480,
+          "stage": "pressure_relief"
+        }
+      ]
+    },
+    {
+      "run": "05-actual-serial-energy-common",
+      "columns": [
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Date",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Time",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_active_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_reactive_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Voltage",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_intensity",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_1",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_2",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_3",
+          "payload_bytes": 33204144
+        }
+      ],
+      "logical_payload_bytes": 298837296,
+      "capacity_bytes": 298893024,
+      "excess_capacity_bytes": 55728,
+      "native": [],
+      "stages": [
+        {
+          "heap_bytes": 95184,
+          "peak_bytes": 6832128,
+          "rss_bytes": 6832128,
+          "stage": "baseline"
+        },
+        {
+          "heap_bytes": 299109664,
+          "peak_bytes": 444530688,
+          "rss_bytes": 311558144,
+          "stage": "held"
+        },
+        {
+          "heap_bytes": 232560,
+          "peak_bytes": 444530688,
+          "rss_bytes": 312328192,
+          "stage": "released"
+        },
+        {
+          "allocator_reported_relieved_bytes": 0,
+          "heap_bytes": 230816,
+          "peak_bytes": 444530688,
+          "rss_bytes": 312377344,
+          "stage": "pressure_relief"
+        }
+      ]
+    },
+    {
+      "run": "06-actual-parallel-energy-common",
+      "columns": [
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Date",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 16,
+          "element_stride": 16,
+          "name": "Time",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_active_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_reactive_power",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Voltage",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Global_intensity",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_1",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_2",
+          "payload_bytes": 33204144
+        },
+        {
+          "capacity": 2075646,
+          "capacity_bytes": 33210336,
+          "count": 2075259,
+          "element_size": 9,
+          "element_stride": 16,
+          "name": "Sub_metering_3",
+          "payload_bytes": 33204144
+        }
+      ],
+      "logical_payload_bytes": 298837296,
+      "capacity_bytes": 298893024,
+      "excess_capacity_bytes": 55728,
+      "native": [],
+      "stages": [
+        {
+          "heap_bytes": 95184,
+          "peak_bytes": 6832128,
+          "rss_bytes": 6832128,
+          "stage": "baseline"
+        },
+        {
+          "heap_bytes": 299109696,
+          "peak_bytes": 445005824,
+          "rss_bytes": 312049664,
+          "stage": "held"
+        },
+        {
+          "heap_bytes": 232336,
+          "peak_bytes": 445005824,
+          "rss_bytes": 312950784,
+          "stage": "released"
+        },
+        {
+          "allocator_reported_relieved_bytes": 0,
+          "heap_bytes": 230592,
+          "peak_bytes": 445005824,
+          "rss_bytes": 312983552,
+          "stage": "pressure_relief"
+        }
+      ]
+    }
+  ],
+  "repeated_lifetimes": [
+    {
+      "policy": "serial",
+      "total_reads": 8,
+      "warmup_reads": 2,
+      "recorded_reads": 6,
+      "heap_after_release_bytes": [
+        118000,
+        118944,
+        119840,
+        120752,
+        121648,
+        122576
+      ],
+      "max_peak_bytes": 443613184
+    },
+    {
+      "policy": "parallel",
+      "total_reads": 8,
+      "warmup_reads": 2,
+      "recorded_reads": 6,
+      "heap_after_release_bytes": [
+        118112,
+        119056,
+        119952,
+        120864,
+        121760,
+        122688
+      ],
+      "max_peak_bytes": 444465152
+    }
+  ],
+  "illustrative_not_measured": {
+    "rows": 2075259,
+    "current_logical_payload_bytes": 298837296,
+    "packed_payload_bytes": 184438648,
+    "excludes": "Allocator granularity, metadata, bitmap alignment, API materialization, and effects on compute speed."
+  }
+}

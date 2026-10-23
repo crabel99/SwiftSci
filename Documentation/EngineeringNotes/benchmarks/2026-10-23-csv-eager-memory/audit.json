@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "Seven strict lifecycle reads passed every column digest, native type, shape, header and order check.",
+    "Actual and frozen diagnostic clients import the same interface as their linked reader object.",
+    "Both diagnostic conversions show a clean 126.8 MiB input mapping before return and no input mapping after return.",
+    "Both actual conversion policies have seven Double? arrays and two String? arrays held, none after release.",
+    "All 36 native profiler invocations completed successfully.",
+    "Six recorded post-warmup reads in each policy retain less than 128 KiB live heap after release.",
+    "All data are diagnostic; no timing regression or performance claim is inferred."
+  ]
+}
