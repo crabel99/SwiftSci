@@ -1,0 +1,67 @@
+{
+  "passed": false,
+  "workers": 77,
+  "failures": [
+    {
+      "case": "Aotizhongxin",
+      "scope": "stream",
+      "engine": "duckdb",
+      "round": 0,
+      "exit": 1,
+      "stderr": "/private/tmp/swiftsci-csv-external-20261023/python-probe.py:65: DeprecationWarning: fetch_record_batch() is deprecated, use to_arrow_reader() instead.\n  with relation.fetch_record_batch(rows_per_batch=chunk) as reader:\nTraceback (most recent call last):\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 120, in <module>\n    checks=validate(frames());checks['timed_chunks']=chunks;checks['timed_max_chunk_rows']=max_chunk\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 89, in validate\n    part=col.slice(start,65536);valid=part.is_valid().to_numpy();values=part.to_pylist() if kind=='String' else part.to_numpy(zero_copy_only=False)\n                                      ~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"pyarrow/array.pxi\", line 1832, in pyarrow.lib.Array.to_numpy\n  File \"pyarrow/error.pxi\", line 92, in pyarrow.lib.check_status\npyarrow.lib.ArrowInvalid: Zero copy conversions not possible with boolean types\n"
+    },
+    {
+      "case": "Aotizhongxin-default",
+      "scope": "stream",
+      "engine": "duckdb",
+      "round": 0,
+      "exit": 1,
+      "stderr": "/private/tmp/swiftsci-csv-external-20261023/python-probe.py:65: DeprecationWarning: fetch_record_batch() is deprecated, use to_arrow_reader() instead.\n  with relation.fetch_record_batch(rows_per_batch=chunk) as reader:\nTraceback (most recent call last):\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 120, in <module>\n    checks=validate(frames());checks['timed_chunks']=chunks;checks['timed_max_chunk_rows']=max_chunk\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 89, in validate\n    part=col.slice(start,65536);valid=part.is_valid().to_numpy();values=part.to_pylist() if kind=='String' else part.to_numpy(zero_copy_only=False)\n                                      ~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"pyarrow/array.pxi\", line 1832, in pyarrow.lib.Array.to_numpy\n  File \"pyarrow/error.pxi\", line 92, in pyarrow.lib.check_status\npyarrow.lib.ArrowInvalid: Zero copy conversions not possible with boolean types\n"
+    },
+    {
+      "case": "Wanliu",
+      "scope": "stream",
+      "engine": "duckdb",
+      "round": 0,
+      "exit": 1,
+      "stderr": "/private/tmp/swiftsci-csv-external-20261023/python-probe.py:65: DeprecationWarning: fetch_record_batch() is deprecated, use to_arrow_reader() instead.\n  with relation.fetch_record_batch(rows_per_batch=chunk) as reader:\nTraceback (most recent call last):\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 120, in <module>\n    checks=validate(frames());checks['timed_chunks']=chunks;checks['timed_max_chunk_rows']=max_chunk\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 89, in validate\n    part=col.slice(start,65536);valid=part.is_valid().to_numpy();values=part.to_pylist() if kind=='String' else part.to_numpy(zero_copy_only=False)\n                                      ~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"pyarrow/array.pxi\", line 1832, in pyarrow.lib.Array.to_numpy\n  File \"pyarrow/error.pxi\", line 92, in pyarrow.lib.check_status\npyarrow.lib.ArrowInvalid: Zero copy conversions not possible with boolean types\n"
+    },
+    {
+      "case": "Wanliu-default",
+      "scope": "stream",
+      "engine": "duckdb",
+      "round": 0,
+      "exit": 1,
+      "stderr": "/private/tmp/swiftsci-csv-external-20261023/python-probe.py:65: DeprecationWarning: fetch_record_batch() is deprecated, use to_arrow_reader() instead.\n  with relation.fetch_record_batch(rows_per_batch=chunk) as reader:\nTraceback (most recent call last):\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 120, in <module>\n    checks=validate(frames());checks['timed_chunks']=chunks;checks['timed_max_chunk_rows']=max_chunk\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 89, in validate\n    part=col.slice(start,65536);valid=part.is_valid().to_numpy();values=part.to_pylist() if kind=='String' else part.to_numpy(zero_copy_only=False)\n                                      ~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"pyarrow/array.pxi\", line 1832, in pyarrow.lib.Array.to_numpy\n  File \"pyarrow/error.pxi\", line 92, in pyarrow.lib.check_status\npyarrow.lib.ArrowInvalid: Zero copy conversions not possible with boolean types\n"
+    },
+    {
+      "case": "energy",
+      "scope": "stream",
+      "engine": "duckdb",
+      "round": 0,
+      "exit": 1,
+      "stderr": "/private/tmp/swiftsci-csv-external-20261023/python-probe.py:65: DeprecationWarning: fetch_record_batch() is deprecated, use to_arrow_reader() instead.\n  with relation.fetch_record_batch(rows_per_batch=chunk) as reader:\nTraceback (most recent call last):\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 120, in <module>\n    checks=validate(frames());checks['timed_chunks']=chunks;checks['timed_max_chunk_rows']=max_chunk\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 89, in validate\n    part=col.slice(start,65536);valid=part.is_valid().to_numpy();values=part.to_pylist() if kind=='String' else part.to_numpy(zero_copy_only=False)\n                                      ~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"pyarrow/array.pxi\", line 1832, in pyarrow.lib.Array.to_numpy\n  File \"pyarrow/error.pxi\", line 92, in pyarrow.lib.check_status\npyarrow.lib.ArrowInvalid: Zero copy conversions not possible with boolean types\n"
+    },
+    {
+      "case": "energy-common",
+      "scope": "stream",
+      "engine": "duckdb",
+      "round": 0,
+      "exit": 1,
+      "stderr": "/private/tmp/swiftsci-csv-external-20261023/python-probe.py:65: DeprecationWarning: fetch_record_batch() is deprecated, use to_arrow_reader() instead.\n  with relation.fetch_record_batch(rows_per_batch=chunk) as reader:\nTraceback (most recent call last):\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 120, in <module>\n    checks=validate(frames());checks['timed_chunks']=chunks;checks['timed_max_chunk_rows']=max_chunk\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 89, in validate\n    part=col.slice(start,65536);valid=part.is_valid().to_numpy();values=part.to_pylist() if kind=='String' else part.to_numpy(zero_copy_only=False)\n                                      ~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"pyarrow/array.pxi\", line 1832, in pyarrow.lib.Array.to_numpy\n  File \"pyarrow/error.pxi\", line 92, in pyarrow.lib.check_status\npyarrow.lib.ArrowInvalid: Zero copy conversions not possible with boolean types\n"
+    },
+    {
+      "case": "energy-date-full",
+      "scope": "stream",
+      "engine": "duckdb",
+      "round": 0,
+      "exit": 1,
+      "stderr": "/private/tmp/swiftsci-csv-external-20261023/python-probe.py:65: DeprecationWarning: fetch_record_batch() is deprecated, use to_arrow_reader() instead.\n  with relation.fetch_record_batch(rows_per_batch=chunk) as reader:\nTraceback (most recent call last):\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 120, in <module>\n    checks=validate(frames());checks['timed_chunks']=chunks;checks['timed_max_chunk_rows']=max_chunk\n  File \"/private/tmp/swiftsci-csv-external-20261023/python-probe.py\", line 89, in validate\n    part=col.slice(start,65536);valid=part.is_valid().to_numpy();values=part.to_pylist() if kind=='String' else part.to_numpy(zero_copy_only=False)\n                                      ~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"pyarrow/array.pxi\", line 1832, in pyarrow.lib.Array.to_numpy\n  File \"pyarrow/error.pxi\", line 92, in pyarrow.lib.check_status\npyarrow.lib.ArrowInvalid: Zero copy conversions not possible with boolean types\n"
+    }
+  ],
+  "quality_passed": true,
+  "quality_flags": [],
+  "source_plan_sha256": "9e5661abedf63d39e530472b2c8c7067310fc8a502fcd891b2a41e30cfae8ea5",
+  "python_probe_sha256": "a5d52e45e23b4c79bdc5a0282e93fdbfc2b9809b0b030a5d65342430cd5839a3",
+  "completed_unix": 1792763675.51743
+}

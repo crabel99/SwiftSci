@@ -1,0 +1,842 @@
+[
+  {
+    "case": "Aotizhongxin",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.3153883937969265,
+    "elapsed_ratio": 0.12692709073809286,
+    "process_peak_difference_mib": -90.5078125,
+    "read_peak_increase_difference_mib": 0.84375
+  },
+  {
+    "case": "Aotizhongxin",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.5261026313325218,
+    "elapsed_ratio": 1.534058936918947,
+    "process_peak_difference_mib": -54.9921875,
+    "read_peak_increase_difference_mib": -1.453125
+  },
+  {
+    "case": "Aotizhongxin",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.3077818560315547,
+    "elapsed_ratio": 0.24294238626370512,
+    "process_peak_difference_mib": -70.53125,
+    "read_peak_increase_difference_mib": -1.6171875
+  },
+  {
+    "case": "Aotizhongxin",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.23627815591888288,
+    "elapsed_ratio": 0.23600529194567038,
+    "process_peak_difference_mib": -93.0546875,
+    "read_peak_increase_difference_mib": -1.703125
+  },
+  {
+    "case": "Aotizhongxin",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.39413802790523456,
+    "elapsed_ratio": 2.8523936471252074,
+    "process_peak_difference_mib": -57.5390625,
+    "read_peak_increase_difference_mib": -4.0
+  },
+  {
+    "case": "Aotizhongxin",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.23057959899200176,
+    "elapsed_ratio": 0.45172144467135567,
+    "process_peak_difference_mib": -73.078125,
+    "read_peak_increase_difference_mib": -4.1640625
+  },
+  {
+    "case": "Aotizhongxin",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.294587856643495,
+    "elapsed_ratio": 0.1085096638441536,
+    "process_peak_difference_mib": -100.78125,
+    "read_peak_increase_difference_mib": -9.1015625
+  },
+  {
+    "case": "Aotizhongxin",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.7111061580589696,
+    "elapsed_ratio": 0.9804941082471239,
+    "process_peak_difference_mib": -69.453125,
+    "read_peak_increase_difference_mib": -15.6171875
+  },
+  {
+    "case": "Aotizhongxin",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.4897909950216023,
+    "elapsed_ratio": 0.22603061326481727,
+    "process_peak_difference_mib": -70.1015625,
+    "read_peak_increase_difference_mib": -1.0546875
+  },
+  {
+    "case": "Aotizhongxin",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.2044294363614779,
+    "elapsed_ratio": 0.2045831445289639,
+    "process_peak_difference_mib": -102.71875,
+    "read_peak_increase_difference_mib": -11.0390625
+  },
+  {
+    "case": "Aotizhongxin",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.4934725848563969,
+    "elapsed_ratio": 1.8486147754122517,
+    "process_peak_difference_mib": -71.390625,
+    "read_peak_increase_difference_mib": -17.5546875
+  },
+  {
+    "case": "Aotizhongxin",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.33989078228830844,
+    "elapsed_ratio": 0.42615608585739745,
+    "process_peak_difference_mib": -72.0390625,
+    "read_peak_increase_difference_mib": -2.9921875
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.3152042643568067,
+    "elapsed_ratio": 0.13177775978695808,
+    "process_peak_difference_mib": -90.8984375,
+    "read_peak_increase_difference_mib": 0.5234375
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.4405875276495013,
+    "elapsed_ratio": 1.3936179251297933,
+    "process_peak_difference_mib": -54.671875,
+    "read_peak_increase_difference_mib": -1.2890625
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.26052088113813676,
+    "elapsed_ratio": 0.2182568301517328,
+    "process_peak_difference_mib": -70.2109375,
+    "read_peak_increase_difference_mib": -1.4375
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.24143866516747872,
+    "elapsed_ratio": 0.24057304971380242,
+    "process_peak_difference_mib": -93.6171875,
+    "read_peak_increase_difference_mib": -2.1953125
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.3374791416042532,
+    "elapsed_ratio": 2.5441843519446214,
+    "process_peak_difference_mib": -57.390625,
+    "read_peak_increase_difference_mib": -4.0078125
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.19955254703992656,
+    "elapsed_ratio": 0.3984489593339277,
+    "process_peak_difference_mib": -72.9296875,
+    "read_peak_increase_difference_mib": -4.15625
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.2994327284187305,
+    "elapsed_ratio": 0.11289150450852214,
+    "process_peak_difference_mib": -101.0859375,
+    "read_peak_increase_difference_mib": -9.3359375
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.5475172877449097,
+    "elapsed_ratio": 0.84018532385166,
+    "process_peak_difference_mib": -70.5,
+    "read_peak_increase_difference_mib": -16.90625
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.42262996941896025,
+    "elapsed_ratio": 0.19796765208221093,
+    "process_peak_difference_mib": -71.6875,
+    "read_peak_increase_difference_mib": -2.625
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.21346219502586863,
+    "elapsed_ratio": 0.2135768818697754,
+    "process_peak_difference_mib": -100.1640625,
+    "read_peak_increase_difference_mib": -8.4296875
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.39031886285055706,
+    "elapsed_ratio": 1.5895275950320846,
+    "process_peak_difference_mib": -69.578125,
+    "read_peak_increase_difference_mib": -16.0
+  },
+  {
+    "case": "Aotizhongxin-default",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.3012881104624224,
+    "elapsed_ratio": 0.37453051960705647,
+    "process_peak_difference_mib": -70.765625,
+    "read_peak_increase_difference_mib": -1.71875
+  },
+  {
+    "case": "Wanliu",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.30591191084411756,
+    "elapsed_ratio": 0.1263038004241475,
+    "process_peak_difference_mib": -90.5234375,
+    "read_peak_increase_difference_mib": 0.671875
+  },
+  {
+    "case": "Wanliu",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.5577306924612314,
+    "elapsed_ratio": 1.4212757132505764,
+    "process_peak_difference_mib": -55.328125,
+    "read_peak_increase_difference_mib": -1.9453125
+  },
+  {
+    "case": "Wanliu",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.3023681691430474,
+    "elapsed_ratio": 0.24484222933648805,
+    "process_peak_difference_mib": -70.8828125,
+    "read_peak_increase_difference_mib": -2.046875
+  },
+  {
+    "case": "Wanliu",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.23893271201190242,
+    "elapsed_ratio": 0.2388608869457025,
+    "process_peak_difference_mib": -92.65625,
+    "read_peak_increase_difference_mib": -1.453125
+  },
+  {
+    "case": "Wanliu",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.4356159475919955,
+    "elapsed_ratio": 2.6878619354395417,
+    "process_peak_difference_mib": -57.4609375,
+    "read_peak_increase_difference_mib": -4.0703125
+  },
+  {
+    "case": "Wanliu",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.23616487007671924,
+    "elapsed_ratio": 0.46303620211490865,
+    "process_peak_difference_mib": -73.015625,
+    "read_peak_increase_difference_mib": -4.171875
+  },
+  {
+    "case": "Wanliu",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.2919505425182942,
+    "elapsed_ratio": 0.10846042921789104,
+    "process_peak_difference_mib": -102.2265625,
+    "read_peak_increase_difference_mib": -10.90625
+  },
+  {
+    "case": "Wanliu",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.7142671475452448,
+    "elapsed_ratio": 0.9714431148021698,
+    "process_peak_difference_mib": -69.9140625,
+    "read_peak_increase_difference_mib": -16.34375
+  },
+  {
+    "case": "Wanliu",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.4794233746974026,
+    "elapsed_ratio": 0.22168166938614184,
+    "process_peak_difference_mib": -70.734375,
+    "read_peak_increase_difference_mib": -1.9375
+  },
+  {
+    "case": "Wanliu",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.20887950383149395,
+    "elapsed_ratio": 0.20885283188837234,
+    "process_peak_difference_mib": -101.609375,
+    "read_peak_increase_difference_mib": -10.28125
+  },
+  {
+    "case": "Wanliu",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.511030964681418,
+    "elapsed_ratio": 1.8706236643900997,
+    "process_peak_difference_mib": -69.296875,
+    "read_peak_increase_difference_mib": -15.71875
+  },
+  {
+    "case": "Wanliu",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.3430091815148409,
+    "elapsed_ratio": 0.4268731440848882,
+    "process_peak_difference_mib": -70.1171875,
+    "read_peak_increase_difference_mib": -1.3125
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.31546215474565287,
+    "elapsed_ratio": 0.12984889222801438,
+    "process_peak_difference_mib": -89.6796875,
+    "read_peak_increase_difference_mib": 1.6328125
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.43802175078501954,
+    "elapsed_ratio": 1.2383798579052483,
+    "process_peak_difference_mib": -55.171875,
+    "read_peak_increase_difference_mib": -1.65625
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.2648138073134311,
+    "elapsed_ratio": 0.21471032792262928,
+    "process_peak_difference_mib": -70.1640625,
+    "read_peak_increase_difference_mib": -1.3515625
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.24018533074090928,
+    "elapsed_ratio": 0.24025729142248087,
+    "process_peak_difference_mib": -92.21875,
+    "read_peak_increase_difference_mib": -0.90625
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.33349927242092364,
+    "elapsed_ratio": 2.2913540909537375,
+    "process_peak_difference_mib": -57.7109375,
+    "read_peak_increase_difference_mib": -4.1953125
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.2016228918033546,
+    "elapsed_ratio": 0.39727502439173035,
+    "process_peak_difference_mib": -72.703125,
+    "read_peak_increase_difference_mib": -3.890625
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.31252598125326864,
+    "elapsed_ratio": 0.11507126625760418,
+    "process_peak_difference_mib": -102.3671875,
+    "read_peak_increase_difference_mib": -11.0390625
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.5677466504263093,
+    "elapsed_ratio": 0.8287959268700607,
+    "process_peak_difference_mib": -70.0,
+    "read_peak_increase_difference_mib": -16.515625
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.4382309804069046,
+    "elapsed_ratio": 0.20008732980900917,
+    "process_peak_difference_mib": -70.6171875,
+    "read_peak_increase_difference_mib": -1.875
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.21373687527657464,
+    "elapsed_ratio": 0.2143398017492251,
+    "process_peak_difference_mib": -103.2421875,
+    "read_peak_increase_difference_mib": -11.9140625
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.3882825822168088,
+    "elapsed_ratio": 1.5437733539684146,
+    "process_peak_difference_mib": -70.875,
+    "read_peak_increase_difference_mib": -17.390625
+  },
+  {
+    "case": "Wanliu-default",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.29970666766951226,
+    "elapsed_ratio": 0.3726966774467105,
+    "process_peak_difference_mib": -71.4921875,
+    "read_peak_increase_difference_mib": -2.75
+  },
+  {
+    "case": "energy",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.23182872362611706,
+    "elapsed_ratio": 0.10430302070537752,
+    "process_peak_difference_mib": 15.4921875,
+    "read_peak_increase_difference_mib": 106.84375
+  },
+  {
+    "case": "energy",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.8602816602282436,
+    "elapsed_ratio": 4.575863137968442,
+    "process_peak_difference_mib": 14.859375,
+    "read_peak_increase_difference_mib": 68.40625
+  },
+  {
+    "case": "energy",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.4176903409157487,
+    "elapsed_ratio": 1.6849389574520606,
+    "process_peak_difference_mib": -148.8203125,
+    "read_peak_increase_difference_mib": -79.859375
+  },
+  {
+    "case": "energy",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.21294042102826005,
+    "elapsed_ratio": 0.2129262223341187,
+    "process_peak_difference_mib": 13.765625,
+    "read_peak_increase_difference_mib": 105.1171875
+  },
+  {
+    "case": "energy",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.790189999179443,
+    "elapsed_ratio": 9.341256325046526,
+    "process_peak_difference_mib": 13.1328125,
+    "read_peak_increase_difference_mib": 66.6796875
+  },
+  {
+    "case": "energy",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.38365891707828464,
+    "elapsed_ratio": 3.4396672756703657,
+    "process_peak_difference_mib": -150.546875,
+    "read_peak_increase_difference_mib": -81.5859375
+  },
+  {
+    "case": "energy",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.19308388155632317,
+    "elapsed_ratio": 0.08599100720064771,
+    "process_peak_difference_mib": -48.46875,
+    "read_peak_increase_difference_mib": 42.8984375
+  },
+  {
+    "case": "energy",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.7593115503563265,
+    "elapsed_ratio": 2.92237532272681,
+    "process_peak_difference_mib": -232.4453125,
+    "read_peak_increase_difference_mib": -178.984375
+  },
+  {
+    "case": "energy",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.4448614768319141,
+    "elapsed_ratio": 0.21887417895867906,
+    "process_peak_difference_mib": -82.6171875,
+    "read_peak_increase_difference_mib": -13.7578125
+  },
+  {
+    "case": "energy",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.1766503578596882,
+    "elapsed_ratio": 0.17664212975221288,
+    "process_peak_difference_mib": -50.3359375,
+    "read_peak_increase_difference_mib": 41.03125
+  },
+  {
+    "case": "energy",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.694685936579915,
+    "elapsed_ratio": 6.003123090967654,
+    "process_peak_difference_mib": -234.3125,
+    "read_peak_increase_difference_mib": -180.8515625
+  },
+  {
+    "case": "energy",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.4069989604876653,
+    "elapsed_ratio": 0.4496098182547725,
+    "process_peak_difference_mib": -84.484375,
+    "read_peak_increase_difference_mib": -15.625
+  },
+  {
+    "case": "energy-common",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.22589517068674678,
+    "elapsed_ratio": 0.10140310925665953,
+    "process_peak_difference_mib": 15.3828125,
+    "read_peak_increase_difference_mib": 106.890625
+  },
+  {
+    "case": "energy-common",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.678360297880785,
+    "elapsed_ratio": 3.59578609390058,
+    "process_peak_difference_mib": 15.0078125,
+    "read_peak_increase_difference_mib": 68.46875
+  },
+  {
+    "case": "energy-common",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.3481567498061835,
+    "elapsed_ratio": 1.4572816552260552,
+    "process_peak_difference_mib": -148.78125,
+    "read_peak_increase_difference_mib": -79.9921875
+  },
+  {
+    "case": "energy-common",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.20916865207032675,
+    "elapsed_ratio": 0.20921235531597937,
+    "process_peak_difference_mib": 13.65625,
+    "read_peak_increase_difference_mib": 105.1640625
+  },
+  {
+    "case": "energy-common",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.6281307771847551,
+    "elapsed_ratio": 7.418735810292528,
+    "process_peak_difference_mib": 13.28125,
+    "read_peak_increase_difference_mib": 66.7421875
+  },
+  {
+    "case": "energy-common",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.3223773126479589,
+    "elapsed_ratio": 3.0066270125596697,
+    "process_peak_difference_mib": -150.5078125,
+    "read_peak_increase_difference_mib": -81.71875
+  },
+  {
+    "case": "energy-common",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.19438314921251465,
+    "elapsed_ratio": 0.08475615439888964,
+    "process_peak_difference_mib": -47.3125,
+    "read_peak_increase_difference_mib": 44.25
+  },
+  {
+    "case": "energy-common",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.6369350363192084,
+    "elapsed_ratio": 2.635865546513934,
+    "process_peak_difference_mib": -244.7890625,
+    "read_peak_increase_difference_mib": -191.0390625
+  },
+  {
+    "case": "energy-common",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.3806284184873021,
+    "elapsed_ratio": 0.18333441308122042,
+    "process_peak_difference_mib": -81.5078125,
+    "read_peak_increase_difference_mib": -12.703125
+  },
+  {
+    "case": "energy-common",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.1726926704748738,
+    "elapsed_ratio": 0.17255823539932,
+    "process_peak_difference_mib": -47.8671875,
+    "read_peak_increase_difference_mib": 43.6953125
+  },
+  {
+    "case": "energy-common",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.5658618701599535,
+    "elapsed_ratio": 5.366457582722363,
+    "process_peak_difference_mib": -245.34375,
+    "read_peak_increase_difference_mib": -191.59375
+  },
+  {
+    "case": "energy-common",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.3381555361845538,
+    "elapsed_ratio": 0.373257411613756,
+    "process_peak_difference_mib": -82.0625,
+    "read_peak_increase_difference_mib": -13.2578125
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.2439291311372253,
+    "elapsed_ratio": 0.11718030234426265,
+    "process_peak_difference_mib": -227.4375,
+    "read_peak_increase_difference_mib": -136.078125
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.927931366269803,
+    "elapsed_ratio": 5.537248946331092,
+    "process_peak_difference_mib": 11.0625,
+    "read_peak_increase_difference_mib": 64.453125
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "eager",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.4614229589874213,
+    "elapsed_ratio": 2.282773501844266,
+    "process_peak_difference_mib": -114.75,
+    "read_peak_increase_difference_mib": -45.9609375
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.21435597646110044,
+    "elapsed_ratio": 0.21439742030854542,
+    "process_peak_difference_mib": -229.171875,
+    "read_peak_increase_difference_mib": -137.8125
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.8154320608543829,
+    "elapsed_ratio": 10.13115571430955,
+    "process_peak_difference_mib": 9.328125,
+    "read_peak_increase_difference_mib": 62.71875
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "eager",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.40548157767870974,
+    "elapsed_ratio": 4.176646929159234,
+    "process_peak_difference_mib": -116.484375,
+    "read_peak_increase_difference_mib": -47.6953125
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "pandas",
+    "cpu_ratio": 0.20317992223303463,
+    "elapsed_ratio": 0.09630553422949274,
+    "process_peak_difference_mib": -48.1875,
+    "read_peak_increase_difference_mib": 43.171875
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "polars",
+    "cpu_ratio": 0.8991185514178339,
+    "elapsed_ratio": 3.443942133205771,
+    "process_peak_difference_mib": -244.890625,
+    "read_peak_increase_difference_mib": -191.34375
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "stream",
+    "swift_policy": "swift-parallel",
+    "reference": "duckdb",
+    "cpu_ratio": 0.4839737145379202,
+    "elapsed_ratio": 0.255640546429677,
+    "process_peak_difference_mib": -80.59375,
+    "read_peak_increase_difference_mib": -11.703125
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "pandas",
+    "cpu_ratio": 0.17205838149733663,
+    "elapsed_ratio": 0.17199891791783847,
+    "process_peak_difference_mib": -50.7421875,
+    "read_peak_increase_difference_mib": 40.6171875
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "polars",
+    "cpu_ratio": 0.7613984739779068,
+    "elapsed_ratio": 6.150781728404986,
+    "process_peak_difference_mib": -247.4453125,
+    "read_peak_increase_difference_mib": -193.8984375
+  },
+  {
+    "case": "energy-date-full",
+    "scope": "stream",
+    "swift_policy": "swift-serial",
+    "reference": "duckdb",
+    "cpu_ratio": 0.40984233626756245,
+    "elapsed_ratio": 0.45656667307457793,
+    "process_peak_difference_mib": -83.1484375,
+    "read_peak_increase_difference_mib": -14.2578125
+  }
+]

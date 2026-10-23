@@ -1,0 +1,43 @@
+{
+  "cases": [
+    "Aotizhongxin",
+    "Aotizhongxin-default",
+    "Wanliu",
+    "Wanliu-default",
+    "energy",
+    "energy-common",
+    "energy-date-full"
+  ],
+  "scope": "stream",
+  "rounds": 6,
+  "orders": [
+    [
+      "legacy",
+      "current"
+    ],
+    [
+      "current",
+      "legacy"
+    ],
+    [
+      "legacy",
+      "current"
+    ],
+    [
+      "current",
+      "legacy"
+    ],
+    [
+      "legacy",
+      "current"
+    ],
+    [
+      "current",
+      "legacy"
+    ]
+  ],
+  "criterion": "Two-sided 10 percent CPU review. Exact same schema/nulls/native full-output validation and 10000-row bounds. New stage does not replace original comparison.",
+  "old_worker_sha256": "87cec959fcd2da51c7028b7e28b401749788729013a60d3f2df4d8ec61db3f87",
+  "current_worker_sha256": "3e149226dcee61c8cbe3fbec6c3208384ab8372706996ed26e176689a993e3bf",
+  "started_unix": 1792764963.4079978
+}

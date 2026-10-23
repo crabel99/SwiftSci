@@ -1,0 +1,7 @@
+{
+  "preflight_failed_workers": 7,
+  "affected_scope": "DuckDB streamed validation only",
+  "root_cause": "Arrow Array boolean validity cannot provide a zero-copy NumPy boolean array. The eager ChunkedArray case had permitted copying by default.",
+  "change": "Pass zero_copy_only=False when converting validity masks outside measurement. Native read flags, output dtypes, null tokens, expected digests and timing protocol unchanged.",
+  "production_changed": false
+}
