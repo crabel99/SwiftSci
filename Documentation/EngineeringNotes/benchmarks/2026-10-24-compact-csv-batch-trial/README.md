@@ -6,7 +6,7 @@ The working implementation remains at `5b9c90297723cf53dcba17299c57778688e282e2`
 
 Can a standard-library bulk append reduce the remaining CPU cost of compact CSV construction without sacrificing its memory benefit? A reduced read-only replay still measured 3.2% more charged CPU for compact than optional storage. Its identical-binary controls passed. The replay exited 1 at its recorded 1.02 diagnostic ratio. This is a screening signal, not a CI timing policy.
 
-The ranked explanations were a remaining append call, validity/array ownership work, and a small construction opportunity within parsing-dominated reads. Native sampling weakens the first explanation: the common inferred compact append is already inside the conversion loop. It shows more ownership checking for compact storage, while byte parsing and record scanning dominate computation. Idle dispatch and run-loop samples are not computation.
+The ranked explanations were a remaining append call, validity/array ownership work, and a small construction opportunity within parsing-dominated reads. Native sampling weakens the first explanation: the measured compact append is already inside the conversion loop. It shows more ownership checking for compact storage, while byte parsing and record scanning dominate computation. Idle dispatch and run-loop samples are not computation.
 
 ## Design and implementation
 
@@ -27,7 +27,7 @@ Each screen has eight rotated rounds, parent optional, parent compact, candidate
 
 Both screens pass their recorded repeated-run CPU and RSS controls. The first candidate's median paired-round CPU change is +4.03%; the inline candidate's is +4.23%. Both use more CPU in every paired round. These are repeated finite screens, not independent statistical observations or energy measurements. The second screen compares the inline candidate with the same preserved baseline; it is not a simultaneous head-to-head comparison of both candidates.
 
-Each candidate passes eight independent-reference, full native-bit public-output checks across both storage modes and both reference datasets, including read/sort/matrix workflows. The timed workload retains the original inference contract: Date and Time are explicit strings, numeric columns are inferred. It does not silently substitute a complete numeric schema.
+Each candidate passes eight independent-reference, full native-bit public-output checks across both storage modes and both reference datasets, including read/sort/matrix workflows. The throughput worker supplies a complete explicit schema for every column in both builds. These timings measure explicit-schema conversion and exclude type inference. The input manifest's `inference_timestamp_policy` field does not describe the worker's effective options.
 
 ## What the profile establishes
 
@@ -48,3 +48,9 @@ AC power was checked at each screen's start. This short screening helper does no
 To reproduce, start from the recorded parent, apply `implement.py`, and use `Benchmarks/CPUThroughput/build.py` with a new output directory and the recorded dependencies. The inline variant adds the one attribute recorded in its source snapshot and patch. `measure.py` accepts baseline and trial workers plus a fresh output directory. Absolute paths must exist or be remapped. The archived source hashes must match before interpreting a rerun.
 
 The next useful investigation is the shared number parser and conversion loop, which consume much more sampled computation than bitmap flushes. A new storage abstraction needs evidence beyond reducing a single class of checks.
+
+## Schema-description correction
+
+A source review after this trial found that the original report incorrectly described numeric columns as inferred. `Benchmarks/CPUThroughput/Worker.swift` sets `columnTypeOverrides` for every name and type in the input contract, with parallel conversion. Its measured source SHA256 is `4d9c46bf307e59a68e7998140a5067ad5456044879d1bbf35bb88f867ac21867`. Parent and candidate use that same worker. The comparisons remain matched and the rejection is unchanged, but these results establish no inference-performance claim. Profile symbol names do not establish which conversion branch runs.
+
+The experiment archive and its receipts remain unchanged as a historical record. This correction overrides any inferred-schema interpretation in the archived design notes. Later parser experiments record effective schema options and reject unknown worker implementations before timing. Their proof is a reviewed source fingerprint, not runtime introspection.
