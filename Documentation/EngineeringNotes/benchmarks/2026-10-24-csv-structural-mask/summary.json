@@ -1,0 +1,399 @@
+{
+  "decision": "Retain the tested scanner change locally; no push or PR",
+  "commit": {
+    "branch": "codex/csv-structural-mask-trial",
+    "head": "2a8f1230667eaa86cd72a67b5e78b2b3830f2c23",
+    "parent": "5b9c90297723cf53dcba17299c57778688e282e2",
+    "measured_source_hashes_match_commit": true,
+    "remote_actions": false
+  },
+  "source_diff": {
+    "file": "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift",
+    "added_lines": 9,
+    "removed_lines": 10
+  },
+  "native_tests": {
+    "Debug": 437,
+    "Release": 437,
+    "failures": 0,
+    "skips": 0
+  },
+  "scanner_corpus": {
+    "cases": 75583,
+    "independent_coordinate_oracle_subset": 65536,
+    "output_sha256": "9ef88e34ce971b6dd5855327cd32a387dcbc8828aa080585ded2b5278c3ea504"
+  },
+  "analysis": {
+    "nibble-workflows": {
+      "qualified": true,
+      "flags": [],
+      "jobs": 8192,
+      "storage": {
+        "optional": {
+          "parent_cpu_ms_per_job": 201.90715234375,
+          "candidate_cpu_ms_per_job": 194.616,
+          "cpu_change_percent": -3.611141189954825,
+          "parent_peak_MiB": 3503.9375,
+          "candidate_peak_MiB": 3505.625,
+          "parent_throughput": 2176.1660204808595,
+          "candidate_throughput": 2283.603432504067,
+          "throughput_change_percent": 4.9370043926826535,
+          "paired": {
+            "cpu_ratios": [
+              0.9634777303963912,
+              0.9684947191402424,
+              0.9637503377823659,
+              0.9613091864603387,
+              0.978048751892702,
+              0.926546444765845,
+              0.994439482095106,
+              0.9682402424573487
+            ],
+            "median": 0.9659952901198573,
+            "rounds_lower_cpu": 8
+          },
+          "cases": {
+            "Aotizhongxin-default/read": {
+              "parent_ms": 11.02128125,
+              "candidate_ms": 10.676546875,
+              "change_percent": -3.1278974484023836
+            },
+            "Aotizhongxin-default/sort-matrix": {
+              "parent_ms": 15.115453125,
+              "candidate_ms": 14.813703125,
+              "change_percent": -1.9963013844482402
+            },
+            "energy-common/read": {
+              "parent_ms": 275.023890625,
+              "candidate_ms": 259.4374375,
+              "change_percent": -5.667308788912595
+            },
+            "energy-common/sort-matrix": {
+              "parent_ms": 505.977171875,
+              "candidate_ms": 492.201609375,
+              "change_percent": -2.722566010033989
+            }
+          }
+        },
+        "compact": {
+          "parent_cpu_ms_per_job": 199.7800234375,
+          "candidate_cpu_ms_per_job": 192.875875,
+          "cpu_change_percent": -3.4558752765688427,
+          "parent_peak_MiB": 2513.0625,
+          "candidate_peak_MiB": 2514.0859375,
+          "parent_throughput": 2150.499919960855,
+          "candidate_throughput": 2270.147107492393,
+          "throughput_change_percent": 5.563691791893466,
+          "paired": {
+            "cpu_ratios": [
+              0.9698367520688674,
+              0.9613950208576217,
+              0.958907684723318,
+              0.9810399552977016,
+              0.9861115032984433,
+              0.9938013013074088,
+              0.9540136525616645,
+              0.9416845536027147
+            ],
+            "median": 0.9656158864632446,
+            "rounds_lower_cpu": 8
+          },
+          "cases": {
+            "Aotizhongxin-default/read": {
+              "parent_ms": 10.87034375,
+              "candidate_ms": 10.674703125,
+              "change_percent": -1.7997648418431988
+            },
+            "Aotizhongxin-default/sort-matrix": {
+              "parent_ms": 14.565046875,
+              "candidate_ms": 14.405078125,
+              "change_percent": -1.0983057684117448
+            },
+            "energy-common/read": {
+              "parent_ms": 283.044109375,
+              "candidate_ms": 270.03790625,
+              "change_percent": -4.595115282109019
+            },
+            "energy-common/sort-matrix": {
+              "parent_ms": 488.761640625,
+              "candidate_ms": 475.64475,
+              "change_percent": -2.683698869704032
+            }
+          }
+        }
+      }
+    },
+    "nibble-workflows-reversed": {
+      "qualified": true,
+      "flags": [],
+      "jobs": 8192,
+      "storage": {
+        "optional": {
+          "parent_cpu_ms_per_job": 195.564703125,
+          "candidate_cpu_ms_per_job": 189.63773046875,
+          "cpu_change_percent": -3.03069652219482,
+          "parent_peak_MiB": 3502.4609375,
+          "candidate_peak_MiB": 3499.5234375,
+          "parent_throughput": 2294.038560662526,
+          "candidate_throughput": 2427.0102159106304,
+          "throughput_change_percent": 5.7964001795027364,
+          "paired": {
+            "cpu_ratios": [
+              0.9825180348148946,
+              0.9644424961442424,
+              0.96248149041868,
+              0.9740274472623778,
+              0.9645307700793107,
+              0.9701639329124219,
+              0.9598058782138075,
+              0.9634776398299844
+            ],
+            "median": 0.9644866331117765,
+            "rounds_lower_cpu": 8
+          },
+          "cases": {
+            "Aotizhongxin-default/read": {
+              "parent_ms": 10.94559375,
+              "candidate_ms": 10.612953125,
+              "change_percent": -3.0390368270337142
+            },
+            "Aotizhongxin-default/sort-matrix": {
+              "parent_ms": 15.0644375,
+              "candidate_ms": 14.6781875,
+              "change_percent": -2.5639855454277716
+            },
+            "energy-common/read": {
+              "parent_ms": 267.10871875,
+              "candidate_ms": 254.38221875,
+              "change_percent": -4.764539345460806
+            },
+            "energy-common/sort-matrix": {
+              "parent_ms": 487.985953125,
+              "candidate_ms": 476.86753125,
+              "change_percent": -2.278430721990876
+            }
+          }
+        },
+        "compact": {
+          "parent_cpu_ms_per_job": 193.1317265625,
+          "candidate_cpu_ms_per_job": 186.7053984375,
+          "cpu_change_percent": -3.3274326488871075,
+          "parent_peak_MiB": 2510.2109375,
+          "candidate_peak_MiB": 2510.3984375,
+          "parent_throughput": 2290.8228495774724,
+          "candidate_throughput": 2406.2512952927073,
+          "throughput_change_percent": 5.038732948578928,
+          "paired": {
+            "cpu_ratios": [
+              0.9628519001668049,
+              0.9714609326656342,
+              0.9690801778567367,
+              0.9613425206414582,
+              0.9694980436362975,
+              0.972012900559261,
+              0.962120690301839,
+              0.9539462626177414
+            ],
+            "median": 0.9659660390117708,
+            "rounds_lower_cpu": 8
+          },
+          "cases": {
+            "Aotizhongxin-default/read": {
+              "parent_ms": 10.873296875,
+              "candidate_ms": 10.550921875,
+              "change_percent": -2.964832136067286
+            },
+            "Aotizhongxin-default/sort-matrix": {
+              "parent_ms": 14.5485625,
+              "candidate_ms": 14.272171875,
+              "change_percent": -1.8997796174020642
+            },
+            "energy-common/read": {
+              "parent_ms": 276.01240625,
+              "candidate_ms": 263.420578125,
+              "change_percent": -4.562051501987508
+            },
+            "energy-common/sort-matrix": {
+              "parent_ms": 469.2611875,
+              "candidate_ms": 457.553453125,
+              "change_percent": -2.494929196546858
+            }
+          }
+        }
+      }
+    },
+    "nibble-formats": {
+      "long-fallback-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 16.623875,
+        "candidate_cpu_ms": 16.5565,
+        "cpu_change_percent": -0.4052905835733256,
+        "parent_peak_MiB": 16.59375,
+        "candidate_peak_MiB": 16.65625
+      },
+      "one-digit-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 2.8565,
+        "candidate_cpu_ms": 2.7945,
+        "cpu_change_percent": -2.170488359880973,
+        "parent_peak_MiB": 11.9375,
+        "candidate_peak_MiB": 12.2421875
+      },
+      "quoted-padded-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 6.15625,
+        "candidate_cpu_ms": 5.348375,
+        "cpu_change_percent": -13.122842639593912,
+        "parent_peak_MiB": 15.296875,
+        "candidate_peak_MiB": 15.28125
+      },
+      "scientific-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 11.093125,
+        "candidate_cpu_ms": 10.7795,
+        "cpu_change_percent": -2.8272015324807054,
+        "parent_peak_MiB": 14.59375,
+        "candidate_peak_MiB": 14.6484375
+      },
+      "short-limit-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 4.699,
+        "candidate_cpu_ms": 4.46675,
+        "cpu_change_percent": -4.942540966163012,
+        "parent_peak_MiB": 15.375,
+        "candidate_peak_MiB": 15.390625
+      },
+      "six-fraction-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 4.5505,
+        "candidate_cpu_ms": 4.233625,
+        "cpu_change_percent": -6.963520492253594,
+        "parent_peak_MiB": 14.671875,
+        "candidate_peak_MiB": 14.6875
+      }
+    },
+    "nibble-densities": {
+      "alternating-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 14.1495,
+        "candidate_cpu_ms": 13.23875,
+        "cpu_change_percent": -6.436623202233294,
+        "parent_peak_MiB": 22.375,
+        "candidate_peak_MiB": 22.125
+      },
+      "missing-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 13.72725,
+        "candidate_cpu_ms": 13.3585,
+        "cpu_change_percent": -2.686262725600541,
+        "parent_peak_MiB": 19.7734375,
+        "candidate_peak_MiB": 19.671875
+      },
+      "present-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 13.63,
+        "candidate_cpu_ms": 12.765625,
+        "cpu_change_percent": -6.341709464416723,
+        "parent_peak_MiB": 24.25,
+        "candidate_peak_MiB": 24.3125
+      },
+      "sparse-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 14.147875,
+        "candidate_cpu_ms": 13.208625,
+        "cpu_change_percent": -6.638806181140278,
+        "parent_peak_MiB": 24.765625,
+        "candidate_peak_MiB": 24.5390625
+      }
+    },
+    "stress-results": {
+      "dense-empty-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 9183.6605,
+        "candidate_cpu_ms": 9323.845125,
+        "cpu_change_percent": 1.5264569612519985,
+        "parent_peak_MiB": 43.578125,
+        "candidate_peak_MiB": 43.6015625
+      },
+      "dense-quoted-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 26.31725,
+        "candidate_cpu_ms": 23.72675,
+        "cpu_change_percent": -9.843353693869993,
+        "parent_peak_MiB": 34.2265625,
+        "candidate_peak_MiB": 34.25
+      }
+    }
+  },
+  "screen_audit": {
+    "screens": 15,
+    "queues": 588,
+    "reads": 2352,
+    "CPU_and_RSS_recomputed": true,
+    "interrupted_long_diagnostic_excluded": true,
+    "all_screen_qualified": true
+  },
+  "default_null_control": {
+    "qualified": true,
+    "flags": [],
+    "medians": {
+      "optional": {
+        "charged_cpu_ns": 79515500.0,
+        "sampled_peak_rss_bytes": 48513024.0,
+        "completed_per_minute": 9132.21021717143
+      },
+      "compact": {
+        "charged_cpu_ns": 79911500.0,
+        "sampled_peak_rss_bytes": 31236096.0,
+        "completed_per_minute": 9271.55523119809
+      },
+      "trial": {
+        "charged_cpu_ns": 74324000.0,
+        "sampled_peak_rss_bytes": 29966336.0,
+        "completed_per_minute": 10272.70250378473
+      }
+    },
+    "compact_to_optional_cpu_ratio": 1.004980161100666,
+    "symptom_present": false,
+    "trial_to_compact_cpu_ratio": 0.9300788997828848,
+    "cpu_change_percent": -6.992110021711517
+  },
+  "interrupted_diagnostic": {
+    "reason": "Stop diagnostic after more than eight minutes; invalid-empty conversion costs far more than other formats. Complete full panels already qualified. Preserve partial records without a final verdict; inspect default-null semantics separately.",
+    "elapsed_seconds": 587.2391059398651,
+    "completed_queues_at_interrupt": 25,
+    "planned_queues": 48,
+    "signal": "SIGINT",
+    "script": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /private/tmp/swiftsci-csv-scan-20261024/confirm-format.py --worker /private/tmp/swiftsci-compact-conversion-20261024/baseline-build/worker --trial /private/tmp/swiftsci-csv-scan-20261024/nibble-build/worker --contract /private/tmp/swiftsci-csv-scan-20261024/stress/dense-empty.json --rounds 8 --out /private/tmp/swiftsci-csv-scan-20261024/dense-empty-confirm",
+    "performance_qualified": false,
+    "relaxed_tolerances": false
+  },
+  "assembly": {
+    "parent": {
+      "symbols": 2,
+      "horizontal_reductions": 4,
+      "shift_narrow": 0
+    },
+    "nibble": {
+      "symbols": 2,
+      "horizontal_reductions": 0,
+      "shift_narrow": 2
+    }
+  },
+  "schema_mode": "full_explicit",
+  "inference_performance_claim": false,
+  "profiled_timings_excluded": true,
+  "remote_actions": false
+}
