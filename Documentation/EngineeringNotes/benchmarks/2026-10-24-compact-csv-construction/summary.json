@@ -1,0 +1,440 @@
+{
+  "source_commit": "5b9c90297723cf53dcba17299c57778688e282e2",
+  "parent_commit": "36a93f7dfd54524fc7360fd52930366190db8d01",
+  "branch": "codex/csv-compact-construction",
+  "source_matches_measured_receipt": true,
+  "panels": {
+    "word-state-workflows": {
+      "paired": {
+        "optional": {
+          "cpu_ratios": [
+            1.010199025283577,
+            0.9918768882621076,
+            1.000892204604563,
+            1.0046734803546993,
+            1.0203366932096856,
+            0.9509545025054924,
+            1.0208655431958484,
+            1.015067877091849
+          ],
+          "median": 1.0074362528191383,
+          "rounds_lower_cpu": 2
+        },
+        "compact": {
+          "cpu_ratios": [
+            0.9826827900645783,
+            0.9795558547683689,
+            0.98897494116625,
+            0.9735152451986487,
+            0.9898463104988825,
+            1.0046315747313097,
+            0.9489907461002185,
+            0.9842118639104399
+          ],
+          "median": 0.983447326987509,
+          "rounds_lower_cpu": 7
+        }
+      },
+      "qualified": true,
+      "flags": [],
+      "queues": 64,
+      "jobs": 8192,
+      "medians": {
+        "parent_optional": {
+          "charged_cpu_ns": 29782186000.0,
+          "elapsed_ns": 4169816354.0,
+          "sampled_peak_rss_bytes": 3677609984.0,
+          "completed_per_minute": 1841.8218299610166,
+          "sampled_resident_byte_seconds": 13651681105.20139,
+          "retained_rss_bytes": 3284877312.0
+        },
+        "candidate_optional": {
+          "charged_cpu_ns": 30154426500.0,
+          "elapsed_ns": 4264172583.0,
+          "sampled_peak_rss_bytes": 3677913088.0,
+          "completed_per_minute": 1801.4634761868278,
+          "sampled_resident_byte_seconds": 13953950139.977589,
+          "retained_rss_bytes": 3280830464.0
+        },
+        "parent_compact": {
+          "charged_cpu_ns": 29641849500.0,
+          "elapsed_ns": 4198806062.5,
+          "sampled_peak_rss_bytes": 2635309056.0,
+          "completed_per_minute": 1829.0927870199462,
+          "sampled_resident_byte_seconds": 9714107787.385586,
+          "retained_rss_bytes": 2237382656.0
+        },
+        "candidate_compact": {
+          "charged_cpu_ns": 29246600500.0,
+          "elapsed_ns": 4236923104.0,
+          "sampled_peak_rss_bytes": 2634792960.0,
+          "completed_per_minute": 1812.7854255977404,
+          "sampled_resident_byte_seconds": 9764674489.043983,
+          "retained_rss_bytes": 2238160896.0
+        }
+      },
+      "per_case_operation_cpu_ns": {
+        "parent_optional": {
+          "Aotizhongxin-default/read": 12952484.375,
+          "Aotizhongxin-default/sort-matrix": 18996375.0,
+          "energy-common/read": 291293859.375,
+          "energy-common/sort-matrix": 604945859.375
+        },
+        "candidate_optional": {
+          "Aotizhongxin-default/read": 13962265.625,
+          "Aotizhongxin-default/sort-matrix": 18813781.25,
+          "energy-common/read": 295020812.5,
+          "energy-common/sort-matrix": 611947765.625
+        },
+        "parent_compact": {
+          "Aotizhongxin-default/read": 13856687.5,
+          "Aotizhongxin-default/sort-matrix": 17990390.625,
+          "energy-common/read": 308164937.5,
+          "energy-common/sort-matrix": 584235671.875
+        },
+        "candidate_compact": {
+          "Aotizhongxin-default/read": 13292062.5,
+          "Aotizhongxin-default/sort-matrix": 17399765.625,
+          "energy-common/read": 299762546.875,
+          "energy-common/sort-matrix": 581120218.75
+        }
+      },
+      "max_sum_kernel_peak_bytes": 3829088256,
+      "all_kernel_peak_sums_within_4GiB": true
+    },
+    "word-state-workflows-reversed": {
+      "paired": {
+        "optional": {
+          "cpu_ratios": [
+            1.0065491162663371,
+            0.9345201066626856,
+            0.9601423967571491,
+            0.9957367157528411,
+            0.9939696560120825,
+            1.0034695762522858,
+            1.0039713862373838,
+            0.9972267508143172
+          ],
+          "median": 0.9964817332835791,
+          "rounds_lower_cpu": 5
+        },
+        "compact": {
+          "cpu_ratios": [
+            0.965307722144577,
+            1.0116395469168031,
+            0.9812754810432834,
+            0.9957886828944682,
+            0.9822558102378848,
+            0.9806062341623824,
+            0.9826966681210104,
+            0.9836907967808977
+          ],
+          "median": 0.9824762391794476,
+          "rounds_lower_cpu": 7
+        }
+      },
+      "qualified": true,
+      "flags": [],
+      "queues": 64,
+      "jobs": 8192,
+      "medians": {
+        "parent_optional": {
+          "charged_cpu_ns": 26797574500.0,
+          "elapsed_ns": 3695946562.5,
+          "sampled_peak_rss_bytes": 3673980928.0,
+          "completed_per_minute": 2078.1522520231856,
+          "sampled_resident_byte_seconds": 12156210867.826818,
+          "retained_rss_bytes": 3278725120.0
+        },
+        "candidate_optional": {
+          "charged_cpu_ns": 26849153000.0,
+          "elapsed_ns": 3711761083.5,
+          "sampled_peak_rss_bytes": 3674497024.0,
+          "completed_per_minute": 2069.098792544348,
+          "sampled_resident_byte_seconds": 12226210920.971813,
+          "retained_rss_bytes": 3278577664.0
+        },
+        "parent_compact": {
+          "charged_cpu_ns": 26959691500.0,
+          "elapsed_ns": 3769309270.5,
+          "sampled_peak_rss_bytes": 2634440704.0,
+          "completed_per_minute": 2037.510864735365,
+          "sampled_resident_byte_seconds": 8801028061.226402,
+          "retained_rss_bytes": 2236334080.0
+        },
+        "candidate_compact": {
+          "charged_cpu_ns": 26277990500.0,
+          "elapsed_ns": 3671509520.5,
+          "sampled_peak_rss_bytes": 2632654848.0,
+          "completed_per_minute": 2091.8142534920403,
+          "sampled_resident_byte_seconds": 8519477255.801938,
+          "retained_rss_bytes": 2235801600.0
+        }
+      },
+      "per_case_operation_cpu_ns": {
+        "parent_optional": {
+          "Aotizhongxin-default/read": 11404375.0,
+          "Aotizhongxin-default/sort-matrix": 16094031.25,
+          "energy-common/read": 279323609.375,
+          "energy-common/sort-matrix": 528633031.25
+        },
+        "candidate_optional": {
+          "Aotizhongxin-default/read": 11524328.125,
+          "Aotizhongxin-default/sort-matrix": 15903843.75,
+          "energy-common/read": 278895843.75,
+          "energy-common/sort-matrix": 529923359.375
+        },
+        "parent_compact": {
+          "Aotizhongxin-default/read": 11389953.125,
+          "Aotizhongxin-default/sort-matrix": 15448406.25,
+          "energy-common/read": 294982781.25,
+          "energy-common/sort-matrix": 518229390.625
+        },
+        "candidate_compact": {
+          "Aotizhongxin-default/read": 11463656.25,
+          "Aotizhongxin-default/sort-matrix": 15442015.625,
+          "energy-common/read": 286991500.0,
+          "energy-common/sort-matrix": 505603187.5
+        }
+      },
+      "max_sum_kernel_peak_bytes": 3834445824,
+      "all_kernel_peak_sums_within_4GiB": true
+    }
+  },
+  "densities": {
+    "present": {
+      "qualified": true,
+      "flags": [],
+      "medians": {
+        "optional": {
+          "charged_cpu_ns": 54592000.0,
+          "sampled_peak_rss_bytes": 33726464.0,
+          "completed_per_minute": 4350.261214065895
+        },
+        "compact": {
+          "charged_cpu_ns": 57446000.0,
+          "sampled_peak_rss_bytes": 25427968.0,
+          "completed_per_minute": 4168.60188135813
+        },
+        "trial": {
+          "charged_cpu_ns": 56275500.0,
+          "sampled_peak_rss_bytes": 25755648.0,
+          "completed_per_minute": 4238.365172068107
+        }
+      },
+      "compact_to_optional_cpu_ratio": 1.0522787221570926,
+      "symptom_present": true,
+      "trial_to_compact_cpu_ratio": 0.9796243428611218
+    },
+    "sparse": {
+      "qualified": true,
+      "flags": [],
+      "medians": {
+        "optional": {
+          "charged_cpu_ns": 53865500.0,
+          "sampled_peak_rss_bytes": 33341440.0,
+          "completed_per_minute": 4396.869515428703
+        },
+        "compact": {
+          "charged_cpu_ns": 58079000.0,
+          "sampled_peak_rss_bytes": 25616384.0,
+          "completed_per_minute": 4106.713259702361
+        },
+        "trial": {
+          "charged_cpu_ns": 57315000.0,
+          "sampled_peak_rss_bytes": 25673728.0,
+          "completed_per_minute": 4159.238754516622
+        }
+      },
+      "compact_to_optional_cpu_ratio": 1.0782226100194001,
+      "symptom_present": true,
+      "trial_to_compact_cpu_ratio": 0.986845503538284
+    },
+    "alternating": {
+      "qualified": true,
+      "flags": [],
+      "medians": {
+        "optional": {
+          "charged_cpu_ns": 54391000.0,
+          "sampled_peak_rss_bytes": 31072256.0,
+          "completed_per_minute": 4372.455358401806
+        },
+        "compact": {
+          "charged_cpu_ns": 59034500.0,
+          "sampled_peak_rss_bytes": 23396352.0,
+          "completed_per_minute": 4036.7692329295433
+        },
+        "trial": {
+          "charged_cpu_ns": 56324500.0,
+          "sampled_peak_rss_bytes": 23363584.0,
+          "completed_per_minute": 4238.113323121448
+        }
+      },
+      "compact_to_optional_cpu_ratio": 1.08537258002243,
+      "symptom_present": true,
+      "trial_to_compact_cpu_ratio": 0.9540946395751637
+    },
+    "missing": {
+      "qualified": true,
+      "flags": [],
+      "medians": {
+        "optional": {
+          "charged_cpu_ns": 52983000.0,
+          "sampled_peak_rss_bytes": 28491776.0,
+          "completed_per_minute": 4474.954599662693
+        },
+        "compact": {
+          "charged_cpu_ns": 58769500.0,
+          "sampled_peak_rss_bytes": 20709376.0,
+          "completed_per_minute": 4057.465913612027
+        },
+        "trial": {
+          "charged_cpu_ns": 54200500.0,
+          "sampled_peak_rss_bytes": 20987904.0,
+          "completed_per_minute": 4337.855742856111
+        }
+      },
+      "compact_to_optional_cpu_ratio": 1.1092142762772965,
+      "symptom_present": true,
+      "trial_to_compact_cpu_ratio": 0.9222555917610326
+    }
+  },
+  "tests": {
+    "debug": {
+      "command": [
+        "xcodebuild",
+        "test-without-building",
+        "-xctestrun",
+        "/Users/crabel/Library/Caches/SwiftSci/mixed-workloads-derived/Build/Products/SwiftSci-Package_SwiftSci-Package_macosx27.0-arm64.xctestrun",
+        "-destination",
+        "platform=macOS,arch=arm64",
+        "-parallel-testing-enabled",
+        "NO",
+        "-only-testing:SwiftDataFrameTests",
+        "-enableCodeCoverage",
+        "NO",
+        "-resultBundlePath",
+        "/private/tmp/swiftsci-compact-builder-20261024/compact-debug-tests.xcresult"
+      ],
+      "exit_code": 0,
+      "seconds": 55.989598989486694,
+      "binary_sha256": "7cdc4f1ebafcff5c8cd7baa0f43668efe6026a32bf39f22b8978f66e8b95c9ac",
+      "summary": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "00006041-001C093C0A80801C",
+              "deviceName": "My Mac",
+              "modelName": "MacBook Pro",
+              "osBuildNumber": "26A434",
+              "osVersion": "27.0.1",
+              "platform": "macOS"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 975,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "SwiftSci-Package \u00b7 Built with macOS 27.0.1",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1792866130.778,
+        "passedTests": 437,
+        "result": "Passed",
+        "runtimeWarnings": [],
+        "skippedTests": 0,
+        "startTime": 1792866076.283,
+        "statistics": [
+          {
+            "subtitle": "614 test runs",
+            "title": "76 tests ran with dynamic parameters"
+          }
+        ],
+        "testFailures": [],
+        "title": "Test - SwiftSci-Package",
+        "topInsights": [
+          {
+            "category": "Longest Test Runs",
+            "impact": "57% of duration",
+            "text": "6 longest test runs with outlier durations exceeding 1.37s (three standard deviations)"
+          }
+        ],
+        "totalTestCount": 437
+      }
+    },
+    "release": {
+      "command": [
+        "xcodebuild",
+        "test-without-building",
+        "-xctestrun",
+        "/Users/crabel/Library/Caches/SwiftSci/mixed-workloads-derived/Build/Products/SwiftSci-Package_SwiftSci-Package_macosx27.0-arm64.xctestrun",
+        "-destination",
+        "platform=macOS,arch=arm64",
+        "-parallel-testing-enabled",
+        "NO",
+        "-only-testing:SwiftDataFrameTests",
+        "-enableCodeCoverage",
+        "NO",
+        "-resultBundlePath",
+        "/private/tmp/swiftsci-compact-builder-20261024/compact-release-tests.xcresult"
+      ],
+      "exit_code": 0,
+      "seconds": 26.061704874038696,
+      "binary_sha256": "1e3b12dbb72eed70ca701c46f875af63616ee12a58e2eeff68ac674d09b7a9c1",
+      "summary": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "00006041-001C093C0A80801C",
+              "deviceName": "My Mac",
+              "modelName": "MacBook Pro",
+              "osBuildNumber": "26A434",
+              "osVersion": "27.0.1",
+              "platform": "macOS"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 975,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "SwiftSci-Package \u00b7 Built with macOS 27.0.1",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1792866348.665,
+        "passedTests": 437,
+        "result": "Passed",
+        "runtimeWarnings": [],
+        "skippedTests": 0,
+        "startTime": 1792866323.838,
+        "statistics": [
+          {
+            "subtitle": "614 test runs",
+            "title": "76 tests ran with dynamic parameters"
+          }
+        ],
+        "testFailures": [],
+        "title": "Test - SwiftSci-Package",
+        "topInsights": [
+          {
+            "category": "Longest Test Runs",
+            "impact": "91% of duration",
+            "text": "4 longest test runs with outlier durations exceeding 1.08s (three standard deviations)"
+          }
+        ],
+        "totalTestCount": 437
+      }
+    }
+  }
+}
