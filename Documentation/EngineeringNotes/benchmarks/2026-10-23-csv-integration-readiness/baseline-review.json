@@ -1,0 +1,62 @@
+{
+  "replay_of_immutable_capture": true,
+  "proposed_coverage_sha256": "7cfba08bd0f27de30a7c366e58ab4db8081bd74be27eec5e15aa4893db748fe3",
+  "failure_entries_sha256_unchanged": "2482579deb42cb8b93ccdfbe2a96be6dd8035338228aeac6d98d40d2770f936a",
+  "decision": {
+    "schema_version": 1,
+    "status": "passed",
+    "conformance_status": "failed",
+    "known_failures": [
+      {
+        "profile": "numerical-binary64",
+        "case": "nist-wampler4-binary64",
+        "engine": "pandas",
+        "batch": 0,
+        "case_key": "7095d33204fcc176e95997a971d5a0f93014874198aac66a186dbb3db151e830",
+        "error": "Worker exited 1; see nist-wampler4-binary64-pandas-0.log",
+        "worker_error": "Output mismatch at 0: 1.0000000028854616 != 1.0",
+        "classification": "comparator-accuracy",
+        "reference_basis": "binary64-v1",
+        "reason": "Comparison-engine accuracy failure against the independent reference; this is not an oracle or tolerance error."
+      },
+      {
+        "profile": "numerical-binary64",
+        "case": "nist-wampler5-binary64",
+        "engine": "pandas",
+        "batch": 0,
+        "case_key": "e723b995028672e574ac2d2588540d12777e73222fa9184726d845aeec3da018",
+        "error": "Worker exited 1; see nist-wampler5-binary64-pandas-0.log",
+        "worker_error": "Output mismatch at 0: 1.0000003429656807 != 1.0",
+        "classification": "comparator-accuracy",
+        "reference_basis": "binary64-v1",
+        "reason": "Comparison-engine accuracy failure against the independent reference; this is not an oracle or tolerance error."
+      },
+      {
+        "profile": "numerical-conformance",
+        "case": "nist-wampler4-decimal",
+        "engine": "pandas",
+        "batch": 0,
+        "case_key": "a3a521a1f3d3cb3a77035135c1204de46e8ec84c7ae34c1e532c958594777904",
+        "error": "Worker exited 1; see nist-wampler4-decimal-pandas-0.log",
+        "worker_error": "Output mismatch at 0: 1.0000000028854616 != 1.0",
+        "classification": "comparator-accuracy",
+        "reference_basis": "nist-decimal-v1",
+        "reason": "Comparison-engine accuracy failure against the independent reference; this is not an oracle or tolerance error."
+      },
+      {
+        "profile": "numerical-conformance",
+        "case": "nist-wampler5-decimal",
+        "engine": "pandas",
+        "batch": 0,
+        "case_key": "e6cff6554cf1271199895148b590f4539a91fb8b50860bb56c7c2a3cba0645fb",
+        "error": "Worker exited 1; see nist-wampler5-decimal-pandas-0.log",
+        "worker_error": "Output mismatch at 0: 1.0000003429656807 != 1.0",
+        "classification": "comparator-accuracy",
+        "reference_basis": "nist-decimal-v1",
+        "reason": "Comparison-engine accuracy failure against the independent reference; this is not an oracle or tolerance error."
+      }
+    ],
+    "blocking": []
+  },
+  "case_executions": 404
+}

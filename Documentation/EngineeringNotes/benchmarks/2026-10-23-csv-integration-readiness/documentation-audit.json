@@ -1,0 +1,348 @@
+{
+  "upstream": {
+    "missing_docs": [
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        116,
+        "public typealias Element = [Double]"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        117,
+        "public typealias Index = Int"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        119,
+        "public let rows: [[Double]]"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        121,
+        "public init(_ rows: [[Double]]) {"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        125,
+        "public init(arrayLiteral elements: [Double]...) {"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        129,
+        "public var startIndex: Int { 0 }"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        130,
+        "public var endIndex: Int { Swift.max(rows.count, 6) }"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        139,
+        "public var description: String {"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        143,
+        "public var asArray: [[Double]] { rows }"
+      ],
+      [
+        "SwiftML/Core/ModelPersistence.swift",
+        37,
+        "public init("
+      ],
+      [
+        "SwiftML/Core/ModelPersistence.swift",
+        79,
+        "public init("
+      ],
+      [
+        "SwiftNLP/Core/TextCleaner.swift",
+        6,
+        "public init() {}"
+      ],
+      [
+        "SwiftAgent/AgentToolV2.swift",
+        68,
+        "public var errorDescription: String? {"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        5,
+        "public let columnNames: [String]"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        6,
+        "public let rowCount: Int"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        7,
+        "public var columnCount: Int { columns.count }"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        29,
+        "public func nullCount(inColumn column: Int) -> Int { columns[column].nullCount }"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        226,
+        "public let columnNames: [String]"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        227,
+        "public let rowCount: Int"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        228,
+        "public var columnCount: Int { columnNames.count }"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        229,
+        "public let order: NumericMatrixOrder"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        231,
+        "public var originalRowIndices: [Int] { sourceRows ?? Array(0..<rowCount) }"
+      ],
+      [
+        "SwiftOptimize/AutoML.swift",
+        50,
+        "public var errorDescription: String? {"
+      ],
+      [
+        "SwiftOptimize/Metrics/EvaluationHarness.swift",
+        133,
+        "public var errorDescription: String? {"
+      ],
+      [
+        "SwiftOptimize/Validation/ValidationFolds.swift",
+        25,
+        "public var errorDescription: String? {"
+      ],
+      [
+        "SwiftPreprocessing/Core/ImbalancedLearning.swift",
+        186,
+        "public func fitResample(features: [[Double]], targets: [Double]) throws -> ResampledDataset {"
+      ],
+      [
+        "SwiftPreprocessing/Core/ImbalancedLearning.swift",
+        291,
+        "public func fitResample(features: [[Double]], targets: [Double]) throws -> ResampledDataset {"
+      ],
+      [
+        "SwiftLLM/Core/TransformerDecoder.swift",
+        35,
+        "public struct LLMConfig: Sendable {"
+      ],
+      [
+        "SwiftLLM/Core/QuantizedTensor.swift",
+        17,
+        "public enum ScaleLayout: Sendable, Equatable {"
+      ],
+      [
+        "SwiftLLM/Core/QuantizedTensor.swift",
+        26,
+        "public init(blockSize: Int, bytesPerBlock: Int, scaleLayout: ScaleLayout) {"
+      ],
+      [
+        "SwiftLLM/Core/QuantizedTensor.swift",
+        52,
+        "public var elementCount: Int {"
+      ],
+      [
+        "SwiftLLM/Core/QuantizedTensor.swift",
+        56,
+        "public init("
+      ],
+      [
+        "SwiftLLM/Core/Generation.swift",
+        57,
+        "public var errorDescription: String? {"
+      ]
+    ],
+    "total_public": 2459,
+    "documented_public": 2426,
+    "exit_code": 0
+  },
+  "candidate": {
+    "missing_docs": [
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        116,
+        "public typealias Element = [Double]"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        117,
+        "public typealias Index = Int"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        119,
+        "public let rows: [[Double]]"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        121,
+        "public init(_ rows: [[Double]]) {"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        125,
+        "public init(arrayLiteral elements: [Double]...) {"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        129,
+        "public var startIndex: Int { 0 }"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        130,
+        "public var endIndex: Int { Swift.max(rows.count, 6) }"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        139,
+        "public var description: String {"
+      ],
+      [
+        "SwiftML/Core/EstimatorProtocols.swift",
+        143,
+        "public var asArray: [[Double]] { rows }"
+      ],
+      [
+        "SwiftML/Core/ModelPersistence.swift",
+        37,
+        "public init("
+      ],
+      [
+        "SwiftML/Core/ModelPersistence.swift",
+        79,
+        "public init("
+      ],
+      [
+        "SwiftNLP/Core/TextCleaner.swift",
+        6,
+        "public init() {}"
+      ],
+      [
+        "SwiftAgent/AgentToolV2.swift",
+        68,
+        "public var errorDescription: String? {"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        5,
+        "public let columnNames: [String]"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        6,
+        "public let rowCount: Int"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        7,
+        "public var columnCount: Int { columns.count }"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        29,
+        "public func nullCount(inColumn column: Int) -> Int { columns[column].nullCount }"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        230,
+        "public let columnNames: [String]"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        231,
+        "public let rowCount: Int"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        232,
+        "public var columnCount: Int { columnNames.count }"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        233,
+        "public let order: NumericMatrixOrder"
+      ],
+      [
+        "SwiftDataFrame/Core/PreparedNumericBatch.swift",
+        235,
+        "public var originalRowIndices: [Int] { sourceRows ?? Array(0..<rowCount) }"
+      ],
+      [
+        "SwiftOptimize/AutoML.swift",
+        50,
+        "public var errorDescription: String? {"
+      ],
+      [
+        "SwiftOptimize/Metrics/EvaluationHarness.swift",
+        133,
+        "public var errorDescription: String? {"
+      ],
+      [
+        "SwiftOptimize/Validation/ValidationFolds.swift",
+        25,
+        "public var errorDescription: String? {"
+      ],
+      [
+        "SwiftPreprocessing/Core/ImbalancedLearning.swift",
+        186,
+        "public func fitResample(features: [[Double]], targets: [Double]) throws -> ResampledDataset {"
+      ],
+      [
+        "SwiftPreprocessing/Core/ImbalancedLearning.swift",
+        291,
+        "public func fitResample(features: [[Double]], targets: [Double]) throws -> ResampledDataset {"
+      ],
+      [
+        "SwiftLLM/Core/TransformerDecoder.swift",
+        35,
+        "public struct LLMConfig: Sendable {"
+      ],
+      [
+        "SwiftLLM/Core/QuantizedTensor.swift",
+        17,
+        "public enum ScaleLayout: Sendable, Equatable {"
+      ],
+      [
+        "SwiftLLM/Core/QuantizedTensor.swift",
+        26,
+        "public init(blockSize: Int, bytesPerBlock: Int, scaleLayout: ScaleLayout) {"
+      ],
+      [
+        "SwiftLLM/Core/QuantizedTensor.swift",
+        52,
+        "public var elementCount: Int {"
+      ],
+      [
+        "SwiftLLM/Core/QuantizedTensor.swift",
+        56,
+        "public init("
+      ],
+      [
+        "SwiftLLM/Core/Generation.swift",
+        57,
+        "public var errorDescription: String? {"
+      ]
+    ],
+    "total_public": 2464,
+    "documented_public": 2431,
+    "exit_code": 0
+  },
+  "new_missing_declarations": [],
+  "script_enforces_100_percent": false
+}
