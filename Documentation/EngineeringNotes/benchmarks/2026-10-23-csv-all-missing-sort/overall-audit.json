@@ -1,0 +1,50 @@
+{
+  "source_head": "a74f5c3b5e0e511bf5bb69886a40cbae48b28d99",
+  "parent_head": "940353d441c5b2b1bcec69344629452b4ac65b7c",
+  "all_outputs_match": true,
+  "test_functions_each_configuration": 431,
+  "test_configurations": [
+    "Release",
+    "Debug",
+    "Address Sanitizer"
+  ],
+  "preflights": 408,
+  "measured_processes": 3264,
+  "timing_cases": 102,
+  "qualified_timing_cases": 97,
+  "quality_flags": {
+    "native": [
+      {
+        "case": "Double/1000000",
+        "reason": "identical-binary CPU",
+        "ratio": 1.1396946564885497
+      },
+      {
+        "case": "Float/1000000",
+        "reason": "identical-binary CPU",
+        "ratio": 0.8974008207934336
+      },
+      {
+        "case": "Date/1000000",
+        "reason": "identical-binary CPU",
+        "ratio": 0.8925561797752809
+      },
+      {
+        "case": "Double/8000000",
+        "reason": "identical-binary CPU",
+        "ratio": 0.8935489304362473
+      }
+    ],
+    "shape": [
+      {
+        "case": "valid-2-distributed-32768/serial/compact/sort-indices",
+        "reason": "identical-binary CPU",
+        "ratio": 1.1311475409836065
+      }
+    ],
+    "reference": []
+  },
+  "all_timing_cases_qualified": false,
+  "source_promotion": false,
+  "decision": "Retain isolated local candidate. All-missing invariant saves resources in qualified cases; five unqualified timings and common-path cost observations remain explicit."
+}

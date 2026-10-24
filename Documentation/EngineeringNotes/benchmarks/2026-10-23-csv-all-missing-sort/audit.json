@@ -1,0 +1,50 @@
+{
+  "branch": "codex/csv-all-missing-sort",
+  "current_head": "a74f5c3b5e0e511bf5bb69886a40cbae48b28d99",
+  "base": "940353d441c5b2b1bcec69344629452b4ac65b7c",
+  "all_outputs_match": true,
+  "strict_eager_reads": 28,
+  "strict_stream_reads": 28,
+  "workflow_preflights": 16,
+  "measured_processes": 128,
+  "case_combinations": 4,
+  "replicates_per_label": 8,
+  "quality_passed": true,
+  "quality_flags": [],
+  "tests": {
+    "final-release": {
+      "result": "Passed",
+      "totalTestCount": 431,
+      "passedTests": 431,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-debug": {
+      "result": "Passed",
+      "totalTestCount": 431,
+      "passedTests": 431,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "final-asan": {
+      "result": "Passed",
+      "totalTestCount": 431,
+      "passedTests": 431,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "before_semantic_tests_passed": 2,
+  "production_promotion": false,
+  "shape_preflights": 320,
+  "shape_measured_processes": 2560,
+  "shape_quality_passed": false,
+  "shape_quality_flags": [
+    {
+      "case": "valid-2-distributed-32768/serial/compact/sort-indices",
+      "reason": "identical-binary CPU",
+      "ratio": 1.1311475409836065
+    }
+  ],
+  "promotion_decision": "retain_isolated_all_missing_candidate: qualified_cpu_and_peak_savings; common_costs_and_unqualified_timings_remain"
+}

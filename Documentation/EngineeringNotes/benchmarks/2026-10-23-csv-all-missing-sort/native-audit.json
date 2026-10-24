@@ -1,0 +1,211 @@
+{
+  "cases": 18,
+  "preflights": 72,
+  "measured_processes": 576,
+  "exact_identity_outputs": true,
+  "quality_passed": false,
+  "quality_flags": [
+    {
+      "case": "Double/1000000",
+      "reason": "identical-binary CPU",
+      "ratio": 1.1396946564885497
+    },
+    {
+      "case": "Float/1000000",
+      "reason": "identical-binary CPU",
+      "ratio": 0.8974008207934336
+    },
+    {
+      "case": "Date/1000000",
+      "reason": "identical-binary CPU",
+      "ratio": 0.8925561797752809
+    },
+    {
+      "case": "Double/8000000",
+      "reason": "identical-binary CPU",
+      "ratio": 0.8935489304362473
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "Double/1000000",
+      "parent_cpu_ms": 2.335,
+      "current_cpu_ms": 0.655,
+      "cpu_ratio": 0.28051391862955033,
+      "parent_peak_mib": 36.921875,
+      "current_peak_mib": 29.28125,
+      "parent_held_mib": 22.991912841796875,
+      "current_held_mib": 22.991897583007812
+    },
+    {
+      "case": "Float/1000000",
+      "parent_cpu_ms": 2.3115,
+      "current_cpu_ms": 0.731,
+      "cpu_ratio": 0.3162448626433052,
+      "parent_peak_mib": 29.3125,
+      "current_peak_mib": 21.671875,
+      "parent_held_mib": 15.367019653320312,
+      "current_held_mib": 15.366958618164062
+    },
+    {
+      "case": "Int64/1000000",
+      "parent_cpu_ms": 2.3215,
+      "current_cpu_ms": 0.686,
+      "cpu_ratio": 0.2954986000430756,
+      "parent_peak_mib": 36.9375,
+      "current_peak_mib": 29.296875,
+      "parent_held_mib": 22.991973876953125,
+      "current_held_mib": 22.991897583007812
+    },
+    {
+      "case": "Int32/1000000",
+      "parent_cpu_ms": 2.305,
+      "current_cpu_ms": 0.7275,
+      "cpu_ratio": 0.3156182212581345,
+      "parent_peak_mib": 29.328125,
+      "current_peak_mib": 21.671875,
+      "parent_held_mib": 15.367080688476562,
+      "current_held_mib": 15.366958618164062
+    },
+    {
+      "case": "Int/1000000",
+      "parent_cpu_ms": 2.3405,
+      "current_cpu_ms": 0.675,
+      "cpu_ratio": 0.2883999145481735,
+      "parent_peak_mib": 36.9375,
+      "current_peak_mib": 29.28125,
+      "parent_held_mib": 22.992034912109375,
+      "current_held_mib": 22.991897583007812
+    },
+    {
+      "case": "String/1000000",
+      "parent_cpu_ms": 45.062,
+      "current_cpu_ms": 0.678,
+      "cpu_ratio": 0.015045936709422574,
+      "parent_peak_mib": 44.640625,
+      "current_peak_mib": 29.28125,
+      "parent_held_mib": 22.992172241210938,
+      "current_held_mib": 22.991897583007812
+    },
+    {
+      "case": "Date/1000000",
+      "parent_cpu_ms": 57.709,
+      "current_cpu_ms": 0.712,
+      "cpu_ratio": 0.012337763607063023,
+      "parent_peak_mib": 44.65625,
+      "current_peak_mib": 29.3125,
+      "parent_held_mib": 22.992324829101562,
+      "current_held_mib": 22.991958618164062
+    },
+    {
+      "case": "Bool/1000000",
+      "parent_cpu_ms": 65.5705,
+      "current_cpu_ms": 0.738,
+      "cpu_ratio": 0.01125506134618464,
+      "parent_peak_mib": 30.34375,
+      "current_peak_mib": 15.0,
+      "parent_held_mib": 8.695449829101562,
+      "current_held_mib": 8.695083618164062
+    },
+    {
+      "case": "CompactDouble/1000000",
+      "parent_cpu_ms": 2.3695,
+      "current_cpu_ms": 0.664,
+      "cpu_ratio": 0.2802278961806288,
+      "parent_peak_mib": 30.671875,
+      "current_peak_mib": 23.078125,
+      "parent_held_mib": 15.507217407226562,
+      "current_held_mib": 15.5072021484375
+    },
+    {
+      "case": "Double/8000000",
+      "parent_cpu_ms": 18.3235,
+      "current_cpu_ms": 5.937,
+      "cpu_ratio": 0.3240101508991186,
+      "parent_peak_mib": 250.546875,
+      "current_peak_mib": 189.5,
+      "parent_held_mib": 183.21066284179688,
+      "current_held_mib": 183.2106475830078
+    },
+    {
+      "case": "Float/8000000",
+      "parent_cpu_ms": 18.5515,
+      "current_cpu_ms": 5.2525,
+      "cpu_ratio": 0.2831307441446783,
+      "parent_peak_mib": 189.53125,
+      "current_peak_mib": 128.484375,
+      "parent_held_mib": 122.17951965332031,
+      "current_held_mib": 122.17945861816406
+    },
+    {
+      "case": "Int64/8000000",
+      "parent_cpu_ms": 18.5665,
+      "current_cpu_ms": 6.0365,
+      "cpu_ratio": 0.325128591818598,
+      "parent_peak_mib": 250.5625,
+      "current_peak_mib": 189.515625,
+      "parent_held_mib": 183.21072387695312,
+      "current_held_mib": 183.2106475830078
+    },
+    {
+      "case": "Int32/8000000",
+      "parent_cpu_ms": 18.535,
+      "current_cpu_ms": 5.4655,
+      "cpu_ratio": 0.29487456164014025,
+      "parent_peak_mib": 189.546875,
+      "current_peak_mib": 128.484375,
+      "parent_held_mib": 122.17958068847656,
+      "current_held_mib": 122.17945861816406
+    },
+    {
+      "case": "Int/8000000",
+      "parent_cpu_ms": 21.2915,
+      "current_cpu_ms": 6.5985,
+      "cpu_ratio": 0.3099124063593453,
+      "parent_peak_mib": 250.5625,
+      "current_peak_mib": 189.5,
+      "parent_held_mib": 183.21078491210938,
+      "current_held_mib": 183.2106475830078
+    },
+    {
+      "case": "String/8000000",
+      "parent_cpu_ms": 383.4295,
+      "current_cpu_ms": 6.147,
+      "cpu_ratio": 0.01603163032578349,
+      "parent_peak_mib": 311.671875,
+      "current_peak_mib": 189.5,
+      "parent_held_mib": 183.21092224121094,
+      "current_held_mib": 183.2106475830078
+    },
+    {
+      "case": "Date/8000000",
+      "parent_cpu_ms": 455.2145,
+      "current_cpu_ms": 5.464,
+      "cpu_ratio": 0.012003132589142042,
+      "parent_peak_mib": 311.6875,
+      "current_peak_mib": 189.53125,
+      "parent_held_mib": 183.21107482910156,
+      "current_held_mib": 183.21070861816406
+    },
+    {
+      "case": "Bool/8000000",
+      "parent_cpu_ms": 536.513,
+      "current_cpu_ms": 5.475,
+      "cpu_ratio": 0.010204785345369078,
+      "parent_peak_mib": 197.234375,
+      "current_peak_mib": 75.0625,
+      "parent_held_mib": 68.77357482910156,
+      "current_held_mib": 68.77320861816406
+    },
+    {
+      "case": "CompactDouble/8000000",
+      "parent_cpu_ms": 18.8675,
+      "current_cpu_ms": 6.076,
+      "cpu_ratio": 0.32203524579303033,
+      "parent_peak_mib": 191.828125,
+      "current_peak_mib": 130.796875,
+      "parent_held_mib": 123.16346740722656,
+      "current_held_mib": 123.1634521484375
+    }
+  ]
+}
