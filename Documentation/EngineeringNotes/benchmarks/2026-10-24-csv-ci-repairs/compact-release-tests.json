@@ -1,0 +1,68 @@
+{
+  "command": [
+    "xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/Users/crabel/Library/Caches/SwiftSci/mixed-workloads-derived/Build/Products/SwiftSci-Package_SwiftSci-Package_macosx27.0-arm64.xctestrun",
+    "-destination",
+    "platform=macOS,arch=arm64",
+    "-parallel-testing-enabled",
+    "NO",
+    "-only-testing:SwiftDataFrameTests",
+    "-enableCodeCoverage",
+    "NO",
+    "-resultBundlePath",
+    "/private/tmp/swiftsci-csv-ci-repairs-20261024/compact-release-tests.xcresult"
+  ],
+  "exit_code": 0,
+  "seconds": 24.765403985977173,
+  "binary_sha256": "c52a18247c4659d0f0aedd81b97351817ed125529ef9a5af7a0b8461a5bc6dde",
+  "summary": {
+    "devicesAndConfigurations": [
+      {
+        "device": {
+          "architecture": "arm64",
+          "deviceId": "00006041-001C093C0A80801C",
+          "deviceName": "My Mac",
+          "modelName": "MacBook Pro",
+          "osBuildNumber": "26A434",
+          "osVersion": "27.0.1",
+          "platform": "macOS"
+        },
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "passedTests": 951,
+        "skippedTests": 0,
+        "testPlanConfiguration": {
+          "configurationId": "1",
+          "configurationName": "Test Scheme Action"
+        }
+      }
+    ],
+    "environmentDescription": "SwiftSci-Package \u00b7 Built with macOS 27.0.1",
+    "expectedFailures": 0,
+    "failedTests": 0,
+    "finishTime": 1792854367.437,
+    "passedTests": 436,
+    "result": "Passed",
+    "runtimeWarnings": [],
+    "skippedTests": 0,
+    "startTime": 1792854343.699,
+    "statistics": [
+      {
+        "subtitle": "590 test runs",
+        "title": "75 tests ran with dynamic parameters"
+      }
+    ],
+    "testFailures": [],
+    "title": "Test - SwiftSci-Package",
+    "topInsights": [
+      {
+        "category": "Longest Test Runs",
+        "impact": "91% of duration",
+        "text": "4 longest test runs with outlier durations exceeding 1.05s (three standard deviations)"
+      }
+    ],
+    "totalTestCount": 436
+  }
+}

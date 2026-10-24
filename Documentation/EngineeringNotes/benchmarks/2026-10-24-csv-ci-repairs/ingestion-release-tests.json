@@ -1,0 +1,64 @@
+{
+  "command": [
+    "xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/Users/crabel/Library/Caches/SwiftSci/mixed-workloads-derived/Build/Products/SwiftSci-Package_SwiftSci-Package_macosx27.0-arm64.xctestrun",
+    "-destination",
+    "platform=macOS,arch=arm64",
+    "-parallel-testing-enabled",
+    "NO",
+    "-only-testing:SwiftDataFrameTests",
+    "-resultBundlePath",
+    "/private/tmp/swiftsci-csv-ci-repairs-20261024/ingestion-release-tests.xcresult"
+  ],
+  "exit_code": 0,
+  "summary": {
+    "devicesAndConfigurations": [
+      {
+        "device": {
+          "architecture": "arm64",
+          "deviceId": "00006041-001C093C0A80801C",
+          "deviceName": "My Mac",
+          "modelName": "MacBook Pro",
+          "osBuildNumber": "26A434",
+          "osVersion": "27.0.1",
+          "platform": "macOS"
+        },
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "passedTests": 831,
+        "skippedTests": 0,
+        "testPlanConfiguration": {
+          "configurationId": "1",
+          "configurationName": "Test Scheme Action"
+        }
+      }
+    ],
+    "environmentDescription": "SwiftSci-Package \u00b7 Built with macOS 27.0.1",
+    "expectedFailures": 0,
+    "failedTests": 0,
+    "finishTime": 1792853861.881,
+    "passedTests": 398,
+    "result": "Passed",
+    "runtimeWarnings": [],
+    "skippedTests": 0,
+    "startTime": 1792853836.092,
+    "statistics": [
+      {
+        "subtitle": "485 test runs",
+        "title": "52 tests ran with dynamic parameters"
+      }
+    ],
+    "testFailures": [],
+    "title": "Test - SwiftSci-Package",
+    "topInsights": [
+      {
+        "category": "Longest Test Runs",
+        "impact": "92% of duration",
+        "text": "4 longest test runs with outlier durations exceeding 1.15s (three standard deviations)"
+      }
+    ],
+    "totalTestCount": 398
+  }
+}
