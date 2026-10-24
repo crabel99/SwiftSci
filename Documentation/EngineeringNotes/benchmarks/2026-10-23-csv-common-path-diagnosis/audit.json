@@ -1,0 +1,21 @@
+{
+  "source_head": "940353d441c5b2b1bcec69344629452b4ac65b7c",
+  "parent_head": "b982028c59c89f615688882ee71be19a0eccd8f2",
+  "new_source_changes": false,
+  "new_test_runs": false,
+  "workers": {
+    "live-1": 64,
+    "live-2": 64,
+    "operation-live": 64
+  },
+  "total_workers": 192,
+  "reused_public_operations": 384,
+  "exact_outputs_match": true,
+  "balanced_orders_verified": true,
+  "all_quality_flags": [],
+  "csv_matched_normalized_bodies": 428,
+  "common_row_sorter_and_matrix_normalized_bodies_match": true,
+  "code_change_warranted": false,
+  "causal_diagnosis": "Earlier operation-level slowdown did not repeat consistently. No additional shared-kernel instructions or different post-release heap growth established. Small full-path CPU differences and linked-layout effects remain unresolved.",
+  "prior_full_panel_results_replaced": false
+}
