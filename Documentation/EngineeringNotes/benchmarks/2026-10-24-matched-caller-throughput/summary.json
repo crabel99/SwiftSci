@@ -1,0 +1,74 @@
+[
+  {
+    "condition": "optional_4",
+    "storage": "optional",
+    "callers": 4,
+    "samples": 24,
+    "cpu_ms_per_job": 194.98253125,
+    "completed_per_minute": 2283.7805920543096,
+    "charged_cpu_ns": 24957764000.0,
+    "sampled_peak_rss_bytes": 3675013120.0,
+    "retained_rss_bytes": 3277922304.0,
+    "sampled_resident_byte_seconds": 11026377671.843668,
+    "responses": {
+      "Aotizhongxin-default/read": 3047.0821045000002,
+      "Aotizhongxin-default/sort-matrix": 3025.7111459999996,
+      "energy-common/read": 3143.5257915,
+      "energy-common/sort-matrix": 3249.4460835
+    },
+    "operation_cpu_ms_by_case": {
+      "Aotizhongxin-default/read": 10.6245625,
+      "Aotizhongxin-default/sort-matrix": 14.608890625,
+      "energy-common/read": 266.89853125,
+      "energy-common/sort-matrix": 485.539078125
+    }
+  },
+  {
+    "condition": "compact_4",
+    "storage": "compact",
+    "callers": 4,
+    "samples": 24,
+    "cpu_ms_per_job": 195.9900703125,
+    "completed_per_minute": 2247.8743811240056,
+    "charged_cpu_ns": 25086729000.0,
+    "sampled_peak_rss_bytes": 2633031680.0,
+    "retained_rss_bytes": 2234335232.0,
+    "sampled_resident_byte_seconds": 7944338030.092026,
+    "responses": {
+      "Aotizhongxin-default/read": 3118.743125,
+      "Aotizhongxin-default/sort-matrix": 3086.197083,
+      "energy-common/read": 3183.565708,
+      "energy-common/sort-matrix": 3311.0866244999997
+    },
+    "operation_cpu_ms_by_case": {
+      "Aotizhongxin-default/read": 10.8010625,
+      "Aotizhongxin-default/sort-matrix": 14.357734375,
+      "energy-common/read": 282.9155,
+      "energy-common/sort-matrix": 473.314921875
+    }
+  },
+  {
+    "condition": "compact_5",
+    "storage": "compact",
+    "callers": 5,
+    "samples": 24,
+    "cpu_ms_per_job": 201.69996484375,
+    "completed_per_minute": 2620.0408954969726,
+    "charged_cpu_ns": 25817595500.0,
+    "sampled_peak_rss_bytes": 3326468096.0,
+    "retained_rss_bytes": 2797240320.0,
+    "sampled_resident_byte_seconds": 8368110955.705385,
+    "responses": {
+      "Aotizhongxin-default/read": 2624.959146,
+      "Aotizhongxin-default/sort-matrix": 2602.675666,
+      "energy-common/read": 2700.209771,
+      "energy-common/sort-matrix": 2865.308604
+    },
+    "operation_cpu_ms_by_case": {
+      "Aotizhongxin-default/read": 11.00328125,
+      "Aotizhongxin-default/sort-matrix": 14.671546875,
+      "energy-common/read": 290.04803125,
+      "energy-common/sort-matrix": 489.715484375
+    }
+  }
+]
