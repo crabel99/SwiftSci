@@ -1,0 +1,476 @@
+{
+  "decision": "Keep both candidates local and unpromoted; preserve production parser at 5b9c902977",
+  "commits": {
+    "trial_branch": "codex/csv-number-parser-trial",
+    "commits": {
+      "pair": "2518888f13ba6cabbc7248c4e350cd1c78884f83",
+      "compact-loop": "5e15435685de63f29a07300047900734f326ba21"
+    },
+    "active_branch": "codex/csv-compact-construction",
+    "active_head": "5b9c90297723cf53dcba17299c57778688e282e2",
+    "production_changed": false,
+    "remote_actions": false
+  },
+  "tests_per_candidate": {
+    "Debug": 439,
+    "Release": 439,
+    "failures": 0,
+    "skips": 0
+  },
+  "native_corpus_cases": 417865,
+  "oracle_checks_subset": 155721,
+  "corpus_results_sha256": "c1b0c406361b1f5548271b665571115ee09c61bda681cb405bdf7f8c4c21456f",
+  "analysis": {
+    "pair-workflows": {
+      "qualified": true,
+      "flags": [],
+      "jobs": 8192,
+      "storage": {
+        "optional": {
+          "parent_cpu_ms_per_job": 197.47761328125,
+          "candidate_cpu_ms_per_job": 193.9257734375,
+          "cpu_change_percent": -1.798603793479836,
+          "parent_peak_MiB": 3498.8125,
+          "candidate_peak_MiB": 3503.5078125,
+          "parent_throughput": 2245.087112404102,
+          "candidate_throughput": 2255.52894210284,
+          "throughput_change_percent": 0.46509686154481145,
+          "paired": {
+            "cpu_ratios": [
+              0.9704951406493626,
+              0.9918327750832866,
+              0.9799569857689833,
+              0.9857162689656723,
+              0.9842308124153515,
+              0.9436616714890352,
+              1.0070253589991869,
+              0.9852574653293528
+            ],
+            "median": 0.9847441388723521,
+            "rounds_lower_cpu": 7
+          },
+          "cases": {
+            "Aotizhongxin-default/read": {
+              "parent_ms": 11.05159375,
+              "candidate_ms": 10.99746875,
+              "change_percent": -0.489748367741083
+            },
+            "Aotizhongxin-default/sort-matrix": {
+              "parent_ms": 15.1825625,
+              "candidate_ms": 15.39734375,
+              "change_percent": 1.4146574400731193
+            },
+            "energy-common/read": {
+              "parent_ms": 267.14896875,
+              "candidate_ms": 259.844125,
+              "change_percent": -2.7343709332585675
+            },
+            "energy-common/sort-matrix": {
+              "parent_ms": 494.84453125,
+              "candidate_ms": 487.53396875,
+              "change_percent": -1.4773453152110538
+            }
+          }
+        },
+        "compact": {
+          "parent_cpu_ms_per_job": 194.558359375,
+          "candidate_cpu_ms_per_job": 191.3086640625,
+          "cpu_change_percent": -1.670293336631401,
+          "parent_peak_MiB": 2510.40625,
+          "candidate_peak_MiB": 2510.65625,
+          "parent_throughput": 2248.691315765035,
+          "candidate_throughput": 2242.2784254589487,
+          "throughput_change_percent": -0.28518322017464515,
+          "paired": {
+            "cpu_ratios": [
+              0.9816740150649307,
+              0.9700462401579512,
+              0.9767151497659147,
+              0.9845633985244444,
+              0.9790592305695838,
+              0.9780835659550471,
+              0.9820132027363297,
+              0.9682535133026818
+            ],
+            "median": 0.9785713982623154,
+            "rounds_lower_cpu": 8
+          },
+          "cases": {
+            "Aotizhongxin-default/read": {
+              "parent_ms": 10.992890625,
+              "candidate_ms": 11.1029375,
+              "change_percent": 1.0010731367574133
+            },
+            "Aotizhongxin-default/sort-matrix": {
+              "parent_ms": 14.686109375,
+              "candidate_ms": 14.832703125,
+              "change_percent": 0.998179614878425
+            },
+            "energy-common/read": {
+              "parent_ms": 275.797640625,
+              "candidate_ms": 268.41284375,
+              "change_percent": -2.6776142313128193
+            },
+            "energy-common/sort-matrix": {
+              "parent_ms": 475.26778125,
+              "candidate_ms": 468.805625,
+              "change_percent": -1.3596874235833778
+            }
+          }
+        }
+      }
+    },
+    "pair-workflows-reversed": {
+      "qualified": true,
+      "flags": [],
+      "jobs": 8192,
+      "storage": {
+        "optional": {
+          "parent_cpu_ms_per_job": 207.82158984375,
+          "candidate_cpu_ms_per_job": 200.66692578125,
+          "cpu_change_percent": -3.4426952790993504,
+          "parent_peak_MiB": 3506.6171875,
+          "candidate_peak_MiB": 3503.6484375,
+          "parent_throughput": 2109.9355262927206,
+          "candidate_throughput": 2154.2487941392274,
+          "throughput_change_percent": 2.100219049080021,
+          "paired": {
+            "cpu_ratios": [
+              0.9687484171480539,
+              0.9625773083051006,
+              0.9630348257835949,
+              0.9763338531570095,
+              0.9703686368606924,
+              0.9576097899688446,
+              0.9683172023466949,
+              0.9918647526406937
+            ],
+            "median": 0.9685328097473744,
+            "rounds_lower_cpu": 8
+          },
+          "cases": {
+            "Aotizhongxin-default/read": {
+              "parent_ms": 11.17896875,
+              "candidate_ms": 11.215828125,
+              "change_percent": 0.32972070880867843
+            },
+            "Aotizhongxin-default/sort-matrix": {
+              "parent_ms": 15.495484375,
+              "candidate_ms": 15.3369375,
+              "change_percent": -1.023181148540253
+            },
+            "energy-common/read": {
+              "parent_ms": 282.067234375,
+              "candidate_ms": 270.566578125,
+              "change_percent": -4.0772747942464775
+            },
+            "energy-common/sort-matrix": {
+              "parent_ms": 520.102328125,
+              "candidate_ms": 503.77940625,
+              "change_percent": -3.1384058467580966
+            }
+          }
+        },
+        "compact": {
+          "parent_cpu_ms_per_job": 203.5514765625,
+          "candidate_cpu_ms_per_job": 197.1186875,
+          "cpu_change_percent": -3.1602762952814167,
+          "parent_peak_MiB": 2511.1953125,
+          "candidate_peak_MiB": 2511.2109375,
+          "parent_throughput": 2118.758577471574,
+          "candidate_throughput": 2137.158566889343,
+          "throughput_change_percent": 0.868432562983501,
+          "paired": {
+            "cpu_ratios": [
+              0.9408314757051522,
+              0.9897340247969774,
+              0.9756136954417833,
+              0.9932797725231713,
+              0.9726660096209526,
+              0.9777064166639025,
+              0.9569609903763829,
+              0.9508056668104473
+            ],
+            "median": 0.974139852531368,
+            "rounds_lower_cpu": 8
+          },
+          "cases": {
+            "Aotizhongxin-default/read": {
+              "parent_ms": 11.0555,
+              "candidate_ms": 11.050609375,
+              "change_percent": -0.04423703134186496
+            },
+            "Aotizhongxin-default/sort-matrix": {
+              "parent_ms": 14.78015625,
+              "candidate_ms": 14.86796875,
+              "change_percent": 0.5941243009524921
+            },
+            "energy-common/read": {
+              "parent_ms": 288.765296875,
+              "candidate_ms": 276.62215625,
+              "change_percent": -4.205193891514081
+            },
+            "energy-common/sort-matrix": {
+              "parent_ms": 498.05159375,
+              "candidate_ms": 484.635921875,
+              "change_percent": -2.693630949755399
+            }
+          }
+        }
+      }
+    },
+    "pair-formats": {
+      "long-fallback-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 16.87075,
+        "candidate_cpu_ms": 17.168375,
+        "cpu_change_percent": 1.7641480076463711,
+        "parent_peak_MiB": 16.609375,
+        "candidate_peak_MiB": 16.671875
+      },
+      "one-digit-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 2.84475,
+        "candidate_cpu_ms": 2.807875,
+        "cpu_change_percent": -1.2962474734159457,
+        "parent_peak_MiB": 11.90625,
+        "candidate_peak_MiB": 12.015625
+      },
+      "quoted-padded-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 6.172625,
+        "candidate_cpu_ms": 6.0195,
+        "cpu_change_percent": -2.4807112047143587,
+        "parent_peak_MiB": 15.671875,
+        "candidate_peak_MiB": 13.84375
+      },
+      "scientific-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 11.178625,
+        "candidate_cpu_ms": 10.926875,
+        "cpu_change_percent": -2.252065884668286,
+        "parent_peak_MiB": 14.609375,
+        "candidate_peak_MiB": 14.8046875
+      },
+      "short-limit-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 4.6005,
+        "candidate_cpu_ms": 4.46975,
+        "cpu_change_percent": -2.842082382349742,
+        "parent_peak_MiB": 15.40625,
+        "candidate_peak_MiB": 15.421875
+      },
+      "six-fraction-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 4.369375,
+        "candidate_cpu_ms": 4.169625,
+        "cpu_change_percent": -4.571592046917461,
+        "parent_peak_MiB": 14.6875,
+        "candidate_peak_MiB": 14.6875
+      }
+    },
+    "pair-densities": {
+      "alternating-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 13.4585,
+        "candidate_cpu_ms": 13.16075,
+        "cpu_change_percent": -2.2123565033250414,
+        "parent_peak_MiB": 22.109375,
+        "candidate_peak_MiB": 22.171875
+      },
+      "missing-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 13.728375,
+        "candidate_cpu_ms": 13.65125,
+        "cpu_change_percent": -0.5617926375117266,
+        "parent_peak_MiB": 19.765625,
+        "candidate_peak_MiB": 19.734375
+      },
+      "present-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 13.290625,
+        "candidate_cpu_ms": 13.010875,
+        "cpu_change_percent": -2.1048671525981666,
+        "parent_peak_MiB": 24.265625,
+        "candidate_peak_MiB": 24.3515625
+      },
+      "sparse-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 13.731375,
+        "candidate_cpu_ms": 13.35075,
+        "cpu_change_percent": -2.771936532211816,
+        "parent_peak_MiB": 24.4375,
+        "candidate_peak_MiB": 24.515625
+      }
+    },
+    "compact-loop-formats": {
+      "long-fallback-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 16.96475,
+        "candidate_cpu_ms": 16.78925,
+        "cpu_change_percent": -1.0344980032125473,
+        "parent_peak_MiB": 16.59375,
+        "candidate_peak_MiB": 16.578125
+      },
+      "one-digit-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 2.771125,
+        "candidate_cpu_ms": 2.88475,
+        "cpu_change_percent": 4.10032026703957,
+        "parent_peak_MiB": 11.921875,
+        "candidate_peak_MiB": 11.9140625
+      },
+      "quoted-padded-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 5.95425,
+        "candidate_cpu_ms": 5.903375,
+        "cpu_change_percent": -0.8544317084435482,
+        "parent_peak_MiB": 15.359375,
+        "candidate_peak_MiB": 15.328125
+      },
+      "scientific-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 10.883375,
+        "candidate_cpu_ms": 10.7865,
+        "cpu_change_percent": -0.890119103678777,
+        "parent_peak_MiB": 14.578125,
+        "candidate_peak_MiB": 14.578125
+      },
+      "short-limit-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 4.58075,
+        "candidate_cpu_ms": 4.565125,
+        "cpu_change_percent": -0.34110134803252423,
+        "parent_peak_MiB": 14.578125,
+        "candidate_peak_MiB": 15.3203125
+      },
+      "six-fraction-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 4.38025,
+        "candidate_cpu_ms": 4.400125,
+        "cpu_change_percent": 0.45374122481594004,
+        "parent_peak_MiB": 14.6875,
+        "candidate_peak_MiB": 14.6875
+      }
+    },
+    "compact-loop-densities": {
+      "alternating-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 13.45425,
+        "candidate_cpu_ms": 13.635125,
+        "cpu_change_percent": 1.3443707378709258,
+        "parent_peak_MiB": 22.09375,
+        "candidate_peak_MiB": 22.09375
+      },
+      "missing-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 13.11,
+        "candidate_cpu_ms": 13.149625,
+        "cpu_change_percent": 0.30225019069411996,
+        "parent_peak_MiB": 19.609375,
+        "candidate_peak_MiB": 19.625
+      },
+      "present-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 13.557125,
+        "candidate_cpu_ms": 13.36575,
+        "cpu_change_percent": -1.4116193514480346,
+        "parent_peak_MiB": 24.171875,
+        "candidate_peak_MiB": 24.265625
+      },
+      "sparse-screen": {
+        "qualified": true,
+        "flags": [],
+        "parent_cpu_ms": 13.790125,
+        "candidate_cpu_ms": 13.744875,
+        "cpu_change_percent": -0.32813335629662266,
+        "parent_peak_MiB": 24.4375,
+        "candidate_peak_MiB": 24.453125
+      }
+    }
+  },
+  "longer_confirmations": {
+    "long-fallback-confirm": {
+      "cpu_change_percent": 2.1183280263867843,
+      "median_paired_cpu_change_percent": 2.0144824403153017,
+      "rounds_more_cpu": 8,
+      "paired_ratios": [
+        1.0176575839967295,
+        1.0210331118860096,
+        1.018191977337994,
+        1.0219730788450117,
+        1.0225329056033121,
+        1.0112352923302954,
+        1.0266328983239503,
+        1.0192565369202966
+      ],
+      "queues": 48,
+      "reads": 1536,
+      "qualified": true
+    },
+    "compact-loop-fallback": {
+      "cpu_change_percent": -0.04148436904720665,
+      "median_paired_cpu_change_percent": -0.12236887938965602,
+      "rounds_more_cpu": 2,
+      "paired_ratios": [
+        0.9898865239434291,
+        1.0038297936898957,
+        0.9986137191987203,
+        0.9953687744488242,
+        0.9992200413659988,
+        0.9989389032134864,
+        0.9904361235990214,
+        1.0077197444821788
+      ],
+      "queues": 48,
+      "reads": 1536,
+      "qualified": true
+    },
+    "compact-loop-one-digit-confirm": {
+      "cpu_change_percent": 3.4894060650660697,
+      "median_paired_cpu_change_percent": 1.1659857492976489,
+      "rounds_more_cpu": 6,
+      "paired_ratios": [
+        1.012715839420918,
+        1.0090929563063364,
+        1.0373330900021291,
+        1.0609946902218772,
+        1.010603875565035,
+        0.9998979738813136,
+        0.9973062196259388,
+        1.0450700731737568
+      ],
+      "queues": 48,
+      "reads": 1536,
+      "qualified": true
+    }
+  },
+  "interrupted_panel": {
+    "name": "compact-loop-workflows",
+    "reason": "Own driver intentionally interrupted to investigate one-digit regression; no qualified result or postflight claimed",
+    "completed_queues": 18,
+    "qualified": false
+  },
+  "schema": "full_explicit",
+  "inference_performance_claim": false,
+  "remote_actions": false
+}
