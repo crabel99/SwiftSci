@@ -1,0 +1,112 @@
+{
+  "batches": 128,
+  "completed_jobs": 2048,
+  "qualified": true,
+  "quality_flags": [],
+  "cases": [
+    {
+      "concurrency": 1,
+      "qualified": true,
+      "medians": {
+        "optional": {
+          "charged_cpu_ns": 2882427000.0,
+          "elapsed_ns": 1410867229.0,
+          "sampled_peak_rss_bytes": 940646400.0
+        },
+        "compact": {
+          "charged_cpu_ns": 2918015000.0,
+          "elapsed_ns": 1467741604.0,
+          "sampled_peak_rss_bytes": 683393024.0
+        },
+        "optional_twin": {
+          "charged_cpu_ns": 2908363500.0,
+          "elapsed_ns": 1439543625.0,
+          "sampled_peak_rss_bytes": 940056576.0
+        },
+        "compact_twin": {
+          "charged_cpu_ns": 2928509500.0,
+          "elapsed_ns": 1461329979.0,
+          "sampled_peak_rss_bytes": 690438144.0
+        }
+      }
+    },
+    {
+      "concurrency": 2,
+      "qualified": true,
+      "medians": {
+        "optional": {
+          "charged_cpu_ns": 2990016500.0,
+          "elapsed_ns": 820542791.5,
+          "sampled_peak_rss_bytes": 1750048768.0
+        },
+        "compact": {
+          "charged_cpu_ns": 2948049000.0,
+          "elapsed_ns": 817609812.5,
+          "sampled_peak_rss_bytes": 1237221376.0
+        },
+        "optional_twin": {
+          "charged_cpu_ns": 2983342500.0,
+          "elapsed_ns": 812767187.5,
+          "sampled_peak_rss_bytes": 1754079232.0
+        },
+        "compact_twin": {
+          "charged_cpu_ns": 2932165500.0,
+          "elapsed_ns": 821525021.0,
+          "sampled_peak_rss_bytes": 1238319104.0
+        }
+      }
+    },
+    {
+      "concurrency": 4,
+      "qualified": true,
+      "medians": {
+        "optional": {
+          "charged_cpu_ns": 3234722000.0,
+          "elapsed_ns": 515727416.5,
+          "sampled_peak_rss_bytes": 2997673984.0
+        },
+        "compact": {
+          "charged_cpu_ns": 3146969500.0,
+          "elapsed_ns": 519224479.5,
+          "sampled_peak_rss_bytes": 2118254592.0
+        },
+        "optional_twin": {
+          "charged_cpu_ns": 3243181500.0,
+          "elapsed_ns": 516796625.0,
+          "sampled_peak_rss_bytes": 3090817024.0
+        },
+        "compact_twin": {
+          "charged_cpu_ns": 3188831500.0,
+          "elapsed_ns": 531713667.0,
+          "sampled_peak_rss_bytes": 2121089024.0
+        }
+      }
+    },
+    {
+      "concurrency": 8,
+      "qualified": true,
+      "medians": {
+        "optional": {
+          "charged_cpu_ns": 3697481500.0,
+          "elapsed_ns": 383033875.0,
+          "sampled_peak_rss_bytes": 4468776960.0
+        },
+        "compact": {
+          "charged_cpu_ns": 3570026500.0,
+          "elapsed_ns": 383696312.5,
+          "sampled_peak_rss_bytes": 2997592064.0
+        },
+        "optional_twin": {
+          "charged_cpu_ns": 3698585500.0,
+          "elapsed_ns": 382823771.0,
+          "sampled_peak_rss_bytes": 4477624320.0
+        },
+        "compact_twin": {
+          "charged_cpu_ns": 3559786500.0,
+          "elapsed_ns": 379480000.0,
+          "sampled_peak_rss_bytes": 2996862976.0
+        }
+      }
+    }
+  ]
+}
