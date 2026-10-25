@@ -1,0 +1,495 @@
+{
+  "provenance": {
+    "parent_commit": "575f2f63cbd3c35c0611ba3a977b066b2e4fd390",
+    "source_commit": "58db37c4b3c97b287186c377f76f89abcbbb0b0d",
+    "changed_measured_sources": [
+      "Sources/SwiftDataFrame/IO/VectorizedByteParsers.swift"
+    ],
+    "measured_source_files": 51,
+    "historical_receipts_preserved": true,
+    "all_measured_hashes_match_named_commits": true,
+    "dependencies_equal": true,
+    "source_test_sha256": "90abbd6712bdc98b6591ba98f3f43e59fbcef8105d8a38fec2f773727456017b"
+  },
+  "failing_before": {
+    "exit_code": 65,
+    "summary": {
+      "devicesAndConfigurations": [
+        {
+          "device": {
+            "architecture": "arm64",
+            "deviceId": "00006041-001C093C0A80801C",
+            "deviceName": "My Mac",
+            "modelName": "MacBook Pro",
+            "osBuildNumber": "26A434",
+            "osVersion": "27.0.1",
+            "platform": "macOS"
+          },
+          "expectedFailures": 0,
+          "failedTests": 1,
+          "passedTests": 0,
+          "skippedTests": 0,
+          "testPlanConfiguration": {
+            "configurationId": "1",
+            "configurationName": "Test Scheme Action"
+          }
+        }
+      ],
+      "environmentDescription": "SwiftSci-Package \u00b7 Built with macOS 27.0.1",
+      "expectedFailures": 0,
+      "failedTests": 1,
+      "finishTime": 1792889755.3,
+      "passedTests": 0,
+      "result": "Failed",
+      "runtimeWarnings": [],
+      "skippedTests": 0,
+      "startTime": 1792889735.543,
+      "statistics": [],
+      "testFailures": [
+        {
+          "failureText": "Exceeded max restart count of 2. (Underlying Error: Crash: xctest at Swift runtime failure: arithmetic overflow)",
+          "targetName": "SwiftDataFrameTests",
+          "testIdentifier": 1,
+          "testIdentifierString": "xctest (29756) encountered an error",
+          "testName": "xctest (29756) encountered an error"
+        }
+      ],
+      "title": "Test - SwiftSci-Package",
+      "topInsights": [],
+      "totalTestCount": 1
+    }
+  },
+  "native_tests": {
+    "debug": {
+      "devicesAndConfigurations": [
+        {
+          "device": {
+            "architecture": "arm64",
+            "deviceId": "00006041-001C093C0A80801C",
+            "deviceName": "My Mac",
+            "modelName": "MacBook Pro",
+            "osBuildNumber": "26A434",
+            "osVersion": "27.0.1",
+            "platform": "macOS"
+          },
+          "expectedFailures": 0,
+          "failedTests": 0,
+          "passedTests": 1015,
+          "skippedTests": 0,
+          "testPlanConfiguration": {
+            "configurationId": "1",
+            "configurationName": "Test Scheme Action"
+          }
+        }
+      ],
+      "environmentDescription": "SwiftSci-Package \u00b7 Built with macOS 27.0.1",
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1792890432.305,
+      "passedTests": 447,
+      "result": "Passed",
+      "runtimeWarnings": [],
+      "skippedTests": 0,
+      "startTime": 1792890376.996,
+      "statistics": [
+        {
+          "subtitle": "652 test runs",
+          "title": "84 tests ran with dynamic parameters"
+        }
+      ],
+      "testFailures": [],
+      "title": "Test - SwiftSci-Package",
+      "topInsights": [
+        {
+          "category": "Longest Test Runs",
+          "impact": "57% of duration",
+          "text": "6 longest test runs with outlier durations exceeding 1.38s (three standard deviations)"
+        }
+      ],
+      "totalTestCount": 447
+    },
+    "release": {
+      "devicesAndConfigurations": [
+        {
+          "device": {
+            "architecture": "arm64",
+            "deviceId": "00006041-001C093C0A80801C",
+            "deviceName": "My Mac",
+            "modelName": "MacBook Pro",
+            "osBuildNumber": "26A434",
+            "osVersion": "27.0.1",
+            "platform": "macOS"
+          },
+          "expectedFailures": 0,
+          "failedTests": 0,
+          "passedTests": 1015,
+          "skippedTests": 0,
+          "testPlanConfiguration": {
+            "configurationId": "1",
+            "configurationName": "Test Scheme Action"
+          }
+        }
+      ],
+      "environmentDescription": "SwiftSci-Package \u00b7 Built with macOS 27.0.1",
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1792890643.552,
+      "passedTests": 447,
+      "result": "Passed",
+      "runtimeWarnings": [],
+      "skippedTests": 0,
+      "startTime": 1792890618.613,
+      "statistics": [
+        {
+          "subtitle": "652 test runs",
+          "title": "84 tests ran with dynamic parameters"
+        }
+      ],
+      "testFailures": [],
+      "title": "Test - SwiftSci-Package",
+      "topInsights": [
+        {
+          "category": "Longest Test Runs",
+          "impact": "91% of duration",
+          "text": "4 longest test runs with outlier durations exceeding 1.06s (three standard deviations)"
+        }
+      ],
+      "totalTestCount": 447
+    }
+  },
+  "corpus": {
+    "rows": 6796,
+    "nulls": 630,
+    "storage_modes": 2
+  },
+  "panels": {
+    "integer-workflows": {
+      "paired": {
+        "optional": {
+          "cpu_ratios": [
+            1.0589991398067096,
+            1.047239520260379,
+            1.055600185163355,
+            1.0539078152848294,
+            1.0538162219038747,
+            1.035835022884648,
+            1.065398091824313,
+            1.062602602408705
+          ],
+          "median": 1.0547540002240923,
+          "rounds_lower_cpu": 0
+        },
+        "compact": {
+          "cpu_ratios": [
+            1.0677705410417442,
+            1.0695211992981675,
+            1.0558058558372323,
+            1.0482307403050364,
+            1.0969773123675026,
+            1.1008142152797957,
+            1.0669297404188127,
+            1.0589294880039812
+          ],
+          "median": 1.0673501407302783,
+          "rounds_lower_cpu": 0
+        }
+      },
+      "qualified": true,
+      "flags": [],
+      "queues": 64,
+      "jobs": 40960,
+      "medians": {
+        "parent_optional": {
+          "charged_cpu_ns": 865387000.0,
+          "elapsed_ns": 138375167.0,
+          "sampled_peak_rss_bytes": 61587456.0,
+          "completed_per_minute": 277506.6779155479,
+          "sampled_resident_byte_seconds": 7972156.488998912,
+          "retained_rss_bytes": 59408384.0
+        },
+        "candidate_optional": {
+          "charged_cpu_ns": 910043000.0,
+          "elapsed_ns": 138664062.0,
+          "sampled_peak_rss_bytes": 61390848.0,
+          "completed_per_minute": 276989.2686571163,
+          "sampled_resident_byte_seconds": 8015975.926218752,
+          "retained_rss_bytes": 59514880.0
+        },
+        "parent_compact": {
+          "charged_cpu_ns": 867641000.0,
+          "elapsed_ns": 136349146.0,
+          "sampled_peak_rss_bytes": 61710336.0,
+          "completed_per_minute": 281638.88001841714,
+          "sampled_resident_byte_seconds": 7862838.315655168,
+          "retained_rss_bytes": 59604992.0
+        },
+        "candidate_compact": {
+          "charged_cpu_ns": 924527500.0,
+          "elapsed_ns": 141564062.5,
+          "sampled_peak_rss_bytes": 61923328.0,
+          "completed_per_minute": 271255.94113703293,
+          "sampled_resident_byte_seconds": 8182377.0863616,
+          "retained_rss_bytes": 59604992.0
+        }
+      },
+      "per_case_operation_cpu_ns": {
+        "parent_optional": {
+          "short-integers/read": 970503.90625,
+          "long-integers/read": 1875273.4375,
+          "formatted-integers/read": 1293148.4375,
+          "mixed-integers/read": 1016371.09375,
+          "double-control/read": 949390.625
+        },
+        "candidate_optional": {
+          "short-integers/read": 1013996.09375,
+          "long-integers/read": 2014582.03125,
+          "formatted-integers/read": 1420414.0625,
+          "mixed-integers/read": 1057539.0625,
+          "double-control/read": 947285.15625
+        },
+        "parent_compact": {
+          "short-integers/read": 969191.40625,
+          "long-integers/read": 1868070.3125,
+          "formatted-integers/read": 1293539.0625,
+          "mixed-integers/read": 1006675.78125,
+          "double-control/read": 985113.28125
+        },
+        "candidate_compact": {
+          "short-integers/read": 1010957.03125,
+          "long-integers/read": 2039335.9375,
+          "formatted-integers/read": 1427093.75,
+          "mixed-integers/read": 1060988.28125,
+          "double-control/read": 991789.0625
+        }
+      },
+      "max_sum_kernel_peak_bytes": 71745536,
+      "all_kernel_peak_sums_within_4GiB": true
+    },
+    "integer-final-workflows": {
+      "paired": {
+        "optional": {
+          "cpu_ratios": [
+            1.0118847687817019,
+            0.9863962485824422,
+            1.008091927506878,
+            0.9968447978412434,
+            0.9930638377476207,
+            0.9756563962292998,
+            0.9996224409602311,
+            0.9534889481114849
+          ],
+          "median": 0.994954317794432,
+          "rounds_lower_cpu": 6
+        },
+        "compact": {
+          "cpu_ratios": [
+            0.9663139459551817,
+            1.0067413833663459,
+            0.9988027719761253,
+            1.0035831085894134,
+            0.998429512910878,
+            1.0088568360693846,
+            1.0164342681756824,
+            1.05479389307982
+          ],
+          "median": 1.0051622459778797,
+          "rounds_lower_cpu": 3
+        }
+      },
+      "qualified": true,
+      "flags": [],
+      "queues": 64,
+      "jobs": 40960,
+      "medians": {
+        "parent_optional": {
+          "charged_cpu_ns": 884686000.0,
+          "elapsed_ns": 140351250.5,
+          "sampled_peak_rss_bytes": 60801024.0,
+          "completed_per_minute": 273599.2747004362,
+          "sampled_resident_byte_seconds": 7974278.338306049,
+          "retained_rss_bytes": 58843136.0
+        },
+        "candidate_optional": {
+          "charged_cpu_ns": 878099000.0,
+          "elapsed_ns": 139214542.0,
+          "sampled_peak_rss_bytes": 60964864.0,
+          "completed_per_minute": 275833.97309387894,
+          "sampled_resident_byte_seconds": 8031770.935820288,
+          "retained_rss_bytes": 59031552.0
+        },
+        "parent_compact": {
+          "charged_cpu_ns": 880102500.0,
+          "elapsed_ns": 138735124.5,
+          "sampled_peak_rss_bytes": 60964864.0,
+          "completed_per_minute": 276796.31642109435,
+          "sampled_resident_byte_seconds": 7977972.637401088,
+          "retained_rss_bytes": 59211776.0
+        },
+        "candidate_compact": {
+          "charged_cpu_ns": 881421500.0,
+          "elapsed_ns": 137981854.5,
+          "sampled_peak_rss_bytes": 60997632.0,
+          "completed_per_minute": 278297.7811239858,
+          "sampled_resident_byte_seconds": 7811520.269721599,
+          "retained_rss_bytes": 58998784.0
+        }
+      },
+      "per_case_operation_cpu_ns": {
+        "parent_optional": {
+          "short-integers/read": 984843.75,
+          "long-integers/read": 1919167.96875,
+          "formatted-integers/read": 1338441.40625,
+          "mixed-integers/read": 1031859.375,
+          "double-control/read": 970757.8125
+        },
+        "candidate_optional": {
+          "short-integers/read": 949707.03125,
+          "long-integers/read": 1909792.96875,
+          "formatted-integers/read": 1383066.40625,
+          "mixed-integers/read": 1003359.375,
+          "double-control/read": 970269.53125
+        },
+        "parent_compact": {
+          "short-integers/read": 976816.40625,
+          "long-integers/read": 1903980.46875,
+          "formatted-integers/read": 1337332.03125,
+          "mixed-integers/read": 1026300.78125,
+          "double-control/read": 1006625.0
+        },
+        "candidate_compact": {
+          "short-integers/read": 950269.53125,
+          "long-integers/read": 1909585.9375,
+          "formatted-integers/read": 1377738.28125,
+          "mixed-integers/read": 1000316.40625,
+          "double-control/read": 1009957.03125
+        }
+      },
+      "max_sum_kernel_peak_bytes": 66437120,
+      "all_kernel_peak_sums_within_4GiB": true
+    },
+    "reference-final-workflows": {
+      "paired": {
+        "optional": {
+          "cpu_ratios": [
+            1.1251782587273351,
+            1.007403360905615,
+            0.9605811833367297,
+            0.9902872370045415,
+            0.9986803240493114,
+            1.0152682558336252,
+            0.9947745041334383,
+            1.008644126765201
+          ],
+          "median": 1.0030418424774632,
+          "rounds_lower_cpu": 4
+        },
+        "compact": {
+          "cpu_ratios": [
+            0.9721539184660648,
+            0.9965308384411438,
+            1.0248662971557405,
+            0.9975289687111455,
+            1.0615957641312919,
+            0.9980474544178685,
+            0.9969325324462692,
+            0.9861206313028914
+          ],
+          "median": 0.9972307505787074,
+          "rounds_lower_cpu": 6
+        }
+      },
+      "qualified": true,
+      "flags": [],
+      "queues": 64,
+      "jobs": 8192,
+      "medians": {
+        "parent_optional": {
+          "charged_cpu_ns": 31260799500.0,
+          "elapsed_ns": 4270693437.5,
+          "sampled_peak_rss_bytes": 3677224960.0,
+          "completed_per_minute": 1798.3567001588149,
+          "sampled_resident_byte_seconds": 13959039225.506512,
+          "retained_rss_bytes": 3291389952.0
+        },
+        "candidate_optional": {
+          "charged_cpu_ns": 31398413500.0,
+          "elapsed_ns": 4342373916.5,
+          "sampled_peak_rss_bytes": 3675365376.0,
+          "completed_per_minute": 1768.6656481604532,
+          "sampled_resident_byte_seconds": 14200005451.80047,
+          "retained_rss_bytes": 3288375296.0
+        },
+        "parent_compact": {
+          "charged_cpu_ns": 30681724000.0,
+          "elapsed_ns": 4268307083.0,
+          "sampled_peak_rss_bytes": 2633621504.0,
+          "completed_per_minute": 1799.3387312261593,
+          "sampled_resident_byte_seconds": 9817812711.959265,
+          "retained_rss_bytes": 2239438848.0
+        },
+        "candidate_compact": {
+          "charged_cpu_ns": 31267347000.0,
+          "elapsed_ns": 4350591041.5,
+          "sampled_peak_rss_bytes": 2631704576.0,
+          "completed_per_minute": 1766.3968889595376,
+          "sampled_resident_byte_seconds": 10017395069.31381,
+          "retained_rss_bytes": 2239422464.0
+        }
+      },
+      "per_case_operation_cpu_ns": {
+        "parent_optional": {
+          "Aotizhongxin-default/read": 13960812.5,
+          "Aotizhongxin-default/sort-matrix": 19727281.25,
+          "energy-common/read": 308791406.25,
+          "energy-common/sort-matrix": 631831421.875
+        },
+        "candidate_optional": {
+          "Aotizhongxin-default/read": 14132718.75,
+          "Aotizhongxin-default/sort-matrix": 19622578.125,
+          "energy-common/read": 313385640.625,
+          "energy-common/sort-matrix": 632050906.25
+        },
+        "parent_compact": {
+          "Aotizhongxin-default/read": 13695390.625,
+          "Aotizhongxin-default/sort-matrix": 18776359.375,
+          "energy-common/read": 319076921.875,
+          "energy-common/sort-matrix": 604559359.375
+        },
+        "candidate_compact": {
+          "Aotizhongxin-default/read": 13855765.625,
+          "Aotizhongxin-default/sort-matrix": 18922890.625,
+          "energy-common/read": 323633921.875,
+          "energy-common/sort-matrix": 616880296.875
+        }
+      },
+      "max_sum_kernel_peak_bytes": 3839295488,
+      "all_kernel_peak_sums_within_4GiB": true
+    }
+  },
+  "audits": {
+    "integer-workflows": {
+      "queues": 64,
+      "jobs": 40960,
+      "full_output_checks": 40,
+      "qualified": true,
+      "source_and_binary_receipts_match": true,
+      "quality_policy_recomputed": true
+    },
+    "integer-final-workflows": {
+      "queues": 64,
+      "jobs": 40960,
+      "full_output_checks": 40,
+      "qualified": true,
+      "source_and_binary_receipts_match": true,
+      "quality_policy_recomputed": true
+    },
+    "reference-final-workflows": {
+      "queues": 64,
+      "jobs": 8192,
+      "full_output_checks": 32,
+      "qualified": true,
+      "source_and_binary_receipts_match": true,
+      "quality_policy_recomputed": true
+    }
+  }
+}
