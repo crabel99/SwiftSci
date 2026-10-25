@@ -1,0 +1,588 @@
+{
+  "source_head": "06adea701994f8fbbe82481684dfdafd77958a09",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "method_created_before_plan": true,
+  "method_file_sha256": "49f2df1334d0bc8524494f70203969e4b70fd58e8b3b079b3931faa7eb1a2f8e",
+  "saved_and_replayed_diagnostics_equal": true,
+  "original_audit_unchanged": true,
+  "verified_capture_files": 143,
+  "all_capture_bytes_unchanged": true,
+  "queues": 24,
+  "jobs": 192,
+  "full_output_checks": 48,
+  "control_failures": [
+    {
+      "label": "swiftsci_optional",
+      "metric": "charged_cpu_ns",
+      "ratio": 0.8462332930503381
+    },
+    {
+      "label": "swiftsci_optional",
+      "metric": "elapsed_ns",
+      "ratio": 1.3334750075969437
+    },
+    {
+      "label": "swiftsci_compact",
+      "metric": "elapsed_ns",
+      "ratio": 1.1418063954777802
+    },
+    {
+      "label": "polars",
+      "metric": "charged_cpu_ns",
+      "ratio": 0.8827260807156885
+    },
+    {
+      "label": "polars",
+      "metric": "elapsed_ns",
+      "ratio": 1.2152593367212912
+    }
+  ],
+  "performance_qualified": false,
+  "owned_processes": [
+    {
+      "pid": 58067,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58097,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58160,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58202,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58347,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58400,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58475,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58536,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58537,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58538,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58539,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58553,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58554,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58555,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58556,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58572,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58581,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58586,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58591,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58711,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58719,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58725,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58726,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58761,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58766,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58771,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58780,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58811,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58816,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58825,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58831,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58925,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58933,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58944,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 58947,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59328,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59329,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59330,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59331,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59406,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59411,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59416,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59425,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59500,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59501,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59502,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59526,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59544,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59549,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59554,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59560,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59603,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59608,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59613,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59623,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59641,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59642,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59647,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59648,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59658,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59663,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59673,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59678,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59721,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59726,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59727,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59732,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59751,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59757,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59766,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59771,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59802,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59811,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59817,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59822,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59845,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59846,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59847,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59848,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59869,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59870,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59871,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59872,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59886,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59895,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59900,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59906,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59954,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59959,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59964,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 59965,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60002,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60011,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60018,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60028,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60059,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60068,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60073,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60079,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60108,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60109,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60110,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60111,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60124,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60183,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60227,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60336,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 60382,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "pid": 61098,
+      "absent": true,
+      "output": ""
+    }
+  ]
+}

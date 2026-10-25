@@ -1,0 +1,410 @@
+diff --git a/Benchmarks/CPUThroughput/COUNTER_EVIDENCE.md b/Benchmarks/CPUThroughput/COUNTER_EVIDENCE.md
+new file mode 100644
+index 0000000000..92b4f2d898
+--- /dev/null
++++ b/Benchmarks/CPUThroughput/COUNTER_EVIDENCE.md
+@@ -0,0 +1,56 @@
++# CPU counter evidence protocol
++
++`cpu-counter-evidence-v1` describes the CPU work and execution rates in completed external-engine queue comparisons. It reuses recorded counters and the full existing audit. It adds no work to timed queues and changes no acceptance limit.
++
++## Comparison boundary
++
++The comparison retains the complete input schemas, native-bit output checks, stable missing-last sorting, writable C-order matrices, and timed output release. Each library uses its native CPU pools. Four worker processes serve the same queue under the same memory ceiling. Pinned executable, interpreter, source, and input hashes identify the measured programs.
++
++The full panel rotates every primary condition and its identical-binary twin through every order position. The Arrow-to-pandas extension retains both pandas readers. No condition, round, failed control, or partial result is dropped because its timing is inconvenient.
++
++For E-core comparisons, `e-core-workers-observer-v2` requires zero P-core user time in every compute worker. Kernel P/E time and the ordinary controller's P/E time remain separate. The requested observation cadence and its coverage checks remain unchanged. This verifies application core type, not an exact hardware clock rate.
++
++AC power and the recorded power policy remain required. The controller records the surrounding system state. No artificial workload forces a clock rate, and no operator waits for a favorable temperature before selecting a run. Balanced order and identical-condition controls address repeatability under the declared conditions.
++
++## Unchanged acceptance
++
++The original structural and accounting audit must succeed before the diagnostic report is written. A successful audit can still return failed quality controls. The report copies that verdict and every failure without modification.
++
++The existing twin allowances remain 10% for charged CPU and elapsed time, and 5% plus 8 MiB per caller for sampled peak RSS. Coverage and full-output checks remain mandatory. A smoke panel never qualifies comparative performance. A failed full panel remains unqualified, even when the new counters suggest a possible explanation.
++
++Freeze source hashes, work totals, order, core profile, and these limits before collecting a new panel. Keep every completed attempt. Define any later protocol change as a new experiment rather than adjusting recorded measurements or retrying until a panel passes.
++
++## Counter definitions
++
++Apple's Recount accounting reports total counters and P-only counters. Subtracting P-only from total gives E-core work. Instructions and cycles include user and kernel execution; the exposed counts do not partition those two privilege levels. [Apple Recount documentation](https://github.com/apple-oss-distributions/xnu/blob/f6217f891ac0bb64f3d375211650a4c1ff8ca1ea/doc/observability/recount.md)
++
++Each queue keeps worker totals separate from controller totals. Worker counters are summed before division.
++
++| Quantity | Definition | Limit |
++| --- | --- | --- |
++| Instructions per job | Counted instructions divided by completed jobs | Different instructions can do different work |
++| Cycles per job | Counted cycles divided by completed jobs | Includes stalls and user and kernel work |
++| Core-class CPU time | User plus kernel time on that class | Wider interval than the queue wall timer |
++| Cycles per CPU ns | Class cycles divided by class CPU nanoseconds | Accounted rate, not direct hardware frequency |
++| Instructions per cycle | Class instructions divided by class cycles | Depends on instruction mix and memory behavior |
++| Twin ratio | Twin median divided by primary median | Descriptive, no new acceptance threshold |
++
++Worker P-class counters describe permitted kernel work because P-core user time must be zero. Ratios against very small P counts can be large and unstable. A zero denominator yields an unavailable ratio, not a zero rate. Medians keep primary and twin labels separate. CPU milliseconds and cycles per CPU nanosecond share a denominator, so their association is not independent evidence of frequency scaling.
++
++A separately instrumented fixed-loop experiment can test whether hardware frequency varies under a scheduling policy. It cannot assign frequencies to earlier queue receipts. Queue-level claims about actual hardware frequencies require concurrent direct telemetry with documented clock domains, sample windows, and alignment uncertainty. Neither nominal thermal pressure nor zero sampled forced-idle endpoints rules out every thermal influence or brief scheduling event.
++
++These counters support no energy estimate. They do not normalize timing, automatically classify a control failure, or rank libraries by instructions alone. Report throughput, CPU work, and memory together. More throughput with higher resource consumption remains a tradeoff.
++
++## Evidence files
++
++`counter-evidence.json` records every queue's worker and controller counts, separate E and P values, condition medians, twin ratios, the unchanged audit, and analysis provenance. Input and analysis-source hashes bind the report to its receipts. `report.md` presents the same evidence for review.
++
++The analyzer reruns the full comparison audit in a temporary directory. Original queue receipts and generated comparison reports remain untouched. A mismatched source, executable, interpreter, raw receipt, or saved audit prevents analysis rather than silently accepting inconsistent evidence.
++
++## Predeclared collection
++
++The analyzer's `--collect` launcher creates `method.json` before starting `compare_e_cores.py`. The manifest records the exact command, source head, analyzer and protocol definitions, controller source hashes, core profile, quality limits, and capture location. No environment override is added by this wrapper. The existing controller records its environment and clears inherited library thread caps.
++
++After collection, the analyzer checks the manifest's unchanged bytes, all recorded source hashes, and its agreement with the measured plan. The report retains the manifest and its hash. Original comparison files remain in `comparison/panel`; diagnostics are written separately. A mismatch writes a failure receipt instead of a diagnostic report.
++
++A replay without this wrapper is retrospective. Its hashes bind the report to the current input files, not to a trusted historical baseline. The complete audit still checks internal consistency. The report records whether the method was predeclared.
+diff --git a/Benchmarks/CPUThroughput/README.md b/Benchmarks/CPUThroughput/README.md
+index efa88d34bf..8c03f312fa 100644
+--- a/Benchmarks/CPUThroughput/README.md
++++ b/Benchmarks/CPUThroughput/README.md
+@@ -214,3 +214,30 @@ The sampler uses absolute monotonic deadlines with a requested 10 ms interval. I
+ Coverage requires every queue to have an effective gap no greater than 50 ms and every scan to take no longer than 50 ms. A coverage failure prevents qualification and remains visible in the raw receipts and audit. This is a measurement-quality limit, not a scheduling guarantee or proof of the instantaneous memory peak.
+ 
+ Physical footprint supplements RSS. It does not replace sampled peak RSS or its repeatability control. Reusable memory is not available through this unprivileged cross-process probe. The work totals, native pools, engine panel, twins, output checks, memory ceiling, and CPU, elapsed-time, and RSS allowances are unchanged. A smoke run cannot qualify comparative performance.
++
++## Explain counter work without adjusting timings
++
++Use the [CPU counter evidence protocol](COUNTER_EVIDENCE.md) to inspect completed comparisons with recorded core counters. The analyzer reruns the original audit and writes into a new directory outside the capture.
++
++```sh
++python3 Benchmarks/CPUThroughput/operating_state.py \
++  /absolute/path/completed-core-comparison-directory/panel \
++  --output /absolute/path/new-counter-evidence-directory
++```
++
++Read the new `report.md` alongside the original comparison report. Worker and controller counts remain separate, as do E and P execution. The diagnostic report preserves all failed controls. Cycles per CPU nanosecond is an accounted rate, not direct hardware frequency or an energy estimate. No workload is rerun.
++
++For a new panel, use `--collect` with the same comparison arguments. This writes `method.json` before starting the existing observer-isolated launcher and checks the frozen method against the completed plan.
++
++```sh
++python3 Benchmarks/CPUThroughput/operating_state.py --collect \
++  --swift-worker /absolute/path/worker \
++  --python /absolute/path/comparison-environment/bin/python \
++  --air-contract /absolute/path/air.json \
++  --energy-contract /absolute/path/energy.json \
++  --expected /absolute/path/independent-expected.json \
++  --pandas-arrow --smoke \
++  --output /absolute/path/new-declared-comparison
++```
++
++The original capture is under `comparison/panel`, and the additional report is under `diagnostics`. A failed collection writes `failure.json` and retains its partial evidence. Remove `--smoke` for the full panel. A separately replayed older capture is labeled retrospective and does not acquire a predeclared method.
+diff --git a/Benchmarks/CPUThroughput/operating_state.py b/Benchmarks/CPUThroughput/operating_state.py
+new file mode 100644
+index 0000000000..d7dce37732
+--- /dev/null
++++ b/Benchmarks/CPUThroughput/operating_state.py
+@@ -0,0 +1,210 @@
++#!/usr/bin/env python3
++"""Describe counter work and execution rates without adjusting timing or controls."""
++import argparse
++import json
++from pathlib import Path
++import statistics
++import subprocess
++import sys
++import tempfile
++import datetime
++
++ROOT=Path(__file__).resolve().parents[2]
++sys.path.insert(0,str(ROOT))
++from Benchmarks.CPUThroughput import compare,run
++from Benchmarks.CPUThroughput.core_usage import audit_receipt,WORKER_POLICY
++
++PROTOCOL='cpu-counter-evidence-v1'
++
++
++def account(processes):
++    result={}
++    for kind in ['e','p']:
++        cpu=sum(p['time_ns']['user_'+kind]+p['time_ns']['kernel_'+kind] for p in processes)
++        counts={key:sum(p['deltas']['p_'+key] if kind=='p' else
++            p['deltas'][key]-p['deltas']['p_'+key] for p in processes)
++            for key in ['instructions','cycles']}
++        result[kind]=dict(cpu_ns=cpu,**counts,
++            cycles_per_cpu_ns=counts['cycles']/cpu if cpu else None,
++            instructions_per_cycle=counts['instructions']/counts['cycles'] if counts['cycles'] else None)
++    return result
++
++
++def method_sources():
++    return [*Path(__file__).parent.glob('*.py'),*Path(__file__).parent.glob('*.c'),
++        Path(__file__).with_name('COUNTER_EVIDENCE.md'),ROOT/'Benchmarks/Tools/execution_policy.py',
++        ROOT/'Benchmarks/Tools/runner.py']
++
++
++def method_manifest(panel,command):
++    return dict(protocol=PROTOCOL,created_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
++        panel=str(panel.resolve()),command=command,core_policy=WORKER_POLICY,
++        quality_policy=compare.LIMITS.copy(),
++        source_head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
++        source_hashes={str(p.relative_to(ROOT)):run.digest(p) for p in method_sources()})
++
++
++def validate_method(method,plan,root):
++    if (method['protocol']!=PROTOCOL or method['panel']!=str(root.resolve())
++            or method['quality_policy']!=plan['quality_policy']
++            or method['source_head']!=plan['source_head']
++            or method['core_policy']!=plan['core_policy']['policy']):
++        raise ValueError('Capture differs from its predeclared method')
++    if set(method['source_hashes'])!={str(p.relative_to(ROOT)) for p in method_sources()}:
++        raise ValueError('Predeclared method source inventory differs')
++    for name,sha in method['source_hashes'].items():
++        if run.digest(ROOT/name)!=sha:
++            raise ValueError('Predeclared method source changed: '+name)
++    if any(method['source_hashes'].get(name)!=sha for name,sha in plan['source_hashes'].items()):
++        raise ValueError('Controller plan differs from its predeclared method')
++
++
++def summarize(records,decision):
++    labels={r['label'] for r in records}
++    primary=sorted(label for label in labels if not label.endswith('_twin'))
++    if not primary or labels != set(primary)|{label+'_twin' for label in primary}:
++        raise ValueError('Complete primary and twin conditions are required')
++    conditions={}
++    for label in primary:
++        conditions[label]={}
++        for role in ['worker','controller']:
++            conditions[label][role]={}
++            for kind in ['e','p']:
++                groups={}
++                for name,suffix in [('primary',''),('twin','_twin')]:
++                    selected=[r for r in records if r['label']==label+suffix]
++                    metrics={key+'_per_job':[r[role][kind][key]/r['jobs'] for r in selected]
++                             for key in ['cpu_ns','instructions','cycles']}
++                    metrics.update({key:[r[role][kind][key] for r in selected]
++                                    for key in ['cycles_per_cpu_ns','instructions_per_cycle']})
++                    groups[name]={key:statistics.median(values) if all(v is not None for v in values) else None
++                                  for key,values in metrics.items()}
++                groups['twin_to_primary']={key:groups['twin'][key]/value
++                    if value not in (None,0) and groups['twin'][key] is not None else None
++                    for key,value in groups['primary'].items()}
++                conditions[label][role][kind]=groups
++    resources={}
++    for label in primary:
++        resources[label]={}
++        for name,suffix in [('primary',''),('twin','_twin')]:
++            selected=[r for r in records if r['label']==label+suffix]
++            resources[label][name]={key:statistics.median(r['measurements'][key] for r in selected)
++                for key in selected[0]['measurements']}
++    return dict(protocol=PROTOCOL,original_audit=decision,conditions=conditions,resources=resources,queues=records,
++        interpretation='Descriptive counters only. Cycles per CPU ns is an accounted execution rate, not direct hardware frequency or energy. Rates and CPU time share a denominator. No causal classification, timing normalization, exclusion, or qualification change.')
++
++
++def analyze(root,method=None):
++    root=root.resolve()
++    # Reuse the complete audit while keeping all generated files outside the capture.
++    with tempfile.TemporaryDirectory(prefix='swiftsci-counter-audit-') as directory:
++        overlay=Path(directory)
++        for entry in root.iterdir():
++            if entry.name not in ('audit.json','report.md'):
++                (overlay/entry.name).symlink_to(entry,target_is_directory=entry.is_dir())
++        decision=compare.audit(overlay)
++    if decision!=json.loads((root/'audit.json').read_text()):
++        raise ValueError('Saved audit differs from the revalidated capture')
++    plan=json.loads((root/'plan.json').read_text())
++    if plan.get('core_policy') is None:
++        raise ValueError('Counter evidence requires a recorded core policy')
++    if method is not None:validate_method(method,plan,root)
++    records=json.loads((root/'records.json').read_text())
++    rows=[]
++    inputs=[root/name for name in ['plan.json','records.json','audit.json','expected.json','end.json',
++                                  'preflight/checks.json','postflight/checks.json']]
++    for row in records:
++        path=root/f"r{row['round']}-{row['label']}"/'result.json';inputs.append(path)
++        raw=json.loads(path.read_text())
++        core=audit_receipt(raw['core_usage'],[r['pid'] for r in raw['runtime']],policy=plan['core_policy']['policy'])
++        jobs=len(raw['jobs']);summary=raw['summary']
++        measurements=dict(cpu_ms_per_job=summary['charged_cpu_ns']/jobs/1e6,
++            wall_ms_per_job=summary['elapsed_ns']/jobs/1e6,jobs_per_minute=summary['completed_per_minute'],
++            sampled_peak_mib=summary['sampled_peak_rss_bytes']/2**20,
++            sampled_mib_seconds=summary['sampled_resident_byte_seconds']/2**20)
++        rows.append(dict(round=row['round'],label=row['label'],jobs=jobs,measurements=measurements,
++            worker=account(core['workers']),controller=account([core['controller']])))
++    result=summarize(rows,decision)
++    sources=[Path(__file__),*(ROOT/name for name in plan['source_hashes'])]
++    result['provenance']=dict(input_directory=str(root),measurement_head=plan['source_head'],
++        analysis_head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
++        python=sys.version,core_policy=plan['core_policy']['policy'],
++        source_hashes={str(path.relative_to(ROOT)):run.digest(path) for path in sources},
++        input_hashes={str(path.relative_to(root)):run.digest(path) for path in inputs},
++        method_predeclared=method is not None,method=method)
++    return result
++
++
++def report(value):
++    lines=['# CPU counter evidence','',f"Protocol: {value['protocol']}.",
++        '',f"Original controls passed: {value['original_audit']['controls_passed']}. Performance qualified: {value['original_audit']['performance_qualified']}.",
++        '',value['interpretation'],'',
++        'Method predeclared: '+str(value['provenance']['method_predeclared'])+'.',
++        '',f"[Original comparison report](<{value['provenance']['input_directory']}/report.md>)",'',
++        '| Condition | Variant | Jobs/min | CPU ms/job | Wall ms/job | Sampled peak MiB | Resident MiB-seconds |',
++        '| --- | --- | ---: | ---: | ---: | ---: | ---: |']
++    def number(value):return 'unavailable' if value is None else f'{value:.5g}'
++    for label,variants in value['resources'].items():
++        for variant,metrics in variants.items():
++            values=[metrics[key] for key in ['jobs_per_minute','cpu_ms_per_job','wall_ms_per_job',
++                'sampled_peak_mib','sampled_mib_seconds']]
++            lines.append('| '+label+' | '+variant+' | '+' | '.join(map(number,values))+' |')
++    lines+=['','## Work and accounted execution rates','',
++        'Medians keep primary and twin queues separate. Every ratio is twin divided by primary. Worker values sum processes before dividing; controller work remains separate. Instructions and cycles include user and kernel work on the named core class. Worker P values are permitted kernel work because P-user time must be zero. Ratios against near-zero P work are unstable. None of these columns measures energy.', '',
++        '| Condition | Role | Core | Instructions/job | Twin instruction ratio | Cycles/job | Twin cycle ratio | Cycles/CPU ns | Twin rate ratio |',
++        '| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |']
++    for label,roles in value['conditions'].items():
++        for role,kinds in roles.items():
++            for kind,group in kinds.items():
++                left,ratio=group['primary'],group['twin_to_primary']
++                cells=[left['instructions_per_job'],ratio['instructions_per_job'],left['cycles_per_job'],
++                       ratio['cycles_per_job'],left['cycles_per_cpu_ns'],ratio['cycles_per_cpu_ns']]
++                lines.append('| '+label+' | '+role+' | '+kind.upper()+' | '+' | '.join(map(number,cells))+' |')
++    lines+=['','## Original control failures','']
++    for flag in value['original_audit']['flags']:
++        lines.append('- '+json.dumps(flag,sort_keys=True))
++    if not value['original_audit']['flags']:lines.append('None. A smoke panel still cannot qualify performance.')
++    lines+=['','Direct hardware frequency was not measured in these queue receipts. A separate fixed-loop trace cannot identify the clock state of an earlier queue. Ratios from different libraries can also reflect instruction mix and memory stalls. Do not attribute them solely to frequency.']
++    return '\n'.join(lines)+'\n'
++
++
++def write_report(output,value):
++    output.mkdir(parents=True,exist_ok=False)
++    run.save(output/'counter-evidence.json',value)
++    (output/'report.md').write_text(report(value))
++    print(json.dumps(dict(queues=len(value['queues']),original_controls_passed=value['original_audit']['controls_passed'],
++        original_performance_qualified=value['original_audit']['performance_qualified'],output=str(output))))
++
++
++def main():
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--collect',action='store_true',help='Freeze the method before a new observer-isolated comparison')
++    parser.add_argument('--output',type=Path,required=True)
++    args,rest=parser.parse_known_args()
++    if args.collect:
++        if any(a.split('=')[0] in ['--audit','--core-calibration'] for a in rest):
++            parser.error('Collection accepts comparison arguments, not a capture, audit, or calibration override')
++        output=args.output.resolve();output.mkdir(parents=True,exist_ok=False)
++        panel=output/'comparison/panel'
++        command=[sys.executable,str(Path(__file__).with_name('compare_e_cores.py')),
++            '--observer-isolation',*rest,'--output',str(output/'comparison')]
++        method=method_manifest(panel,command);run.save(output/'method.json',method)
++        method_sha=run.digest(output/'method.json')
++        try:
++            subprocess.run(command,check=True)
++            if run.digest(output/'method.json')!=method_sha:raise ValueError('Pre-run method manifest changed')
++            value=analyze(panel,method)
++            value['provenance']['method_file_sha256']=method_sha
++            write_report(output/'diagnostics',value)
++        except BaseException as error:
++            run.save(output/'failure.json',dict(type=type(error).__name__,error=str(error)))
++            raise
++    else:
++        if len(rest)!=1 or rest[0].startswith('-'):parser.error('Supply one capture and no comparison arguments for replay')
++        capture=Path(rest[0])
++        if args.output.resolve().is_relative_to(capture.resolve()):
++            parser.error('Write diagnostics outside the unchanged capture directory')
++        write_report(args.output,analyze(capture))
++
++
++if __name__=='__main__':main()
+diff --git a/Benchmarks/Tests/test_cpu_operating_state.py b/Benchmarks/Tests/test_cpu_operating_state.py
+new file mode 100644
+index 0000000000..591b8f6af8
+--- /dev/null
++++ b/Benchmarks/Tests/test_cpu_operating_state.py
+@@ -0,0 +1,91 @@
++"""Keep counter work, execution rate, and timing qualification distinct."""
++import copy
++from pathlib import Path
++import sys
++import unittest
++import tempfile
++ROOT=Path(__file__).resolve().parents[2]
++sys.path.insert(0,str(ROOT))
++from Benchmarks.CPUThroughput.operating_state import account, summarize, report, method_manifest, validate_method
++
++
++def process(pid=1):
++    return dict(pid=pid,deltas=dict(instructions=1000,p_instructions=100,cycles=2000,p_cycles=400),
++        time_ns=dict(user_e=800,user_p=0,kernel_e=200,kernel_p=100))
++
++
++class OperatingStateTests(unittest.TestCase):
++    def test_p_kernel_counts_do_not_become_e_work(self):
++        value=account([process()])
++        self.assertEqual(value['e'],dict(cpu_ns=1000,instructions=900,cycles=1600,
++            cycles_per_cpu_ns=1.6,instructions_per_cycle=900/1600))
++        self.assertEqual(value['p'],dict(cpu_ns=100,instructions=100,cycles=400,
++            cycles_per_cpu_ns=4,instructions_per_cycle=.25))
++
++    def test_role_totals_use_sum_then_ratio_not_mean_of_process_rates(self):
++        slow=process(2);slow['time_ns']['user_e']=1800
++        value=account([process(),slow])
++        self.assertAlmostEqual(value['e']['cycles_per_cpu_ns'],3200/3000)
++        self.assertEqual(value['e']['cpu_ns'],3000)
++
++    def test_no_p_work_has_no_invented_rate(self):
++        value=process()
++        value['time_ns']['kernel_p']=0
++        value['deltas'].update(p_cycles=0,p_instructions=0)
++        self.assertIsNone(account([value])['p']['cycles_per_cpu_ns'])
++        self.assertIsNone(account([value])['p']['instructions_per_cycle'])
++
++    def test_identical_work_can_have_different_rate_without_changing_verdict(self):
++        primary=account([process()])
++        changed=process();changed['time_ns'].update(user_e=1600,kernel_e=400)
++        twin=account([changed])
++        measurements=dict(cpu_ms_per_job=3,wall_ms_per_job=2,jobs_per_minute=30000,
++            sampled_peak_mib=128,sampled_mib_seconds=256)
++        records=[dict(round=0,label='engine',jobs=2,measurements=measurements,worker=primary,controller=account([process(2)])),
++                 dict(round=0,label='engine_twin',jobs=2,measurements=measurements,worker=twin,controller=account([process(3)]))]
++        decision=dict(controls_passed=False,performance_qualified=False,flags=[dict(label='engine',metric='charged_cpu_ns',ratio=2)])
++        original=copy.deepcopy(decision)
++        value=summarize(records,decision)
++        self.assertEqual(decision,original)
++        self.assertEqual(value['original_audit'],original)
++        worker=value['conditions']['engine']['worker']['e']
++        self.assertEqual(worker['primary']['instructions_per_job'],worker['twin']['instructions_per_job'])
++        self.assertEqual(worker['twin_to_primary']['cycles_per_cpu_ns'],.5)
++        self.assertEqual(worker['twin_to_primary']['cpu_ns_per_job'],2)
++        self.assertNotIn('normalized_cpu_ns',str(value))
++        value['provenance']=dict(input_directory='/captured/panel',method_predeclared=False)
++        text=report(value)
++        self.assertIn('CPU ms/job',text)
++        self.assertIn('Sampled peak MiB',text)
++        self.assertIn('Resident MiB-seconds',text)
++        self.assertIn('Original comparison report',text)
++        self.assertIn('Original controls passed: False',text)
++
++    def test_predeclared_method_rejects_mismatched_capture_and_definition(self):
++        from Benchmarks.CPUThroughput.compare import LIMITS
++        from Benchmarks.CPUThroughput.core_usage import WORKER_POLICY
++        with tempfile.TemporaryDirectory() as directory:
++            root=Path(directory)
++            method=method_manifest(root,['python','comparison'])
++            plan=dict(source_head=method['source_head'],quality_policy=LIMITS.copy(),
++                core_policy=dict(policy=WORKER_POLICY),source_hashes=method['source_hashes'].copy())
++            validate_method(method,plan,root)
++            for key,value in [('protocol','different'),('panel','/different'),('source_head','different'),
++                              ('core_policy','e-core-application-v1'),('quality_policy',{})]:
++                with self.subTest(key=key):
++                    changed=copy.deepcopy(method);changed[key]=value
++                    with self.assertRaises(ValueError):validate_method(changed,plan,root)
++            changed=copy.deepcopy(method)
++            changed['source_hashes']['Benchmarks/CPUThroughput/operating_state.py']='0'*64
++            with self.assertRaises(ValueError):validate_method(changed,plan,root)
++            missing=copy.deepcopy(method);missing['source_hashes'].pop('Benchmarks/CPUThroughput/operating_state.py')
++            with self.assertRaises(ValueError):validate_method(missing,plan,root)
++            changed=copy.deepcopy(plan);changed['source_hashes']['missing.py']='0'*64
++            with self.assertRaises(ValueError):validate_method(method,changed,root)
++
++    def test_partial_panel_does_not_become_a_diagnostic_comparison(self):
++        with self.assertRaises(ValueError):summarize([],dict(controls_passed=True))
++        with self.assertRaises(ValueError):summarize([dict(label='engine')],dict(controls_passed=True))
++
++
++if __name__=='__main__':unittest.main()

@@ -1,0 +1,49 @@
+{
+  "protocol": "cpu-counter-evidence-v1",
+  "created_utc": "2026-10-25T18:32:20.227852+00:00",
+  "panel": "/private/tmp/swiftsci-cpu-operating-state-evidence-20261025/declared-smoke/comparison/panel",
+  "command": [
+    "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+    "/private/tmp/swiftsci-e-core-observer-isolation-20261025/source/Benchmarks/CPUThroughput/compare_e_cores.py",
+    "--observer-isolation",
+    "--swift-worker",
+    "/private/tmp/swiftsci-csv-integer-overflow-20261024/sequential-build/worker",
+    "--python",
+    "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+    "--air-contract",
+    "/private/tmp/swiftsci-csv-external-20261023/inputs/Aotizhongxin-default.json",
+    "--energy-contract",
+    "/private/tmp/swiftsci-csv-external-20261023/inputs/energy-common.json",
+    "--expected",
+    "/private/tmp/swiftsci-sort-closeout-20261023/comparison-initialized/expected.json",
+    "--pandas-arrow",
+    "--smoke",
+    "--output",
+    "/private/tmp/swiftsci-cpu-operating-state-evidence-20261025/declared-smoke/comparison"
+  ],
+  "core_policy": "e-core-workers-observer-v2",
+  "quality_policy": {
+    "twin_cpu_deviation": 0.1,
+    "twin_wall_deviation": 0.1,
+    "twin_peak_relative": 1.05,
+    "twin_peak_slack_per_caller_bytes": 8388608
+  },
+  "source_head": "06adea701994f8fbbe82481684dfdafd77958a09",
+  "source_hashes": {
+    "Benchmarks/CPUThroughput/build.py": "74dff8546ea39128ca0bc3ecd15dee5bbe7fe1b66de3ad66319612af85900ca6",
+    "Benchmarks/CPUThroughput/observation.py": "ab46a5d396f58624d3254b1a816f57891c1bb230b07bd9f67441590bf979dddf",
+    "Benchmarks/CPUThroughput/run.py": "e330169eaf91d3f7d6f5afc79bfb8a70a226704eec544f8b0199e36d525107b1",
+    "Benchmarks/CPUThroughput/core_usage.py": "767b65e111283f20df33116312a6425f21b4ca30e9c9211fcac12aa31114e019",
+    "Benchmarks/CPUThroughput/audit.py": "1d5e106b9459423266d2f0028e06ac352999fdbadf8280fa3adc7204b0fc37d5",
+    "Benchmarks/CPUThroughput/external_worker.py": "55f3b2f4a63bc9966f8215cc80d3bd0c32daf94a8edf4bd41296ff2897c0c936",
+    "Benchmarks/CPUThroughput/operating_state.py": "1f9ea38f739d49056dd4c0041b0660a4a19fab2e2cf31c8a75c89c85136d6d4d",
+    "Benchmarks/CPUThroughput/budget.py": "91674014ccb23ef93501379f1b86f733616f709dfe51fb48414916be8724b60e",
+    "Benchmarks/CPUThroughput/external_workflows.py": "40519ae7eb064b090ad3a09d515aac9fc39d0014d13b162e3219478b55915855",
+    "Benchmarks/CPUThroughput/compare.py": "458ccbca3651b0420fa34839475ba06f4972ef00e6909592986e5e8975639409",
+    "Benchmarks/CPUThroughput/compare_e_cores.py": "728db71c3713623924bd266d16aad1e97f535c3cfd8f3a58a477646d56249fb3",
+    "Benchmarks/CPUThroughput/core_counters.c": "03e3e3f450b95974eccff7f26d540d19b11b4fff64791fcd75c1b39bce771941",
+    "Benchmarks/CPUThroughput/COUNTER_EVIDENCE.md": "687648c8bb7db263c425b37594b21ec718b69a38afeed4b19583d97e6b1cbdf0",
+    "Benchmarks/Tools/execution_policy.py": "d143b0e2c5116e140dd745592388270744bf328dee15f5909cc6570668b16fe0",
+    "Benchmarks/Tools/runner.py": "6b40bd42f4ee56df681a0f3614974a4b33bdaebbe857b683c325add51bb89146"
+  }
+}
