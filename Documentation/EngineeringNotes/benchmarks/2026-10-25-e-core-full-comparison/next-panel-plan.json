@@ -1,0 +1,35 @@
+{
+  "source_commit": "af4e2cd45b53cf1a76253dc174c508e5459b3cf7",
+  "policy": "e-core-application-v1",
+  "status": "not_started",
+  "command": [
+    "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+    "/private/tmp/swiftsci-csv-compact-construction-20261024/Benchmarks/CPUThroughput/compare_e_cores.py",
+    "--swift-worker",
+    "/private/tmp/swiftsci-csv-integer-overflow-20261024/sequential-build/worker",
+    "--python",
+    "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+    "--air-contract",
+    "/private/tmp/swiftsci-csv-external-20261023/inputs/Aotizhongxin-default.json",
+    "--energy-contract",
+    "/private/tmp/swiftsci-csv-external-20261023/inputs/energy-common.json",
+    "--expected",
+    "/private/tmp/swiftsci-sort-closeout-20261023/comparison-initialized/expected.json",
+    "--output",
+    "/private/tmp/swiftsci-e-core-cpu-throughput-20261025/full",
+    "--pandas-arrow"
+  ],
+  "rotated_rounds": 12,
+  "queues": 144,
+  "jobs_per_queue": 64,
+  "total_jobs": 9216,
+  "callers": 4,
+  "rss_limit_bytes": 8589934592,
+  "quality_policy": {
+    "twin_cpu_deviation": 0.1,
+    "twin_wall_deviation": 0.1,
+    "twin_peak_relative": 1.05,
+    "twin_peak_slack_per_caller_bytes": 8388608
+  },
+  "forecast": "Roughly two hours from initial smoke scaling; not a performance result; do not retune work or controls"
+}

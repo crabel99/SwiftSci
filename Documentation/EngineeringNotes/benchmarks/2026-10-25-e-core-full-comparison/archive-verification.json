@@ -1,0 +1,82 @@
+{
+  "archive_members_verified": 854,
+  "recomputable_receipt_fields_passed": true,
+  "resident_integral": "bounds_only",
+  "queues": 144,
+  "jobs": 9216,
+  "full_output_checks": 48,
+  "core_intervals_passed": true,
+  "worker_intervals": 576,
+  "controller_intervals": 144,
+  "calibration_hashes_passed": true,
+  "post_run_source_binding_passed": true,
+  "controls_passed": false,
+  "performance_qualified": false,
+  "flags": [
+    {
+      "label": "swiftsci_optional",
+      "metric": "elapsed_ns",
+      "ratio": 0.8107539771222118
+    },
+    {
+      "label": "swiftsci_compact",
+      "metric": "elapsed_ns",
+      "ratio": 0.7567561743811912
+    },
+    {
+      "label": "pandas",
+      "metric": "charged_cpu_ns",
+      "ratio": 1.221033962995904
+    },
+    {
+      "label": "duckdb",
+      "metric": "charged_cpu_ns",
+      "ratio": 1.286704776385653
+    },
+    {
+      "label": "duckdb",
+      "metric": "elapsed_ns",
+      "ratio": 1.151338605704573
+    },
+    {
+      "label": "duckdb",
+      "metric": "sampled_peak_rss_bytes",
+      "low": 3886276608.0,
+      "high": 4122279936.0
+    },
+    {
+      "label": "pandas_arrow",
+      "metric": "sampled_peak_rss_bytes",
+      "low": 4048093184.0,
+      "high": 4381597696.0
+    }
+  ],
+  "external_binary_bytes_unavailable": [
+    {
+      "role": "Swift worker",
+      "path": "/private/tmp/swiftsci-csv-integer-overflow-20261024/sequential-build/worker",
+      "bytes": 2940632,
+      "sha256": "da654d32e939b265082ff44ddc9b80dbbc13f23c56530cf656265c42f1d50b0d",
+      "status": "recorded, bytes not archived"
+    },
+    {
+      "role": "Python interpreter",
+      "path": "/Users/crabel/Documents/src/SwiftSci/Benchmarks/.venv-standardized/bin/python",
+      "bytes": 52448,
+      "sha256": "b502cb4c5b46b8d4192ec6bcb600ce8922f1afc396fcf646e8765c6eba74a0bf",
+      "status": "recorded, bytes not archived"
+    }
+  ],
+  "limits": [
+    "Queue intervals only. Startup and full-output checks have no core receipts.",
+    "Recorded calibration stdout cannot be independently authenticated as output of the preserved executable.",
+    "Resident byte-seconds remain a recorded statistic with range checks. Exact recomputation lacks the saved monotonic batch start/end.",
+    "Input bytes are identified by SHA256 but are not archived. Earlier test logs lack source binding; separate post-run validation includes it."
+  ],
+  "isolation": {
+    "scope": "module.main receipt audit, after trusted verifier and standard-library loading",
+    "only_archive_file_reads_allowed_during_receipt_audit": true,
+    "unarchived_file_read_attempts_during_receipt_audit": [],
+    "native_library_loading_and_subprocesses_denied_during_receipt_audit": true
+  }
+}
