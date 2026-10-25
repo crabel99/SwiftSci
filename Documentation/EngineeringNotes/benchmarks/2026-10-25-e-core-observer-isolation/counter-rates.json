@@ -1,0 +1,301 @@
+{
+  "scope": "Raw worker counters cover a wider interval than queue wall and process-stat charging. Cycles per CPU ns is an effective rate, not an independent hardware frequency measurement. No result is normalized or qualified here.",
+  "queues": [
+    {
+      "round": 0,
+      "label": "swiftsci_optional",
+      "worker_cpu_ns": 7452257000,
+      "recount_cpu_ns": 7452182250.0,
+      "instructions": 28509796958,
+      "cycles": 9598271461,
+      "cycles_per_cpu_ns": 1.2879813105751674,
+      "controller_cpu_ns": 99145000
+    },
+    {
+      "round": 0,
+      "label": "swiftsci_compact",
+      "worker_cpu_ns": 7551517000,
+      "recount_cpu_ns": 7551661583.333333,
+      "instructions": 28376833386,
+      "cycles": 9682052929,
+      "cycles_per_cpu_ns": 1.2821089533949035,
+      "controller_cpu_ns": 84090000
+    },
+    {
+      "round": 0,
+      "label": "pandas",
+      "worker_cpu_ns": 23423546000,
+      "recount_cpu_ns": 23423703458.333332,
+      "instructions": 124617571623,
+      "cycles": 33715839627,
+      "cycles_per_cpu_ns": 1.4393897910710225,
+      "controller_cpu_ns": 280104000
+    },
+    {
+      "round": 0,
+      "label": "polars",
+      "worker_cpu_ns": 10902094000,
+      "recount_cpu_ns": 10901788041.666666,
+      "instructions": 42400557368,
+      "cycles": 12499564567,
+      "cycles_per_cpu_ns": 1.1465609603880234,
+      "controller_cpu_ns": 137631000
+    },
+    {
+      "round": 0,
+      "label": "duckdb",
+      "worker_cpu_ns": 14113207000,
+      "recount_cpu_ns": 14112890166.666666,
+      "instructions": 66147642025,
+      "cycles": 19940468920,
+      "cycles_per_cpu_ns": 1.4129259623303476,
+      "controller_cpu_ns": 219835000
+    },
+    {
+      "round": 0,
+      "label": "pandas_arrow",
+      "worker_cpu_ns": 8342003000,
+      "recount_cpu_ns": 8341829208.333333,
+      "instructions": 35726007102,
+      "cycles": 11302938840,
+      "cycles_per_cpu_ns": 1.3549712608247328,
+      "controller_cpu_ns": 124542000
+    },
+    {
+      "round": 0,
+      "label": "swiftsci_optional_twin",
+      "worker_cpu_ns": 7429457000,
+      "recount_cpu_ns": 7429341500.0,
+      "instructions": 28511510043,
+      "cycles": 9686896098,
+      "cycles_per_cpu_ns": 1.3038700802756207,
+      "controller_cpu_ns": 63735000
+    },
+    {
+      "round": 0,
+      "label": "swiftsci_compact_twin",
+      "worker_cpu_ns": 8043471000,
+      "recount_cpu_ns": 8043598375.0,
+      "instructions": 28356413527,
+      "cycles": 9138137001,
+      "cycles_per_cpu_ns": 1.136075743090542,
+      "controller_cpu_ns": 80828000
+    },
+    {
+      "round": 0,
+      "label": "pandas_twin",
+      "worker_cpu_ns": 29452585000,
+      "recount_cpu_ns": 29452546666.666668,
+      "instructions": 126554038484,
+      "cycles": 33861967619,
+      "cycles_per_cpu_ns": 1.1497127227141875,
+      "controller_cpu_ns": 349048000
+    },
+    {
+      "round": 0,
+      "label": "polars_twin",
+      "worker_cpu_ns": 11201826000,
+      "recount_cpu_ns": 11201007708.333334,
+      "instructions": 42387965019,
+      "cycles": 12460096292,
+      "cycles_per_cpu_ns": 1.1124085097030982,
+      "controller_cpu_ns": 168948000
+    },
+    {
+      "round": 0,
+      "label": "duckdb_twin",
+      "worker_cpu_ns": 14805507000,
+      "recount_cpu_ns": 14805236666.666666,
+      "instructions": 65795348088,
+      "cycles": 20065173906,
+      "cycles_per_cpu_ns": 1.3552754581205615,
+      "controller_cpu_ns": 242616000
+    },
+    {
+      "round": 0,
+      "label": "pandas_arrow_twin",
+      "worker_cpu_ns": 9177279000,
+      "recount_cpu_ns": 9176898750.0,
+      "instructions": 35789370727,
+      "cycles": 11112693202,
+      "cycles_per_cpu_ns": 1.2109421172375907,
+      "controller_cpu_ns": 149903000
+    },
+    {
+      "round": 1,
+      "label": "swiftsci_compact",
+      "worker_cpu_ns": 6902402000,
+      "recount_cpu_ns": 6902129791.666667,
+      "instructions": 28361432665,
+      "cycles": 9405913530,
+      "cycles_per_cpu_ns": 1.3627552384419506,
+      "controller_cpu_ns": 73292000
+    },
+    {
+      "round": 1,
+      "label": "pandas",
+      "worker_cpu_ns": 28043005000,
+      "recount_cpu_ns": 28042720583.333332,
+      "instructions": 125630740992,
+      "cycles": 34185901138,
+      "cycles_per_cpu_ns": 1.2190650702527683,
+      "controller_cpu_ns": 263430000
+    },
+    {
+      "round": 1,
+      "label": "polars",
+      "worker_cpu_ns": 10573998000,
+      "recount_cpu_ns": 10572541583.333334,
+      "instructions": 42398237612,
+      "cycles": 12528361563,
+      "cycles_per_cpu_ns": 1.1849905213662002,
+      "controller_cpu_ns": 134835000
+    },
+    {
+      "round": 1,
+      "label": "duckdb",
+      "worker_cpu_ns": 12469723000,
+      "recount_cpu_ns": 12469503916.666666,
+      "instructions": 65749256103,
+      "cycles": 20607808130,
+      "cycles_per_cpu_ns": 1.6526566147074804,
+      "controller_cpu_ns": 257574000
+    },
+    {
+      "round": 1,
+      "label": "pandas_arrow",
+      "worker_cpu_ns": 5013697000,
+      "recount_cpu_ns": 5013563791.666667,
+      "instructions": 35614266764,
+      "cycles": 12056398462,
+      "cycles_per_cpu_ns": 2.404756170060035,
+      "controller_cpu_ns": 60065000
+    },
+    {
+      "round": 1,
+      "label": "swiftsci_optional_twin",
+      "worker_cpu_ns": 4358930000,
+      "recount_cpu_ns": 4358842583.333333,
+      "instructions": 28446352448,
+      "cycles": 11111831463,
+      "cycles_per_cpu_ns": 2.549261931478714,
+      "controller_cpu_ns": 53292000
+    },
+    {
+      "round": 1,
+      "label": "swiftsci_compact_twin",
+      "worker_cpu_ns": 6076106000,
+      "recount_cpu_ns": 6076350833.333333,
+      "instructions": 28354649102,
+      "cycles": 9438796356,
+      "cycles_per_cpu_ns": 1.5533659288106172,
+      "controller_cpu_ns": 111141000
+    },
+    {
+      "round": 1,
+      "label": "pandas_twin",
+      "worker_cpu_ns": 18330214000,
+      "recount_cpu_ns": 18330078583.333332,
+      "instructions": 124499182362,
+      "cycles": 35370504535,
+      "cycles_per_cpu_ns": 1.9296428203619769,
+      "controller_cpu_ns": 264671000
+    },
+    {
+      "round": 1,
+      "label": "polars_twin",
+      "worker_cpu_ns": 6926989000,
+      "recount_cpu_ns": 6927798625.0,
+      "instructions": 42295967854,
+      "cycles": 13323609561,
+      "cycles_per_cpu_ns": 1.9232097066043112,
+      "controller_cpu_ns": 175184000
+    },
+    {
+      "round": 1,
+      "label": "duckdb_twin",
+      "worker_cpu_ns": 11608824000,
+      "recount_cpu_ns": 11608702166.666666,
+      "instructions": 65203205512,
+      "cycles": 20359971694,
+      "cycles_per_cpu_ns": 1.7538542553414636,
+      "controller_cpu_ns": 176832000
+    },
+    {
+      "round": 1,
+      "label": "pandas_arrow_twin",
+      "worker_cpu_ns": 8233237000,
+      "recount_cpu_ns": 8233091916.666667,
+      "instructions": 35671878239,
+      "cycles": 11837525460,
+      "cycles_per_cpu_ns": 1.4377982876684148,
+      "controller_cpu_ns": 103572000
+    },
+    {
+      "round": 1,
+      "label": "swiftsci_optional",
+      "worker_cpu_ns": 6575023000,
+      "recount_cpu_ns": 6574995375.0,
+      "instructions": 28468476824,
+      "cycles": 9483647165,
+      "cycles_per_cpu_ns": 1.442380811560647,
+      "controller_cpu_ns": 75053000
+    }
+  ],
+  "summary": [
+    {
+      "condition": "swiftsci_optional",
+      "worker_cpu_ns_twin_over_primary": 0.8403900827530355,
+      "recount_cpu_ns_twin_over_primary": 0.8403817502334745,
+      "instructions_twin_over_primary": 0.9996417706321168,
+      "cycles_twin_over_primary": 1.0899704567789514,
+      "primary_cycles_per_cpu_ns": 1.3651810610679072,
+      "twin_cycles_per_cpu_ns": 1.9265660058771674
+    },
+    {
+      "condition": "swiftsci_compact",
+      "worker_cpu_ns_twin_over_primary": 0.9768684188696505,
+      "recount_cpu_ns_twin_over_primary": 0.9769027960896061,
+      "instructions_twin_over_primary": 0.9995205454115297,
+      "cycles_twin_over_primary": 0.973227472758941,
+      "primary_cycles_per_cpu_ns": 1.322432095918427,
+      "twin_cycles_per_cpu_ns": 1.3447208359505796
+    },
+    {
+      "condition": "pandas",
+      "worker_cpu_ns_twin_over_primary": 0.9284243469122304,
+      "recount_cpu_ns_twin_over_primary": 0.9284232611792826,
+      "instructions_twin_over_primary": 1.003216438195283,
+      "cycles_twin_over_primary": 1.0195978979921223,
+      "primary_cycles_per_cpu_ns": 1.3292274306618954,
+      "twin_cycles_per_cpu_ns": 1.539677771538082
+    },
+    {
+      "condition": "polars",
+      "worker_cpu_ns_twin_over_primary": 0.8441393806657189,
+      "recount_cpu_ns_twin_over_primary": 0.8442082546888043,
+      "instructions_twin_over_primary": 0.9986454747732313,
+      "cycles_twin_over_primary": 1.030197456995611,
+      "primary_cycles_per_cpu_ns": 1.1657757408771117,
+      "twin_cycles_per_cpu_ns": 1.5178091081537048
+    },
+    {
+      "condition": "duckdb",
+      "worker_cpu_ns_twin_over_primary": 0.9936576216391496,
+      "recount_cpu_ns_twin_over_primary": 0.9936629014876572,
+      "instructions_twin_over_primary": 0.9931890397670444,
+      "cycles_twin_over_primary": 0.9969633370648976,
+      "primary_cycles_per_cpu_ns": 1.532791288518914,
+      "twin_cycles_per_cpu_ns": 1.5545648567310124
+    },
+    {
+      "condition": "pandas_arrow",
+      "worker_cpu_ns_twin_over_primary": 1.3036019077996661,
+      "recount_cpu_ns_twin_over_primary": 1.3035925387344773,
+      "instructions_twin_over_primary": 1.0016957476253487,
+      "cycles_twin_over_primary": 0.9824858627318604,
+      "primary_cycles_per_cpu_ns": 1.8798637154423838,
+      "twin_cycles_per_cpu_ns": 1.3243702024530029
+    }
+  ]
+}

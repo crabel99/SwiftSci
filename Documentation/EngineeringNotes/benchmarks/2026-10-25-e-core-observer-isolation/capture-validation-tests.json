@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "case": "complete format and native invariants",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "case": "incomplete native count",
+      "passed": true,
+      "returncode": 1
+    },
+    {
+      "case": "nonzero P user",
+      "passed": true,
+      "returncode": 1
+    },
+    {
+      "case": "inconsistent checksum",
+      "passed": true,
+      "returncode": 1
+    },
+    {
+      "case": "missing telemetry samples",
+      "passed": true,
+      "returncode": 1
+    },
+    {
+      "case": "malformed telemetry",
+      "passed": true,
+      "returncode": 1
+    }
+  ],
+  "scope": "Synthetic format and invariant validation only; no privileged telemetry collected."
+}

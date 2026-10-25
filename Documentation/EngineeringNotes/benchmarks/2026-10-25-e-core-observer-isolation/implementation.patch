@@ -1,0 +1,909 @@
+diff --git a/Benchmarks/CPUThroughput/README.md b/Benchmarks/CPUThroughput/README.md
+index e661c08328..efa88d34bf 100644
+--- a/Benchmarks/CPUThroughput/README.md
++++ b/Benchmarks/CPUThroughput/README.md
+@@ -200,3 +200,17 @@ python3 Benchmarks/CPUThroughput/compare.py \
+ ```
+ 
+ Apple documents P-only counters in [Recount](https://github.com/apple-oss-distributions/xnu/blob/f6217f891ac0bb64f3d375211650a4c1ff8ca1ea/doc/observability/recount.md). The [Apple Silicon scheduling guidance](https://developer.apple.com/news/?id=vk3m204o) explains how QoS influences placement. These controls do not expose a public P/E affinity mask.
++
++## Separate compute placement from observation scheduling
++
++Add `--observer-isolation` to `compare_e_cores.py` to select `e-core-workers-observer-v2`. Without the flag, the launcher retains `e-core-application-v1` and its whole-tree clamp.
++
++The new profile backgrounds each compute worker, including preflight and postflight workers. The controller runs without that clamp. Queue dispatch, response collection, memory sampling, and bookkeeping can therefore use either core type. Every timed worker must still record zero P-core user time. Controller P/E time appears separately, and all measured controller CPU remains charged. Raw controller QoS counters reject execution under a background, maintenance, or utility policy.
++
++The new controller charge interval starts before initial worker stats and observations. It ends after the final memory scan, worker stats, counter reads, and receipt validation. Final receipt serialization and disk writes are outside that interval. Queue wall timing retains its original boundaries. Receipts preserve both intervals. The two profiles measure different controller scheduling and charging scopes, so their performance results are not interchangeable.
++
++The sampler uses absolute monotonic deadlines with a requested 10 ms interval. It skips missed deadlines instead of issuing catch-up bursts. Each scan records its start, end, worker identities, RSS, and physical footprint. The independent audit requires boundary scans around the queue, unchanged process start identities, and an exact match between scan RSS and the existing RSS sample list.
++
++Coverage requires every queue to have an effective gap no greater than 50 ms and every scan to take no longer than 50 ms. A coverage failure prevents qualification and remains visible in the raw receipts and audit. This is a measurement-quality limit, not a scheduling guarantee or proof of the instantaneous memory peak.
++
++Physical footprint supplements RSS. It does not replace sampled peak RSS or its repeatability control. Reusable memory is not available through this unprivileged cross-process probe. The work totals, native pools, engine panel, twins, output checks, memory ceiling, and CPU, elapsed-time, and RSS allowances are unchanged. A smoke run cannot qualify comparative performance.
+diff --git a/Benchmarks/CPUThroughput/compare.py b/Benchmarks/CPUThroughput/compare.py
+index 44d622a636..2e49a08e6e 100644
+--- a/Benchmarks/CPUThroughput/compare.py
++++ b/Benchmarks/CPUThroughput/compare.py
+@@ -15,7 +15,9 @@ from Benchmarks.CPUThroughput import run
+ from Benchmarks.CPUThroughput.audit import control_flags
+ from Benchmarks.CPUThroughput.budget import jobs_for
+ from runner import power_state
+-from Benchmarks.CPUThroughput.core_usage import CoreReader, audit_receipt, validate_calibration
++from Benchmarks.CPUThroughput.core_usage import CoreReader, audit_receipt, validate_calibration, WORKER_POLICY
++
++from Benchmarks.CPUThroughput.observation import COVERAGE, summarize_observation
+ 
+ LIMITS = dict(twin_cpu_deviation=.10,twin_wall_deviation=.10,
+               twin_peak_relative=1.05,twin_peak_slack_per_caller_bytes=8*2**20)
+@@ -34,6 +36,9 @@ def conditions(swift, python, include_pandas_arrow=False):
+ def validate_plan(plan):
+     if plan.get('core_policy') is not None:
+         validate_calibration(plan['core_policy'])
++    observed = plan.get('core_policy') is not None and plan['core_policy']['policy']==WORKER_POLICY
++    if plan.get('observation_policy') != (COVERAGE if observed else None):
++        raise ValueError('Observation policy does not match the core profile')
+     modes = {name:c['mode'] for name,c in conditions('/swift','/python',
+         plan.get('include_pandas_arrow',False)).items()}
+     if {name:c['mode'] for name,c in plan['conditions'].items()} != modes:
+@@ -52,11 +57,11 @@ def validate_plan(plan):
+         raise ValueError('Every dataset requires both complete workflows')
+ 
+ 
+-def preflight(configurations, cases, expected, directory):
++def preflight(configurations, cases, expected, directory, core_policy=None):
+     directory.mkdir()
+     checks=[];ready={}
+     for label,config in configurations.items():
+-        worker=run.Worker(config['command'],config['mode'],directory/(label+'.log'))
++        worker=run.Worker(config['command'],config['mode'],directory/(label+'.log'),core_policy=core_policy)
+         try:
+             ready[label]=worker.ready
+             for case in cases:
+@@ -88,13 +93,29 @@ def report(root, decision):
+         '', 'The optional pandas_arrow condition parses a complete schema with pyarrow.csv.read_csv and converts to pandas. Conversion is timed; pandas.read_csv(engine=pyarrow) is not used because its wrapper infers parser types.',
+         '', 'Every primary condition has its own identical-binary twin. Unqualified results remain visible in audit.json. A smoke run cannot establish comparative performance.']
+     if plan.get('core_policy') is not None:
++        observed=plan['core_policy']['policy']==WORKER_POLICY
+         lines += ['', '## Verified application core class', '',
+-            'Every worker and the controller must record zero P-core user time. Kernel P/E time is reported separately and does not fail that rule. A supported-counter calibration precedes the common background QoS clamp. QoS is not treated as affinity.', '',
++            ('Only compute workers are background-clamped and must record zero P-core user time. The ordinary controller includes dispatch, observation, and bookkeeping. Its P/E work is reported separately and remains charged. Raw QoS counters reject inherited restricted controller execution. The profiles are not interchangeable.' if observed else
++            'Every worker and the controller must record zero P-core user time. Kernel P/E time is reported separately and does not fail that rule. A supported-counter calibration precedes the common background QoS clamp. QoS is not treated as affinity.'), '',
+             '| Condition | E user ms/job | P user ms/job | E kernel ms/job | P kernel ms/job |',
+             '| --- | ---: | ---: | ---: | ---: |']
+         for name in plan['conditions']:
+             rows=[r['summary']['core_time_ns'] for r in records if r['label'].removesuffix('_twin')==name]
+             lines.append('| '+name+' | '+' | '.join(f"{statistics.median(x[k] for x in rows)/decision['jobs_per_queue']/1e6:.3f}" for k in ['user_e','user_p','kernel_e','kernel_p'])+' |')
++        if observed:
++            lines += ['', '| Condition and role | E user ms/job | P user ms/job | E kernel ms/job | P kernel ms/job |',
++                '| --- | ---: | ---: | ---: | ---: |']
++            for name in plan['conditions']:
++                for role in ['worker','controller']:
++                    rows=[r['summary'][role+'_core_time_ns'] for r in records if r['label'].removesuffix('_twin')==name]
++                    lines.append('| '+name+' '+role+' | '+' | '.join(f"{statistics.median(x[k] for x in rows)/decision['jobs_per_queue']/1e6:.3f}" for k in ['user_e','user_p','kernel_e','kernel_p'])+' |')
++            lines += ['', 'Observation requests a 10 ms cadence. Every queue must meet the fixed 50 ms maximum coverage gap and scan duration. Missing boundary scans fail audit. These checks qualify sampling coverage, not an instantaneous memory peak.', '',
++                '| Condition | Sampled footprint MiB | Maximum coverage gap ms | Maximum scan ms | Controller CPU ms/job |',
++                '| --- | ---: | ---: | ---: | ---: |']
++            for name in plan['conditions']:
++                rows=[r['summary'] for r in records if r['label'].removesuffix('_twin')==name]
++                lines.append(f"| {name} | {statistics.median(x['sampled_peak_footprint_bytes'] for x in rows)/2**20:.1f} | {max(x['max_observation_gap_ns'] for x in rows)/1e6:.3f} | {max(x['max_observation_scan_ns'] for x in rows)/1e6:.3f} | {statistics.median(x['controller_cpu_ns'] for x in rows)/decision['jobs_per_queue']/1e6:.3f} |")
++            lines += ['', 'Physical footprint supplements RSS. It does not replace the unchanged RSS repeatability gate. Reusable bytes are not available from this unprivileged cross-process probe. Controller CPU charging includes initial/final scans, stats, core reads, and receipt validation. Its wider interval is recorded separately from queue wall timing. Final receipt serialization and disk writes are excluded.']
+         lines += ['', 'Core counters bracket the queue plus boundary bookkeeping. They cover a wider interval than the wall timer and are not an exact partition of the existing charged_cpu_ns metric. Raw worker and controller snapshots remain in each receipt.']
+     else:
+         lines += ['', 'P/E placement was not verified for this unrestricted native-CPU profile. Its controls do not establish the same application core type.']
+@@ -119,7 +140,8 @@ def audit(root):
+         raise ValueError('Incomplete or duplicate queues')
+     if run.digest(root/'expected.json')!=plan['expected_sha256']:
+         raise ValueError('Expected-output contract changed')
+-    jobs=0
++    jobs=0;coverage_flags=[]
++    observed=plan.get('observation_policy') is not None
+     for row in records:
+         raw=json.loads((root/f"r{row['round']}-{row['label']}"/'result.json').read_text())
+         tasks=jobs_for(plan['cases'],plan['copies_per_case'],row['round'])
+@@ -141,13 +163,30 @@ def audit(root):
+         if any(x['storage']!=mode for x in raw['jobs']):
+             raise ValueError('Wrong worker condition')
+         if plan.get('core_policy') is not None:
+-            core = audit_receipt(raw['core_usage'],[w['pid'] for w in raw['runtime']])
++            core = audit_receipt(raw['core_usage'],[w['pid'] for w in raw['runtime']],policy=plan['core_policy']['policy'])
+             if core['controller']['pid'] != plan['controller_pid']:
+                 raise ValueError('Wrong controller core snapshot')
+             if summary['core_time_ns'] != core['time_ns']:
+                 raise ValueError('Core time summary differs from raw counters')
++            if observed:
++                roles=dict(worker_core_time_ns=core['worker_time_ns'],
++                    controller_core_time_ns=core['observer_time_ns'],controller_qos_ticks=core['controller_qos_ticks'])
++                if any(summary[k]!=v for k,v in roles.items()):
++                    raise ValueError('Core role summary differs from raw counters')
+         elif 'core_usage' in raw:
+             raise ValueError('Unplanned core accounting')
++        if observed:
++            observation=raw['memory_observation']
++            measured=summarize_observation(observation,raw['memory_samples'],[w['pid'] for w in raw['runtime']])
++            if observation['queue_end_ns']-observation['queue_start_ns'] != summary['elapsed_ns']:
++                raise ValueError('Queue wall anchors differ from summary')
++            if any(summary[k]!=v for k,v in measured.items()):
++                raise ValueError('Observation summary differs from raw scans')
++            if not measured['observation_coverage_passed']:
++                coverage_flags.append(dict(round=row['round'],label=row['label'],metric='observation_coverage',
++                    max_gap_ns=measured['max_observation_gap_ns'],max_scan_ns=measured['max_observation_scan_ns']))
++        elif 'memory_observation' in raw:
++            raise ValueError('Unplanned observation profile')
+         jobs+=len(raw['jobs'])
+     checks=0
+     for phase in ['preflight','postflight']:
+@@ -161,11 +200,11 @@ def audit(root):
+     metrics=['charged_cpu_ns','elapsed_ns','sampled_peak_rss_bytes']
+     medians={label:{key:statistics.median(r['summary'][key] for r in records if r['label']==label)
+                     for key in metrics} for label in plan['orders'][0]}
+-    flags=control_flags(medians,plan['quality_policy'],{label:plan['callers'] for label in medians})
++    flags=control_flags(medians,plan['quality_policy'],{label:plan['callers'] for label in medians})+coverage_flags
+     decision=dict(queues=len(records),jobs=jobs,jobs_per_queue=len(plan['cases'])*plan['copies_per_case'],
+                   full_output_checks=checks,controls_passed=not flags,
+                   performance_qualified=not flags and not plan['smoke'],flags=flags,
+-                  application_core_class='efficiency' if plan.get('core_policy') else 'unverified')
++                  application_core_class=('efficiency-workers-ordinary-controller' if observed else 'efficiency') if plan.get('core_policy') else 'unverified')
+     run.save(root/'audit.json',decision)
+     (root/'report.md').write_text(report(root,decision))
+     return decision
+@@ -204,7 +243,8 @@ def main():
+              Path(__file__).with_name('budget.py'),Path(__file__).with_name('external_worker.py'),
+              Path(__file__).with_name('external_workflows.py'),ROOT/'Benchmarks/Tools/execution_policy.py',
+              ROOT/'Benchmarks/Tools/runner.py',Path(__file__).with_name('core_usage.py'),
+-             Path(__file__).with_name('core_counters.c'),Path(__file__).with_name('compare_e_cores.py')]
++             Path(__file__).with_name('core_counters.c'),Path(__file__).with_name('compare_e_cores.py'),
++             Path(__file__).with_name('observation.py')]
+     source_hashes={str(path.relative_to(ROOT)):run.digest(path) for path in sources}
+     root.mkdir(parents=True,exist_ok=False)
+     expected=json.loads(args.expected.read_text());run.save(root/'expected.json',expected)
+@@ -214,10 +254,13 @@ def main():
+         source_head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
+         source_hashes=source_hashes,python_sha256=run.digest(args.python),power=run.power(),
+         power_settings=power_state(),environment=run.environment(),state=run.system_state())
++    core_policy=None if core_reader is None else core_reader.policy['policy']
++    if core_policy==WORKER_POLICY:
++        plan['observation_policy']=COVERAGE.copy()
+     validate_plan(plan)
+     run.save(root/'plan.json',plan);records=[]
+     try:
+-        ready=preflight(configs,cases,expected,root/'preflight');run.save(root/'runtime.json',ready)
++        ready=preflight(configs,cases,expected,root/'preflight',core_policy=core_policy);run.save(root/'runtime.json',ready)
+         for i,order in enumerate(orders):
+             for label in order:
+                 run.power();config=configs[label.removesuffix('_twin')]
+@@ -225,7 +268,7 @@ def main():
+                     plan['callers'],root/f'r{i}-{label}',rss_limit_bytes=plan['rss_limit_bytes'],core_reader=core_reader)
+                 records.append(dict(round=i,label=label,summary=summary));run.save(root/'records.json',records)
+             print(f'round {i+1}/{len(orders)}',flush=True)
+-        preflight(configs,cases,expected,root/'postflight')
++        preflight(configs,cases,expected,root/'postflight',core_policy=core_policy)
+         end=dict(power=run.power(),power_settings=power_state(),state=run.system_state())
+         if end['power_settings']!=plan['power_settings']:raise ValueError('Power policy changed')
+         for name,sha in source_hashes.items():
+diff --git a/Benchmarks/CPUThroughput/compare_e_cores.py b/Benchmarks/CPUThroughput/compare_e_cores.py
+index 2f2426c535..2868a2311f 100644
+--- a/Benchmarks/CPUThroughput/compare_e_cores.py
++++ b/Benchmarks/CPUThroughput/compare_e_cores.py
+@@ -4,16 +4,19 @@ import argparse
+ from pathlib import Path
+ import subprocess
+ import sys
+-from core_usage import build
++from core_usage import build, POLICY, WORKER_POLICY
+ 
+ 
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__,epilog='Other arguments are forwarded to compare.py.')
+     parser.add_argument('--output',type=Path,required=True)
++    parser.add_argument('--observer-isolation',action='store_true',
++        help='Background only compute workers; report ordinary controller/observation work separately')
+     args,rest = parser.parse_known_args()
+     args.output.mkdir(parents=True,exist_ok=False)
+-    calibration = build(args.output/'core-controls')
+-    subprocess.run(['/usr/sbin/taskpolicy','-c','background',sys.executable,
++    calibration = build(args.output/'core-controls',policy=WORKER_POLICY if args.observer_isolation else POLICY)
++    prefix = [] if args.observer_isolation else ['/usr/sbin/taskpolicy','-c','background']
++    subprocess.run([*prefix,sys.executable,
+         str(Path(__file__).with_name('compare.py')),*rest,'--output',str(args.output/'panel'),
+         '--core-calibration',str(calibration.resolve())],check=True)
+ 
+diff --git a/Benchmarks/CPUThroughput/core_counters.c b/Benchmarks/CPUThroughput/core_counters.c
+index 430aab0638..361d39201b 100644
+--- a/Benchmarks/CPUThroughput/core_counters.c
++++ b/Benchmarks/CPUThroughput/core_counters.c
+@@ -20,6 +20,34 @@ int read_core_usage(int pid, uint64_t *out) {
+     return 0;
+ }
+ 
++int read_memory_usage(int pid, uint64_t *out) {
++    struct proc_taskinfo task;
++    int size = proc_pidinfo(pid, PROC_PIDTASKINFO, 0, &task, sizeof(task));
++    if (size != (int)sizeof(task)) {
++        if (size >= 0) errno = EIO;
++        return -1;
++    }
++    struct rusage_info_v6 r = {0};
++    if (proc_pid_rusage(pid, RUSAGE_INFO_V6, (rusage_info_t *)&r)) return -1;
++    out[0] = task.pti_resident_size;
++    out[1] = r.ri_phys_footprint;
++    out[2] = r.ri_proc_start_abstime;
++    return 0;
++}
++
++int read_qos_usage(int pid, uint64_t *out) {
++    struct rusage_info_v6 r = {0};
++    if (proc_pid_rusage(pid, RUSAGE_INFO_V6, (rusage_info_t *)&r)) return -1;
++    out[0] = r.ri_cpu_time_qos_default;
++    out[1] = r.ri_cpu_time_qos_maintenance;
++    out[2] = r.ri_cpu_time_qos_background;
++    out[3] = r.ri_cpu_time_qos_utility;
++    out[4] = r.ri_cpu_time_qos_legacy;
++    out[5] = r.ri_cpu_time_qos_user_initiated;
++    out[6] = r.ri_cpu_time_qos_user_interactive;
++    return 0;
++}
++
+ int running_threads(int pid) {
+     struct proc_taskinfo task;
+     int size = proc_pidinfo(pid, PROC_PIDTASKINFO, 0, &task, sizeof(task));
+diff --git a/Benchmarks/CPUThroughput/core_usage.py b/Benchmarks/CPUThroughput/core_usage.py
+index 46126dbb3c..4f65c14cec 100644
+--- a/Benchmarks/CPUThroughput/core_usage.py
++++ b/Benchmarks/CPUThroughput/core_usage.py
+@@ -8,17 +8,26 @@ import subprocess
+ import time
+ 
+ POLICY = 'e-core-application-v1'
++WORKER_POLICY = 'e-core-workers-observer-v2'
++POLICIES = (POLICY, WORKER_POLICY)
+ FIELDS = ('user_ticks','system_ticks','p_user_ticks','p_system_ticks','instructions',
+           'p_instructions','cycles','p_cycles','flags','timebase_numer','timebase_denom')
++QOS_FIELDS = ('default','maintenance','background','utility','legacy','user_initiated','user_interactive')
+ SOURCE = Path(__file__).with_name('core_counters.c')
+ 
+ 
++def worker_prefix(policy):
++    if policy not in (None,*POLICIES):
++        raise ValueError('Unknown worker core policy')
++    return ('/usr/sbin/taskpolicy','-c','background') if policy==WORKER_POLICY else ()
++
++
+ def digest(path):
+     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+ 
+ 
+ def validate_calibration(value):
+-    if value['policy'] != POLICY or value['source_sha256'] != digest(SOURCE):
++    if value['policy'] not in POLICIES or value['source_sha256'] != digest(SOURCE):
+         raise ValueError('Unknown core policy or counter source')
+     probe = value['probe']
+     for key in ('p_user_ticks','p_instructions','p_cycles','timebase_numer','timebase_denom'):
+@@ -33,7 +42,9 @@ def host_identity():
+         ['sysctl','-n','kern.bootsessionuuid'],text=True).strip())
+ 
+ 
+-def build(directory):
++def build(directory, policy=POLICY):
++    if policy not in POLICIES:
++        raise ValueError('Unknown core policy')
+     directory.mkdir()
+     library = directory/'core-counters.dylib'
+     probe = directory/'core-counter-probe'
+@@ -44,7 +55,7 @@ def build(directory):
+     with (directory/'build.log').open('w') as log:
+         for command in commands:
+             subprocess.run(command,stdout=log,stderr=log,check=True)
+-    value = dict(host=host_identity(),policy=POLICY,library=str(library.resolve()),library_sha256=digest(library),
++    value = dict(host=host_identity(),policy=policy,library=str(library.resolve()),library_sha256=digest(library),
+         source_sha256=digest(SOURCE),probe_binary_sha256=digest(probe),build_commands=commands,
+         probe=json.loads(subprocess.check_output([str(probe)],text=True)))
+     validate_calibration(value)
+@@ -62,9 +73,25 @@ class CoreReader:
+         self.lib = ctypes.CDLL(self.policy['library'],use_errno=True)
+         self.lib.read_core_usage.argtypes = [ctypes.c_int,ctypes.POINTER(ctypes.c_uint64)]
+         self.lib.read_core_usage.restype = ctypes.c_int
++        self.lib.read_memory_usage.argtypes = [ctypes.c_int,ctypes.POINTER(ctypes.c_uint64)]
++        self.lib.read_memory_usage.restype = ctypes.c_int
++        self.lib.read_qos_usage.argtypes = [ctypes.c_int,ctypes.POINTER(ctypes.c_uint64)]
++        self.lib.read_qos_usage.restype = ctypes.c_int
+         self.lib.running_threads.argtypes = [ctypes.c_int]
+         self.lib.running_threads.restype = ctypes.c_int
+ 
++    def memory(self, pid):
++        data = (ctypes.c_uint64*3)()
++        if self.lib.read_memory_usage(pid,data):
++            raise OSError(ctypes.get_errno(),'Cannot read worker memory for '+str(pid))
++        return dict(pid=pid,rss_bytes=int(data[0]),physical_footprint_bytes=int(data[1]),start_identity=int(data[2]))
++
++    def qos(self, pid):
++        data = (ctypes.c_uint64*len(QOS_FIELDS))()
++        if self.lib.read_qos_usage(pid,data):
++            raise OSError(ctypes.get_errno(),'Cannot read controller QoS for '+str(pid))
++        return dict(zip(QOS_FIELDS,map(int,data)))
++
+     def snapshot(self, pid):
+         data = (ctypes.c_uint64*len(FIELDS))()
+         if self.lib.read_core_usage(pid,data):
+@@ -88,7 +115,7 @@ class CoreReader:
+         raise TimeoutError('Worker threads did not quiesce for core accounting')
+ 
+ 
+-def interval(before, after):
++def interval(before, after, require_e_user=True):
+     if before['pid'] != after['pid']:
+         raise ValueError('Core snapshot PID mismatch')
+     scale = (before['timebase_numer'],before['timebase_denom'])
+@@ -107,15 +134,17 @@ def interval(before, after):
+             raise ValueError('P counter exceeds total: '+p)
+     if counts['user_ticks'] <= 0 or counts['instructions'] <= 0 or counts['cycles'] <= 0:
+         raise ValueError('Missing positive core-accounting work')
+-    if counts['p_user_ticks']:
++    if require_e_user and counts['p_user_ticks']:
+         raise ValueError('Application CPU time ran on P cores')
+-    ticks = dict(user_e=counts['user_ticks'],user_p=counts['p_user_ticks'],
++    ticks = dict(user_e=counts['user_ticks']-counts['p_user_ticks'],user_p=counts['p_user_ticks'],
+                  kernel_e=counts['system_ticks']-counts['p_system_ticks'],kernel_p=counts['p_system_ticks'])
+     return dict(pid=before['pid'],deltas=counts,
+         time_ns={key:value*scale[0]/scale[1] for key,value in ticks.items()})
+ 
+ 
+-def audit_receipt(value, worker_pids):
++def audit_receipt(value, worker_pids, policy=POLICY):
++    if policy not in POLICIES or value.get('policy',POLICY) != policy:
++        raise ValueError('Core receipt policy differs from the plan')
+     worker_pids = list(worker_pids)
+     if (len(worker_pids) != len(set(worker_pids))
+             or [w['pid'] for w in value['before']] != worker_pids
+@@ -126,9 +155,20 @@ def audit_receipt(value, worker_pids):
+                for k in ['running_before','running_after']):
+             raise ValueError('Worker was not quiescent at the counter boundary')
+     workers = [interval(a,b) for a,b in zip(value['before'],value['after'])]
+-    controller = interval(value['controller_before'],value['controller_after'])
++    controller = interval(value['controller_before'],value['controller_after'],require_e_user=policy==POLICY)
+     if controller['pid'] in {w['pid'] for w in workers}:
+         raise ValueError('Controller is also recorded as a worker')
+-    return dict(policy=POLICY,workers=workers,controller=controller,
++    qos = {}
++    if policy==WORKER_POLICY:
++        for key in QOS_FIELDS:
++            a,b=value['controller_qos_before'][key],value['controller_qos_after'][key]
++            if type(a) is not int or type(b) is not int or a < 0 or b < a:
++                raise ValueError('Invalid controller QoS counter')
++            qos[key]=b-a
++        if sum(qos.values())<=0 or any(qos[k] for k in ('background','maintenance','utility')):
++            raise ValueError('Controller did not run under the ordinary observation policy')
++    return dict(policy=policy,workers=workers,controller=controller,controller_qos_ticks=qos,
++        worker_time_ns={key:sum(w['time_ns'][key] for w in workers) for key in controller['time_ns']},
++        observer_time_ns=controller['time_ns'],
+         time_ns={key:sum(w['time_ns'][key] for w in workers)+controller['time_ns'][key]
+                  for key in controller['time_ns']})
+diff --git a/Benchmarks/CPUThroughput/observation.py b/Benchmarks/CPUThroughput/observation.py
+new file mode 100644
+index 0000000000..2fe313dca8
+--- /dev/null
++++ b/Benchmarks/CPUThroughput/observation.py
+@@ -0,0 +1,60 @@
++"""Recompute worker memory coverage and controller charges from raw observations."""
++
++COVERAGE = dict(interval_ns=10_000_000,max_gap_ns=50_000_000,max_scan_ns=50_000_000)
++
++
++def next_deadline_ns(previous, now, period):
++    return previous + max(1,(now-previous)//period+1)*period
++
++
++def summarize_observation(value, samples, worker_pids):
++    if value['policy'] != COVERAGE:
++        raise ValueError('Observation coverage policy changed')
++    for key in ['queue_start_ns','queue_end_ns','charge_start_ns','charge_end_ns',
++                'cpu_before_ns','cpu_after_ns']:
++        if type(value[key]) is not int or value[key] < 0:
++            raise ValueError('Invalid observation boundary: '+key)
++    start,end=value['queue_start_ns'],value['queue_end_ns']
++    if not value['charge_start_ns'] <= start < end <= value['charge_end_ns']:
++        raise ValueError('Queue falls outside the controller charge interval')
++    if value['cpu_after_ns'] < value['cpu_before_ns']:
++        raise ValueError('Controller CPU counter moved backward')
++    scans=value['scans']
++    if not scans or len(worker_pids)!=len(set(worker_pids)):
++        raise ValueError('Missing scans or duplicate worker identities')
++    identities=None
++    pairs=[];footprints=[];previous=value['charge_start_ns'];durations=[]
++    for scan in scans:
++        a,b=scan['start_ns'],scan['end_ns']
++        if (type(a) is not int or type(b) is not int
++                or not previous <= a <= b <= value['charge_end_ns']):
++            raise ValueError('Invalid or overlapping observation scan')
++        processes=scan['processes']
++        if [p['pid'] for p in processes] != list(worker_pids):
++            raise ValueError('Observation worker identity mismatch')
++        current=[p['start_identity'] for p in processes]
++        if any(type(n) is not int or n<=0 for n in current):
++            raise ValueError('Missing worker start identity')
++        if identities is None:
++            identities=current
++        if current!=identities:
++            raise ValueError('Observed worker identity changed')
++        for p in processes:
++            for key in ['rss_bytes','physical_footprint_bytes']:
++                if type(p[key]) is not int or p[key] < 0:
++                    raise ValueError('Invalid observed memory value')
++        pairs.append([b,sum(p['rss_bytes'] for p in processes)])
++        footprints.append([b,sum(p['physical_footprint_bytes'] for p in processes)])
++        durations.append(b-a);previous=b
++    if pairs!=[list(pair) for pair in samples]:
++        raise ValueError('RSS samples differ from observation scans')
++    if pairs[0][0] > start or scans[-1]['start_ns'] < end:
++        raise ValueError('Observation scans do not bracket the queue')
++    gaps=[max(0,min(end,b[0])-max(start,a[0])) for a,b in zip(pairs,pairs[1:])]
++    gap=max(gaps,default=0);duration=max(durations)
++    return dict(controller_cpu_ns=value['cpu_after_ns']-value['cpu_before_ns'],
++        max_observation_gap_ns=gap,max_observation_scan_ns=duration,
++        observation_coverage_passed=gap<=COVERAGE['max_gap_ns'] and duration<=COVERAGE['max_scan_ns'],
++        sampled_peak_footprint_bytes=max(p[1] for p in footprints),
++        sampled_footprint_byte_seconds=sum(max(0,min(end,b[0])-max(start,a[0]))*a[1]/1e9
++            for a,b in zip(footprints,footprints[1:])))
+diff --git a/Benchmarks/CPUThroughput/run.py b/Benchmarks/CPUThroughput/run.py
+index e76ad80869..484021d685 100644
+--- a/Benchmarks/CPUThroughput/run.py
++++ b/Benchmarks/CPUThroughput/run.py
+@@ -18,9 +18,11 @@ import threading
+ import time
+ 
+ ROOT = Path(__file__).resolve().parents[2]
++sys.path.insert(0, str(ROOT))
+ sys.path.insert(0, str(ROOT / 'Benchmarks/Tools'))
+ from execution_policy import PRODUCTION_MODE, policy, worker_environment
+ from runner import environment, verify_uninstrumented
++from Benchmarks.CPUThroughput.observation import next_deadline_ns
+ 
+ 
+ def digest(path):
+@@ -47,14 +49,18 @@ def system_state():
+ 
+ 
+ class Worker:
+-    def __init__(self, binary, storage, log):
++    def __init__(self, binary, storage, log, core_policy=None):
++        from Benchmarks.CPUThroughput.core_usage import worker_prefix, WORKER_POLICY
++        prefix = worker_prefix(core_policy)
+         self.log = log.open('w')
+         command = [str(binary)] if isinstance(binary, (str, os.PathLike)) else list(map(str, binary))
+-        self.process = subprocess.Popen([*command, storage], stdin=subprocess.PIPE,
++        self.process = subprocess.Popen([*prefix, *command, storage], stdin=subprocess.PIPE,
+             stdout=subprocess.PIPE, stderr=self.log, text=True, bufsize=1,
+             env=worker_environment(PRODUCTION_MODE), start_new_session=True)
+         try:
+             self.ready = self.receive()
++            if core_policy==WORKER_POLICY and self.ready.get('pid')!=self.process.pid:
++                raise ValueError('Worker launch did not preserve the accounted PID')
+         except BaseException:
+             self.close()
+             raise
+@@ -94,9 +100,11 @@ class Worker:
+ 
+ class MemorySampler:
+     """Sample concurrent resident bytes, rather than adding unrelated process peaks."""
+-    def __init__(self, workers, limit_bytes, interval=.01):
++    def __init__(self, workers, limit_bytes, interval=.01, memory_reader=None):
+         self.workers, self.limit_bytes, self.interval = workers, limit_bytes, interval
+-        self.samples, self.error = [], None
++        self.samples, self.scans, self.error = [], [], None
++        self.memory_reader = memory_reader
++        self.identities = None
+         self.stop = threading.Event()
+         self.lib = ctypes.CDLL('/usr/lib/libproc.dylib')
+         self.lib.proc_pidinfo.argtypes = [ctypes.c_int, ctypes.c_int, ctypes.c_uint64,
+@@ -104,6 +112,25 @@ class MemorySampler:
+         self.thread = threading.Thread(target=self.run)
+ 
+     def sample(self):
++        if self.memory_reader is not None:
++            start = time.monotonic_ns()
++            processes = [self.memory_reader(w.process.pid) for w in self.workers]
++            identities = [(p['pid'],p['start_identity']) for p in processes]
++            if self.identities is None:
++                self.identities = identities
++            if identities != self.identities:
++                raise RuntimeError('Observed worker identity changed')
++            end = time.monotonic_ns()
++            total = sum(p['rss_bytes'] for p in processes)
++            self.scans.append(dict(start_ns=start,end_ns=end,processes=processes))
++            self.samples.append((end,total))
++        else:
++            total = self.resident_bytes()
++            self.samples.append((time.monotonic_ns(), total))
++        if total > self.limit_bytes:
++            raise MemoryError('Benchmark workers exceeded the experiment RSS ceiling')
++
++    def resident_bytes(self):
+         total = 0
+         for worker in self.workers:
+             data = ctypes.create_string_buffer(256)
+@@ -112,15 +139,19 @@ class MemorySampler:
+                 raise RuntimeError('Cannot sample benchmark worker residency')
+             # proc_taskinfo starts with virtual_size and resident_size, both UInt64.
+             total += ctypes.c_uint64.from_buffer(data, 8).value
+-        self.samples.append((time.monotonic_ns(), total))
+-        if total > self.limit_bytes:
+-            raise MemoryError('Benchmark workers exceeded the experiment RSS ceiling')
++        return total
+ 
+     def run(self):
+         try:
++            deadline = time.monotonic_ns()
+             while not self.stop.is_set():
+                 self.sample()
+-                self.stop.wait(self.interval)
++                if self.memory_reader is None:
++                    self.stop.wait(self.interval)
++                else:
++                    now = time.monotonic_ns()
++                    deadline = next_deadline_ns(deadline,now,round(self.interval*1e9))
++                    self.stop.wait((deadline-now)/1e9)
+         except BaseException as e:
+             self.error = str(e)
+             for worker in self.workers:
+@@ -164,11 +195,20 @@ def summarize(jobs, elapsed_ns, samples, queued_jobs):
+ 
+ def batch(binary, storage, jobs, concurrency, directory, rss_limit_bytes=8 * 2**30, core_reader=None):
+     directory.mkdir()
++    from Benchmarks.CPUThroughput.core_usage import WORKER_POLICY
++    from Benchmarks.CPUThroughput.observation import COVERAGE, summarize_observation
++    core_policy = None if core_reader is None else core_reader.policy['policy']
++    observed = core_policy == WORKER_POLICY
+     workers = []
+     sampler = None
++    record = None
+     try:
+         for slot in range(concurrency):
+-            workers.append(Worker(binary, storage, directory / f'worker-{slot}.log'))
++            workers.append(Worker(binary, storage, directory / f'worker-{slot}.log',core_policy=core_policy))
++        if observed:
++            charge_start = time.monotonic_ns()
++            cpu_before = time.process_time_ns()
++            qos_before = core_reader.qos(os.getpid())
+         before = [worker.ask('stats') for worker in workers]
+         core_before = None if core_reader is None else [core_reader.worker_snapshot(w.process.pid) for w in workers]
+         controller_before = None if core_reader is None else core_reader.snapshot(os.getpid())
+@@ -176,7 +216,8 @@ def batch(binary, storage, jobs, concurrency, directory, rss_limit_bytes=8 * 2**
+         for task in jobs:
+             pending.put(task)
+         barrier = threading.Barrier(concurrency + 1)
+-        sampler = MemorySampler(workers, rss_limit_bytes)
++        sampler = MemorySampler(workers, rss_limit_bytes,
++            memory_reader=core_reader.memory if observed else None)
+         sampler.sample()
+         def lane(worker):
+             done = []
+@@ -210,6 +251,15 @@ def batch(binary, storage, jobs, concurrency, directory, rss_limit_bytes=8 * 2**
+         after = [worker.ask('stats') for worker in workers]
+         core_after = None if core_reader is None else [core_reader.worker_snapshot(w.process.pid) for w in workers]
+         controller_after = None if core_reader is None else core_reader.snapshot(os.getpid())
++        observation = None
++        if observed:
++            qos_after = core_reader.qos(os.getpid())
++            cpu_after = time.process_time_ns()
++            charge_end = time.monotonic_ns()
++            observation = dict(policy=COVERAGE.copy(),scans=sampler.scans,
++                queue_start_ns=start,queue_end_ns=end,charge_start_ns=charge_start,
++                charge_end_ns=charge_end,cpu_before_ns=cpu_before,cpu_after_ns=cpu_after)
++            controller_cpu = cpu_after-cpu_before
+         summary = summarize(results, end-start, sampler.samples, jobs)
+         summary.update(worker_cpu_ns=sum(b['cpu_ns']-a['cpu_ns'] for a,b in zip(before,after)),
+                        controller_cpu_ns=controller_cpu,
+@@ -222,17 +272,34 @@ def batch(binary, storage, jobs, concurrency, directory, rss_limit_bytes=8 * 2**
+             for a,b in zip(sampler.samples,sampler.samples[1:]))
+         record = dict(summary=summary, jobs=results, memory_samples=sampler.samples,
+                       before=before, after=after, runtime=[worker.ready for worker in workers])
++        if observed:
++            record['memory_observation'] = observation
+         if core_reader is not None:
+             from Benchmarks.CPUThroughput.core_usage import audit_receipt
+-            record['core_usage'] = dict(before=core_before,after=core_after,
++            record['core_usage'] = dict(policy=core_policy,before=core_before,after=core_after,
+                 controller_before=controller_before,controller_after=controller_after)
+-            save(directory / 'result.json',record)
+-            summary['core_time_ns'] = audit_receipt(record['core_usage'],[w.process.pid for w in workers])['time_ns']
++            if observed:
++                record['core_usage'].update(controller_qos_before=qos_before,controller_qos_after=qos_after)
++        if observed:
++            summary.update(summarize_observation(observation,sampler.samples,[w.process.pid for w in workers]))
++        if core_reader is not None:
++            if not observed:
++                save(directory / 'result.json',record)
++            core = audit_receipt(record['core_usage'],[w.process.pid for w in workers],policy=core_policy)
++            summary['core_time_ns'] = core['time_ns']
++            if observed:
++                summary.update(worker_core_time_ns=core['worker_time_ns'],
++                    controller_core_time_ns=core['observer_time_ns'],controller_qos_ticks=core['controller_qos_ticks'])
++        if observed:
++            observation.update(cpu_after_ns=time.process_time_ns(),charge_end_ns=time.monotonic_ns())
++            summary['controller_cpu_ns'] = observation['cpu_after_ns']-observation['cpu_before_ns']
++            summary['charged_cpu_ns'] = summary['worker_cpu_ns']+summary['controller_cpu_ns']
+         save(directory / 'result.json',record)
+         return summary
+     except BaseException as e:
+-        save(directory / 'failure.json', dict(error=str(e),
+-            memory_samples=[] if sampler is None else sampler.samples))
++        save(directory / 'failure.json', dict(error=str(e),record=record,
++            memory_samples=[] if sampler is None else sampler.samples,
++            memory_scans=[] if sampler is None else sampler.scans))
+         raise
+     finally:
+         for worker in workers:
+diff --git a/Benchmarks/Tests/test_cpu_observation.py b/Benchmarks/Tests/test_cpu_observation.py
+new file mode 100644
+index 0000000000..243ac87b3f
+--- /dev/null
++++ b/Benchmarks/Tests/test_cpu_observation.py
+@@ -0,0 +1,50 @@
++"""Keep observer placement separate from the timed compute-core requirement."""
++from pathlib import Path
++import sys
++import unittest
++ROOT=Path(__file__).resolve().parents[2]
++sys.path.insert(0,str(ROOT))
++from Benchmarks.CPUThroughput import core_usage
++from test_cpu_core_usage import snapshot, completed
++
++WORKER_POLICY='e-core-workers-observer-v2'
++
++
++class ObserverCoreTests(unittest.TestCase):
++    def receipt(self):
++        value=dict(policy=WORKER_POLICY,before=[snapshot(1)],after=[completed(1)],
++                   controller_before=snapshot(2),controller_after=completed(2),
++                   controller_qos_before=dict.fromkeys(core_usage.QOS_FIELDS,0),
++                   controller_qos_after=dict.fromkeys(core_usage.QOS_FIELDS,0) | dict(default=24))
++        value['controller_after']['p_user_ticks']=6
++        return value
++
++    def test_compute_stays_e_core_while_observer_p_time_is_charged(self):
++        value=core_usage.audit_receipt(self.receipt(),[1],policy=WORKER_POLICY)
++        self.assertEqual(value['worker_time_ns'],dict(user_e=1000,user_p=0,kernel_e=375,kernel_p=125))
++        self.assertEqual(value['observer_time_ns'],dict(user_e=750,user_p=250,kernel_e=375,kernel_p=125))
++        self.assertEqual(value['time_ns'],dict(user_e=1750,user_p=250,kernel_e=750,kernel_p=250))
++
++    def test_old_policy_and_new_worker_rule_are_still_strict(self):
++        old=self.receipt();old.pop('policy')
++        with self.assertRaises(ValueError):core_usage.audit_receipt(old,[1])
++        bad=self.receipt();bad['after'][0]['p_user_ticks']=1
++        with self.assertRaises(ValueError):core_usage.audit_receipt(bad,[1],policy=WORKER_POLICY)
++
++    def test_inherited_background_controller_is_rejected(self):
++        bad=self.receipt();bad['controller_qos_after']['background']=1
++        with self.assertRaises(ValueError):core_usage.audit_receipt(bad,[1],policy=WORKER_POLICY)
++
++    def test_worker_launch_policy_is_closed_and_legacy_stays_unprefixed(self):
++        self.assertEqual(core_usage.worker_prefix(None),())
++        self.assertEqual(core_usage.worker_prefix(core_usage.POLICY),())
++        self.assertEqual(core_usage.worker_prefix(WORKER_POLICY),('/usr/sbin/taskpolicy','-c','background'))
++        with self.assertRaises(ValueError):core_usage.worker_prefix('arbitrary-command')
++
++    def test_receipt_cannot_silently_change_its_core_policy(self):
++        for policy in ['unknown',core_usage.POLICY]:
++            with self.subTest(policy=policy),self.assertRaises(ValueError):
++                core_usage.audit_receipt(self.receipt(),[1],policy=policy)
++
++
++if __name__=='__main__':unittest.main()
+diff --git a/Benchmarks/Tests/test_cpu_observation_coverage.py b/Benchmarks/Tests/test_cpu_observation_coverage.py
+new file mode 100644
+index 0000000000..81a8b1841f
+--- /dev/null
++++ b/Benchmarks/Tests/test_cpu_observation_coverage.py
+@@ -0,0 +1,66 @@
++"""Reject observation holes without altering engine repeatability allowances."""
++import copy
++from pathlib import Path
++import sys
++import unittest
++ROOT=Path(__file__).resolve().parents[2]
++sys.path.insert(0,str(ROOT))
++from Benchmarks.CPUThroughput.observation import summarize_observation
++
++MS=1_000_000
++
++
++def receipt():
++    return dict(policy=dict(interval_ns=10*MS,max_gap_ns=50*MS,max_scan_ns=50*MS),
++        queue_start_ns=10*MS,queue_end_ns=90*MS,
++        charge_start_ns=0,charge_end_ns=110*MS,cpu_before_ns=100,cpu_after_ns=200,
++        scans=[dict(start_ns=t*MS,end_ns=(t+1)*MS,
++            processes=[dict(pid=7,start_identity=123,rss_bytes=100,physical_footprint_bytes=80)])
++            for t in range(0,101,10)])
++
++
++class ObservationCoverageTests(unittest.TestCase):
++    def audit(self,value):
++        samples=[[s['end_ns'],sum(p['rss_bytes'] for p in s['processes'])] for s in value['scans']]
++        return summarize_observation(value,samples,[7])
++
++    def test_late_scans_skip_slots_without_moving_the_absolute_phase(self):
++        from Benchmarks.CPUThroughput.observation import next_deadline_ns
++        for now,expected in [(100,110),(109,110),(110,120),(112,120),(173,180)]:
++            with self.subTest(now=now):self.assertEqual(next_deadline_ns(100,now,10),expected)
++
++    def test_bracketed_scans_and_cpu_charge_are_recomputable(self):
++        result=self.audit(receipt())
++        self.assertTrue(result['observation_coverage_passed'])
++        self.assertEqual(result['controller_cpu_ns'],100)
++        self.assertEqual(result['max_observation_gap_ns'],10*MS)
++        self.assertEqual(result['sampled_peak_footprint_bytes'],80)
++        self.assertAlmostEqual(result['sampled_footprint_byte_seconds'],6.4)
++
++    def test_many_clustered_samples_do_not_hide_a_hole(self):
++        value=receipt();value['scans']=value['scans'][:2]+value['scans'][-2:]
++        result=self.audit(value)
++        self.assertFalse(result['observation_coverage_passed'])
++        self.assertEqual(result['max_observation_gap_ns'],79*MS)
++
++    def test_bad_boundaries_policy_identity_or_scan_are_rejected(self):
++        mutations=[lambda v:v.update(queue_start_ns=0),lambda v:v.update(queue_end_ns=102*MS),
++            lambda v:v.update(charge_start_ns=MS),lambda v:v.update(cpu_after_ns=99),
++            lambda v:v['policy'].update(max_gap_ns=200*MS),
++            lambda v:v['scans'][0]['processes'][0].update(pid=8),
++            lambda v:v['scans'][0]['processes'][0].update(rss_bytes=-1),
++            lambda v:v['scans'][1]['processes'][0].update(start_identity=124),
++            lambda v:v['scans'][1].update(start_ns=0)]
++        for mutate in mutations:
++            with self.subTest(mutate=mutate),self.assertRaises(ValueError):
++                value=copy.deepcopy(receipt());mutate(value);self.audit(value)
++
++    def test_mismatched_rss_and_slow_scan_cannot_qualify(self):
++        value=receipt()
++        with self.assertRaises(ValueError):summarize_observation(value,[[1,1]],[7])
++        value['scans']=value['scans'][:1]+[dict(start_ns=11*MS,end_ns=101*MS,
++            processes=[dict(pid=7,start_identity=123,rss_bytes=100,physical_footprint_bytes=80)]),value['scans'][-1] | dict(start_ns=102*MS,end_ns=103*MS)]
++        self.assertFalse(self.audit(value)['observation_coverage_passed'])
++
++
++if __name__=='__main__':unittest.main()
+diff --git a/Benchmarks/Tests/test_cpu_observation_lifecycle.py b/Benchmarks/Tests/test_cpu_observation_lifecycle.py
+new file mode 100644
+index 0000000000..67b8e471fd
+--- /dev/null
++++ b/Benchmarks/Tests/test_cpu_observation_lifecycle.py
+@@ -0,0 +1,93 @@
++"""Charge receipt validation and preserve raw evidence when validation rejects it."""
++import json
++import os
++import subprocess
++from pathlib import Path
++import sys
++import tempfile
++import time
++import unittest
++from unittest.mock import patch
++ROOT=Path(__file__).resolve().parents[2]
++sys.path.insert(0,str(ROOT))
++from Benchmarks.CPUThroughput import run, observation, core_usage
++from test_cpu_core_usage import completed, snapshot
++
++
++class Counters:
++    policy=dict(policy=core_usage.WORKER_POLICY)
++    def __init__(self):self.calls={};self.qos_calls=0
++    def snapshot(self,pid):
++        count=self.calls.get(pid,0);self.calls[pid]=count+1
++        return completed(pid) if count else snapshot(pid)
++    worker_snapshot=snapshot
++    def memory(self,pid):return dict(pid=pid,start_identity=pid,rss_bytes=100,physical_footprint_bytes=80)
++    def qos(self,pid):
++        self.qos_calls+=1
++        return dict.fromkeys(core_usage.QOS_FIELDS,0) | dict(default=self.qos_calls)
++
++
++@unittest.skipUnless(sys.platform=='darwin','Worker clamp requires macOS')
++class ObservationLifecycleTests(unittest.TestCase):
++    def setUp(self):
++        self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
++        self.root=Path(self.temp.name);worker=self.root/'worker.py'
++        worker.write_text('''import json,os,sys,time
++print(json.dumps(dict(ready=True,pid=os.getpid())),flush=True)
++for line in sys.stdin:
++    task=json.loads(line) if line.startswith('{') else line.strip()
++    if task=='stats':value=dict(cpu_ns=time.process_time_ns(),rss_bytes=100)
++    else:value=dict(task,cpu_ns=1,wall_ns=1,storage='test',input='tiny')
++    print(json.dumps(value),flush=True)
++''')
++        self.command=[sys.executable,str(worker)]
++        self.task=dict(id=0,input='tiny',workflow='read')
++
++    def batch(self):
++        return run.batch(self.command,'test',[self.task],1,self.root/'batch',core_reader=Counters())
++
++    def test_direct_script_worker_launch_does_not_require_repository_on_pythonpath(self):
++        code="""import runpy,sys
++from pathlib import Path
++module=runpy.run_path(sys.argv[1],run_name='cpu_controller')
++worker=module['Worker']([sys.executable,sys.argv[2]],'test',Path(sys.argv[3]))
++try: assert worker.ready['ready']
++finally: worker.close()
++"""
++        env=dict(os.environ);env.pop('PYTHONPATH',None)
++        result=subprocess.run([sys.executable,'-c',code,str(ROOT/'Benchmarks/CPUThroughput/run.py'),
++            str(self.root/'worker.py'),str(self.root/'direct.log')],cwd=self.root,env=env,
++            capture_output=True,text=True,timeout=10)
++        self.assertEqual(result.returncode,0,result.stderr)
++
++    def test_final_cpu_snapshot_follows_both_observation_and_core_validation(self):
++        ends=[]
++        def charged(function):
++            def wrapped(*args,**kwargs):
++                value=function(*args,**kwargs)
++                start=time.thread_time_ns()
++                while time.thread_time_ns()-start<20_000_000:pass
++                ends.append(time.process_time_ns())
++                return value
++            return wrapped
++        with patch.object(observation,'summarize_observation',charged(observation.summarize_observation)), \
++             patch.object(core_usage,'audit_receipt',charged(core_usage.audit_receipt)):
++            summary=self.batch()
++        raw=json.loads((self.root/'batch/result.json').read_text())
++        self.assertEqual(len(ends),2)
++        self.assertGreaterEqual(raw['memory_observation']['cpu_after_ns'],max(ends))
++        self.assertGreaterEqual(summary['controller_cpu_ns'],40_000_000)
++
++    def test_rejection_retains_the_full_receipt_and_closes_its_workers(self):
++        with patch.object(observation,'summarize_observation',side_effect=ValueError('bad observation')):
++            with self.assertRaisesRegex(ValueError,'bad observation'):self.batch()
++        failure=json.loads((self.root/'batch/failure.json').read_text())
++        raw=failure['record']
++        for key in ['jobs','runtime','core_usage','memory_observation','before','after']:
++            self.assertIn(key,raw)
++        self.assertIn('charge_start_ns',raw['memory_observation'])
++        for worker in raw['runtime']:
++            with self.assertRaises(ProcessLookupError):os.kill(worker['pid'],0)
++
++
++if __name__=='__main__':unittest.main()
+diff --git a/Benchmarks/Tests/test_external_cpu_plan.py b/Benchmarks/Tests/test_external_cpu_plan.py
+index 4f7f48a911..665accb198 100644
+--- a/Benchmarks/Tests/test_external_cpu_plan.py
++++ b/Benchmarks/Tests/test_external_cpu_plan.py
+@@ -3,6 +3,7 @@ import copy
+ from pathlib import Path
+ import sys
+ import unittest
++from unittest.mock import patch
+ ROOT=Path(__file__).resolve().parents[2]
+ sys.path.insert(0,str(ROOT))
+ from Benchmarks.CPUThroughput.compare import conditions, validate_plan, LIMITS
+@@ -30,6 +31,20 @@ class ExternalCPUPlanTests(unittest.TestCase):
+         self.plan['conditions'].pop('pandas_arrow')
+         with self.assertRaises(ValueError):validate_plan(self.plan)
+ 
++    def test_observation_limits_require_the_named_worker_profile(self):
++        from Benchmarks.CPUThroughput.core_usage import WORKER_POLICY, POLICY
++        from Benchmarks.CPUThroughput.observation import COVERAGE
++        self.plan['core_policy']=dict(policy=WORKER_POLICY)
++        with patch('Benchmarks.CPUThroughput.compare.validate_calibration'):
++            with self.assertRaises(ValueError):validate_plan(self.plan)
++            self.plan['observation_policy']=COVERAGE.copy()
++            validate_plan(self.plan)
++            self.plan['observation_policy']['max_gap_ns']*=2
++            with self.assertRaises(ValueError):validate_plan(self.plan)
++            self.plan['observation_policy']=COVERAGE.copy()
++            self.plan['core_policy']['policy']=POLICY
++            with self.assertRaises(ValueError):validate_plan(self.plan)
++
+     def test_rejects_unlike_engines_work_budgets_and_relaxed_limits(self):
+         mutations=[lambda p:p['conditions'].pop('duckdb'),
+             lambda p:p['conditions']['pandas'].update(mode='compact'),
+diff --git a/Benchmarks/Tests/test_external_cpu_workflows.py b/Benchmarks/Tests/test_external_cpu_workflows.py
+index d99145e9ba..2cac42779d 100644
+--- a/Benchmarks/Tests/test_external_cpu_workflows.py
++++ b/Benchmarks/Tests/test_external_cpu_workflows.py
+@@ -114,8 +114,9 @@ class ExternalCPUWorkflowsTests(unittest.TestCase):
+ 
+     def test_rejected_core_queue_preserves_receipt_and_closes_worker(self):
+         from Benchmarks.CPUThroughput import run
+-        from Benchmarks.CPUThroughput.core_usage import FIELDS
++        from Benchmarks.CPUThroughput.core_usage import FIELDS, POLICY
+         class BadCore:
++            policy=dict(policy=POLICY)
+             def __init__(self):self.calls={}
+             def worker_snapshot(self,pid):return self.snapshot(pid) | dict(running_before=0,running_after=0)
+             def snapshot(self,pid):

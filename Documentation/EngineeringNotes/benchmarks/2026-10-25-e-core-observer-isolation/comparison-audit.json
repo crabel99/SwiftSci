@@ -1,0 +1,51 @@
+{
+  "queues": 24,
+  "jobs": 192,
+  "jobs_per_queue": 8,
+  "full_output_checks": 48,
+  "controls_passed": false,
+  "performance_qualified": false,
+  "flags": [
+    {
+      "label": "swiftsci_optional",
+      "metric": "charged_cpu_ns",
+      "ratio": 0.8383221802688424
+    },
+    {
+      "label": "swiftsci_optional",
+      "metric": "elapsed_ns",
+      "ratio": 0.8541103215391354
+    },
+    {
+      "label": "swiftsci_compact",
+      "metric": "elapsed_ns",
+      "ratio": 1.2039292191958595
+    },
+    {
+      "label": "polars",
+      "metric": "charged_cpu_ns",
+      "ratio": 0.8493872099474366
+    },
+    {
+      "label": "polars",
+      "metric": "elapsed_ns",
+      "ratio": 1.2909289766646812
+    },
+    {
+      "label": "duckdb",
+      "metric": "elapsed_ns",
+      "ratio": 0.8031871945440401
+    },
+    {
+      "label": "pandas_arrow",
+      "metric": "charged_cpu_ns",
+      "ratio": 1.3045487816487469
+    },
+    {
+      "label": "pandas_arrow",
+      "metric": "elapsed_ns",
+      "ratio": 1.2196605177692557
+    }
+  ],
+  "application_core_class": "efficiency-workers-ordinary-controller"
+}
