@@ -1,0 +1,21 @@
+{
+  "focused_cpu": {
+    "tests": 21,
+    "passed": 21,
+    "skipped": 0
+  },
+  "ci_style": {
+    "command": "POLARS_MAX_THREADS=1 python -m unittest discover -s Benchmarks/Tests",
+    "tests": 247,
+    "passed": 243,
+    "skipped": 4,
+    "reason": "Four explicit optional Metal gates."
+  },
+  "optional_metal": {
+    "command": "SWIFTSCI_MLX_TEST_GPU=1 POLARS_MAX_THREADS=1 python -m unittest <four gated tests>",
+    "tests": 4,
+    "log": "optional-metal-tests.log",
+    "passed": 4,
+    "skipped": 0
+  }
+}
