@@ -1,0 +1,162 @@
+{
+  "source_commit": "af4e2cd45b53cf1a76253dc174c508e5459b3cf7",
+  "policy": "e-core-application-v1",
+  "user_selected_rule": "Require E-core application execution; report kernel P/E time separately",
+  "qualification": {
+    "queues": 24,
+    "jobs": 192,
+    "jobs_per_queue": 8,
+    "full_output_checks": 48,
+    "controls_passed": false,
+    "performance_qualified": false,
+    "flags": [
+      {
+        "label": "swiftsci_optional",
+        "metric": "elapsed_ns",
+        "ratio": 2.4310274845324487
+      },
+      {
+        "label": "swiftsci_compact",
+        "metric": "elapsed_ns",
+        "ratio": 1.200460551362953
+      },
+      {
+        "label": "polars",
+        "metric": "elapsed_ns",
+        "ratio": 0.494125639673996
+      },
+      {
+        "label": "duckdb",
+        "metric": "charged_cpu_ns",
+        "ratio": 1.2446791816652538
+      },
+      {
+        "label": "pandas_arrow",
+        "metric": "charged_cpu_ns",
+        "ratio": 1.1813943818322339
+      },
+      {
+        "label": "pandas_arrow",
+        "metric": "elapsed_ns",
+        "ratio": 0.8232944041320256
+      }
+    ],
+    "application_core_class": "efficiency"
+  },
+  "worker_intervals": 96,
+  "controller_intervals": 24,
+  "application_p_time_ns": 0,
+  "kernel_p_ns": 30206708.333333332,
+  "validation": {
+    "focused-tests.log": {
+      "tests": 29,
+      "passed": 29,
+      "skipped": 0,
+      "status": "passed"
+    },
+    "controller-tests.log": {
+      "tests": 255,
+      "passed": 251,
+      "skipped": 4,
+      "status": "passed"
+    },
+    "optional-metal-tests.log": {
+      "tests": 4,
+      "passed": 4,
+      "skipped": 0,
+      "status": "passed"
+    },
+    "unique_tests_executed": 255,
+    "new_native_swift_tests": false,
+    "unchanged_swift_source_head": "58db37c4b3c97b287186c377f76f89abcbbb0b0d",
+    "prior_dataframe_tests": {
+      "debug": 447,
+      "release": 447
+    },
+    "test_commands": "validate.sh",
+    "hosted_ci_run": false
+  },
+  "runtime": {
+    "swiftsci_optional": {
+      "pid": 57632,
+      "ready": true
+    },
+    "swiftsci_compact": {
+      "pid": 57677,
+      "ready": true
+    },
+    "pandas": {
+      "ready": true,
+      "pid": 57733,
+      "engine": "pandas",
+      "versions": {
+        "pandas": "3.0.6",
+        "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+        "numpy": "2.5.3"
+      },
+      "execution": {
+        "mode": "production-default",
+        "thread_environment": {},
+        "configured_pool_sizes": {},
+        "active_threads_measured": false
+      }
+    },
+    "polars": {
+      "ready": true,
+      "pid": 57814,
+      "engine": "polars",
+      "versions": {
+        "polars": "1.44.2",
+        "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+        "numpy": "2.5.3"
+      },
+      "execution": {
+        "mode": "production-default",
+        "thread_environment": {},
+        "configured_pool_sizes": {
+          "polars": 16
+        },
+        "active_threads_measured": false
+      }
+    },
+    "duckdb": {
+      "ready": true,
+      "pid": 57856,
+      "engine": "duckdb",
+      "versions": {
+        "duckdb": "1.5.6",
+        "pyarrow": "25.0.1",
+        "pandas": "3.0.6",
+        "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+        "numpy": "2.5.3"
+      },
+      "execution": {
+        "mode": "production-default",
+        "thread_environment": {},
+        "configured_pool_sizes": {
+          "duckdb": 16
+        },
+        "active_threads_measured": false
+      }
+    },
+    "pandas_arrow": {
+      "ready": true,
+      "pid": 57921,
+      "engine": "pandas_arrow",
+      "versions": {
+        "pandas": "3.0.6",
+        "pyarrow": "25.0.1",
+        "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+        "numpy": "2.5.3"
+      },
+      "execution": {
+        "mode": "production-default",
+        "thread_environment": {},
+        "configured_pool_sizes": {
+          "pyarrow": 16
+        },
+        "active_threads_measured": false
+      }
+    }
+  }
+}
