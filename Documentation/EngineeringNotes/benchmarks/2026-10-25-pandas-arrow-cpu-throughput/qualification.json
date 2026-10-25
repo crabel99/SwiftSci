@@ -1,0 +1,64 @@
+{
+  "pandas": "3.0.6",
+  "pyarrow": "25.0.1",
+  "parser_source_sha256": "b9b446383ccc51bd36734a75d3f5ba78dc455fe4a7dbfe190eb4ae377379eeeb",
+  "results": [
+    {
+      "input": "Aotizhongxin-default",
+      "reader": "pandas.read_csv(engine=pyarrow)",
+      "column_types": {},
+      "full_native_match": true,
+      "mismatched_columns": []
+    },
+    {
+      "input": "Aotizhongxin-default",
+      "reader": "pyarrow.csv.read_csv(explicit schema).to_pandas()",
+      "column_types": {
+        "No": "int64",
+        "year": "int64",
+        "month": "int64",
+        "day": "int64",
+        "hour": "int64",
+        "PM2.5": "double",
+        "PM10": "double",
+        "SO2": "double",
+        "NO2": "double",
+        "CO": "double",
+        "O3": "double",
+        "TEMP": "double",
+        "PRES": "double",
+        "DEWP": "double",
+        "RAIN": "double",
+        "wd": "string",
+        "WSPM": "double",
+        "station": "string"
+      },
+      "full_native_match": true,
+      "mismatched_columns": []
+    },
+    {
+      "input": "energy-common",
+      "reader": "pandas.read_csv(engine=pyarrow)",
+      "column_types": {},
+      "full_native_match": true,
+      "mismatched_columns": []
+    },
+    {
+      "input": "energy-common",
+      "reader": "pyarrow.csv.read_csv(explicit schema).to_pandas()",
+      "column_types": {
+        "Date": "string",
+        "Time": "string",
+        "Global_active_power": "double",
+        "Global_reactive_power": "double",
+        "Voltage": "double",
+        "Global_intensity": "double",
+        "Sub_metering_1": "double",
+        "Sub_metering_2": "double",
+        "Sub_metering_3": "double"
+      },
+      "full_native_match": true,
+      "mismatched_columns": []
+    }
+  ]
+}
