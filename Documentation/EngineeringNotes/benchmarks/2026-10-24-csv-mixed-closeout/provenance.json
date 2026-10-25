@@ -1,0 +1,86 @@
+{
+  "heads": {
+    "parent": "36a93f7dfd54524fc7360fd52930366190db8d01",
+    "candidate": "58db37c4b3c97b287186c377f76f89abcbbb0b0d"
+  },
+  "changed_production_files": [
+    "Sources/SwiftDataFrame/IO/CSVColumnBuilder.swift",
+    "Sources/SwiftDataFrame/IO/CSVColumnConversion.swift",
+    "Sources/SwiftDataFrame/IO/SystemsCSVParser.swift",
+    "Sources/SwiftDataFrame/IO/VectorizedByteParsers.swift"
+  ],
+  "measured_source_files": 51,
+  "full_source_manifests_match_commits": true,
+  "dependency_hashes_match": true,
+  "historical_build_receipts_unchanged": true,
+  "reused_native_validation": {
+    "source_commit": "58db37c4b3c97b287186c377f76f89abcbbb0b0d",
+    "tests": {
+      "debug": {
+        "totalTestCount": 447,
+        "passedTests": 447,
+        "failedTests": 0,
+        "skippedTests": 0
+      },
+      "release": {
+        "totalTestCount": 447,
+        "passedTests": 447,
+        "failedTests": 0,
+        "skippedTests": 0
+      }
+    },
+    "new_native_tests_run": false
+  },
+  "controller_source_sha256": {
+    "Benchmarks/CPUThroughput/build.py": "74dff8546ea39128ca0bc3ecd15dee5bbe7fe1b66de3ad66319612af85900ca6",
+    "Benchmarks/CPUThroughput/run.py": "50ce9073b5abeabee6a873199746960568491423ede0b9f648be6bd859860319",
+    "Benchmarks/CPUThroughput/audit.py": "1d5e106b9459423266d2f0028e06ac352999fdbadf8280fa3adc7204b0fc37d5",
+    "Benchmarks/CPUThroughput/budget.py": "91674014ccb23ef93501379f1b86f733616f709dfe51fb48414916be8724b60e",
+    "Benchmarks/CPUThroughput/README.md": "b7d7c4a5e4f84f2a8dec1760537d0218ae250bd3d01881c69a1e2470fcc6d3f7",
+    "Benchmarks/CPUThroughput/Worker.swift": "4d9c46bf307e59a68e7998140a5067ad5456044879d1bbf35bb88f867ac21867",
+    "Benchmarks/Tools/boundary_fixtures.py": "cc0fe57aeb6c2ca7bc16438d0033bce632851ef7f1f7a3c53f4920e589af3e0e",
+    "Benchmarks/Tools/boundary_cases.py": "55a36023cbf821bafa10c97d95709d62f87b404a9ff4da950e6fe52e88810a12",
+    "Benchmarks/Tools/public_datasets.py": "48de289350d6d6369789e43b4ca9765c19fdd562c33702249ee6d0f3bec3f134",
+    "Benchmarks/Tools/neural_reference.py": "18982dd4e8ed626e338cf856e4c9b16ed96f7f8b96371ed058872f7574585551",
+    "Benchmarks/Tools/runner.py": "6b40bd42f4ee56df681a0f3614974a4b33bdaebbe857b683c325add51bb89146",
+    "Benchmarks/Tools/csv_contract.py": "d093ec3c29fd8a886265c73b3b98b388e4a3ecee8f150aadeb4f67529ef4df0d",
+    "Benchmarks/Tools/classification_reference.py": "f0fe47d79cf64e93da378f84fd38e28f235e0f19ef7436e6a9d1ef1fed44acf7",
+    "Benchmarks/Tools/build_nist_model_fixtures.py": "f9aecd7452ab1e52fe883de8586dddb7f443dedb643fb8ac37ce3031da12b093",
+    "Benchmarks/Tools/build_exact_model_fixtures.py": "1b14a071d4d52e71248558c018e407d29094fb3d75337832474cac65bdc86067",
+    "Benchmarks/Tools/regression_policy.py": "5d22fffb00cd914ff365524d9a06752af80c5adb688afd6f52ec06ff07e55597",
+    "Benchmarks/Tools/numerical_fixtures.py": "779228b204ec8b5ac6329d300bec9f55bedb1877d0b9fc4b386eb08ec7eec44d",
+    "Benchmarks/Tools/dataframe_fixtures.py": "4f926edd8adbe84759dad50c6d0532ad52536622e4103c1dcf8a822c58dd5a93",
+    "Benchmarks/Tools/verify_llama_gguf.py": "57c966432936cd34a2d102937b99458b7ede608933f9d55c6209768410f2d4fe",
+    "Benchmarks/Tools/llama_generation_benchmark.py": "58ff44c945505a2670f9e2a0ad0b2369f7051857e04849f779784e1c96d88584",
+    "Benchmarks/Tools/acceptance.py": "fa1fa638891593af0a4effe30bef1a6b105307a3cb660abb91b97149516a36e2",
+    "Benchmarks/Tools/llama_cpp_compare.py": "c8842161131e6856f72c310e38443dcea3deb294cd69ffc7be835f4d2c2d0c1d",
+    "Benchmarks/Tools/datasets.py": "020231a4e58d91662d540b0a9fcd4021d28e5f00381d0c1805f72a889e7e8014",
+    "Benchmarks/Tools/llama_score_analysis.py": "59b31d58e870e3a98482e9594dc6e1f18aa2aed6263b31e40ae82f602c9d7a7c",
+    "Benchmarks/Tools/build_supervised_fixtures.py": "3b17225f08f6aed8f7fd36e12b2aa88223b732167516b9fdc8e22ce6dd940ef3",
+    "Benchmarks/Tools/controlled_fixtures.py": "4d8b7c2eab94e9fb294228db79b4d41e599d9be5704379b7de1d2f0005d56c10",
+    "Benchmarks/Tools/build_controlled_model_fixtures.py": "67786cb58e6d5b6b0349da9bd8307489a1447e8bf841c37a13ff70da560b3f24",
+    "Benchmarks/Tools/neural_shaped_reference.py": "4f640068281cba6f6492ea10823e058b9331e7e65e16880a3707e38c4fdc0bb1",
+    "Benchmarks/Tools/boundary_reference.py": "6e81f078385cb02bbf3dc4cd0848075b1bb4b584a331366fb9cca7f235cac008",
+    "Benchmarks/Tools/pretrained_llama.py": "09704183cfa30ed16fa168520150612bddc9ac57c5ca1366226869c1babcb7d4",
+    "Benchmarks/Tools/llama_precision_benchmark.py": "f70306104b0a044af8b8de7f12811d5e403e2d7a619405ab249db08cf69f6b47",
+    "Benchmarks/Tools/bench.py": "778b5577efc671faf4e9bb2ef16c390e7b8a54d16182fc0ee712750e7c8d0fb1",
+    "Benchmarks/Tools/build_workflow_fixtures.py": "4e1192770d90bcf963b2a266f5bf5ab7d30fea2d77d2f18d0a641d86da986e24",
+    "Benchmarks/Tools/llama_generation_cases.py": "96829560d4f6a16a2f2edaf39af07bab1aa4aa82194b252edbb8b93f7f3ca56e",
+    "Benchmarks/Tools/neural_shapes.py": "5d5b65f305e4cfe30281c1c100efcfb5d404bf981f2b89cca34831656a70ed7c",
+    "Benchmarks/Tools/vision_reference.py": "226f9be8e22037fc5f490c3f0b91a506b56986e6a6b2e7b30a7d604ae5c199a3",
+    "Benchmarks/Tools/contracts.py": "112b532870a8bdbd57b4c827149dc2fb74fca852cca9b4c7cb84846fb9c83be4",
+    "Benchmarks/Tools/vision_fixtures.py": "8ea9e782ed15a62eae4e1c3712cb8452e5c6285c67d644954f04979ca54fe2ba",
+    "Benchmarks/Tools/sweeps.py": "d41bcd1b25f9d29a39d2e63114e15579f73bf6c609d21e8be8083566dbf2ec62",
+    "Benchmarks/Tools/neural_fixtures.py": "7a1970d1987fed0351a4f4e7e187fd6dc628d433a0018fcddc6f5e56ee1a879b",
+    "Benchmarks/Tools/execution_policy.py": "d143b0e2c5116e140dd745592388270744bf328dee15f5909cc6570668b16fe0",
+    "Benchmarks/Tools/workflow_reference.py": "a388ce1ce950d59a7ee033de16e1045dc71233d9b138e9e04cb5b66be8883cfa",
+    "Benchmarks/Tools/supervised_fixtures.py": "ec3672b5a43d18089df1c578333e4a4047d4d3975c0d1e19b6733446596cccb9",
+    "Benchmarks/Tools/numerical_reference.py": "97b67752cddf32799cc04af8054c5ef0869e8ac1d63d4a06fc9217d27a3cb2be",
+    "Benchmarks/Tools/boundary_sweep.py": "b9bccc1ac0b90fa155bbfce41b9d935d938b8a1c20287c014d6a45fbea6fb86c",
+    "Benchmarks/Tools/build_controlled_search_fixtures.py": "b34cc01a536d5abf4c2735b448d450cb4d1bb50f9017647a95ab51bfbafd8d66",
+    "Benchmarks/Tools/comparison_suite.py": "5e8e45e0fcde1ef3b4d6de45872f3e6ab0c3eb090fbb3668b168357804d893ea",
+    "Benchmarks/Tools/workflow_fixtures.py": "69e86cd0fc0dbb07e4a960a6b7a5435cf05ed028cda792279aac4bfb92514ca7",
+    "Benchmarks/Tools/reporting.py": "3622ad84ddc62ece4b8e7d2241ea1a63efc46c01556d999b16cbb476faf93847",
+    "Benchmarks/Tools/inventory.py": "ad2353d58a3980fc1550ce64a8655d3a8e2d2d77074790537e4f03bdbd8b2004"
+  }
+}
