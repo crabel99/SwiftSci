@@ -1,0 +1,125 @@
+{
+  "reports": 600,
+  "native_samples": 240,
+  "all_results_identical": true,
+  "all_user_p_zero": true,
+  "telemetry_elapsed_s": 133.828959473,
+  "telemetry_period_ms": {
+    "min": 213.95125,
+    "median": 222.167083,
+    "max": 232.197625
+  },
+  "driver_elapsed_clock_difference_ns": 239125,
+  "matched": 239,
+  "partial": 1,
+  "hardware_e_ghz_range": [
+    1.06549,
+    2.5921
+  ],
+  "native_cpu_ms_range": [
+    234.220125,
+    558.505667
+  ],
+  "thermal_states": [
+    "Nominal"
+  ],
+  "sfi_window_sizes_us": [
+    0
+  ],
+  "sfi_nonzero_endpoints": 0,
+  "native_clock_offset_bounds_ns": [
+    1792478944431736209,
+    1792478944574967292
+  ],
+  "native_offset_envelope_ms": 143.231083,
+  "timing_caveat": "System Python monotonic anchors have a process-relative origin. Native Mach timestamps are mapped using an explicit live bridge bounded by the historical start/end envelope. Telemetry timestamps are whole-second values; elapsed_ns reconstruction uses the end-of-window timestamp model. The start model is rejected under the strict whole-second constraint model. Sensitivity evaluates four selected Mach offsets at the telemetry-origin midpoint, not every admissible alignment.",
+  "inference_caveat": "Descriptive correlation, not independent samples or a p-value. Shared-cluster hardware averages do not identify the exact frequency at every instant of an individual worker. SFI is sampled at endpoints, so zeros do not exclude transient forced idle. No performance normalization or qualification is performed.",
+  "groups": [
+    {
+      "group": "fastest_cpu_quartile",
+      "samples": 59,
+      "cpu_ms": 246.0265,
+      "wall_ms": 312.896334,
+      "effective_ghz": 2.4730476258175385,
+      "hardware_ghz": 2.434982797442675,
+      "instructions": 606819662,
+      "cycles": 608856543,
+      "wall_minus_cpu_ms": 64.258167
+    },
+    {
+      "group": "slowest_cpu_quartile",
+      "samples": 59,
+      "cpu_ms": 468.064542,
+      "wall_ms": 626.275833,
+      "effective_ghz": 1.3093523221846615,
+      "hardware_ghz": 1.3842915379052911,
+      "instructions": 613777543,
+      "cycles": 613100798,
+      "wall_minus_cpu_ms": 169.602333
+    }
+  ],
+  "sensitivity": [
+    {
+      "timestamp_interpretation": "end",
+      "origin_low_ns": 1792950492304026489,
+      "origin_high_ns": 1792950492305237492,
+      "origin_uncertainty_ns": 1211003,
+      "origin_midpoint_ns": 1792950492304631990,
+      "offset_case": "historical_low",
+      "offset_ns": 1792478944431736209,
+      "matched": 239,
+      "partial": 1,
+      "effective_rate_correlation": 0.9403314942652222,
+      "cpu_time_correlation": -0.9333393743383677,
+      "median_absolute_rate_difference_ghz": 0.10596378241404691
+    },
+    {
+      "timestamp_interpretation": "end",
+      "origin_low_ns": 1792950492304026489,
+      "origin_high_ns": 1792950492305237492,
+      "origin_uncertainty_ns": 1211003,
+      "origin_midpoint_ns": 1792950492304631990,
+      "offset_case": "historical_midpoint",
+      "offset_ns": 1792478944503351750,
+      "matched": 239,
+      "partial": 1,
+      "effective_rate_correlation": 0.9768023253582788,
+      "cpu_time_correlation": -0.9619709604390563,
+      "median_absolute_rate_difference_ghz": 0.06629274111646488
+    },
+    {
+      "timestamp_interpretation": "end",
+      "origin_low_ns": 1792950492304026489,
+      "origin_high_ns": 1792950492305237492,
+      "origin_uncertainty_ns": 1211003,
+      "origin_midpoint_ns": 1792950492304631990,
+      "offset_case": "live_bridge",
+      "offset_ns": 1792478944550540042,
+      "matched": 239,
+      "partial": 1,
+      "effective_rate_correlation": 0.9838256833255677,
+      "cpu_time_correlation": -0.9683290653908232,
+      "median_absolute_rate_difference_ghz": 0.0551754637825026
+    },
+    {
+      "timestamp_interpretation": "end",
+      "origin_low_ns": 1792950492304026489,
+      "origin_high_ns": 1792950492305237492,
+      "origin_uncertainty_ns": 1211003,
+      "origin_midpoint_ns": 1792950492304631990,
+      "offset_case": "historical_high",
+      "offset_ns": 1792478944574967292,
+      "matched": 239,
+      "partial": 1,
+      "effective_rate_correlation": 0.981726483876203,
+      "cpu_time_correlation": -0.9671625946382919,
+      "median_absolute_rate_difference_ghz": 0.05716218816164176
+    }
+  ],
+  "rejected_timestamp_models": [
+    {
+      "timestamp_interpretation": "start",
+      "reason": "Timestamp and elapsed_ns constraints have no common origin: low=1792950492526444947, high=1792950492524004242"
+    }
+  ]
+}
