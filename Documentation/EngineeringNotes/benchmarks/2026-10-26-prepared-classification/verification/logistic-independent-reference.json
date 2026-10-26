@@ -1,0 +1,73 @@
+{
+  "description": "Independent NumPy/SciPy unregularized full-batch mean BCE gradient updates",
+  "features": [
+    [
+      -2.0,
+      -1.0
+    ],
+    [
+      0.0,
+      1.0
+    ],
+    [
+      1.0,
+      2.0
+    ],
+    [
+      3.0,
+      0.0
+    ]
+  ],
+  "targets": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+  ],
+  "learning_rate": 0.25,
+  "cases": [
+    {
+      "epochs": 0,
+      "weights": [
+        0.0,
+        0.0
+      ],
+      "bias": 0.0,
+      "positive_probabilities": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "epochs": 1,
+      "weights": [
+        0.1875,
+        0.0625
+      ],
+      "bias": 0.0,
+      "positive_probabilities": [
+        0.39233683016710835,
+        0.5156199157230156,
+        0.5774953651858118,
+        0.6370307944803831
+      ]
+    },
+    {
+      "epochs": 32,
+      "weights": [
+        1.480821086941844,
+        0.2239752121236639
+      ],
+      "bias": -0.5291964066127905,
+      "positive_probabilities": [
+        0.023780679892080436,
+        0.42428161759893374,
+        0.8021164554146698,
+        0.9804160535529572
+      ]
+    }
+  ],
+  "numpy": "2.5.3"
+}

@@ -1,0 +1,9 @@
+# Design task
+
+Build one complete prepared logistic-classification workflow on SwiftSci's existing foundation: dataframe/prepared supervised selection, train-only preprocessing, iterative logistic fit, held-out probabilities and labels. Existing protocols, LogisticRegression, and ClassificationPipeline should admit PreparedNumericBatch inputs while retaining row-array callers and legacy classifier conformers. Scope stays on existing algorithms and routes, not new classifiers or agent infrastructure.
+
+Existing CPU path is Double full-batch gradient descent, and GPU route is Float MLX BCE/autodiff. Preserve caller requested device and HardwareRouter policy. Preserve the exact epoch update order and strict probability>threshold label assignment. Epochs==0 is valid and included in standardized conformance, alongside 1 and32. Keep output choices unchanged. Eliminate per-epoch allocation where practical without numerical reordering. Prepared inputs carry ordered names, missing-value validity and source row identities; preserve source snapshots, verify feature schema after prepared fitting, align targets through PreparedSupervisedBatch. Fit state must publish consistently after successful training, including router suspension, and invalid refits must not silently poison a working model. Pipeline configuration/fits remain caller-serialized as in existing regression.
+
+Prefer existing storage, GPU lifetime and preprocessing mechanisms. Keep records and prototypes outside production. No older Xcode installation. Source is independent branch based on upstream e19db7d, so do not assume unmerged PCA APIs.
+
+Produce a design only. Caller usage first, then types/signatures/module map and rationale following /Users/crabel/.agents/skills/architect/references/runner-prompt.md and rationale-template.md. Read grounding.md, architect skill, subtraction skill. No source edits, CI, or committing.

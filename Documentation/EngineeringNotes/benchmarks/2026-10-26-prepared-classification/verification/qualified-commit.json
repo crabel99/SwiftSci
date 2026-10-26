@@ -1,0 +1,108 @@
+{
+  "commit": "8926829bf2952a8f981a8be199be9ee9c3f7c458",
+  "status": "",
+  "native": {
+    "debug": {
+      "totalTestCount": 893,
+      "passedTests": 893,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "release": {
+      "totalTestCount": 893,
+      "passedTests": 893,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "swift633": {
+    "safe_swift_testing": 740,
+    "all_test_targets_compiled": true,
+    "debug_build_complete": true,
+    "release_build_complete": true,
+    "safe_xctest": 77
+  },
+  "public_workflow": {
+    "numpy": "2.5.3",
+    "source_head": "e19db7dda4567c425b7eb002da82e234e6c7980f",
+    "cases": [
+      {
+        "epochs": 0,
+        "fixture_sha256": "7b853b1c0711c4f21595f5311bb4893e14f69f37151e21b9d26e313bb1029929",
+        "rows": 569,
+        "features": 30,
+        "splits": [
+          328,
+          115,
+          126
+        ],
+        "executions": 3,
+        "numerical_fields_checked": 3507,
+        "max_old_new_abs": 0.0,
+        "max_numpy_abs": 0.0,
+        "labels_and_row_positions_exact": true
+      },
+      {
+        "epochs": 1,
+        "fixture_sha256": "26a0c80868a2ca2dcf95e420b7003b87c50b26ef8415fa21b10ce6e1738f4dc3",
+        "rows": 569,
+        "features": 30,
+        "splits": [
+          328,
+          115,
+          126
+        ],
+        "executions": 3,
+        "numerical_fields_checked": 3507,
+        "max_old_new_abs": 0.0,
+        "max_numpy_abs": 2.220446049250313e-16,
+        "labels_and_row_positions_exact": true
+      },
+      {
+        "epochs": 32,
+        "fixture_sha256": "21319365e43e5757853ef23d0acac4aaa06d43c6cf7786eaed4bfaa784829626",
+        "rows": 569,
+        "features": 30,
+        "splits": [
+          328,
+          115,
+          126
+        ],
+        "executions": 3,
+        "numerical_fields_checked": 3507,
+        "max_old_new_abs": 0.0,
+        "max_numpy_abs": 1.1102230246251565e-15,
+        "labels_and_row_positions_exact": true
+      }
+    ],
+    "status": "passed"
+  },
+  "docc_guide_generated": true,
+  "docc_has_existing_warnings": true,
+  "standardized_conformance_status": "passed",
+  "standardized_run_sha256": "ba7519a554e6dda52e0ea3c19f5da52318e71c9e039577830c78f1c4f2c55634",
+  "source_worktree_clean": true,
+  "candidate_binding": {
+    "native": {
+      "debug": {
+        "build_receipt_sha256": "68d33e12c877fe0c6631b8f53710a7896d4c1dad94586bbd6709e87c5861e0f8",
+        "source_hashes_match_final_commit": true
+      },
+      "release": {
+        "build_receipt_sha256": "2d6f41a1b6ca4219a24e6e63f0c4117e8db622cdeaab2f85754cae194b30b616",
+        "source_hashes_match_final_commit": true
+      }
+    },
+    "public_probe_receipt_sha256": "d9de781393455a5490a2bd162ef5642d38db32f0bef94a72c5e532e4f6ab4521",
+    "public_workflow_summary_sha256": "fbd7d2139e655d3825205818092d5a35803f2ea45a0ebf4686ed0421ba862c2b",
+    "candidate_binary_sha256": "a21ee405efcbd6f2859b497da9911f8f054b08a5e810c66215adb48a47a6c318",
+    "original_object_files_may_have_been_rebuilt": true
+  },
+  "scope": {
+    "full_github_workflows_replicated_locally": false,
+    "local_swift_codeql_pass_claimed": false,
+    "new_upstream_pr_created": false,
+    "xcode_27_remains_selected": true,
+    "gpu_gradient_cause": "inference, not independently proven"
+  }
+}

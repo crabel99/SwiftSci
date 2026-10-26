@@ -1,0 +1,103 @@
+{
+  "command": [
+    "xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/private/tmp/swiftsci-prepared-classification-20261026/derived/Build/Products/SwiftSci-Package_SwiftSci-Package_macosx27.0-arm64.xctestrun",
+    "-destination",
+    "platform=macOS,arch=arm64",
+    "-parallel-testing-enabled",
+    "NO",
+    "-resultBundlePath",
+    "/private/tmp/swiftsci-prepared-classification-20261026/native-debug/tests.xcresult",
+    "-only-testing:SwiftMLTests",
+    "-only-testing:SwiftDataFrameTests",
+    "-only-testing:SwiftPreprocessingTests"
+  ],
+  "exit_code": 65,
+  "seconds": 108.57588934898376,
+  "summary": {
+    "devicesAndConfigurations": [
+      {
+        "device": {
+          "architecture": "arm64",
+          "deviceId": "00006041-001C093C0A80801C",
+          "deviceName": "My Mac",
+          "modelName": "MacBook Pro",
+          "osBuildNumber": "26A434",
+          "osVersion": "27.0.1",
+          "platform": "macOS"
+        },
+        "expectedFailures": 0,
+        "failedTests": 3,
+        "passedTests": 1619,
+        "skippedTests": 0,
+        "testPlanConfiguration": {
+          "configurationId": "1",
+          "configurationName": "Test Scheme Action"
+        }
+      }
+    ],
+    "environmentDescription": "SwiftSci-Package \u00b7 Built with macOS 27.0.1",
+    "expectedFailures": 0,
+    "failedTests": 3,
+    "finishTime": 1793030500.255,
+    "passedTests": 885,
+    "result": "Failed",
+    "runtimeWarnings": [],
+    "skippedTests": 0,
+    "startTime": 1793030396.583,
+    "statistics": [
+      {
+        "subtitle": "870 test runs",
+        "title": "136 tests ran with dynamic parameters"
+      }
+    ],
+    "testFailures": [
+      {
+        "failureText": "Expectation failed: expected error \"Invalid parameter: Regression input contains missing or nonfinite values\" of type SwiftMLError, but \"Invalid parameter: Numeric input contains missing or nonfinite values\" of type SwiftMLError was thrown instead: expected\ninvalidParameter \u2192 \"Numeric input contains missing or nonfinite values\"",
+        "targetName": "SwiftDataFrameTests",
+        "testIdentifier": 851,
+        "testIdentifierString": "PreparedSupervisedBatchTests/rowFallbackAndFiniteValidationPreserveMissingSemantics()",
+        "testIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftDataFrameTests/PreparedSupervisedBatchTests/rowFallbackAndFiniteValidationPreserveMissingSemantics()",
+        "testName": "rowFallbackAndFiniteValidationPreserveMissingSemantics()"
+      },
+      {
+        "failureText": "Expectation failed: nanProbability[0][0].isNaN\nnanProbability[0][0] \u2192 0.0\nisNaN \u2192 false",
+        "targetName": "SwiftMLTests",
+        "testIdentifier": 395,
+        "testIdentifierString": "PreparedLogisticRegressionTests/legacyPredictionContracts()",
+        "testIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/legacyPredictionContracts()",
+        "testName": "Legacy CPU zero-width and NaN prediction behavior remains available"
+      },
+      {
+        "failureText": "Expectation failed: abs(actual[index] - expected[index]) <= tolerance\nabs(actual[index] - expected[index]) \u2192 0.00011904652994189358\ntolerance \u2192 3e-05",
+        "targetName": "SwiftMLTests",
+        "testIdentifier": 397,
+        "testIdentifierString": "PreparedLogisticRegressionTests/preparedRoutingAgreement()",
+        "testIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/preparedRoutingAgreement()",
+        "testName": "Prepared CPU, GPU, auto, and ANE routes agree within route precision"
+      }
+    ],
+    "title": "Test - SwiftSci-Package",
+    "topInsights": [
+      {
+        "category": "Common Failures",
+        "impact": "33% of failures",
+        "text": "4 runs of 1 test failed with Expectation failed: expected error \"Invalid parameter: Regression input contains missing or nonfinite values\" of type SwiftMLError, but \"Invalid parameter: Numeric input contains missing or nonfinite values\" of type SwiftMLError was thrown instead: expected"
+      },
+      {
+        "category": "Common Failures",
+        "impact": "33% of failures",
+        "text": "3 runs of 1 test failed with Expectation failed: abs(preparedBias - referenceBias) <= routeTolerance"
+      },
+      {
+        "category": "Common Failures",
+        "impact": "33% of failures",
+        "text": "3 runs of 1 test failed with Expectation failed: abs(actual[index] - expected[index]) <= tolerance"
+      }
+    ],
+    "totalTestCount": 888
+  },
+  "strict_onnx_ci": true
+}
