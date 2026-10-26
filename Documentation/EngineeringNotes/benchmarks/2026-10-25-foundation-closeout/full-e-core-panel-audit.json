@@ -1,0 +1,68 @@
+{
+  "queues": 144,
+  "jobs": 9216,
+  "jobs_per_queue": 64,
+  "full_output_checks": 48,
+  "controls_passed": false,
+  "performance_qualified": false,
+  "flags": [
+    {
+      "label": "swiftsci_optional",
+      "metric": "charged_cpu_ns",
+      "ratio": 1.2236125491539322
+    },
+    {
+      "label": "swiftsci_optional",
+      "metric": "elapsed_ns",
+      "ratio": 1.1755709585963454
+    },
+    {
+      "label": "swiftsci_compact",
+      "metric": "charged_cpu_ns",
+      "ratio": 1.1942229452688047
+    },
+    {
+      "label": "swiftsci_compact",
+      "metric": "elapsed_ns",
+      "ratio": 1.1636317287626239
+    },
+    {
+      "label": "pandas",
+      "metric": "charged_cpu_ns",
+      "ratio": 1.2135450222374724
+    },
+    {
+      "label": "pandas",
+      "metric": "elapsed_ns",
+      "ratio": 1.1919796116070782
+    },
+    {
+      "label": "polars",
+      "metric": "elapsed_ns",
+      "ratio": 0.6902162562526978
+    },
+    {
+      "label": "duckdb",
+      "metric": "charged_cpu_ns",
+      "ratio": 0.7320606960743552
+    },
+    {
+      "label": "duckdb",
+      "metric": "elapsed_ns",
+      "ratio": 0.7870031219435444
+    },
+    {
+      "label": "pandas_arrow",
+      "metric": "charged_cpu_ns",
+      "ratio": 0.7802392360332465
+    },
+    {
+      "round": 7,
+      "label": "pandas_twin",
+      "metric": "observation_coverage",
+      "max_gap_ns": 50526000,
+      "max_scan_ns": 37394333
+    }
+  ],
+  "application_core_class": "efficiency-workers-ordinary-controller"
+}
