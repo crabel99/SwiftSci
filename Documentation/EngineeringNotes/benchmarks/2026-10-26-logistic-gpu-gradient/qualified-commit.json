@@ -1,0 +1,193 @@
+{
+  "status": "passed",
+  "commit": "53063789b1893b28250ea239d5fdca4fed84c4c9",
+  "source_worktree_clean": true,
+  "native": {
+    "debug": {
+      "passed": 1683,
+      "failed": 0,
+      "skipped": 0,
+      "source_hashes_match_final_commit": true,
+      "test_receipt_sha256": "7be5500469885635722443197ab521bea7b92d906512e14ed24ff13b2a1d9530"
+    },
+    "release": {
+      "passed": 1683,
+      "failed": 0,
+      "skipped": 0,
+      "source_hashes_match_final_commit": true,
+      "test_receipt_sha256": "3fe6992dc0817678612a3d9378f87bcd51851e9128ad82430dfa1375b777589a"
+    }
+  },
+  "workflows": {
+    "main": {
+      "status": "passed",
+      "receipt": "ci-main-final/main-result.json",
+      "receipt_sha256": "d112560d392901c15f3fda4b88375284fa5606034f3bbd2674d0c49283e06b34",
+      "tested_inputs_match_final_commit": true,
+      "steps": 8
+    },
+    "benchmarks": {
+      "status": "passed",
+      "receipt": "ci-bench-final/benchmarks-result.json",
+      "receipt_sha256": "55d46e5f87d2a88f64ad452b5eb1fdb345d26fbcd470572d6f5610f9b095d0b8",
+      "tested_inputs_match_final_commit": true,
+      "steps": 19
+    },
+    "python_codeql": {
+      "status": "passed",
+      "receipt": "ci-security-python/security-python-result.json",
+      "receipt_sha256": "256eeefd87b51cdd4b2549bf477a3b9e57632e275d6717448228963780c24b25",
+      "tested_inputs_match_final_commit": true,
+      "steps": 2
+    }
+  },
+  "public_gpu_workflow": {
+    "debug": {
+      "summary": {
+        "numpy": "2.5.3",
+        "source_head": "8926829bf2952a8f981a8be199be9ee9c3f7c458",
+        "cases": [
+          {
+            "epochs": 0,
+            "fixture_sha256": "7b853b1c0711c4f21595f5311bb4893e14f69f37151e21b9d26e313bb1029929",
+            "rows": 569,
+            "features": 30,
+            "splits": [
+              328,
+              115,
+              126
+            ],
+            "executions": 2,
+            "numerical_fields_checked": 2338,
+            "max_rows_prepared_abs": 0.0,
+            "max_numpy_abs": 0.0,
+            "labels_and_row_positions_exact": true
+          },
+          {
+            "epochs": 1,
+            "fixture_sha256": "26a0c80868a2ca2dcf95e420b7003b87c50b26ef8415fa21b10ce6e1738f4dc3",
+            "rows": 569,
+            "features": 30,
+            "splits": [
+              328,
+              115,
+              126
+            ],
+            "executions": 2,
+            "numerical_fields_checked": 2338,
+            "max_rows_prepared_abs": 0.0,
+            "max_numpy_abs": 6.719323331072502e-08,
+            "labels_and_row_positions_exact": true
+          },
+          {
+            "epochs": 32,
+            "fixture_sha256": "21319365e43e5757853ef23d0acac4aaa06d43c6cf7786eaed4bfaa784829626",
+            "rows": 569,
+            "features": 30,
+            "splits": [
+              328,
+              115,
+              126
+            ],
+            "executions": 2,
+            "numerical_fields_checked": 2338,
+            "max_rows_prepared_abs": 0.0,
+            "max_numpy_abs": 7.961420289692711e-08,
+            "labels_and_row_positions_exact": true
+          }
+        ],
+        "status": "passed",
+        "configuration": "Debug",
+        "numerical_contract": "Float GPU mean BCE gradient versus independent Double NumPy/SciPy at atol=rtol=1e-6; exact rows/prepared comparison"
+      },
+      "proof_sha256": "bd51817fdb573ce13a2d8c79cd4c36d606b5354113b6ae8b2eeead59e4cfa733",
+      "current_object_hashes_match_saved_proof": true,
+      "bound_native_build": "native-full-debug/build.json"
+    },
+    "release": {
+      "summary": {
+        "numpy": "2.5.3",
+        "source_head": "8926829bf2952a8f981a8be199be9ee9c3f7c458",
+        "cases": [
+          {
+            "epochs": 0,
+            "fixture_sha256": "7b853b1c0711c4f21595f5311bb4893e14f69f37151e21b9d26e313bb1029929",
+            "rows": 569,
+            "features": 30,
+            "splits": [
+              328,
+              115,
+              126
+            ],
+            "executions": 2,
+            "numerical_fields_checked": 2338,
+            "max_rows_prepared_abs": 0.0,
+            "max_numpy_abs": 0.0,
+            "labels_and_row_positions_exact": true
+          },
+          {
+            "epochs": 1,
+            "fixture_sha256": "26a0c80868a2ca2dcf95e420b7003b87c50b26ef8415fa21b10ce6e1738f4dc3",
+            "rows": 569,
+            "features": 30,
+            "splits": [
+              328,
+              115,
+              126
+            ],
+            "executions": 2,
+            "numerical_fields_checked": 2338,
+            "max_rows_prepared_abs": 0.0,
+            "max_numpy_abs": 6.719323331072502e-08,
+            "labels_and_row_positions_exact": true
+          },
+          {
+            "epochs": 32,
+            "fixture_sha256": "21319365e43e5757853ef23d0acac4aaa06d43c6cf7786eaed4bfaa784829626",
+            "rows": 569,
+            "features": 30,
+            "splits": [
+              328,
+              115,
+              126
+            ],
+            "executions": 2,
+            "numerical_fields_checked": 2338,
+            "max_rows_prepared_abs": 0.0,
+            "max_numpy_abs": 7.961420289692711e-08,
+            "labels_and_row_positions_exact": true
+          }
+        ],
+        "status": "passed",
+        "configuration": "Release",
+        "numerical_contract": "Float GPU mean BCE gradient versus independent Double NumPy/SciPy at atol=rtol=1e-6; exact rows/prepared comparison"
+      },
+      "proof_sha256": "c7a87e25ced171cea4e2ed8db8059ef3302b457abaeca90b1565d39cc8e141bf",
+      "current_object_hashes_match_saved_proof": true,
+      "bound_native_build": "native-full-release/build.json"
+    }
+  },
+  "swift633": {
+    "debug_build": "passed",
+    "release_build": "passed",
+    "all_test_targets_compiled": true,
+    "xctest_passed": 77,
+    "swift_testing_passed": 740,
+    "receipt_sha256": "aab0a616367f5b1e8167efaf13118b7daa21d9e3c2e9fb4286fcbddbc580f3a8"
+  },
+  "benchmark_worker": {
+    "commit": "53063789b1893b28250ea239d5fdca4fed84c4c9",
+    "receipt_sha256": "62c07b463a8de8b43a85d0adbd5106ab5c5eb2f6e2522d1385f2d5b247adae0e",
+    "source_files_match_final_commit": true
+  },
+  "python_codeql_findings": 0,
+  "scope": {
+    "swift_codeql": "Unsupported by Xcode 27 and Swift 6.4, verified against GitHub October 19 notice",
+    "all_native_tests": true,
+    "full_github_actions_replica": false,
+    "no_upstream_pr_created": true,
+    "xcode_27_remains_selected": true,
+    "general_performance_claim": false,
+    "documentation": "All-module conversion passed with preexisting warnings; verifier reports 98.67% and zero placeholders, not 100% documentation"
+  }
+}

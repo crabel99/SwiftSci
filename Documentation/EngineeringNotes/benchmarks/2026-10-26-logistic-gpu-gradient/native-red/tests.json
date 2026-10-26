@@ -1,0 +1,101 @@
+{
+  "command": [
+    "xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/private/tmp/swiftsci-gpu-logistic-correctness-20261026/derived/Build/Products/SwiftSci-Package_SwiftSci-Package_macosx27.0-arm64.xctestrun",
+    "-destination",
+    "platform=macOS,arch=arm64",
+    "-parallel-testing-enabled",
+    "NO",
+    "-resultBundlePath",
+    "/private/tmp/swiftsci-gpu-logistic-correctness-20261026/native-red/tests.xcresult",
+    "-only-testing:SwiftMLTests/BinaryCrossEntropyTests"
+  ],
+  "exit_code": 65,
+  "seconds": 25.61772894859314,
+  "summary": {
+    "devicesAndConfigurations": [
+      {
+        "device": {
+          "architecture": "arm64",
+          "deviceId": "00006041-001C093C0A80801C",
+          "deviceName": "My Mac",
+          "modelName": "MacBook Pro",
+          "osBuildNumber": "26A434",
+          "osVersion": "27.0.1",
+          "platform": "macOS"
+        },
+        "expectedFailures": 0,
+        "failedTests": 9,
+        "passedTests": 0,
+        "skippedTests": 0,
+        "testPlanConfiguration": {
+          "configurationId": "1",
+          "configurationName": "Test Scheme Action"
+        }
+      }
+    ],
+    "environmentDescription": "SwiftSci-Package \u00b7 Built with macOS 27.0.1",
+    "expectedFailures": 0,
+    "failedTests": 3,
+    "finishTime": 1793034787.108,
+    "passedTests": 0,
+    "result": "Failed",
+    "runtimeWarnings": [],
+    "skippedTests": 0,
+    "startTime": 1793034767.007,
+    "statistics": [
+      {
+        "subtitle": "9 test runs",
+        "title": "3 tests ran with dynamic parameters"
+      }
+    ],
+    "testFailures": [
+      {
+        "failureText": "Expectation failed: abs(bias - (-0.25 * (0.5 - target))) < 1e-6\nabs(bias - (-0.25 * (0.5 - target))) \u2192 0.125\n1e-6 \u2192 1e-06",
+        "targetName": "SwiftMLTests",
+        "testIdentifier": 3,
+        "testIdentifierString": "BinaryCrossEntropyTests/firstTrainingStep(target:)",
+        "testIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/BinaryCrossEntropyTests/firstTrainingStep(target:)",
+        "testName": "One GPU training step updates a zero-logit bias"
+      },
+      {
+        "failureText": "Expectation failed: abs(actual[index] - expected) < 1e-6\nabs(actual[index] - expected) \u2192 0.1\n1e-6 \u2192 1e-06",
+        "targetName": "SwiftMLTests",
+        "testIdentifier": 2,
+        "testIdentifierString": "BinaryCrossEntropyTests/meanGradient(target:)",
+        "testIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/BinaryCrossEntropyTests/meanGradient(target:)",
+        "testName": "Mean loss has finite, analytical gradients for mixed and extreme logits"
+      },
+      {
+        "failureText": "Expectation failed: abs(gradients[0].item(Float.self) - (0.5 - target)) < 1e-6\nabs(gradients[0].item(Float.self) - (0.5 - target)) \u2192 0.5\n1e-6 \u2192 1e-06",
+        "targetName": "SwiftMLTests",
+        "testIdentifier": 1,
+        "testIdentifierString": "BinaryCrossEntropyTests/zeroLogitGradient(target:)",
+        "testIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/BinaryCrossEntropyTests/zeroLogitGradient(target:)",
+        "testName": "Zero-logit derivative is one half minus the target"
+      }
+    ],
+    "title": "Test - SwiftSci-Package",
+    "topInsights": [
+      {
+        "category": "Common Failures",
+        "impact": "33% of failures",
+        "text": "3 runs of 1 test failed with Expectation failed: abs(gradients[0].item(Float.self) - (0.5 - target)) < 1e-6"
+      },
+      {
+        "category": "Common Failures",
+        "impact": "33% of failures",
+        "text": "3 runs of 1 test failed with Expectation failed: abs(bias - (-0.25 * (0.5 - target))) < 1e-6"
+      },
+      {
+        "category": "Common Failures",
+        "impact": "33% of failures",
+        "text": "3 runs of 1 test failed with Expectation failed: abs(actual[index] - expected) < 1e-6"
+      }
+    ],
+    "totalTestCount": 3
+  },
+  "strict_onnx_ci": true
+}

@@ -1,0 +1,33 @@
+{
+  "atol": 1e-10,
+  "case_key": "72bc71578d421ea464947af80d8e5593c61f7d652203355f2a214af800afd7df",
+  "csv_schema": {
+    "alcohol": "Double",
+    "chlorides": "Double",
+    "citric_acid": "Double",
+    "density": "Double",
+    "fixed_acidity": "Double",
+    "free_sulfur_dioxide": "Double",
+    "id": "Int64",
+    "pH": "Double",
+    "quality": "Int64",
+    "residual_sugar": "Double",
+    "sulphates": "Double",
+    "total_sulfur_dioxide": "Double",
+    "volatile_acidity": "Double"
+  },
+  "dataset_kind": "wine-quality-v1",
+  "engine": "duckdb",
+  "execution_mode": "legacy-capped",
+  "expected_path": "/private/tmp/swiftsci-gpu-logistic-correctness-20261026/ci-bench/ci-comparison/public-smoke/wine-red-pipeline.expected.f64",
+  "expected_sha256": "0aec80e56649f011747a3800e217ec99c74a616644f69455d98ff7f6a6ffff58",
+  "input_bytes": 91063,
+  "input_path": "/private/tmp/swiftsci-gpu-logistic-correctness-20261026/source/Benchmarks/Data/standardized/f54f1488ea72487f6604930ccb5c1d1b5e75e2aa540ffe720c1d1a4de26abc94.data",
+  "input_sha256": "f54f1488ea72487f6604930ccb5c1d1b5e75e2aa540ffe720c1d1a4de26abc94",
+  "operation": "wine-pipeline",
+  "rows": 1599,
+  "rtol": 1e-10,
+  "samples": 1,
+  "schema_version": 1,
+  "warmups": 0
+}

@@ -1,0 +1,219 @@
+commit 53063789b1893b28250ea239d5fdca4fed84c4c9
+Author:     Cal Abel <crabel@mac.com>
+AuthorDate: Mon Oct 26 13:30:02 2026 -0400
+Commit:     Cal Abel <crabel@mac.com>
+CommitDate: Mon Oct 26 13:30:02 2026 -0400
+
+    fix: correct GPU logistic gradients at zero logits
+    
+    The maximum/abs BCE composition gives the wrong autodiff derivative at zero in pinned MLX. Use smooth log-add-exp so zero-initialized logistic models receive sigmoid(logit) minus target gradients. Preserve CPU math, Float GPU routing, public interfaces and stored-parameter prediction.
+    
+    Add analytic loss and first-update regressions and check GPU finite-step training against independent NumPy/SciPy expectations. Document the intentional correction to old GPU trajectories.
+
+diff --git a/Sources/SwiftML/Losses/Losses.swift b/Sources/SwiftML/Losses/Losses.swift
+index 5f8ec07639..59d8aeeaf6 100644
+--- a/Sources/SwiftML/Losses/Losses.swift
++++ b/Sources/SwiftML/Losses/Losses.swift
+@@ -11,11 +11,9 @@ internal enum Losses {
+     }
+     
+     /// Computes the numerically stable Binary Cross Entropy (BCE) loss from logits:
+-    /// loss = mean(max(logits, 0) - logits * targets + log(1 + exp(-abs(logits))))
++    /// Uses log-add-exp so the derivative is sigmoid(logits) - targets, including at zero.
+     static func binaryCrossEntropy(logits: MLXArray, targets: MLXArray) -> MLXArray {
+-        let maxLogits = maximum(logits, 0.0)
+-        let absLogits = abs(logits)
+-        return mean(maxLogits - logits * targets + log(1.0 + exp(-absLogits)))
++        mean(logAddExp(0, logits) - logits * targets)
+     }
+ }
+ #endif // os(macOS)
+diff --git a/Sources/SwiftML/SwiftML.docc/PreparedClassification.md b/Sources/SwiftML/SwiftML.docc/PreparedClassification.md
+index 92d9833bd4..d25920058e 100644
+--- a/Sources/SwiftML/SwiftML.docc/PreparedClassification.md
++++ b/Sources/SwiftML/SwiftML.docc/PreparedClassification.md
+@@ -47,7 +47,7 @@ let predictions = try await model.predict(features: scaledHeldOut, threshold: 0.
+ 
+ Every fit starts from zero parameters. Epochs must be nonnegative; zero epochs produces probabilities of 0.5 and class 0 at threshold 0.5. Labels use a strict `probability > threshold` comparison. This API does not add warm starts or incremental fitting. Use 0/1 labels for binary classification; finite soft targets retain the row API's behavior.
+ 
+-The CPU path keeps Double arithmetic and shares its update and accumulation order with row-array fitting. Prediction and gradient buffers are allocated once per fit and reused across epochs. The GPU path keeps Float MLX training and existing hardware routing. Finite Double inputs can overflow or underflow during Float conversion; choose `.cpu` when that conversion does not meet your numerical requirements. Returned Double probabilities do not restore lost Float precision. Existing GPU finite-step training results also differ from CPU results at the same controls. Prepared integration preserves those GPU updates; CPU and GPU are not interchangeable numerical references.
++The CPU path keeps Double arithmetic and shares its update and accumulation order with row-array fitting. Prediction and gradient buffers are allocated once per fit and reused across epochs. The GPU path keeps Float MLX training and existing hardware routing. Finite Double inputs can overflow or underflow during Float conversion; choose `.cpu` when that conversion does not meet your numerical requirements. Returned Double probabilities do not restore lost Float precision. GPU training uses a smooth log-add-exp loss with the correct binary-cross-entropy gradient at zero logits. This corrects older GPU training trajectories, including fits routed to the GPU through `.auto` or `.ane`. CPU and GPU still have different precision; use an appropriate numerical tolerance when comparing them. Predictions from previously stored parameters are unchanged.
+ 
+ ## Preserve the fitted feature contract
+ 
+diff --git a/Tests/SwiftMLTests/BinaryCrossEntropyTests.swift b/Tests/SwiftMLTests/BinaryCrossEntropyTests.swift
+new file mode 100644
+index 0000000000..69287913f8
+--- /dev/null
++++ b/Tests/SwiftMLTests/BinaryCrossEntropyTests.swift
+@@ -0,0 +1,46 @@
++import Foundation
++import MLX
++import Testing
++import SwiftPreprocessing
++@testable import SwiftML
++
++@Suite("Binary cross entropy gradients", .serialized)
++struct BinaryCrossEntropyTests {
++    @Test("Zero-logit derivative is one half minus the target", arguments: [Float(0), 0.25, 1])
++    func zeroLogitGradient(target: Float) {
++        let differentiate = valueAndGrad({ (arguments: [MLXArray]) -> [MLXArray] in
++            [Losses.binaryCrossEntropy(logits: arguments[0], targets: MLXArray(target))]
++        }, argumentNumbers: [0])
++        let (loss, gradients) = differentiate([MLXArray(Float(0))])
++        #expect(abs(loss[0].item(Float.self) - Float(log(2.0))) < 1e-6)
++        #expect(abs(gradients[0].item(Float.self) - (0.5 - target)) < 1e-6)
++    }
++
++    @Test("Mean loss has finite, analytical gradients for mixed and extreme logits", arguments: [Float(0), 0.25, 1])
++    func meanGradient(target: Float) {
++        let logits: [Float] = [-1_000, -2, 0, 2, 1_000]
++        let probabilities: [Double] = [0, 0.11920292202211755, 0.5, 0.8807970779778823, 1]
++        let differentiate = valueAndGrad({ (arguments: [MLXArray]) -> [MLXArray] in
++            [Losses.binaryCrossEntropy(logits: arguments[0], targets: MLXArray(Array(repeating: target, count: 5)).reshaped([5, 1]))]
++        }, argumentNumbers: [0])
++        let (loss, gradients) = differentiate([MLXArray(logits).reshaped([5, 1])])
++        #expect(loss[0].item(Float.self).isFinite)
++        let actual = gradients[0].asArray(Float.self)
++        for index in logits.indices {
++            let expected = Float((probabilities[index] - Double(target)) / Double(logits.count))
++            #expect(actual[index].isFinite)
++            #expect(abs(actual[index] - expected) < 1e-6)
++        }
++    }
++
++    @Test("One GPU training step updates a zero-logit bias", arguments: [Double(0), 0.25, 1])
++    func firstTrainingStep(target: Double) async throws {
++        let model = LogisticRegression(device: .gpu)
++        try await model.fit(features: [[0.0]], targets: [target], learningRate: 0.25, epochs: 1)
++        let parameters = await model.getWeightsAndBias()
++        #expect(await model.resolvedDevice == .gpu)
++        #expect(parameters.weights == [0.0])
++        let bias = try #require(parameters.bias)
++        #expect(abs(bias - (-0.25 * (0.5 - target))) < 1e-6)
++    }
++}
+diff --git a/Tests/SwiftMLTests/PreparedLogisticRegressionTests.swift b/Tests/SwiftMLTests/PreparedLogisticRegressionTests.swift
+index 5d2b2be701..1b652c00f7 100644
+--- a/Tests/SwiftMLTests/PreparedLogisticRegressionTests.swift
++++ b/Tests/SwiftMLTests/PreparedLogisticRegressionTests.swift
+@@ -85,14 +85,15 @@ private func routedLogisticFixture() throws -> (rows: [[Double]], targets: [Doub
+ 
+ @Suite("Prepared logistic regression", .serialized)
+ struct PreparedLogisticRegressionTests {
+-    @Test("CPU prepared fit matches independent NumPy reference at 0, 1, and 32 epochs")
+-    func independentFiniteStepReference() async throws {
++    @Test("Prepared CPU and GPU fits match independent NumPy reference at 0, 1, and 32 epochs",
++          arguments: [ExecutionDevice.cpu, .gpu])
++    func independentFiniteStepReference(device: ExecutionDevice) async throws {
+         // Values copied from verification/logistic-independent-reference.json,
+         // generated by independent NumPy/SciPy full-batch mean BCE updates.
+         let batch = try independentLogisticBatch()
+ 
+         for expected in independentLogisticCases {
+-            let model = LogisticRegression(device: .cpu)
++            let model = LogisticRegression(device: device)
+             try await model.fit(
+                 features: batch,
+                 targets: independentLogisticTargets,
+@@ -106,9 +107,10 @@ struct PreparedLogisticRegressionTests {
+             let probabilities = try await model.predictProbability(features: batch)
+             let positive = probabilities.map { $0[1] }
+ 
+-            expectClose(weights, expected.weights, tolerance: 1e-14)
+-            #expect(abs(bias - expected.bias) <= 1e-14)
+-            expectClose(positive, expected.positiveProbabilities, tolerance: 1e-14)
++            let tolerance = device == .cpu ? 1e-14 : 1e-6
++            expectClose(weights, expected.weights, tolerance: tolerance)
++            #expect(abs(bias - expected.bias) <= tolerance)
++            expectClose(positive, expected.positiveProbabilities, tolerance: tolerance)
+         }
+     }
+ 
+@@ -328,15 +330,15 @@ struct PreparedLogisticRegressionTests {
+         }
+     }
+ 
+-    @Test("Prepared CPU, GPU, auto, and ANE preserve each route's original results")
++    @Test("Prepared CPU, GPU, auto, and ANE match the independently checked CPU trajectory")
+     func preparedRoutingAgreement() async throws {
+         let fixture = try routedLogisticFixture()
+         let sampleIndices = Array(0..<16)
+         let sampleBatch = try fixture.batch.selectingRows(sampleIndices)
+         let sampleRows = Array(fixture.rows.prefix(16))
+ 
+-        // Captured from unchanged e19db7d library objects with pinned MLX.
+-        // Existing GPU finite-step results differ from CPU; each route has its own oracle.
++        // CPU values independently verified with NumPy/SciPy mean BCE updates.
++        // GPU training uses Float arithmetic with the same analytical gradient.
+         let devices: [ExecutionDevice] = [.cpu, .gpu, .auto, .ane]
+         for requested in devices {
+             let prepared = LogisticRegression(device: requested)
+@@ -376,47 +378,26 @@ struct PreparedLogisticRegressionTests {
+                 .map { $0[1] }
+             expectClose(preparedPositive, rowPositive, tolerance: representationTolerance)
+ 
+-            let referenceWeights: [Double] = expectedRoute == .cpu
+-                ? [0.09696926291864429, -0.02357937780181345]
+-                : [0.09685021638870239, -0.023611553013324738]
+-            let referenceBias: Double = expectedRoute == .cpu ? -0.009412758577808177 : 0.014662409201264381
+-            let referencePositive: [Double] = expectedRoute == .cpu
+-                ? [
+-                    0.4598594698166819,
+-                    0.45768217570120745,
+-                    0.4555064968639452,
+-                    0.47561605638900817,
+-                    0.47342954834858,
+-                    0.471244058939112,
+-                    0.49142133886730743,
+-                    0.4892299597835079,
+-                    0.48703899456771504,
+-                    0.5072437890949602,
+-                    0.5050519207366427,
+-                    0.5252388293135551,
+-                    0.5230517417159851,
+-                    0.520863769765221,
+-                    0.5409918850176745,
+-                    0.5388136472494476,
+-                  ]
+-                : [
+-                    0.465918630361557,
+-                    0.4637186825275421,
+-                    0.46152010560035706,
+-                    0.48167216777801514,
+-                    0.47946465015411377,
+-                    0.4772578179836273,
+-                    0.4974622130393982,
+-                    0.4952514171600342,
+-                    0.49304085969924927,
+-                    0.5132573843002319,
+-                    0.5110477805137634,
+-                    0.5312288999557495,
+-                    0.5290260314941406,
+-                    0.5268220901489258,
+-                    0.5469293594360352,
+-                    0.5447370409965515,
+-                  ]
++            let referenceWeights: [Double] = [0.09696926291864429, -0.02357937780181345]
++            let referenceBias: Double = -0.009412758577808177
++            let referencePositive: [Double] = [
++                0.4598594698166819,
++                0.45768217570120745,
++                0.4555064968639452,
++                0.47561605638900817,
++                0.47342954834858,
++                0.471244058939112,
++                0.49142133886730743,
++                0.4892299597835079,
++                0.48703899456771504,
++                0.5072437890949602,
++                0.5050519207366427,
++                0.5252388293135551,
++                0.5230517417159851,
++                0.520863769765221,
++                0.5409918850176745,
++                0.5388136472494476,
++            ]
+             let baselineTolerance = expectedRoute == .cpu ? 1e-14 : 1e-6
+             expectClose(preparedWeights, referenceWeights, tolerance: baselineTolerance)
+             #expect(abs(preparedBias - referenceBias) <= baselineTolerance)

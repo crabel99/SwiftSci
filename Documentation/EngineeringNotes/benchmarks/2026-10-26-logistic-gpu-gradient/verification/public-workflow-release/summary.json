@@ -1,0 +1,57 @@
+{
+  "numpy": "2.5.3",
+  "source_head": "8926829bf2952a8f981a8be199be9ee9c3f7c458",
+  "cases": [
+    {
+      "epochs": 0,
+      "fixture_sha256": "7b853b1c0711c4f21595f5311bb4893e14f69f37151e21b9d26e313bb1029929",
+      "rows": 569,
+      "features": 30,
+      "splits": [
+        328,
+        115,
+        126
+      ],
+      "executions": 2,
+      "numerical_fields_checked": 2338,
+      "max_rows_prepared_abs": 0.0,
+      "max_numpy_abs": 0.0,
+      "labels_and_row_positions_exact": true
+    },
+    {
+      "epochs": 1,
+      "fixture_sha256": "26a0c80868a2ca2dcf95e420b7003b87c50b26ef8415fa21b10ce6e1738f4dc3",
+      "rows": 569,
+      "features": 30,
+      "splits": [
+        328,
+        115,
+        126
+      ],
+      "executions": 2,
+      "numerical_fields_checked": 2338,
+      "max_rows_prepared_abs": 0.0,
+      "max_numpy_abs": 6.719323331072502e-08,
+      "labels_and_row_positions_exact": true
+    },
+    {
+      "epochs": 32,
+      "fixture_sha256": "21319365e43e5757853ef23d0acac4aaa06d43c6cf7786eaed4bfaa784829626",
+      "rows": 569,
+      "features": 30,
+      "splits": [
+        328,
+        115,
+        126
+      ],
+      "executions": 2,
+      "numerical_fields_checked": 2338,
+      "max_rows_prepared_abs": 0.0,
+      "max_numpy_abs": 7.961420289692711e-08,
+      "labels_and_row_positions_exact": true
+    }
+  ],
+  "status": "passed",
+  "configuration": "Release",
+  "numerical_contract": "Float GPU mean BCE gradient versus independent Double NumPy/SciPy at atol=rtol=1e-6; exact rows/prepared comparison"
+}

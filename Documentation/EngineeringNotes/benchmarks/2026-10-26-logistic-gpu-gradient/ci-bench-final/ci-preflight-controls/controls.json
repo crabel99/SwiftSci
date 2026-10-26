@@ -1,0 +1,430 @@
+{
+  "purpose": "pretrained-preflight-regression",
+  "generation_executed": false,
+  "worker": "/private/tmp/swiftsci-gpu-logistic-correctness-20261026/ci-bench/standardized/derived/Build/Products/Release/SwiftSciBenchmarkWorker",
+  "worker_sha256": "47d6dff3502709f9299150d65a279d7105c961e4320c98e1784491d31f133b27",
+  "checker_sha256": "6518e26139ff4fb889a240d0aeb82a9199d7c8a8b5cdfb073dd61eaeaf4c5809",
+  "status": "passed",
+  "cases": [
+    {
+      "name": "valid-tied",
+      "expected": "preflight-passed",
+      "passed": true,
+      "exit_code": 0,
+      "status": "preflight-passed"
+    },
+    {
+      "name": "valid-untied",
+      "expected": "preflight-passed",
+      "passed": true,
+      "exit_code": 0,
+      "status": "preflight-passed"
+    },
+    {
+      "name": "missing-model.embed_tokens.weight",
+      "expected": "missing-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "shape-model.embed_tokens.weight",
+      "expected": "tensor-shape",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "missing-model.norm.weight",
+      "expected": "missing-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "shape-model.norm.weight",
+      "expected": "tensor-shape",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "missing-model.layers.0.self_attn.q_proj.weight",
+      "expected": "missing-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "shape-model.layers.0.self_attn.q_proj.weight",
+      "expected": "tensor-shape",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "missing-model.layers.0.self_attn.k_proj.weight",
+      "expected": "missing-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "shape-model.layers.0.self_attn.k_proj.weight",
+      "expected": "tensor-shape",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "missing-model.layers.0.self_attn.v_proj.weight",
+      "expected": "missing-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "shape-model.layers.0.self_attn.v_proj.weight",
+      "expected": "tensor-shape",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "missing-model.layers.0.self_attn.o_proj.weight",
+      "expected": "missing-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "shape-model.layers.0.self_attn.o_proj.weight",
+      "expected": "tensor-shape",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "missing-model.layers.0.mlp.gate_proj.weight",
+      "expected": "missing-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "shape-model.layers.0.mlp.gate_proj.weight",
+      "expected": "tensor-shape",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "missing-model.layers.0.mlp.up_proj.weight",
+      "expected": "missing-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "shape-model.layers.0.mlp.up_proj.weight",
+      "expected": "tensor-shape",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "missing-model.layers.0.mlp.down_proj.weight",
+      "expected": "missing-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "shape-model.layers.0.mlp.down_proj.weight",
+      "expected": "tensor-shape",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "missing-model.layers.0.input_layernorm.weight",
+      "expected": "missing-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "shape-model.layers.0.input_layernorm.weight",
+      "expected": "tensor-shape",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "missing-model.layers.0.post_attention_layernorm.weight",
+      "expected": "missing-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "shape-model.layers.0.post_attention_layernorm.weight",
+      "expected": "tensor-shape",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "extra-tensor",
+      "expected": "unexpected-tensor",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "wrong-token-oracle",
+      "expected": "tokenizer-parity",
+      "passed": true,
+      "exit_code": 1,
+      "status": "blocked"
+    },
+    {
+      "name": "unsupported-tokenizer",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-model_type",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-vocab_size",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-num_hidden_layers",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-intermediate_size",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-num_attention_heads",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-num_key_value_heads",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-hidden_size",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-hidden_act",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-attention_bias",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-mlp_bias",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-head_dim",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-rms_norm_eps",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-rope_theta",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-tie_word_embeddings",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "missing-config-rope_scaling",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-model_type",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-vocab_size",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-num_hidden_layers",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-intermediate_size",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-hidden_act",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-attention_bias",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-mlp_bias",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-head_dim",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-num_attention_heads",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-num_key_value_heads",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-hidden_size",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-rms_norm_eps",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-rope_theta",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-scaling-factor",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-scaling-low_freq_factor",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-scaling-high_freq_factor",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-scaling-original_max_position_embeddings",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    },
+    {
+      "name": "invalid-scaling-rope_type",
+      "expected": "failed",
+      "passed": true,
+      "exit_code": 2,
+      "status": "failed"
+    }
+  ]
+}

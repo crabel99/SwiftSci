@@ -1,0 +1,108 @@
+{
+  "expected_tensor_count" : 11,
+  "findings" : [
+    {
+      "id" : "missing-tensor",
+      "key" : "model.layers.0.input_layernorm.weight"
+    }
+  ],
+  "generation_executed" : false,
+  "inspection_device" : "cpu",
+  "inspection_model_max_sequence" : 8,
+  "limitations" : [
+    "Inspection model uses eight positions to bound unused learned-position allocation.",
+    "Weights are installed only after the configuration and tokenizer checks pass.",
+    "Passing preflight is not successful generation or numerical conformance."
+  ],
+  "purpose" : "pretrained-integration-preflight",
+  "rotary_scaling" : {
+    "factor" : 32,
+    "high_freq_factor" : 4,
+    "low_freq_factor" : 1,
+    "original_max_position_embeddings" : 8192,
+    "rope_type" : "llama3"
+  },
+  "safetensors_parsed" : true,
+  "schema_version" : 1,
+  "status" : "blocked",
+  "tensor_count" : 10,
+  "tokenizer_cases" : [
+    {
+      "actual" : [
+        97,
+        98,
+        99
+      ],
+      "decoded_actual" : "abc",
+      "decoded_equal" : true,
+      "equal" : true,
+      "expected" : [
+        97,
+        98,
+        99
+      ],
+      "id" : "0"
+    },
+    {
+      "actual" : [
+        32,
+        99,
+        97,
+        102,
+        195,
+        169,
+        32,
+        228,
+        184,
+        150,
+        231,
+        149,
+        140,
+        9,
+        10
+      ],
+      "decoded_actual" : " café 世界\t\n",
+      "decoded_equal" : true,
+      "equal" : true,
+      "expected" : [
+        32,
+        99,
+        97,
+        102,
+        195,
+        169,
+        32,
+        228,
+        184,
+        150,
+        231,
+        149,
+        140,
+        9,
+        10
+      ],
+      "id" : "1"
+    },
+    {
+      "actual" : [
+        1000,
+        97,
+        98,
+        99,
+        1001
+      ],
+      "decoded_actual" : "<|begin_of_text|>abc<|eot_id|>",
+      "decoded_equal" : true,
+      "equal" : true,
+      "expected" : [
+        1000,
+        97,
+        98,
+        99,
+        1001
+      ],
+      "id" : "2"
+    }
+  ],
+  "weight_loading_verified" : false
+}

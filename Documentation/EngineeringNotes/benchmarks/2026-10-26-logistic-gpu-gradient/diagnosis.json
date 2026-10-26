@@ -1,0 +1,8 @@
+{
+  "reproduction": "One row [[0]], target [0], learning rate 0.25, one GPU epoch",
+  "expected_bias": -0.125,
+  "original_bias": 0.0,
+  "root_cause": "At zero logits the composed maximum/abs loss has derivative -target rather than 0.5-target. Both primitive derivatives are zero in the pinned MLX build.",
+  "probes": "loss-probe.log",
+  "fix": "Use smooth stable logAddExp(0, logits) minus targets times logits, averaged, as in pinned MLXNN."
+}
