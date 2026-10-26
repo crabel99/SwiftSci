@@ -1,0 +1,88 @@
+Building for debugging...
+[Computing dependencies]
+[Pre-planning 1 / 2314]
+[Planning deferred tasks]
+[Writing build description]
+warning: missing creator for mutated node: ('/private/tmp/swiftsci-llm-completion-20261026/source/.build/out/Products/Debug/mlx-swift_Cmlx.bundle/Contents/MacOS')
+[11 / 135] SwiftSci_SwiftNLP
+warning: missing creator for mutated node: ('/private/tmp/swiftsci-llm-completion-20261026/source/.build/out/Products/Debug/SwiftSci_SwiftLLM.bundle/Contents/MacOS')
+[19 / 135]
+[21 / 30] SwiftAgentTests-product
+[23 / 32] SwiftAgentTests-product
+[29 / 31] SwiftAgentTests-product
+[30 / 31] SwiftAgentTests-product
+[31 / 31] SwiftAgentTests-product
+[33 / 34] SwiftClusterTests-product
+[37 / 39] SwiftDatabaseTests-product
+[40 / 41] SwiftExplainTests-product
+[44 / 45] SwiftLLMTests-product
+[47 / 48] SwiftMLTests-product
+[50 / 51] SwiftOptimizeTests-product
+[52 / 53] SwiftPreprocessingTests-product
+[58 / 59] SwiftVisualizationTests-product
+Build complete! (6.30 sec)
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite "ReAct consumer cancellation" started.
+◇ Test "An independent tool cancellation error keeps ordinary observation behavior" started.
+◇ Test "Consumer cancellation reaches running tools and stops the next turn" started.
+◇ Test "Producer lifetime handshake observes an ordinary completed run" started.
+◇ Test "Cancellation reaches the producer and blocks ignored late output" started.
+◇ Test "A pre-cancelled run throws instead of returning empty success" started.
+◇ Test "Pre-cancelled stream callers start no producer" started.
+◇ Test "Cancelling a public stream consumer cancels its producer" started.
+◇ Test case passing 1 argument timeout → 0.0 to "Consumer cancellation reaches running tools and stops the next turn" started.
+◇ Test case passing 1 argument timeout → 30.0 to "Consumer cancellation reaches running tools and stops the next turn" started.
+◇ Test case passing 1 argument text → "Action: Echo
+Action Input: late" to "Cancellation reaches the producer and blocks ignored late output" started.
+◇ Test case passing 1 argument text → "Final Answer: late" to "Cancellation reaches the producer and blocks ignored late output" started.
+✘ Test "A pre-cancelled run throws instead of returning empty success" recorded an issue at ReActCancellationTests.swift:89:9: Expectation failed: await consumer.value
+↳ await consumer.value → <not evaluated>
+✘ Test "A pre-cancelled run throws instead of returning empty success" failed after 0.001 seconds with 1 issue.
+✘ Test "Pre-cancelled stream callers start no producer" recorded an issue at ReActCancellationTests.swift:226:9: Expectation failed: await counters.modelCalls == 0
+↳ await counters.modelCalls == 0 → <not evaluated>
+✘ Test "Pre-cancelled stream callers start no producer" failed after 0.001 seconds with 1 issue.
+✔ Test "Producer lifetime handshake observes an ordinary completed run" passed after 0.001 seconds.
+✔ Test "An independent tool cancellation error keeps ordinary observation behavior" passed after 0.007 seconds.
+✘ Test "Cancellation reaches the producer and blocks ignored late output" recorded an issue with 1 argument text → "Final Answer: late" at ReActCancellationTests.swift:150:9: Expectation failed: rejected
+↳ rejected → <not evaluated>
+✘ Test "Cancellation reaches the producer and blocks ignored late output" recorded an issue with 1 argument text → "Final Answer: late" at ReActCancellationTests.swift:151:9: Expectation failed: producerCancelled
+↳ producerCancelled → <not evaluated>
+✘ Test "Consumer cancellation reaches running tools and stops the next turn" recorded an issue with 1 argument timeout → 0.0 at ReActCancellationTests.swift:272:9: Expectation failed: rejected
+↳ rejected → <not evaluated>
+✘ Test "Cancellation reaches the producer and blocks ignored late output" recorded an issue with 1 argument text → "Final Answer: late" at ReActCancellationTests.swift:156:9: Expectation failed: records.allSatisfy { $0.role != "assistant" }
+↳ records.allSatisfy { $0.role != "assistant" } → <not evaluated>
+✘ Test "Consumer cancellation reaches running tools and stops the next turn" recorded an issue with 1 argument timeout → 0.0 at ReActCancellationTests.swift:273:9: Expectation failed: toolCancelled
+↳ toolCancelled → <not evaluated>
+✘ Test "Consumer cancellation reaches running tools and stops the next turn" recorded an issue with 1 argument timeout → 0.0 at ReActCancellationTests.swift:275:9: Expectation failed: await counters.modelCalls == 1
+↳ await counters.modelCalls == 1 → <not evaluated>
+✘ Test "Consumer cancellation reaches running tools and stops the next turn" recorded an issue with 1 argument timeout → 30.0 at ReActCancellationTests.swift:272:9: Expectation failed: rejected
+↳ rejected → <not evaluated>
+✘ Test "Consumer cancellation reaches running tools and stops the next turn" recorded an issue with 1 argument timeout → 30.0 at ReActCancellationTests.swift:273:9: Expectation failed: toolCancelled
+↳ toolCancelled → <not evaluated>
+✘ Test "Cancelling a public stream consumer cancels its producer" recorded an issue at ReActCancellationTests.swift:198:9: Expectation failed: producerCancelled
+↳ producerCancelled → <not evaluated>
+✘ Test "Consumer cancellation reaches running tools and stops the next turn" recorded an issue with 1 argument timeout → 30.0 at ReActCancellationTests.swift:275:9: Expectation failed: await counters.modelCalls == 1
+↳ await counters.modelCalls == 1 → <not evaluated>
+✘ Test "Cancelling a public stream consumer cancels its producer" recorded an issue at ReActCancellationTests.swift:200:9: Expectation failed: await counters.toolCalls == 0
+↳ await counters.toolCalls == 0 → <not evaluated>
+✘ Test "Consumer cancellation reaches running tools and stops the next turn" with 2 test cases failed after 5.149 seconds with 6 issues.
+✘ Test "Cancellation reaches the producer and blocks ignored late output" recorded an issue with 1 argument text → "Action: Echo
+Action Input: late" at ReActCancellationTests.swift:150:9: Expectation failed: rejected
+↳ rejected → <not evaluated>
+✘ Test "Cancelling a public stream consumer cancels its producer" failed after 5.149 seconds with 2 issues.
+✘ Test "Cancellation reaches the producer and blocks ignored late output" recorded an issue with 1 argument text → "Action: Echo
+Action Input: late" at ReActCancellationTests.swift:151:9: Expectation failed: producerCancelled
+↳ producerCancelled → <not evaluated>
+✘ Test "Cancellation reaches the producer and blocks ignored late output" recorded an issue with 1 argument text → "Action: Echo
+Action Input: late" at ReActCancellationTests.swift:153:9: Expectation failed: await counters.modelCalls == 1
+↳ await counters.modelCalls == 1 → <not evaluated>
+✘ Test "Cancellation reaches the producer and blocks ignored late output" recorded an issue with 1 argument text → "Action: Echo
+Action Input: late" at ReActCancellationTests.swift:154:9: Expectation failed: await counters.toolCalls == 0
+↳ await counters.toolCalls == 0 → <not evaluated>
+✘ Test "Cancellation reaches the producer and blocks ignored late output" with 2 test cases failed after 5.149 seconds with 7 issues.
+✘ Suite "ReAct consumer cancellation" failed after 5.149 seconds with 17 issues.
+✘ Test run with 7 tests in 1 suite failed after 5.149 seconds with 17 issues.
+Note: Some test targets reported failures:
+  - SwiftAgentTests (Swift Testing)

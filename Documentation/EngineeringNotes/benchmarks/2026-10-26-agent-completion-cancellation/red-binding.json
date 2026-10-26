@@ -1,0 +1,16 @@
+{
+  "source_parent": "c4de6cc866fff6f52100535dbcb38dd708558200",
+  "source_patch_sha256": "029f4daa946faf72f4cc752c9b74675efc6d901c7388a9b7a766f504ff00ddfb",
+  "test_source_sha256": "c47e0c6f218f6f17a9dc2c47eca76575a9d9db74e6b3a9fb8b23e838435efde1",
+  "log_sha256": "aaf93ef5d0a3fbf0bf5acf8e907fee1992c1c18a8675ab1f0386991a03eb2f03",
+  "command": [
+    "swift",
+    "test",
+    "-j",
+    "2",
+    "--filter",
+    "CompletionReportingTests.truncatedAction"
+  ],
+  "observed_exit_code": 1,
+  "result": "one test failed with two issues: no error thrown and tool invoked"
+}

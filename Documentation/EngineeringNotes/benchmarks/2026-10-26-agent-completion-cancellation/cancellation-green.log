@@ -1,0 +1,42 @@
+Building for debugging...
+[Computing dependencies]
+[Using on-disk description]
+[1 / 5]
+[2 / 6] SwiftAgent
+[3 / 7] SwiftAgent
+[7 / 9] SwiftAgent
+[12 / 13] SwiftAgentTests-product
+[13 / 14] SwiftAgentTests-product
+[14 / 14] SwiftAgentTests-product
+[17 / 35] SwiftLLM-product
+[19 / 19] SwiftAgentTests-product
+[20 / 20] SwiftSciBenchmarks-product
+[22 / 22] SwiftSciBenchmarkWorker-product
+warning: missing creator for mutated node: ('/private/tmp/swiftsci-llm-completion-20261026/source/.build/out/Products/Debug/SwiftSci_SwiftLLM.bundle/Contents/MacOS')
+warning: missing creator for mutated node: ('/private/tmp/swiftsci-llm-completion-20261026/source/.build/out/Products/Debug/mlx-swift_Cmlx.bundle/Contents/MacOS')
+Build complete! (4.59 sec)
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite "ReAct consumer cancellation" started.
+◇ Test "An independent tool cancellation error keeps ordinary observation behavior" started.
+◇ Test "Consumer cancellation reaches running tools and stops the next turn" started.
+◇ Test "Pre-cancelled stream callers start no producer" started.
+◇ Test "Cancelling a public stream consumer cancels its producer" started.
+◇ Test "Cancellation reaches the producer and blocks ignored late output" started.
+◇ Test "Producer lifetime handshake observes an ordinary completed run" started.
+◇ Test "A pre-cancelled run throws instead of returning empty success" started.
+◇ Test case passing 1 argument timeout → 0.0 to "Consumer cancellation reaches running tools and stops the next turn" started.
+◇ Test case passing 1 argument text → "Final Answer: late" to "Cancellation reaches the producer and blocks ignored late output" started.
+◇ Test case passing 1 argument timeout → 30.0 to "Consumer cancellation reaches running tools and stops the next turn" started.
+◇ Test case passing 1 argument text → "Action: Echo
+Action Input: late" to "Cancellation reaches the producer and blocks ignored late output" started.
+✔ Test "A pre-cancelled run throws instead of returning empty success" passed after 0.001 seconds.
+✔ Test "Pre-cancelled stream callers start no producer" passed after 0.001 seconds.
+✔ Test "Cancelling a public stream consumer cancels its producer" passed after 0.001 seconds.
+✔ Test "Cancellation reaches the producer and blocks ignored late output" with 2 test cases passed after 0.001 seconds.
+✔ Test "Producer lifetime handshake observes an ordinary completed run" passed after 0.001 seconds.
+✔ Test "Consumer cancellation reaches running tools and stops the next turn" with 2 test cases passed after 0.001 seconds.
+✔ Test "An independent tool cancellation error keeps ordinary observation behavior" passed after 0.005 seconds.
+✔ Suite "ReAct consumer cancellation" passed after 0.005 seconds.
+✔ Test run with 7 tests in 1 suite passed after 0.005 seconds.

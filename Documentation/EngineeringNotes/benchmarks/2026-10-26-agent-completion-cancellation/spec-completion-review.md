@@ -1,0 +1,11 @@
+No spec findings.
+
+Reviewed `git diff c4de6cc866fff6f52100535dbcb38dd708558200...6ef1a4b35be11a611d8d101d1db2c56cd3c5a953` against `design/synthesis.md`, `design/plan.md` and the completion grounding record.
+
+- Synthesis line 5 requires that only normally exhausted, structurally complete `.stop` streams reach the parser. The native-model adapter dynamically detects the refining protocol through `any LLMModel`, accumulates the throwing stream, rejects missing/duplicate metadata and chunks after metadata, waits for normal termination, and rejects both length reasons and cancellation. A thrown error after `.stop` still escapes before the sole `parseResponse` call. No tool, answer or assistant-memory side effects for that response precede the gate.
+- Synthesis lines 5 and 18 require exact metadata on all accepted steps and nil for legacy sources. All three construction sites, final answer, unknown-tool fallback and tool observation, pass the unchanged producer record. Both existing String closure APIs and text-only models wrap their results with nil metadata.
+- Synthesis line 9 requires the exact four-argument initializer and a second overload with required completionInfo. Both signatures are present, with no fifth-argument default. The regression includes a typed reference to the old initializer.
+- Synthesis lines 10–12 require separate producer/consumer documentation and deterministic rejection proofs. Documentation distinguishes valid length/cancellation producer outcomes from ReAct acceptance and explicitly excludes the outer cancellation lifecycle. The nine public-import test definitions cover rich dispatch, exact per-turn metadata, known incomplete action/answer rejection, malformed ordering, errors before/after metadata, later-turn rejection, empty accepted output and legacy source compatibility.
+- Synthesis line 16 excludes another reasoning loop, runtime changes and retry machinery. The original loop remains shared; decoder changes only adopt the capability, and existing generation event types are reused.
+
+This was a read-only source review, with no builds or test execution. The executing agent's full local workflow and older-compiler qualification remain pending under the plan's verification item.

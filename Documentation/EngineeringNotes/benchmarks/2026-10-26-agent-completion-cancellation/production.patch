@@ -1,0 +1,919 @@
+diff --git a/Sources/SwiftAgent/ReActAgent.swift b/Sources/SwiftAgent/ReActAgent.swift
+index b1afe2bbca..7853be61e3 100644
+--- a/Sources/SwiftAgent/ReActAgent.swift
++++ b/Sources/SwiftAgent/ReActAgent.swift
+@@ -103,13 +103,27 @@ public struct AgentStep: Sendable, Equatable {
+     public let actionInput: String?
+     /// The result observed from tool execution.
+     public let observation: String?
++    /// Exact producer metadata for an accepted rich-model response, or nil for text-only completions.
++    public let completionInfo: GenerationCompletionInfo?
+ 
+     /// Creates an AgentStep.
+     public init(thought: String, action: String? = nil, actionInput: String? = nil, observation: String? = nil) {
++        self.init(thought: thought, action: action, actionInput: actionInput, observation: observation, completionInfo: nil)
++    }
++
++    /// Creates a step with the originating model's completion record.
++    /// - Parameters:
++    ///   - thought: The agent's reasoning text.
++    ///   - action: Selected tool name, if any.
++    ///   - actionInput: Input supplied to the tool.
++    ///   - observation: Tool result or final answer.
++    ///   - completionInfo: Producer metadata, or nil when the producer supplies only text.
++    public init(thought: String, action: String? = nil, actionInput: String? = nil, observation: String? = nil, completionInfo: GenerationCompletionInfo?) {
+         self.thought = thought
+         self.action = action
+         self.actionInput = actionInput
+         self.observation = observation
++        self.completionInfo = completionInfo
+     }
+ }
+ 
+@@ -118,6 +132,11 @@ public struct AgentStep: Sendable, Equatable {
+ /// `ReActAgent` orchestrates dynamic Tool usage by prompting an LLM or reasoning engine to iteratively
+ /// generate `Thought -> Action -> Action Input -> Observation` sequences until reaching a `Final Answer`.
+ public actor ReActAgent {
++    private struct Response: Sendable {
++        let text: String
++        let completionInfo: GenerationCompletionInfo?
++    }
++
+     /// Mapping of registered tool names to tool instances.
+     public private(set) var tools: [String: any AgentTool]
+     /// Maximum allowed reasoning steps before termination.
+@@ -275,16 +294,27 @@ public actor ReActAgent {
+     ///   - query: The target user question or goal.
+     ///   - llm: Async block producing model completions given a prompt.
+     /// - Returns: Final answer and complete trajectory trace of agent steps.
+-    /// - Throws: `AgentError` or `SwiftMLError` if tool execution, AST evaluation, or reasoning fails.
++    /// - Throws: `CancellationError` when the caller is cancelled, or `AgentError` when reasoning fails.
+     public func run(
+         query: String,
+         llm: @escaping @Sendable (String) async throws -> String
+     ) async throws -> (finalAnswer: String, trace: [AgentStep]) {
+-        let stream = self.stream(query: query, llm: llm)
++        try await run(query: query, completion: { prompt in
++            Response(text: try await llm(prompt), completionInfo: nil)
++        })
++    }
++
++    private func run(
++        query: String,
++        completion: @escaping @Sendable (String) async throws -> Response
++    ) async throws -> (finalAnswer: String, trace: [AgentStep]) {
++        try Task.checkCancellation()
++        let stream = self.stream(query: query, completion: completion)
+         var finalAnswer: String = ""
+         var trajectory: [AgentStep] = []
+ 
+         for await event in stream {
++            try Task.checkCancellation()
+             switch event {
+             case .completed(let ans, let trace):
+                 finalAnswer = ans
+@@ -296,11 +326,16 @@ public actor ReActAgent {
+             }
+         }
+ 
++        try Task.checkCancellation()
+         return (finalAnswer: finalAnswer, trace: trajectory)
+     }
+ 
+     /// Streams real-time reasoning thoughts, tool execution states, and answer deltas.
+     ///
++    /// Cancelling an awaiting consumer requests producer cancellation. A pre-cancelled
++    /// caller receives a finished stream. Model and tool code must cooperate with
++    /// cancellation; already-started side effects cannot be undone.
++    ///
+     /// - Parameters:
+     ///   - query: Analytical prompt or question.
+     ///   - llm: Completion block generating LLM output.
+@@ -309,9 +344,20 @@ public actor ReActAgent {
+         query: String,
+         llm: @escaping @Sendable (String) async throws -> String
+     ) -> AsyncStream<AgentStreamEvent> {
+-        AsyncStream { continuation in
+-            Task {
++        stream(query: query, completion: { prompt in
++            Response(text: try await llm(prompt), completionInfo: nil)
++        })
++    }
++
++    private func stream(
++        query: String,
++        completion: @escaping @Sendable (String) async throws -> Response
++    ) -> AsyncStream<AgentStreamEvent> {
++        guard !Task.isCancelled else { return AsyncStream { $0.finish() } }
++        return AsyncStream { continuation in
++            let producer = Task {
+                 do {
++                    try Task.checkCancellation()
+                     // Record user input to memory if available
+                     try? await memory?.record(content: query, role: "user", metadata: [:])
+ 
+@@ -331,6 +377,7 @@ public actor ReActAgent {
+                     }
+ 
+                     for _ in 0..<maxSteps {
++                        try Task.checkCancellation()
+                         var prompt = "You are an autonomous AI analyst answering the following question: '\(query)'.\n\n"
+                         if !pastContext.isEmpty {
+                             prompt += pastContext
+@@ -359,8 +406,9 @@ public actor ReActAgent {
+                             }
+                         }
+ 
+-                        let response = try await llm(prompt)
+-                        let parsed = parseResponse(response)
++                        let response = try await completion(prompt)
++                        try Task.checkCancellation()
++                        let parsed = parseResponse(response.text)
+ 
+                         if !parsed.thought.isEmpty {
+                             continuation.yield(.thoughtDelta(parsed.thought + "\n"))
+@@ -368,9 +416,10 @@ public actor ReActAgent {
+ 
+                         if let answer = parsed.finalAnswer {
+                             continuation.yield(.answerDelta(answer))
+-                            let step = AgentStep(thought: parsed.thought, observation: answer)
++                            let step = AgentStep(thought: parsed.thought, observation: answer, completionInfo: response.completionInfo)
+                             trace.append(step)
+                             try? await memory?.record(content: answer, role: "assistant", metadata: [:])
++                            try Task.checkCancellation()
+                             continuation.yield(.completed(finalAnswer: answer, trajectory: trace))
+                             continuation.finish()
+                             return
+@@ -388,7 +437,7 @@ public actor ReActAgent {
+                                 hint = " Did you mean '\(closest)'?"
+                             }
+                             let errorMsg = "Error: Tool '\(unknown)' not recognized.\(hint) Available tools: [\(available)]."
+-                            let fallbackStep = AgentStep(thought: parsed.thought, action: parsed.action, actionInput: parsed.actionInput, observation: errorMsg)
++                            let fallbackStep = AgentStep(thought: parsed.thought, action: parsed.action, actionInput: parsed.actionInput, observation: errorMsg, completionInfo: response.completionInfo)
+                             trace.append(fallbackStep)
+                             continue
+                         }
+@@ -398,6 +447,7 @@ public actor ReActAgent {
+                         let repeatedCount = (invocationCounts[toolCallKey] ?? 0) + 1
+                         invocationCounts[toolCallKey] = repeatedCount
+ 
++                        try Task.checkCancellation()
+                         let callId = UUID().uuidString
+                         continuation.yield(.toolCallScheduled(callId: callId, tool: actTool.name, arguments: ["input": input]))
+ 
+@@ -438,19 +488,24 @@ public actor ReActAgent {
+                                 obs = try await executeWithTimeout(tool: actTool, input: input, timeoutSeconds: toolTimeoutSeconds)
+                             }
+                         } catch {
++                            try Task.checkCancellation()
+                             obs = "Error: \(error.localizedDescription)"
+                         }
++                        try Task.checkCancellation()
+                         let duration = (CFAbsoluteTimeGetCurrent() - startTime) * 1000.0
+                         let out = AgentToolOutput(text: obs, durationMs: duration)
+                         continuation.yield(.toolExecutionCompleted(callId: callId, tool: actTool.name, output: out, durationMs: duration))
+ 
+-                        let step = AgentStep(thought: parsed.thought, action: actTool.name, actionInput: input, observation: obs)
++                        let step = AgentStep(thought: parsed.thought, action: actTool.name, actionInput: input, observation: obs, completionInfo: response.completionInfo)
+                         trace.append(step)
+                     }
+ 
++                    try Task.checkCancellation()
+                     let fallbackAnswer = trace.last?.observation ?? "Max steps reached without conclusive answer."
+                     continuation.yield(.completed(finalAnswer: fallbackAnswer, trajectory: trace))
+                     continuation.finish()
++                } catch is CancellationError where Task.isCancelled {
++                    continuation.finish()
+                 } catch let err as AgentError {
+                     continuation.yield(.error(err))
+                     continuation.finish()
+@@ -459,6 +514,7 @@ public actor ReActAgent {
+                     continuation.finish()
+                 }
+             }
++            continuation.onTermination = { _ in producer.cancel() }
+         }
+     }
+ 
+@@ -468,13 +524,15 @@ public actor ReActAgent {
+         toolName: String,
+         operation: @escaping @Sendable () async throws -> T
+     ) async throws -> T {
++        try Task.checkCancellation()
+         guard timeoutSeconds > 0 else {
+             return try await operation()
+         }
+ 
+         return try await withThrowingTaskGroup(of: T.self) { group in
+             group.addTask {
+-                try await operation()
++                try Task.checkCancellation()
++                return try await operation()
+             }
+ 
+             group.addTask {
+@@ -521,24 +579,74 @@ public actor ReActAgent {
+ 
+     /// Executes the ReAct reasoning cycle directly using a native `LLMModel` (e.g. `TransformerDecoder`).
+     ///
++    /// Models conforming to `CompletionReportingLLMModel` must finish normally with one
++    /// final `.stop` record before their text is parsed or tools execute. Length,
++    /// cancelled, malformed and throwing completions fail the run. Text-only models
++    /// retain their existing behavior and have nil step metadata.
++    /// Cancelling the caller requests producer cancellation and throws without waiting
++    /// for noncooperative model or tool work to drain.
++    ///
+     /// - Parameters:
+     ///   - query: Analytical question or directive to execute.
+     ///   - model: A local LLMModel instance executing natively on Apple Silicon.
+     ///   - options: Inference options (temperature, topP, maxTokens).
+     /// - Returns: Tuple with final answer and complete reasoning step trace.
+-    /// - Throws: `AgentError` or `SwiftMLError` if tool execution, AST evaluation, or reasoning fails.
++    /// - Throws: `CancellationError` when the caller is cancelled, or `AgentError` when reasoning fails.
+     public func run(
+         query: String,
+         model: any LLMModel,
+         options: LLMOptions = LLMOptions(temperature: 0.2, maxTokens: 256)
+     ) async throws -> (finalAnswer: String, trace: [AgentStep]) {
+-        return try await run(query: query) { prompt in
++        try await run(query: query, completion: { prompt in
++            try await Self.generateResponse(prompt: prompt, model: model, options: options)
++        })
++    }
++
++    private nonisolated static func generateResponse(
++        prompt: String,
++        model: any LLMModel,
++        options: LLMOptions
++    ) async throws -> Response {
++        try Task.checkCancellation()
++        guard let detailed = model as? any CompletionReportingLLMModel else {
+             let stream = try await model.generate(prompt: prompt, options: options)
+             var generated = ""
+             for await token in stream {
+                 generated += token
+             }
+-            return generated
++            try Task.checkCancellation()
++            return Response(text: generated, completionInfo: nil)
++        }
++
++        var text = ""
++        var info: GenerationCompletionInfo?
++        for try await event in detailed.generateDetails(prompt: prompt, options: options) {
++            switch event {
++            case .chunk(let chunk):
++                guard info == nil else {
++                    throw AgentError.executionFailed("Model completion contains text after final metadata.")
++                }
++                text += chunk
++            case .info(let completion):
++                guard info == nil else {
++                    throw AgentError.executionFailed("Model completion contains multiple metadata records.")
++                }
++                info = completion
++            }
++        }
++        try Task.checkCancellation()
++        guard let info else {
++            throw AgentError.executionFailed("Model completion is missing final metadata.")
++        }
++        switch info.stopReason {
++        case .stop:
++            return Response(text: text, completionInfo: info)
++        case .length(.maxTokens):
++            throw AgentError.executionFailed("Model completion reached the output token limit before a stop.")
++        case .length(.contextWindow):
++            throw AgentError.executionFailed("Model completion reached the context limit before a stop.")
++        case .cancelled:
++            throw AgentError.executionFailed("Model completion was cancelled.")
+         }
+     }
+ 
+diff --git a/Sources/SwiftLLM/Core/Generation.swift b/Sources/SwiftLLM/Core/Generation.swift
+index 415bbce92d..14be422eb1 100644
+--- a/Sources/SwiftLLM/Core/Generation.swift
++++ b/Sources/SwiftLLM/Core/Generation.swift
+@@ -29,6 +29,17 @@ public struct GenerationCompletionInfo: Sendable, Equatable {
+     public let generationTokenCount: Int
+     /// Why generation ended.
+     public let stopReason: GenerationStopReason
++
++    /// Creates a completion record using counts supplied by the generation producer.
++    /// - Parameters:
++    ///   - promptTokenCount: Input token count, including any producer-defined fallback.
++    ///   - generationTokenCount: Generated non-stop token count, including buffered text tokens.
++    ///   - stopReason: The reason generation ended.
++    public init(promptTokenCount: Int, generationTokenCount: Int, stopReason: GenerationStopReason) {
++        self.promptTokenCount = promptTokenCount
++        self.generationTokenCount = generationTokenCount
++        self.stopReason = stopReason
++    }
+ }
+ 
+ /// A text fragment or the final completion record from a generation operation.
+diff --git a/Sources/SwiftLLM/Core/LLMModel.swift b/Sources/SwiftLLM/Core/LLMModel.swift
+index 08e664ccdc..7407dbcf67 100644
+--- a/Sources/SwiftLLM/Core/LLMModel.swift
++++ b/Sources/SwiftLLM/Core/LLMModel.swift
+@@ -116,3 +116,17 @@ public protocol LLMModel: Sendable {
+     /// - Returns: An AsyncStream of string segments generated by the model.
+     func generate(prompt: String, options: LLMOptions) async throws -> AsyncStream<String>
+ }
++
++/// A local model that reports exact completion metadata and streaming failures.
++///
++/// Successful iteration yields text chunks followed by exactly one completion record
++/// and normal stream termination. Length and cancellation are valid completion reasons.
++/// A throwing or consumer-cancelled stream need not deliver a completion record.
++public protocol CompletionReportingLLMModel: LLMModel {
++    /// Generates text and a final record containing the producer's token counts and stop reason.
++    /// - Parameters:
++    ///   - prompt: The starting text prompt.
++    ///   - options: Configuration options for generation.
++    /// - Returns: Text chunks followed by one final completion record on normal termination.
++    func generateDetails(prompt: String, options: LLMOptions) -> AsyncThrowingStream<GenerationEvent, any Error>
++}
+diff --git a/Sources/SwiftLLM/Core/TransformerDecoder.swift b/Sources/SwiftLLM/Core/TransformerDecoder.swift
+index 2250b56b03..eb2cc6f04d 100644
+--- a/Sources/SwiftLLM/Core/TransformerDecoder.swift
++++ b/Sources/SwiftLLM/Core/TransformerDecoder.swift
+@@ -330,7 +330,7 @@ public final class TransformerBlock: Module, UnaryLayer {
+ /// MLX compiles and caches the forward graph per sequence-length bucket
+ /// (16 / 32 / 64 / 128 / 256 / 512 / 1024 / 2048) to amortize Metal
+ /// graph-build cost — analogous to `torch.compile`.
+-public final class TransformerDecoder: Module, LLMModel, @unchecked Sendable {
++public final class TransformerDecoder: Module, CompletionReportingLLMModel, @unchecked Sendable {
+ 
+     // MARK: Sub-modules
+ 
+diff --git a/Sources/SwiftLLM/SwiftLLM.docc/TransformerDecoderArchitecture.md b/Sources/SwiftLLM/SwiftLLM.docc/TransformerDecoderArchitecture.md
+index 8048d7cf38..c43fd72991 100644
+--- a/Sources/SwiftLLM/SwiftLLM.docc/TransformerDecoderArchitecture.md
++++ b/Sources/SwiftLLM/SwiftLLM.docc/TransformerDecoderArchitecture.md
+@@ -219,6 +219,32 @@ not a normal stop reason. The legacy `generate` method throws request errors bef
+ returning its nonthrowing stream; that stream cannot report errors during iteration.
+ Use the detailed throwing stream for completion metadata and error handling.
+ 
++`TransformerDecoder` also conforms to `CompletionReportingLLMModel`, an optional
++refinement of `LLMModel` exposing the same detailed method. Custom models can adopt
++this protocol and construct `GenerationCompletionInfo` with their exact counts.
++Existing text-only `LLMModel` conformers need no changes.
++
++`ReActAgent.run(query:model:options:)` detects this capability through an
++`any LLMModel` value. It waits for normal stream termination and exactly one final
++completion record before parsing the response. Only `.stop` permits tool execution
++or a completed answer. Length, cancelled, missing or duplicate metadata, text after
++metadata, and throwing streams fail the run. A throw after a `.stop` record still
++fails. Accepted steps retain the exact record in `AgentStep.completionInfo`.
++Legacy models and String closures keep their existing behavior and record nil
++metadata, because their stop reason and token counts are unknown.
++
++A failed generation does not create an accepted step; consume the model's detailed
++stream directly if you need metadata for rejected responses.
++
++Cancelling `ReActAgent.run` throws `CancellationError` and requests cancellation of
++its reasoning producer. Cancelling an awaiting agent-stream consumer also cancels
++that producer. Pre-cancelled calls start no reasoning work. The agent checks
++cancellation after awaited model and tool work, before parsing late output or
++starting another turn. Cancellation is cooperative: it cannot interrupt arbitrary
++noncooperative model or tool code, undo an already-started side effect, or guarantee
++that such work has drained before `run` returns. A model reporting `.cancelled`
++without cancellation of the caller remains a failed model completion.
++
+ This changes the former oversized-input behavior: generation no longer silently
+ drops the beginning of a prompt or emits a token beyond the configured capacity.
+ Existing method signatures and the `LLMModel` protocol remain unchanged.
+diff --git a/Tests/SwiftAgentTests/CompletionReportingTests.swift b/Tests/SwiftAgentTests/CompletionReportingTests.swift
+new file mode 100644
+index 0000000000..e54487df98
+--- /dev/null
++++ b/Tests/SwiftAgentTests/CompletionReportingTests.swift
+@@ -0,0 +1,229 @@
++import Testing
++import Foundation
++import SwiftAgent
++import SwiftLLM
++
++private actor CompletionToolCounter {
++    var calls = 0
++    func record() { calls += 1 }
++}
++
++private enum CompletionMockError: Error, LocalizedError {
++    case legacyPath
++    case streamFailed
++
++    var errorDescription: String? {
++        switch self {
++        case .legacyPath: "The rich model used its legacy text path."
++        case .streamFailed: "Injected streaming failure."
++        }
++    }
++}
++
++private struct DetailedModel: CompletionReportingLLMModel {
++    let events: @Sendable (String) -> [GenerationEvent]
++    var failure: CompletionMockError? = nil
++    var legacyCalls: CompletionToolCounter? = nil
++
++    func generate(prompt: String, options: LLMOptions) async throws -> AsyncStream<String> {
++        await legacyCalls?.record()
++        throw CompletionMockError.legacyPath
++    }
++
++    func generateDetails(prompt: String, options: LLMOptions) -> AsyncThrowingStream<GenerationEvent, any Error> {
++        AsyncThrowingStream { continuation in
++            for event in events(prompt) { continuation.yield(event) }
++            if let failure { continuation.finish(throwing: failure) }
++            else { continuation.finish() }
++        }
++    }
++}
++
++private struct TruncatedModel: CompletionReportingLLMModel {
++    let text = "Thought: Use the tool\nAction: Echo\nAction Input: truncated"
++
++    func generate(prompt: String, options: LLMOptions) async throws -> AsyncStream<String> {
++        AsyncStream { continuation in
++            continuation.yield(text)
++            continuation.finish()
++        }
++    }
++
++    func generateDetails(prompt: String, options: LLMOptions) -> AsyncThrowingStream<GenerationEvent, any Error> {
++        AsyncThrowingStream { continuation in
++            continuation.yield(.chunk(text))
++            continuation.yield(.info(GenerationCompletionInfo(
++                promptTokenCount: 17, generationTokenCount: 9, stopReason: .length(.maxTokens))))
++            continuation.finish()
++        }
++    }
++}
++
++@Suite("Completion reporting at the native agent boundary")
++struct CompletionReportingTests {
++    private let action = "Thought: Use the tool\nAction: Echo\nAction Input: partial"
++    private let answer = "Thought: Done\nFinal Answer: partial"
++
++    private func info(_ reason: GenerationStopReason = .stop) -> GenerationCompletionInfo {
++        GenerationCompletionInfo(promptTokenCount: 17, generationTokenCount: 9, stopReason: reason)
++    }
++
++    private func expectRejected(_ events: [GenerationEvent], failure: CompletionMockError? = nil) async throws {
++        let counter = CompletionToolCounter()
++        let legacy = CompletionToolCounter()
++        let memory = SlidingWindowMemory()
++        let tool = CustomAgentTool(name: "Echo", description: "Count calls") { input in
++            await counter.record()
++            return input
++        }
++        let model: any LLMModel = DetailedModel(events: { _ in events }, failure: failure, legacyCalls: legacy)
++        let agent = ReActAgent(tools: [tool], maxSteps: 1, memory: memory)
++        await #expect(throws: AgentError.self) {
++            _ = try await agent.run(query: "Test", model: model)
++        }
++        #expect(await counter.calls == 0)
++        #expect(await legacy.calls == 0)
++        let records = try await memory.retrieveContext(query: "", limit: 20)
++        #expect(records.allSatisfy { $0.role != "assistant" })
++    }
++
++    @Test("A known truncated action cannot execute a tool")
++    func truncatedAction() async throws {
++        let counter = CompletionToolCounter()
++        let tool = CustomAgentTool(name: "Echo", description: "Count calls") { input in
++            await counter.record()
++            return input
++        }
++        let model: any LLMModel = TruncatedModel()
++        let agent = ReActAgent(tools: [tool], maxSteps: 1)
++        await #expect(throws: AgentError.self) {
++            _ = try await agent.run(query: "Test", model: model)
++        }
++        #expect(await counter.calls == 0)
++    }
++
++    @Test("Rich dispatch preserves exact counts through a base existential")
++    func completeAnswer() async throws {
++        let completion = info()
++        let model: any LLMModel = DetailedModel(events: { _ in [
++            .chunk("Thought: Done\n"), .chunk("Final Answer: yes"), .info(completion)
++        ] })
++        let result = try await ReActAgent().run(query: "Test", model: model)
++        #expect(result.finalAnswer == "yes")
++        #expect(result.trace.count == 1)
++        #expect(result.trace[0].completionInfo == completion)
++    }
++
++    @Test("Known incomplete action and answer text fail before side effects", arguments: [
++        GenerationStopReason.length(.maxTokens), .length(.contextWindow), .cancelled
++    ])
++    func incompleteStops(reason: GenerationStopReason) async throws {
++        for text in [action, answer] {
++            try await expectRejected([.chunk(text), .info(info(reason))])
++        }
++    }
++
++    @Test("Missing, duplicate and nonterminal metadata cannot reach parsing")
++    func malformedStreams() async throws {
++        let completion = GenerationEvent.info(info())
++        let sequences: [[GenerationEvent]] = [
++            [], [.chunk(action)], [.chunk(action), completion, completion],
++            [.chunk(action), completion, .chunk("")]
++        ]
++        for events in sequences { try await expectRejected(events) }
++    }
++
++    @Test("Stream failure before or after stop metadata rejects the whole response")
++    func throwingStreams() async throws {
++        let sequences: [[GenerationEvent]] = [
++            [.chunk(action)], [.chunk(action), .info(info())], [.chunk(answer), .info(info())]
++        ]
++        for events in sequences { try await expectRejected(events, failure: .streamFailed) }
++    }
++
++    @Test("Each accepted tool or unknown-tool step retains its originating metadata", arguments: ["Echo", "Missing"])
++    func trajectoryMetadata(toolName: String) async throws {
++        let counter = CompletionToolCounter()
++        let first = info()
++        let second = GenerationCompletionInfo(promptTokenCount: 38, generationTokenCount: 4, stopReason: .stop)
++        let tool = CustomAgentTool(name: "Echo", description: "Count calls") { input in
++            await counter.record()
++            return input
++        }
++        let model: any LLMModel = DetailedModel(events: { prompt in
++            if prompt.contains("Previous History:") {
++                return [.chunk("Final Answer: done"), .info(second)]
++            }
++            return [.chunk("Thought: Check\nAction: \(toolName)\nAction Input: accepted"), .info(first)]
++        })
++        let result = try await ReActAgent(tools: [tool], maxSteps: 2).run(query: "Test", model: model)
++        #expect(result.finalAnswer == "done")
++        #expect(result.trace.count == 2)
++        #expect(result.trace[0].completionInfo == first)
++        #expect(result.trace[1].completionInfo == second)
++        #expect(await counter.calls == (toolName == "Echo" ? 1 : 0))
++        if toolName == "Missing" { #expect(result.trace[0].observation?.contains("not recognized") == true) }
++    }
++
++    @Test("An invalid later turn does not execute another tool or become an answer")
++    func invalidLaterTurn() async throws {
++        let counter = CompletionToolCounter()
++        let memory = SlidingWindowMemory()
++        let first = info()
++        let incomplete = info(.length(.contextWindow))
++        let text = action
++        let tool = CustomAgentTool(name: "Echo", description: "Count calls") { input in
++            await counter.record()
++            return input
++        }
++        let model: any LLMModel = DetailedModel(events: { prompt in
++            [.chunk(text), .info(prompt.contains("Previous History:") ? incomplete : first)]
++        })
++        let agent = ReActAgent(tools: [tool], maxSteps: 3, memory: memory)
++        await #expect(throws: AgentError.self) { _ = try await agent.run(query: "Test", model: model) }
++        #expect(await counter.calls == 1)
++        let records = try await memory.retrieveContext(query: "", limit: 20)
++        #expect(records.allSatisfy { $0.role != "assistant" })
++    }
++
++    @Test("A final stop record without chunks retains existing empty-text parsing")
++    func emptyCompleteResponse() async throws {
++        let completion = info()
++        let model: any LLMModel = DetailedModel(events: { _ in [.info(completion)] })
++        let result = try await ReActAgent(maxSteps: 1).run(query: "Test", model: model)
++        #expect(result.trace.count == 1)
++        #expect(result.trace[0].completionInfo == completion)
++    }
++
++    @Test("Legacy model and String closures preserve their APIs and unknown metadata")
++    func legacyCompatibility() async throws {
++        struct TextModel: LLMModel {
++            func generate(prompt: String, options: LLMOptions) async throws -> AsyncStream<String> {
++                AsyncStream { continuation in
++                    continuation.yield("Final Answer: legacy")
++                    continuation.finish()
++                }
++            }
++        }
++        let agent = ReActAgent()
++        let model: any LLMModel = TextModel()
++        let native = try await agent.run(query: "Test", model: model)
++        #expect(native.finalAnswer == "legacy")
++        #expect(native.trace.allSatisfy { $0.completionInfo == nil })
++        let closure: @Sendable (String) async throws -> String = { _ in "Final Answer: closure" }
++        let result = try await agent.run(query: "Test", llm: closure)
++        #expect(result.finalAnswer == "closure")
++        #expect(result.trace.allSatisfy { $0.completionInfo == nil })
++        var completed = false
++        for await event in await agent.stream(query: "Test", llm: closure) {
++            if case .completed(let answer, let trace) = event {
++                completed = true
++                #expect(answer == "closure")
++                #expect(trace.allSatisfy { $0.completionInfo == nil })
++            }
++        }
++        #expect(completed)
++        let makeStep: (String, String?, String?, String?) -> AgentStep = AgentStep.init
++        #expect(makeStep("legacy", nil, nil, nil).completionInfo == nil)
++    }
++}
+diff --git a/Tests/SwiftAgentTests/ReActCancellationTests.swift b/Tests/SwiftAgentTests/ReActCancellationTests.swift
+new file mode 100644
+index 0000000000..25cf9ed938
+--- /dev/null
++++ b/Tests/SwiftAgentTests/ReActCancellationTests.swift
+@@ -0,0 +1,292 @@
++import Testing
++import SwiftAgent
++
++private struct CancellationSignal: Sendable {
++    let stream: AsyncStream<Void>
++    let continuation: AsyncStream<Void>.Continuation
++
++    init() {
++        let pair = AsyncStream<Void>.makeStream()
++        stream = pair.stream
++        continuation = pair.continuation
++    }
++
++    func fire() {
++        continuation.yield(())
++        continuation.finish()
++    }
++
++    func wait() async -> Bool {
++        for await _ in stream { return true }
++        return false
++    }
++}
++
++private actor IgnoringCancellationGate {
++    private var continuation: CheckedContinuation<Void, Never>?
++    private var released = false
++
++    func wait() async {
++        if released { return }
++        await withCheckedContinuation { continuation = $0 }
++    }
++
++    func release() {
++        released = true
++        continuation?.resume()
++        continuation = nil
++    }
++}
++
++private actor CancellationCounters {
++    var modelCalls = 0
++    var toolCalls = 0
++    func modelStarted() { modelCalls += 1 }
++    func toolStarted() { toolCalls += 1 }
++}
++
++private final class ProducerLifetime: Sendable {
++    let finished: CancellationSignal
++    init(finished: CancellationSignal) { self.finished = finished }
++    deinit { finished.fire() }
++}
++
++private enum ProducerContext {
++    @TaskLocal static var lifetime: ProducerLifetime?
++}
++
++@Suite("ReAct consumer cancellation")
++struct ReActCancellationTests {
++    // The timer is a deadlock guard. Handshake signals determine execution order.
++    private func observed(_ signal: CancellationSignal) async -> Bool {
++        await withTaskGroup(of: Bool.self) { group in
++            group.addTask { await signal.wait() }
++            group.addTask {
++                try? await Task.sleep(for: .seconds(5))
++                return false
++            }
++            let result = await group.next() ?? false
++            group.cancelAll()
++            return result
++        }
++    }
++
++    @Test("A pre-cancelled run throws instead of returning empty success")
++    func preCancelledRun() async {
++        let agent = ReActAgent()
++        let consumer = Task {
++            withUnsafeCurrentTask { $0?.cancel() }
++            do {
++                _ = try await agent.run(query: "Test", llm: { _ in "Final Answer: unexpected" })
++                return false
++            } catch is CancellationError {
++                return true
++            } catch {
++                Issue.record("Expected CancellationError, received \(error)")
++                return false
++            }
++        }
++        #expect(await consumer.value)
++    }
++
++    @Test("Producer lifetime handshake observes an ordinary completed run")
++    func lifetimeControl() async throws {
++        let finished = CancellationSignal()
++        let agent = ReActAgent()
++        var consumer: Task<String, any Error>? = ProducerContext.$lifetime.withValue(ProducerLifetime(finished: finished)) {
++            Task { try await agent.run(query: "Test", llm: { _ in "Final Answer: done" }).finalAnswer }
++        }
++        let answer = try await consumer!.value
++        consumer = nil
++        #expect(answer == "done")
++        try #require(await observed(finished))
++    }
++
++    @Test("Cancellation reaches the producer and blocks ignored late output", arguments: [
++        "Action: Echo\nAction Input: late", "Final Answer: late"
++    ])
++    func ignoredCompletion(text: String) async throws {
++        let entered = CancellationSignal()
++        let cancelled = CancellationSignal()
++        let finished = CancellationSignal()
++        let gate = IgnoringCancellationGate()
++        let counters = CancellationCounters()
++        let memory = SlidingWindowMemory()
++        let tool = CustomAgentTool(name: "Echo", description: "Count calls") { input in
++            await counters.toolStarted()
++            return input
++        }
++        let agent = ReActAgent(tools: [tool], maxSteps: 2, memory: memory)
++        var consumer: Task<Bool, Never>? = ProducerContext.$lifetime.withValue(ProducerLifetime(finished: finished)) {
++            Task {
++                do {
++                    _ = try await agent.run(query: "Test", llm: { _ in
++                        await counters.modelStarted()
++                        return await withTaskCancellationHandler {
++                            entered.fire()
++                            await gate.wait()
++                            return text
++                        } onCancel: {
++                            cancelled.fire()
++                        }
++                    })
++                    return false
++                } catch is CancellationError {
++                    return true
++                } catch {
++                    Issue.record("Expected CancellationError, received \(error)")
++                    return false
++                }
++            }
++        }
++        let started = await observed(entered)
++        consumer!.cancel()
++        let rejected = await consumer!.value
++        consumer = nil
++        let producerCancelled = await observed(cancelled)
++        await gate.release()
++        let producerFinished = await observed(finished)
++        #expect(started)
++        #expect(rejected)
++        #expect(producerCancelled)
++        try #require(producerFinished)
++        #expect(await counters.modelCalls == 1)
++        #expect(await counters.toolCalls == 0)
++        let records = try await memory.retrieveContext(query: "", limit: 20)
++        #expect(records.allSatisfy { $0.role != "assistant" })
++    }
++
++    @Test("Cancelling a public stream consumer cancels its producer")
++    func cancelledStream() async throws {
++        let entered = CancellationSignal()
++        let cancelled = CancellationSignal()
++        let finished = CancellationSignal()
++        let gate = IgnoringCancellationGate()
++        let counters = CancellationCounters()
++        let tool = CustomAgentTool(name: "Echo", description: "Count calls") { input in
++            await counters.toolStarted()
++            return input
++        }
++        let agent = ReActAgent(tools: [tool], maxSteps: 1)
++        var consumer: Task<Bool, Never>? = ProducerContext.$lifetime.withValue(ProducerLifetime(finished: finished)) {
++            Task {
++                let stream = await agent.stream(query: "Test", llm: { _ in
++                    await withTaskCancellationHandler {
++                        entered.fire()
++                        await gate.wait()
++                        return "Action: Echo\nAction Input: late"
++                    } onCancel: {
++                        cancelled.fire()
++                    }
++                })
++                var completed = false
++                for await event in stream {
++                    if case .completed = event { completed = true }
++                }
++                return completed
++            }
++        }
++        let started = await observed(entered)
++        consumer!.cancel()
++        let completed = await consumer!.value
++        consumer = nil
++        let producerCancelled = await observed(cancelled)
++        await gate.release()
++        let producerFinished = await observed(finished)
++        #expect(started)
++        #expect(!completed)
++        #expect(producerCancelled)
++        try #require(producerFinished)
++        #expect(await counters.toolCalls == 0)
++    }
++
++    @Test("Pre-cancelled stream callers start no producer")
++    func preCancelledStream() async throws {
++        let finished = CancellationSignal()
++        let counters = CancellationCounters()
++        let agent = ReActAgent()
++        var consumer: Task<Bool, Never>? = ProducerContext.$lifetime.withValue(ProducerLifetime(finished: finished)) {
++            Task {
++                withUnsafeCurrentTask { $0?.cancel() }
++                let stream = await agent.stream(query: "Test", llm: { _ in
++                    await counters.modelStarted()
++                    return "Final Answer: unexpected"
++                })
++                var completed = false
++                for await event in stream {
++                    if case .completed = event { completed = true }
++                }
++                return completed
++            }
++        }
++        let completed = await consumer!.value
++        consumer = nil
++        #expect(!completed)
++        try #require(await observed(finished))
++        #expect(await counters.modelCalls == 0)
++    }
++
++    @Test("Consumer cancellation reaches running tools and stops the next turn", arguments: [0.0, 30.0])
++    func runningTool(timeout: Double) async throws {
++        let entered = CancellationSignal()
++        let cancelled = CancellationSignal()
++        let released = CancellationSignal()
++        let finished = CancellationSignal()
++        let counters = CancellationCounters()
++        let tool = CustomAgentTool(name: "Echo", description: "Wait cooperatively") { _ in
++            await counters.toolStarted()
++            return try await withTaskCancellationHandler {
++                entered.fire()
++                _ = await released.wait()
++                try Task.checkCancellation()
++                return "released"
++            } onCancel: {
++                cancelled.fire()
++            }
++        }
++        let agent = ReActAgent(tools: [tool], maxSteps: 2, toolTimeoutSeconds: timeout)
++        var consumer: Task<Bool, Never>? = ProducerContext.$lifetime.withValue(ProducerLifetime(finished: finished)) {
++            Task {
++                do {
++                    _ = try await agent.run(query: "Test", llm: { prompt in
++                        await counters.modelStarted()
++                        return prompt.contains("Previous History:") ? "Final Answer: unexpected" : "Action: Echo\nAction Input: wait"
++                    })
++                    return false
++                } catch is CancellationError {
++                    return true
++                } catch {
++                    Issue.record("Expected CancellationError, received \(error)")
++                    return false
++                }
++            }
++        }
++        let started = await observed(entered)
++        consumer!.cancel()
++        let rejected = await consumer!.value
++        consumer = nil
++        let toolCancelled = await observed(cancelled)
++        released.fire()
++        let producerFinished = await observed(finished)
++        #expect(started)
++        #expect(rejected)
++        #expect(toolCancelled)
++        try #require(producerFinished)
++        #expect(await counters.modelCalls == 1)
++        #expect(await counters.toolCalls == 1)
++    }
++
++    @Test("An independent tool cancellation error keeps ordinary observation behavior")
++    func independentToolError() async throws {
++        let tool = CustomAgentTool(name: "Echo", description: "Throw independently") { _ in
++            throw CancellationError()
++        }
++        let agent = ReActAgent(tools: [tool], maxSteps: 2)
++        let result = try await agent.run(query: "Test", llm: { prompt in
++            prompt.contains("Previous History:") ? "Final Answer: recovered" : "Action: Echo\nAction Input: error"
++        })
++        #expect(result.finalAnswer == "recovered")
++        #expect(result.trace.count == 2)
++        #expect(result.trace[0].observation?.hasPrefix("Error:") == true)
++    }
++}

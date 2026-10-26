@@ -1,0 +1,58 @@
+Building for debugging...
+[Computing dependencies]
+[Using on-disk description]
+[1 / 5]
+[2 / 6] SwiftAgent
+[3 / 7] SwiftAgent
+[9 / 14] SwiftAgent
+[11 / 16] SwiftAgent
+[27 / 30] SwiftAgentTests-product
+[30 / 34] SwiftAgentTests-product
+[33 / 38] SwiftAgentTests-product
+[34 / 38] SwiftAgentTests-product
+[40 / 42] SwiftAgentTests-product
+[41 / 42] SwiftAgentTests-product
+[42 / 42] SwiftAgentTests-product
+[52 / 52] SwiftDataFrameTests-product
+[74 / 75] SwiftLLMTests-product
+[82 / 82] SwiftMLTests-product
+[103 / 105] SwiftStatsTests-product
+[116 / 116] SwiftAgent-product
+[118 / 123] SwiftVisionTests-product
+[121 / 124] SwiftSciBenchmarks-product
+[124 / 124] SwiftSciBenchmarks-product
+[125 / 126] SwiftSciBenchmarks-product
+[126 / 127] SwiftSciBenchmarkWorker-product
+[129 / 129] SwiftSciBenchmarkWorker-product
+warning: missing creator for mutated node: ('/private/tmp/swiftsci-llm-completion-20261026/source/.build/out/Products/Debug/SwiftSci_SwiftLLM.bundle/Contents/MacOS')
+warning: missing creator for mutated node: ('/private/tmp/swiftsci-llm-completion-20261026/source/.build/out/Products/Debug/mlx-swift_Cmlx.bundle/Contents/MacOS')
+Build complete! (8.32 sec)
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite "Completion reporting at the native agent boundary" started.
+◇ Test "A known truncated action cannot execute a tool" started.
+◇ Test "A final stop record without chunks retains existing empty-text parsing" started.
+◇ Test "Missing, duplicate and nonterminal metadata cannot reach parsing" started.
+◇ Test "Each accepted tool or unknown-tool step retains its originating metadata" started.
+◇ Test "Stream failure before or after stop metadata rejects the whole response" started.
+◇ Test "Known incomplete action and answer text fail before side effects" started.
+◇ Test "Rich dispatch preserves exact counts through a base existential" started.
+◇ Test "Legacy model and String closures preserve their APIs and unknown metadata" started.
+◇ Test "An invalid later turn does not execute another tool or become an answer" started.
+◇ Test case passing 1 argument toolName → "Echo" to "Each accepted tool or unknown-tool step retains its originating metadata" started.
+◇ Test case passing 1 argument reason → .length(SwiftLLM.GenerationLimit.contextWindow) to "Known incomplete action and answer text fail before side effects" started.
+◇ Test case passing 1 argument toolName → "Missing" to "Each accepted tool or unknown-tool step retains its originating metadata" started.
+◇ Test case passing 1 argument reason → .length(SwiftLLM.GenerationLimit.maxTokens) to "Known incomplete action and answer text fail before side effects" started.
+◇ Test case passing 1 argument reason → .cancelled to "Known incomplete action and answer text fail before side effects" started.
+✔ Test "A known truncated action cannot execute a tool" passed after 0.001 seconds.
+✔ Test "Known incomplete action and answer text fail before side effects" with 3 test cases passed after 0.001 seconds.
+✔ Test "Stream failure before or after stop metadata rejects the whole response" passed after 0.001 seconds.
+✔ Test "Missing, duplicate and nonterminal metadata cannot reach parsing" passed after 0.001 seconds.
+✔ Test "A final stop record without chunks retains existing empty-text parsing" passed after 0.001 seconds.
+✔ Test "Rich dispatch preserves exact counts through a base existential" passed after 0.001 seconds.
+✔ Test "Legacy model and String closures preserve their APIs and unknown metadata" passed after 0.001 seconds.
+✔ Test "An invalid later turn does not execute another tool or become an answer" passed after 0.001 seconds.
+✔ Test "Each accepted tool or unknown-tool step retains its originating metadata" with 2 test cases passed after 0.001 seconds.
+✔ Suite "Completion reporting at the native agent boundary" passed after 0.002 seconds.
+✔ Test run with 9 tests in 1 suite passed after 0.002 seconds.

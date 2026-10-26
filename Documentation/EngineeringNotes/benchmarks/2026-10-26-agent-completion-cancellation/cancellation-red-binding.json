@@ -1,0 +1,15 @@
+{
+  "source_parent": "6ef1a4b35be11a611d8d101d1db2c56cd3c5a953",
+  "test_source_sha256": "d4b7722e35b14f1644eb6acf79b497ed228c5d7b143783f3f4c8cb0efd0b7475",
+  "log_sha256": "456a336e690d599496f8274d5248124d142a98dd48b4e9a9d0d713518c12c1a7",
+  "command": [
+    "swift",
+    "test",
+    "-j",
+    "2",
+    "--filter",
+    "ReActCancellationTests"
+  ],
+  "observed_exit_code": 1,
+  "result": "7 test definitions completed; 17 issues demonstrate empty success, absent producer/tool cancellation, late tool calls, another model turn, and late assistant-memory write; lifecycle and independent-error controls passed"
+}
