@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "source": "0e1635199654ac6a20b32ea53eea0ffdfa39e747",
+  "authoritative_run": "final-run-qualified",
+  "source_cleanup_precondition": "Exact HEAD, empty git status, and all recorded source file hashes verified",
+  "positive": {
+    "probe_exit_codes": [
+      0,
+      0
+    ],
+    "maximum_absolute_error": 4.440892098500626e-16,
+    "tolerance": "abs(error)<=1e-12+1e-12*abs(reference)",
+    "predictions": [
+      1,
+      0,
+      1,
+      1,
+      0
+    ]
+  },
+  "negative_control": "Old probes rejected before execution by selected-build binding; recorded exit 1",
+  "package_build": "Passed with verified local dependency substitution; source bytes and output equal qualified probe",
+  "remote_package": {
+    "status": "passed",
+    "checkout_commit": "0e1635199654ac6a20b32ea53eea0ffdfa39e747",
+    "checkout_source_files": 383,
+    "upstream_url": "https://github.com/crabel99/SwiftSci.git",
+    "controller_sha256": "05764c97eaa3e3ebb4cb0a99cd7a289a930b055c1078343b98f47565fa8deb7d",
+    "resolved_sha256": "7d62085b8070bc7c9537369890b97eacb57d675dcf2e8c33a348e71a0a8ee5c9",
+    "pins": [
+      {
+        "identity": "arrow-swift",
+        "kind": "remoteSourceControl",
+        "location": "https://github.com/apache/arrow-swift.git",
+        "state": {
+          "revision": "fb3f3d91be5acd511b7289c7820becc1a68e455d",
+          "version": "21.0.0"
+        }
+      },
+      {
+        "identity": "flatbuffers",
+        "kind": "remoteSourceControl",
+        "location": "https://github.com/google/flatbuffers.git",
+        "state": {
+          "revision": "1c514626e83c20fffa8557e75641848e1e15cd5e",
+          "version": "25.2.10"
+        }
+      },
+      {
+        "identity": "mlx-swift",
+        "kind": "remoteSourceControl",
+        "location": "https://github.com/crabel99/mlx-swift.git",
+        "state": {
+          "revision": "4657976edcdd2c60642424985d474b45ddddb390"
+        }
+      },
+      {
+        "identity": "swift-argument-parser",
+        "kind": "remoteSourceControl",
+        "location": "https://github.com/apple/swift-argument-parser.git",
+        "state": {
+          "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+          "version": "1.8.2"
+        }
+      },
+      {
+        "identity": "swift-atomics",
+        "kind": "remoteSourceControl",
+        "location": "https://github.com/apple/swift-atomics.git",
+        "state": {
+          "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+          "version": "1.3.1"
+        }
+      },
+      {
+        "identity": "swift-numerics",
+        "kind": "remoteSourceControl",
+        "location": "https://github.com/apple/swift-numerics",
+        "state": {
+          "revision": "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+          "version": "1.1.1"
+        }
+      },
+      {
+        "identity": "swiftsci",
+        "kind": "remoteSourceControl",
+        "location": "https://github.com/crabel99/SwiftSci.git",
+        "state": {
+          "revision": "0e1635199654ac6a20b32ea53eea0ffdfa39e747"
+        }
+      }
+    ],
+    "step_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "binary_sha256": "d09bd1acaff62cf0c90852984258e0d6ffcfe11db905aaeefde9a49ecb7cceff",
+    "result_sha256": "1a00318f96e94ec586284c7b9dd29e1aca826ac45a014678401cbb9bef2908b4",
+    "result": "Resolve, fresh native build and run passed; exact qualified JSON equality"
+  },
+  "preserved_failures": {
+    "initial_compile": "Matrix rowValues call failed; corrected by removing unnecessary conversion",
+    "initial_launch": "No probe executable existed after failed compilation",
+    "final_run_bound": "Sandbox launch emitted no-Metal-device diagnostic; no valid numerical result or passing verdict"
+  },
+  "limits": [
+    "Toy integration fixture, not statistical-quality, performance or memory qualification",
+    "Receipt verification reads retained artifacts and recomputes the scalar oracle; it does not build or launch Swift",
+    "Original qualification requires retained local and remote checkouts/builds/probes; publication verification is standalone"
+  ],
+  "artifacts": {
+    "README.md": "3f3ce4593ff476a831faa1d03cbc2f993e1763c09d26857cb8478983280cb40c",
+    "plan.md": "bca934cca8fa0afeab239b546de0f8aa363f282aae46c48c41730464b7fc77bb",
+    "standards-review.md": "1d104cc4c18dd29ec834aa52fd0d3ec84c9577918048db6c987153c27760d0c9",
+    "spec-review.md": "ddbffc56c93be8c2fc05f13f381d483997d48ace0f3cb0822bb7570ce68fbdf2",
+    "audit.md": "2289150b7ca7e70ff4f84fc922c83147c582ff9d48ca5118cff0b8a79199078c",
+    "ScientificWorkflow.swift": "7799da0c12fdfdc903df23bde96d45580225384f8b0e2d0a071a459728d94fa2",
+    "LegacyWorkflowProbe.swift": "f681f3bd56a1f5a464eb129d0d539a1e053a978d1edf868b7cea0dfcac8136cc",
+    "ScientificWorkflow-before-compile-correction.swift": "c4f0d84bbb86ba952a1c48fc59599ac228a4684b63d656fdd3f07490bb01fbad",
+    "public-probe/compile.log": "998c71be06d1fc8b47061f28dea9493b7585334d44f89e474170a4a4fbb0488b",
+    "prepared-run.log": "76480384b004b0991fcc8e3401a9f75e16fc98b9add23b77646778dd7ce29fcf",
+    "run-template-before-binding-fix.py": "5237fd86f89f51a5f1d0dfb476e50d6c19e233d935017c3efbe204f14b73da57",
+    "run-template.py": "0134ebcf6747674d13f11d0099a7d070d8dd85f0e668cf8039b2bf0930faae7a",
+    "verify-template.py": "4549b747e5f2fcea1a29a079d31e3cfe8fcacde6516e428739dc1cd8748f4615",
+    "verify-qualification.py": "b8bc8ca02a5165862de748058100688dcaae879a00f953fa175e9e9ecd8e2e30",
+    "package-records.py": "c711812bf9847b21ca3bb0cae3149a461010a95be3eb6ced193dfb3b22d2b08a",
+    "verify-publication.py": "5f2fe683ac36ce25cf060525c5d9bb72aebc8545c02a66e9de81e8e233b02ea4",
+    "mismatched-build-rejection-final.json": "2cb27ea9e13dfa3d8a4bb85986932fcceb2c0b5a4125d906627f43a49034525b",
+    "package-source-binding.json": "a027ba59e9f9caa619532c0da46a4e58e3bd8b2fae9167b8f895103085d194b3",
+    "local-manifest.diff": "27c45d538d73d68f8a8d6aacf5e98256dc0e046774337097ab1237651dc911b5",
+    "package-manifest.json": "387e95fa2f59612218a08210bd8999ca956f5046af843317237ba80e4097bf16",
+    "package-build.log": "0358da33f486d443a1a270a211fd02c5f07082db405a26a0581a27ea6f8eafa9",
+    "package-result.json": "1a00318f96e94ec586284c7b9dd29e1aca826ac45a014678401cbb9bef2908b4",
+    "package-run.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "template/Package.swift": "003cf9065119232039ddf466b9a5b9fd114eb843e10cd5b39a308deabb316cb6",
+    "template/README.md": "6a3287a33b48d29f50f10db94754598ba8ade580da95e39f53f0f8d8507c77f6",
+    "template/Sources/ScientificWorkflow/ScientificWorkflow.swift": "7799da0c12fdfdc903df23bde96d45580225384f8b0e2d0a071a459728d94fa2",
+    "template-local/Package.swift": "4cffe03cdc98e50d731c2f02bb2e010c08e7415705803e3628db1d2c79430c0a",
+    "template-local/Package.resolved": "93db6ee420b6fecef4ab56013df316c3ac49aee28e9587bb83f41fa1f3466ef4",
+    "check-remote-package.py": "05764c97eaa3e3ebb4cb0a99cd7a289a930b055c1078343b98f47565fa8deb7d",
+    "remote-package-review.md": "c98d22c59703d4ef2c7acbb6f3a7ae7b0c22ad451e3f6ff082d6ff4f59ea9e28",
+    "template/Package.resolved": "7d62085b8070bc7c9537369890b97eacb57d675dcf2e8c33a348e71a0a8ee5c9",
+    "remote-package/receipt.json": "bdb96d799f8f902496936dc6e01bbbc5acf5b67d6b036362d0981317e9eb6bee",
+    "remote-package/resolve.log": "6f057871b481fe45228b482036fbc08006ecaf0f3c8a30340a5ab348628c4ef2",
+    "remote-package/build.log": "9cac5384f10a642109230f3b0f0d7d1fb3967da229c81a2ac35f70dc8f9bc845",
+    "remote-package/run.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-package/result.json": "1a00318f96e94ec586284c7b9dd29e1aca826ac45a014678401cbb9bef2908b4",
+    "final-run-bound/prepared.json": "a11e801c250d9597ca4b88027a239ca2235bd603335edb7302ac6de1bfbad399",
+    "final-run-bound/prepared.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final-run-qualified/attempts.json": "0dca4727845668abe0893c34f83764a8985970ef82c8ab476378ebe1b86032cc",
+    "final-run-qualified/prepared.json": "1a00318f96e94ec586284c7b9dd29e1aca826ac45a014678401cbb9bef2908b4",
+    "final-run-qualified/prepared.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final-run-qualified/legacy.json": "ee0c745e9c8755462875a0aa0fa41497dd1be951e9ea382e55d754e7bce4489c",
+    "final-run-qualified/legacy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final-run-qualified/provenance.json": "2abf2bcd21e6b16770ad60b2e9031683e02c61e63fdf99dece9f0157a3ea1c09",
+    "final-run-qualified/verification.json": "a98cf2bf0a56fbb448609508c956eaf5ba125b0d613218cf1d6457917081b90f"
+  }
+}

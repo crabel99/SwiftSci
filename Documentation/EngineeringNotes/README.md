@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Complete public numerical workflow](benchmarks/2026-10-26-numerical-template/README.md) provides a copyable package for training-only preprocessing, prepared PCA and classification, with independent stage checks and an actual remote dependency build/run.
+
 - [Agent completion and cooperative cancellation](benchmarks/2026-10-26-agent-completion-cancellation/README.md) preserves producer completion status before tool execution, fixes consumer cancellation, and records full qualification plus the retained legacy database security finding.
 
 - [Combined scientific and inference qualification](benchmarks/2026-10-26-scientific-ai-integration/README.md) joins the reviewed PCA stack with later inference work and corrects false documentation coverage reporting. It preserves separate historical measurement fingerprints.

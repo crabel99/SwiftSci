@@ -1,0 +1,109 @@
+{
+  "cLanguageStandard" : null,
+  "cxxLanguageStandard" : null,
+  "defaultLocalization" : null,
+  "dependencies" : [
+    {
+      "sourceControl" : [
+        {
+          "identity" : "swiftsci",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/crabel99/SwiftSci.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "revision" : [
+              "0e1635199654ac6a20b32ea53eea0ffdfa39e747"
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "name" : "ScientificWorkflow",
+  "packageKind" : {
+    "root" : [
+      "/private/tmp/swiftsci-numerical-template-20261026/template"
+    ]
+  },
+  "pkgConfig" : null,
+  "platforms" : [
+    {
+      "options" : [
+
+      ],
+      "platformName" : "macos",
+      "version" : "14.0"
+    }
+  ],
+  "products" : [
+
+  ],
+  "providers" : null,
+  "swiftLanguageVersions" : null,
+  "targets" : [
+    {
+      "dependencies" : [
+        {
+          "product" : [
+            "SwiftDataFrame",
+            "SwiftSci",
+            null,
+            null
+          ]
+        },
+        {
+          "product" : [
+            "SwiftPreprocessing",
+            "SwiftSci",
+            null,
+            null
+          ]
+        },
+        {
+          "product" : [
+            "SwiftCluster",
+            "SwiftSci",
+            null,
+            null
+          ]
+        },
+        {
+          "product" : [
+            "SwiftML",
+            "SwiftSci",
+            null,
+            null
+          ]
+        }
+      ],
+      "exclude" : [
+
+      ],
+      "name" : "ScientificWorkflow",
+      "packageAccess" : true,
+      "resources" : [
+
+      ],
+      "settings" : [
+
+      ],
+      "type" : "executable"
+    }
+  ],
+  "toolsVersion" : {
+    "_version" : "6.0.0"
+  },
+  "traits" : [
+
+  ]
+}

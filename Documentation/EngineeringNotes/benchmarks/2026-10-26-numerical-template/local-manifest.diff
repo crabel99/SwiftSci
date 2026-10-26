@@ -1,0 +1,12 @@
+--- template/Package.swift
++++ template-local/Package.swift
+@@ -5,8 +5,7 @@
+     name: "ScientificWorkflow",
+     platforms: [.macOS(.v14)],
+     dependencies: [
+-        .package(url: "https://github.com/crabel99/SwiftSci.git",
+-                 revision: "0e1635199654ac6a20b32ea53eea0ffdfa39e747")
++        .package(name: "SwiftSci", path: "/private/tmp/swiftsci-llm-completion-20261026/source")
+     ],
+     targets: [
+         .executableTarget(name: "ScientificWorkflow", dependencies: [

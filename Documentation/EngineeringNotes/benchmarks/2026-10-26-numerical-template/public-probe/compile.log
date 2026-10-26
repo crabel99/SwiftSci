@@ -1,0 +1,31 @@
+/private/tmp/swiftsci-numerical-template-20261026/ScientificWorkflow.swift:81:75: error: value of type 'PreparedNumericMatrix' has no member 'rowValues'
+79 |             "queryTargets": query.targets, "imputationStatistics": replacements,
+80 |             "scalingMean": means, "scalingStd": deviations,
+81 |             "scaledTraining": try scaledTraining.matrix(missing: .reject).rowValues(),
+   |                                                                           `- error: value of type 'PreparedNumericMatrix' has no member 'rowValues'
+82 |             "scaledQuery": try scaledQuery.matrix(missing: .reject).rowValues(),
+83 |             "pcaMean": pcaMean, "pcaComponents": components, "pcaVariance": variance,
+
+/private/tmp/swiftsci-numerical-template-20261026/ScientificWorkflow.swift:82:69: error: value of type 'PreparedNumericMatrix' has no member 'rowValues'
+80 |             "scalingMean": means, "scalingStd": deviations,
+81 |             "scaledTraining": try scaledTraining.matrix(missing: .reject).rowValues(),
+82 |             "scaledQuery": try scaledQuery.matrix(missing: .reject).rowValues(),
+   |                                                                     `- error: value of type 'PreparedNumericMatrix' has no member 'rowValues'
+83 |             "pcaMean": pcaMean, "pcaComponents": components, "pcaVariance": variance,
+84 |             "trainingScores": try trainingScores.matrix(missing: .reject).rowValues(),
+
+/private/tmp/swiftsci-numerical-template-20261026/ScientificWorkflow.swift:84:75: error: value of type 'PreparedNumericMatrix' has no member 'rowValues'
+82 |             "scaledQuery": try scaledQuery.matrix(missing: .reject).rowValues(),
+83 |             "pcaMean": pcaMean, "pcaComponents": components, "pcaVariance": variance,
+84 |             "trainingScores": try trainingScores.matrix(missing: .reject).rowValues(),
+   |                                                                           `- error: value of type 'PreparedNumericMatrix' has no member 'rowValues'
+85 |             "queryScores": try queryScores.matrix(missing: .reject).rowValues(),
+86 |             "weights": weights, "bias": bias, "probabilities": probabilities,
+
+/private/tmp/swiftsci-numerical-template-20261026/ScientificWorkflow.swift:85:69: error: value of type 'PreparedNumericMatrix' has no member 'rowValues'
+83 |             "pcaMean": pcaMean, "pcaComponents": components, "pcaVariance": variance,
+84 |             "trainingScores": try trainingScores.matrix(missing: .reject).rowValues(),
+85 |             "queryScores": try queryScores.matrix(missing: .reject).rowValues(),
+   |                                                                     `- error: value of type 'PreparedNumericMatrix' has no member 'rowValues'
+86 |             "weights": weights, "bias": bias, "probabilities": probabilities,
+87 |             "predictions": predictions, "outputRows": outputRows,

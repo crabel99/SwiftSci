@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python3",
+    "/private/tmp/swiftsci-numerical-template-20261026/run-template.py",
+    "--library-root",
+    "/private/tmp/swiftsci-llm-completion-20261026",
+    "--output",
+    "/private/tmp/swiftsci-numerical-template-20261026/rejected-mismatched-build-final",
+    "--prepared-probe",
+    "/private/tmp/swiftsci-numerical-template-20261026/prepared-probe",
+    "--legacy-probe",
+    "/private/tmp/swiftsci-numerical-template-20261026/legacy-probe"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/swiftsci-numerical-template-20261026/run-template.py\", line 14, in <module>\n    assert Path(proof['input_build_log']).resolve()==build_log, 'Probe belongs to a different library build'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Probe belongs to a different library build\n",
+  "runner_sha256": "0134ebcf6747674d13f11d0099a7d070d8dd85f0e668cf8039b2bf0930faae7a"
+}
