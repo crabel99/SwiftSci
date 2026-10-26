@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [October 26 roadmap and publication closeout](benchmarks/2026-10-26-roadmap-closeout/README.md) records the updated tracker, final decision trail and independent publication audits, with delivery and research still open.
+
 - [Complete public numerical workflow](benchmarks/2026-10-26-numerical-template/README.md) provides a copyable package for training-only preprocessing, prepared PCA and classification, with independent stage checks and an actual remote dependency build/run.
 
 - [Agent completion and cooperative cancellation](benchmarks/2026-10-26-agent-completion-cancellation/README.md) preserves producer completion status before tool execution, fixes consumer cancellation, and records full qualification plus the retained legacy database security finding.
