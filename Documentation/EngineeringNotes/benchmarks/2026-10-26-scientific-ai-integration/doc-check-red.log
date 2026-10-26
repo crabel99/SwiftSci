@@ -1,0 +1,41 @@
+FFF.F
+======================================================================
+FAIL: test_documented_declaration (test_verify_doc_coverage.DocumentationReportingTests.test_documented_declaration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/swiftsci-library-integration-20261026/source/scripts/tests/test_verify_doc_coverage.py", line 30, in test_documented_declaration
+    self.assertIn("declaration scan", output)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'declaration scan' not found in '📊 DocC Public API Coverage: 100.00% (1/1 symbols documented)\n✅ 100.00% DocC Public API Coverage Verified (Zero Placeholders)!\n'
+
+======================================================================
+FAIL: test_mixed_documentation (test_verify_doc_coverage.DocumentationReportingTests.test_mixed_documentation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/swiftsci-library-integration-20261026/source/scripts/tests/test_verify_doc_coverage.py", line 45, in test_mixed_documentation
+    self.assertNotIn("100.00%", output)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: '100.00%' unexpectedly found in '📊 DocC Public API Coverage: 50.00% (1/2 symbols documented)\n✅ 100.00% DocC Public API Coverage Verified (Zero Placeholders)!\n'
+
+======================================================================
+FAIL: test_no_matching_declarations (test_verify_doc_coverage.DocumentationReportingTests.test_no_matching_declarations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/swiftsci-library-integration-20261026/source/scripts/tests/test_verify_doc_coverage.py", line 50, in test_no_matching_declarations
+    self.assertIn("N/A", output)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: 'N/A' not found in '📊 DocC Public API Coverage: 0.00% (0/0 symbols documented)\n✅ 100.00% DocC Public API Coverage Verified (Zero Placeholders)!\n'
+
+======================================================================
+FAIL: test_undocumented_declaration (test_verify_doc_coverage.DocumentationReportingTests.test_undocumented_declaration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/swiftsci-library-integration-20261026/source/scripts/tests/test_verify_doc_coverage.py", line 37, in test_undocumented_declaration
+    self.assertNotIn("100.00%", output)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: '100.00%' unexpectedly found in '📊 DocC Public API Coverage: 0.00% (0/1 symbols documented)\n✅ 100.00% DocC Public API Coverage Verified (Zero Placeholders)!\n'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.013s
+
+FAILED (failures=4)

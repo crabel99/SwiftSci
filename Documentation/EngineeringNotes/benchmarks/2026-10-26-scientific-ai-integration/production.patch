@@ -1,0 +1,1625 @@
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 5c704cb520..b528317d64 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -201,7 +201,10 @@ jobs:
+ 
+           echo "✓ Documentation generated successfully."
+ 
+-      - name: Verify Public API Documentation Coverage (100%)
++      - name: Test documentation reporting
++        run: python3 -m unittest discover -s scripts/tests -p 'test_*.py'
++
++      - name: Report API documentation and check placeholders
+         run: |
+           python3 scripts/verify_doc_coverage.py
+ 
+diff --git a/Documentation/FoundationContract.md b/Documentation/FoundationContract.md
+index 043b29910f..74ec371868 100644
+--- a/Documentation/FoundationContract.md
++++ b/Documentation/FoundationContract.md
+@@ -31,7 +31,7 @@ Concrete batch preprocessing overloads avoid nested row arrays. Consuming transf
+ | Consumer | Ownership and conversion boundary |
+ | --- | --- |
+ | CPU numerical APIs | Owned arrays or scoped buffer pointers feed Accelerate operations. Borrowed pointers remain valid only within their access closure. Precision selection applies to the operation that exposes it. Double storage alone does not guarantee an exact result. |
+-| Supported MLX GPU paths | Scoped reads retain their input owners and synchronize submitted work before releasing them. Results become owned CPU values within the supported scope. Float GPU paths convert Double values to Float with the existing rounding, underflow, and overflow behavior. |
++| Supported MLX GPU paths | Scoped reads retain their input owners and synchronize submitted work before releasing them. Results become owned CPU values within the supported scope. Float GPU paths convert Double values to Float with the existing rounding, underflow, and overflow behavior. PCA fitting validates finite inputs and rejects values that overflow Float conversion before entering its native solver. |
+ | Prepared Core ML input | Preparation owns model-compatible storage and row provenance. Float16, Float32, and Double conversion obey the model's declared type, including finite-value and overflow checks. This is a separate contract from legacy GPU conversion. |
+ | Core ML pool and batch pipeline | Slots remain exclusive through native completion. The pipeline bounds loaded but unconsumed batches and consumes predictions in source order. Cancellation and errors drain outstanding structured work and native callbacks before releasing owned capacity. Earlier consumer effects remain committed. |
+ 
+diff --git a/Sources/SwiftCluster/Core/PCA.swift b/Sources/SwiftCluster/Core/PCA.swift
+index f19d079ce2..47ed2e36e7 100644
+--- a/Sources/SwiftCluster/Core/PCA.swift
++++ b/Sources/SwiftCluster/Core/PCA.swift
+@@ -5,478 +5,218 @@ import MLX
+ import SwiftPreprocessing
+ @_exported import SwiftDataFrame
+ 
+-#if ACCELERATE_LAPACK_ILP64
+-typealias LAPACKInteger = Int
+-#else
+-typealias LAPACKInteger = Int32
+-#endif
+-
+-private func dgesvd_wrapper(
+-    _ jobu: UnsafeMutablePointer<Int8>,
+-    _ jobvt: UnsafeMutablePointer<Int8>,
+-    _ m: UnsafeMutablePointer<LAPACKInteger>,
+-    _ n: UnsafeMutablePointer<LAPACKInteger>,
+-    _ a: UnsafeMutablePointer<Double>,
+-    _ lda: UnsafeMutablePointer<LAPACKInteger>,
+-    _ s: UnsafeMutablePointer<Double>,
+-    _ u: UnsafeMutablePointer<Double>,
+-    _ ldu: UnsafeMutablePointer<LAPACKInteger>,
+-    _ vt: UnsafeMutablePointer<Double>,
+-    _ ldvt: UnsafeMutablePointer<LAPACKInteger>,
+-    _ work: UnsafeMutablePointer<Double>,
+-    _ lwork: UnsafeMutablePointer<LAPACKInteger>,
+-    _ info: UnsafeMutablePointer<LAPACKInteger>
+-) {
+-    dgesvd_(jobu, jobvt, m, n, a, lda, s, u, ldu, vt, ldvt, work, lwork, info)
+-}
+-
+ /// SVD solver strategy for PCA on CPU.
+ public enum SVDSolver: Sendable {
+-    /// Use full LAPACK `dgesdd_` (exact, best for k ≥ 80% of min dimension).
++    /// Full LAPACK divide-and-conquer SVD.
+     case full
+-    /// Use Randomized SVD (Halko 2011, best for k ≪ min(M,N)). O(M·N·k) complexity.
++    /// Randomized SVD with the existing deterministic sketch and power iterations.
+     case randomized
+-    /// Automatically select: Randomized SVD when k < 0.8·min(M,N), else full SVD.
++    /// Randomized SVD when k < 0.8 * min(rows, columns); full SVD otherwise.
+     case auto
+ }
+ 
+-/// Principal Component Analysis (PCA) for dimensionality reduction using Accelerate LAPACK SVD or MLX SVD.
++/// Principal component analysis with explicit CPU solver and device choices.
++/// Prepared inputs retain feature identity and return named, provenance-preserving scores.
+ public actor PCA {
+-    /// Number of components to keep.
++    /// Number of components to retain.
+     public let nComponents: Int
+-
+-    /// SVD solver to use on the CPU path.
++    /// Solver used when fitting on the CPU.
+     public let svdSolver: SVDSolver
+-
+-    /// Target compute device for PCA execution.
++    /// Requested fitting device. Projection uses Double CPU arithmetic.
+     public let requestedDevice: ExecutionDevice
+-    
+-    /// Device actually used for the last fit operation.
+-    public private(set) var resolvedDevice: ExecutionDevice?
+-    
+-    /// Mean values of features, computed during fit. Shape: [nFeatures]
+-    public private(set) var mean: [Double]?
+-    
+-    /// Principal components (eigenvectors). Shape: [nComponents, nFeatures]
+-    public private(set) var components: [[Double]]?
+-    
+-    /// Explained variance of the selected components. Shape: [nComponents]
+-    public private(set) var explainedVariance: [Double]?
+-    private var totalVariance: Double?
+ 
+-    /// Explained variance ratio of each selected component (percentage of total variance).
++    private struct FittedState: Sendable {
++        let result: PCAFitResult
++        let device: ExecutionDevice
++        let featureNames: [String]?
++    }
++    private var fitted: FittedState?
++
++    /// Device resolved for the last successful fit.
++    public var resolvedDevice: ExecutionDevice? { fitted?.device }
++    /// Fitted feature means.
++    public var mean: [Double]? { fitted?.result.mean }
++    /// Principal components, shaped [components, features].
++    public var components: [[Double]]? { fitted?.result.components }
++    /// Selected sample variances, normalized by max(1, samples - 1).
++    public var explainedVariance: [Double]? { fitted?.result.variance }
++    /// Selected variances divided by total input variance, including omitted components.
+     public var explainedVarianceRatio: [Double]? {
+-        guard let explainedVariance, let totalVar = totalVariance else { return nil }
+-        guard totalVar > 0 else { return explainedVariance.map { _ in 0.0 } }
+-        return explainedVariance.map { $0 / totalVar }
++        guard let result = fitted?.result else { return nil }
++        return result.totalVariance > 0 ? result.variance.map { $0 / result.totalVariance }
++            : result.variance.map { _ in 0 }
+     }
+ 
+-    /// Initializes PCA with the number of components to keep and the target device.
++    /// Creates PCA with automatic CPU solver selection.
+     public init(nComponents: Int, device: ExecutionDevice = .auto) throws {
+         guard nComponents > 0 else {
+             throw ClusterError.invalidParameter("nComponents must be greater than 0.")
+         }
+         self.nComponents = nComponents
+-        self.requestedDevice = device
+         self.svdSolver = .auto
++        self.requestedDevice = device
+     }
+ 
+-    /// Initializes PCA with an explicit SVD solver strategy.
+-    ///
+-    /// Use `svdSolver: .randomized` when `nComponents ≪ min(rows, cols)` for an
+-    /// order-of-magnitude speedup via the Halko (2011) Randomized SVD algorithm.
+-    ///
+-    /// ```swift
+-    /// // 10 components from a 1000×100 matrix — Randomized SVD is ~4× faster.
+-    /// var pca = try PCA(nComponents: 10, svdSolver: .randomized)
+-    /// let reduced = try await pca.fitTransform(X)
+-    /// ```
++    /// Creates PCA with an explicit CPU solver. GPU fitting retains its Float MLX path.
+     public init(nComponents: Int, svdSolver: SVDSolver, device: ExecutionDevice = .auto) throws {
+         guard nComponents > 0 else {
+             throw ClusterError.invalidParameter("nComponents must be greater than 0.")
+         }
+         self.nComponents = nComponents
+-        self.requestedDevice = device
+         self.svdSolver = svdSolver
++        self.requestedDevice = device
+     }
+-    
+-    /// Fits the PCA model on the given dataset X.
+-    /// - Parameter X: A 2D array of shape [samples, features].
+-    /// - Throws: `SwiftMLError` or `ClusterError` if sample count is insufficient or cluster parameters are invalid.
++
++    /// Fits finite, rectangular nested rows. A successful fit clears prepared feature names.
++    /// Invalid input or a failed solver leaves the previous fit unchanged.
+     public func fit(_ X: [[Double]]) async throws {
+-        guard !X.isEmpty, !X[0].isEmpty else {
+-            throw ClusterError.emptyInput
+-        }
+-        
+-        let numSamples = X.count
+-        let numFeatures = X[0].count
+-        
+-        guard nComponents <= min(numSamples, numFeatures) else {
+-            throw ClusterError.invalidParameter("nComponents (\(nComponents)) cannot be greater than min(samples: \(numSamples), features: \(numFeatures)).")
+-        }
+-        
+-        let device = await HardwareRouter.shared.resolveDevice(
+-            for: "PCA",
+-            sampleCount: numSamples,
+-            featureCount: numFeatures,
+-            requestedDevice: requestedDevice
+-        )
+-        self.resolvedDevice = device
+-        
+-        switch device {
+-        case .cpu:
+-            try fitCPU(X)
+-        case .gpu, .ane, .auto:
+-            let nComp = self.nComponents
+-            let results = Device.withDefaultDevice(.gpu) {
+-                Self.runFitGPU(X: X, nComponents: nComp)
+-            }
+-            self.mean = results.mean
+-            self.components = results.components
+-            self.explainedVariance = results.explainedVariance
+-            self.totalVariance = results.totalVariance
+-        }
++        try validateRows(X)
++        try await fitInput(PCARows(values: X), featureNames: nil)
+     }
+-    
+-    // MARK: - CPU Backend (LAPACK SVD / Randomized SVD)
+ 
+-    private func fitCPU(_ X: [[Double]]) throws {
+-        let numSamples = X.count
+-        let numFeatures = X[0].count
+-        let minDim = min(numSamples, numFeatures)
+-
+-        // Choose solver: use Randomized SVD when k < 80% of min dimension.
+-        let useRandomized: Bool
+-        switch svdSolver {
+-        case .randomized: useRandomized = true
+-        case .full:       useRandomized = false
+-        case .auto:       useRandomized = Double(nComponents) < 0.8 * Double(minDim)
+-        }
+-
+-        if useRandomized {
+-            try fitCPURandomized(X)
+-        } else {
+-            try fitCPUSVD(X)
+-        }
++    /// Fits prepared columns without exporting nested rows. Missing and nonfinite values throw.
++    /// Records exact feature names and order, including duplicate names.
++    public func fit(_ input: PreparedNumericBatch) async throws {
++        try requirePresent(input)
++        try await fitInput(PCAColumns(batch: input), featureNames: input.columnNames)
+     }
+ 
+-    /// CPU path using Randomized SVD (Halko 2011). O(M·N·k) complexity.
+-    private func fitCPURandomized(_ X: [[Double]]) throws {
+-        let numFeatures = X[0].count
++    /// Fits either prepared matrix layout while preserving the caller's snapshot.
++    /// NaNs, including exported missing entries, and infinities throw.
++    public func fit(_ input: PreparedNumericMatrix) async throws {
++        try await fitInput(input, featureNames: input.columnNames)
++    }
+ 
+-        // 1. Column means for centering.
+-        var colMeans = [Double](repeating: 0.0, count: numFeatures)
+-        for row in X {
+-            for c in 0..<numFeatures { colMeans[c] += row[c] }
++    private func fitInput<Input: PCANumericInput>(_ input: Input, featureNames: [String]?) async throws {
++        guard input.rowCount > 0, input.columnCount > 0 else { throw ClusterError.emptyInput }
++        guard nComponents <= min(input.rowCount, input.columnCount) else {
++            throw ClusterError.invalidParameter("nComponents cannot exceed min(samples, features).")
+         }
+-        var inv = 1.0 / Double(X.count)
+-        vDSP_vsmulD(colMeans, 1, &inv, &colMeans, 1, vDSP_Length(numFeatures))
+-
+-        // 2. Build centered matrix.
+-        let numSamples = X.count
+-        var Xc = X
+-        for r in 0..<numSamples {
+-            for c in 0..<numFeatures { Xc[r][c] -= colMeans[c] }
++        guard input.rowCount <= Int32.max, input.columnCount <= Int32.max,
++              !input.rowCount.multipliedReportingOverflow(by: input.columnCount).overflow else {
++            throw ClusterError.invalidParameter("PCA dimensions exceed backend limits.")
+         }
++        try requireFinite(input)
++        let device = await HardwareRouter.shared.resolveDevice(
++            for: "PCA", sampleCount: input.rowCount, featureCount: input.columnCount,
++            requestedDevice: requestedDevice)
++        let result = try PCAComputation.fit(input, components: nComponents, solver: svdSolver, device: device)
++        guard result.mean.allSatisfy(\.isFinite), result.variance.allSatisfy(\.isFinite),
++              result.components.allSatisfy({ $0.allSatisfy(\.isFinite) }), result.totalVariance.isFinite else {
++            throw ClusterError.invalidParameter("PCA fitting produced nonfinite results.")
++        }
++        fitted = FittedState(result: result, device: device, featureNames: featureNames)
++    }
+ 
+-        // 3. Randomized SVD.
+-        let rsvd = try RandomizedSVD.compute(X: Xc, nComponents: nComponents)
+-
+-        // 4. Extract principal components from Vt rows (shape [k, N]).
+-        var comp = [[Double]]()
+-        comp.reserveCapacity(nComponents)
+-        var expVar = [Double]()
+-        expVar.reserveCapacity(nComponents)
+-        let scaleFactor = 1.0 / Double(max(1, numSamples - 1))
+-        for i in 0..<nComponents {
+-            comp.append(rsvd.Vt[i])
+-            let sv = rsvd.S[i]
+-            expVar.append(sv * sv * scaleFactor)
++    /// Projects nested rows with the existing ascending-feature Double accumulation.
++    /// Names are positional on this compatibility interface; NaNs propagate.
++    public func transform(_ X: [[Double]]) throws -> [[Double]] {
++        guard let fitted else { throw ClusterError.fittingRequired }
++        try validateRows(X)
++        try requireWidth(X[0].count, fitted: fitted)
++        let input = PCARows(values: X)
++        return (0..<input.rowCount).map { row in
++            (0..<nComponents).map { component in
++                PCAComputation.score(input, row: row, component: component, fitted: fitted.result)
++            }
+         }
+-
+-        self.mean = colMeans
+-        self.components = comp
+-        self.explainedVariance = expVar
+-        self.totalVariance = Xc.reduce(0.0) { total, row in
+-            total + row.reduce(0.0) { $0 + $1 * $1 }
+-        } * scaleFactor
+     }
+ 
+-    private func fitCPUCov(_ X: [[Double]]) throws {
+-        let numSamples = X.count
+-        let numFeatures = X[0].count
+-
+-        var colMeans = [Double](repeating: 0.0, count: numFeatures)
+-        for row in X {
+-            guard row.count == numFeatures else {
+-                throw ClusterError.dimensionMismatch(expected: numFeatures, got: row.count)
++    /// Projects finite prepared columns into PC1...PCk, retaining selected row provenance.
++    /// Prepared fits require identical ordered feature names. Empty matching inputs are supported.
++    public func transform(_ input: PreparedNumericBatch) throws -> PreparedNumericBatch {
++        guard let fitted else { throw ClusterError.fittingRequired }
++        try requireSchema(input.columnNames, fitted: fitted)
++        try requirePresent(input)
++        let source = PCAColumns(batch: input)
++        try requireFinite(source)
++        let columns = (0..<nComponents).map { component in
++            (0..<input.rowCount).map { row in
++                PCAComputation.score(source, row: row, component: component, fitted: fitted.result)
+             }
+-            for c in 0..<numFeatures { colMeans[c] += row[c] }
+         }
+-        for c in 0..<numFeatures { colMeans[c] /= Double(numSamples) }
++        guard columns.allSatisfy({ $0.allSatisfy(\.isFinite) }) else {
++            throw ClusterError.invalidParameter("PCA projection overflowed.")
++        }
++        return input.replacingNumericColumns(columns, columnNames: scoreNames)
++    }
+ 
+-        var xCent = [Double](repeating: 0.0, count: numSamples * numFeatures)
+-        for r in 0..<numSamples {
+-            for c in 0..<numFeatures {
+-                xCent[r * numFeatures + c] = X[r][c] - colMeans[c]
++    /// Projects a finite matrix into PC1...PCk while preserving layout and row provenance.
++    /// Prepared fits require identical ordered feature names. Empty matching inputs are supported.
++    public func transform(_ input: PreparedNumericMatrix) throws -> PreparedNumericMatrix {
++        guard let fitted else { throw ClusterError.fittingRequired }
++        try requireSchema(input.columnNames, fitted: fitted)
++        try requireFinite(input)
++        let (count, overflow) = input.rowCount.multipliedReportingOverflow(by: nComponents)
++        guard !overflow else { throw ClusterError.invalidParameter("PCA score dimensions overflow Int.") }
++        var values = [Double](repeating: 0, count: count)
++        for row in 0..<input.rowCount {
++            for component in 0..<nComponents {
++                let index = input.order == .rowMajor ? row * nComponents + component : component * input.rowCount + row
++                values[index] = PCAComputation.score(input, row: row, component: component, fitted: fitted.result)
+             }
+         }
++        guard values.allSatisfy(\.isFinite) else { throw ClusterError.invalidParameter("PCA projection overflowed.") }
++        return input.replacingValues(values, columnNames: scoreNames)
++    }
+ 
+-        var cov = [Double](repeating: 0.0, count: numFeatures * numFeatures)
+-        let alpha = 1.0 / Double(max(1, numSamples - 1))
+-        cblas_dsyrk(CblasRowMajor, CblasUpper, CblasTrans,
+-                    Int32(numFeatures), Int32(numSamples),
+-                    alpha, xCent, Int32(numFeatures),
+-                    0.0, &cov, Int32(numFeatures))
+-
+-        var jobz: Int8 = 86 // 'V'
+-        var uplo: Int8 = 85 // 'U'
+-        var n = LAPACKInteger(numFeatures)
+-        var lda = n
+-        var w = [Double](repeating: 0.0, count: numFeatures)
+-        var info = LAPACKInteger(0)
+-
+-        var workQuery = [Double](repeating: 0.0, count: 1)
+-        var lwork = LAPACKInteger(-1)
+-        var iworkQuery = [LAPACKInteger](repeating: 0, count: 1)
+-        var liwork = LAPACKInteger(-1)
++    /// Fits nested rows and projects them through the ordinary transform path.
++    public func fitTransform(_ X: [[Double]]) async throws -> [[Double]] {
++        try await fit(X)
++        return try transform(X)
++    }
+ 
+-        dsyevd_(&jobz, &uplo, &n, &cov, &lda, &w, &workQuery, &lwork, &iworkQuery, &liwork, &info)
+-        lwork = LAPACKInteger(workQuery[0])
+-        liwork = iworkQuery[0]
+-        var work = [Double](repeating: 0.0, count: Int(lwork))
+-        var iwork = [LAPACKInteger](repeating: 0, count: Int(liwork))
++    /// Fits prepared columns and projects them, preserving source snapshots and row identity.
++    public func fitTransform(_ input: PreparedNumericBatch) async throws -> PreparedNumericBatch {
++        try await fit(input)
++        return try transform(input)
++    }
+ 
+-        dsyevd_(&jobz, &uplo, &n, &cov, &lda, &w, &work, &lwork, &iwork, &liwork, &info)
+-        guard info == 0 else {
+-            throw ClusterError.svdFailed(info: Int32(info))
+-        }
++    /// Fits a prepared matrix and projects it in the same layout with preserved row identity.
++    public func fitTransform(_ input: PreparedNumericMatrix) async throws -> PreparedNumericMatrix {
++        try await fit(input)
++        return try transform(input)
++    }
+ 
+-        var comp = [[Double]]()
+-        comp.reserveCapacity(nComponents)
+-        var expVar = [Double]()
+-        expVar.reserveCapacity(nComponents)
++    private var scoreNames: [String] { (1...nComponents).map { "PC\($0)" } }
+ 
+-        for k in 0..<nComponents {
+-            let idx = numFeatures - 1 - k
+-            expVar.append(max(0.0, w[idx]))
+-            var row = [Double](repeating: 0.0, count: numFeatures)
+-            for c in 0..<numFeatures {
+-                row[c] = cov[c * numFeatures + idx]
+-            }
+-            comp.append(row)
++    private func validateRows(_ rows: [[Double]]) throws {
++        guard let first = rows.first, !first.isEmpty else { throw ClusterError.emptyInput }
++        for row in rows where row.count != first.count {
++            throw ClusterError.dimensionMismatch(expected: first.count, got: row.count)
+         }
+-
+-        var nullU: [[Double]]? = nil
+-        RandomizedSVD.svdFlip(u: &nullU, vt: &comp, uBasedDecision: false)
+-
+-        self.mean = colMeans
+-        self.components = comp
+-        self.explainedVariance = expVar
+-        self.totalVariance = w.reduce(0.0) { $0 + max(0, $1) }
+     }
+ 
+-    private func fitCPUSVD(_ X: [[Double]]) throws {
+-        let numSamples = X.count
+-        let numFeatures = X[0].count
+-        
+-        // 1. Calculate column means
+-        var colMeans = [Double](repeating: 0.0, count: numFeatures)
+-        for row in X {
+-            guard row.count == numFeatures else {
+-                throw ClusterError.dimensionMismatch(expected: numFeatures, got: row.count)
+-            }
+-            for c in 0..<numFeatures {
+-                colMeans[c] += row[c]
+-            }
+-        }
+-        for c in 0..<numFeatures {
+-            colMeans[c] /= Double(numSamples)
+-        }
+-        
+-        // 2. Prepare centered column-major matrix A for LAPACK SVD
+-        var a = [Double](repeating: 0.0, count: numSamples * numFeatures)
+-        for r in 0..<numSamples {
+-            for c in 0..<numFeatures {
+-                a[c * numSamples + r] = X[r][c] - colMeans[c]
+-            }
+-        }
+-        
+-        // 3. Setup SVD parameters for dgesdd_ (divide-and-conquer fast SVD)
+-        var jobz: Int8 = 83 // 'S' (compute first min(M, N) singular vectors of V^T)
+-        
+-        var m = LAPACKInteger(numSamples)
+-        var n = LAPACKInteger(numFeatures)
+-        var lda = m
+-        var ldu = m
+-        
+-        let minDim = min(numSamples, numFeatures)
+-        var ldvt = LAPACKInteger(minDim)
+-        
+-        var s = [Double](repeating: 0.0, count: minDim)
+-        var u = [Double](repeating: 0.0, count: numSamples * minDim)
+-        var vt = [Double](repeating: 0.0, count: minDim * numFeatures)
+-        
+-        var info = LAPACKInteger(0)
+-        var workQuery = [Double](repeating: 0.0, count: 1)
+-        var lwork = LAPACKInteger(-1)
+-        var iwork = [LAPACKInteger](repeating: 0, count: 8 * minDim)
+-        
+-        // Workspace query
+-        dgesdd_(&jobz, &m, &n, &a, &lda, &s, &u, &ldu, &vt, &ldvt, &workQuery, &lwork, &iwork, &info)
+-        guard info == 0 else {
+-            throw ClusterError.svdFailed(info: Int32(info))
++    private func requireWidth(_ width: Int, fitted: FittedState) throws {
++        guard width == fitted.result.mean.count else {
++            throw ClusterError.dimensionMismatch(expected: fitted.result.mean.count, got: width)
+         }
+-        
+-        lwork = LAPACKInteger(workQuery[0])
+-        var work = [Double](repeating: 0.0, count: Int(lwork))
+-        
+-        // Run actual divide-and-conquer SVD
+-        dgesdd_(&jobz, &m, &n, &a, &lda, &s, &u, &ldu, &vt, &ldvt, &work, &lwork, &iwork, &info)
+-        guard info == 0 else {
+-            throw ClusterError.svdFailed(info: Int32(info))
+-        }
+-        
+-        // 4. Extract principal components (first nComponents rows of V^T)
+-        var comp = [[Double]]()
+-        comp.reserveCapacity(nComponents)
+-        for k in 0..<nComponents {
+-            var row = [Double]()
+-            row.reserveCapacity(numFeatures)
+-            for c in 0..<numFeatures {
+-                row.append(vt[c * minDim + k])
+-            }
+-            comp.append(row)
+-        }
+-        
+-        var nullU: [[Double]]? = nil
+-        RandomizedSVD.svdFlip(u: &nullU, vt: &comp, uBasedDecision: false)
++    }
+ 
+-        // 5. Calculate explained variance: singular_values^2 / (N - 1)
+-        let df = Double(max(1, numSamples - 1))
+-        var expVar = [Double]()
+-        expVar.reserveCapacity(nComponents)
+-        for k in 0..<nComponents {
+-            expVar.append((s[k] * s[k]) / df)
++    private func requireSchema(_ names: [String], fitted: FittedState) throws {
++        try requireWidth(names.count, fitted: fitted)
++        if let expected = fitted.featureNames, names != expected {
++            throw ClusterError.invalidParameter("PCA feature names and order must match fitting.")
+         }
+-        
+-        self.mean = colMeans
+-        self.components = comp
+-        self.explainedVariance = expVar
+-        self.totalVariance = s.reduce(0.0) { $0 + $1 * $1 } / df
+     }
+-    
+-    // MARK: - GPU Backend (MLX SVD)
+-    
+-    private static func runFitGPU(
+-        X: [[Double]],
+-        nComponents: Int
+-    ) -> (mean: [Double], components: [[Double]], explainedVariance: [Double], totalVariance: Double) {
+-        let numSamples = X.count
+-        let numFeatures = X[0].count
+-        
+-        let flat = X.flatMap { $0.map { Float($0) } }
+-        let X_arr = MLXArray(flat).reshaped([numSamples, numFeatures])
+-        
+-        let colMeans_arr = X_arr.mean(axis: 0)
+-        let XCent = X_arr - colMeans_arr
+-        
+-        let (_, s_arr, vt_arr) = svd(XCent, stream: .cpu)
+-        
+-        eval(colMeans_arr, s_arr, vt_arr)
+-        
+-        let colMeans = colMeans_arr.asArray(Float.self).map { Double($0) }
+-        let s = s_arr.asArray(Float.self).map { Double($0) }
+-        let vt = vt_arr.asArray(Float.self)
+-        
+-        let vtCols = vt_arr.shape[1]
+-        
+-        var comp = [[Double]]()
+-        comp.reserveCapacity(nComponents)
+-        for k in 0..<nComponents {
+-            var row = [Double]()
+-            row.reserveCapacity(numFeatures)
+-            for c in 0..<numFeatures {
+-                row.append(Double(vt[k * vtCols + c]))
+-            }
+-            comp.append(row)
+-        }
+-        
+-        var nullU: [[Double]]? = nil
+-        RandomizedSVD.svdFlip(u: &nullU, vt: &comp, uBasedDecision: false)
+ 
+-        let df = Double(max(1, numSamples - 1))
+-        var expVar = [Double]()
+-        expVar.reserveCapacity(nComponents)
+-        for k in 0..<nComponents {
+-            expVar.append((s[k] * s[k]) / df)
++    private func requirePresent(_ input: PreparedNumericBatch) throws {
++        guard input.columns.allSatisfy({ $0.nullCount == 0 }) else {
++            throw ClusterError.invalidParameter("PCA input contains missing values.")
+         }
+-        
+-        return (colMeans, comp, expVar, s.reduce(0.0) { $0 + $1 * $1 } / df)
+     }
+-    
+-    /// Projects the given dataset X onto the principal components.
+-    /// - Parameter X: A 2D array of shape [samples, features].
+-    /// - Returns: Projected dataset of shape [samples, nComponents].
+-    /// - Throws: `SwiftMLError` or `ClusterError` if sample count is insufficient or cluster parameters are invalid.
+-    public func transform(_ X: [[Double]]) throws -> [[Double]] {
+-        guard let mean = self.mean, let components = self.components else {
+-            throw ClusterError.fittingRequired
+-        }
+-        guard !X.isEmpty, !X[0].isEmpty else {
+-            throw ClusterError.emptyInput
+-        }
+-        
+-        let numFeatures = mean.count
+-        var result = [[Double]]()
+-        result.reserveCapacity(X.count)
+-        
+-        for row in X {
+-            guard row.count == numFeatures else {
+-                throw ClusterError.dimensionMismatch(expected: numFeatures, got: row.count)
+-            }
+-            
+-            var projected = [Double](repeating: 0.0, count: nComponents)
+-            for k in 0..<nComponents {
+-                var sum = 0.0
+-                for c in 0..<numFeatures {
+-                    sum += (row[c] - mean[c]) * components[k][c]
+-                }
+-                projected[k] = sum
++
++    private func requireFinite<Input: PCANumericInput>(_ input: Input) throws {
++        for row in 0..<input.rowCount {
++            for column in 0..<input.columnCount where !input[row, column].isFinite {
++                throw ClusterError.invalidParameter("PCA input must contain finite values.")
+             }
+-            result.append(projected)
+         }
+-        
+-        return result
+-    }
+-    
+-    /// Fits the model on X and returns the projected data.
+-    /// - Parameter X: A 2D array of shape [samples, features].
+-    /// - Returns: Projected dataset of shape [samples, nComponents].
+-    /// - Throws: `SwiftMLError` or `ClusterError` if sample count is insufficient or cluster parameters are invalid.
+-    public func fitTransform(_ X: [[Double]]) async throws -> [[Double]] {
+-        try await fit(X)
+-        return try transform(X)
+     }
+-}
+ 
+-extension PCA {
+-    /// Adjusts the signs of components such that the largest absolute value in each component is positive,
+-    /// matching Scikit-Learn's `sklearn.utils.extmath.svd_flip` convention (`u_based_decision=False`).
+-    ///
+-    /// This ensures deterministic component orientations across different LAPACK SVD solvers and GPU backends.
+-    ///
+-    /// - Parameters:
+-    ///   - u: Inout optional left singular vectors matrix of shape `[M, K]`.
+-    ///   - vt: Inout right singular vectors transposed matrix of shape `[K, N]` (the components).
+-    ///   - uBasedDecision: If `true`, the largest absolute value in each column of `u` determines the sign.
+-    ///     If `false` (default for PCA), the largest absolute value in each row of `vt` determines the sign.
+-    public static func svdFlip(
+-        u: inout [[Double]]?,
+-        vt: inout [[Double]],
+-        uBasedDecision: Bool = false
+-    ) {
++    /// Normalizes SVD signs using the existing largest-magnitude convention.
++    public static func svdFlip(u: inout [[Double]]?, vt: inout [[Double]], uBasedDecision: Bool = false) {
+         RandomizedSVD.svdFlip(u: &u, vt: &vt, uBasedDecision: uBasedDecision)
+     }
+ }
+-#endif // os(macOS)
++#endif
+diff --git a/Sources/SwiftCluster/Decomposition/PCAComputation.swift b/Sources/SwiftCluster/Decomposition/PCAComputation.swift
+new file mode 100644
+index 0000000000..0666b9d772
+--- /dev/null
++++ b/Sources/SwiftCluster/Decomposition/PCAComputation.swift
+@@ -0,0 +1,159 @@
++#if os(macOS)
++import Accelerate
++import Foundation
++import MLX
++import SwiftDataFrame
++import SwiftPreprocessing
++
++protocol PCANumericInput: Sendable {
++    var rowCount: Int { get }
++    var columnCount: Int { get }
++    subscript(row: Int, column: Int) -> Double { get }
++}
++
++struct PCARows: PCANumericInput {
++    let values: [[Double]]
++    var rowCount: Int { values.count }
++    var columnCount: Int { values[0].count }
++    subscript(row: Int, column: Int) -> Double { values[row][column] }
++}
++
++struct PCAColumns: PCANumericInput {
++    let batch: PreparedNumericBatch
++    var rowCount: Int { batch.rowCount }
++    var columnCount: Int { batch.columnCount }
++    subscript(row: Int, column: Int) -> Double { batch.columns[column].values[row] }
++}
++
++extension PreparedNumericMatrix: PCANumericInput {}
++
++struct PCAFitResult: Sendable {
++    let mean: [Double]
++    let components: [[Double]]
++    let variance: [Double]
++    let totalVariance: Double
++}
++
++enum PCAComputation {
++    static func fit<Input: PCANumericInput>(_ input: Input, components k: Int,
++                                            solver: SVDSolver, device: ExecutionDevice) throws -> PCAFitResult {
++        if device != .cpu {
++            for row in 0..<input.rowCount {
++                for column in 0..<input.columnCount where !Float(input[row, column]).isFinite {
++                    throw ClusterError.invalidParameter("PCA GPU input overflows Float.")
++                }
++            }
++            return try Device.withDefaultDevice(.gpu) {
++                try ScopedGPURead.withMatrix(rows: input.rowCount, columns: input.columnCount,
++                                             value: { input[$0, $1] }) { array in
++                    fitGPU(array, rows: input.rowCount, components: k)
++                }
++            }
++        }
++        let randomized: Bool
++        switch solver {
++        case .full: randomized = false
++        case .randomized: randomized = true
++        case .auto: randomized = Double(k) < 0.8 * Double(min(input.rowCount, input.columnCount))
++        }
++        var means = [Double](repeating: 0, count: input.columnCount)
++        for row in 0..<input.rowCount {
++            for column in 0..<input.columnCount { means[column] += input[row, column] }
++        }
++        if randomized {
++            var inverse = 1.0 / Double(input.rowCount)
++            vDSP_vsmulD(means, 1, &inverse, &means, 1, vDSP_Length(means.count))
++        } else {
++            for column in means.indices { means[column] /= Double(input.rowCount) }
++        }
++        var centered = [Double](repeating: 0, count: input.rowCount * input.columnCount)
++        var sumSquares = 0.0
++        for row in 0..<input.rowCount {
++            var rowSquares = 0.0
++            for column in 0..<input.columnCount {
++                let value = input[row, column] - means[column]
++                guard value.isFinite else { throw ClusterError.invalidParameter("PCA centering overflowed.") }
++                centered[column * input.rowCount + row] = value
++                if randomized { rowSquares += value * value }
++            }
++            if randomized { sumSquares += rowSquares }
++        }
++        let singular: [Double]
++        var vectors: [[Double]]
++        let total: Double
++        if randomized {
++            let result = try RandomizedSVD.compute(columnMajor: centered, rows: input.rowCount,
++                                                   columns: input.columnCount, nComponents: k,
++                                                   computeLeftVectors: false)
++            singular = result.S
++            vectors = result.Vt
++            total = sumSquares
++        } else {
++            (singular, vectors) = try fullSVD(&centered, rows: input.rowCount, columns: input.columnCount, components: k)
++            total = singular.reduce(0) { $0 + $1 * $1 }
++        }
++        var unused: [[Double]]? = nil
++        RandomizedSVD.svdFlip(u: &unused, vt: &vectors, uBasedDecision: false)
++        let scale = 1.0 / Double(max(1, input.rowCount - 1))
++        // Preserve division on full SVD and reciprocal multiplication on randomized SVD.
++        let variance = singular.prefix(k).map { randomized ? $0 * $0 * scale : ($0 * $0) / Double(max(1, input.rowCount - 1)) }
++        let totalVariance = randomized ? total * scale : total / Double(max(1, input.rowCount - 1))
++        return PCAFitResult(mean: means, components: vectors, variance: variance, totalVariance: totalVariance)
++    }
++
++    static func score<Input: PCANumericInput>(_ input: Input, row: Int, component: Int,
++                                              fitted: PCAFitResult) -> Double {
++        var sum = 0.0
++        for column in fitted.mean.indices {
++            sum += (input[row, column] - fitted.mean[column]) * fitted.components[component][column]
++        }
++        return sum
++    }
++
++    private static func fullSVD(_ values: inout [Double], rows: Int, columns: Int,
++                                components k: Int) throws -> ([Double], [[Double]]) {
++        let layout = try PCAFullSVDLayout(rows: rows, columns: columns)
++        var job: Int8 = 83
++        var m = layout.rows, n = layout.columns, lda = m, ldu = m
++        let rank = layout.rank
++        var ldvt = min(m, n), info: Int32 = 0, lwork: Int32 = -1
++        var singular = [Double](repeating: 0, count: rank)
++        var u = [Double](repeating: 0, count: layout.leftCount)
++        var vt = [Double](repeating: 0, count: layout.rightCount)
++        var iwork = [Int32](repeating: 0, count: layout.integerWorkspaceCount)
++        var query = [Double](repeating: 0, count: 1)
++        dgesdd_(&job, &m, &n, &values, &lda, &singular, &u, &ldu, &vt, &ldvt, &query, &lwork, &iwork, &info)
++        guard info == 0 else { throw ClusterError.svdFailed(info: info) }
++        guard let workspace = Int32(exactly: query[0]), workspace > 0 else {
++            throw ClusterError.invalidParameter("PCA SVD workspace exceeds backend limits.")
++        }
++        lwork = workspace
++        var work = [Double](repeating: 0, count: Int(lwork))
++        dgesdd_(&job, &m, &n, &values, &lda, &singular, &u, &ldu, &vt, &ldvt, &work, &lwork, &iwork, &info)
++        guard info == 0 else { throw ClusterError.svdFailed(info: info) }
++        let vectors = (0..<k).map { component in
++            (0..<columns).map { column in vt[column * rank + component] }
++        }
++        return (singular, vectors)
++    }
++
++    private static func fitGPU(_ input: MLXArray, rows: Int, components k: Int) -> PCAFitResult {
++        let means = input.mean(axis: 0)
++        let (_, singular, vectors) = svd(input - means, stream: .cpu)
++        eval(means, singular, vectors)
++        let mean = means.asArray(Float.self).map(Double.init)
++        let s = singular.asArray(Float.self).map(Double.init)
++        let flat = vectors.asArray(Float.self)
++        let columns = vectors.shape[1]
++        var components = (0..<k).map { component in
++            (0..<columns).map { column in Double(flat[component * columns + column]) }
++        }
++        var unused: [[Double]]? = nil
++        RandomizedSVD.svdFlip(u: &unused, vt: &components, uBasedDecision: false)
++        let divisor = Double(max(1, rows - 1))
++        return PCAFitResult(mean: mean, components: components,
++                            variance: s.prefix(k).map { $0 * $0 / divisor },
++                            totalVariance: s.reduce(0) { $0 + $1 * $1 } / divisor)
++    }
++}
++#endif
+diff --git a/Sources/SwiftCluster/Decomposition/PCAFullSVDLayout.swift b/Sources/SwiftCluster/Decomposition/PCAFullSVDLayout.swift
+new file mode 100644
+index 0000000000..c08c1b26dc
+--- /dev/null
++++ b/Sources/SwiftCluster/Decomposition/PCAFullSVDLayout.swift
+@@ -0,0 +1,39 @@
++import SwiftDataFrame
++
++struct PCAFullSVDLayout: Sendable {
++    let rows: Int32
++    let columns: Int32
++    let rank: Int
++    let leftCount: Int
++    let rightCount: Int
++    let integerWorkspaceCount: Int
++
++    init(rows: Int, columns: Int) throws {
++        guard rows > 0, columns > 0,
++              let lapackRows = Int32(exactly: rows),
++              let lapackColumns = Int32(exactly: columns) else {
++            throw ClusterError.invalidParameter("PCA SVD dimensions exceed backend limits.")
++        }
++        self.rows = lapackRows
++        self.columns = lapackColumns
++        rank = min(rows, columns)
++
++        leftCount = try Self.bufferCount(rows, rank, stride: MemoryLayout<Double>.stride)
++        rightCount = try Self.bufferCount(rank, columns, stride: MemoryLayout<Double>.stride)
++        integerWorkspaceCount = try Self.bufferCount(8, rank, stride: MemoryLayout<Int32>.stride)
++    }
++
++    private static func product(_ lhs: Int, _ rhs: Int) throws -> Int {
++        let (count, overflow) = lhs.multipliedReportingOverflow(by: rhs)
++        guard !overflow else {
++            throw ClusterError.invalidParameter("PCA SVD workspace size overflowed Int.")
++        }
++        return count
++    }
++
++    private static func bufferCount(_ rows: Int, _ columns: Int, stride: Int) throws -> Int {
++        let count = try product(rows, columns)
++        _ = try product(count, stride)
++        return count
++    }
++}
+diff --git a/Sources/SwiftCluster/Decomposition/RandomizedSVD.swift b/Sources/SwiftCluster/Decomposition/RandomizedSVD.swift
+index 2b3e3a746e..0b90592404 100644
+--- a/Sources/SwiftCluster/Decomposition/RandomizedSVD.swift
++++ b/Sources/SwiftCluster/Decomposition/RandomizedSVD.swift
+@@ -2,36 +2,6 @@
+ import Foundation
+ import Accelerate
+ 
+-// MARK: - LAPACK Wrappers (RandomizedSVD)
+-
+-private func dgemm_rsvd(
+-    _ transa: UnsafeMutablePointer<Int8>,
+-    _ transb: UnsafeMutablePointer<Int8>,
+-    _ m: UnsafeMutablePointer<Int32>,
+-    _ n: UnsafeMutablePointer<Int32>,
+-    _ k: UnsafeMutablePointer<Int32>,
+-    _ alpha: UnsafeMutablePointer<Double>,
+-    _ a: UnsafePointer<Double>,
+-    _ lda: UnsafeMutablePointer<Int32>,
+-    _ b: UnsafePointer<Double>,
+-    _ ldb: UnsafeMutablePointer<Int32>,
+-    _ beta: UnsafeMutablePointer<Double>,
+-    _ c: UnsafeMutablePointer<Double>,
+-    _ ldc: UnsafeMutablePointer<Int32>
+-) {
+-    cblas_dgemm(
+-        CblasColMajor,
+-        transa.pointee == Int8(78) ? CblasNoTrans : CblasTrans,
+-        transb.pointee == Int8(78) ? CblasNoTrans : CblasTrans,
+-        Int32(m.pointee), Int32(n.pointee), Int32(k.pointee),
+-        alpha.pointee,
+-        a, Int32(lda.pointee),
+-        b, Int32(ldb.pointee),
+-        beta.pointee,
+-        c, Int32(ldc.pointee)
+-    )
+-}
+-
+ /// Randomized Singular Value Decomposition using the Halko et al. (2011) algorithm.
+ ///
+ /// Computes an approximate rank-k SVD of an M×N matrix A:
+@@ -86,22 +56,35 @@ public enum RandomizedSVD {
+         guard !X.isEmpty, !X[0].isEmpty else {
+             throw RandomizedSVDError.invalidDimensions(rows: X.count, cols: X.first?.count ?? 0)
+         }
+-        let M = X.count
+-        let N = X[0].count
++        let rows = X.count, columns = X[0].count
++        guard X.allSatisfy({ $0.count == columns }) else {
++            throw RandomizedSVDError.invalidDimensions(rows: rows, cols: columns)
++        }
++        var values = [Double](repeating: 0, count: rows * columns)
++        for row in 0..<rows {
++            for column in 0..<columns { values[column * rows + row] = X[row][column] }
++        }
++        return try compute(columnMajor: values, rows: rows, columns: columns, nComponents: k,
++                           nOversamples: p, nPowerIter: q, seed: seed, computeLeftVectors: true)
++    }
+ 
++    // PCA needs only right vectors; public compute still returns complete U, S and Vt.
++    static func compute(columnMajor A: [Double], rows M: Int, columns N: Int,
++                        nComponents k: Int, nOversamples p: Int = 10,
++                        nPowerIter q: Int = 2, seed: UInt64 = 42,
++                        computeLeftVectors: Bool) throws -> Result {
++        let (count, overflow) = M.multipliedReportingOverflow(by: N)
++        guard M > 0, N > 0, M <= Int32.max, N <= Int32.max, !overflow, A.count == count else {
++            throw RandomizedSVDError.invalidDimensions(rows: M, cols: N)
++        }
+         guard k > 0, k <= min(M, N) else {
+             throw RandomizedSVDError.invalidComponents(k: k, minDim: min(M, N))
+         }
+-
+-        let l = min(k + p, min(M, N)) // sketch size, bounded by matrix dimensions
+-
+-        // --- Flatten X to column-major [M×N] ---
+-        var A = [Double](repeating: 0.0, count: M * N)
+-        for r in 0..<M {
+-            for c in 0..<N {
+-                A[c * M + r] = X[r][c]  // column-major
+-            }
++        let (sketch, sketchOverflow) = k.addingReportingOverflow(p)
++        guard p >= 0, q >= 0, !sketchOverflow else {
++            throw ClusterError.invalidParameter("Randomized SVD requires nonnegative oversampling and power iterations.")
+         }
++        let l = min(sketch, min(M, N))
+ 
+         // --- Step 1: Random Gaussian sketch Ω ∈ ℝ^{N×l} (column-major) ---
+         let omega = randomGaussian(count: N * l, seed: seed)
+@@ -145,18 +128,28 @@ public enum RandomizedSVD {
+         var lwork = Int32(-1)
+         var workQ = [Double](repeating: 0.0, count: 1)
+         dgeqrf_(&mLap, &nLap, &Y, &ldLap, &tau, &workQ, &lwork, &infoInt)
+-        lwork = Int32(workQ[0])
++        guard infoInt == 0 else { throw ClusterError.svdFailed(info: infoInt) }
++        guard let workspace = Int32(exactly: workQ[0]), workspace > 0 else {
++            throw ClusterError.invalidParameter("Randomized SVD QR workspace exceeds backend limits.")
++        }
++        lwork = workspace
+         var work = [Double](repeating: 0.0, count: Int(lwork))
+         dgeqrf_(&mLap, &nLap, &Y, &ldLap, &tau, &work, &lwork, &infoInt)
+ 
++        guard infoInt == 0 else { throw ClusterError.svdFailed(info: infoInt) }
++
+         // Extract Q from Y (in-place Householder reflectors)
+         var nQ = Int32(l)
+         lwork = -1
+         var workQR = [Double](repeating: 0.0, count: 1)
+         dorgqr_(&mLap, &nQ, &nQ, &Y, &ldLap, &tau, &workQR, &lwork, &infoInt)
+-        lwork = Int32(workQR[0])
++        guard infoInt == 0, let qrWorkspace = Int32(exactly: workQR[0]), qrWorkspace > 0 else {
++            throw ClusterError.invalidParameter("Randomized SVD Q workspace is invalid.")
++        }
++        lwork = qrWorkspace
+         var workQ2 = [Double](repeating: 0.0, count: Int(lwork))
+         dorgqr_(&mLap, &nQ, &nQ, &Y, &ldLap, &tau, &workQ2, &lwork, &infoInt)
++        guard infoInt == 0 else { throw ClusterError.svdFailed(info: infoInt) }
+         let Q = Y  // Q is now M×l column-major
+ 
+         // --- Step 4: B = Qᵀ·A  → shape [l×N] ---
+@@ -184,29 +177,29 @@ public enum RandomizedSVD {
+         dgesdd_(&jobz, &mSVD, &nSVD, &B, &ldB2,
+                 &sVals, &uMat, &ldU, &vtMat, &ldVt,
+                 &workSVD, &lwork, &iwork, &infoInt)
+-        lwork = Int32(workSVD[0])
++        guard infoInt == 0 else { throw ClusterError.svdFailed(info: infoInt) }
++        guard let svdWorkspace = Int32(exactly: workSVD[0]), svdWorkspace > 0 else {
++            throw ClusterError.invalidParameter("Randomized SVD workspace exceeds backend limits.")
++        }
++        lwork = svdWorkspace
+         var workFull = [Double](repeating: 0.0, count: Int(lwork))
+         dgesdd_(&jobz, &mSVD, &nSVD, &B, &ldB2,
+                 &sVals, &uMat, &ldU, &vtMat, &ldVt,
+                 &workFull, &lwork, &iwork, &infoInt)
+ 
+-        // --- Step 6: Back-project U = Q·Ũ  → shape [M×k] ---
+-        var Ufull = [Double](repeating: 0.0, count: M * minDim)
+-        let mU = Int32(M), nU = Int32(minDim), kU = Int32(l)
+-        let ldU2 = Int32(M)
+-        cblas_dgemm(CblasColMajor, CblasNoTrans, CblasNoTrans,
+-                    mU, nU, kU,
+-                    alpha, Q, ldQ,
+-                    uMat, ldU,
+-                    beta, &Ufull, ldU2)
+-
+-        // --- Extract top-k components ---
++        guard infoInt == 0 else { throw ClusterError.svdFailed(info: infoInt) }
+         var uRows = [[Double]]()
+-        uRows.reserveCapacity(M)
+-        for r in 0..<M {
+-            var row = [Double](repeating: 0.0, count: k)
+-            for c in 0..<k { row[c] = Ufull[c * M + r] }
+-            uRows.append(row)
++        if computeLeftVectors {
++            var Ufull = [Double](repeating: 0.0, count: M * minDim)
++            cblas_dgemm(CblasColMajor, CblasNoTrans, CblasNoTrans,
++                        Int32(M), Int32(minDim), Int32(l),
++                        alpha, Q, ldQ, uMat, ldU, beta, &Ufull, Int32(M))
++            uRows.reserveCapacity(M)
++            for r in 0..<M {
++                var row = [Double](repeating: 0.0, count: k)
++                for c in 0..<k { row[c] = Ufull[c * M + r] }
++                uRows.append(row)
++            }
+         }
+ 
+         let sTop = Array(sVals.prefix(k))
+@@ -219,7 +212,7 @@ public enum RandomizedSVD {
+             vtRows.append(row)
+         }
+ 
+-        var uOpt: [[Double]]? = uRows
++        var uOpt: [[Double]]? = computeLeftVectors ? uRows : nil
+         svdFlip(u: &uOpt, vt: &vtRows, uBasedDecision: false)
+ 
+         return Result(U: uOpt ?? uRows, S: sTop, Vt: vtRows)
+diff --git a/Sources/SwiftCluster/SwiftCluster.docc/DimensionalityReduction.md b/Sources/SwiftCluster/SwiftCluster.docc/DimensionalityReduction.md
+index 722d802d5f..e32f998464 100644
+--- a/Sources/SwiftCluster/SwiftCluster.docc/DimensionalityReduction.md
++++ b/Sources/SwiftCluster/SwiftCluster.docc/DimensionalityReduction.md
+@@ -121,20 +121,21 @@ for point in coordinates2D.prefix(5) {
+ 
+ ## 4. Hardware Routing & Device Selection
+ 
+-``PCA`` supports automatic device dispatching via ``ComputeDevice``:
++``PCA`` accepts an `ExecutionDevice`. See <doc:PreparedPCA> for numerical precision and ownership details.
+ 
+-| Device Mode | Description |
+-|:---|:---|
+-| `.auto` | Dynamically selects between CPU Accelerate and Metal GPU shaders based on matrix dimensions and unified memory availability. |
+-| `.cpu` | Forces multi-threaded Apple Accelerate LAPACK (`dgesdd_` / `cblas_dgemm`). Optimal for small-to-medium matrices ($M, N \le 2048$). |
+-| `.umaGPU` | Offloads dense matrix multiplications to Metal Shading Language pipelines, maximizing memory bandwidth on Apple Silicon M-series chips. |
++| Device mode | Behavior |
++| --- | --- |
++| `.auto` | Uses the existing hardware router to choose a fitting device. |
++| `.cpu` | Uses Double Accelerate LAPACK or randomized SVD, according to the selected solver. |
++| `.gpu` | Uses Float MLX conversion and centering, then SVD on the CPU stream. |
++| `.ane` | Uses the existing router fallback for unsupported ANE execution. |
+ 
+ ---
+ 
+ ## Topics
+ 
+ ### Dimensionality Reduction
++- <doc:PreparedPCA>
+ - ``PCA``
+ - ``RandomizedSVD``
+ - ``TSNE``
+-- ``ComputeDevice``
+diff --git a/Sources/SwiftCluster/SwiftCluster.docc/PreparedPCA.md b/Sources/SwiftCluster/SwiftCluster.docc/PreparedPCA.md
+new file mode 100644
+index 0000000000..c206e1080f
+--- /dev/null
++++ b/Sources/SwiftCluster/SwiftCluster.docc/PreparedPCA.md
+@@ -0,0 +1,63 @@
++# Fit and project prepared data with PCA
++
++Fit preprocessing on training observations, apply the fitted preprocessing to held-out observations, and pass prepared data directly to PCA. PCA returns component scores with feature names and original row positions.
++
++```swift
++import SwiftDataFrame
++import SwiftPreprocessing
++import SwiftCluster
++
++let source = try frame.prepareNumericBatch(["temperature", "pressure", "flow"])
++let training = try source.selectingRows(trainingRows)
++let query = try source.selectingRows(queryRows)
++
++var scaler = StandardScaler()
++try scaler.fit(training)
++let scaledTraining = try scaler.transform(consuming: consume training)
++let scaledQuery = try scaler.transform(consuming: consume query)
++
++let model = try PCA(nComponents: 2, svdSolver: .full, device: .cpu)
++let trainingScores = try await model.fitTransform(scaledTraining)
++let queryScores = try await model.transform(scaledQuery)
++
++// Both outputs have columns PC1 and PC2.
++// queryScores.originalRowIndices preserves queryRows, including repetitions.
++let values = try queryScores.matrix(order: .rowMajor)
++```
++
++A model fitted from prepared data requires the same ordered feature names for later prepared inputs. Duplicate feature selections remain valid, but their names and positions must match. A successful nested-row fit clears that name constraint. Nested-row transforms always use positional features.
++
++## Keep an existing matrix layout
++
++You can also fit and project a `PreparedNumericMatrix`. The output keeps its input layout and row provenance while replacing the feature names with `PC1` through `PCk`.
++
++```swift
++let matrix = try scaledQuery.matrix(order: .columnMajor, missing: .reject)
++let scores = try await model.transform(matrix)
++// scores.order == .columnMajor
++// scores.originalRowIndices == scaledQuery.originalRowIndices
++```
++
++Prepared column inputs pack directly into the centered solver buffer. They do not first construct a matrix or nested rows. CPU fitting needs centered column-major workspace for the existing LAPACK and randomized solvers. Matrix inputs are read in their declared layout; fitting and projection preserve retained input snapshots. Dimensionality reduction allocates new score storage.
++
++## Choose the numerical path
++
++| Choice | Behavior |
++| --- | --- |
++| `.cpu`, solver `.full` | Double centering and LAPACK divide-and-conquer SVD. |
++| `.cpu`, solver `.randomized` | The existing deterministic randomized SVD, with its unchanged sketch and power-iteration defaults. PCA omits unused left-vector back-projection. |
++| `.cpu`, solver `.auto` | Randomized when `k < 0.8 * min(rows, columns)`, otherwise full. |
++| `.gpu` | Float conversion, MLX centering, and the existing SVD on the CPU stream. Exported state is widened to Double. This is not an FP64 GPU SVD. |
++| Device `.auto` or `.ane` | Existing hardware-routing rules apply. `resolvedDevice` reports the last successful fit. |
++
++Projection uses the same ascending-feature Double accumulation for training and held-out observations. Explained variances use `max(1, samples - 1)` normalization. Ratios use total input variance, including omitted components. Randomized fitting is approximate.
++
++## Handle invalid input and model state
++
++Fitting requires at least one observation and feature, rectangular rows, finite values, and a component count no greater than the smaller input dimension. Prepared missing entries are rejected. Exporting them to a matrix as NaNs does not make them valid PCA input. GPU fitting also rejects Double values that overflow Float conversion before calling the native solver.
++
++Prepared projection requires finite inputs and rejects nonfinite scores. A zero-row prepared input with matching feature names returns zero-row score columns. Legacy `fit([])` and `transform([])` retain their empty-input errors. Legacy nested transforms retain NaN propagation. The existing dataframe `fitPCA` convenience method retains its missing-to-zero extraction behavior.
++
++A failed fit leaves the previous fitted state intact. `fitTransform` performs an ordinary successful fit followed by projection. A later projection failure does not roll back that successful fit. Serialize related fit and transform calls on a shared model when they must use one particular fit.
++
++Caller-held inputs, solver workspace, scores, and MLX allocations have separate lifetimes. PCA does not impose an RSS cap. Use the existing memory-admission facilities with an estimate covering the complete operation when your application requires admission control.
+diff --git a/Sources/SwiftDataFrame/Core/PreparedNumericBatch.swift b/Sources/SwiftDataFrame/Core/PreparedNumericBatch.swift
+index f412af0bd0..3c0285d94c 100644
+--- a/Sources/SwiftDataFrame/Core/PreparedNumericBatch.swift
++++ b/Sources/SwiftDataFrame/Core/PreparedNumericBatch.swift
+@@ -250,6 +250,13 @@ public struct PreparedNumericMatrix: Sendable {
+         values.withUnsafeMutableBufferPointer { body($0) }
+     }
+ 
++    /// Replaces feature values while keeping layout and private row provenance.
++    package func replacingValues(_ values: [Double], columnNames: [String]) -> PreparedNumericMatrix {
++        precondition(values.count == rowCount * columnNames.count)
++        return PreparedNumericMatrix(values: values, columnNames: columnNames, rowCount: rowCount,
++                                     order: order, sourceRows: sourceRows)
++    }
++
+     /// Reads an element in either layout. Indices must be in bounds.
+     public subscript(row: Int, column: Int) -> Double {
+         precondition(row >= 0 && row < rowCount && column >= 0 && column < columnCount)
+diff --git a/Tests/SwiftClusterTests/PCAFullSVDLayoutTests.swift b/Tests/SwiftClusterTests/PCAFullSVDLayoutTests.swift
+new file mode 100644
+index 0000000000..d31448c0ae
+--- /dev/null
++++ b/Tests/SwiftClusterTests/PCAFullSVDLayoutTests.swift
+@@ -0,0 +1,33 @@
++import Testing
++@testable import SwiftCluster
++
++@Suite("PCA full SVD workspace bounds")
++struct PCAFullSVDLayoutTests {
++    @Test(arguments: [[4, 3], [3, 4], [1, 1], [10, 1], [1, 10]])
++    func economyShapes(_ shape: [Int]) throws {
++        let rows = shape[0], columns = shape[1], rank = min(rows, columns)
++        let layout = try PCAFullSVDLayout(rows: rows, columns: columns)
++        #expect(layout.rows == Int32(rows) && layout.columns == Int32(columns))
++        #expect(layout.rank == rank)
++        #expect(layout.leftCount == rows * rank)
++        #expect(layout.rightCount == rank * columns)
++        #expect(layout.integerWorkspaceCount == 8 * rank)
++    }
++
++    @Test func rejectsUnsupportedDimensionsAndWorkspaceWithoutAllocation() throws {
++        for invalid in [0, -1, Int(Int32.max) + 1, Int.max] {
++            #expect(throws: ClusterError.self) { try PCAFullSVDLayout(rows: invalid, columns: 2) }
++            #expect(throws: ClusterError.self) { try PCAFullSVDLayout(rows: 2, columns: invalid) }
++        }
++        #expect(throws: ClusterError.self) {
++            try PCAFullSVDLayout(rows: Int(Int32.max), columns: Int(Int32.max))
++        }
++    }
++
++    @Test func preservesBackendSupportedLargeLayoutWithoutAllocation() throws {
++        let layout = try PCAFullSVDLayout(rows: 24_000, columns: 24_000)
++        #expect(layout.leftCount == 576_000_000)
++        #expect(layout.rightCount == 576_000_000)
++        #expect(layout.integerWorkspaceCount == 192_000)
++    }
++}
+diff --git a/Tests/SwiftClusterTests/PCAMeanOverflowTests.swift b/Tests/SwiftClusterTests/PCAMeanOverflowTests.swift
+new file mode 100644
+index 0000000000..ef08720878
+--- /dev/null
++++ b/Tests/SwiftClusterTests/PCAMeanOverflowTests.swift
+@@ -0,0 +1,34 @@
++import Testing
++import SwiftDataFrame
++import SwiftPreprocessing
++@testable import SwiftCluster
++
++@Suite("PCA finite mean overflow")
++struct PCAMeanOverflowTests {
++    @Test(arguments: [SVDSolver.full, .randomized])
++    func rejectsOverflowAndPreservesFit(_ solver: SVDSolver) async throws {
++        let input = try PreparedPCAFixture.batch()
++        let model = try PCA(nComponents: 1, svdSolver: solver, device: .cpu)
++        let scores = try await model.fitTransform(input)
++        let mean = await model.mean
++        let components = await model.components
++        let variance = await model.explainedVariance
++        let rows: [[Double]] = [[Double.greatestFiniteMagnitude, 0], [Double.greatestFiniteMagnitude, 0]]
++        let overflow = try PreparedPCAFixture.batch(rows)
++        for route in 0..<4 {
++            await #expect(throws: ClusterError.self) {
++                switch route {
++                case 0: try await model.fit(rows)
++                case 1: try await model.fit(overflow)
++                case 2: try await model.fit(overflow.matrix(order: .rowMajor))
++                default: try await model.fit(overflow.matrix(order: .columnMajor))
++                }
++            }
++            #expect(await model.mean == mean)
++            #expect(await model.components == components)
++            #expect(await model.explainedVariance == variance)
++            #expect(await model.resolvedDevice == .cpu)
++            #expect(try await model.transform(input).columnValues(at: 0) == scores.columnValues(at: 0))
++        }
++    }
++}
+diff --git a/Tests/SwiftClusterTests/PreparedPCAFixtures.swift b/Tests/SwiftClusterTests/PreparedPCAFixtures.swift
+new file mode 100644
+index 0000000000..39e31b3f01
+--- /dev/null
++++ b/Tests/SwiftClusterTests/PreparedPCAFixtures.swift
+@@ -0,0 +1,30 @@
++import Testing
++import SwiftDataFrame
++@testable import SwiftCluster
++
++enum PreparedPCAFixture {
++    static let rows: [[Double]] = [[16, 6], [4, -10], [14, -5], [6, 1]]
++    static let query: [[Double]] = [[13, 2], [14, -5], [10, -2]]
++    static let scores: [[Double]] = [[10, 0], [-10, 0], [0, 5], [0, -5]]
++    static let queryScores: [[Double]] = [[5, 0], [0, 5], [0, 0]]
++
++    static func batch(_ rows: [[Double]] = PreparedPCAFixture.rows, names: [String] = ["a", "b"]) throws -> PreparedNumericBatch {
++        let columns: [[Double]] = names.indices.map { column in rows.map { $0[column] } }
++        return try PreparedNumericBatch(columnNames: names, columns: columns)
++    }
++
++    static func close(_ actual: [Double], _ expected: [Double], tolerance: Double = 1e-11) {
++        #expect(actual.count == expected.count)
++        for (a, b) in zip(actual, expected) { #expect(abs(a - b) <= tolerance * max(1, abs(b))) }
++    }
++
++    static func close(_ actual: PreparedNumericBatch, _ expected: [[Double]], tolerance: Double = 1e-11) {
++        #expect(actual.rowCount == expected.count)
++        for row in expected.indices {
++            for column in expected[row].indices {
++                let value = actual[row, column] ?? .nan
++                #expect(abs(value - expected[row][column]) <= tolerance)
++            }
++        }
++    }
++}
+diff --git a/Tests/SwiftClusterTests/PreparedPCAGPUTests.swift b/Tests/SwiftClusterTests/PreparedPCAGPUTests.swift
+new file mode 100644
+index 0000000000..682b896320
+--- /dev/null
++++ b/Tests/SwiftClusterTests/PreparedPCAGPUTests.swift
+@@ -0,0 +1,31 @@
++import Testing
++import SwiftDataFrame
++import SwiftPreprocessing
++@testable import SwiftCluster
++
++@Suite("Prepared PCA GPU ownership and parity")
++struct PreparedPCAGPUTests {
++    @Test func batchAndBothMatrixLayouts() async throws {
++        let input = try PreparedPCAFixture.batch()
++        let selected = try input.selectingRows([2, 0, 2])
++        let reference = try PCA(nComponents: 2, device: .gpu)
++        let expected = try await reference.fitTransform(PreparedPCAFixture.rows)
++        let model = try PCA(nComponents: 2, device: .gpu)
++        let actual = try await model.fitTransform(input)
++        PreparedPCAFixture.close(actual, expected, tolerance: 1e-5)
++        #expect(await model.resolvedDevice == .gpu)
++        for order in [NumericMatrixOrder.rowMajor, .columnMajor] {
++            try await model.fit(input.matrix(order: order))
++            let scores = try await model.transform(selected.matrix(order: order))
++            #expect(scores.order == order && scores.originalRowIndices == [2, 0, 2])
++            for row in 0..<3 {
++                let sourceRow = [2, 0, 2][row]
++                for column in 0..<2 { #expect(abs(scores[row, column] - expected[sourceRow][column]) < 1e-5) }
++            }
++        }
++        let mean = await model.mean
++        let overflow = try PreparedPCAFixture.batch([[Double.greatestFiniteMagnitude, 1], [2, 3]])
++        await #expect(throws: ClusterError.self) { try await model.fit(overflow) }
++        #expect(await model.mean == mean)
++    }
++}
+diff --git a/Tests/SwiftClusterTests/PreparedPCATests.swift b/Tests/SwiftClusterTests/PreparedPCATests.swift
+new file mode 100644
+index 0000000000..13e669c549
+--- /dev/null
++++ b/Tests/SwiftClusterTests/PreparedPCATests.swift
+@@ -0,0 +1,118 @@
++import Testing
++import SwiftDataFrame
++import SwiftPreprocessing
++@testable import SwiftCluster
++
++@Suite("Prepared PCA workflows")
++struct PreparedPCATests {
++    @Test(arguments: [SVDSolver.full, .randomized, .auto])
++    func exactAnswersAndLayouts(_ solver: SVDSolver) async throws {
++        let input = try PreparedPCAFixture.batch()
++        let query = try PreparedPCAFixture.batch(PreparedPCAFixture.query)
++        for count in [1, 2] {
++            let model = try PCA(nComponents: count, svdSolver: solver, device: .cpu)
++            let output = try await model.fitTransform(input)
++            let scores = PreparedPCAFixture.scores.map { Array($0.prefix(count)) }
++            PreparedPCAFixture.close(output, scores)
++            #expect(output.columnNames == (1...count).map { "PC\($0)" })
++            PreparedPCAFixture.close(try #require(await model.mean), [10, -2])
++            PreparedPCAFixture.close(try #require(await model.explainedVariance), Array([200.0 / 3, 50.0 / 3].prefix(count)))
++            PreparedPCAFixture.close(try #require(await model.explainedVarianceRatio), Array([0.8, 0.2].prefix(count)))
++            let expected = PreparedPCAFixture.queryScores.map { Array($0.prefix(count)) }
++            PreparedPCAFixture.close(try await model.transform(query), expected)
++            for order in [NumericMatrixOrder.rowMajor, .columnMajor] {
++                let matrix = try input.matrix(order: order)
++                let snapshot = matrix.values
++                let projected = try await model.fitTransform(matrix)
++                #expect(projected.order == order && matrix.values == snapshot)
++                #expect(projected.columnNames == output.columnNames)
++                for row in scores.indices {
++                    for column in 0..<count { #expect(abs(projected[row, column] - scores[row][column]) < 1e-11) }
++                }
++                let heldOut = try await model.transform(query.matrix(order: order))
++                for row in expected.indices {
++                    for column in 0..<count { #expect(abs(heldOut[row, column] - expected[row][column]) < 1e-11) }
++                }
++            }
++        }
++    }
++
++    @Test func preprocessingSelectionAndSnapshots() async throws {
++        var source = try PreparedPCAFixture.batch()
++        let snapshot = source
++        let train = try source.selectingRows([3, 0, 2, 1])
++        let heldOut = try source.selectingRows([2, 0, 2])
++        var scaler = StandardScaler()
++        try scaler.fit(train)
++        let scaledTrain = try scaler.transform(train)
++        let scaledQuery = try scaler.transform(heldOut)
++        let model = try PCA(nComponents: 1, svdSolver: .full, device: .cpu)
++        let trainingScores = try await model.fitTransform(scaledTrain)
++        let scores = try await model.transform(scaledQuery)
++        #expect(trainingScores.originalRowIndices == [3, 0, 2, 1])
++        #expect(scores.originalRowIndices == [2, 0, 2])
++        #expect(scores[0, 0] == scores[2, 0])
++        let row = try scores.matrix(), column = try scores.matrix(order: .columnMajor)
++        #expect(row.originalRowIndices == scores.originalRowIndices)
++        #expect(column.originalRowIndices == scores.originalRowIndices)
++        try source.updateColumn(at: 0, rows: [0], values: [999])
++        #expect(snapshot[0, 0] == 16 && train[1, 0] == 16)
++        #expect(try await model.transform(scaledQuery).columnValues(at: 0) == scores.columnValues(at: 0))
++        let matrixScores = try await model.transform(scaledQuery.matrix(order: .columnMajor))
++        #expect(matrixScores.originalRowIndices == [2, 0, 2])
++        for i in 0..<scores.rowCount { #expect(matrixScores[i, 0] == scores[i, 0]) }
++    }
++
++    @Test func schemaAndRejectedRefit() async throws {
++        let input = try PreparedPCAFixture.batch()
++        let changed = try PreparedPCAFixture.batch(names: ["b", "a"])
++        let model = try PCA(nComponents: 1, svdSolver: .full, device: .cpu)
++        let scores = try await model.fitTransform(input)
++        let mean = await model.mean, components = await model.components
++        await #expect(throws: ClusterError.self) { _ = try await model.transform(changed) }
++        await #expect(throws: ClusterError.self) { _ = try await model.transform(changed.matrix()) }
++        let invalid = try PreparedPCAFixture.batch([[.nan, 1], [2, 3]])
++        await #expect(throws: ClusterError.self) { try await model.fit(invalid) }
++        let afterMean = await model.mean, afterComponents = await model.components
++        #expect(afterMean == mean && afterComponents == components)
++        #expect(await model.resolvedDevice == .cpu)
++        #expect(try await model.transform(input).columnValues(at: 0) == scores.columnValues(at: 0))
++        try await model.fit(PreparedPCAFixture.rows)
++        _ = try await model.transform(changed)
++        let duplicate = try PreparedPCAFixture.batch(names: ["x", "x"])
++        try await model.fit(duplicate)
++        _ = try await model.transform(duplicate)
++        await #expect(throws: ClusterError.self) { _ = try await model.transform(input) }
++    }
++
++    @Test func emptyAndInvalidInputs() async throws {
++        let model = try PCA(nComponents: 1, svdSolver: .randomized, device: .cpu)
++        await #expect(throws: ClusterError.self) { try await model.fit([]) }
++        await #expect(throws: ClusterError.self) { try await model.fit([[1, 2], [3]]) }
++        let valid = try PreparedPCAFixture.batch()
++        try await model.fit(valid)
++        let empty = try valid.selectingRows([])
++        let scores = try await model.transform(empty)
++        #expect(scores.rowCount == 0 && scores.columnNames == ["PC1"])
++        #expect(scores.originalRowIndices.isEmpty)
++        let matrix = try await model.transform(empty.matrix(order: .columnMajor))
++        #expect(matrix.rowCount == 0 && matrix.columnCount == 1 && matrix.values.isEmpty)
++        await #expect(throws: ClusterError.self) { _ = try await model.transform([]) }
++        await #expect(throws: ClusterError.self) { try await model.fit(empty) }
++        for value in [Double.nan, .infinity, -.infinity] {
++            let bad = try PreparedPCAFixture.batch([[value, 0], [1, 2]])
++            await #expect(throws: ClusterError.self) { try await model.fit(bad) }
++            await #expect(throws: ClusterError.self) { try await model.fit(bad.matrix()) }
++            await #expect(throws: ClusterError.self) { _ = try await model.transform(bad) }
++            await #expect(throws: ClusterError.self) { _ = try await model.transform(bad.matrix()) }
++        }
++        let missing = try DataFrame(columns: [
++            TypedColumn<Double>(name: "a", values: [1, nil]),
++            TypedColumn<Double>(name: "b", values: [2, 3])
++        ]).prepareNumericBatch(["a", "b"])
++        await #expect(throws: ClusterError.self) { try await model.fit(missing) }
++        await #expect(throws: ClusterError.self) { _ = try await model.transform(missing) }
++        let nanRows = try await model.transform([[.nan, 1]])
++        #expect(nanRows[0][0].isNaN)
++    }
++}
+diff --git a/Tests/SwiftClusterTests/RandomizedSVDTests.swift b/Tests/SwiftClusterTests/RandomizedSVDTests.swift
+index 40fcbacf7a..11acbc0bee 100644
+--- a/Tests/SwiftClusterTests/RandomizedSVDTests.swift
++++ b/Tests/SwiftClusterTests/RandomizedSVDTests.swift
+@@ -88,6 +88,27 @@ final class RandomizedSVDTests: XCTestCase {
+         XCTAssertEqual(comps!.count, k)
+     }
+ 
++    func testFlatKernelPreservesPublicDecomposition() throws {
++        let rows: [[Double]] = [[1, 4, 2], [2, -1, 3], [5, 2, -4], [3, 0, 1]]
++        let values = (0..<3).flatMap { column in rows.map { $0[column] } }
++        let original = try RandomizedSVD.compute(X: rows, nComponents: 3)
++        let right = try RandomizedSVD.compute(columnMajor: values, rows: 4, columns: 3,
++                                              nComponents: 3, computeLeftVectors: false)
++        XCTAssertEqual(original.S, right.S)
++        XCTAssertEqual(original.Vt, right.Vt)
++        XCTAssertTrue(right.U.isEmpty)
++        for row in 0..<4 {
++            for column in 0..<3 {
++                var reconstructed = 0.0
++                for k in 0..<3 { reconstructed += original.U[row][k] * original.S[k] * original.Vt[k][column] }
++                XCTAssertEqual(reconstructed, rows[row][column], accuracy: 1e-10)
++            }
++        }
++        XCTAssertThrowsError(try RandomizedSVD.compute(X: [[1, 2], [3]], nComponents: 1))
++        XCTAssertThrowsError(try RandomizedSVD.compute(X: rows, nComponents: 1, nOversamples: -1))
++        XCTAssertThrowsError(try RandomizedSVD.compute(X: rows, nComponents: 1, nPowerIter: -1))
++    }
++
+     func testRandomizedSVDInvalidK() throws {
+         let X = [[Double]](repeating: [1.0, 2.0, 3.0], count: 4)
+         // k > min(M=4, N=3) = 3 → should throw
+diff --git a/Tests/SwiftDataFrameTests/PreparedMatrixTests.swift b/Tests/SwiftDataFrameTests/PreparedMatrixTests.swift
+index 9c8c3453d6..7c26eb2976 100644
+--- a/Tests/SwiftDataFrameTests/PreparedMatrixTests.swift
++++ b/Tests/SwiftDataFrameTests/PreparedMatrixTests.swift
+@@ -3,6 +3,53 @@ import Testing
+ 
+ @Suite("Prepared matrix ownership and layout")
+ struct PreparedMatrixTests {
++    @Test(arguments: [NumericMatrixOrder.rowMajor, .columnMajor])
++    func replacementPreservesLayoutProvenanceAndSnapshots(_ order: NumericMatrixOrder) throws {
++        let batch = try DataFrame(columns: [
++            TypedColumn<Double>(name: "a", values: [1, 2, 3]),
++            TypedColumn<Double>(name: "b", values: [10, 20, 30]),
++            TypedColumn<Double>(name: "c", values: [100, 200, 300])
++        ]).prepareNumericBatch(["a", "b", "c"])
++        let matrices = [
++            try batch.matrix(order: order),
++            try batch.selectingRows([2, 0, 2]).matrix(order: order),
++            try batch.selectingRows([]).matrix(order: order)
++        ]
++        let provenance: [[Int]] = [[0, 1, 2], [2, 0, 2], []]
++        for (index, source) in matrices.enumerated() {
++            let originalValues = source.values
++            let expected: [[Double]] = (0..<source.rowCount).map { row -> [Double] in
++                let base: Double = Double(row * 10)
++                return [base + 1, base + 2]
++            }
++            var values: [Double] = []
++            if order == .rowMajor {
++                for row in expected { values.append(contentsOf: row) }
++            } else {
++                for column in 0..<2 {
++                    for row in expected { values.append(row[column]) }
++                }
++            }
++            var output = source.replacingValues(values, columnNames: ["PC1", "PC2"])
++            let snapshot = output
++            #expect(output.rowCount == source.rowCount && output.columnCount == 2)
++            #expect(output.columnNames == ["PC1", "PC2"] && output.order == order)
++            #expect(output.originalRowIndices == provenance[index])
++            for row in expected.indices {
++                for column in 0..<2 { #expect(output[row, column] == expected[row][column]) }
++            }
++            if !values.isEmpty {
++                values[0] = -100
++                #expect(output[0, 0] == 1)
++                output.withMutableValues { $0[0] = -200 }
++                #expect(snapshot[0, 0] == 1 && output[0, 0] == -200)
++            } else {
++                #expect(output.values.isEmpty)
++            }
++            #expect(source.values == originalValues && source.columnNames == ["a", "b", "c"])
++        }
++    }
++
+     @Test func selectionCompositionAndLayout() throws {
+         let frame = try DataFrame(columns: [
+             TypedColumn<Double>(name: "a", values: [1, 2, 3, 4]),
+diff --git a/scripts/tests/test_verify_doc_coverage.py b/scripts/tests/test_verify_doc_coverage.py
+new file mode 100644
+index 0000000000..738e69fad1
+--- /dev/null
++++ b/scripts/tests/test_verify_doc_coverage.py
+@@ -0,0 +1,62 @@
++import contextlib
++import importlib.util
++import io
++from pathlib import Path
++import tempfile
++import unittest
++
++
++spec = importlib.util.spec_from_file_location(
++    "verify_doc_coverage", Path(__file__).resolve().parents[1] / "verify_doc_coverage.py"
++)
++checker = importlib.util.module_from_spec(spec)
++spec.loader.exec_module(checker)
++
++
++class DocumentationReportingTests(unittest.TestCase):
++    def run_check(self, source):
++        with tempfile.TemporaryDirectory() as directory:
++            Path(directory, "Fixture.swift").write_text(source, encoding="utf-8")
++            output = io.StringIO()
++            with contextlib.redirect_stdout(output):
++                with self.assertRaises(SystemExit) as exit_result:
++                    checker.check_doc_coverage(directory)
++            return exit_result.exception.code, output.getvalue()
++
++    def test_documented_declaration(self):
++        status, output = self.run_check("/// A value.\npublic struct Value {}\n")
++        self.assertEqual(status, 0)
++        self.assertIn("100.00% (1/1", output)
++        self.assertIn("declaration scan", output)
++        self.assertIn("No unresolved documentation placeholders", output)
++
++    def test_undocumented_declaration(self):
++        status, output = self.run_check("public struct Value {}\n")
++        self.assertEqual(status, 0)
++        self.assertIn("0.00% (0/1", output)
++        self.assertNotIn("100.00%", output)
++
++    def test_mixed_documentation(self):
++        status, output = self.run_check(
++            "/// A value.\npublic struct Documented {}\npublic struct Undocumented {}\n"
++        )
++        self.assertEqual(status, 0)
++        self.assertIn("50.00% (1/2", output)
++        self.assertNotIn("100.00%", output)
++
++    def test_no_matching_declarations(self):
++        status, output = self.run_check("struct Internal {}\n")
++        self.assertEqual(status, 0)
++        self.assertIn("N/A", output)
++        self.assertIn("No public/open declarations matched", output)
++        self.assertNotIn("100.00%", output)
++
++    def test_placeholder_still_fails(self):
++        status, output = self.run_check("/// <#description#>\npublic struct Value {}\n")
++        self.assertEqual(status, 1)
++        self.assertIn("unresolved Xcode placeholders", output)
++        self.assertNotIn("No unresolved documentation placeholders", output)
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/scripts/verify_doc_coverage.py b/scripts/verify_doc_coverage.py
+index ef99cb79e7..e04d5063c4 100755
+--- a/scripts/verify_doc_coverage.py
++++ b/scripts/verify_doc_coverage.py
+@@ -43,8 +43,12 @@ def check_doc_coverage(sources_dir):
+                             rel_path = os.path.relpath(filepath, sources_dir)
+                             missing_docs.append((rel_path, idx + 1, line.strip()))
+ 
+-    coverage = (documented_public / total_public * 100) if total_public > 0 else 0
+-    print(f"📊 DocC Public API Coverage: {coverage:.2f}% ({documented_public}/{total_public} symbols documented)")
++    if total_public:
++        coverage = documented_public / total_public * 100
++        print(f"API documentation declaration scan: {coverage:.2f}% ({documented_public}/{total_public} matched declarations documented)")
++    else:
++        print("API documentation declaration scan: N/A. No public/open declarations matched.")
++    print("This heuristic scan is not DocC symbol-graph coverage.")
+ 
+     # Check for placeholder markers like <#description#>
+     placeholders = []
+@@ -67,7 +71,7 @@ def check_doc_coverage(sources_dir):
+         print("\nCI BUILD FAILED: Documentation contains unresolved Xcode placeholders.")
+         sys.exit(1)
+ 
+-    print("✅ 100.00% DocC Public API Coverage Verified (Zero Placeholders)!")
++    print("No unresolved documentation placeholders found.")
+     sys.exit(0)
+ 
+ if __name__ == "__main__":

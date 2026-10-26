@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Combined scientific and inference qualification](benchmarks/2026-10-26-scientific-ai-integration/README.md) joins the reviewed PCA stack with later inference work and corrects false documentation coverage reporting. It preserves separate historical measurement fingerprints.
+
 - [Representative weighted ML Programs](benchmarks/2026-10-26-mlprogram-representative/README.md) records full output vectors, strict precision failures, successful full-Float32 controls, bounded pool stress and CPU-only device dispatch evidence.
 
 - [PR89 maintainer correction](benchmarks/2026-10-26-pr89-review/README.md) records checked PCA dimensions and LAPACK workspace handling, including the correction that preserves native workspace-query limits.
