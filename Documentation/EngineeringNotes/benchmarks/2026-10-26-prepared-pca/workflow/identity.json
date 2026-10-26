@@ -1,0 +1,29 @@
+{
+  "wine": {
+    "shape": [
+      178,
+      13
+    ],
+    "k": 4,
+    "sha256": "e9d8fe65c730560f0ce2f9eb76cbd5bcc152db1154765e4dbcaaa2d734b05eac",
+    "generator": "sklearn.datasets.load_wine"
+  },
+  "tall": {
+    "shape": [
+      12000,
+      24
+    ],
+    "k": 6,
+    "sha256": "17edd72e50516c93911ad82c749cdbd1df063e8ea19fc64f3a6df07b9eb3882e",
+    "generator": "numpy.default_rng(42), sequential latent Gaussian + noise"
+  },
+  "wide": {
+    "shape": [
+      160,
+      512
+    ],
+    "k": 8,
+    "sha256": "2d0c7dc3c90c693d35087ce44947057991c82af4c28d7e1e04673bef361d1b2c",
+    "generator": "numpy.default_rng(42), sequential latent Gaussian + noise"
+  }
+}

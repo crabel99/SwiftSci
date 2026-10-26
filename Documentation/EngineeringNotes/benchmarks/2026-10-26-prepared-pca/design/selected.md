@@ -1,0 +1,15 @@
+# Selected prepared PCA design
+
+Use the batch design as the base, following the independent judge's preference for direct composition with prepared preprocessing. Graft a small matrix adapter because this contribution explicitly carries existing row-major and column-major prepared matrices through PCA, and StandardScaler already supports consuming matrix transforms. Both representations have real callers; neither is converted to nested rows.
+
+The public additions are fit, transform and fitTransform overloads for PreparedNumericBatch and PreparedNumericMatrix. Output matches input representation, uses PC1...PCk names, and preserves original row positions including repeated selections. The batch path uses existing replacingNumericColumns; the matrix path gets a package-only replacement helper preserving private provenance. Do not publish a generic replacement API just for PCA.
+
+PCA keeps one private fitted state. CPU full/randomized use one centered column-major Double representation, preserving existing solver selection and mean/variance arithmetic. RandomizedSVD receives a shared flat entry point that can omit unused left-vector back-projection only for PCA, while its public Result.U remains complete. GPU uses existing scoped Float packing, Float MLX mean/centering and CPU-stream SVD; it exports owned results before leaving the scope. Transform retains the existing ascending-feature Double sum.
+
+Prepared fits record exact ordered names, prepared transforms enforce them, and legacy fits clear the schema. Prepared missing and nonfinite values are rejected. Legacy empty calls retain their errors, while matching zero-row prepared transforms return typed empty scores. Failed fits preserve the old state; fitTransform is fit followed by transform, matching the existing state semantics rather than promising a rollback after successful fitting.
+
+Implementation modules: PCA.swift owns fitting state, public calls and boundary checks. PCAComputation.swift owns read adapters and shared numerical execution. RandomizedSVD.swift owns the flat randomized kernel and legacy adapter. PreparedNumericBatch.swift owns output provenance construction. No pipeline protocol change, extra allocator, cache, agent or runtime work.
+
+The judge scored batch18/18 and matrix15/18. Rejected the matrix candidate's public replacement helper and its incorrect claim that package constructors cannot be accessed across targets. Kept batch-first packing to avoid forcing an intermediate matrix in the direct-column workflow. The matrix adapter is retained to fulfill caller layout choices already supported by the library.
+
+Validation: compile and execute affected native tests in Debug/Release, existing PCA/RandomizedSVD/GPU routing tests, new analytic and held-out prepared workflow tests, standardized model conformance with unchanged tolerances, and fresh-process baseline/candidate full-workflow output/resource comparisons. Resource findings are observations for matched CPU solvers, not certified hardware-wide gains.
