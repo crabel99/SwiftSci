@@ -1,0 +1,150 @@
+diff --git a/Sources/SwiftCluster/Decomposition/PCAComputation.swift b/Sources/SwiftCluster/Decomposition/PCAComputation.swift
+index e0951342fb..0666b9d772 100644
+--- a/Sources/SwiftCluster/Decomposition/PCAComputation.swift
++++ b/Sources/SwiftCluster/Decomposition/PCAComputation.swift
+@@ -112,14 +112,15 @@ enum PCAComputation {
+ 
+     private static func fullSVD(_ values: inout [Double], rows: Int, columns: Int,
+                                 components k: Int) throws -> ([Double], [[Double]]) {
++        let layout = try PCAFullSVDLayout(rows: rows, columns: columns)
+         var job: Int8 = 83
+-        var m = Int32(rows), n = Int32(columns), lda = m, ldu = m
+-        let rank = min(rows, columns)
+-        var ldvt = Int32(rank), info: Int32 = 0, lwork: Int32 = -1
++        var m = layout.rows, n = layout.columns, lda = m, ldu = m
++        let rank = layout.rank
++        var ldvt = min(m, n), info: Int32 = 0, lwork: Int32 = -1
+         var singular = [Double](repeating: 0, count: rank)
+-        var u = [Double](repeating: 0, count: rows * rank)
+-        var vt = [Double](repeating: 0, count: rank * columns)
+-        var iwork = [Int32](repeating: 0, count: 8 * rank)
++        var u = [Double](repeating: 0, count: layout.leftCount)
++        var vt = [Double](repeating: 0, count: layout.rightCount)
++        var iwork = [Int32](repeating: 0, count: layout.integerWorkspaceCount)
+         var query = [Double](repeating: 0, count: 1)
+         dgesdd_(&job, &m, &n, &values, &lda, &singular, &u, &ldu, &vt, &ldvt, &query, &lwork, &iwork, &info)
+         guard info == 0 else { throw ClusterError.svdFailed(info: info) }
+diff --git a/Sources/SwiftCluster/Decomposition/PCAFullSVDLayout.swift b/Sources/SwiftCluster/Decomposition/PCAFullSVDLayout.swift
+new file mode 100644
+index 0000000000..c08c1b26dc
+--- /dev/null
++++ b/Sources/SwiftCluster/Decomposition/PCAFullSVDLayout.swift
+@@ -0,0 +1,39 @@
++import SwiftDataFrame
++
++struct PCAFullSVDLayout: Sendable {
++    let rows: Int32
++    let columns: Int32
++    let rank: Int
++    let leftCount: Int
++    let rightCount: Int
++    let integerWorkspaceCount: Int
++
++    init(rows: Int, columns: Int) throws {
++        guard rows > 0, columns > 0,
++              let lapackRows = Int32(exactly: rows),
++              let lapackColumns = Int32(exactly: columns) else {
++            throw ClusterError.invalidParameter("PCA SVD dimensions exceed backend limits.")
++        }
++        self.rows = lapackRows
++        self.columns = lapackColumns
++        rank = min(rows, columns)
++
++        leftCount = try Self.bufferCount(rows, rank, stride: MemoryLayout<Double>.stride)
++        rightCount = try Self.bufferCount(rank, columns, stride: MemoryLayout<Double>.stride)
++        integerWorkspaceCount = try Self.bufferCount(8, rank, stride: MemoryLayout<Int32>.stride)
++    }
++
++    private static func product(_ lhs: Int, _ rhs: Int) throws -> Int {
++        let (count, overflow) = lhs.multipliedReportingOverflow(by: rhs)
++        guard !overflow else {
++            throw ClusterError.invalidParameter("PCA SVD workspace size overflowed Int.")
++        }
++        return count
++    }
++
++    private static func bufferCount(_ rows: Int, _ columns: Int, stride: Int) throws -> Int {
++        let count = try product(rows, columns)
++        _ = try product(count, stride)
++        return count
++    }
++}
+diff --git a/Tests/SwiftClusterTests/PCAFullSVDLayoutTests.swift b/Tests/SwiftClusterTests/PCAFullSVDLayoutTests.swift
+new file mode 100644
+index 0000000000..d31448c0ae
+--- /dev/null
++++ b/Tests/SwiftClusterTests/PCAFullSVDLayoutTests.swift
+@@ -0,0 +1,33 @@
++import Testing
++@testable import SwiftCluster
++
++@Suite("PCA full SVD workspace bounds")
++struct PCAFullSVDLayoutTests {
++    @Test(arguments: [[4, 3], [3, 4], [1, 1], [10, 1], [1, 10]])
++    func economyShapes(_ shape: [Int]) throws {
++        let rows = shape[0], columns = shape[1], rank = min(rows, columns)
++        let layout = try PCAFullSVDLayout(rows: rows, columns: columns)
++        #expect(layout.rows == Int32(rows) && layout.columns == Int32(columns))
++        #expect(layout.rank == rank)
++        #expect(layout.leftCount == rows * rank)
++        #expect(layout.rightCount == rank * columns)
++        #expect(layout.integerWorkspaceCount == 8 * rank)
++    }
++
++    @Test func rejectsUnsupportedDimensionsAndWorkspaceWithoutAllocation() throws {
++        for invalid in [0, -1, Int(Int32.max) + 1, Int.max] {
++            #expect(throws: ClusterError.self) { try PCAFullSVDLayout(rows: invalid, columns: 2) }
++            #expect(throws: ClusterError.self) { try PCAFullSVDLayout(rows: 2, columns: invalid) }
++        }
++        #expect(throws: ClusterError.self) {
++            try PCAFullSVDLayout(rows: Int(Int32.max), columns: Int(Int32.max))
++        }
++    }
++
++    @Test func preservesBackendSupportedLargeLayoutWithoutAllocation() throws {
++        let layout = try PCAFullSVDLayout(rows: 24_000, columns: 24_000)
++        #expect(layout.leftCount == 576_000_000)
++        #expect(layout.rightCount == 576_000_000)
++        #expect(layout.integerWorkspaceCount == 192_000)
++    }
++}
+diff --git a/Tests/SwiftClusterTests/PCAMeanOverflowTests.swift b/Tests/SwiftClusterTests/PCAMeanOverflowTests.swift
+new file mode 100644
+index 0000000000..ef08720878
+--- /dev/null
++++ b/Tests/SwiftClusterTests/PCAMeanOverflowTests.swift
+@@ -0,0 +1,34 @@
++import Testing
++import SwiftDataFrame
++import SwiftPreprocessing
++@testable import SwiftCluster
++
++@Suite("PCA finite mean overflow")
++struct PCAMeanOverflowTests {
++    @Test(arguments: [SVDSolver.full, .randomized])
++    func rejectsOverflowAndPreservesFit(_ solver: SVDSolver) async throws {
++        let input = try PreparedPCAFixture.batch()
++        let model = try PCA(nComponents: 1, svdSolver: solver, device: .cpu)
++        let scores = try await model.fitTransform(input)
++        let mean = await model.mean
++        let components = await model.components
++        let variance = await model.explainedVariance
++        let rows: [[Double]] = [[Double.greatestFiniteMagnitude, 0], [Double.greatestFiniteMagnitude, 0]]
++        let overflow = try PreparedPCAFixture.batch(rows)
++        for route in 0..<4 {
++            await #expect(throws: ClusterError.self) {
++                switch route {
++                case 0: try await model.fit(rows)
++                case 1: try await model.fit(overflow)
++                case 2: try await model.fit(overflow.matrix(order: .rowMajor))
++                default: try await model.fit(overflow.matrix(order: .columnMajor))
++                }
++            }
++            #expect(await model.mean == mean)
++            #expect(await model.components == components)
++            #expect(await model.explainedVariance == variance)
++            #expect(await model.resolvedDevice == .cpu)
++            #expect(try await model.transform(input).columnValues(at: 0) == scores.columnValues(at: 0))
++        }
++    }
++}

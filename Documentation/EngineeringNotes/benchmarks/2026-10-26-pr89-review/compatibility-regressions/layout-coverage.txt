@@ -1,0 +1,40 @@
+    1|       |import SwiftDataFrame
+    2|       |
+    3|       |struct PCAFullSVDLayout: Sendable {
+    4|       |    let rows: Int32
+    5|       |    let columns: Int32
+    6|       |    let rank: Int
+    7|       |    let leftCount: Int
+    8|       |    let rightCount: Int
+    9|       |    let integerWorkspaceCount: Int
+   10|       |
+   11|     16|    init(rows: Int, columns: Int) throws {
+   12|     16|        guard rows > 0, columns > 0,
+   13|     16|              let lapackRows = Int32(exactly: rows),
+   14|     16|              let lapackColumns = Int32(exactly: columns) else {
+   15|      8|            throw ClusterError.invalidParameter("PCA SVD dimensions exceed backend limits.")
+   16|      8|        }
+   17|      8|        self.rows = lapackRows
+   18|      8|        self.columns = lapackColumns
+   19|      8|        rank = min(rows, columns)
+   20|      8|
+   21|      8|        leftCount = try Self.bufferCount(rows, rank, stride: MemoryLayout<Double>.stride)
+   22|      7|        rightCount = try Self.bufferCount(rank, columns, stride: MemoryLayout<Double>.stride)
+   23|      7|        integerWorkspaceCount = try Self.bufferCount(8, rank, stride: MemoryLayout<Int32>.stride)
+   24|      7|    }
+   25|       |
+   26|     44|    private static func product(_ lhs: Int, _ rhs: Int) throws -> Int {
+   27|     44|        let (count, overflow) = lhs.multipliedReportingOverflow(by: rhs)
+   28|     44|        guard !overflow else {
+   29|      1|            throw ClusterError.invalidParameter("PCA SVD workspace size overflowed Int.")
+   30|     43|        }
+   31|     43|        return count
+   32|     44|    }
+   33|       |
+   34|     22|    private static func bufferCount(_ rows: Int, _ columns: Int, stride: Int) throws -> Int {
+   35|     22|        let count = try product(rows, columns)
+   36|     22|        _ = try product(count, stride)
+   37|     21|        return count
+   38|     22|    }
+   39|       |}
+

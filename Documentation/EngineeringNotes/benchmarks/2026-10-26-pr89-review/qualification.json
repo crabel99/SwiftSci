@@ -1,0 +1,368 @@
+{
+  "commit": "4f33c76f3938e070105c2a5928c712aa5e067a00",
+  "changed_sources": {
+    "Sources/SwiftCluster/Decomposition/PCAComputation.swift": "babcdb128fa817b66e9acd98fd165075cb8375b4380571ef3e47ab896e6149c9",
+    "Sources/SwiftCluster/Decomposition/PCAFullSVDLayout.swift": "1ce756ba41deec0dd41bca8227de9bf34e20b86933e54d635dd5d50e7e2d1261",
+    "Tests/SwiftClusterTests/PCAFullSVDLayoutTests.swift": "2d0fd693544354e74dc9a5903e7e9489320990587e46e896ce46cd9e72a111ed",
+    "Tests/SwiftClusterTests/PCAMeanOverflowTests.swift": "db767c76340753f8e85eeddfbcb0d5dc59c1ca7eba34b19416fdfb07abdad6bf"
+  },
+  "native": {
+    "debug": {
+      "totalTestCount": 1667,
+      "passedTests": 1667,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "release": {
+      "totalTestCount": 1667,
+      "passedTests": 1667,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "workflows": {
+    "main": {
+      "steps": [
+        "Build",
+        "Build Release",
+        "Run safe unit tests",
+        "Export coverage",
+        "Build DocC documentation",
+        "Verify documentation was generated",
+        "Verify Public API Documentation Coverage (100%)",
+        "Validate coverage export"
+      ],
+      "security_findings": null
+    },
+    "benchmarks": {
+      "steps": [
+        "Test contracts and install reference engines",
+        "Check optional comparison engines",
+        "Prepare and build",
+        "Check synthetic checkpoint preflight controls",
+        "Reconcile legacy coverage",
+        "Check CPU regression policy and retain strict conformance results",
+        "Challenge passing public workflow workers",
+        "neural-cpu-conformance: Install Python MLX",
+        "neural-cpu-conformance: Test MLX adapter",
+        "neural-cpu-conformance: Check Python MLX CPU comparison",
+        "neural-cpu-conformance: Audit comparison evidence",
+        "boundary-cpu-conformance: Install Python MLX",
+        "boundary-cpu-conformance: Test MLX adapter",
+        "boundary-cpu-conformance: Check Python MLX CPU comparison",
+        "boundary-cpu-conformance: Audit comparison evidence",
+        "neural-shaped-cpu-conformance: Install Python MLX",
+        "neural-shaped-cpu-conformance: Test MLX adapter",
+        "neural-shaped-cpu-conformance: Check Python MLX CPU comparison",
+        "neural-shaped-cpu-conformance: Audit comparison evidence"
+      ],
+      "security_findings": null
+    },
+    "security-python": {
+      "steps": [
+        "CodeQL python database",
+        "CodeQL python analysis"
+      ],
+      "security_findings": {
+        "python": 0
+      }
+    }
+  },
+  "acceptance": {
+    "status": "failed",
+    "coverage_complete": true,
+    "profiles": [
+      {
+        "certificate_sha256": "170b7fd0622168894cd531be21a62e148b293369c35dce76f4b2d28679eb0319",
+        "coverage_complete": true,
+        "engine_cases": 16,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 16,
+        "profile": "vision-conformance",
+        "run_sha256": "331cc75608711f14442e10fdf788b2e7c7c31b374130443afd92ebf5739ffc87",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "331810105fd772866cdafad07958a354c406be0e5946f85916fe27e6e98f354d",
+        "coverage_complete": true,
+        "engine_cases": 8,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 8,
+        "profile": "boundary-cpu-conformance",
+        "run_sha256": "cdf0512cece06ad0473410f61d4bc955af3a2af34ff73f6d9bd86c80bf63cded",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "bb1ca8d2a0b127c92da5c63184de94624b40ad1d255a8fadb54fd429e590b4fc",
+        "coverage_complete": true,
+        "engine_cases": 54,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 54,
+        "profile": "certification",
+        "run_sha256": "7a9515c2e67f28a960834e60838ba533d775cae96f333aad2080ac77b1a91e2d",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "23e24fb1ad85101b1bc5cf7f703a590b299a051b6e6617c8a701d638617271bd",
+        "coverage_complete": true,
+        "engine_cases": 20,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 20,
+        "profile": "controlled-conformance",
+        "run_sha256": "045ce3aa8d297dd5dda70abd78d7d6c67d07bec4aa411b42953100dd50c2d374",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "9bb06e9274edf41fb1b1190ac62b0124889cde9b5bc35c6d149d3cf650dcd891",
+        "coverage_complete": true,
+        "engine_cases": 48,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 48,
+        "profile": "dataframe-conformance",
+        "run_sha256": "eea7d3c75313c65c593233fcd4ef73bd32b533421e4d2ebb6bb75a4d0c8f9d1e",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "3c69f3bdfdc52adbb8e6713b46a95d5805c006773125ee474ba85a5480221be2",
+        "coverage_complete": true,
+        "engine_cases": 72,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 72,
+        "profile": "migration-smoke",
+        "run_sha256": "6b032fb200e46444f6e5e350b3c462da659a94c51c3a42956e380c672b1fabd1",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "1e98220164b8d8fb19fba263eacbd99587b274379a70f4e206a1da6a70e0c962",
+        "coverage_complete": true,
+        "engine_cases": 6,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 6,
+        "profile": "model-conformance",
+        "run_sha256": "3ca1559d57555f7d4a31fc52f0b7eef2dbe5abf271f1cdc3463243446333d5ef",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "27b8e3fa1faf96dc8b23426bcc9c5027fcb970c501a6e61cbae39fd3679dc711",
+        "coverage_complete": true,
+        "engine_cases": 10,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 10,
+        "profile": "neural-cpu-conformance",
+        "run_sha256": "41ec25f29d5d66a17b3ed0a3858883e4657b164622aebc28890fefe5c6a65dac",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "eb30fc808a8f27b273a636b7ec2bd1d4d4d41f64e990011ff3d4166528caa8a9",
+        "coverage_complete": true,
+        "engine_cases": 38,
+        "failures": [
+          {
+            "batch": 0,
+            "case": "nist-wampler4-binary64",
+            "case_key": "7095d33204fcc176e95997a971d5a0f93014874198aac66a186dbb3db151e830",
+            "engine": "pandas",
+            "error": "Worker exited 1; see nist-wampler4-binary64-pandas-0.log",
+            "worker_error": "Output mismatch at 0: 1.0000000028854616 != 1.0"
+          },
+          {
+            "batch": 0,
+            "case": "nist-wampler5-binary64",
+            "case_key": "e723b995028672e574ac2d2588540d12777e73222fa9184726d845aeec3da018",
+            "engine": "pandas",
+            "error": "Worker exited 1; see nist-wampler5-binary64-pandas-0.log",
+            "worker_error": "Output mismatch at 0: 1.0000003429656807 != 1.0"
+          }
+        ],
+        "infrastructure_errors": [],
+        "passed": 36,
+        "profile": "numerical-binary64",
+        "run_sha256": "34ed2602b4d96ae87c51ac3bb67d043c56fdb74050dd39e621ea1bbcd534770f",
+        "status": "failed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "d08e5cbdd6396f5d264a284d6d70e7fc8e7b1c22cd00995d572aada11b46e323",
+        "coverage_complete": true,
+        "engine_cases": 38,
+        "failures": [
+          {
+            "batch": 0,
+            "case": "nist-wampler4-decimal",
+            "case_key": "a3a521a1f3d3cb3a77035135c1204de46e8ec84c7ae34c1e532c958594777904",
+            "engine": "pandas",
+            "error": "Worker exited 1; see nist-wampler4-decimal-pandas-0.log",
+            "worker_error": "Output mismatch at 0: 1.0000000028854616 != 1.0"
+          },
+          {
+            "batch": 0,
+            "case": "nist-wampler5-decimal",
+            "case_key": "e6cff6554cf1271199895148b590f4539a91fb8b50860bb56c7c2a3cba0645fb",
+            "engine": "pandas",
+            "error": "Worker exited 1; see nist-wampler5-decimal-pandas-0.log",
+            "worker_error": "Output mismatch at 0: 1.0000003429656807 != 1.0"
+          }
+        ],
+        "infrastructure_errors": [],
+        "passed": 36,
+        "profile": "numerical-conformance",
+        "run_sha256": "aaa2eb16ffadcd08d2916a799cf27555a92fe09b31d79d90ec33062c726e25d9",
+        "status": "failed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "b9e931c785f46fe21eac24895e0e3ae35abf05b9c6d811129ee4faa668b86eef",
+        "coverage_complete": true,
+        "engine_cases": 22,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 22,
+        "profile": "public-smoke",
+        "run_sha256": "e15978af79853f3dcdf6e9dc499947f3f6217d6f78d4b2cb84e66dc83dd1587c",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "43526de245c95a942e42ca935e0ad508b57ac0e3d42333ee94f060f27e4b0a35",
+        "coverage_complete": true,
+        "engine_cases": 28,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 28,
+        "profile": "smoke",
+        "run_sha256": "a9f452a8238f5255a594d995291d8f90047a91d47808783cc53d3ef9bf8cee65",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "c49631347264158da1986a1514445c095746143f88ea06db8f108fc228af6ee8",
+        "coverage_complete": true,
+        "engine_cases": 12,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 12,
+        "profile": "supervised-conformance",
+        "run_sha256": "4fc1e05de276b1498d55dbf2a7d0b92954d0572f117b4d47526851bee8731ea1",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "d3497decdbca7260cc301e7a0c46d4a11f628b6ee4ce4ee12c358ee6982d8d66",
+        "coverage_complete": true,
+        "engine_cases": 8,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 8,
+        "profile": "scientific-workflow",
+        "run_sha256": "fcf91220aa24a29d936e00e9d08bbad34819bff6203a359f37faf14059519b4d",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "0a38e59a134aa143876232ee7b61947eab0882939d0ded46f234282e65c5a848",
+        "coverage_complete": true,
+        "engine_cases": 12,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 12,
+        "profile": "persisted-workflow",
+        "run_sha256": "48c00092dca32e4e2488563925dd4934dcebdf43e0af840433584cb7d0af1c2d",
+        "status": "passed",
+        "tier": "cpu"
+      },
+      {
+        "certificate_sha256": "3b1fe2eaac086e80bcf6cbaa2e29931f5d1eb4e598f563780004d4f5ce08afb6",
+        "coverage_complete": true,
+        "engine_cases": 12,
+        "failures": [],
+        "infrastructure_errors": [],
+        "passed": 12,
+        "profile": "neural-shaped-cpu-conformance",
+        "run_sha256": "032c5068fba817ccee44c1eccc7608746fcaa7e20f7ff13ae46eb6d77b599ae0",
+        "status": "passed",
+        "tier": "cpu"
+      }
+    ]
+  },
+  "regression_policy": {
+    "status": "passed",
+    "blocking": [],
+    "known_failures": [
+      {
+        "batch": 0,
+        "case": "nist-wampler4-binary64",
+        "case_key": "7095d33204fcc176e95997a971d5a0f93014874198aac66a186dbb3db151e830",
+        "classification": "comparator-accuracy",
+        "engine": "pandas",
+        "error": "Worker exited 1; see nist-wampler4-binary64-pandas-0.log",
+        "profile": "numerical-binary64",
+        "reason": "Comparison-engine accuracy failure against the independent reference; this is not an oracle or tolerance error.",
+        "reference_basis": "binary64-v1",
+        "worker_error": "Output mismatch at 0: 1.0000000028854616 != 1.0"
+      },
+      {
+        "batch": 0,
+        "case": "nist-wampler5-binary64",
+        "case_key": "e723b995028672e574ac2d2588540d12777e73222fa9184726d845aeec3da018",
+        "classification": "comparator-accuracy",
+        "engine": "pandas",
+        "error": "Worker exited 1; see nist-wampler5-binary64-pandas-0.log",
+        "profile": "numerical-binary64",
+        "reason": "Comparison-engine accuracy failure against the independent reference; this is not an oracle or tolerance error.",
+        "reference_basis": "binary64-v1",
+        "worker_error": "Output mismatch at 0: 1.0000003429656807 != 1.0"
+      },
+      {
+        "batch": 0,
+        "case": "nist-wampler4-decimal",
+        "case_key": "a3a521a1f3d3cb3a77035135c1204de46e8ec84c7ae34c1e532c958594777904",
+        "classification": "comparator-accuracy",
+        "engine": "pandas",
+        "error": "Worker exited 1; see nist-wampler4-decimal-pandas-0.log",
+        "profile": "numerical-conformance",
+        "reason": "Comparison-engine accuracy failure against the independent reference; this is not an oracle or tolerance error.",
+        "reference_basis": "nist-decimal-v1",
+        "worker_error": "Output mismatch at 0: 1.0000000028854616 != 1.0"
+      },
+      {
+        "batch": 0,
+        "case": "nist-wampler5-decimal",
+        "case_key": "e6cff6554cf1271199895148b590f4539a91fb8b50860bb56c7c2a3cba0645fb",
+        "classification": "comparator-accuracy",
+        "engine": "pandas",
+        "error": "Worker exited 1; see nist-wampler5-decimal-pandas-0.log",
+        "profile": "numerical-conformance",
+        "reason": "Comparison-engine accuracy failure against the independent reference; this is not an oracle or tolerance error.",
+        "reference_basis": "nist-decimal-v1",
+        "worker_error": "Output mismatch at 0: 1.0000003429656807 != 1.0"
+      }
+    ]
+  },
+  "compatibility": "Apple Swift version 6.3.3 (swift-6.3.3-RELEASE)\nTarget: arm64-apple-macosx28.0\n",
+  "checked_layout_error_executions": [
+    8,
+    1
+  ],
+  "limits": [
+    "Swift CodeQL is unsupported with the retained Xcode 27 / Swift 6.4 toolchain.",
+    "Native xccov output is not a library source coverage percentage.",
+    "Large layout tests validate metadata without allocating the corresponding matrices.",
+    "Four known Python Wampler reference failures remain under the unchanged acceptance policy."
+  ]
+}

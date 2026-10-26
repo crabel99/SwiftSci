@@ -1,0 +1,36 @@
+{
+  "case_key": "7d6bf0eda474f44ea2ac2af7a9b4272567ebb62d78e883214bb85b692bbf2d59",
+  "engine_version": "mlx 0.31.1; mlx-metal 0.31.1; numpy 2.5.3",
+  "execution": {
+    "active_threads_measured": false,
+    "configured_pool_sizes": {},
+    "mode": "legacy-capped",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "POLARS_MAX_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    }
+  },
+  "peak_rss_bytes": 113000448,
+  "samples": [
+    {
+      "elapsed_ns": 1551959,
+      "maximum_absolute_error": 0.0,
+      "output_sha256": "fc46ef2bd056a190edb2740069c64d17b051fb931eea2a21834af67918ec666c",
+      "timing_resolved": true,
+      "validated": true
+    },
+    {
+      "elapsed_ns": 1471833,
+      "maximum_absolute_error": 0.0,
+      "output_sha256": "fc46ef2bd056a190edb2740069c64d17b051fb931eea2a21834af67918ec666c",
+      "timing_resolved": true,
+      "validated": true
+    }
+  ],
+  "schema_version": 1,
+  "status": "passed"
+}

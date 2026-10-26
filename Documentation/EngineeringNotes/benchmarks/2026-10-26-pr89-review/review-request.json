@@ -1,0 +1,62 @@
+{
+  "pull_request": {
+    "url": "https://github.com/Nodibell/SwiftSci/pull/89",
+    "number": 89,
+    "state": "open",
+    "merged": false,
+    "mergeable": true,
+    "draft": false,
+    "body": "PCA previously required exporting prepared preprocessing results into nested rows. Add fit, transform and fitTransform for PreparedNumericBatch and PreparedNumericMatrix so training and held-out projection retain ordered feature names, original row positions and matrix layout. A DocC guide demonstrates train-only standardization followed by PCA.\n\nCPU paths share centered column-major input with the existing full and randomized solvers. PCA omits unused randomized left-vector back-projection; public RandomizedSVD still returns complete U. Fit state commits only after successful validation and computation. Prepared inputs reject missing/nonfinite values and enforce fitted feature names. The documented fitting boundary also rejects nonfinite legacy inputs and GPU Float overflow. Existing device routing, solver defaults and projection accumulation are preserved.\n\nValidation:\n\n- 656 affected native tests passed in Debug and 656 in Release, with no failures or skips, including prepared layouts, provenance, invalid input, failed refits and GPU behavior.\n- Six standardized model-conformance runs and certificate audit passed with unchanged tolerances.\n- 90 fresh-process complete-workflow runs across wine, tall and wide data, both CPU solvers, and legacy/batch/both matrix layouts passed 540 field comparisons. Exported numerical results matched the fresh unchanged baseline exactly; full SVD also matched NumPy at 1e-12 absolute/relative tolerance.\n- SwiftCluster DocC conversion passed without warnings.\n\nResource observations are limited to three repetitions on one Mac. Prepared batches used less peak RSS on the tall and wide cases; timings were mixed. No general speed claim or process memory bound is made. [Design and qualification records](https://github.com/crabel99/SwiftSci/blob/fea529e08cffc46318742f8b54a0545e45f7e9b8/Documentation/EngineeringNotes/benchmarks/2026-10-26-prepared-pca/README.md) are committed separately on the fork's engineering-notes branch.\n",
+    "title": "feat: support prepared PCA fitting and projection",
+    "base": "main",
+    "base_sha": "e19db7dda4567c425b7eb002da82e234e6c7980f",
+    "head": "codex/prepared-pca-workflow",
+    "head_sha": "09607a7e9caa2b7166651dcaaa167178f6097b55",
+    "head_repo_id": 1388045958,
+    "head_repo_full_name": "crabel99/SwiftSci",
+    "merge_commit_sha": "b9a380691f12379c5d025af7d4ce38498390e353",
+    "user": {
+      "login": "crabel99",
+      "name": "crabel99",
+      "email": null,
+      "avatar_url": "https://avatars.githubusercontent.com/u/9408922?v=4",
+      "id": 9408922
+    },
+    "requested_reviewers": null,
+    "requested_team_reviewers": null,
+    "created_at": "2026-10-26T12:32:47Z",
+    "updated_at": "2026-10-26T17:38:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "commits": 3,
+    "changed_files": 12,
+    "additions": 684,
+    "deletions": 475,
+    "display_url": "https://github.com/Nodibell/SwiftSci/pull/89",
+    "display_title": "feat: support prepared PCA fitting and projection"
+  },
+  "maintainer_review": [
+    {
+      "url": "https://github.com/Nodibell/SwiftSci/pull/89#pullrequestreview-5656401705",
+      "body": "The prepared PCA integration looks well structured, particularly the preservation of feature names, row provenance, and fitted-state consistency.\n\nBefore merging, please add checked dimension conversions and overflow-safe workspace sizing in PCAComputation.fullSVD. Also consider a regression test for finite inputs whose intermediate mean accumulation overflows.\n\nOnce these are addressed and CI is green, this should be ready for another review.",
+      "user": {
+        "login": "Nodibell",
+        "name": "Nodibell",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/92151869?u=318338b1510ec1edd48c774ab9c282bcee3f036b&v=4",
+        "id": 92151869
+      },
+      "id": 5656401705,
+      "pull_request_review_id": null,
+      "in_reply_to_id": null,
+      "created_at": "2026-10-26T17:38:40Z",
+      "updated_at": null,
+      "review": "CHANGES_REQUESTED",
+      "side": null,
+      "line": null,
+      "start_line": null,
+      "path": null,
+      "body_html": "<p dir=\"auto\">The prepared PCA integration looks well structured, particularly the preservation of feature names, row provenance, and fitted-state consistency.</p>\n<p dir=\"auto\">Before merging, please add checked dimension conversions and overflow-safe workspace sizing in PCAComputation.fullSVD. Also consider a regression test for finite inputs whose intermediate mean accumulation overflows.</p>\n<p dir=\"auto\">Once these are addressed and CI is green, this should be ready for another review.</p>"
+    }
+  ]
+}
