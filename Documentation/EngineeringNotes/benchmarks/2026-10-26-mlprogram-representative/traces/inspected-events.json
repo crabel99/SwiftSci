@@ -1,0 +1,854 @@
+[
+  {
+    "name": "wdbc-program16-cpu",
+    "target_pid": 3342,
+    "model_sha256": "1faa8873573842208eecec01b123508dd7ea64bafa8529a1a8793eec510645a0",
+    "measurement_start_ns": 1520155083,
+    "measurement_end_ns": 3610723458,
+    "completed_requests": 28449,
+    "event_counts": {
+      "Input Validation": 28449,
+      "Prediction": 28449,
+      "CPU": 28449,
+      "Output Transformation": 28449
+    },
+    "dispatch_counts": {
+      "CPU": 28449
+    },
+    "positive_dispatch_counts": {
+      "CPU": 28449
+    },
+    "models": {
+      "program16-2": 28449
+    },
+    "examples": [
+      {
+        "start_ns": 1520210750,
+        "duration_ns": 9458,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1520333125,
+        "duration_ns": 11708,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1520449208,
+        "duration_ns": 11833,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1520544083,
+        "duration_ns": 9583,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1520625791,
+        "duration_ns": 9042,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1520700916,
+        "duration_ns": 8125,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1520781000,
+        "duration_ns": 8750,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1520857125,
+        "duration_ns": 8500,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1520927208,
+        "duration_ns": 8375,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1520998708,
+        "duration_ns": 8167,
+        "device": "CPU",
+        "model": "program16-2"
+      }
+    ],
+    "global_ane_hardware_rows": 0,
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program16-cpu.coreml.xml",
+        "sha256": "759b5b670d95f23d22e568c546892264a2208919c61492916d265072e6674807",
+        "bytes": 39206613
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program16-cpu.intervals.xml",
+        "sha256": "37b1536cab96330ef18c4d53d797f1831ee95afd07c80641775418edc98eaabf",
+        "bytes": 4960
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program16-cpu.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "bytes": 1009
+      }
+    },
+    "toc_sha256": "c33738d2148ea9895a370976f13f8f791ce3f295fffa4bb11462592b9b75c16d",
+    "record_sha256": "49acded657294b1a122d39e1e490e11c5b62fd8a0775b28cb826e8d23628d4d6",
+    "attribution": "Positive target-process Core ML model-dispatch events inside the owned measurement interval. Global ANE hardware rows are corroborating observations only and are not attributed to this model by row count. Instrumented timings are excluded from performance comparisons."
+  },
+  {
+    "name": "wdbc-program16-neural",
+    "target_pid": 3397,
+    "model_sha256": "1faa8873573842208eecec01b123508dd7ea64bafa8529a1a8793eec510645a0",
+    "measurement_start_ns": 1153835750,
+    "measurement_end_ns": 3230054708,
+    "completed_requests": 28335,
+    "event_counts": {
+      "Input Validation": 28335,
+      "Prediction": 28335,
+      "Input Copy": 28335,
+      "CPU": 28335,
+      "Output Transformation": 28335
+    },
+    "dispatch_counts": {
+      "CPU": 28335
+    },
+    "positive_dispatch_counts": {
+      "CPU": 28335
+    },
+    "models": {
+      "program16-2": 28335
+    },
+    "examples": [
+      {
+        "start_ns": 1153888208,
+        "duration_ns": 7708,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1154000083,
+        "duration_ns": 5958,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1154082625,
+        "duration_ns": 5666,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1154160625,
+        "duration_ns": 5458,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1154236166,
+        "duration_ns": 5334,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1154335958,
+        "duration_ns": 6792,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1154431791,
+        "duration_ns": 10000,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1154515416,
+        "duration_ns": 5334,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1154593083,
+        "duration_ns": 5875,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1154663666,
+        "duration_ns": 5292,
+        "device": "CPU",
+        "model": "program16-2"
+      }
+    ],
+    "global_ane_hardware_rows": 0,
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program16-neural.coreml.xml",
+        "sha256": "05dee62a53803ab299163d47b1454780e9e3470e12101a7a1ca8563eb059a366",
+        "bytes": 48814420
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program16-neural.intervals.xml",
+        "sha256": "6ddcf04e160494f456287b94f01104a8bc859b43a5c82342946ba7f59f83a5d1",
+        "bytes": 5087
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program16-neural.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "bytes": 1009
+      }
+    },
+    "toc_sha256": "2c0cbdc3207d7c7cdf1e439ff824c3a38f97cf1d4d2f0b187c63cfe8f2084880",
+    "record_sha256": "b5c65f0e5e1dcc71ed6d8095afbfaf16a23585a7ef2e63299fe708d747c969c1",
+    "attribution": "Positive target-process Core ML model-dispatch events inside the owned measurement interval. Global ANE hardware rows are corroborating observations only and are not attributed to this model by row count. Instrumented timings are excluded from performance comparisons."
+  },
+  {
+    "name": "wdbc-program32-cpu",
+    "target_pid": 3444,
+    "model_sha256": "0661a7a82d3bd4b3f2fa51e26d207bab271c1fdc5190febf571f679048febcdf",
+    "measurement_start_ns": 1044995125,
+    "measurement_end_ns": 3125564166,
+    "completed_requests": 28461,
+    "event_counts": {
+      "Input Validation": 28461,
+      "Prediction": 28461,
+      "CPU": 28461,
+      "Output Transformation": 28461
+    },
+    "dispatch_counts": {
+      "CPU": 28461
+    },
+    "positive_dispatch_counts": {
+      "CPU": 28461
+    },
+    "models": {
+      "program32-2": 28461
+    },
+    "examples": [
+      {
+        "start_ns": 1045042208,
+        "duration_ns": 9792,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1045142083,
+        "duration_ns": 8542,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1045222000,
+        "duration_ns": 8208,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1045326791,
+        "duration_ns": 12875,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1045441250,
+        "duration_ns": 11791,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1045538750,
+        "duration_ns": 8958,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1045618083,
+        "duration_ns": 8458,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1045691875,
+        "duration_ns": 7958,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1045769958,
+        "duration_ns": 8542,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1045844875,
+        "duration_ns": 8041,
+        "device": "CPU",
+        "model": "program32-2"
+      }
+    ],
+    "global_ane_hardware_rows": 0,
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program32-cpu.coreml.xml",
+        "sha256": "d46fa14d21803ccad8683024aceb2f766b48cc42120fadf38dfec43ec080c32a",
+        "bytes": 39221320
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program32-cpu.intervals.xml",
+        "sha256": "162aae97f8b8accbe0d9dee9495ac0d1799c967078e4eec3b8dd451e1fd0513d",
+        "bytes": 5087
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program32-cpu.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "bytes": 1009
+      }
+    },
+    "toc_sha256": "5acca59f428c1e983487c7e0190fa2bc7b61bf5d72e41daeef29974e7796fb9f",
+    "record_sha256": "7793e099c71f342d3f67103b2facc2b0bdead0a4ed1b392d25dd6b6bd0d94ed2",
+    "attribution": "Positive target-process Core ML model-dispatch events inside the owned measurement interval. Global ANE hardware rows are corroborating observations only and are not attributed to this model by row count. Instrumented timings are excluded from performance comparisons."
+  },
+  {
+    "name": "wdbc-program32-neural",
+    "target_pid": 3485,
+    "model_sha256": "0661a7a82d3bd4b3f2fa51e26d207bab271c1fdc5190febf571f679048febcdf",
+    "measurement_start_ns": 1001352416,
+    "measurement_end_ns": 3101871500,
+    "completed_requests": 27429,
+    "event_counts": {
+      "Input Validation": 27429,
+      "Prediction": 27429,
+      "Input Copy": 27429,
+      "CPU": 27429,
+      "Output Transformation": 27429
+    },
+    "dispatch_counts": {
+      "CPU": 27429
+    },
+    "positive_dispatch_counts": {
+      "CPU": 27429
+    },
+    "models": {
+      "program32-2": 27429
+    },
+    "examples": [
+      {
+        "start_ns": 1001422291,
+        "duration_ns": 13209,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1001557250,
+        "duration_ns": 15041,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1001661833,
+        "duration_ns": 13500,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1001758375,
+        "duration_ns": 9333,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1001863416,
+        "duration_ns": 9584,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1001954125,
+        "duration_ns": 8958,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1002029875,
+        "duration_ns": 8625,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1002127625,
+        "duration_ns": 9291,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1002206500,
+        "duration_ns": 8625,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1002279541,
+        "duration_ns": 8500,
+        "device": "CPU",
+        "model": "program32-2"
+      }
+    ],
+    "global_ane_hardware_rows": 0,
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program32-neural.coreml.xml",
+        "sha256": "10ed3e35c9661c9aac90bdb2c7d4f13553fc90bb301aa802545817d8851a3bf2",
+        "bytes": 47266557
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program32-neural.intervals.xml",
+        "sha256": "4da9104b0e6e7dd6bfddb1be0449da865af0145f641f5d8791350478d03e616f",
+        "bytes": 4959
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program32-neural.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "bytes": 1009
+      }
+    },
+    "toc_sha256": "f89a82012a9144c9e433ee18630bc19184b28663a416ca64ba25b65e8cd76c2f",
+    "record_sha256": "59feebd34cd74013535842d1d7de84cf588473e62618c95b30d7e6de820d6f20",
+    "attribution": "Positive target-process Core ML model-dispatch events inside the owned measurement interval. Global ANE hardware rows are corroborating observations only and are not attributed to this model by row count. Instrumented timings are excluded from performance comparisons."
+  },
+  {
+    "name": "wine-program16-cpu",
+    "target_pid": 3536,
+    "model_sha256": "7a18479e807a51070601e6ebf31f08f170ded5c3521e1bddf08bd82fbe7ff7ef",
+    "measurement_start_ns": 945121541,
+    "measurement_end_ns": 3036422541,
+    "completed_requests": 25901,
+    "event_counts": {
+      "Input Validation": 25901,
+      "Prediction": 25901,
+      "CPU": 25901,
+      "Output Transformation": 25901
+    },
+    "dispatch_counts": {
+      "CPU": 25901
+    },
+    "positive_dispatch_counts": {
+      "CPU": 25901
+    },
+    "models": {
+      "program16-2": 25901
+    },
+    "examples": [
+      {
+        "start_ns": 945203916,
+        "duration_ns": 14125,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 945329125,
+        "duration_ns": 12833,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 945420291,
+        "duration_ns": 12292,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 945528541,
+        "duration_ns": 18667,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 945632083,
+        "duration_ns": 13417,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 945717958,
+        "duration_ns": 12458,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 945794833,
+        "duration_ns": 12542,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 945881500,
+        "duration_ns": 13291,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 945970208,
+        "duration_ns": 12583,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 946045208,
+        "duration_ns": 12333,
+        "device": "CPU",
+        "model": "program16-2"
+      }
+    ],
+    "global_ane_hardware_rows": 0,
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program16-cpu.coreml.xml",
+        "sha256": "fe35d7edb640a49cd10ac255a8187f1135d8c6fc76b08a65ac9665547d5e00af",
+        "bytes": 35694518
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program16-cpu.intervals.xml",
+        "sha256": "24deb3421a408c22b5ec25f2be6cbdd846770621809cdba724890575ed6ab43b",
+        "bytes": 4958
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program16-cpu.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "bytes": 1009
+      }
+    },
+    "toc_sha256": "180e1cb24eb9c11ce362cf6892de49f164d98744030e16e4a32442cde293e7e8",
+    "record_sha256": "6a77c68c95589075ab00ec1ec99dd5435e68e88be84ee5047eb6e70ef4d372c7",
+    "attribution": "Positive target-process Core ML model-dispatch events inside the owned measurement interval. Global ANE hardware rows are corroborating observations only and are not attributed to this model by row count. Instrumented timings are excluded from performance comparisons."
+  },
+  {
+    "name": "wine-program16-neural",
+    "target_pid": 4352,
+    "model_sha256": "7a18479e807a51070601e6ebf31f08f170ded5c3521e1bddf08bd82fbe7ff7ef",
+    "measurement_start_ns": 1195313791,
+    "measurement_end_ns": 3280172041,
+    "completed_requests": 25989,
+    "event_counts": {
+      "Input Validation": 25989,
+      "Prediction": 25989,
+      "Input Copy": 25989,
+      "CPU": 25989,
+      "Output Transformation": 25989
+    },
+    "dispatch_counts": {
+      "CPU": 25989
+    },
+    "positive_dispatch_counts": {
+      "CPU": 25989
+    },
+    "models": {
+      "program16-2": 25989
+    },
+    "examples": [
+      {
+        "start_ns": 1195391291,
+        "duration_ns": 14167,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1195527375,
+        "duration_ns": 11000,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1195624000,
+        "duration_ns": 10416,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1195714166,
+        "duration_ns": 10000,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1195795333,
+        "duration_ns": 10292,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1195898083,
+        "duration_ns": 14292,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1195990750,
+        "duration_ns": 10000,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1196074666,
+        "duration_ns": 11250,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1196156916,
+        "duration_ns": 10000,
+        "device": "CPU",
+        "model": "program16-2"
+      },
+      {
+        "start_ns": 1196234250,
+        "duration_ns": 9916,
+        "device": "CPU",
+        "model": "program16-2"
+      }
+    ],
+    "global_ane_hardware_rows": 0,
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program16-neural.coreml.xml",
+        "sha256": "007fcbbe57e3fb5f55c6375806a9d82043f851c14a3684f37ac73b2b6516c58f",
+        "bytes": 44782408
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program16-neural.intervals.xml",
+        "sha256": "8a226c277b29123eac0eca189118012979324c8b1895ff1250d17bed420f41a3",
+        "bytes": 5087
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program16-neural.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "bytes": 1009
+      }
+    },
+    "toc_sha256": "522c9d48372a1cdeaa0876b50962a5ab1bcc6146ee213382d09176ba2d4b6c70",
+    "record_sha256": "fc1990a6ab7649108e5764a6c17ba7c51feb7ea3ea69e827a84cfe061df4d2b4",
+    "attribution": "Positive target-process Core ML model-dispatch events inside the owned measurement interval. Global ANE hardware rows are corroborating observations only and are not attributed to this model by row count. Instrumented timings are excluded from performance comparisons."
+  },
+  {
+    "name": "wine-program32-cpu",
+    "target_pid": 4391,
+    "model_sha256": "d782c743af5bda94e5f62db967587814a2d4e150867b4a46ef0e29510afe0222",
+    "measurement_start_ns": 1035014791,
+    "measurement_end_ns": 3102281125,
+    "completed_requests": 26496,
+    "event_counts": {
+      "Input Validation": 26496,
+      "Prediction": 26496,
+      "CPU": 26496,
+      "Output Transformation": 26496
+    },
+    "dispatch_counts": {
+      "CPU": 26496
+    },
+    "positive_dispatch_counts": {
+      "CPU": 26496
+    },
+    "models": {
+      "program32-2": 26496
+    },
+    "examples": [
+      {
+        "start_ns": 1035073416,
+        "duration_ns": 20667,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1035202916,
+        "duration_ns": 15459,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1035298250,
+        "duration_ns": 13083,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1035385291,
+        "duration_ns": 12625,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1035465708,
+        "duration_ns": 12292,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1035543500,
+        "duration_ns": 11750,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1035620375,
+        "duration_ns": 13125,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1035696500,
+        "duration_ns": 13791,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1035773333,
+        "duration_ns": 13375,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1035850958,
+        "duration_ns": 12333,
+        "device": "CPU",
+        "model": "program32-2"
+      }
+    ],
+    "global_ane_hardware_rows": 0,
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program32-cpu.coreml.xml",
+        "sha256": "10d8bbf18d15d2bf8f846ba78c8f7239981a1fc79fbd7fd04567aa949103dc42",
+        "bytes": 36502504
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program32-cpu.intervals.xml",
+        "sha256": "4097c5b235a1bdbdceb56caec564e07066ef95540f0c1081b3953442fa5002af",
+        "bytes": 4960
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program32-cpu.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "bytes": 1009
+      }
+    },
+    "toc_sha256": "279227c0d9f96320aecf131d25b7b66f2d5c35af7633ebe9746b7c6d5dfe1e9a",
+    "record_sha256": "be3d4f037494c32d366101371cffb1cc9008db95c0cc310f1e96a745c6c9894e",
+    "attribution": "Positive target-process Core ML model-dispatch events inside the owned measurement interval. Global ANE hardware rows are corroborating observations only and are not attributed to this model by row count. Instrumented timings are excluded from performance comparisons."
+  },
+  {
+    "name": "wine-program32-neural",
+    "target_pid": 4429,
+    "model_sha256": "d782c743af5bda94e5f62db967587814a2d4e150867b4a46ef0e29510afe0222",
+    "measurement_start_ns": 1463760708,
+    "measurement_end_ns": 3496749166,
+    "completed_requests": 24388,
+    "event_counts": {
+      "Input Validation": 24388,
+      "Prediction": 24388,
+      "Input Copy": 24388,
+      "CPU": 24388,
+      "Output Transformation": 24388
+    },
+    "dispatch_counts": {
+      "CPU": 24388
+    },
+    "positive_dispatch_counts": {
+      "CPU": 24388
+    },
+    "models": {
+      "program32-2": 24388
+    },
+    "examples": [
+      {
+        "start_ns": 1463860708,
+        "duration_ns": 19542,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1464015500,
+        "duration_ns": 14375,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1464119250,
+        "duration_ns": 14166,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1464209583,
+        "duration_ns": 13583,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1464293750,
+        "duration_ns": 13416,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1464375916,
+        "duration_ns": 13042,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1464457500,
+        "duration_ns": 13083,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1464538083,
+        "duration_ns": 13083,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1464642500,
+        "duration_ns": 17708,
+        "device": "CPU",
+        "model": "program32-2"
+      },
+      {
+        "start_ns": 1464766458,
+        "duration_ns": 17708,
+        "device": "CPU",
+        "model": "program32-2"
+      }
+    ],
+    "global_ane_hardware_rows": 0,
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program32-neural.coreml.xml",
+        "sha256": "2651c0067bd0e465afdfe3f81ab624d73dcc49f693e145fbe67f4adc615628d0",
+        "bytes": 42024015
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program32-neural.intervals.xml",
+        "sha256": "22af2b9c0f649d9fc0ab698eb0e01db60d998838877f812d62a001f3a975f145",
+        "bytes": 5087
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program32-neural.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "bytes": 1009
+      }
+    },
+    "toc_sha256": "a73b1e48e62e773ec24c444e9427677b7f9522408bb00f09f1d4428cbd4f3427",
+    "record_sha256": "0bbfd8371bacf7a4947ff0e6634520d1ebd466c4c7a8adf18f8148a4f4773d98",
+    "attribution": "Positive target-process Core ML model-dispatch events inside the owned measurement interval. Global ANE hardware rows are corroborating observations only and are not attributed to this model by row count. Instrumented timings are excluded from performance comparisons."
+  }
+]

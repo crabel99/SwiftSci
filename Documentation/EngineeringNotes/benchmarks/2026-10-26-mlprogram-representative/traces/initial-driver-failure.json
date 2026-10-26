@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-26T21:00:19.173Z",
+  "scoped_session_event_sha256": "8847df76c56a1fd51501f00936b537e5223859417c4803f2d5c5bbd7d35cd267",
+  "command": [
+    "/bin/zsh",
+    "-lc",
+    "python3 /private/tmp/swiftsci-mlprogram-20261026/trace-programs.py --root /private/tmp/swiftsci-mlprogram-20261026 --output /private/tmp/swiftsci-mlprogram-20261026/traces"
+  ],
+  "status": "failed",
+  "aggregated_output": "/private/tmp/swiftsci-mlprogram-20261026/traces/ProfileWorker: replacing existing signature\nwdbc-program16-cpu\nFinished export to the file: /private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program16-cpu.toc.xml\nwdbc-program16-neural\nFinished export to the file: /private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program16-neural.toc.xml\nwdbc-program32-cpu\nFinished export to the file: /private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program32-cpu.toc.xml\nwdbc-program32-neural\nFinished export to the file: /private/tmp/swiftsci-mlprogram-20261026/traces/wdbc-program32-neural.toc.xml\nwine-program16-cpu\nTraceback (most recent call last):\n  File \"/private/tmp/swiftsci-mlprogram-20261026/trace-programs.py\", line 63, in <module>\n    code = process.wait(timeout=92)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py\", line 1279, in wait\n    return self._wait(timeout=timeout)\n           ~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py\", line 2076, in _wait\n    raise TimeoutExpired(self.args, timeout)\nsubprocess.TimeoutExpired: Command '['xcrun', 'xctrace', 'record', '--template', 'Time Profiler', '--instrument', 'Core ML', '--instrument', 'Neural Engine', '--instrument', 'Points of Interest', '--time-limit', '42s', '--output', '/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program16-cpu.trace', '--no-prompt', '--launch', '--', '/private/tmp/swiftsci-mlprogram-20261026/traces/ProfileWorker', '--coreml-concurrency', '/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program16-cpu.request.json', '/private/tmp/swiftsci-mlprogram-20261026/traces/wine-program16-cpu.json']' timed out after 92 seconds\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/private/tmp/swiftsci-mlprogram-20261026/trace-programs.py\", line 66, in <module>\n    os.killpg(process.pid, signal.SIGKILL)\n    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 1] Operation not permitted\n",
+  "exit_code": 1,
+  "duration": {
+    "secs": 164,
+    "nanos": 469667000
+  }
+}

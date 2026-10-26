@@ -4,9 +4,21 @@ This branch records the engineering rationale behind contributions from the `cra
 
 `codex/engineering-notes` is a documentation and evidence branch. It is not an implementation branch and is not intended to merge into upstream `main`. Individual PRs contain the relevant code, tests, public documentation, and a concise explanation of the verified results. Upstream design decisions remain with the maintainer.
 
-The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`. Entries are dated working records, not a claim that every proposal is accepted or every result applies to the latest code. The current contribution sequence is [testing #41](https://github.com/Nodibell/SwiftSci/pull/41), [repairs #43](https://github.com/Nodibell/SwiftSci/pull/43), [precision #44](https://github.com/Nodibell/SwiftSci/pull/44), and [compact preparation #45](https://github.com/Nodibell/SwiftSci/pull/45).
+The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`. Entries are dated working records, not a claim that every proposal is accepted or every result applies to the latest code. The initial contribution sequence was [testing #41](https://github.com/Nodibell/SwiftSci/pull/41), [repairs #43](https://github.com/Nodibell/SwiftSci/pull/43), [precision #44](https://github.com/Nodibell/SwiftSci/pull/44), and [compact preparation #45](https://github.com/Nodibell/SwiftSci/pull/45).
 
 ## Start here
+
+- [Representative weighted ML Programs](benchmarks/2026-10-26-mlprogram-representative/README.md) records full output vectors, strict precision failures, successful full-Float32 controls, bounded pool stress and CPU-only device dispatch evidence.
+
+- [PR89 maintainer correction](benchmarks/2026-10-26-pr89-review/README.md) records checked PCA dimensions and LAPACK workspace handling, including the correction that preserves native workspace-query limits.
+
+- [Representative Core ML workflows](benchmarks/2026-10-26-coreml-representative/README.md) records frozen real-data models, complete numerical workflows and the multiclass export correction.
+
+- [Logistic GPU zero-logit correction](benchmarks/2026-10-26-logistic-gpu-gradient/README.md) records the demonstrated gradient defect, regression and qualification.
+
+- [Prepared classification](benchmarks/2026-10-26-prepared-classification/README.md) records prepared logistic fitting and prediction with original row provenance.
+
+- [Prepared PCA](benchmarks/2026-10-26-prepared-pca/README.md) records fitting and projection through prepared matrices. The later PR89 review record carries the maintainer-requested sizing corrections.
 
 - [CSV String lookup cost and prefix trials](benchmarks/2026-10-22-csv-string-membership/README.md) separates parsing from matching, records default-token CPU gains and exhaustive Unicode-scalar coverage, and identifies setup amortization before production qualification.
 

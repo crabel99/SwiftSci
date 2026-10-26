@@ -1,0 +1,280 @@
+{
+  "application_quality_threshold": "not established",
+  "cases": [
+    [
+      "wine",
+      "cpu",
+      2
+    ],
+    [
+      "wine",
+      "neural",
+      2
+    ],
+    [
+      "wine",
+      "neural",
+      0
+    ],
+    [
+      "wine",
+      "neural",
+      1
+    ],
+    [
+      "wdbc",
+      "neural",
+      2
+    ],
+    [
+      "wdbc",
+      "cpu",
+      0
+    ],
+    [
+      "wdbc",
+      "neural",
+      1
+    ],
+    [
+      "wine",
+      "cpu",
+      0
+    ],
+    [
+      "wine",
+      "cpu",
+      1
+    ],
+    [
+      "wdbc",
+      "cpu",
+      2
+    ],
+    [
+      "wdbc",
+      "neural",
+      0
+    ],
+    [
+      "wdbc",
+      "cpu",
+      1
+    ]
+  ],
+  "converter_replacements": [
+    [
+      "for io16 in [False, True]:",
+      "for io16 in [False]:"
+    ],
+    [
+      "compute_precision=ct.precision.FLOAT16,",
+      "compute_precision=ct.precision.FLOAT32,"
+    ],
+    [
+      "program_compute_precision='float16'",
+      "program_compute_precision='float32'"
+    ]
+  ],
+  "executable": "/Users/crabel/Library/Caches/SwiftSci/coreml-transport-venv/bin/python",
+  "files": {
+    "/private/tmp/swiftsci-coreml-representative-20261026/trained-results/fixtures/wdbc-126.json": "d6d721da328af0299fd1df34869035602f7181a1cf5a4492c2cec9ab7f9c95ec",
+    "/private/tmp/swiftsci-coreml-representative-20261026/trained-results/fixtures/wdbc-training.json": "fd17a54a798f6fa39ac8e90ab40d11385f18f76c707caff623072a2cbe8dc389",
+    "/private/tmp/swiftsci-coreml-representative-20261026/trained-results/fixtures/wine-342.json": "ddad5097130baf4c2cc4504ba9f0cd1942a844f6612d4db2a4d508bb75b266d9",
+    "/private/tmp/swiftsci-coreml-representative-20261026/trained-results/fixtures/wine-training.json": "ccfdc0a6ae6fc78f1298c71962ce83125a048355cd3e7827d6ea774e539db947",
+    "/private/tmp/swiftsci-coreml-representative-20261026/trained-results/provenance.json": "b88e6a7bf20fcf6a6d5ad643f8995d4ce47f70158787779a470af31dcc12e8a4",
+    "/private/tmp/swiftsci-mlprogram-20261026/ProgramWorkflowProbe.swift": "60f48eff8f382ada5dde40283f33f908076e238c2dcc90f1e9d80108a14c4e61",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision-control.py": "c73c37205cfefcb469aa32e9a48c48256fa0fef17458165cc5f14e5ad93141e0",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/assessment.json": "36af15c0ad55d5282ee8f5a3fc2ce8bf024c11a79b85f72c4da015a9db71b5c9",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/converter.diff": "01d6ca7c1d5a42b760870976cc47a0e205727bc53beead9e3ea7fcdaf363ee1a",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/prepare_models-float32.py": "efad917f7fb3c3a5ab12c87d3938652e54b6e679aea5c61b7d167d3f66f2dd5a",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/prepare_models-original.py": "50c91b1f9c697867858954f1d73f29ec98fe000314c66ec167575dec9fb4b5aa",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-cpu-0.command.json": "f2677a856597a797c28568b7a69cbbc292197bc1192ed02231be41b293570032",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-cpu-0.json": "bdbe57859100111894541844636a32ec445cb6f6a31cf978954885bd9e12c158",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-cpu-0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-cpu-1.command.json": "b97b2aebb2ed90824be4a778ba8a14caea643ef392f806840c2cdee762b5519e",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-cpu-1.json": "3c61dc79510f7f89bda792304b65ed94f251b517aa861f965bb842b6fa6f1874",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-cpu-1.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-cpu-2.command.json": "dd8873ac324e5204f75188883caed89954345d99642afcd6ef6aaf39699d15a4",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-cpu-2.json": "3eb70ff678dd95e183b81202d323f280108a4312a8c045e6aac174e7b660cfe0",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-cpu-2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-neural-0.command.json": "0afbf4d08194ff2ed7de20a96ded538d53ea4d860da4de9045b997ee38bc6dce",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-neural-0.json": "d2596d1af90fa64d297776f88754a0ddc0c189a9ee5c465c76916d35739ba558",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-neural-0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-neural-1.command.json": "dab3a195b333bbf120f23acf52cccfa1ccb003042aee30324cb8cfc50f5600be",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-neural-1.json": "7a9265fe9f3b1e78799374b67705d19eafeff3731edaa3dca00bf906a5938383",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-neural-1.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-neural-2.command.json": "6225317fa44c35d78a46e27561149ea81a1036441a1c5a730d173ce8d5b2c72f",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-neural-2.json": "2e5406fb1563f8b190f164f5c782111972286f33c5da32f2389c42722b218912",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc-float32-neural-2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc/conversion-command.json": "4be03546530e54c12e86dfbfb6d4244f16f2ccb48b5f02c99a8b7fbbea381219",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc/conversion.log": "a6fda1dfeba988ae6385fc9c257faaec2ddf8a2ede691c7ddbfb3fe78dd541bd",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc/models/expected.f64": "045aa44e98a1364a431d783086ee63f471443fef7b36b660592b7aacae379f41",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc/models/input.f64": "38b1f3dfe942494198ce6dd108ce825cc87f4b7309d08bafd289d0a991e76c28",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc/models/legacy.mlmodel": "1e92f5ce8b0cb7248d5a6c18f244a890367e5db6ab4ac27f6b8c9d6fbc33f8d2",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc/models/manifest.json": "9f134393f38f945bd1b79819550d07c32098e8cd6aa437ecb57f60a93fe06e87",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc/models/program32.mlpackage/Data/com.apple.CoreML/model.mlmodel": "a480c0827a947ac309e0fe1e03a8b5e392d628f567d68a099158e4837a557479",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc/models/program32.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "f27ee9a997355d241baf3200009a5aa57c02f1c72f624463a34090ac77bb51fa",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc/models/program32.mlpackage/Manifest.json": "47215215c1ed109e71ea76de41b6b8bdbc67a81f9af8dfccf44743bb8ca1a53e",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-cpu-0.command.json": "706b6e8ad9b9bf86b11a0e7cc7756e2c02b16cfa6b4157df6d349f28cf8e6cc5",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-cpu-0.json": "79447bc874ee755d0d4874fb8fcf52cf85b7ee8cb54f75e01e4b805ec851643a",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-cpu-0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-cpu-1.command.json": "6952b892a807d9c9aebe2234eb6d725588a4147b7614fc02c1bb8c7f4c3430f2",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-cpu-1.json": "6c99d3ec2b83b9663915d8b05db55517501363dc67125e909cc6ac97605aa3ad",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-cpu-1.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-cpu-2.command.json": "e03f7c59fdc602b3fe85607dfcd0f0e367e300926aa0843f94a1eb424e44366f",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-cpu-2.json": "187a96186064f86f5efc331ca757f02264391c7b7ffb07763c041abfb3469f94",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-cpu-2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-neural-0.command.json": "c2a9a88a11d01e961a87b12a83a65a630259c9e4f166b00f8f172e8e01944496",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-neural-0.json": "dd951517b397dfd6df1fc23a4bf7ed787a0552803c25bf4ee046a43397fd32f1",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-neural-0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-neural-1.command.json": "7e3f0857bd80f225415bd37f261db420e2fffcb0f5bf8de48fb816e61e5d8a58",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-neural-1.json": "76e09bdead0dde668e7c6d4ac410f3ccebc635681e34224edd64ee04fb521880",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-neural-1.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-neural-2.command.json": "a0a1aef996044d639042379c08f3bef8b7efba756c69cc62647decfba4acb979",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-neural-2.json": "a6f82a660bab2d6ae23c227da4c6bba4ef3934ad0662673daf3ac8ddefc6fd9a",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine-float32-neural-2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine/conversion-command.json": "defafd90750ec96b93e455e1374adc8a5366fed3d23589d9509986531745857f",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine/conversion.log": "143157ca06b72dd468b20cf3889436e46a604b81ddc143e86b28c7219c7ce967",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine/models/expected.f64": "c31ece39cbf401180ee1af97cf2d3cf9827298eaea38c30400d5f1a7132336ba",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine/models/input.f64": "c47f24a9d0a1f882c8104381465e12d9028db48ec6ed3da29dff4b3852117187",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine/models/legacy.mlmodel": "c8536defc53d04798d2e98040733647826b448573b428f45d1c55b4ef9c67cc6",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine/models/manifest.json": "cee38502b26386c67b86f757b3b24ecc2ab7184c1ee2726b847abb2f0a17f8e1",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine/models/program32.mlpackage/Data/com.apple.CoreML/model.mlmodel": "852409fb90da057209995263c1dca97538b913b1af3edc268eb46d5261dbf37f",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine/models/program32.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "ccc0fed3156a02c9be1a03b2d1ad40e7667e14ea061955fa8fe664b55355b9cf",
+    "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine/models/program32.mlpackage/Manifest.json": "e1a30ec9644042ee57c05d67df4c16423c5f764d9d2b86e603ee2afa483c1928",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/provenance.json": "b55b5c2cd0101ec38616cc12d325320df053da1a1a81e6786301bd7df74aaa4b",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/conversion-command.json": "ef8763d6e3c699aa3fb54f121dce766f1945531bb2b4b7f6c2b83a3d8fa268f5",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/conversion.log": "db6c19914078fb81ad2525185eb2f1856ac0095399cb4060e4ddd43f048df057",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/expected.f64": "045aa44e98a1364a431d783086ee63f471443fef7b36b660592b7aacae379f41",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/fixture.json": "86edc2d12681af0fad7ff823c51574379a397bd17705dfa7415b6118b3bf86fb",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/frozen-fixture.json": "d6d721da328af0299fd1df34869035602f7181a1cf5a4492c2cec9ab7f9c95ec",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/input.f64": "38b1f3dfe942494198ce6dd108ce825cc87f4b7309d08bafd289d0a991e76c28",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/models/expected.f64": "045aa44e98a1364a431d783086ee63f471443fef7b36b660592b7aacae379f41",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/models/input.f64": "38b1f3dfe942494198ce6dd108ce825cc87f4b7309d08bafd289d0a991e76c28",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/models/legacy.mlmodel": "1e92f5ce8b0cb7248d5a6c18f244a890367e5db6ab4ac27f6b8c9d6fbc33f8d2",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/models/manifest.json": "d997aedc7085b940e372a42e44cf35e015d3766f9b6a44b9777aeeb69c0c44fc",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/models/program16.mlpackage/Data/com.apple.CoreML/model.mlmodel": "b524017b9aa02524cd5d8cfad59ea01fb3416c0e3e8ea8862c92a98675efaa4e",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/models/program16.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "ca634d431a2689ea5dba065b6d154f6dbb679ec64329d761256668cbed4c4609",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/models/program16.mlpackage/Manifest.json": "b2aca9aaa0e3058c3d2af66883aff69fd89e66b943dc9fc018f1f23a9a7216a1",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/models/program32.mlpackage/Data/com.apple.CoreML/model.mlmodel": "c4696f38d99189c62d11f121a9847657fc00431f7823e512f617365ff44764aa",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/models/program32.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "ca634d431a2689ea5dba065b6d154f6dbb679ec64329d761256668cbed4c4609",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/models/program32.mlpackage/Manifest.json": "0eec7d53c00467feac1dca49d2c12524588f2a9365331ed82f173a015571304c",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wdbc/training.json": "fd17a54a798f6fa39ac8e90ab40d11385f18f76c707caff623072a2cbe8dc389",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/conversion-command.json": "961d7603ec0f45ba8ca99a308c209b86f4c7e04b5ac24c8c30c22d5df1ab59db",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/conversion.log": "3a58e17bc4fd718e833cc6e639933ff5113a81da5253db96073fa35d67a56111",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/expected.f64": "c31ece39cbf401180ee1af97cf2d3cf9827298eaea38c30400d5f1a7132336ba",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/fixture.json": "a100f1ab95a0fea8cf4b7083aaae5bac6ace05ecd93b036708e69e8ad9eeb5c4",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/frozen-fixture.json": "ddad5097130baf4c2cc4504ba9f0cd1942a844f6612d4db2a4d508bb75b266d9",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/input.f64": "c47f24a9d0a1f882c8104381465e12d9028db48ec6ed3da29dff4b3852117187",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/models/expected.f64": "c31ece39cbf401180ee1af97cf2d3cf9827298eaea38c30400d5f1a7132336ba",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/models/input.f64": "c47f24a9d0a1f882c8104381465e12d9028db48ec6ed3da29dff4b3852117187",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/models/legacy.mlmodel": "c8536defc53d04798d2e98040733647826b448573b428f45d1c55b4ef9c67cc6",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/models/manifest.json": "b0e237f5a0b244ed3b312368f0625aa4763fb1c19a0eeadfc3dba51dd2739790",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/models/program16.mlpackage/Data/com.apple.CoreML/model.mlmodel": "0c7540d725fb8a456d5d96fce82ed4186e4d22691b54e046518674a28525715d",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/models/program16.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "1eb2b549ea9a3b470b09dc0d8f911508e630bfd659a7ea8692f74e646cc7e686",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/models/program16.mlpackage/Manifest.json": "4e6b0c5bb904d9969b958951f02f3323ce317d266e77cf90b55bbc6af4821882",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/models/program32.mlpackage/Data/com.apple.CoreML/model.mlmodel": "a1bd59435e77cfe26a90d47eed0380a2a6f8dc75ccf70c8ec66836142f750027",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/models/program32.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "1eb2b549ea9a3b470b09dc0d8f911508e630bfd659a7ea8692f74e646cc7e686",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/models/program32.mlpackage/Manifest.json": "897292bf3b8192e5f934d64a9d4bf6b5d5286ded21b911e348a16e9ded30fdae",
+    "/private/tmp/swiftsci-mlprogram-20261026/models/wine/training.json": "ccfdc0a6ae6fc78f1298c71962ce83125a048355cd3e7827d6ea774e539db947",
+    "/private/tmp/swiftsci-mlprogram-20261026/prepare-representative.py": "8fb1facd682ea233afecb599d7235d604d2b9aae8d5c7ef6abb357267c498678",
+    "/private/tmp/swiftsci-mlprogram-20261026/probe/probe": "f744049c896efec93fad9110534f85796514c75661b366286efc43fa8628c422",
+    "/private/tmp/swiftsci-mlprogram-20261026/probe/proof.json": "d71bb2cc24d0f62c2d6753f2c474cd9a9f69c33d101f41a7c412b571df90936e",
+    "/private/tmp/swiftsci-mlprogram-20261026/source/Benchmarks/CoreMLInference/bounded_process.py": "a21e80c98e99b57c545c77fa2ddf61a2de7c3b58e08431a1a4a0c2c55774a5af",
+    "/private/tmp/swiftsci-mlprogram-20261026/source/Benchmarks/CoreMLInference/prepare_models.py": "50c91b1f9c697867858954f1d73f29ec98fe000314c66ec167575dec9fb4b5aa",
+    "/private/tmp/swiftsci-mlprogram-20261026/source/Benchmarks/CoreMLInference/trained.py": "16e033058899135f63ed56e567a72a33eeade7cf77f85f6f3f9076f2eb208f1d",
+    "/private/tmp/swiftsci-mlprogram-20261026/source/Benchmarks/Fixtures/supervised/inputs/wdbc-supervised-logistic-cpu-epochs32.json": "21319365e43e5757853ef23d0acac4aaa06d43c6cf7786eaed4bfaa784829626",
+    "/private/tmp/swiftsci-mlprogram-20261026/source/Benchmarks/Fixtures/supervised/inputs/wine-red-supervised-ols-cpu.json": "f966120fab67a20a764de2860f8fd74e07c5c18cc24f4605d0c52d1894389419",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/Arrow.o": "f401abe0fb4fcab18261e0e6e3f70e167fbd7a767f833c50896e5351591fd1c1",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/ArrowC.o": "5b5a24662a7021b328a2b145ad973e14e450e5b7761b5d607305a8537b3055ff",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/Atomics.o": "d9382b525fe6f8188b2e8ebbd5eb33e8efc38608b750d6eaee0923861f455f88",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/Cmlx.o": "caedd9011af8e350a81c7d6706f0a87251d5a10ff8e36749e0a7c3572ad627f4",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/ComplexModule.o": "0b86adc640274d7f3800ca680a3deb6efb97227aba6a911a12ad69e4ff558aff",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/FlatBuffers.o": "402e11cf4bc70c4f1117684545350fe1c61fad8f64a24705107ea7088dca3dd4",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/MLX.o": "659049760ca7da7b1087c955234fcdee338ad997a20f6c53e599af81be308ebf",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/MLXNN.o": "9832d8123f4c14bf6e7421b9a92c505f679f161ae22f01970a4eb71044136788",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/Numerics.o": "131d4400af3d0847cb9f4de6fdcb84c52ea06f5d6879e7b6698829802b48b55b",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/RealModule.o": "252e5cd2b1d6758c35a97bed6c81912084a065152baa70e43cc25dd0e0ecbec3",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftAgent.o": "eecfd18600193bc00fbcb6046edd982eba226757c2fb8c3a874aef48ad2253e3",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftCluster.o": "72cf1efe1237c6da8a3d48f42461fdccc9f50525043fac4367334d49b74b0987",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftDataFrame.o": "e9f3cfed63d262f22318414cc4c81d57038786ae7f949ed2c062c3893a552b9c",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftDatabase.o": "576f5b495d98ef43cb5f2318d41be955c7c4f7a3669795ac5157865a671fd9b3",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftExplain.o": "859be4c1c3727244afe60fd5b495d487e71d989f7f50be0ea3d7ef4fa7dbea81",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftForecast.o": "d1702e02a42386fd910ede4774a294fc8f19e0a7a2376344df8444f5131e9f2c",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftLLM.o": "aa7a10715c1cc8e2255d89a080deb418ea7a758296edc63add18bf1b8dd7a124",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftML.o": "2b851ccf4af6f9f45c27714aba839e4aa7f3c8b61e448df71761a7e8a39b5a24",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftNLP.o": "b3effbf9302f61aa0bb62e19153021124948d577819097dc5d25c0eab84decda",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftOptimize.o": "e84a9471cc43f6676558f00b08bd04c11f714bdcaa25cadef80e84700f135391",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftPreprocessing.o": "71fc75d9199a092d6e5cf1e193128ddd665b0c01ed534df439580c2e23cb3395",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftSciBenchmarkSupport.o": "d29bcf36eadce4a2ade7b099370f22e0a5c25f393a4b10224caf1c4f990094d1",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftStats.o": "fbf2fff3681ef8b7516053953eb39d61ddf38c29c6c42eff389ba15134426fd9",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftVision.o": "24dfee628f13792ee68fb53c0643be8b11cbcccdba1b32497b722afaa9991ec7",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/SwiftVisualization.o": "4b82eb0a2460141a93234093e69f0b7b5299aad46040b39e892df9d6cd117e8e",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/_AtomicsShims.o": "64c89df3645ece3f6054baeb0ef76d2bf3e4e5de8c9a7a7068d3f4ac337a09cf",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/_NumericsShims.o": "63f3e7d513bc29cbf870c6c9703ccb049b718b2e992161fdc27489940990cea7",
+    "/tmp/swiftsci-coreml-representative-20261026/ci-bench-cache/standardized/derived/Build/Products/Release/cLogSupport.o": "08b5ed8cbe9aceb95b43efddb4e20237a2c77dffc428624b161137d7ad6b1934"
+  },
+  "inference_reference_tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "models": [
+    {
+      "conversion_seconds": 0.998833292,
+      "dataset": "wdbc",
+      "manifest": {
+        "coremltools": "9.0",
+        "files": {
+          "expected.f64": "045aa44e98a1364a431d783086ee63f471443fef7b36b660592b7aacae379f41",
+          "input.f64": "38b1f3dfe942494198ce6dd108ce825cc87f4b7309d08bafd289d0a991e76c28",
+          "legacy.mlmodel": "1e92f5ce8b0cb7248d5a6c18f244a890367e5db6ab4ac27f6b8c9d6fbc33f8d2",
+          "program32.mlpackage/Data/com.apple.CoreML/model.mlmodel": "a480c0827a947ac309e0fe1e03a8b5e392d628f567d68a099158e4837a557479",
+          "program32.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "f27ee9a997355d241baf3200009a5aa57c02f1c72f624463a34090ac77bb51fa",
+          "program32.mlpackage/Manifest.json": "47215215c1ed109e71ea76de41b6b8bdbc67a81f9af8dfccf44743bb8ca1a53e"
+        },
+        "fixture_sha256": "86edc2d12681af0fad7ff823c51574379a397bd17705dfa7415b6118b3bf86fb",
+        "legacy_io": "double",
+        "numpy": "2.0.2",
+        "outputs": 1,
+        "program_compute_precision": "float32",
+        "rows": 126,
+        "width": 30
+      },
+      "model": "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wdbc/models/program32.mlpackage"
+    },
+    {
+      "conversion_seconds": 0.522533417,
+      "dataset": "wine",
+      "manifest": {
+        "coremltools": "9.0",
+        "files": {
+          "expected.f64": "c31ece39cbf401180ee1af97cf2d3cf9827298eaea38c30400d5f1a7132336ba",
+          "input.f64": "c47f24a9d0a1f882c8104381465e12d9028db48ec6ed3da29dff4b3852117187",
+          "legacy.mlmodel": "c8536defc53d04798d2e98040733647826b448573b428f45d1c55b4ef9c67cc6",
+          "program32.mlpackage/Data/com.apple.CoreML/model.mlmodel": "852409fb90da057209995263c1dca97538b913b1af3edc268eb46d5261dbf37f",
+          "program32.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "ccc0fed3156a02c9be1a03b2d1ad40e7667e14ea061955fa8fe664b55355b9cf",
+          "program32.mlpackage/Manifest.json": "e1a30ec9644042ee57c05d67df4c16423c5f764d9d2b86e603ee2afa483c1928"
+        },
+        "fixture_sha256": "a100f1ab95a0fea8cf4b7083aaae5bac6ace05ecd93b036708e69e8ad9eeb5c4",
+        "legacy_io": "double",
+        "numpy": "2.0.2",
+        "outputs": 1,
+        "program_compute_precision": "float32",
+        "rows": 342,
+        "width": 11
+      },
+      "model": "/private/tmp/swiftsci-mlprogram-20261026/fullprecision/wine/models/program32.mlpackage"
+    }
+  ],
+  "numpy": "2.0.2",
+  "performance_evidence": false,
+  "program_compute_precision": "float32",
+  "python": "3.9.25 (main, Oct 31 2025, 18:40:52) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+  "repeats": 3,
+  "retraining": false,
+  "root": "/private/tmp/swiftsci-mlprogram-20261026",
+  "schema_version": 1,
+  "source_commit": "a1e234d25677d91ce5914062603c41233fe13c09",
+  "transport": "float32"
+}

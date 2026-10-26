@@ -1,0 +1,27 @@
+--- prepare_models-original.py
++++ prepare_models-float32.py
+@@ -43,7 +43,7 @@
+             name = f'relu_{i}'
+             builder.add_activation(name, 'RELU', dest, name)
+     ct.models.MLModel(builder.spec, skip_model_load=True).save(str(args.output / 'legacy.mlmodel'))
+-    for io16 in [False, True]:
++    for io16 in [False]:
+         @mb.program(input_specs=[mb.TensorSpec(shape=(rows,width), dtype=types.fp16 if io16 else types.fp32)], opset_version=ct.target.iOS16)
+         def program(features):
+             x = features
+@@ -54,13 +54,13 @@
+                     x = mb.relu(x=x, name=f'relu_{i}')
+             return mb.identity(x=x, name='result')
+         model = ct.convert(program, convert_to='mlprogram', minimum_deployment_target=ct.target.macOS13,
+-            compute_precision=ct.precision.FLOAT16,
++            compute_precision=ct.precision.FLOAT32,
+             outputs=[ct.TensorType(name='result', dtype=np.float16 if io16 else np.float32)],
+             skip_model_load=True)
+         model.save(str(args.output / ('program16.mlpackage' if io16 else 'program32.mlpackage')))
+     manifest = dict(fixture_sha256=sha(args.fixture), rows=rows, width=width, outputs=outputs,
+                     coremltools=ct.__version__, numpy=np.__version__,
+-                    program_compute_precision='float16', legacy_io='double',
++                    program_compute_precision='float32', legacy_io='double',
+                     files={str(p.relative_to(args.output)):sha(p) for p in args.output.rglob('*') if p.is_file()})
+     (args.output/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+ 
