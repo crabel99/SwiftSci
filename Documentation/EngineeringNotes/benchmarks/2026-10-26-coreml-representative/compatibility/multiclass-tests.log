@@ -1,0 +1,26 @@
+warning: 'flatbuffers': /private/tmp/swiftsci-coreml-representative-20261026/swift633/checkouts/flatbuffers/Package.swift:23:11: warning: 'v11' is deprecated: iOS 12.0 is the oldest supported version [#DeprecatedDeclaration]
+21 |   name: "FlatBuffers",
+22 |   platforms: [
+23 |     .iOS(.v11),
+   |           `- warning: 'v11' is deprecated: iOS 12.0 is the oldest supported version [#DeprecatedDeclaration]
+24 |     .macOS(.v10_14),
+25 |   ],
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+[0/1] Planning build
+Test Suite 'Selected tests' started at 2026-10-26 14:26:33.176.
+Test Suite 'SwiftSciPackageTests.xctest' started at 2026-10-26 14:26:33.177.
+Test Suite 'SwiftSciPackageTests.xctest' passed at 2026-10-26 14:26:33.177.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Selected tests' passed at 2026-10-26 14:26:33.177.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 6.3.3 (48d727cc1cf4eda)
+↳ Target Platform: arm64-apple-macosx
+◇ Suite "Core ML multiclass export" started.
+◇ Test "Exported multiclass probabilities match independent stable softmax" started.
+✔ Test "Exported multiclass probabilities match independent stable softmax" passed after 0.015 seconds.
+◇ Test "Fitted public multiclass classifier survives export and prepared inference" started.
+✔ Test "Fitted public multiclass classifier survives export and prepared inference" passed after 0.007 seconds.
+✔ Suite "Core ML multiclass export" passed after 0.023 seconds.
+✔ Test run with 2 tests in 1 suite passed after 0.023 seconds.

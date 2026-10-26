@@ -1,0 +1,422 @@
+[
+  {
+    "name": "wdbc-cpu",
+    "target_pid": 32686,
+    "modelSHA256": "10a0d6cfb7665214a26bd765383b080869d392358dcf8afb36ad4407a431eafa",
+    "measurement_start_ns": 1360422791,
+    "measurement_end_ns": 3449359291,
+    "completed_requests": 34438,
+    "event_counts": {
+      "Prediction": 34438,
+      "Input Validation": 34438,
+      "Input Copy": 34438,
+      "CPU": 34438,
+      "Output Transformation": 34438
+    },
+    "dispatch_counts": {
+      "CPU": 34438
+    },
+    "models": {
+      "Stress-1": 34438
+    },
+    "first_dispatches": [
+      {
+        "start_ns": 1360454541,
+        "duration_ns": 6584,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1360533083,
+        "duration_ns": 6667,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1360595416,
+        "duration_ns": 6167,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1360652416,
+        "duration_ns": 6250,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1360711833,
+        "duration_ns": 6292,
+        "event": "CPU",
+        "model": "Stress-1"
+      }
+    ],
+    "last_dispatches": [
+      {
+        "start_ns": 3360159041,
+        "duration_ns": 6209,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3360220250,
+        "duration_ns": 6458,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3360281125,
+        "duration_ns": 6333,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3360342375,
+        "duration_ns": 6333,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3360401458,
+        "duration_ns": 6167,
+        "event": "CPU",
+        "model": "Stress-1"
+      }
+    ],
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wdbc-cpu.coreml.xml",
+        "sha256": "5ab060cc6823fe6620ebfd8284c5d2c9921bf43f6329205746415b6bc950143b",
+        "size_bytes": 59327812
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wdbc-cpu.intervals.xml",
+        "sha256": "7a078da2f107665a237d5e69f32a10ced0d4bd47556fe9446c99b82c76cefa83",
+        "size_bytes": 4965
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wdbc-cpu.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "size_bytes": 1009
+      }
+    },
+    "toc_sha256": "61b09146dc3f377d0fd8d3beb923d55a769cd37ec82326282c6577f0bb9ecaa0",
+    "record_sha256": "6f709ca88287a7a008cb3a4ccc4cd1a38c820439bd961c6fb6ce9c419b9d1cd4",
+    "attribution": "Positive CPU dispatch events for every completed request of the target process inside its measurement signpost. No other Core ML device dispatch is present in that interval. This does not establish Neural Engine support or activity for other artifacts."
+  },
+  {
+    "name": "wdbc-neural",
+    "target_pid": 33444,
+    "modelSHA256": "10a0d6cfb7665214a26bd765383b080869d392358dcf8afb36ad4407a431eafa",
+    "measurement_start_ns": 1199313625,
+    "measurement_end_ns": 3291498625,
+    "completed_requests": 33548,
+    "event_counts": {
+      "Prediction": 33548,
+      "Input Validation": 33548,
+      "Input Copy": 33548,
+      "CPU": 33548,
+      "Output Transformation": 33548
+    },
+    "dispatch_counts": {
+      "CPU": 33548
+    },
+    "models": {
+      "Stress-1": 33548
+    },
+    "first_dispatches": [
+      {
+        "start_ns": 1199367458,
+        "duration_ns": 10375,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1199462625,
+        "duration_ns": 8041,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1199537333,
+        "duration_ns": 6583,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1199602791,
+        "duration_ns": 6292,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1199664208,
+        "duration_ns": 6208,
+        "event": "CPU",
+        "model": "Stress-1"
+      }
+    ],
+    "last_dispatches": [
+      {
+        "start_ns": 3199073708,
+        "duration_ns": 5958,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3199130416,
+        "duration_ns": 6084,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3199187166,
+        "duration_ns": 6042,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3199243166,
+        "duration_ns": 6042,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3199305541,
+        "duration_ns": 5959,
+        "event": "CPU",
+        "model": "Stress-1"
+      }
+    ],
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wdbc-neural.coreml.xml",
+        "sha256": "62f9574906d334be2b07153d8f5b5fec103f87bfb3ebf1ec316c16ad9c6afe43",
+        "size_bytes": 57792537
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wdbc-neural.intervals.xml",
+        "sha256": "c4f94a5a14117d33a76bb24b026c536c1b645eabf03c3967d08606931941404f",
+        "size_bytes": 4965
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wdbc-neural.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "size_bytes": 1009
+      }
+    },
+    "toc_sha256": "0f2132026bb005825415431e3dd19efc96f9630c5c1884eb90460c6b78c4ddb1",
+    "record_sha256": "56f58e66a629ceefce2723c676cddffe212171cdd2d65120c9211d9cb60f21c1",
+    "attribution": "Positive CPU dispatch events for every completed request of the target process inside its measurement signpost. No other Core ML device dispatch is present in that interval. This does not establish Neural Engine support or activity for other artifacts."
+  },
+  {
+    "name": "wine-cpu",
+    "target_pid": 33553,
+    "modelSHA256": "df85adad0ca3f53f83b0820144996869b276ea52854b5df0074933d5926696d3",
+    "measurement_start_ns": 912530583,
+    "measurement_end_ns": 3006199833,
+    "completed_requests": 31239,
+    "event_counts": {
+      "Prediction": 31239,
+      "Input Validation": 31239,
+      "Input Copy": 31239,
+      "CPU": 31239,
+      "Output Transformation": 31239
+    },
+    "dispatch_counts": {
+      "CPU": 31239
+    },
+    "models": {
+      "Stress-1": 31239
+    },
+    "first_dispatches": [
+      {
+        "start_ns": 912564375,
+        "duration_ns": 12625,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 912660500,
+        "duration_ns": 13166,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 912734000,
+        "duration_ns": 11791,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 912804583,
+        "duration_ns": 11625,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 912874125,
+        "duration_ns": 11625,
+        "event": "CPU",
+        "model": "Stress-1"
+      }
+    ],
+    "last_dispatches": [
+      {
+        "start_ns": 2912245375,
+        "duration_ns": 14291,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 2912312041,
+        "duration_ns": 11459,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 2912383250,
+        "duration_ns": 11541,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 2912447750,
+        "duration_ns": 14291,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 2912517166,
+        "duration_ns": 11375,
+        "event": "CPU",
+        "model": "Stress-1"
+      }
+    ],
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wine-cpu.coreml.xml",
+        "sha256": "a3a9f443db3b7addb15c2dacdc189f8f330c4f234562c3b6ccd5e405b57fbec5",
+        "size_bytes": 53806857
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wine-cpu.intervals.xml",
+        "sha256": "21fb276d5f72cc1ef29e30996fd04edff733153e1492fba453a2ac47028d5dde",
+        "size_bytes": 5091
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wine-cpu.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "size_bytes": 1009
+      }
+    },
+    "toc_sha256": "e579e631d134690819e1a4a18a956c273aac5e049464cd72deb683a41bc93bb5",
+    "record_sha256": "038cf6d1772242e3100465a4e50fd679ec8b2864aa60dee5e0b7d21f681d87b0",
+    "attribution": "Positive CPU dispatch events for every completed request of the target process inside its measurement signpost. No other Core ML device dispatch is present in that interval. This does not establish Neural Engine support or activity for other artifacts."
+  },
+  {
+    "name": "wine-neural",
+    "target_pid": 33613,
+    "modelSHA256": "df85adad0ca3f53f83b0820144996869b276ea52854b5df0074933d5926696d3",
+    "measurement_start_ns": 1016157041,
+    "measurement_end_ns": 3055870750,
+    "completed_requests": 29993,
+    "event_counts": {
+      "Prediction": 29993,
+      "Input Validation": 29993,
+      "Input Copy": 29993,
+      "CPU": 29993,
+      "Output Transformation": 29993
+    },
+    "dispatch_counts": {
+      "CPU": 29993
+    },
+    "models": {
+      "Stress-1": 29993
+    },
+    "first_dispatches": [
+      {
+        "start_ns": 1016223916,
+        "duration_ns": 19375,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1016341875,
+        "duration_ns": 13125,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1016418958,
+        "duration_ns": 12792,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1016494958,
+        "duration_ns": 11958,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 1016564625,
+        "duration_ns": 11875,
+        "event": "CPU",
+        "model": "Stress-1"
+      }
+    ],
+    "last_dispatches": [
+      {
+        "start_ns": 3015871125,
+        "duration_ns": 11500,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3015936708,
+        "duration_ns": 11625,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3016000083,
+        "duration_ns": 11750,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3016063583,
+        "duration_ns": 11792,
+        "event": "CPU",
+        "model": "Stress-1"
+      },
+      {
+        "start_ns": 3016129291,
+        "duration_ns": 11667,
+        "event": "CPU",
+        "model": "Stress-1"
+      }
+    ],
+    "event_exports": {
+      "coreml": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wine-neural.coreml.xml",
+        "sha256": "716fab5979ed74ae23faf0dd75e6eb6791962f9a57a16182cc7b1c546c5c6608",
+        "size_bytes": 51682548
+      },
+      "intervals": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wine-neural.intervals.xml",
+        "sha256": "cc466dafe142226d8fda323817ce434b0ea80c71b203925dbb67782e24266d05",
+        "size_bytes": 5093
+      },
+      "ane": {
+        "path": "/private/tmp/swiftsci-coreml-representative-20261026/traces/wine-neural.ane.xml",
+        "sha256": "9a24c70a91f0bd726d296a88293e2db5c248d6c970a4936d8e398cf235bcf20c",
+        "size_bytes": 1009
+      }
+    },
+    "toc_sha256": "1cad87cf752adbb23d4b52840e2a313eb856aff77173c0d0e6deb51a793bc2c1",
+    "record_sha256": "7292bb486f37d3cac698c332e04b976fc421319abf7a171abf6ee64ec80f149f",
+    "attribution": "Positive CPU dispatch events for every completed request of the target process inside its measurement signpost. No other Core ML device dispatch is present in that interval. This does not establish Neural Engine support or activity for other artifacts."
+  }
+]

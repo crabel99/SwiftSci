@@ -1,0 +1,168 @@
+diff --git a/Sources/SwiftML/Serialization/CoreMLExportable.swift b/Sources/SwiftML/Serialization/CoreMLExportable.swift
+index e842624da1..3566b3ae1a 100644
+--- a/Sources/SwiftML/Serialization/CoreMLExportable.swift
++++ b/Sources/SwiftML/Serialization/CoreMLExportable.swift
+@@ -302,9 +302,11 @@ extension LogisticRegression: CoreMLExportable {
+ 
+ extension MLPClassifier: CoreMLExportable {
+     /// Exports the fitted Multi-Layer Perceptron classifier as a binary `.mlmodel` (`NeuralNetwork`).
++    /// The output is a probability vector in `trainedClasses` order for multiclass models,
++    /// or the probability of the second class for binary models.
+     /// - Parameters:
+     ///   - featureNames: Names of the input features.
+-    ///   - outputName: Name of the predicted label output.
++    ///   - outputName: Name of the probability output.
+     /// - Throws: `SwiftMLError.modelNotFitted` if the network has not been trained.
+     /// - Returns: Binary `.mlmodel` artifact data.
+     public func exportCoreML(featureNames: [String], outputName: String = "label") async throws -> Data {
+diff --git a/Sources/SwiftML/Serialization/CoreMLExporter.swift b/Sources/SwiftML/Serialization/CoreMLExporter.swift
+index 69d88546e4..f8bb12c7df 100644
+--- a/Sources/SwiftML/Serialization/CoreMLExporter.swift
++++ b/Sources/SwiftML/Serialization/CoreMLExporter.swift
+@@ -510,13 +510,14 @@ public enum CoreMLExporter {
+     // MARK: - Binary Multi-Layer Perceptron (NeuralNetwork)
+ 
+     /// Encodes a fitted Multi-Layer Perceptron classifier as a binary Apple Core ML `.mlmodel` artifact.
++    /// The output is a probability vector, or a single positive-class probability for binary models.
+     /// - Parameters:
+     ///   - name: Name or identifier string.
+     ///   - inputNames: Names of the model input features or layers.
+     ///   - outputName: Name assigned to the output layer or feature.
+     ///   - layers: Ordered collection of neural network layer weight definitions.
+     ///   - activation: Non-linear activation function identifier (e.g., relu, tanh, sigmoid).
+-    ///   - classLabels: Ordered string names corresponding to target class indices.
++    ///   - classLabels: Accepted for compatibility; label metadata is not encoded in the probability output.
+     /// - Returns: Raw serialized binary data representation.
+     public static func exportBinaryMLPClassifier(
+         name: String = "SwiftSciMLPClassifier",
+diff --git a/Sources/SwiftML/Serialization/CoreMLProtobuf.swift b/Sources/SwiftML/Serialization/CoreMLProtobuf.swift
+index c378457f72..f7db32de4c 100644
+--- a/Sources/SwiftML/Serialization/CoreMLProtobuf.swift
++++ b/Sources/SwiftML/Serialization/CoreMLProtobuf.swift
+@@ -59,7 +59,7 @@ private enum NeuralNetworkLayerField {
+     static let output: Int = 3         // repeated string
+     static let activation: Int = 130   // ActivationParams
+     static let innerProduct: Int = 140 // InnerProductLayerParams
+-    static let softmax: Int = 175      // SoftmaxLayerParams
++    static let softmaxND: Int = 950    // SoftmaxNDLayerParams
+     static let concat: Int = 320       // ConcatLayerParams
+ }
+ 
+@@ -82,6 +82,10 @@ private enum ActivationParamsField {
+     static let sigmoid: Int = 40
+ }
+ 
++private enum SoftmaxNDLayerParamsField {
++    static let axis: Int = 1 // int64
++}
++
+ private enum ModelDescriptionField {
+     static let input: Int                = 1  // repeated FeatureDescription
+     static let output: Int               = 10 // repeated FeatureDescription
+@@ -686,17 +690,25 @@ internal func buildNeuralNetworkModel(
+             actLayer.writeStringField(fieldNumber: NeuralNetworkLayerField.output, value: finalLayerOut)
+ 
+             var actParams = ProtobufWriter()
++            let activationField: Int
+             switch actType.lowercased() {
++            case "softmax":
++                actParams.writeVarintField(fieldNumber: SoftmaxNDLayerParamsField.axis,
++                                           value: UInt64(bitPattern: Int64(-1)))
++                activationField = NeuralNetworkLayerField.softmaxND
+             case "relu":
+                 actParams.writeBytesField(fieldNumber: ActivationParamsField.reLU, bytes: Data())
++                activationField = NeuralNetworkLayerField.activation
+             case "sigmoid":
+                 actParams.writeBytesField(fieldNumber: ActivationParamsField.sigmoid, bytes: Data())
++                activationField = NeuralNetworkLayerField.activation
+             case "tanh":
+                 actParams.writeBytesField(fieldNumber: ActivationParamsField.tanh, bytes: Data())
++                activationField = NeuralNetworkLayerField.activation
+             default:
+-                break
++                activationField = NeuralNetworkLayerField.activation
+             }
+-            actLayer.writeBytesField(fieldNumber: NeuralNetworkLayerField.activation, bytes: actParams.data)
++            actLayer.writeBytesField(fieldNumber: activationField, bytes: actParams.data)
+             nnMsg.writeBytesField(fieldNumber: NeuralNetworkField.layers, bytes: actLayer.data)
+             currentInputs = [finalLayerOut]
+         } else {
+diff --git a/Tests/SwiftMLTests/CoreMLMulticlassExportTests.swift b/Tests/SwiftMLTests/CoreMLMulticlassExportTests.swift
+new file mode 100644
+index 0000000000..7a401aa113
+--- /dev/null
++++ b/Tests/SwiftMLTests/CoreMLMulticlassExportTests.swift
+@@ -0,0 +1,73 @@
++import CoreML
++import Foundation
++import Testing
++import SwiftDataFrame
++import SwiftML
++import SwiftPreprocessing
++
++@Suite("Core ML multiclass export", .serialized)
++struct CoreMLMulticlassExportTests {
++    @Test("Exported multiclass probabilities match independent stable softmax")
++    func suppliedMulticlassProbabilities() async throws {
++        let layer = LayerWeights(W: [-1, 0, 1], b: [0, 0, 0], inDim: 1, outDim: 3)
++        let data = CoreMLExporter.exportBinaryMLPClassifier(
++            inputNames: ["x"], outputName: "probabilities", layers: [layer])
++        let source = try PreparedNumericBatch(columnNames: ["x"], columns: [[-1_000, -1, 0, 1, 1_000]])
++        let input = try source.selectingRows([4, 0, 2, 3, 3, 1, 2])
++        let budget = try MemoryBudget(limit: 1_048_576)
++        try await withCompiledCoreML(data) { compiled in
++            let predictor = try CoreMLPredictor(compiledModelURL: compiled,
++                inputColumns: ["x"], outputName: "probabilities", computeUnits: .cpuOnly)
++            for batchSize in [1, 4] {
++                let prediction = try await predictor.predict(input, budget: budget,
++                    workspaceBytes: 65_536, maximumBatchSize: batchSize)
++                #expect(prediction.values.columnNames == ["probabilities[0]", "probabilities[1]", "probabilities[2]"])
++                #expect(prediction.values.originalRowIndices == input.originalRowIndices)
++                #expect(prediction.inputPackingBytes == input.rowCount * MemoryLayout<Double>.stride)
++                #expect(prediction.outputCopyBytes == input.rowCount * 3 * MemoryLayout<Double>.stride)
++                for row in 0..<input.rowCount {
++                    let x = try #require(input[row, 0])
++                    let logits = [-x, 0, x]
++                    let largest = try #require(logits.max())
++                    let exponentials = logits.map { exp($0 - largest) }
++                    let denominator = exponentials.reduce(0, +)
++                    var sum = 0.0
++                    for column in 0..<3 {
++                        let actual = try #require(prediction.values[row, column])
++                        #expect(actual.isFinite && actual >= 0 && actual <= 1)
++                        #expect(abs(actual - exponentials[column] / denominator) < 1e-6)
++                        sum += actual
++                    }
++                    #expect(abs(sum - 1) < 1e-6)
++                }
++                #expect(await budget.reservedBytes == 0)
++            }
++        }
++    }
++
++    @Test("Fitted public multiclass classifier survives export and prepared inference")
++    func trainedClassifierExport() async throws {
++        let features: [[Double]] = [[-1], [0], [1]]
++        let targets: [Double] = [10, 20, 30]
++        let model = MLPClassifier(hiddenLayerSizes: [], maxIter: 1,
++                                  batchSize: 3, seed: 42, requestedDevice: .cpu)
++        try await model.fit(features: features, targets: targets)
++        #expect(await model.trainedClasses == targets)
++        let expected = try await model.predictProbability(features: features)
++        let data = try await model.exportCoreML(featureNames: ["x"], outputName: "probabilities")
++        let input = try PreparedNumericBatch(columnNames: ["x"], columns: [[-1, 0, 1]])
++        let budget = try MemoryBudget(limit: 1_048_576)
++        try await withCompiledCoreML(data) { compiled in
++            let predictor = try CoreMLPredictor(compiledModelURL: compiled,
++                inputColumns: ["x"], outputName: "probabilities", computeUnits: .cpuOnly)
++            let prediction = try await predictor.predict(input, budget: budget, workspaceBytes: 65_536)
++            for row in features.indices {
++                for column in 0..<3 {
++                    let actual = try #require(prediction.values[row, column])
++                    #expect(abs(actual - expected[row][column]) < 1e-6)
++                }
++            }
++            #expect(await budget.reservedBytes == 0)
++        }
++    }
++}

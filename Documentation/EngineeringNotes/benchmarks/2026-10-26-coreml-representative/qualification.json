@@ -1,0 +1,91 @@
+{
+  "source_commit": "a1e234d25677d91ce5914062603c41233fe13c09",
+  "base_commit": "53063789b1893b28250ea239d5fdca4fed84c4c9",
+  "native": {
+    "full-debug": {
+      "totalTestCount": 1685,
+      "passedTests": 1685,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "full-release": {
+      "totalTestCount": 1685,
+      "passedTests": 1685,
+      "failedTests": 0,
+      "skippedTests": 0
+    }
+  },
+  "local_ci_steps": {
+    "main": 8,
+    "benchmarks": 19,
+    "security-python": 2
+  },
+  "swift633": "Debug build, all test targets compiled, safe suite, Release build, both new runtime regressions passed",
+  "representative_cases": 66,
+  "strict_reference_passes": 66,
+  "raw_workflows": {
+    "wdbc": {
+      "rows": 126,
+      "maximumScalingDifference": 4.884981308350689e-15,
+      "referenceExceedances": 0
+    },
+    "wine": {
+      "rows": 342,
+      "maximumScalingDifference": 1.794120407794253e-13,
+      "referenceExceedances": 0
+    }
+  },
+  "corrected_softmax_coverage": {
+    "690": 2,
+    "691": 2,
+    "692": 2,
+    "693": 2,
+    "694": 2,
+    "695": 2,
+    "696": 2,
+    "697": 2,
+    "698": 2,
+    "699": 2,
+    "700": 0,
+    "701": 0,
+    "702": 2,
+    "703": 0,
+    "704": 0,
+    "705": 2,
+    "706": 0,
+    "707": 0,
+    "708": 2,
+    "709": 0,
+    "710": 2,
+    "711": 2,
+    "712": 2,
+    "713": 2,
+    "714": 2,
+    "715": 0,
+    "716": 2,
+    "717": 2,
+    "718": 2
+  },
+  "actual_dispatches": {
+    "wdbc-cpu": {
+      "CPU": 34438
+    },
+    "wdbc-neural": {
+      "CPU": 33548
+    },
+    "wine-cpu": {
+      "CPU": 31239
+    },
+    "wine-neural": {
+      "CPU": 29993
+    }
+  },
+  "limitations": [
+    "Swift CodeQL unavailable with retained Xcode 27 / Swift 6.4.",
+    "Known four Python Wampler conformance failures remain under the unchanged accepted regression policy.",
+    "Native xccov lists library targets without source coverage. Its aggregate covers test sources and is not a library coverage percentage. The main CI export check passed as written.",
+    "Only the legacy Float32-weight Core ML artifacts were qualified here. ML Program / Float16 / Neural Engine application qualification remains separate.",
+    "Wine frozen reference model reached its optimizer iteration limit and performed worse than the constant test baseline. No application-quality threshold was established.",
+    "Single fresh process per comparison cell with repeated warm samples; local development evidence, not a production performance baseline."
+  ]
+}
