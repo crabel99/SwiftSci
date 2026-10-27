@@ -1,0 +1,52 @@
+{
+  "parent": "/private/tmp/swiftsci-upstream-classification-20261027",
+  "changes": [
+    "Redirect all task paths to isolated agent-contract root",
+    "Reuse completed classification cache state; dependency-only compatibility/security caches",
+    "Replace irrelevant prepared-classifier focused compatibility/Metal bootstrap with full no-GPU SwiftAgentTests execution",
+    "Require actual SwiftAgent LCOV records as well as existing DataFrame records in full main validation",
+    "Retain failed ninth main coverage guard and add separate explicit-object export controller; upstream workflow unchanged"
+  ],
+  "controllers": {
+    "full-ci-runner.py": {
+      "parent_sha256": "c018843be7641ddd92ba9a80772e74192ee83896da0e623e9f6e73231ba5a8ee",
+      "sha256": "80272916b9a5ad46d799f825d68821ae675ce1e0f6a9475e58438e407a8eabd2"
+    },
+    "benchmark-ci-runner.py": {
+      "parent_sha256": "769c631b11a72e0a69fa32d541d86d33b3307a63da867be60d03ff1ecbe47c17",
+      "sha256": "8aac4736d203830781d9a134466cfdb33e692fc6e401056eb0bfdb32ddb52d23"
+    },
+    "validate-native.py": {
+      "parent_sha256": "452f4fca313d2cc24f2e9985d35e64353c3e311d32a3e148e72796bcf9930b44",
+      "sha256": "452f4fca313d2cc24f2e9985d35e64353c3e311d32a3e148e72796bcf9930b44"
+    },
+    "check-swift633.py": {
+      "parent_sha256": "1eba182c92b3a58dce88a6cd3575b69ac522a06655e1ba1fb6696361de657b4a",
+      "sha256": "bcf92cf60663b8302418938f068440d20bfe31aec70a6970e315988f33641f05"
+    },
+    "check-swift-codeql-replay.py": {
+      "parent_sha256": "d71b312e39f0a1a7b946d6f33f4b71bd25d29d87b4baacdbd81851796e28d642",
+      "sha256": "d71b312e39f0a1a7b946d6f33f4b71bd25d29d87b4baacdbd81851796e28d642"
+    },
+    "run-native-matrix.py": {
+      "parent_sha256": "c7fa37fa715e29bba8cea2ce031de0bd0d958b6864ddefca296951a15e4653b5",
+      "sha256": "c7fa37fa715e29bba8cea2ce031de0bd0d958b6864ddefca296951a15e4653b5"
+    },
+    "prepare-ci-caches.py": {
+      "parent_sha256": "f3ec50c92b4b6760391a48aa6c4d6dbfb144627f84bf87b90bba519d8dca2496",
+      "sha256": "8d5f86753023b9e1de0d8e8a6b8ae2d54b497e526218e8d246651eb6c4c64b3e"
+    },
+    "launch-ci.py": {
+      "parent_sha256": "8d51e5da2e38ceae4a696fa69dcccf75dde7630c0318964377afd339c093ebb0",
+      "sha256": "8d51e5da2e38ceae4a696fa69dcccf75dde7630c0318964377afd339c093ebb0"
+    },
+    "publish-git-objects.py": {
+      "parent_sha256": "aa0c851c02cc65cc6157530fcef4d3efb123d11753d2775e25667a7920aedffc",
+      "sha256": "aa0c851c02cc65cc6157530fcef4d3efb123d11753d2775e25667a7920aedffc"
+    },
+    "verify-publication.py": {
+      "parent_sha256": "2338998dbc74a5ecc0ea438a905fc694ce08d0515ac6a255bfab91bc55f8ec03",
+      "sha256": "2338998dbc74a5ecc0ea438a905fc694ce08d0515ac6a255bfab91bc55f8ec03"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+# Evidence review
+
+No open evidence inaccuracies in the completed coverage, red-regression or native-count records. This was a read-only artifact/controller review; no builds, tests or heavy qualification commands were run.
+
+The original main receipt records eight unchanged workflow steps exiting0 and the added ninth coverage guard exiting1. README and verifier preserve that failure. The supplemental export does not repair or replace the original workflow result and is not described as hosted Codecov, branch coverage or a threshold change.
+
+The actual supplemental LCOV has one ReActAgent source record. All80 reported added-line hit counts match that record, each is positive, and the generateResponse function count is24. Supplemental coverage, controllers, original main receipt, safe-test log and actual profile hashes match their recorded bindings. The explicit-object command includes all15 test binaries. The original positional export lacks ReActAgent coverage, as reported. The verifier checks actual profile/object/log bindings rather than accepting the line percentage alone.
+
+The exported Debug native test tree contains62 passing SwiftAgent test definitions:20 SwiftAgentOmniTests XCTest methods plus42 Swift Testing definitions across five suites. CompletionReportingTests contributes9 and ReActCancellationTests7. Both native summary receipts record1,688 passing definitions with zero failures. The release tree is read/exported by the final verifier; I did not substitute a prior1,712-test integration result.
+
+The completion red log records one definition with two expected issues after a successful build, including no expected error and an executed truncated tool call. Its overlay explicitly seeds capability declarations/conformance and the fixture while retaining upstream ReActAgent bytes. Cancellation red retains the completion-only parent and overlays only its test file; the log records seven definitions and17issues, while the lifetime and independent-tool-error controls pass. These are accurately distinguished from pristine upstream runs.
+
+The README and PR body are pending drafts. Their350-file Swift CodeQL extraction/security statements were not yet independently supported by a fresh result receipt when reviewed. The parent explicitly gates publication on that receipt and a passing final verifier. The verifier requires fresh exact-source security artifacts and cannot complete without them. This is a pending qualification gate, not a claim that those checks have already passed. If the completed receipt differs from the draft's counts or finding inventory, update the draft before publication.

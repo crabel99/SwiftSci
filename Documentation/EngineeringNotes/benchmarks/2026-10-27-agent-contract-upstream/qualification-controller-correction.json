@@ -1,0 +1,14 @@
+{
+  "scope": "Qualification controller only; production source and tests unchanged",
+  "initial_error": "The first verifier draft expected42 agent definitions in native xcresult and failed with actual62 passing definitions.",
+  "actual_counts": {
+    "native_agent": 62,
+    "xctest": 20,
+    "swift_testing": 42,
+    "new_completion": 9,
+    "new_cancellation": 7
+  },
+  "correction": "Count all62 native definitions and separately require16 new completion/cancellation definitions. Keep the42 SwiftTesting plus20 XCTest log distinction.",
+  "pending_attempt": "qualification-pending-attempt.log retains a later attempt that correctly stopped for an unfinished security prerequisite. Earlier not-ready Release attempts and the initial count error are also retained in the scoped task transcript.",
+  "pending_log_sha256": "1f0b83eff3c7b937e5a549d64f9585851f96689f7bd8e8ba24272c1d9b5dcb4e"
+}

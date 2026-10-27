@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "source": "3a9482122cd91a3d18467a9d7005416242b1c203",
+  "base": "01d48cbcd940c886546b2bb8d6b177d9b7a0e277",
+  "completion": "ac4e73a06412f67a09243f7516bbff769d13b677",
+  "files": 7,
+  "commits": 2,
+  "reports": {
+    "red-completion": {
+      "tests": 1,
+      "issues": 2,
+      "expected_exit": 1,
+      "sha256": "5fcffc367c975c3d831e3bc77aa7ae7359d1c6c627e6c5b534e6bc9234e1dc4e"
+    },
+    "red-cancellation": {
+      "tests": 7,
+      "issues": 17,
+      "expected_exit": 1,
+      "sha256": "72fb4ca0d4168ed196f8d0ea31ed9e1647c148aa9595bf7247ab04786d842ad9"
+    },
+    "full-debug": {
+      "tests": 1688,
+      "agent_tests": 62,
+      "failed": 0,
+      "skipped": 0,
+      "receipt_sha256": "659ede4c6c1a76662db927b227c4401cc5ca2fa730d27fad9a9c1e987e4130b6",
+      "tree_sha256": "46acd638f47a66a5bdf21078e16a0586ccc495cc2da68a563532261c584ed47c"
+    },
+    "full-release": {
+      "tests": 1688,
+      "agent_tests": 62,
+      "failed": 0,
+      "skipped": 0,
+      "receipt_sha256": "722557fc3865b573c7d7ba5b2a8c912985aa93e04bbfe33883002966002590dd",
+      "tree_sha256": "44d913c636eaea1a0c8b8f24d83c32fb6f64aafcdf7b3400332626bf0cd2a755"
+    },
+    "ci-main/main-result.json": {
+      "steps": 9,
+      "workflow_steps_passed": 8,
+      "sha256": "0e749b049a56a6e38689c68eb09ce61d8f1e1bf565a9b79525e031b7e64f891c"
+    },
+    "ci-bench/benchmarks-result.json": {
+      "steps": 19,
+      "workflow_steps_passed": 19,
+      "sha256": "698889d86e565720b07f67b568599853b854d8608b2d71f52fdf323cbd0c89f0"
+    },
+    "compatibility/result.json": {
+      "steps": 4,
+      "workflow_steps_passed": 4,
+      "sha256": "2eaaad71b8770a4acd3c2af81d8496bedfb916c064cbd5a905f3275ae543a3b7"
+    },
+    "ci-security-python/security-python-result.json": {
+      "steps": 2,
+      "workflow_steps_passed": 2,
+      "sha256": "16a706c221a97b17b4a00140d612d477bf05737e58f9cbd5bdf963ac16541ce9"
+    },
+    "coverage": {
+      "added_executable_lines": 80,
+      "covered": 80,
+      "original_workflow_export_omits_agent": true,
+      "supplement_sha256": "12123234df8ad4e9808e7f8c91020194fca1709823ff81c94bc9cce34e2fbd66"
+    },
+    "swift-security": {
+      "extracted": 350,
+      "sources": 290,
+      "benchmarks": 59,
+      "manifest": 1,
+      "findings": 1,
+      "sha256": "b869fed6a965cd985792f19a2028349432a02f1885ed672f6a19a0637fad6d28"
+    },
+    "benchmarks": {
+      "engine_cases": 404,
+      "strict_pass": 400,
+      "known_strict_failures": 4,
+      "worker_source_files": 505,
+      "worker_sha256": "235c9b8fbd55948f9075771b7159c16b51bb27b317d4df5e9bad860c5c4168c8"
+    }
+  },
+  "verifier_sha256": "1cd3e55ca8a5262f14bdc788b11e9a3e1b3f70f83fd3ff5114aa78e708faf570",
+  "limits": [
+    "Original8 main workflow steps passed; supplemental ninth agent coverage guard failed and was retained. Separate explicit-object export proves local agent coverage only.",
+    "Cancellation remains cooperative; no forced interruption or rollback guarantee.",
+    "Four known pandas Wampler strict failures and one unchanged unsuppressed legacy MD5 finding remain.",
+    "Known concurrent MLX cold-start hazard remains open."
+  ]
+}
