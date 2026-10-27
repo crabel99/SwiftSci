@@ -1,0 +1,7 @@
+{
+  "observed_failure": "compatibility-cold-start-failure.json",
+  "sample": "compatibility-combined-cold-start/focused-helper-sample.txt",
+  "pinned_dependency_revision": "4657976edcdd2c60642424985d474b45ddddb390",
+  "scope": "Observed lock cycle in the combined Swift6.3.3 cold-start test invocation. Serial execution is numerical/lifecycle qualification only, not concurrent cold-start safety. No baseline reproduction or explanation for why native full runs avoided the hang is claimed.",
+  "independent_assessment": "flight_audit reports the sample and unchanged pinned implementation support a dependency-level initialization lock inversion, acceptable for focused draft with explicit retained limitation; no third-party source edit"
+}

@@ -1,0 +1,553 @@
+{
+  "devices": [
+    {
+      "architecture": "arm64",
+      "deviceId": "<redacted-device-id>",
+      "deviceName": "My Mac",
+      "modelName": "MacBook Pro",
+      "osBuildNumber": "26A434",
+      "osVersion": "27.0.1",
+      "platform": "macOS"
+    }
+  ],
+  "testNodes": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "duration": "0.00071s",
+                      "durationInSeconds": 0.0007107257843017578,
+                      "name": "false",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/ClassificationPipelineConcurrencyTests/fitExcludesCompetingOperations(prepared:)?args=fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    },
+                    {
+                      "duration": "0.000085s",
+                      "durationInSeconds": 8.511543273925781e-05,
+                      "name": "true",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/ClassificationPipelineConcurrencyTests/fitExcludesCompetingOperations(prepared:)?args=b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    }
+                  ],
+                  "duration": "0.0004s",
+                  "durationInSeconds": 0.0003979206085205078,
+                  "name": "An active fit excludes competing fits and both prediction routes",
+                  "nodeIdentifier": "ClassificationPipelineConcurrencyTests/fitExcludesCompetingOperations(prepared:)",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/ClassificationPipelineConcurrencyTests/fitExcludesCompetingOperations(prepared:)",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "children": [
+                    {
+                      "duration": "0.00017s",
+                      "durationInSeconds": 0.00016689300537109375,
+                      "name": "false",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/ClassificationPipelineConcurrencyTests/configurationInvalidatesSuspendedFit(prepared:)?args=fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    },
+                    {
+                      "duration": "0.0001s",
+                      "durationInSeconds": 0.0001049041748046875,
+                      "name": "true",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/ClassificationPipelineConcurrencyTests/configurationInvalidatesSuspendedFit(prepared:)?args=b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    }
+                  ],
+                  "duration": "0.00014s",
+                  "durationInSeconds": 0.00013589859008789062,
+                  "name": "Configuration changes reject a stale fit commit and require recovery",
+                  "nodeIdentifier": "ClassificationPipelineConcurrencyTests/configurationInvalidatesSuspendedFit(prepared:)",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/ClassificationPipelineConcurrencyTests/configurationInvalidatesSuspendedFit(prepared:)",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.00017s",
+                  "durationInSeconds": 0.00017404556274414062,
+                  "name": "Concurrent predictions retain snapshots and exclude a fit",
+                  "nodeIdentifier": "ClassificationPipelineConcurrencyTests/concurrentPredictionsRetainConfiguration()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/ClassificationPipelineConcurrencyTests/concurrentPredictionsRetainConfiguration()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.00003s",
+                  "durationInSeconds": 3.0040740966796875e-05,
+                  "name": "Configuration before the first fit preserves supplied-model delegation",
+                  "nodeIdentifier": "ClassificationPipelineConcurrencyTests/prefitConfigurationAndGetterSnapshots()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/ClassificationPipelineConcurrencyTests/prefitConfigurationAndGetterSnapshots()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.000075s",
+                  "durationInSeconds": 7.510185241699219e-05,
+                  "name": "Legacy row preprocessing can impute NaN before estimator validation",
+                  "nodeIdentifier": "ClassificationPipelineConcurrencyTests/legacyNaNPreprocessing()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/ClassificationPipelineConcurrencyTests/legacyNaNPreprocessing()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                }
+              ],
+              "name": "Classification pipeline synchronized lifecycle",
+              "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/ClassificationPipelineConcurrencyTests",
+              "nodeType": "Test Suite",
+              "result": "Passed"
+            },
+            {
+              "children": [
+                {
+                  "duration": "0.00015s",
+                  "durationInSeconds": 0.00015473365783691406,
+                  "name": "Erased prepared dispatch preserves supervised selection and snapshots",
+                  "nodeIdentifier": "PreparedClassificationIntegrationTests/nativeDispatchSelectionAndSnapshot()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedClassificationIntegrationTests/nativeDispatchSelectionAndSnapshot()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.000047s",
+                  "durationInSeconds": 4.696846008300781e-05,
+                  "name": "Consuming prepared input reaches consuming transformer methods",
+                  "nodeIdentifier": "PreparedClassificationIntegrationTests/consumingPipelinePath()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedClassificationIntegrationTests/consumingPipelinePath()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.000048s",
+                  "durationInSeconds": 4.792213439941406e-05,
+                  "name": "Legacy classifiers use compatibility defaults and keep unsupported probabilities",
+                  "nodeIdentifier": "PreparedClassificationIntegrationTests/legacyCompatibility()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedClassificationIntegrationTests/legacyCompatibility()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.029s",
+                  "durationInSeconds": 0.029057979583740234,
+                  "name": "Prepared StandardScaler fits training rows and matches row workflow exactly",
+                  "nodeIdentifier": "PreparedClassificationIntegrationTests/trainOnlyScalingMatchesRows()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedClassificationIntegrationTests/trainOnlyScalingMatchesRows()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.0037s",
+                  "durationInSeconds": 0.0037381649017333984,
+                  "name": "Model and pipeline reject reordered prepared schemas",
+                  "nodeIdentifier": "PreparedClassificationIntegrationTests/preparedSchema()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedClassificationIntegrationTests/preparedSchema()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.0029s",
+                  "durationInSeconds": 0.002851724624633789,
+                  "name": "Prevalidation preserves a fit and row reordering invalidates every prediction route",
+                  "nodeIdentifier": "PreparedClassificationIntegrationTests/failedRefitRules()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedClassificationIntegrationTests/failedRefitRules()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.00031s",
+                  "durationInSeconds": 0.00031304359436035156,
+                  "name": "Prepared transformers cannot change row count or identity",
+                  "nodeIdentifier": "PreparedClassificationIntegrationTests/transformerRowContracts()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedClassificationIntegrationTests/transformerRowContracts()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.000062s",
+                  "durationInSeconds": 6.198883056640625e-05,
+                  "name": "Pipeline rejects inconsistent probability widths",
+                  "nodeIdentifier": "PreparedClassificationIntegrationTests/probabilityShape()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedClassificationIntegrationTests/probabilityShape()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.00013s",
+                  "durationInSeconds": 0.0001270771026611328,
+                  "name": "Prepared classifier budget reservations release on success and failure",
+                  "nodeIdentifier": "PreparedClassificationIntegrationTests/budgetRelease()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedClassificationIntegrationTests/budgetRelease()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                }
+              ],
+              "name": "Prepared classification integration",
+              "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedClassificationIntegrationTests",
+              "nodeType": "Test Suite",
+              "result": "Passed"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "duration": "0.0003s",
+                      "durationInSeconds": 0.00029921531677246094,
+                      "name": ".cpu",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/independentFiniteStepReference(device:)?args=c4fc787d1d3b4cac81eaa0b90f0845011a0d0fced368b92dd2d9eec55ff50dfc",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    },
+                    {
+                      "duration": "0.036s",
+                      "durationInSeconds": 0.036386966705322266,
+                      "name": ".gpu",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/independentFiniteStepReference(device:)?args=24ca687b236a1fec63b96333052c28b5d7627aa88160f041c0e58e5d2334278d",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    }
+                  ],
+                  "duration": "0.018s",
+                  "durationInSeconds": 0.018343091011047363,
+                  "name": "Prepared CPU and GPU fits match independent NumPy reference at 0, 1, and 32 epochs",
+                  "nodeIdentifier": "PreparedLogisticRegressionTests/independentFiniteStepReference(device:)",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/independentFiniteStepReference(device:)",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.000077s",
+                  "durationInSeconds": 7.700920104980469e-05,
+                  "name": "Zero epochs preserves ties and strict thresholds",
+                  "nodeIdentifier": "PreparedLogisticRegressionTests/zeroEpochStrictThreshold()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/zeroEpochStrictThreshold()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.00022s",
+                  "durationInSeconds": 0.00022482872009277344,
+                  "name": "Prepared boundaries reject invalid controls, shapes, and values",
+                  "nodeIdentifier": "PreparedLogisticRegressionTests/preparedValidation()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/preparedValidation()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.00012s",
+                  "durationInSeconds": 0.00012135505676269531,
+                  "name": "Prepared and row fits preserve finite soft targets",
+                  "nodeIdentifier": "PreparedLogisticRegressionTests/softTargetParity()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/softTargetParity()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.00011s",
+                  "durationInSeconds": 0.00011491775512695312,
+                  "name": "Legacy CPU zero-width and NaN prediction behavior remains available",
+                  "nodeIdentifier": "PreparedLogisticRegressionTests/legacyPredictionContracts()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/legacyPredictionContracts()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.0004s",
+                  "durationInSeconds": 0.0004031658172607422,
+                  "name": "Failed and canceled refits preserve parameters, schema, and device",
+                  "nodeIdentifier": "PreparedLogisticRegressionTests/refitStateIsAtomic()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/refitStateIsAtomic()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.028s",
+                  "durationInSeconds": 0.027908802032470703,
+                  "name": "Prepared CPU, GPU, auto, and ANE match the independently checked CPU trajectory",
+                  "nodeIdentifier": "PreparedLogisticRegressionTests/preparedRoutingAgreement()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/preparedRoutingAgreement()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.002s",
+                  "durationInSeconds": 0.0019609928131103516,
+                  "name": "Failed automatic GPU refit keeps the previous CPU model and schema",
+                  "nodeIdentifier": "PreparedLogisticRegressionTests/failedRouteChangePreservesState()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests/failedRouteChangePreservesState()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                }
+              ],
+              "name": "Prepared logistic regression",
+              "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/PreparedLogisticRegressionTests",
+              "nodeType": "Test Suite",
+              "result": "Passed"
+            }
+          ],
+          "name": "SwiftMLTests",
+          "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests",
+          "nodeType": "Unit test bundle",
+          "result": "Passed"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "duration": "0.00018s",
+                  "durationInSeconds": 0.00017642974853515625,
+                  "name": "implicitAndSelectedMappings()",
+                  "nodeIdentifier": "PreparedRowMappingTests/implicitAndSelectedMappings()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftDataFrameTests/PreparedRowMappingTests/implicitAndSelectedMappings()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.000078s",
+                  "durationInSeconds": 7.82012939453125e-05,
+                  "name": "mappingAndValuesRetainSnapshots()",
+                  "nodeIdentifier": "PreparedRowMappingTests/mappingAndValuesRetainSnapshots()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftDataFrameTests/PreparedRowMappingTests/mappingAndValuesRetainSnapshots()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                }
+              ],
+              "name": "Prepared row mapping metadata",
+              "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftDataFrameTests/PreparedRowMappingTests",
+              "nodeType": "Test Suite",
+              "result": "Passed"
+            }
+          ],
+          "name": "SwiftDataFrameTests",
+          "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftDataFrameTests",
+          "nodeType": "Unit test bundle",
+          "result": "Passed"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "duration": "0.000018s",
+                      "durationInSeconds": 1.811981201171875e-05,
+                      "name": "[1, 1]",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAFullSVDLayoutTests/economyShapes(_:)?args=e61b9f584dbe27741cef6e9ee440831d7d94470c0871b0871541f0308916efea",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    },
+                    {
+                      "duration": "0.000016s",
+                      "durationInSeconds": 1.5974044799804688e-05,
+                      "name": "[1, 10]",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAFullSVDLayoutTests/economyShapes(_:)?args=17c4b27ce8d2e34e7cbde58d8666e8d9b9a3beb231cd8dc6441e79701f00d7a5",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    },
+                    {
+                      "duration": "0.000021s",
+                      "durationInSeconds": 2.0742416381835938e-05,
+                      "name": "[3, 4]",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAFullSVDLayoutTests/economyShapes(_:)?args=8be6d66e9099c68d8feb52ce42478d2153cac2763b784174ae6ae96cd636b596",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    },
+                    {
+                      "duration": "0.000073s",
+                      "durationInSeconds": 7.271766662597656e-05,
+                      "name": "[4, 3]",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAFullSVDLayoutTests/economyShapes(_:)?args=f5cab1cd0e1bb451c2bcdb4962b4beb71f90575bf48aa4024fa815890d9ef882",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    },
+                    {
+                      "duration": "0.000018s",
+                      "durationInSeconds": 1.7881393432617188e-05,
+                      "name": "[10, 1]",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAFullSVDLayoutTests/economyShapes(_:)?args=3d921e418ccc27a1db064a2596b8ef39e91bec97bdc64635bb8f972c26b24637",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    }
+                  ],
+                  "duration": "0.000029s",
+                  "durationInSeconds": 2.9087066650390625e-05,
+                  "name": "economyShapes(_:)",
+                  "nodeIdentifier": "PCAFullSVDLayoutTests/economyShapes(_:)",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAFullSVDLayoutTests/economyShapes(_:)",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.00035s",
+                  "durationInSeconds": 0.00035190582275390625,
+                  "name": "rejectsUnsupportedDimensionsAndWorkspaceWithoutAllocation()",
+                  "nodeIdentifier": "PCAFullSVDLayoutTests/rejectsUnsupportedDimensionsAndWorkspaceWithoutAllocation()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAFullSVDLayoutTests/rejectsUnsupportedDimensionsAndWorkspaceWithoutAllocation()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.000012s",
+                  "durationInSeconds": 1.1920928955078125e-05,
+                  "name": "preservesBackendSupportedLargeLayoutWithoutAllocation()",
+                  "nodeIdentifier": "PCAFullSVDLayoutTests/preservesBackendSupportedLargeLayoutWithoutAllocation()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAFullSVDLayoutTests/preservesBackendSupportedLargeLayoutWithoutAllocation()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                }
+              ],
+              "name": "PCA full SVD workspace bounds",
+              "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAFullSVDLayoutTests",
+              "nodeType": "Test Suite",
+              "result": "Passed"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "duration": "0.00055s",
+                      "durationInSeconds": 0.0005469322204589844,
+                      "name": ".full",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAMeanOverflowTests/rejectsOverflowAndPreservesFit(_:)?args=2e66756c6c",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    },
+                    {
+                      "duration": "0.00017s",
+                      "durationInSeconds": 0.0001671314239501953,
+                      "name": ".randomized",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAMeanOverflowTests/rejectsOverflowAndPreservesFit(_:)?args=2e72616e646f6d697a6564",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    }
+                  ],
+                  "duration": "0.00036s",
+                  "durationInSeconds": 0.00035703182220458984,
+                  "name": "rejectsOverflowAndPreservesFit(_:)",
+                  "nodeIdentifier": "PCAMeanOverflowTests/rejectsOverflowAndPreservesFit(_:)",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAMeanOverflowTests/rejectsOverflowAndPreservesFit(_:)",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                }
+              ],
+              "name": "PCA finite mean overflow",
+              "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PCAMeanOverflowTests",
+              "nodeType": "Test Suite",
+              "result": "Passed"
+            },
+            {
+              "children": [
+                {
+                  "duration": "0.033s",
+                  "durationInSeconds": 0.032608985900878906,
+                  "name": "batchAndBothMatrixLayouts()",
+                  "nodeIdentifier": "PreparedPCAGPUTests/batchAndBothMatrixLayouts()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PreparedPCAGPUTests/batchAndBothMatrixLayouts()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                }
+              ],
+              "name": "Prepared PCA GPU ownership and parity",
+              "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PreparedPCAGPUTests",
+              "nodeType": "Test Suite",
+              "result": "Passed"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "duration": "0.00038s",
+                      "durationInSeconds": 0.00037598609924316406,
+                      "name": ".auto",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PreparedPCATests/exactAnswersAndLayouts(_:)?args=2e6175746f",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    },
+                    {
+                      "duration": "0.00062s",
+                      "durationInSeconds": 0.0006201267242431641,
+                      "name": ".full",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PreparedPCATests/exactAnswersAndLayouts(_:)?args=2e66756c6c",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    },
+                    {
+                      "duration": "0.00038s",
+                      "durationInSeconds": 0.0003821849822998047,
+                      "name": ".randomized",
+                      "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PreparedPCATests/exactAnswersAndLayouts(_:)?args=2e72616e646f6d697a6564",
+                      "nodeType": "Arguments",
+                      "result": "Passed"
+                    }
+                  ],
+                  "duration": "0.00046s",
+                  "durationInSeconds": 0.00045943260192871094,
+                  "name": "exactAnswersAndLayouts(_:)",
+                  "nodeIdentifier": "PreparedPCATests/exactAnswersAndLayouts(_:)",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PreparedPCATests/exactAnswersAndLayouts(_:)",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.00025s",
+                  "durationInSeconds": 0.0002532005310058594,
+                  "name": "preprocessingSelectionAndSnapshots()",
+                  "nodeIdentifier": "PreparedPCATests/preprocessingSelectionAndSnapshots()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PreparedPCATests/preprocessingSelectionAndSnapshots()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.0002s",
+                  "durationInSeconds": 0.00019788742065429688,
+                  "name": "schemaAndRejectedRefit()",
+                  "nodeIdentifier": "PreparedPCATests/schemaAndRejectedRefit()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PreparedPCATests/schemaAndRejectedRefit()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                },
+                {
+                  "duration": "0.00058s",
+                  "durationInSeconds": 0.0005757808685302734,
+                  "name": "emptyAndInvalidInputs()",
+                  "nodeIdentifier": "PreparedPCATests/emptyAndInvalidInputs()",
+                  "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PreparedPCATests/emptyAndInvalidInputs()",
+                  "nodeType": "Test Case",
+                  "result": "Passed"
+                }
+              ],
+              "name": "Prepared PCA workflows",
+              "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests/PreparedPCATests",
+              "nodeType": "Test Suite",
+              "result": "Passed"
+            }
+          ],
+          "name": "SwiftClusterTests",
+          "nodeIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftClusterTests",
+          "nodeType": "Unit test bundle",
+          "result": "Passed"
+        }
+      ],
+      "name": "SwiftSci-Package",
+      "nodeType": "Test Plan",
+      "result": "Passed"
+    }
+  ],
+  "testPlanConfigurations": [
+    {
+      "configurationId": "1",
+      "configurationName": "Test Scheme Action"
+    }
+  ]
+}

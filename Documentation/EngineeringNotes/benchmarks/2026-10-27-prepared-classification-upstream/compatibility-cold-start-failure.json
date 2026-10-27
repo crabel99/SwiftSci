@@ -1,0 +1,9 @@
+{
+  "failed_step": "focused-prepared-tests",
+  "observed": "Combined five-suite invocation blocked; task helper9943 sampled and then explicitly terminated withSIGTERM",
+  "sample": "compatibility-combined-cold-start/focused-helper-sample.txt",
+  "mechanism": "BCEvalueAndGrad holdsMLXEvalLock while waiting globalStreams one-time initialization; concurrentCPUfit owns globalStreams initializer while waitingMLXEvalLock",
+  "boundary": "Pinned MLX cold initialization from concurrent suites, observed under Swift6.3.3; fullnativeXcode27runs pass and are distinct",
+  "source_unchanged": true,
+  "next_probe": "Bounded focused invocation with explicit --no-parallel, then separate suite processes if necessary"
+}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "swift",
+    "test",
+    "--scratch-path",
+    "/private/tmp/swiftsci-upstream-classification-20261027/swift633",
+    "--skip-build",
+    "--no-parallel",
+    "--enable-code-coverage",
+    "--filter",
+    "PreparedClassificationIntegrationTests|ClassificationPipelineConcurrencyTests|PreparedRowMappingTests|PreparedLogisticRegressionTests|BinaryCrossEntropyTests"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 8.6466543674469
+}

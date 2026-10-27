@@ -1,0 +1,7 @@
+{
+  "exit_code": 1,
+  "failed_git_checkout_exit_code": 128,
+  "observed_error": "ignoring alternate object stores, nesting too deep; unable to read tree",
+  "boundary": "Qualification-only checkout creation, before caches, build or test execution. No tested source changed.",
+  "correction": "Flatten frozen source local object references deepest-first; retry in a fresh integration output"
+}

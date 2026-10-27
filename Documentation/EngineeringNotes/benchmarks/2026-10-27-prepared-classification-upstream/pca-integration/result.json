@@ -1,0 +1,34 @@
+{
+  "classification": "3fd462155a10fa78a1cf6b98b56ea926d43ef112",
+  "pca": "4f33c76f3938e070105c2a5928c712aa5e067a00",
+  "tree": "d26ffe0243144efdfb5e85f9987e1bf5cae17ec4",
+  "integration_commit": "826dbb95dae9830ac1e693a79b158b72ce1ab238",
+  "selected": [
+    "SwiftMLTests/PreparedLogisticRegressionTests",
+    "SwiftMLTests/PreparedClassificationIntegrationTests",
+    "SwiftMLTests/ClassificationPipelineConcurrencyTests",
+    "SwiftDataFrameTests/PreparedRowMappingTests",
+    "SwiftClusterTests/PreparedPCATests",
+    "SwiftClusterTests/PreparedPCAGPUTests",
+    "SwiftClusterTests/PCAMeanOverflowTests",
+    "SwiftClusterTests/PCAFullSVDLayoutTests"
+  ],
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/private/tmp/swiftsci-upstream-classification-20261027/pca-integration/validate-native.py",
+    "Debug",
+    "pca-classification",
+    "SwiftMLTests/PreparedLogisticRegressionTests",
+    "SwiftMLTests/PreparedClassificationIntegrationTests",
+    "SwiftMLTests/ClassificationPipelineConcurrencyTests",
+    "SwiftDataFrameTests/PreparedRowMappingTests",
+    "SwiftClusterTests/PreparedPCATests",
+    "SwiftClusterTests/PreparedPCAGPUTests",
+    "SwiftClusterTests/PCAMeanOverflowTests",
+    "SwiftClusterTests/PCAFullSVDLayoutTests"
+  ],
+  "controller_sha256": "93f88305a67b8d740e453d9d80b71805302c4a7bbe96d814e3064bc6acff8e86",
+  "scope": "Qualification-only clean merge, not a source delivery or upstream merge",
+  "exit_code": 0,
+  "status": "passed"
+}

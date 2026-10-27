@@ -1,0 +1,136 @@
+{
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "verifier_sha256": "be60244d22bd24abc257f92fe0408d5afa15e5de8979ab345fcede007d01aa30",
+  "baseline_source": "506204920a5a073b1e7bc316476875860bacfda0",
+  "baseline_build_boundary": "Retained qualified library objects, freshly linked and executed probe",
+  "source_head": "3fd462155a10fa78a1cf6b98b56ea926d43ef112",
+  "cases": [
+    {
+      "epochs": 0,
+      "fixture_sha256": "7b853b1c0711c4f21595f5311bb4893e14f69f37151e21b9d26e313bb1029929",
+      "rows": 569,
+      "features": 30,
+      "splits": [
+        328,
+        115,
+        126
+      ],
+      "executions": 3,
+      "numerical_fields_checked": 3507,
+      "commands": [
+        {
+          "variant": "baseline",
+          "probe_binary_sha256": "95209416095a6d522624072c93f9c8112e202be97bb51cbb5097e538debc166d"
+        },
+        {
+          "variant": "candidate-legacy",
+          "probe_binary_sha256": "36f7c5c0a3ac68236519bd8cefb518836f1f0dbccce24e60b019f467f83fc833"
+        },
+        {
+          "variant": "candidate-prepared",
+          "probe_binary_sha256": "36f7c5c0a3ac68236519bd8cefb518836f1f0dbccce24e60b019f467f83fc833"
+        }
+      ],
+      "max_old_new_abs": 0.0,
+      "max_numpy_abs": 0.0,
+      "labels_and_row_positions_exact": true,
+      "device": "CPU",
+      "precision": "Double",
+      "preprocessing": "StandardScaler fit only on training rows; train, validation and test use those fitted statistics",
+      "comparison_atol": 1e-08,
+      "comparison_rtol": 1e-09,
+      "fresh_output_files": {
+        "baseline": "509201c737bb1ceec338073d6ef250dfaf5c0654d575d76a312425446303a7e1",
+        "candidate-legacy": "19527d635ed59d2db2fbdb7b90a3b0aadab7f33af9c867ae7cde091f10deb644",
+        "candidate-prepared": "e39faf38f704fc13e54c06519b4bd7bd59dc558eec28d06028683c6964cfb8f0"
+      },
+      "independent_expected_sha256": "a6ecd3b9db4446fae3b39979ed74945c597e554c029441dbef038c84161d1c7f"
+    },
+    {
+      "epochs": 1,
+      "fixture_sha256": "26a0c80868a2ca2dcf95e420b7003b87c50b26ef8415fa21b10ce6e1738f4dc3",
+      "rows": 569,
+      "features": 30,
+      "splits": [
+        328,
+        115,
+        126
+      ],
+      "executions": 3,
+      "numerical_fields_checked": 3507,
+      "commands": [
+        {
+          "variant": "baseline",
+          "probe_binary_sha256": "95209416095a6d522624072c93f9c8112e202be97bb51cbb5097e538debc166d"
+        },
+        {
+          "variant": "candidate-legacy",
+          "probe_binary_sha256": "36f7c5c0a3ac68236519bd8cefb518836f1f0dbccce24e60b019f467f83fc833"
+        },
+        {
+          "variant": "candidate-prepared",
+          "probe_binary_sha256": "36f7c5c0a3ac68236519bd8cefb518836f1f0dbccce24e60b019f467f83fc833"
+        }
+      ],
+      "max_old_new_abs": 0.0,
+      "max_numpy_abs": 2.220446049250313e-16,
+      "labels_and_row_positions_exact": true,
+      "device": "CPU",
+      "precision": "Double",
+      "preprocessing": "StandardScaler fit only on training rows; train, validation and test use those fitted statistics",
+      "comparison_atol": 1e-08,
+      "comparison_rtol": 1e-09,
+      "fresh_output_files": {
+        "baseline": "20c6849f413791b27478b01033d56d4fefc220417e4ed337141e9be6ce1288eb",
+        "candidate-legacy": "32307e20e820a151b8c3e1aed0ccd26ddeb4f65e8887118730158a5d5d33ba10",
+        "candidate-prepared": "f7bd606825d0df07b64c39737a469dfdf021f5c0a94a7b017c5bf29e6091e44c"
+      },
+      "independent_expected_sha256": "dcf80e8eafe7fb596fa4935d8957ef2908d18654e267f3545a7c5ddfcb38c76b"
+    },
+    {
+      "epochs": 32,
+      "fixture_sha256": "21319365e43e5757853ef23d0acac4aaa06d43c6cf7786eaed4bfaa784829626",
+      "rows": 569,
+      "features": 30,
+      "splits": [
+        328,
+        115,
+        126
+      ],
+      "executions": 3,
+      "numerical_fields_checked": 3507,
+      "commands": [
+        {
+          "variant": "baseline",
+          "probe_binary_sha256": "95209416095a6d522624072c93f9c8112e202be97bb51cbb5097e538debc166d"
+        },
+        {
+          "variant": "candidate-legacy",
+          "probe_binary_sha256": "36f7c5c0a3ac68236519bd8cefb518836f1f0dbccce24e60b019f467f83fc833"
+        },
+        {
+          "variant": "candidate-prepared",
+          "probe_binary_sha256": "36f7c5c0a3ac68236519bd8cefb518836f1f0dbccce24e60b019f467f83fc833"
+        }
+      ],
+      "max_old_new_abs": 0.0,
+      "max_numpy_abs": 1.1102230246251565e-15,
+      "labels_and_row_positions_exact": true,
+      "device": "CPU",
+      "precision": "Double",
+      "preprocessing": "StandardScaler fit only on training rows; train, validation and test use those fitted statistics",
+      "comparison_atol": 1e-08,
+      "comparison_rtol": 1e-09,
+      "fresh_output_files": {
+        "baseline": "b4103ebda8b0b6b928cc0f8b11130b55ab50ebf472738668783acf5bd3e4f4f4",
+        "candidate-legacy": "7e8efc4479242e60030868ea78d5b4cae2ebb4dad6019ec608a20feddedbdb3a",
+        "candidate-prepared": "89e2783ab5388b3c9ef0bfbc9f4ba73781b1075aab4478202a288abc722a85f8"
+      },
+      "independent_expected_sha256": "6b455cc72eeea902e71a8a15c5d002de71919403976fc343f6f49b2b9695f0a6"
+    }
+  ],
+  "status": "passed",
+  "baseline_provenance_sha256": "f8dd4bd23a2090862490d64902328d3988009d80c27b105d23c8ace1f480b71c",
+  "candidate_proof_sha256": "415a9c13826f95fb238df3dbe2ad978462e6575631cd24f754fdc2caf6ff8a73"
+}

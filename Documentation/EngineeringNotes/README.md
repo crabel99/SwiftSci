@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Prepared classification upstream qualification](benchmarks/2026-10-27-prepared-classification-upstream/README.md) records the focused feature above GPU PR90, full local checks, exact public CPU outputs, PCA integration and the retained MLX concurrent cold-start limitation. The [publication review](benchmarks/2026-10-27-prepared-classification-publication-audit.md) checks retained bytes and redactions.
+
 - [Independent documentation reporting correction](benchmarks/2026-10-27-doc-reporting-upstream/README.md) removes the false 100% claim, preserves placeholder enforcement, and records actual workflow regressions on Python 3.9.6 and 3.13 plus complete local CI.
 
 - [Independent multiclass Core ML export correction](benchmarks/2026-10-27-coreml-export-upstream/README.md) isolates the four-file serialization correction on upstream main, with fresh native inference, complete local CI and actual Swift 6.3.3 runtime tests.

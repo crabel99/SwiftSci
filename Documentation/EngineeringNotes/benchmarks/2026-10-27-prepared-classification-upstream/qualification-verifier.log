@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "source": "3fd462155a10fa78a1cf6b98b56ea926d43ef112",
+  "base": "e19db7dda4567c425b7eb002da82e234e6c7980f",
+  "gpu_prerequisite": "506204920a5a073b1e7bc316476875860bacfda0",
+  "changed_files": [
+    "Sources/SwiftDataFrame/Core/PreparedNumericBatch.swift",
+    "Sources/SwiftML/Core/EstimatorPipeline.swift",
+    "Sources/SwiftML/Core/EstimatorProtocols.swift",
+    "Sources/SwiftML/Core/LogisticRegression.swift",
+    "Sources/SwiftML/SwiftML.docc/PreparedClassification.md",
+    "Sources/SwiftML/SwiftML.docc/SwiftML.md",
+    "Tests/SwiftDataFrameTests/PreparedRowMappingTests.swift",
+    "Tests/SwiftDataFrameTests/PreparedSupervisedBatchTests.swift",
+    "Tests/SwiftMLTests/ClassificationPipelineConcurrencyTests.swift",
+    "Tests/SwiftMLTests/PreparedClassificationIntegrationTests.swift",
+    "Tests/SwiftMLTests/PreparedLogisticRegressionTests.swift"
+  ],
+  "full_pr_files": 13,
+  "public_workflow": {
+    "processes": 9,
+    "numerical_fields": 10521,
+    "max_baseline_difference": 0,
+    "max_numpy_difference": 1.1102230246251565e-15,
+    "device": "CPU",
+    "precision": "Double",
+    "baseline": "Fresh probe using retained qualified GPU prerequisite library objects; baseline library build is historical"
+  },
+  "pca_integration": {
+    "source": "826dbb95dae9830ac1e693a79b158b72ce1ab238",
+    "tree": "d26ffe0243144efdfb5e85f9987e1bf5cae17ec4",
+    "summary": {
+      "totalTestCount": 33,
+      "passedTests": 33,
+      "failedTests": 0,
+      "skippedTests": 0
+    },
+    "scope": "Qualification-only clean merge with current PR89; no upstream merge or delivery of PCA in this PR"
+  },
+  "compatibility_scope": "All test targets compiled; safe suite plus all new prepared logistic numerical/GPU, pipeline, concurrency, row-mapping and BCE suites executed. Explicit --no-parallel avoids the preserved pinned-MLX concurrent cold-start lock cycle; concurrency tests retain their internal tasks. Swift6.3.3+SDK26.5 host code uses the pinned MLX Metal resource compiled by Xcode27 on this Mac.",
+  "python_codeql_findings": 0,
+  "swift_codeql_findings": 1,
+  "verified_swift_archive_files": 348,
+  "regression_policy": "Passed unchanged policy; four strict Python Wampler failures remain failed",
+  "security": "One unchanged unsuppressed legacy PostgreSQL MD5 finding remains",
+  "worker_receipt_sha256": "0facc884f7d7820cf4a0faa83dbf8fdb59c87320b30454ec25ec6906dc7b95d7",
+  "worker_binary_sha256": "78d3dcaa04470370b6a610360a654a26359eb1b5589dd9a4f8a05d8bf44b1375",
+  "worker_source_files": 503,
+  "verifier_sha256": "f1757998b8e751c6ea28eb83401c869fdbcf8a404ec5185dba15e47cd654a4d7"
+}

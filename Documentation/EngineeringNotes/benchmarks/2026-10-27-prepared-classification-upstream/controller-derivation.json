@@ -1,0 +1,43 @@
+{
+  "parent": "/private/tmp/swiftsci-upstream-doc-reporting-20261027",
+  "changes": [
+    "Redirect task paths to isolated classification root",
+    "Copy completed documentation-unit caches; compatibility and security dependency state only",
+    "Compatibility additionally executes new pipeline, lifecycle and row-mapping suites; GPU and all logistic tests execute in full native runs",
+    "Preserve initial missing-Metal runtime failure; bootstrap pinned native resource next to older-compiler test binary and include prepared-logistic and BCE numerical/GPU suites in rerun",
+    "Explicit --no-parallel for focused older-compiler runtime qualification after sampled MLX concurrent cold-start lock cycle; retain failed combined attempt and passing bounded serial probe"
+  ],
+  "controllers": {
+    "full-ci-runner.py": {
+      "parent_sha256": "c018843be7641ddd92ba9a80772e74192ee83896da0e623e9f6e73231ba5a8ee",
+      "sha256": "c018843be7641ddd92ba9a80772e74192ee83896da0e623e9f6e73231ba5a8ee"
+    },
+    "benchmark-ci-runner.py": {
+      "parent_sha256": "2c6affd6ea4dcbd7abee6a6d21d8508b1db7058802bac3de7f55aa124dd3b888",
+      "sha256": "769c631b11a72e0a69fa32d541d86d33b3307a63da867be60d03ff1ecbe47c17"
+    },
+    "validate-native.py": {
+      "parent_sha256": "452f4fca313d2cc24f2e9985d35e64353c3e311d32a3e148e72796bcf9930b44",
+      "sha256": "452f4fca313d2cc24f2e9985d35e64353c3e311d32a3e148e72796bcf9930b44"
+    },
+    "check-swift633.py": {
+      "parent_sha256": "4949f4b86f582e29120fd2acc694ba6a54a1f95a08f855cf676cd52cf6f53305",
+      "sha256": "1eba182c92b3a58dce88a6cd3575b69ac522a06655e1ba1fb6696361de657b4a"
+    },
+    "check-swift-codeql-replay.py": {
+      "parent_sha256": "d71b312e39f0a1a7b946d6f33f4b71bd25d29d87b4baacdbd81851796e28d642",
+      "sha256": "d71b312e39f0a1a7b946d6f33f4b71bd25d29d87b4baacdbd81851796e28d642"
+    },
+    "run-native-matrix.py": {
+      "parent_sha256": "c7fa37fa715e29bba8cea2ce031de0bd0d958b6864ddefca296951a15e4653b5",
+      "sha256": "c7fa37fa715e29bba8cea2ce031de0bd0d958b6864ddefca296951a15e4653b5"
+    },
+    "prepare-ci-caches.py": {
+      "parent_sha256": "717949999312ea2240da919d42e0206052ee9291d9093c440332a3eabda2c18f",
+      "sha256": "f3ec50c92b4b6760391a48aa6c4d6dbfb144627f84bf87b90bba519d8dca2496"
+    },
+    "launch-ci.py": {
+      "sha256": "8d51e5da2e38ceae4a696fa69dcccf75dde7630c0318964377afd339c093ebb0"
+    }
+  }
+}

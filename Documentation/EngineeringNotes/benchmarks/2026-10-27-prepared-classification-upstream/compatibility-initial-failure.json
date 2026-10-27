@@ -1,0 +1,12 @@
+{
+  "exit_code": 1,
+  "passed_steps": [
+    "debug-build",
+    "safe-tests"
+  ],
+  "failed_step": "focused-prepared-tests",
+  "observed_error": "MLX error: Failed to load the default metallib. library not found",
+  "boundary": "Swift6.3.3 build and all-test compilation succeed; focused runtime requires a compiled Metal resource absent from SwiftPM outputs",
+  "correction": "Copy the Xcode27 native Metal resource to the test binary colocated library path after checking pinned MLX revisions; rerun full four-step compatibility and all focused numerical/GPU tests",
+  "source_unchanged": true
+}
