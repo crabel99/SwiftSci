@@ -1,0 +1,15 @@
+{
+  "parent": "/private/tmp/swiftsci-upstream-gpu-gradient-20261027",
+  "changes": [
+    "Benchmark cache/packages paths redirected to new isolated APFS copies",
+    "Native packages redirected to new isolated APFS copy",
+    "Compatibility runner additionally executes the two existing Core ML regression definitions with installed Swift6.3.3"
+  ],
+  "controllers": {
+    "full-ci-runner.py": "c018843be7641ddd92ba9a80772e74192ee83896da0e623e9f6e73231ba5a8ee",
+    "benchmark-ci-runner.py": "06dd31db8965fe3c3771e94bdb9d57395706d8e2e26f4c9a139188b89301af29",
+    "validate-native.py": "452f4fca313d2cc24f2e9985d35e64353c3e311d32a3e148e72796bcf9930b44",
+    "check-swift633.py": "da91c336c7187cbedb39fe141552b0df301c7484db2b041266b608a6654ef54b",
+    "check-swift-codeql-replay.py": "14f05f78e2c1b155dfbfd5dcea70305dae3cb0f503a214debc6eb3588994f38a"
+  }
+}

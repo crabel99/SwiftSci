@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Independent multiclass Core ML export correction](benchmarks/2026-10-27-coreml-export-upstream/README.md) isolates the four-file serialization correction on upstream main, with fresh native inference, complete local CI and actual Swift 6.3.3 runtime tests.
+
 - [Independent upstream GPU gradient correction](benchmarks/2026-10-27-gpu-bce-upstream/README.md) isolates the two-file fix directly on upstream main, with fresh native tests, complete local CI, compatibility checks and retained security findings.
 
 - [October 26 roadmap and publication closeout](benchmarks/2026-10-26-roadmap-closeout/README.md) records the updated tracker, final decision trail and independent publication audits, with delivery and research still open.

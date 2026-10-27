@@ -1,0 +1,3 @@
+# Core ML schema reference
+
+Checked October 27 against Apple's live [NeuralNetwork format reference](https://apple.github.io/coremltools/mlmodel/Format/NeuralNetwork.html#softmaxndlayerparams). NeuralNetworkLayer declares SoftmaxNDLayerParams as field 950. Its int64 axis parameter is field 1. The operation normalizes along that axis and preserves shape. Generic N-dimensional input mappings are available from specification 4. Last-axis encoding matches the existing rank-one output representation. This is schema support; actual fresh Core ML compilation and numerical inference tests establish behavior on the local host.

@@ -1,0 +1,78 @@
+{
+  "command": [
+    "xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/private/tmp/swiftsci-upstream-coreml-export-20261027/derived/Build/Products/SwiftSci-Package_SwiftSci-Package_macosx27.0-arm64.xctestrun",
+    "-destination",
+    "platform=macOS,arch=arm64",
+    "-parallel-testing-enabled",
+    "NO",
+    "-resultBundlePath",
+    "/private/tmp/swiftsci-upstream-coreml-export-20261027/native-red/tests.xcresult",
+    "-only-testing:SwiftMLTests/CoreMLMulticlassExportTests"
+  ],
+  "exit_code": 65,
+  "seconds": 34.84385871887207,
+  "summary": {
+    "devicesAndConfigurations": [
+      {
+        "device": {
+          "architecture": "arm64",
+          "deviceId": "<redacted-device-id>",
+          "deviceName": "My Mac",
+          "modelName": "MacBook Pro",
+          "osBuildNumber": "26A434",
+          "osVersion": "27.0.1",
+          "platform": "macOS"
+        },
+        "expectedFailures": 0,
+        "failedTests": 2,
+        "passedTests": 0,
+        "skippedTests": 0,
+        "testPlanConfiguration": {
+          "configurationId": "1",
+          "configurationName": "Test Scheme Action"
+        }
+      }
+    ],
+    "environmentDescription": "SwiftSci-Package \u00b7 Built with macOS 27.0.1",
+    "expectedFailures": 0,
+    "failedTests": 2,
+    "finishTime": 1793108667.999,
+    "passedTests": 0,
+    "result": "Failed",
+    "runtimeWarnings": [],
+    "skippedTests": 0,
+    "startTime": 1793108648.035,
+    "statistics": [],
+    "testFailures": [
+      {
+        "failureText": "Caught error: Error Domain=com.apple.CoreML Code=3 \"compiler error: Error reading protobuf spec. validator error: Nonlinearity type INVALID is not supported in this version of CoreML.\" UserInfo={NSLocalizedDescription=compiler error: Error reading protobuf spec. validator error: Nonlinearity type INVALID is not supported in this version of CoreML.}",
+        "targetName": "SwiftMLTests",
+        "testIdentifier": 1,
+        "testIdentifierString": "CoreMLMulticlassExportTests/suppliedMulticlassProbabilities()",
+        "testIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/CoreMLMulticlassExportTests/suppliedMulticlassProbabilities()",
+        "testName": "Exported multiclass probabilities match independent stable softmax"
+      },
+      {
+        "failureText": "Caught error: Error Domain=com.apple.CoreML Code=3 \"compiler error: Error reading protobuf spec. validator error: Nonlinearity type INVALID is not supported in this version of CoreML.\" UserInfo={NSLocalizedDescription=compiler error: Error reading protobuf spec. validator error: Nonlinearity type INVALID is not supported in this version of CoreML.}",
+        "targetName": "SwiftMLTests",
+        "testIdentifier": 2,
+        "testIdentifierString": "CoreMLMulticlassExportTests/trainedClassifierExport()",
+        "testIdentifierURL": "test://com.apple.xcode/SwiftSci/SwiftMLTests/CoreMLMulticlassExportTests/trainedClassifierExport()",
+        "testName": "Fitted public multiclass classifier survives export and prepared inference"
+      }
+    ],
+    "title": "Test - SwiftSci-Package",
+    "topInsights": [
+      {
+        "category": "Common Failures",
+        "impact": "100% of failures",
+        "text": "2 runs of 2 tests failed with Caught error: Error Domain=com.apple.CoreML Code=3 \"compiler error: Error reading protobuf spec. validator error: Nonlinearity type INVALID is not supported in this version of CoreML.\" UserInfo={NSLocalizedDescription=compiler error: Error reading protobuf spec. validator error: Nonlinearity type INVALID is not supported in this version of CoreML.}"
+      }
+    ],
+    "totalTestCount": 2
+  },
+  "strict_onnx_ci": true
+}
