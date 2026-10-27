@@ -1,0 +1,41 @@
+{
+  "tag": "baseline-repro",
+  "source": "01d48cbcd940c886546b2bb8d6b177d9b7a0e277",
+  "runs": 40,
+  "unique_vectors": 40,
+  "predictions": {
+    "technology": 40,
+    "food": 0
+  },
+  "golden_passes": 3,
+  "source_sha256": {
+    "Sources/SwiftNLP/Core/LocalEmbeddingEngine.swift": "019b551db258f8f8f1ec8689bd15870e5615e7db0e43e81767108cd3cade2b0c",
+    "Sources/SwiftNLP/Core/SentenceEmbedding.swift": "cc05665a2542a7bae867d05504ff5279335c04ba59b8b8e49efa9689cbde0d37",
+    "Sources/SwiftNLP/Core/AppleSentenceEmbeddingEngine.swift": "a6b6284647d60724b1634c016bd2f311c1ac72dd2575fc1f26891db33f20dc8b",
+    "Sources/SwiftNLP/Core/AppleNLEmbedding.swift": "ab75629955f07355a8c8b0c097d33a7df8cadee0f0b87cbb936a2ef5ecf4f34d",
+    "Sources/SwiftNLP/Classification/ZeroShotTextClassifier.swift": "dc43c5e04c4ed6a0590dc5f3a270f81e7bb4237de9373a549cc1d4401233bceb",
+    "Sources/SwiftNLP/Errors/NLPError.swift": "322f8c015cbefa100a31ce8727ac8f5478e8b69a47290c39732be81f6a682852",
+    "Sources/SwiftNLP/Core/Tokenizer.swift": "893e3ee7c6cc51b1d86d0aab2a4d0adf040b54ee352ab018a3fa93c10ebe8b9a"
+  },
+  "controller_sha256": "3ecbd35d6141a86ace13e9cf3c235528e7f4a124f6150da40a60f9cea9d6f0c0",
+  "probe_sha256": "189a66e08b82d848eb782ec992cfb72262aab25740c49e98d063ab32fd76cb16",
+  "binary_sha256": "d78ec7678b4f6bb33ead5104bc4da07c2183980cddd70983323006d23f341ad4",
+  "command": [
+    "xcrun",
+    "swiftc",
+    "-parse-as-library",
+    "-module-cache-path",
+    "/private/tmp/swiftsci-pr94-ci-20261027/probe-module-cache",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/Sources/SwiftNLP/Core/LocalEmbeddingEngine.swift",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/Sources/SwiftNLP/Core/SentenceEmbedding.swift",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/Sources/SwiftNLP/Core/AppleSentenceEmbeddingEngine.swift",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/Sources/SwiftNLP/Core/AppleNLEmbedding.swift",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/Sources/SwiftNLP/Classification/ZeroShotTextClassifier.swift",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/Sources/SwiftNLP/Errors/NLPError.swift",
+    "/private/tmp/swiftsci-pr94-ci-20261027/baseline-repro/existing-hash.swift",
+    "/private/tmp/swiftsci-pr94-ci-20261027/probe.swift",
+    "-o",
+    "/private/tmp/swiftsci-pr94-ci-20261027/baseline-repro/probe"
+  ],
+  "scope": "Fresh processes execute actual production embedding/classifier/provider source. Shared hash helper is extracted verbatim from Tokenizer.swift to avoid unrelated tokenizer dependencies. No deterministic-hashing environment override."
+}

@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Stable local embedding correction](benchmarks/2026-10-27-stable-local-embeddings-upstream/README.md) records PR94’s intermittent Swift failure, stable hashing, golden and restart regressions, full local checks and stored-vector regeneration. The [publication review](benchmarks/2026-10-27-stable-local-embeddings-publication-audit.md) verifies retained bytes and redactions.
+
 - [Agent completion and cancellation qualification](benchmarks/2026-10-27-agent-contract-upstream/README.md) records the focused two-commit source on merged main, full local checks, explicit red failures and local supplemental coverage. The [publication review](benchmarks/2026-10-27-agent-contract-publication-audit.md) verifies retained bytes and redactions.
 
 - [Prepared classification upstream qualification](benchmarks/2026-10-27-prepared-classification-upstream/README.md) records the focused feature above GPU PR90, full local checks, exact public CPU outputs, PCA integration and the retained MLX concurrent cold-start limitation. The [publication review](benchmarks/2026-10-27-prepared-classification-publication-audit.md) checks retained bytes and redactions.

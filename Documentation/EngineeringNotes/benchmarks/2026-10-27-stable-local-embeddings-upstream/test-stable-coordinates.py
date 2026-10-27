@@ -1,0 +1,14 @@
+from pathlib import Path
+import argparse,hashlib,json,subprocess
+p=argparse.ArgumentParser();p.add_argument('--tag',required=True);a=p.parse_args();r=Path(__file__).resolve().parent;s=r/'source';out=r/a.tag;out.mkdir(exist_ok=False)
+paths=['Core/LocalEmbeddingEngine.swift','Core/SentenceEmbedding.swift','Core/AppleSentenceEmbeddingEngine.swift','Core/AppleNLEmbedding.swift','Classification/ZeroShotTextClassifier.swift','Errors/NLPError.swift'];inputs=[s/'Sources/SwiftNLP'/n for n in paths]
+helper='@inlinable\npublic func fnv1aTokenHash'+(s/'Sources/SwiftNLP/Core/Tokenizer.swift').read_text().split('@inlinable\npublic func fnv1aTokenHash',1)[1];(out/'existing-hash.swift').write_text(helper)
+main='import Foundation\nimport XCTest\nlet suite = LocalEmbeddingEngineTests.defaultTestSuite\nsuite.run()\nexit(suite.testRun!.hasSucceeded ? 0 : 1)\n';(out/'main.swift').write_text(main)
+lib=['xcrun','swiftc','-emit-library','-emit-module','-module-name','SwiftNLP','-enable-testing','-module-cache-path',str(r/'probe-module-cache'),'-emit-module-path',str(out/'SwiftNLP.swiftmodule'),*map(str,inputs),str(out/'existing-hash.swift'),'-o',str(out/'libSwiftNLP.dylib')]
+frameworks='/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks'
+test=['xcrun','swiftc','-F',frameworks,'-I','/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib','-L','/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib','-lXCTestSwiftSupport','-Xlinker','-rpath','-Xlinker','/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib','-Xlinker','-rpath','-Xlinker',frameworks,'-module-cache-path',str(r/'probe-module-cache'),'-I',str(out),'-L',str(out),'-lSwiftNLP','-Xlinker','-rpath','-Xlinker',str(out),str(s/'Tests/SwiftNLPTests/LocalEmbeddingEngineTests.swift'),str(out/'main.swift'),'-o',str(out/'test')]
+with (out/'build.log').open('w') as log:
+ for cmd in [lib,test]:subprocess.run(cmd,stdout=log,stderr=subprocess.STDOUT,check=True)
+with (out/'tests.log').open('w') as log:result=subprocess.run([str(out/'test')],stdout=log,stderr=subprocess.STDOUT)
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();report=dict(tag=a.tag,exit_code=result.returncode,library_command=lib,test_command=test,production_sha256=sha(inputs[0]),test_sha256=sha(s/'Tests/SwiftNLPTests/LocalEmbeddingEngineTests.swift'),log_sha256=sha(out/'tests.log'),controller_sha256=sha(Path(__file__)),scope='Actual XCTest source and production embedding/classifier files, shared hash helper verbatim; isolated fast XCTest launch without unrelated package dependencies.')
+(out/'result.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(dict(exit_code=result.returncode,tag=a.tag)));raise SystemExit(result.returncode)
