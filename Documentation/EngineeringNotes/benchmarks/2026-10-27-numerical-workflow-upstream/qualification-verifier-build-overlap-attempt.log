@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/private/tmp/swiftsci-numerical-workflow-20261027/verify-qualification.py", line 189, in <module>
+    assert sha(Path(d['binary'])) == d['binary_sha256'] and sha(Path(d['resource'])) == d['resource_sha256']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

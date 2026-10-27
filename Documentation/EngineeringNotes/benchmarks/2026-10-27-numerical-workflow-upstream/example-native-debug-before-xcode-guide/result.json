@@ -1,0 +1,359 @@
+{
+  "label": "native-debug",
+  "source": "01bb6f39d5f503ef597234f0045fb86cf2ce7a0a",
+  "initial_git_status": "",
+  "source_sha256": {
+    "Package.swift": "984ad816e62304570e004484ef4c67649710cc09fe4bccf55a4629cc5c157dc5",
+    "README.md": "4b11e8344638195b9d20b410b8e1b4523b7190a7c09507135190a1ec55bbdc15",
+    "Examples/NumericalWorkflow/README.md": "fdf9e735b31d4860a804af0a912ba669bb0e6e33cefa295ee4d2498a638ff025",
+    "Examples/NumericalWorkflow/ScientificWorkflow.swift": "da3a516162e62744dcbc40438d3959cec3f33f55708a9d6c84e95f9a15810fdd",
+    "Examples/NumericalWorkflow/verify.py": "f15190f0bd2d9eca0f707f40e8ffe47f6eb0c4e39fdf807629b49307cd9c6766",
+    "Examples/NumericalWorkflow/Data/sample.csv": "e5fab77c41dd3912955b372089ef64229ea3499654b1e2b7f7b3641e9076de1d"
+  },
+  "binary": "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+  "binary_sha256": "14c3f8b16523c628a2e89d6b433b823d81c6e2489ca2a4b49c61078e1a72e59e",
+  "resource": "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/SwiftSci_ScientificWorkflow.bundle/Contents/Resources/Data/sample.csv",
+  "resource_sha256": "e5fab77c41dd3912955b372089ef64229ea3499654b1e2b7f7b3641e9076de1d",
+  "controller_sha256": "decb9eabc69ef089f8435ff83ef633567550422fe72de4a249ecc5410414942c",
+  "steps": [
+    {
+      "name": "bundled-first",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/bundled-first"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "status": "passed",
+      "log_sha256": "ddddae25617183ab4e8dade68661465bb2d166c7f0233c29052d7aff1b7acf3a"
+    },
+    {
+      "name": "bundled-repeat",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/bundled-repeat"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "status": "passed",
+      "log_sha256": "54d9707af95470e3d9ab4ba456e9786dabb0d29bb74c39876411f69d87e440e5"
+    },
+    {
+      "name": "output with spaces",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/output with spaces",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/inputs with spaces/sample input.csv"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "status": "passed",
+      "log_sha256": "fe47b6378b9558ccedb1c97f2b7ae4bf1a47d5d2b734b3297c345340ca8f9917"
+    },
+    {
+      "name": "verify-fixture-0",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/source/Examples/NumericalWorkflow/verify.py",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/bundled-first"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "status": "passed",
+      "log_sha256": "d6fb133c0a6f9502b1286f928a313a644256704d94917924291816d14a741487"
+    },
+    {
+      "name": "verify-fixture-1",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/source/Examples/NumericalWorkflow/verify.py",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/bundled-repeat"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "status": "passed",
+      "log_sha256": "d6fb133c0a6f9502b1286f928a313a644256704d94917924291816d14a741487"
+    },
+    {
+      "name": "verify-fixture-2",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/source/Examples/NumericalWorkflow/verify.py",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/output with spaces"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "status": "passed",
+      "log_sha256": "d6fb133c0a6f9502b1286f928a313a644256704d94917924291816d14a741487"
+    },
+    {
+      "name": "heldout-features-changed",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/heldout-features-changed",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/inputs with spaces/heldout-features-changed.csv"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "status": "passed",
+      "log_sha256": "d2519096cda8b2c4961c0ef1f99bb1043e5e9c710f2c9ea565ed0cc049741512"
+    },
+    {
+      "name": "heldout-targets-changed",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/heldout-targets-changed",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/inputs with spaces/heldout-targets-changed.csv"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "status": "passed",
+      "log_sha256": "646432c26b70d58d8ec914e57cea25336a08bc6d164d8893e5bf0354ff62af11"
+    },
+    {
+      "name": "missing-input",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/inputs with spaces/missing.csv",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/missing-input"
+      ],
+      "exit_code": 1,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "7d77517d881e515ecebdbf4667bbf4b160027310c8b1e3b4b6d23b677de5aa74"
+    },
+    {
+      "name": "missing-target",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/inputs with spaces/missing-target.csv",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/missing-target"
+      ],
+      "exit_code": 1,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "467ca05c311d14b264dda57682d0b573085145f24b1f0d4dbe400f05fdfbae12"
+    },
+    {
+      "name": "invalid-label",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/inputs with spaces/invalid-label.csv",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/invalid-label"
+      ],
+      "exit_code": 64,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "4c458d04b94d70216decee63148b2df3eb4a52021d820ca72ae0b4c679b7d4b7"
+    },
+    {
+      "name": "missing-label",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/inputs with spaces/missing-label.csv",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/missing-label"
+      ],
+      "exit_code": 64,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "4c458d04b94d70216decee63148b2df3eb4a52021d820ca72ae0b4c679b7d4b7"
+    },
+    {
+      "name": "infinite-feature",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/inputs with spaces/infinite-feature.csv",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/infinite-feature"
+      ],
+      "exit_code": 64,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "4bbef4e172e1281015aeda6956e287c0d337574ad6225adfb699e4b6ea5a0ec9"
+    },
+    {
+      "name": "too-few-rows",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/inputs with spaces/too-few-rows.csv",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/too-few-rows"
+      ],
+      "exit_code": 64,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "7bb093418c54871e6251c27a1a5c9ecaa0a37ac1958fd3c8a4a800cf29f6cf15"
+    },
+    {
+      "name": "one-training-class",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/inputs with spaces/one-training-class.csv",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/one-training-class"
+      ],
+      "exit_code": 64,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "e480a391c230fdbf7489539ab158c983942ffbad1f7218d2ecaa7b7197351b22"
+    },
+    {
+      "name": "overwrite-input",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/overwrite-input/predictions.csv",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/overwrite-input"
+      ],
+      "exit_code": 64,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "d1caa56fc83120d6ecbf4592bdee8948c4543e823327845b716256dfe3d2620b"
+    },
+    {
+      "name": "unknown-option",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--unknown-option"
+      ],
+      "exit_code": 64,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "7d4c7e6f69e26d0bf72982b2756b772ffe3cc9e082adb360b805fa01de2bcffa"
+    },
+    {
+      "name": "help",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--help"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "status": "passed",
+      "log_sha256": "94e412073ed88a288b93511f9cdffa2fa8182546577a034994e18cad31b16e57"
+    },
+    {
+      "name": "oracle-wrong-imputation",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/source/Examples/NumericalWorkflow/verify.py",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/oracle-wrong-imputation"
+      ],
+      "exit_code": 1,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "2611a2d8af6a578578b4bd41380e2cae6138c3a07e81c0efc9d55180d8e2366c"
+    },
+    {
+      "name": "oracle-wrong-row-id",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/source/Examples/NumericalWorkflow/verify.py",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/oracle-wrong-row-id"
+      ],
+      "exit_code": 1,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "4fe5074d161d40c793ed44a5dd0a589c2a9b0007e4604c5b83aed2f829240c39"
+    },
+    {
+      "name": "oracle-wrong-probability",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/source/Examples/NumericalWorkflow/verify.py",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/oracle-wrong-probability"
+      ],
+      "exit_code": 1,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "fb0565a0fa72762ac2d5da28dfa47f1c359bab73ed7e143c3fa4e99cad5df8f2"
+    },
+    {
+      "name": "oracle-leaked-selection",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/source/Examples/NumericalWorkflow/verify.py",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/oracle-leaked-selection"
+      ],
+      "exit_code": 1,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "182d687c3ba0f819a5e266bc529cf411d9633124badfd7e186229262e4a9ec03"
+    },
+    {
+      "name": "oracle-boolean-accuracy",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/source/Examples/NumericalWorkflow/verify.py",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/oracle-boolean-accuracy"
+      ],
+      "exit_code": 1,
+      "expected": "rejected",
+      "status": "passed",
+      "log_sha256": "c2ecfb9041223ab6db03941a4f8dca57615b483afaea5762852803f684acb367"
+    }
+  ],
+  "status": "passed",
+  "steps_count": 23,
+  "repeatability": "CSV and JSON bytes identical across two default and one explicit-file processes",
+  "heldout_controls": "Changing held-out features or targets leaves all fitted state unchanged; changed-feature probabilities checked by scalar use of independently verified baseline parameters",
+  "outputs": {
+    "bundled-first": {
+      "report.json": "6d843f831d339d303c43b866e289faa3e1130c83633fb8e3d254609934e865bc",
+      "predictions.csv": "0e503966829e61bbe58d74d4ddbf11e7773dc7008823aa9c2389dc43e3632930"
+    },
+    "bundled-repeat": {
+      "report.json": "6d843f831d339d303c43b866e289faa3e1130c83633fb8e3d254609934e865bc",
+      "predictions.csv": "0e503966829e61bbe58d74d4ddbf11e7773dc7008823aa9c2389dc43e3632930"
+    },
+    "output with spaces": {
+      "report.json": "6d843f831d339d303c43b866e289faa3e1130c83633fb8e3d254609934e865bc",
+      "predictions.csv": "0e503966829e61bbe58d74d4ddbf11e7773dc7008823aa9c2389dc43e3632930"
+    },
+    "heldout-features-changed": {
+      "report.json": "2f07771b2f4a6ef4eab7b6184cddae2adf2d2dc1a67b056aa7d35364fa86240f",
+      "predictions.csv": "74200eee441e4427c7698ee02a81f7e1fd4f3904f6f17b4ee0e0c9f486208bdd"
+    },
+    "heldout-targets-changed": {
+      "report.json": "012c125025d999398c3f5f7cdea78a0470d5bfeb946b2882d238246c60d38087",
+      "predictions.csv": "b9d07e54f2145737ff1db1ed9827b3cc60059b5eb9a1fff676d98fbc903f7a9d"
+    }
+  },
+  "profile_files": {
+    "profiles/heldout-targets-changed-62992.profraw": "ad6df2442a2b1b1620ad5bc075a32d080cf99907b7f5d10c516c7f31b6f16a0d",
+    "profiles/infinite-feature-63007.profraw": "bbe83b261eabe0b5dcc13db002dc0d1645070b5c401fd6290b73524c04fa3840",
+    "profiles/invalid-label-62999.profraw": "720d1c2696cb55d21f43a4d251446e0d195b3b4fab5dade799f69b7f46a8da49",
+    "profiles/missing-label-63006.profraw": "ceeeb7b650cebe1f3151b07cadd46c0cda5058035c35b9317046bbda3ce57e9f",
+    "profiles/missing-input-62995.profraw": "27f226107fa9e891e99f2612e12c9aa581897f134694dcd9c023a59c6849d409",
+    "profiles/too-few-rows-63008.profraw": "383990861cca6ad7a9f142bde559d36290d3a45de1783aef85dfaa0ba6bbb8d4",
+    "profiles/bundled-first-62961.profraw": "f7eeedd106e159677e7737de39ca6e2b577ef0a4f821bf9d21d7a3bf0c05f629",
+    "profiles/overwrite-input-63010.profraw": "459cd26a87444062d60b5d6077e69e509c23ad69fe18f452e5135aadac258e49",
+    "profiles/heldout-features-changed-62989.profraw": "ab977092ac62fa3778f17c67aa3253edcc40c1ac8ee3a63900df03a873b4f55f",
+    "profiles/unknown-option-63011.profraw": "1f128d0d4e000dcff94b31dd55174ffa40f2a5f0f77ae8809d32ee5ac71bbcff",
+    "profiles/bundled-repeat-62971.profraw": "59cb679dd624b98198cb4eaeaa77fe78c4575e1b2c441df5de4223873c3a1cbc",
+    "profiles/missing-target-62997.profraw": "74f65049a913bbf1a58c7eb330886e919304eabe0d92052dbfcf789c8bc79c1f",
+    "profiles/help-63012.profraw": "4c543fd1c65e6a099826d6dbdd572f01d40eb22ffa5d81d8981b4f3f05494a48",
+    "profiles/one-training-class-63009.profraw": "c17a7043cc77ccb945ac0b09d59c84afb468277239d43117fd4bb0886ee95cf8",
+    "profiles/output with spaces-62973.profraw": "f7646f77681b3677249ae16cba642d4b57edf86724fbc07add5a06615b4fa34d"
+  }
+}

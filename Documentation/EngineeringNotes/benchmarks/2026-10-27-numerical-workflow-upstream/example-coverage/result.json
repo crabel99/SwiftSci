@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "source": "4731043d964244051c398475966f2e36967a8d13",
+  "scope": "Local native Debug CLI execution coverage, separate from hosted safe-suite coverage and Codecov",
+  "selected_record_sha256": "fddcb07e45b3d2cce1043882a023e3f3dcafb55fd89b9aed7659f72ae2397451",
+  "source_sha256": "da3a516162e62744dcbc40438d3959cec3f33f55708a9d6c84e95f9a15810fdd",
+  "binary_sha256": "14c3f8b16523c628a2e89d6b433b823d81c6e2489ca2a4b49c61078e1a72e59e",
+  "controls_sha256": "520141fe33469e5de3d21c4f060f31a7bdcd971ca3c5077c4dfb3789e27f4642",
+  "profile_sha256": "1cad961211947d74afc9f57de65e73b0062f1deb133336fc90931fabe74a7e3a",
+  "profiles": {
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/bundled-first-65445.profraw": "83a7d754af2f40cc6f58f560233a567a62516d8bcb7f630217ebabcf94095a18",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/bundled-repeat-65447.profraw": "ff82382a573014fa8cbdd69220e28704117c65dc429243527886f25d3172824f",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/heldout-features-changed-65457.profraw": "14882881c5fdc4f7161a710783dd79ff68e42c2814e9aa48f168aac4644e629a",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/heldout-targets-changed-65458.profraw": "f802b52e1d98a270e23fdbc100f814053a821cb6ca32b3d63480440c81d35048",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/help-65479.profraw": "514b18d05ccae18a7eebe4eb63e6819710179d3ebe96c222d602e6696e2c3283",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/infinite-feature-65465.profraw": "054caa83aa51a108f10b81729200f5de7e786d3cd351906d2418c1cb6aa77427",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/invalid-label-65461.profraw": "97796fbff1cd925e7903474d304b6db171a1745315a01ea1604132bbc78efdfd",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/missing-input-65459.profraw": "0e0461a8ea8ff4c998337e3520b0e4a6906248472db1dedc4e113a1f9f88952f",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/missing-label-65462.profraw": "6bff8385f37a4a3d8a4d132ce33d668514c741cb268f7282f8561f0a52cab49c",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/missing-target-65460.profraw": "14bb54eb0bca730fa795a6e491ac8af5b317eda431e981711c7180418e94afb7",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/one-training-class-65467.profraw": "c23b86ded33adf015fd3f966df5d8812237aacd90b2623e669d8ac572f3093c5",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/output with spaces-65453.profraw": "7bd01706c3bcac2483484747ba17570b47fc0559b32c809a1829d3675aed3340",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/overwrite-input-65468.profraw": "85158b5a6ced79bb65a33854934d803fc129f7202f7c4e8ea8ec9a804fec6fbe",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/too-few-rows-65466.profraw": "c4ea3b0334973d20955537ac20b3c33a1003e9669d9d37917cf5f0774cff8aed",
+    "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/unknown-option-65476.profraw": "6936e4ef35aabb4910d63f3d797fa8496df551f2524ff755b67564afe2f39b4f"
+  },
+  "executable_lines": 156,
+  "executed_lines": 153,
+  "line_percent": 98.07692307692308,
+  "steps": [
+    {
+      "name": "merge",
+      "command": [
+        "xcrun",
+        "llvm-profdata",
+        "merge",
+        "-sparse",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/bundled-first-65445.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/bundled-repeat-65447.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/heldout-features-changed-65457.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/heldout-targets-changed-65458.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/help-65479.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/infinite-feature-65465.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/invalid-label-65461.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/missing-input-65459.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/missing-label-65462.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/missing-target-65460.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/one-training-class-65467.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/output with spaces-65453.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/overwrite-input-65468.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/too-few-rows-65466.profraw",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-native-debug/profiles/unknown-option-65476.profraw",
+        "-o",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-coverage/example.profdata"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "export",
+      "command": [
+        "xcrun",
+        "llvm-cov",
+        "export",
+        "-format=lcov",
+        "-instr-profile=/private/tmp/swiftsci-numerical-workflow-20261027/example-coverage/example.profdata",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "d2ac8e6428c6cd1fe5b1fffe558cf6bdbb5850c1195484743a12a41ccd2f793b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "controller_sha256": "80872f8d1501786b0b31bf743de6459a78daa371411e3cd975a574a7d029737c"
+}

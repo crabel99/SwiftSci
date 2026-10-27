@@ -1,0 +1,33 @@
+{
+  "label": "swift633-release",
+  "source": "01bb6f39d5f503ef597234f0045fb86cf2ce7a0a",
+  "initial_git_status": "",
+  "source_sha256": {
+    "Package.swift": "984ad816e62304570e004484ef4c67649710cc09fe4bccf55a4629cc5c157dc5",
+    "README.md": "4b11e8344638195b9d20b410b8e1b4523b7190a7c09507135190a1ec55bbdc15",
+    "Examples/NumericalWorkflow/README.md": "fdf9e735b31d4860a804af0a912ba669bb0e6e33cefa295ee4d2498a638ff025",
+    "Examples/NumericalWorkflow/ScientificWorkflow.swift": "da3a516162e62744dcbc40438d3959cec3f33f55708a9d6c84e95f9a15810fdd",
+    "Examples/NumericalWorkflow/verify.py": "f15190f0bd2d9eca0f707f40e8ffe47f6eb0c4e39fdf807629b49307cd9c6766",
+    "Examples/NumericalWorkflow/Data/sample.csv": "e5fab77c41dd3912955b372089ef64229ea3499654b1e2b7f7b3641e9076de1d"
+  },
+  "binary": "/private/tmp/swiftsci-numerical-workflow-20261027/swift633/arm64-apple-macosx/release/ScientificWorkflow",
+  "binary_sha256": "fcb090c52ff97ce75ee764e187d7da171c0c1856a37e2a4d20bd54afcf6f5a8c",
+  "resource": "/private/tmp/swiftsci-numerical-workflow-20261027/swift633/arm64-apple-macosx/release/SwiftSci_ScientificWorkflow.bundle/Data/sample.csv",
+  "resource_sha256": "e5fab77c41dd3912955b372089ef64229ea3499654b1e2b7f7b3641e9076de1d",
+  "controller_sha256": "decb9eabc69ef089f8435ff83ef633567550422fe72de4a249ecc5410414942c",
+  "steps": [
+    {
+      "name": "bundled-first",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/swift633/arm64-apple-macosx/release/ScientificWorkflow",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/example-swift633-release/bundled-first"
+      ],
+      "exit_code": 255,
+      "expected": "success",
+      "status": "failed",
+      "log_sha256": "0acd0ca82f32bef365ebffe53244045c02bbee2365206a6c3ba1e283dfc21770"
+    }
+  ],
+  "status": "running"
+}

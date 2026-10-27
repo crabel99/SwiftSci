@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "expectation": "CSV inference rejects empty, late-first-numeric and invalid-text feature columns before imputation",
+  "source": "01bb6f39d5f503ef597234f0045fb86cf2ce7a0a",
+  "cases": [
+    {
+      "name": "all-missing-feature",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/empty-column-control/all-missing-feature.csv",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/empty-column-control/all-missing-feature-results"
+      ],
+      "exit_code": 1,
+      "input_sha256": "6f9f1b4e475d27b60fe7e657cb52fd17ef8615330bed111555dbec9975a3f7e1",
+      "log_sha256": "0608020f32fdba3fabe5761c3e834f999bef805b03c8b57c4d5205e599d4b88d"
+    },
+    {
+      "name": "first-numeric-after-1000",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/empty-column-control/first-numeric-after-1000.csv",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/empty-column-control/first-numeric-after-1000-results"
+      ],
+      "exit_code": 1,
+      "input_sha256": "805666e8ea1a8e98235fa1c2b1a54c185daf565ded51613764989b3cfe7b4cc5",
+      "log_sha256": "0608020f32fdba3fabe5761c3e834f999bef805b03c8b57c4d5205e599d4b88d"
+    },
+    {
+      "name": "invalid-feature-text",
+      "command": [
+        "/private/tmp/swiftsci-numerical-workflow-20261027/derived/Build/Products/Debug/ScientificWorkflow",
+        "--input",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/empty-column-control/invalid-feature-text.csv",
+        "--output",
+        "/private/tmp/swiftsci-numerical-workflow-20261027/empty-column-control/invalid-feature-text-results"
+      ],
+      "exit_code": 1,
+      "input_sha256": "90fe25cd5536c11a880bd39f5741a70edc42903a817aaa119ffff9575c43b3f0",
+      "log_sha256": "0608020f32fdba3fabe5761c3e834f999bef805b03c8b57c4d5205e599d4b88d"
+    }
+  ],
+  "binary_sha256": "14c3f8b16523c628a2e89d6b433b823d81c6e2489ca2a4b49c61078e1a72e59e",
+  "controller_sha256": "769aa78acb0aad68d805bac74c4c24637c75c681810700802a9a377ebc4bb885"
+}

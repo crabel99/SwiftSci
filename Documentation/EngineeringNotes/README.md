@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Complete numerical workflow example](benchmarks/2026-10-27-numerical-workflow-upstream/README.md) records the runnable CSV-to-classification example, independent numerical checks, leakage and malformed-input controls, full local qualification and unchanged scientific APIs. The [publication review](benchmarks/2026-10-27-numerical-workflow-publication-audit.md) verifies retained bytes and redactions.
+
 - [Complete multi-binary coverage export](benchmarks/2026-10-27-multi-binary-coverage-upstream/README.md) records the omitted Agent coverage, real LLVM workflow regressions, explicit object arguments, full local checks and unchanged Codecov policy. The [publication review](benchmarks/2026-10-27-multi-binary-coverage-publication-audit.md) verifies retained bytes and redactions.
 
 - [Stable local embedding correction](benchmarks/2026-10-27-stable-local-embeddings-upstream/README.md) records PR94’s intermittent Swift failure, stable hashing, golden and restart regressions, full local checks and stored-vector regeneration. The [publication review](benchmarks/2026-10-27-stable-local-embeddings-publication-audit.md) verifies retained bytes and redactions.
