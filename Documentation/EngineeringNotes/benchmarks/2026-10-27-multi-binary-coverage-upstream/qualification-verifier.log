@@ -1,0 +1,95 @@
+{
+  "status": "passed",
+  "source": "08486058190836df0a3b1916aa2cb633450a35fc",
+  "base": "200d3935cc43396658a315bf4d5f745b6c7b496c",
+  "files": 3,
+  "commits": 1,
+  "reports": {
+    "regressions": {
+      "before_failures": 8,
+      "after_passes": 13,
+      "python39_passes": 13,
+      "predecessor_receipt_sha256": "a7c2eabadcfc48975bdec67fb164290034793bd71bed6981e3543e9b64e509e1"
+    },
+    "full-debug": {
+      "tests": 1713,
+      "failed": 0,
+      "skipped": 0,
+      "receipt_sha256": "dea7240bee42af0c1c6c0cf8389845137f8323c943e71217c2cf332dd1712faf",
+      "tree_sha256": "de5f0dd654d6f2de4dd30c7af21851afd75b9e4e362671f28212d25b3c916fe9"
+    },
+    "full-release": {
+      "tests": 1713,
+      "failed": 0,
+      "skipped": 0,
+      "receipt_sha256": "790bd086f50eb05c50d804ae7f4a7c0c7374c90edb6632febfee424eb56ea55f",
+      "tree_sha256": "ac5aaf28232cbf7dab9d25d4a808fdcd2025064736731488deabf169aa269e04"
+    },
+    "ci-main/main-result.json": {
+      "steps": 9,
+      "sha256": "8f841f7320515da732d2cf68a3a9f4fe19c2772144c1e93c2283b12d79eb919f"
+    },
+    "ci-bench/benchmarks-result.json": {
+      "steps": 19,
+      "sha256": "3d3bcc11dde3c195ed63c793b2822ae0b8f211bcb1753f6d9d0578339c087885"
+    },
+    "compatibility/result.json": {
+      "steps": 3,
+      "sha256": "b61fc2a7bc43f988e23f21c77375d7782ff370d44552338cdc7c7adcec81756e"
+    },
+    "ci-security-python/security-python-result.json": {
+      "steps": 2,
+      "sha256": "7356a7a3283f37ad5eeff2c2637e7d077acd8d5bc77b7a02cc033ee70caa8732"
+    },
+    "coverage": {
+      "sha256": "6497dc17020c39f45188ae6635086f21ddcebb10849e76aca5e83e81820a885f",
+      "records": {
+        "SwiftNLP": 45,
+        "SwiftDataFrame": 50,
+        "SwiftAgent": 8
+      },
+      "executed_lines": {
+        "SwiftNLP": 3019,
+        "SwiftDataFrame": 6767,
+        "SwiftAgent": 1378
+      },
+      "profile_sha256": "50b6580451a9acc4498fba72200be1cc3c2cdba26fdb91fe0f81eb10396b5aaa",
+      "objects": {
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftAgentTests.xctest/Contents/MacOS/SwiftAgentTests": "54fbec856ab099fa191b0e7468ad262a6922087bd45cd29b38af66bae4dacf02",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftClusterTests.xctest/Contents/MacOS/SwiftClusterTests": "36ee6ccc7ea0cff47dac582da96eab58ed21606093f11c853e10f0f48d5a368d",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftDataFrameTests.xctest/Contents/MacOS/SwiftDataFrameTests": "f39eed5f1bf30f88420bd02158283cac42607579c5d3dc3d52f97e72a9a402a3",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftDatabaseTests.xctest/Contents/MacOS/SwiftDatabaseTests": "11fb9e978e23ee5d5667f2a515bdd3da110282f9dc43721ce727a3f6c9fff575",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftExplainTests.xctest/Contents/MacOS/SwiftExplainTests": "aa1e2dca3d27e637717f7ab2a38224ad74066a0e6cd2e17ea7063db88f8a9042",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftForecastTests.xctest/Contents/MacOS/SwiftForecastTests": "e91b62c7751d336191149fd6672ccee9ef64870b7823607d969400b4ab0692d6",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftLLMTests.xctest/Contents/MacOS/SwiftLLMTests": "60485432490e713ecd9b181f163e64493c0da58d9da9753d1dce92923304d57b",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftMLTests.xctest/Contents/MacOS/SwiftMLTests": "e2d5ca3ac54da36efac919694dab93d966cceec46c8ac399f0199293f1d785c0",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftNLPTests.xctest/Contents/MacOS/SwiftNLPTests": "2a7b3144ffc4381f98f95e184828f84cdecb0305799d3786d7bf144125c22c39",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftOptimizeTests.xctest/Contents/MacOS/SwiftOptimizeTests": "9632f0061d9d454cf2a514b1d7ce792ddf6e5b6b316445b2953b594453adae2e",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftPreprocessingTests.xctest/Contents/MacOS/SwiftPreprocessingTests": "346a899c6ab34c27f039e04e9055715892b017547100b70e2828ebd5763bf978",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftSciBenchmarkSupportTests.xctest/Contents/MacOS/SwiftSciBenchmarkSupportTests": "f120e1d1ce3d11668cc694840dabcbf23bec37eaf09db7fbd66dc981b27626fd",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftStatsTests.xctest/Contents/MacOS/SwiftStatsTests": "345dabcfe96bb96ddb76eaf0fc00b79a3f92b31955f44b4490419d589dce2b6f",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftVisionTests.xctest/Contents/MacOS/SwiftVisionTests": "d560765bdc0e8cf76abcea50930b73c672ce851fac78627a52c62e95ca0c06bf",
+        "/private/tmp/swiftsci-coverage-export-20261027/source/.build/out/Products/Debug/SwiftVisualizationTests.xctest/Contents/MacOS/SwiftVisualizationTests": "51c02b883749b444a90cbde0ddafa82eff253f10420500ff521158085ac46f29"
+      },
+      "scope": "Actual final-head safe-test workflow export; no supplemental export is used as a substitute"
+    },
+    "benchmarks": {
+      "engine_cases": 404,
+      "strict_pass": 400,
+      "known_strict_failures": 4,
+      "worker_source_files": 506,
+      "worker_sha256": "9ca3a78f4cf728463530e4456e65872d1f02f4447c8a8d635075840c0e74f199"
+    },
+    "swift-security": {
+      "extracted": 350,
+      "findings": 1,
+      "sha256": "5f00b91cbb9fc225179a1aa359fbc924b626d8f164be307fe2196709f411d45c"
+    }
+  },
+  "verifier_sha256": "78a46516e3ed3911a0b5678d7d9391382ffdffb567f5a849e38df0621b21f169",
+  "limits": [
+    "This establishes local workflow coverage export, not hosted Codecov acceptance or full branch coverage.",
+    "Four known pandas Wampler strict failures and one unchanged unsuppressed legacy MD5 finding remain.",
+    "Known concurrent MLX cold-start hazard remains open; stored old local embeddings still require regeneration."
+  ]
+}

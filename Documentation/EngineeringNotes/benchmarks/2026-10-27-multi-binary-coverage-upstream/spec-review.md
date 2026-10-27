@@ -1,0 +1,9 @@
+# Spec review
+
+Reviewed base `200d3935cc43396658a315bf4d5f745b6c7b496c` through head `08486058190836df0a3b1916aa2cb633450a35fc`, the single commit, specification, and coverage handoff. No implementation defects or scope creep found.
+
+The workflow now passes the binary directory and profile as separate quoted arguments. The helper discovers every bundle, passes the first binary as the primary object and each remaining binary with `-object`, removes error masking, inherits LLVM stderr, and returns its failure status. It withholds stdout until positive `DA` counts appear under actual `Sources/SwiftAgent`, `Sources/SwiftDataFrame`, and `Sources/SwiftNLP` paths. Missing profiles, bundles, executables, and required executed records fail with diagnostics. This satisfies spec.md:5. The diff changes no library, numerical behavior, skip list, dependency pin, or Codecov policy.
+
+I independently ran the eight Apple LLVM regression tests successfully. They execute the real extracted workflow command against instrumented binaries, check all three source records, move binaries into a path containing spaces, and verify missing input, unexecuted module, LLVM diagnostic/status, and empty-output failures. The recorded pre-fix run fails all eight controls. This satisfies the fixture proof in spec.md:7.
+
+One completion gate remains outside the reviewed code. Spec.md:7 requires complete actual package safe-test coverage and applicable local checks before the draft PR. At review time `ci-main/main-result.json` has no completed steps, and only its initial build log exists. Historical real-package reproduction is useful red/green evidence, but explicitly uses old source/profile artifacts. Finish the current package run and inspect its final exported executed source records before claiming this requirement complete or publishing. This is pending verification, not a request for additional production code.

@@ -1,0 +1,23 @@
+{
+  "source": "08486058190836df0a3b1916aa2cb633450a35fc",
+  "predecessor": "200d3935cc43396658a315bf4d5f745b6c7b496c",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_export_coverage.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "test_sha256": "17cdf305581ea98bc332b0f03f08a0be5f7674927096717aeb3a3c4b5c0759d9",
+  "predecessor_workflow_sha256": "dba675ea737c171130fb0d8f1a88705f21e1d06c6e4420f5d905ea1894e55c26",
+  "controller_sha256": "8015598e2bb55a1e5713ad85c54a2d673f5055909e4f0ec3769f3733275a68f1",
+  "log_sha256": "5552dd0ff29ae0e7ceff365349b686e7ececf5f465e4ec7d6a704872d28cb80c",
+  "tests": 8,
+  "failures": 8,
+  "scope": "Exact final regression test bytes and untouched upstream export workflow in a minimal independent control repository. Real Apple LLVM binaries; no final-source mutation."
+}

@@ -1,0 +1,32 @@
+{
+  "exit_code": 0,
+  "command": [
+    "xcrun",
+    "llvm-cov",
+    "export",
+    "-format=lcov",
+    "-instr-profile=/private/tmp/swiftsci-pr94-ci-20261027/source/.build/debug/codecov/default.profdata",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftNLPTests.xctest/Contents/MacOS/SwiftNLPTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftAgentTests.xctest/Contents/MacOS/SwiftAgentTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftLLMTests.xctest/Contents/MacOS/SwiftLLMTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftForecastTests.xctest/Contents/MacOS/SwiftForecastTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftVisualizationTests.xctest/Contents/MacOS/SwiftVisualizationTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftDataFrameTests.xctest/Contents/MacOS/SwiftDataFrameTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftOptimizeTests.xctest/Contents/MacOS/SwiftOptimizeTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftMLTests.xctest/Contents/MacOS/SwiftMLTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftPreprocessingTests.xctest/Contents/MacOS/SwiftPreprocessingTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftVisionTests.xctest/Contents/MacOS/SwiftVisionTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftDatabaseTests.xctest/Contents/MacOS/SwiftDatabaseTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftExplainTests.xctest/Contents/MacOS/SwiftExplainTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftClusterTests.xctest/Contents/MacOS/SwiftClusterTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftStatsTests.xctest/Contents/MacOS/SwiftStatsTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftSciBenchmarkSupportTests.xctest/Contents/MacOS/SwiftSciBenchmarkSupportTests"
+  ],
+  "source_modules_present": {
+    "SwiftAgent": false,
+    "SwiftDataFrame": true,
+    "SwiftNLP": true
+  },
+  "first_binary": "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftNLPTests.xctest/Contents/MacOS/SwiftNLPTests",
+  "source_records": 760
+}

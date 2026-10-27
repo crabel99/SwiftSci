@@ -1,0 +1,33 @@
+{
+  "command": [
+    "xcrun",
+    "llvm-cov",
+    "export",
+    "-format=lcov",
+    "-instr-profile=/private/tmp/swiftsci-pr94-ci-20261027/source/.build/debug/codecov/default.profdata",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftAgentTests.xctest/Contents/MacOS/SwiftAgentTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftClusterTests.xctest/Contents/MacOS/SwiftClusterTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftDataFrameTests.xctest/Contents/MacOS/SwiftDataFrameTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftDatabaseTests.xctest/Contents/MacOS/SwiftDatabaseTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftExplainTests.xctest/Contents/MacOS/SwiftExplainTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftForecastTests.xctest/Contents/MacOS/SwiftForecastTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftLLMTests.xctest/Contents/MacOS/SwiftLLMTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftMLTests.xctest/Contents/MacOS/SwiftMLTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftNLPTests.xctest/Contents/MacOS/SwiftNLPTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftOptimizeTests.xctest/Contents/MacOS/SwiftOptimizeTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftPreprocessingTests.xctest/Contents/MacOS/SwiftPreprocessingTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftSciBenchmarkSupportTests.xctest/Contents/MacOS/SwiftSciBenchmarkSupportTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftStatsTests.xctest/Contents/MacOS/SwiftStatsTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftVisionTests.xctest/Contents/MacOS/SwiftVisionTests",
+    "/private/tmp/swiftsci-pr94-ci-20261027/source/.build/out/Products/Debug/SwiftVisualizationTests.xctest/Contents/MacOS/SwiftVisualizationTests"
+  ],
+  "exit_code": 0,
+  "objects": 15,
+  "source_modules_present": {
+    "SwiftAgent": true,
+    "SwiftDataFrame": true,
+    "SwiftNLP": true
+  },
+  "profile_sha256": "7bbcfa2652419e49df97eef3ab91f3cf5330b78baa51f89c28a4ca5a78d4bc84",
+  "scope": "Actual completed PR96 safe-test profile and binaries, historical source; no new package test execution"
+}
