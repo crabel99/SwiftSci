@@ -8,6 +8,8 @@ The branch started at upstream commit `fd68e6be058aa9fb10be1627a8b8841b9ee9a7e7`
 
 ## Start here
 
+- [Independent documentation reporting correction](benchmarks/2026-10-27-doc-reporting-upstream/README.md) removes the false 100% claim, preserves placeholder enforcement, and records actual workflow regressions on Python 3.9.6 and 3.13 plus complete local CI.
+
 - [Independent multiclass Core ML export correction](benchmarks/2026-10-27-coreml-export-upstream/README.md) isolates the four-file serialization correction on upstream main, with fresh native inference, complete local CI and actual Swift 6.3.3 runtime tests.
 
 - [Independent upstream GPU gradient correction](benchmarks/2026-10-27-gpu-bce-upstream/README.md) isolates the two-file fix directly on upstream main, with fresh native tests, complete local CI, compatibility checks and retained security findings.

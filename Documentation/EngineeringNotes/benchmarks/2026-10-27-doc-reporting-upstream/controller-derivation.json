@@ -1,0 +1,19 @@
+{
+  "parent": "/private/tmp/swiftsci-upstream-coreml-export-20261027",
+  "changes": [
+    "Benchmark cache/packages paths redirected to new root",
+    "Native matrix covers both full configurations, no unrelated Core ML focused tests",
+    "Compatibility reuses three-step runner; fresh dependency-only scratch preparation",
+    "Swift CodeQL seeds only dependency state into fresh traced build"
+  ],
+  "controllers": {
+    "full-ci-runner.py": "c018843be7641ddd92ba9a80772e74192ee83896da0e623e9f6e73231ba5a8ee",
+    "benchmark-ci-runner.py": "2c6affd6ea4dcbd7abee6a6d21d8508b1db7058802bac3de7f55aa124dd3b888",
+    "validate-native.py": "452f4fca313d2cc24f2e9985d35e64353c3e311d32a3e148e72796bcf9930b44",
+    "check-swift633.py": "4949f4b86f582e29120fd2acc694ba6a54a1f95a08f855cf676cd52cf6f53305",
+    "check-swift-codeql-replay.py": "d71b312e39f0a1a7b946d6f33f4b71bd25d29d87b4baacdbd81851796e28d642",
+    "run-native-matrix.py": "c7fa37fa715e29bba8cea2ce031de0bd0d958b6864ddefca296951a15e4653b5",
+    "prepare-ci-caches.py": "717949999312ea2240da919d42e0206052ee9291d9093c440332a3eabda2c18f",
+    "run-reporting-tests.py": "4390dd15c0ab633fbcb5649c5d742bd8b973fc968d0043b0dfc22506aa77e072"
+  }
+}

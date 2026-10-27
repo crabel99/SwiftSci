@@ -1,0 +1,112 @@
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 5c704cb520..b528317d64 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -201,7 +201,10 @@ jobs:
+ 
+           echo "✓ Documentation generated successfully."
+ 
+-      - name: Verify Public API Documentation Coverage (100%)
++      - name: Test documentation reporting
++        run: python3 -m unittest discover -s scripts/tests -p 'test_*.py'
++
++      - name: Report API documentation and check placeholders
+         run: |
+           python3 scripts/verify_doc_coverage.py
+ 
+diff --git a/scripts/tests/test_verify_doc_coverage.py b/scripts/tests/test_verify_doc_coverage.py
+new file mode 100644
+index 0000000000..738e69fad1
+--- /dev/null
++++ b/scripts/tests/test_verify_doc_coverage.py
+@@ -0,0 +1,62 @@
++import contextlib
++import importlib.util
++import io
++from pathlib import Path
++import tempfile
++import unittest
++
++
++spec = importlib.util.spec_from_file_location(
++    "verify_doc_coverage", Path(__file__).resolve().parents[1] / "verify_doc_coverage.py"
++)
++checker = importlib.util.module_from_spec(spec)
++spec.loader.exec_module(checker)
++
++
++class DocumentationReportingTests(unittest.TestCase):
++    def run_check(self, source):
++        with tempfile.TemporaryDirectory() as directory:
++            Path(directory, "Fixture.swift").write_text(source, encoding="utf-8")
++            output = io.StringIO()
++            with contextlib.redirect_stdout(output):
++                with self.assertRaises(SystemExit) as exit_result:
++                    checker.check_doc_coverage(directory)
++            return exit_result.exception.code, output.getvalue()
++
++    def test_documented_declaration(self):
++        status, output = self.run_check("/// A value.\npublic struct Value {}\n")
++        self.assertEqual(status, 0)
++        self.assertIn("100.00% (1/1", output)
++        self.assertIn("declaration scan", output)
++        self.assertIn("No unresolved documentation placeholders", output)
++
++    def test_undocumented_declaration(self):
++        status, output = self.run_check("public struct Value {}\n")
++        self.assertEqual(status, 0)
++        self.assertIn("0.00% (0/1", output)
++        self.assertNotIn("100.00%", output)
++
++    def test_mixed_documentation(self):
++        status, output = self.run_check(
++            "/// A value.\npublic struct Documented {}\npublic struct Undocumented {}\n"
++        )
++        self.assertEqual(status, 0)
++        self.assertIn("50.00% (1/2", output)
++        self.assertNotIn("100.00%", output)
++
++    def test_no_matching_declarations(self):
++        status, output = self.run_check("struct Internal {}\n")
++        self.assertEqual(status, 0)
++        self.assertIn("N/A", output)
++        self.assertIn("No public/open declarations matched", output)
++        self.assertNotIn("100.00%", output)
++
++    def test_placeholder_still_fails(self):
++        status, output = self.run_check("/// <#description#>\npublic struct Value {}\n")
++        self.assertEqual(status, 1)
++        self.assertIn("unresolved Xcode placeholders", output)
++        self.assertNotIn("No unresolved documentation placeholders", output)
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/scripts/verify_doc_coverage.py b/scripts/verify_doc_coverage.py
+index ef99cb79e7..e04d5063c4 100755
+--- a/scripts/verify_doc_coverage.py
++++ b/scripts/verify_doc_coverage.py
+@@ -43,8 +43,12 @@ def check_doc_coverage(sources_dir):
+                             rel_path = os.path.relpath(filepath, sources_dir)
+                             missing_docs.append((rel_path, idx + 1, line.strip()))
+ 
+-    coverage = (documented_public / total_public * 100) if total_public > 0 else 0
+-    print(f"📊 DocC Public API Coverage: {coverage:.2f}% ({documented_public}/{total_public} symbols documented)")
++    if total_public:
++        coverage = documented_public / total_public * 100
++        print(f"API documentation declaration scan: {coverage:.2f}% ({documented_public}/{total_public} matched declarations documented)")
++    else:
++        print("API documentation declaration scan: N/A. No public/open declarations matched.")
++    print("This heuristic scan is not DocC symbol-graph coverage.")
+ 
+     # Check for placeholder markers like <#description#>
+     placeholders = []
+@@ -67,7 +71,7 @@ def check_doc_coverage(sources_dir):
+         print("\nCI BUILD FAILED: Documentation contains unresolved Xcode placeholders.")
+         sys.exit(1)
+ 
+-    print("✅ 100.00% DocC Public API Coverage Verified (Zero Placeholders)!")
++    print("No unresolved documentation placeholders found.")
+     sys.exit(0)
+ 
+ if __name__ == "__main__":

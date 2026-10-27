@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "command": [
+    "python3",
+    "/private/tmp/swiftsci-upstream-doc-reporting-20261027/verify-qualification.py"
+  ],
+  "exit_code": 1,
+  "recorded_from": "Actual tool output of first qualification verifier execution",
+  "script_sha256": "a456ccbd5a7a96e80d937308180af9ccb591e2b44f94343fc0be7939f9489c97",
+  "reason": "Verifier filtered Sources-only files but incorrectly expected the total extracted Swift count",
+  "expected_sources_only": 348,
+  "observed_sources_only": 288,
+  "observed_total_extracted": 348,
+  "comparison": "Current and previous CoreML extraction URI sets are identical; other files are59benchmark files andPackage.swift",
+  "source_unchanged": true
+}
